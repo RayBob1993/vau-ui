@@ -1,5 +1,5 @@
 import { describe } from 'vitest';
 
-describe('Badge.vue', () => {
+describe('VBadge', () => {
 
 });

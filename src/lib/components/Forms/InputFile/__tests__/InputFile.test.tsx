@@ -1,5 +1,5 @@
 import { describe } from 'vitest';
 
-describe('InputFile.vue', () => {
+describe('VInputFile', () => {
 
 });

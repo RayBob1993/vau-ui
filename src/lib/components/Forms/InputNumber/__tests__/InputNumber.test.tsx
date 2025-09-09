@@ -1,5 +1,5 @@
 import { describe } from 'vitest';
 
-describe('InputNumber.vue', () => {
+describe('VInputNumber', () => {
 
 });

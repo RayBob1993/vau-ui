@@ -1,5 +1,5 @@
 import { describe } from 'vitest';
 
-describe('Radio.vue', () => {
+describe('VRadio', () => {
 
 });
