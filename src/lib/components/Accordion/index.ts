@@ -1,2 +1,3 @@
-export { default as VAccordion } from './Accordion.vue';
-export { default as VAccordionItem } from './AccordionItem.vue';
+export { default as VAccordion } from './VAccordion.vue';
+export { default as VAccordionItem } from './VAccordionItem.vue';
+export * from './plugin';
