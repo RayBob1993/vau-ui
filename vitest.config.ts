@@ -1,4 +1,5 @@
 import vue from '@vitejs/plugin-vue';
+import vueJsx from '@vitejs/plugin-vue-jsx';
 import { defineConfig } from 'vitest/config';
 
 export default defineConfig({
@@ -7,6 +8,10 @@ export default defineConfig({
     environment: 'happy-dom'
   },
   plugins: [
-    vue()
+    vue(),
+    vueJsx({
+      optimize: false,
+      enableObjectSlots: false
+    })
   ]
 });

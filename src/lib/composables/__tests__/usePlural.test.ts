@@ -1,6 +1,4 @@
 import { type IPluralWords, usePlural } from '../usePlural';
-
-// Убедитесь, что путь к файлу правильный
 import { describe, it, expect } from 'vitest';
 
 describe('usePlural', () => {
