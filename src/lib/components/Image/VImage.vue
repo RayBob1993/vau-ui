@@ -1,5 +1,8 @@
 <script lang="ts" setup>
+  import type { IVImageProps } from './types';
   import { useTemplateRef } from 'vue';
+
+  defineProps<IVImageProps>();
 
   const image = useTemplateRef<HTMLImageElement>('image');
   const root = useTemplateRef<HTMLDivElement>('root');

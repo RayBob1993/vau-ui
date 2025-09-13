@@ -1,5 +1,7 @@
 <script setup lang="ts">
+  import type { IVBadgeProps } from './types';
 
+  defineProps<IVBadgeProps>();
 </script>
 
 <template>

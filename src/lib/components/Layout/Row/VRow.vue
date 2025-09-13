@@ -1,5 +1,7 @@
 <script lang="ts" setup>
+  import type { IVRowProps } from './types';
 
+  defineProps<IVRowProps>();
 </script>
 
 <template>

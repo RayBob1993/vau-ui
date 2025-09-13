@@ -1,5 +1,8 @@
 <script lang="ts" setup>
+  import type { IVTabsProps, IVTabsEmits } from './types';
 
+  defineProps<IVTabsProps>();
+  defineEmits<IVTabsEmits>();
 </script>
 
 <template>

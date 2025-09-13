@@ -1,5 +1,7 @@
 <script setup lang="ts">
+  import type { IVDatepickerProps } from './types';
 
+  defineProps<IVDatepickerProps>();
 </script>
 
 <template>

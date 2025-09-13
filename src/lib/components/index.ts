@@ -19,3 +19,5 @@ export * from './Tag';
 export * from './Text';
 export * from './Forms';
 export * from './ConfigProvider';
+export * from './Tooltip';
+export * from './Overlay';

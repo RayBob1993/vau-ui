@@ -1,5 +1,7 @@
 <script lang="ts" setup>
+  import type { IVCheckboxProps } from './types';
 
+  defineProps<IVCheckboxProps>();
 </script>
 
 <template>

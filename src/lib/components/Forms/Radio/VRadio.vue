@@ -1,5 +1,7 @@
 <script lang="ts" setup>
+  import type { IVInputRadioProps } from './types';
 
+  defineProps<IVInputRadioProps>();
 </script>
 
 <template>

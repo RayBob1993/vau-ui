@@ -1,5 +1,7 @@
 <script lang="ts" setup>
+  import type { IVInputNumberProps } from './types';
 
+  defineProps<IVInputNumberProps>();
 </script>
 
 <template>

@@ -1,5 +1,7 @@
 <script setup lang="ts">
+  import type { IVCollapseProps } from './types';
 
+  defineProps<IVCollapseProps>();
 </script>
 
 <template>

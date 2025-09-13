@@ -18,7 +18,7 @@ export interface IVAccordionItemProps {
 }
 
 export interface IVAccordionItemSlots {
-  default?: () => void;
+  default?: VoidFunction;
   icon?: (props: {
     isActive: boolean
   }) => void;

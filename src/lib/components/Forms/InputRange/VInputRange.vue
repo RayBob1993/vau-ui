@@ -1,5 +1,7 @@
 <script lang="ts" setup>
+  import type { IVInputRangeProps } from './types';
 
+  defineProps<IVInputRangeProps>();
 </script>
 
 <template>

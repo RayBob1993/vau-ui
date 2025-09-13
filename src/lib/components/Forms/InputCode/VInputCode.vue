@@ -1,5 +1,7 @@
 <script setup lang="ts">
+  import type { IVInputCodeProps } from './types';
 
+  defineProps<IVInputCodeProps>();
 </script>
 
 <template>

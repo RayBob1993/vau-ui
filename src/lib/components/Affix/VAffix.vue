@@ -1,5 +1,8 @@
 <script setup lang="ts">
+  import type { IVAffixProps } from './types';
   import { shallowRef } from 'vue';
+
+  defineProps<IVAffixProps>();
 
   const root = shallowRef<HTMLDivElement>();
   const content = shallowRef<HTMLDivElement>();

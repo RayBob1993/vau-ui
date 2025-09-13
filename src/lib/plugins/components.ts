@@ -1,0 +1,96 @@
+import type { App, Plugin } from 'vue';
+import {
+  AccordionPlugin,
+  AffixPlugin,
+  AvatarPlugin,
+  BadgePlugin,
+  BreadcrumbsPlugin,
+  ButtonPlugin,
+  CollapsePlugin,
+  ConfigProviderPlugin,
+  DialogPlugin,
+  DrawerPlugin,
+  DropdownPlugin,
+  ImagePlugin,
+  PaginationPlugin,
+  PlaceholderPlugin,
+  ScrollbarPlugin,
+  SpinnerPlugin,
+  TabsPlugin,
+  TagPlugin,
+  TextPlugin,
+  ContainerPlugin,
+  ColPlugin,
+  RowPlugin,
+  FormPlugin,
+  FormItemPlugin,
+  InputPlugin,
+  CheckboxPlugin,
+  DatepickerPlugin,
+  InputRangePlugin,
+  InputPasswordPlugin,
+  InputNumberPlugin,
+  InputMaskPlugin,
+  InputFilePlugin,
+  InputCodePlugin,
+  RadioPlugin,
+  SwitchPlugin,
+  SelectPlugin,
+  TooltipPlugin,
+  OverlayPlugin
+} from '../components';
+import {
+  VisiblePlugin,
+  ClickOutsidePlugin,
+  LoadingPlugin
+} from '../directives';
+
+export const VauUI: Plugin = {
+  install (app: App) {
+    // Components
+    app.use(AccordionPlugin);
+    app.use(AffixPlugin);
+    app.use(AvatarPlugin);
+    app.use(BadgePlugin);
+    app.use(BreadcrumbsPlugin);
+    app.use(ButtonPlugin);
+    app.use(CollapsePlugin);
+    app.use(ConfigProviderPlugin);
+    app.use(DialogPlugin);
+    app.use(DrawerPlugin);
+    app.use(DropdownPlugin);
+    app.use(ImagePlugin);
+    app.use(PaginationPlugin);
+    app.use(PlaceholderPlugin);
+    app.use(ScrollbarPlugin);
+    app.use(SpinnerPlugin);
+    app.use(TabsPlugin);
+    app.use(TagPlugin);
+    app.use(TextPlugin);
+    app.use(ContainerPlugin);
+    app.use(ColPlugin);
+    app.use(RowPlugin);
+    app.use(FormPlugin);
+    app.use(FormItemPlugin);
+    app.use(InputPlugin);
+    app.use(CheckboxPlugin);
+    app.use(DatepickerPlugin);
+    app.use(InputRangePlugin);
+    app.use(InputPasswordPlugin);
+    app.use(InputNumberPlugin);
+    app.use(InputMaskPlugin);
+    app.use(InputFilePlugin);
+    app.use(InputCodePlugin);
+    app.use(RadioPlugin);
+    app.use(SwitchPlugin);
+    app.use(SelectPlugin);
+    app.use(SelectPlugin);
+    app.use(TooltipPlugin);
+    app.use(OverlayPlugin);
+
+    // Directives
+    app.use(VisiblePlugin);
+    app.use(ClickOutsidePlugin);
+    app.use(LoadingPlugin);
+  }
+};

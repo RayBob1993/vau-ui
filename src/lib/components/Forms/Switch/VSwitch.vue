@@ -1,5 +1,7 @@
 <script lang="ts" setup>
+  import type { IVSwitchProps } from './types';
 
+  defineProps<IVSwitchProps>();
 </script>
 
 <template>

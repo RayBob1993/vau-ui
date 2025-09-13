@@ -18,6 +18,8 @@
       : modelValue.value === props.value;
   });
 
+  const tabIndex = computed<number>(() => props.disabled ? -1 : 0);
+
   function handleToggle () {
     const changeValue = modelValue.value === props.value ? undefined : props.value;
 
@@ -37,6 +39,8 @@
       class="v-accordion-item__header"
       :disabled="disabled"
       type="button"
+      :aria-expanded="isActive"
+      :tabindex="tabIndex"
       @click="handleToggle"
     >
       <slot
@@ -58,7 +62,12 @@
       </span>
     </button>
 
-    <div class="v-accordion-item__content">
+    <div
+      v-show="isActive"
+      class="v-accordion-item__content"
+      role="region"
+      :aria-hidden="!isActive"
+    >
       <slot/>
     </div>
   </div>

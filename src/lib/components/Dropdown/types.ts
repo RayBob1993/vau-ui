@@ -9,6 +9,15 @@ export interface IVDropdownEmits {
   (event: 'close'): void;
 }
 
+export interface IVDropdownSlots {
+  default?: () => never;
+  trigger?: (props: {
+    isVisible: boolean;
+    toggle: VoidFunction;
+    setVisible: (payload: boolean) => void;
+  }) => never;
+}
+
 export interface IVDropdownInstance {
   setVisible: (payload: boolean) => void;
   isVisible: boolean;

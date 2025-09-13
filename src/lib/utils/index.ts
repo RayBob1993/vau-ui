@@ -4,6 +4,7 @@ export * from './isFunction';
 export * from './isNumber';
 export * from './isObject';
 export * from './isUndefined';
+export * from './isString';
 export * from './isNull';
 export * from './getProp';
 export * from './clone';

@@ -1,5 +1,7 @@
 <script lang="ts" setup>
+  import type { IVInputFileProps } from './types';
 
+  defineProps<IVInputFileProps>();
 </script>
 
 <template>

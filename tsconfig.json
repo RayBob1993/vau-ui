@@ -22,10 +22,6 @@
 
     // Path mapping
     "baseUrl": ".",
-    "paths": {
-      "banner-editor": ["src/lib"],
-      "banner-editor/*": ["src/lib/*"]
-    },
 
     "jsx": "preserve"
   },
