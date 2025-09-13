@@ -3,6 +3,7 @@ import {
   AccordionPlugin,
   AffixPlugin,
   AvatarPlugin,
+  AvatarGroupPlugin,
   BadgePlugin,
   BreadcrumbsPlugin,
   ButtonPlugin,
@@ -26,6 +27,7 @@ import {
   FormItemPlugin,
   InputPlugin,
   CheckboxPlugin,
+  CheckboxGroupPlugin,
   DatepickerPlugin,
   InputRangePlugin,
   InputPasswordPlugin,
@@ -34,6 +36,7 @@ import {
   InputFilePlugin,
   InputCodePlugin,
   RadioPlugin,
+  RadioGroupPlugin,
   SwitchPlugin,
   SelectPlugin,
   TooltipPlugin,
@@ -51,6 +54,7 @@ export const VauUI: Plugin = {
     app.use(AccordionPlugin);
     app.use(AffixPlugin);
     app.use(AvatarPlugin);
+    app.use(AvatarGroupPlugin);
     app.use(BadgePlugin);
     app.use(BreadcrumbsPlugin);
     app.use(ButtonPlugin);
@@ -74,6 +78,7 @@ export const VauUI: Plugin = {
     app.use(FormItemPlugin);
     app.use(InputPlugin);
     app.use(CheckboxPlugin);
+    app.use(CheckboxGroupPlugin);
     app.use(DatepickerPlugin);
     app.use(InputRangePlugin);
     app.use(InputPasswordPlugin);
@@ -82,6 +87,7 @@ export const VauUI: Plugin = {
     app.use(InputFilePlugin);
     app.use(InputCodePlugin);
     app.use(RadioPlugin);
+    app.use(RadioGroupPlugin);
     app.use(SwitchPlugin);
     app.use(SelectPlugin);
     app.use(SelectPlugin);
