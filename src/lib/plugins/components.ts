@@ -27,6 +27,7 @@ import {
   FormItemPlugin,
   InputPlugin,
   CheckboxPlugin,
+  CheckboxButtonPlugin,
   CheckboxGroupPlugin,
   DatepickerPlugin,
   InputRangePlugin,
@@ -36,11 +37,16 @@ import {
   InputFilePlugin,
   InputCodePlugin,
   RadioPlugin,
+  RadioButtonPlugin,
   RadioGroupPlugin,
   SwitchPlugin,
   SelectPlugin,
   TooltipPlugin,
-  OverlayPlugin
+  OverlayPlugin,
+  AlertPlugin,
+  ToastPlugin,
+  ConfirmPlugin,
+  ProgressPlugin
 } from '../components';
 import {
   VisiblePlugin,
@@ -78,6 +84,7 @@ export const VauUI: Plugin = {
     app.use(FormItemPlugin);
     app.use(InputPlugin);
     app.use(CheckboxPlugin);
+    app.use(CheckboxButtonPlugin);
     app.use(CheckboxGroupPlugin);
     app.use(DatepickerPlugin);
     app.use(InputRangePlugin);
@@ -87,12 +94,17 @@ export const VauUI: Plugin = {
     app.use(InputFilePlugin);
     app.use(InputCodePlugin);
     app.use(RadioPlugin);
+    app.use(RadioButtonPlugin);
     app.use(RadioGroupPlugin);
     app.use(SwitchPlugin);
     app.use(SelectPlugin);
     app.use(SelectPlugin);
     app.use(TooltipPlugin);
     app.use(OverlayPlugin);
+    app.use(AlertPlugin);
+    app.use(ToastPlugin);
+    app.use(ConfirmPlugin);
+    app.use(ProgressPlugin);
 
     // Directives
     app.use(VisiblePlugin);

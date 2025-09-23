@@ -1,14 +1,15 @@
 import type { ModelRef } from 'vue';
+import type { Maybe, MaybeArray, MaybeNull } from '../../types';
 
 export type IVAccordionValue = string | number;
-export type IVAccordionModelValue = IVAccordionValue | Array<IVAccordionValue> | null | undefined;
+export type IVAccordionModelValue = Maybe<MaybeNull<MaybeArray<IVAccordionValue>>>;
 
 export interface IVAccordionProps {
   multiple?: boolean;
 }
 
 export interface IVAccordionEmits {
-  (event: 'change', payload: IVAccordionValue | undefined): void;
+  (event: 'change', payload: Maybe<IVAccordionValue>): void;
 }
 
 export interface IVAccordionItemProps {
@@ -30,5 +31,5 @@ export interface IVAccordionItemSlots {
 export interface IVAccordionContext {
   props: IVAccordionProps
   modelValue: ModelRef<IVAccordionModelValue>;
-  handleChange: (value: IVAccordionValue | undefined) => void;
+  handleChange: (value: Maybe<IVAccordionValue>) => void;
 }

@@ -11,3 +11,4 @@ export * from './clone';
 export * from './delay';
 export * from './pick';
 export * from './omit';
+export * from './decorators';

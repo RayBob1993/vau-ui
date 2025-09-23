@@ -1,6 +1,7 @@
 export * from './Button';
 export * from './Accordion';
 export * from './Avatar';
+export * from './Alert';
 export * from './Affix';
 export * from './Breadcrumbs';
 export * from './Badge';
@@ -21,3 +22,6 @@ export * from './Forms';
 export * from './ConfigProvider';
 export * from './Tooltip';
 export * from './Overlay';
+export * from './Toast';
+export * from './Confirm';
+export * from './Progress';

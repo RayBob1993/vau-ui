@@ -1,4 +1,4 @@
-import type { ITheme } from '../utils';
+export type ITheme = 'base' | 'primary' | 'secondary' | 'tertiary' | 'danger' | 'success' | 'warning';
 
 export interface IThemeProp {
   theme: ITheme;

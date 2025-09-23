@@ -13,8 +13,8 @@
 
   const ConfigProvider = useConfigProviderContext();
 
-  const isHeaderVisible = computed<boolean>(() => !!props.title || !!slots?.header);
-  const isFooterVisible = computed<boolean>(() => !!slots?.footer);
+  const isHeaderVisible = computed<boolean>(() => Boolean(props.title) || Boolean(slots?.header));
+  const isFooterVisible = computed<boolean>(() => Boolean(slots?.footer));
 
   function handleClose () {
     isVisible.value = false;

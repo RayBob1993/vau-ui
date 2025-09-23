@@ -1,1 +1,3 @@
-export interface IVImageProps {}
+export interface IVImageProps {
+  src: string;
+}

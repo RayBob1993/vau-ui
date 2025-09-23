@@ -1,5 +1,6 @@
 <script setup lang="ts">
   import type { IVAccordionProps, IVAccordionEmits, IVAccordionModelValue, IVAccordionValue } from './types';
+  import type { Maybe } from '../../types';
   import { VAccordionContextKey } from './context';
   import { provide } from 'vue';
 
@@ -10,7 +11,7 @@
     required: true,
   });
 
-  function handleChange (value: IVAccordionValue | undefined) {
+  function handleChange (value: Maybe<IVAccordionValue>) {
     if (props.multiple && Array.isArray(modelValue.value)) {
       if (!value) {
         return;
