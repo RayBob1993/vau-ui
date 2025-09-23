@@ -25,3 +25,4 @@ export * from './Overlay';
 export * from './Toast';
 export * from './Confirm';
 export * from './Progress';
+export * from './Divider';

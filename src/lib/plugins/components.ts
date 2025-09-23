@@ -46,7 +46,8 @@ import {
   AlertPlugin,
   ToastPlugin,
   ConfirmPlugin,
-  ProgressPlugin
+  ProgressPlugin,
+  DividerPlugin
 } from '../components';
 import {
   VisiblePlugin,
@@ -105,6 +106,7 @@ export const VauUI: Plugin = {
     app.use(ToastPlugin);
     app.use(ConfirmPlugin);
     app.use(ProgressPlugin);
+    app.use(DividerPlugin);
 
     // Directives
     app.use(VisiblePlugin);
