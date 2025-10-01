@@ -1,7 +1,35 @@
 <script lang="ts" setup>
-  import type { IVInputNumberProps } from './types';
+  import type { IVInputNumberProps, IVInputNumberModelValue } from './types';
+  import { useForm } from '../Form';
+  import { computed } from 'vue';
 
-  defineProps<IVInputNumberProps>();
+  const props = withDefaults(defineProps<IVInputNumberProps>(), {
+    min: -Infinity,
+    max: Infinity,
+    step: 1
+  });
+
+  const modelValue = defineModel<IVInputNumberModelValue>({
+    default: 1
+  });
+
+  const { isFormDisabled } = useForm();
+
+  const isDisabled = computed<boolean>(() => props.disabled || isFormDisabled.value);
+  const isButtonDecrementDisabled = computed<boolean>(() => isDisabled.value || modelValue.value === props.min);
+  const isButtonIncrementDisabled = computed<boolean>(() => isDisabled.value || !(modelValue.value < props.max));
+
+  function handleDecrement () {
+    if (modelValue.value > props.min) {
+      modelValue.value -= props.step;
+    }
+  }
+
+  function handleIncrement () {
+    if (modelValue.value < props.max) {
+      modelValue.value += props.step;
+    }
+  }
 </script>
 
 <template>
@@ -9,20 +37,29 @@
     <button
       class="v-input-number__button v-input-number__button--decrement"
       type="button"
+      :disabled="isButtonDecrementDisabled"
+      @click="handleDecrement"
     >
       -
     </button>
 
     <div class="v-input-number__input">
       <input
+        v-model.number="modelValue"
         type="number"
         class="v-input-number__input-native"
+        :step="step"
+        :min="min"
+        :max="max"
+        :disabled="isDisabled"
       >
     </div>
 
     <button
       class="v-input-number__button v-input-number__button--increment"
       type="button"
+      :disabled="isButtonIncrementDisabled"
+      @click="handleIncrement"
     >
       +
     </button>

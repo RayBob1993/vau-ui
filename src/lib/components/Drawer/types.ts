@@ -1,8 +1,10 @@
+import type { ISizeProp } from '../../types';
+
 export type IVDrawerProps = {
   appendToBody?: boolean;
   title?: string;
   destroyOnClose?: boolean;
-};
+} & Partial<ISizeProp>;
 
 export interface IVDrawerEmits {
   (event: 'opened', payload: Element): void;

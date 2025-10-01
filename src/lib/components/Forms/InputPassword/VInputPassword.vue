@@ -6,5 +6,5 @@
 </script>
 
 <template>
-  <VInput class="v-input-password"/>
+  <v-input class="v-input-password"/>
 </template>

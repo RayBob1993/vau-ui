@@ -1,3 +1,3 @@
-export interface IVInputMaskProps {
-  disabled?: boolean;
-}
+import type { IVInputBaseProps } from '../Input/types';
+
+export interface IVInputMaskProps extends IVInputBaseProps {}

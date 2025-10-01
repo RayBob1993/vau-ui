@@ -1,4 +1,4 @@
-import type { IThemeProp, ISizeProp } from '../../types/props';
+import type { IThemeProp, ISizeProp } from '../../types';
 
 export type IVButtonProps = {
   loading?: boolean;

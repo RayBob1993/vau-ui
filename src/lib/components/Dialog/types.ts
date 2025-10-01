@@ -1,8 +1,10 @@
-export interface IVDialogProps {
+import type { ISizeProp } from '../../types';
+
+export type IVDialogProps = {
   appendToBody?: boolean;
   title?: string;
   destroyOnClose?: boolean;
-}
+} & Partial<ISizeProp>;
 
 export interface IVDialogEmits {
   (event: 'opened', payload: Element): void;

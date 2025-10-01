@@ -20,7 +20,7 @@ import { type Ref, isRef, unref, type ShallowRef } from 'vue';
  *   }
  * </script>
  */
-export function useScrollTo (el: Ref<Element> | Readonly<ShallowRef<Element | null>> | string, options?: ScrollIntoViewOptions) {
+export function useScrollTo (el: Element | Ref<Element> | Readonly<ShallowRef<Element | null>> | string, options?: ScrollIntoViewOptions) {
   const element = isString(el)
     ? document.querySelector(el)
     : isRef(el) ? unref(el) : el;

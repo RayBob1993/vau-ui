@@ -1,5 +1,5 @@
 import type { ComputedRef, ModelRef } from 'vue';
-import type { Maybe, MaybeArray, MaybeNull } from '../../../types';
+import type { ISizeProp, IThemeProp, Maybe, MaybeArray, MaybeNull } from '../../../types';
 
 export type IVOptionValue = string | number;
 
@@ -23,14 +23,14 @@ export interface IVOptionInstance {
 
 export type IVSelectModelValue = Maybe<MaybeNull<MaybeArray<IVOptionValue>>>;
 
-export interface IVSelectProps {
+export type IVSelectProps = {
   disabled?: boolean;
   multiple?: boolean;
   clearable?: boolean;
   searchable?: boolean;
   loading?: boolean;
   placeholder?: string;
-}
+} & Partial<IThemeProp> & Partial<ISizeProp>;
 
 export interface IVSelectEmits {
   (event: 'change', payload: IVSelectModelValue): void;

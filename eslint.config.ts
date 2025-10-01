@@ -240,6 +240,7 @@ export default defineConfigWithVueTs([
         considerComments: true
       }],
       '@stylistic/quotes': ['error', 'single'],
+      '@stylistic/object-curly-spacing': ['error', 'always'],
       '@stylistic/semi': 'error',
       'no-duplicate-imports': ['error', {
         includeExports: true
