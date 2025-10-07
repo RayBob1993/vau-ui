@@ -4,6 +4,7 @@
     "module": "ESNext",
     "moduleDetection": "force",
     "allowJs": true,
+    "newLine": "LF",
 
     // Bundler mode
     "moduleResolution": "bundler",

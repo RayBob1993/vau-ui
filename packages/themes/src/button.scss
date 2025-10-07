@@ -1,0 +1,40 @@
+.v-button {
+  --v-button-bg: transparent;
+  --v-button-color: inherit;
+  --v-button-font-size: inherit;
+  --v-button-line-height: inherit;
+  --v-button-border-color: transparent;
+  --v-button-padding-y: 0;
+  --v-button-padding-x: 0;
+
+  display: inline-flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+
+  font-size: var(--v-button-font-size);
+  line-height: var(--v-button-line-height);
+  color: var(--v-button-color);
+
+  text-align: center;
+  text-transform: none;
+  text-decoration: none;
+  text-shadow: none;
+  white-space: nowrap;
+
+  transition: var(--transition-base);
+
+  outline: 0;
+  -webkit-tap-highlight-color: transparent;
+
+  &--wide {
+    width: 100%;
+  }
+
+  &--loading {
+    .v-button__content {
+      opacity: 0;
+    }
+  }
+}

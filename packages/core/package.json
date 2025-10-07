@@ -1,0 +1,16 @@
+{
+  "name": "@vau/core",
+  "version": "0.0.0",
+  "type": "module",
+  "main": "./index.ts",
+  "module": "./index.ts",
+  "exports": {
+    ".": {
+      "import": "./index.ts"
+    },
+    "./*": "./*"
+  },
+  "files": [
+    "index.ts"
+  ]
+}
