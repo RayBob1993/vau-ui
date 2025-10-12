@@ -1,7 +1,7 @@
 <script setup lang="ts">
-  import type { ITableProps } from './types';
+  import type { IVTableProps } from './types';
 
-  defineProps<ITableProps>();
+  defineProps<IVTableProps>();
 </script>
 
 <template>

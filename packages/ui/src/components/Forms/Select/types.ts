@@ -4,12 +4,20 @@ import type { Maybe, MaybeArray, MaybeNull } from '@vau/core';
 
 export type IVOptionValue = string | number;
 
+/**
+ * Интерфейс свойств компонента VOption
+ * @interface IVOptionProps
+ */
 export interface IVOptionProps {
   label: string;
   value: IVOptionValue;
   disabled?: boolean;
 }
 
+/**
+ * Интерфейс слотов компонента VOption
+ * @interface IVOptionSlots
+ */
 export interface IVOptionSlots {
   default: (props: {
     isActive: boolean;
@@ -24,6 +32,10 @@ export interface IVOptionInstance {
 
 export type IVSelectModelValue = Maybe<MaybeNull<MaybeArray<IVOptionValue>>>;
 
+/**
+ * Интерфейс слотов компонента VSelect
+ * @interface IVSelectProps
+ */
 export type IVSelectProps = {
   disabled?: boolean;
   multiple?: boolean;
@@ -33,6 +45,10 @@ export type IVSelectProps = {
   placeholder?: string;
 } & Partial<IThemeProp> & Partial<ISizeProp>;
 
+/**
+ * Интерфейс событий компонента VSelect
+ * @interface IVSelectEmits
+ */
 export interface IVSelectEmits {
   (event: 'change', payload: IVSelectModelValue): void;
   (event: 'opened', payload: Element): void;
@@ -41,6 +57,10 @@ export interface IVSelectEmits {
   (event: 'close'): void;
 }
 
+/**
+ * Интерфейс контекста компонента VSelect
+ * @interface IVSelectContext
+ */
 export interface IVSelectContext {
   props: IVSelectProps;
   modelValue: ModelRef<IVSelectModelValue>;

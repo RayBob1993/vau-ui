@@ -1,5 +1,9 @@
 import type { IThemeProp, ISizeProp } from '../../types';
 
+/**
+ * Интерфейс свойств компонента VButton
+ * @interface IVButtonProps
+ */
 export type IVButtonProps = {
   loading?: boolean;
   disabled?: boolean;

@@ -1,5 +1,9 @@
 import type { TemplateRef } from 'vue';
 
+/**
+ * Интерфейс свойств компонента VScrollbar
+ * @interface IVScrollbarProps
+ */
 export interface IVScrollbarProps {
   vertical?: boolean;
   horizontal?: boolean;
@@ -9,6 +13,10 @@ export interface IVScrollbarProps {
   hidden?: boolean;
 }
 
+/**
+ * Интерфейс событий компонента VScrollbar
+ * @interface IVScrollbarEmits
+ */
 export interface IVScrollbarEmits {
   (event: 'scrollEndY'): void;
   (event: 'scrollEndX'): void;

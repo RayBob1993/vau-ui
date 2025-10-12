@@ -6,12 +6,20 @@ export type IVFormModelValues = unknown;
 
 export type IVFormModel = Record<string, IVFormModelValues>;
 
+/**
+ * Интерфейс свойств компонента VForm
+ * @interface IVFormProps
+ */
 export type IVFormProps = {
   disabled?: boolean;
   scrollToError?: boolean;
   scrollIntoViewOptions?: ScrollIntoViewOptions;
 } & Partial<IThemeProp> & Partial<ISizeProp>;
 
+/**
+ * Интерфейс слотов компонента VForm
+ * @interface IVFormSlots
+ */
 export interface IVFormSlots {
   default?: (props: {
     isValid: boolean;
@@ -20,6 +28,10 @@ export interface IVFormSlots {
 
 export type IVFormValidationResult = Promise<boolean>;
 
+/**
+ * Интерфейс контекста компонента VForm
+ * @interface IVFormContext
+ */
 export interface IVFormContext {
   props: IVFormProps;
   modelValue: ModelRef<IVFormModel>;

@@ -1,5 +1,9 @@
 import type { ComputedRef, Ref, TemplateRef } from 'vue';
 
+/**
+ * Интерфейс свойств компонента VFormItem
+ * @interface IVFormItemProps
+ */
 export interface IVFormItemProps {
   disabled?: boolean;
   prop?: string;
@@ -16,6 +20,10 @@ export interface IVFormItemField {
   reset: VoidFunction;
 }
 
+/**
+ * Интерфейс контекста компонента VFormItem
+ * @interface IVFormItemContext
+ */
 export interface IVFormItemContext {
   props: IVFormItemProps;
   validationStatus: Ref<IVFormItemValidationStatus>;

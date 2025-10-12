@@ -7,12 +7,20 @@ export type IVInputModelValue = MaybeNull<Maybe<string>>;
 
 export type IVInputNative = HTMLInputElement | HTMLTextAreaElement;
 
+/**
+ * Интерфейс базовых свойств компонента VInput
+ * @interface IVInputBaseProps
+ */
 export type IVInputBaseProps = {
   disabled?: boolean;
   readonly?: boolean;
   autocomplete?: string;
 } & Partial<IThemeProp> & Partial<ISizeProp>;
 
+/**
+ * Интерфейс свойств компонента VInput
+ * @interface IVInputProps
+ */
 export interface IVInputProps extends IVInputBaseProps {
   type?: ValueOf<typeof InputTypes>;
   nativeType?: ValueOf<typeof InputNativeTypes>;

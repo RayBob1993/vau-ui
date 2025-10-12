@@ -1,7 +1,15 @@
 import type { Ref } from 'vue';
 
+/**
+ * Интерфейс свойств компонента VDropdown
+ * @interface IVDropdownProps
+ */
 export interface IVDropdownProps {}
 
+/**
+ * Интерфейс событий компонента VDropdown
+ * @interface IVDropdownEmits
+ */
 export interface IVDropdownEmits {
   (event: 'opened', payload: Element): void;
   (event: 'closed', payload: Element): void;
@@ -9,6 +17,10 @@ export interface IVDropdownEmits {
   (event: 'close'): void;
 }
 
+/**
+ * Интерфейс слотов компонента VDropdown
+ * @interface IVDropdownSlots
+ */
 export interface IVDropdownSlots {
   default?: () => never;
   trigger?: (props: {
@@ -28,6 +40,10 @@ export interface IVDropdownExpose {
   isVisible: Ref<boolean>;
 }
 
+/**
+ * Интерфейс контекста компонента VDropdown
+ * @interface IVDropdownContext
+ */
 export interface IVDropdownContext {
   props: IVDropdownProps;
 }
