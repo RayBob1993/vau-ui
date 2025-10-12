@@ -1,9 +1,9 @@
 import { describe, expect, it } from 'vitest';
-import { AlertPlugin } from '../plugin';
+import { ToastPlugin } from '../plugin';
 
-describe('AlertPlugin', () => {
+describe('ToastPlugin', () => {
   it('Плагин имеет функцию install', () => {
-    expect(AlertPlugin.install).toBeDefined();
-    expect(typeof AlertPlugin.install).toBe('function');
+    expect(ToastPlugin.install).toBeDefined();
+    expect(typeof ToastPlugin.install).toBe('function');
   });
 });

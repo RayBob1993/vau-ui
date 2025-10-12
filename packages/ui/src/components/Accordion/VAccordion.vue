@@ -1,6 +1,6 @@
 <script setup lang="ts">
   import type { IVAccordionProps, IVAccordionEmits, IVAccordionModelValue, IVAccordionValue } from './types';
-  import type { Maybe } from '../../types';
+  import type { Maybe } from '@vau/core';
   import { VAccordionContextKey } from './context';
   import { provide } from 'vue';
 

@@ -1,0 +1,24 @@
+.v-row {
+  --v-row-gutter: var(--gutter-10);
+  --v-row-gutter-x: var(--v-row-gutter);
+  --v-row-gutter-y: var(--v-row-gutter);
+
+  display: flex;
+  flex-flow: row wrap;
+
+  &--gutters {
+    &-x {
+      margin-right: calc(-1 * var(--v-row-gutter-x));
+      margin-left: calc(-1 * var(--v-row-gutter-x));
+
+      > .v-col {
+        padding-right: var(--v-row-gutter-x);
+        padding-left: var(--v-row-gutter-x);
+      }
+    }
+
+    &-y {
+      gap: calc(var(--v-row-gutter-y) * 2) 0;
+    }
+  }
+}

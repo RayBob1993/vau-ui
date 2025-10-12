@@ -1,5 +1,6 @@
 import type { ComputedRef, ModelRef } from 'vue';
-import type { ISizeProp, IThemeProp, Maybe, MaybeArray, MaybeNull } from '../../../types';
+import type { ISizeProp, IThemeProp } from '../../../types';
+import type { Maybe, MaybeArray, MaybeNull } from '@vau/core';
 
 export type IVOptionValue = string | number;
 

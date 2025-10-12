@@ -1,5 +1,5 @@
 import type { ModelRef } from 'vue';
-import type { Maybe, MaybeArray, MaybeNull } from '../../types';
+import type { Maybe, MaybeArray, MaybeNull } from '@vau/core';
 
 export type IVAccordionValue = string | number;
 export type IVAccordionModelValue = Maybe<MaybeNull<MaybeArray<IVAccordionValue>>>;

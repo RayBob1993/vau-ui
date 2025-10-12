@@ -1,4 +1,4 @@
-import type { Maybe } from '../../../../types';
+import type { Maybe } from '@vau/core';
 import type { IVFormItemValidationStatus } from '../../FormItem/types';
 import { useFormItemContext } from '../../FormItem/context';
 import { useFormContext } from '../context';

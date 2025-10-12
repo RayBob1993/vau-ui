@@ -27,7 +27,7 @@
     "lint:js": "eslint --fix",
     "lint": "pnpm lint:js"
   },
-  "packageManager": "pnpm@10.18.1",
+  "packageManager": "pnpm@10.18.2",
   "engines": {
     "node": "22.17.1"
   },
@@ -35,7 +35,9 @@
     "vue": "3.5.22"
   },
   "dependencies": {
-    "@vau/ui": "workspace:*"
+    "@vau/ui": "workspace:*",
+    "@vau/core": "workspace:*",
+    "@vau/themes": "workspace:*"
   },
   "devDependencies": {
     "@commitlint/cli": "20.1.0",
