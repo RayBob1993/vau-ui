@@ -48,7 +48,8 @@ import {
   ConfirmPlugin,
   ProgressPlugin,
   DividerPlugin,
-  FlexPlugin
+  FlexPlugin,
+  TablePlugin
 } from '../components';
 import {
   VisiblePlugin,
@@ -109,6 +110,7 @@ export const VauUI: Plugin = {
     app.use(ProgressPlugin);
     app.use(DividerPlugin);
     app.use(FlexPlugin);
+    app.use(TablePlugin);
 
     // Directives
     app.use(VisiblePlugin);

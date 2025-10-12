@@ -208,6 +208,7 @@ export default defineConfigWithVueTs([
       'unused-imports': unusedImports,
     },
     rules: {
+      '@stylistic/linebreak-style': ['error', 'unix'],
       'no-unused-vars': 'off',
       'unused-imports/no-unused-imports': 'error',
       'unused-imports/no-unused-vars': [

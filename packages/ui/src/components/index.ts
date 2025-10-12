@@ -27,3 +27,4 @@ export * from './Confirm';
 export * from './Progress';
 export * from './Divider';
 export * from './Flex';
+export * from './Table';
