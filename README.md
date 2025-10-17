@@ -3,7 +3,7 @@
 ## 🎮 Системные требования
 
 * [Node.js](https://nodejs.org/en/download/package-manager) >= 22.17.1
-* [pnpm](https://pnpm.io/installation) >= 10.18.2
+* [pnpm](https://pnpm.io/installation) >= 10.18.3
 * 
 ## 🚀 Запуск проекта
 

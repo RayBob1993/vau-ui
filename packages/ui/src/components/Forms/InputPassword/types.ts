@@ -1,7 +1,9 @@
-import type { IVInputBaseProps } from '../Input/types';
+import type { IVInputNativeType, IVInputProps } from '../Input/types';
 
 /**
  * Интерфейс свойств компонента VInputPassword
  * @interface IVInputPasswordProps
  */
-export interface IVInputPasswordProps extends IVInputBaseProps {}
+export type IVInputPasswordProps = Omit<IVInputProps, 'type' | 'nativeType'>;
+
+export type IVInputPasswordNativeType = Extract<IVInputNativeType, 'text' | 'password'>;

@@ -7,7 +7,7 @@
 
   const emit = defineEmits<IVTabsEmits>();
 
-  const modelValue = defineModel<IVTabsModelValue>({
+  const modelValue = defineModel<IVTabsModelValue>('value', {
     required: true
   });
 

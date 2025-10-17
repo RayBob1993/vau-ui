@@ -1,0 +1,65 @@
+.fade {
+  &-in {
+    &-enter-active,
+    &-leave-active {
+      transition: var(--transition-base);
+    }
+
+    &-enter-from,
+    &-leave-to {
+      opacity: 0;
+    }
+
+    &-left {
+      &-enter-active,
+      &-leave-active {
+        transition: var(--transition-base);
+      }
+
+      &-enter-from,
+      &-leave-to {
+        transform: translateX(-10px);
+        opacity: 0;
+      }
+    }
+
+    &-right {
+      &-enter-active,
+      &-leave-active {
+        transition: var(--transition-base);
+      }
+
+      &-enter-from,
+      &-leave-to {
+        transform: translateX(10px);
+        opacity: 0;
+      }
+    }
+
+    &-up {
+      &-enter-active,
+      &-leave-active {
+        transition: var(--transition-base);
+      }
+
+      &-enter-from,
+      &-leave-to {
+        transform: translateY(10px);
+        opacity: 0;
+      }
+    }
+
+    &-down {
+      &-enter-active,
+      &-leave-active {
+        transition: var(--transition-base);
+      }
+
+      &-enter-from,
+      &-leave-to {
+        transform: translateY(-10px);
+        opacity: 0;
+      }
+    }
+  }
+}

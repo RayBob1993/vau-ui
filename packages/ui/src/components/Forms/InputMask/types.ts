@@ -1,7 +1,9 @@
-import type { IVInputBaseProps } from '../Input/types';
+import type { IVInputProps } from '../Input/types';
 
 /**
  * Интерфейс свойств компонента VInputMask
  * @interface IVInputMaskProps
  */
-export interface IVInputMaskProps extends IVInputBaseProps {}
+export interface IVInputMaskProps extends Omit<IVInputProps, 'type'> {
+
+}

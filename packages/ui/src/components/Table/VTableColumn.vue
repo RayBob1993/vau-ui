@@ -1,9 +1,11 @@
 <script setup lang="ts">
-  import type { ITableColumnProps } from './types';
+  import type { IVTableColumnProps } from './types';
 
-  defineProps<ITableColumnProps>();
+  defineProps<IVTableColumnProps>();
 </script>
 
 <template>
-  <td class="v-table-column"/>
+  <td class="v-table-column">
+    <slot/>
+  </td>
 </template>

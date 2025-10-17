@@ -6,4 +6,9 @@ import type { ISizeProp, IThemeProp } from '../../../types';
  */
 export type IVDatepickerProps = {
   disabled?: boolean;
+  readonly?: boolean;
+  clearable?: boolean;
+  showWeekNumber?: boolean;
+  valueFormat?: string;
+  format?: string;
 } & Partial<IThemeProp> & Partial<ISizeProp>;

@@ -9,15 +9,15 @@
     step: 1
   });
 
-  const modelValue = defineModel<IVInputNumberModelValue>({
+  const modelValue = defineModel<IVInputNumberModelValue>('value', {
     default: 1
   });
 
   const { isFormDisabled } = useForm();
 
   const isDisabled = computed<boolean>(() => props.disabled || isFormDisabled.value);
-  const isButtonDecrementDisabled = computed<boolean>(() => isDisabled.value || modelValue.value === props.min);
-  const isButtonIncrementDisabled = computed<boolean>(() => isDisabled.value || !(modelValue.value < props.max));
+  const isDecrementDisabled = computed<boolean>(() => isDisabled.value || modelValue.value === props.min);
+  const isIncrementDisabled = computed<boolean>(() => isDisabled.value || !(modelValue.value < props.max));
 
   function handleDecrement () {
     if (modelValue.value > props.min) {
@@ -37,7 +37,7 @@
     <button
       class="v-input-number__button v-input-number__button--decrement"
       type="button"
-      :disabled="isButtonDecrementDisabled"
+      :disabled="isDecrementDisabled"
       @click="handleDecrement"
     >
       -
@@ -58,7 +58,7 @@
     <button
       class="v-input-number__button v-input-number__button--increment"
       type="button"
-      :disabled="isButtonIncrementDisabled"
+      :disabled="isIncrementDisabled"
       @click="handleIncrement"
     >
       +

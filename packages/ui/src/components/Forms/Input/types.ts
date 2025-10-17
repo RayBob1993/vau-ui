@@ -6,6 +6,9 @@ import { InputModes, InputNativeTypes, InputTypes } from '../../../constants';
 export type IVInputModelValue = MaybeNull<Maybe<string>>;
 
 export type IVInputNative = HTMLInputElement | HTMLTextAreaElement;
+export type IVInputType = ValueOf<typeof InputTypes>;
+export type IVInputNativeType = ValueOf<typeof InputNativeTypes>;
+export type IVInputMode = ValueOf<typeof InputModes>;
 
 /**
  * Интерфейс базовых свойств компонента VInput
@@ -22,17 +25,18 @@ export type IVInputBaseProps = {
  * @interface IVInputProps
  */
 export interface IVInputProps extends IVInputBaseProps {
-  type?: ValueOf<typeof InputTypes>;
-  nativeType?: ValueOf<typeof InputNativeTypes>;
-  inputMode?: ValueOf<typeof InputModes>;
+  type?: IVInputType;
+  nativeType?: IVInputNativeType;
+  inputMode?: IVInputMode;
+  clearable?: boolean;
 }
 
 export interface IVInputExpose {
   input: TemplateRef<IVInputNative>;
-  focus: () => void;
+  focus: VoidFunction;
 }
 
 export interface IVInputInstance {
   input: MaybeNull<IVInputNative>;
-  focus: () => void;
+  focus: VoidFunction;
 }

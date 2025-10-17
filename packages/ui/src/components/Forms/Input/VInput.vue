@@ -11,7 +11,7 @@
     inputMode: InputModes.TEXT
   });
 
-  const modelValue = defineModel<IVInputModelValue>({
+  const modelValue = defineModel<IVInputModelValue>('value', {
     required: true
   });
 
@@ -50,6 +50,7 @@
       :inputmode="inputMode"
       class="v-input__native"
       :readonly="readonly"
+      :disabled="isDisabled"
       :autocomplete="autocomplete"
     >
 
@@ -59,6 +60,7 @@
       v-model="modelValue"
       class="v-input__native"
       :readonly="readonly"
+      :disabled="isDisabled"
     />
   </div>
 </template>

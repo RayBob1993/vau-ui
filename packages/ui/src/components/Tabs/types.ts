@@ -27,6 +27,7 @@ export interface IVTabsEmits {
 export interface IVTabProps {
   title?: string;
   value: IVTabValue;
+  disabled?: boolean;
 }
 
 /**
