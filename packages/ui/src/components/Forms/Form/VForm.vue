@@ -11,7 +11,7 @@
     })
   });
 
-  const modelValue = defineModel<IVFormModel>('value',{
+  const modelValue = defineModel<IVFormModel>({
     required: true
   });
 

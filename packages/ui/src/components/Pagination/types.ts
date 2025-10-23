@@ -16,8 +16,8 @@ export interface IVPaginationProps {
  * @interface IVPaginationEmits
  */
 export interface IVPaginationEmits {
-  (event: 'change', payload: number): void;
-  (event: 'load', payload: number): void;
+  change: [payload: number];
+  load: [payload: number];
 }
 
 export interface IVPaginationExpose {

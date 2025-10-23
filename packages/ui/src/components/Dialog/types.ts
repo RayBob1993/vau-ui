@@ -15,10 +15,10 @@ export type IVDialogProps = {
  * @interface IVDialogEmits
  */
 export interface IVDialogEmits {
-  (event: 'opened', payload: Element): void;
-  (event: 'closed', payload: Element): void;
-  (event: 'open'): void;
-  (event: 'close'): void;
+  opened: [payload: Element];
+  closed: [payload: Element];
+  open: [];
+  close: [];
 }
 
 /**

@@ -1,7 +1,8 @@
 <script setup lang="ts">
-  import type { IVCollapseProps } from './types';
+  import type { IVCollapseProps, IVCollapseEmits } from './types';
 
   defineProps<IVCollapseProps>();
+  defineEmits<IVCollapseEmits>();
 </script>
 
 <template>

@@ -9,8 +9,8 @@
     step: 1
   });
 
-  const modelValue = defineModel<IVInputNumberModelValue>('value', {
-    default: 1
+  const modelValue = defineModel<IVInputNumberModelValue>({
+    default: 0
   });
 
   const { isFormDisabled } = useForm();

@@ -7,7 +7,7 @@
   const emit = defineEmits<IVDialogEmits>();
   const slots = defineSlots<IVDialogSlots>();
 
-  const isVisible = defineModel<boolean>('visible', {
+  const modelValue = defineModel<boolean>({
     required: true
   });
 
@@ -17,7 +17,7 @@
   const isFooterVisible = computed<boolean>(() => Boolean(slots?.footer));
 
   function handleClose () {
-    isVisible.value = false;
+    modelValue.value = false;
   }
 
   function afterEnter (payload: Element) {
@@ -28,7 +28,7 @@
     emit('closed', payload);
   }
 
-  watch(isVisible, value => {
+  watch(modelValue, value => {
     if (value) {
       emit('open');
     } else {
@@ -47,11 +47,11 @@
       @after-leave="afterLeave"
     >
       <div
-        v-show="isVisible"
+        v-show="modelValue"
         class="v-dialog"
         role="dialog"
         :class="{
-          'v-dialog--open': isVisible
+          'v-dialog--open': modelValue
         }"
       >
         <div

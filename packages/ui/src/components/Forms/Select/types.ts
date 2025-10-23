@@ -50,11 +50,11 @@ export type IVSelectProps = {
  * @interface IVSelectEmits
  */
 export interface IVSelectEmits {
-  (event: 'change', payload: IVSelectModelValue): void;
-  (event: 'opened', payload: Element): void;
-  (event: 'closed', payload: Element): void;
-  (event: 'open'): void;
-  (event: 'close'): void;
+  change: [payload: IVSelectModelValue];
+  opened: [payload: Element];
+  closed: [payload: Element];
+  open: [];
+  close: [];
 }
 
 /**

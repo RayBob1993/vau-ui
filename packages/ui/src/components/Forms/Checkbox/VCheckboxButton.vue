@@ -1,13 +1,29 @@
 <script lang="ts" setup>
-  import type { IVCheckboxProps } from './types';
+  import type { IVCheckboxModelValue, IVCheckboxProps } from './types';
+  import { useCheckbox } from './composables';
 
-  defineProps<IVCheckboxProps>();
+  const props = defineProps<IVCheckboxProps>();
+
+  const modelValue = defineModel<IVCheckboxModelValue>({
+    required: true
+  });
+
+  const { isDisabled, isChecked } = useCheckbox(props, modelValue);
 </script>
 
 <template>
-  <label class="v-checkbox-button">
+  <label
+    class="v-checkbox-button"
+    :class="{
+      'v-checkbox-button--disabled': isDisabled,
+      'v-checkbox-button--active': isChecked
+    }"
+  >
     <input
+      v-model="modelValue"
+      :value="value"
       type="checkbox"
+      :disabled="isDisabled"
       class="v-checkbox-button__native"
     >
 

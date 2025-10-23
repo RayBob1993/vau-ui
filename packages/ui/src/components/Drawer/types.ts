@@ -15,10 +15,10 @@ export type IVDrawerProps = {
  * @interface IVDrawerEmits
  */
 export interface IVDrawerEmits {
-  (event: 'opened', payload: Element): void;
-  (event: 'closed', payload: Element): void;
-  (event: 'open'): void;
-  (event: 'close', ): void;
+  opened: [payload: Element];
+  closed: [payload: Element];
+  open: [];
+  close: [];
 }
 
 /**

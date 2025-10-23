@@ -7,7 +7,7 @@
   const props = defineProps<IVAccordionProps>();
   const emit = defineEmits<IVAccordionEmits>();
 
-  const modelValue = defineModel<IVAccordionModelValue>('value',{
+  const modelValue = defineModel<IVAccordionModelValue>({
     required: true,
   });
 

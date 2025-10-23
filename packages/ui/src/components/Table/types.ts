@@ -36,9 +36,9 @@ export interface IVTableProps <DATA extends IVTableBaseData> {
  * @interface IVTableEmits
  */
 export interface IVTableEmits {
-  (event: 'select'): void;
-  (event: 'select-all'): void;
-  (event: 'sort-change'): void;
+  select: [];
+  'select:all': [];
+  'sort:change': [];
 }
 
 /**

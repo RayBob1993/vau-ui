@@ -17,7 +17,7 @@ export interface IVTabsProps {
  * @interface IVTabsProps
  */
 export interface IVTabsEmits {
-  (event: 'change', payload: IVTabsModelValue): void;
+  change: [payload: IVTabsModelValue];
 }
 
 /**

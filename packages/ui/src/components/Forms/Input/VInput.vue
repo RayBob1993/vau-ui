@@ -1,9 +1,8 @@
 <script lang="ts" setup>
   import type { IVInputExpose, IVInputModelValue, IVInputNative, IVInputProps } from './types';
+  import { useInput } from './composables';
   import { InputModes, InputNativeTypes, InputTypes } from '../../../constants';
-  import { useForm } from '../Form';
-  import { useToggle } from '@vau/core';
-  import { computed, useTemplateRef } from 'vue';
+  import { useTemplateRef } from 'vue';
 
   const props = withDefaults(defineProps<IVInputProps>(), {
     type: InputTypes.INPUT,
@@ -11,17 +10,13 @@
     inputMode: InputModes.TEXT
   });
 
-  const modelValue = defineModel<IVInputModelValue>('value', {
+  const modelValue = defineModel<IVInputModelValue>({
     required: true
   });
 
   const input = useTemplateRef<IVInputNative>('input');
 
-  const { isFormDisabled } = useForm();
-  const [isFocus, setFocus] = useToggle();
-
-  const isTextarea = computed<boolean>(() => props.type === InputTypes.TEXTAREA);
-  const isDisabled = computed<boolean>(() => props.disabled || isFormDisabled.value);
+  const { isDisabled, isTextarea, isFocus } = useInput(props, modelValue);
 
   function focus () {
     input.value?.focus();

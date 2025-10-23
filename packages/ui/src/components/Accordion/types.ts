@@ -17,7 +17,7 @@ export interface IVAccordionProps {
  * @interface IVAccordionEmits
  */
 export interface IVAccordionEmits {
-  (event: 'change', payload: Maybe<IVAccordionValue>): void;
+  change: [payload: Maybe<IVAccordionValue>];
 }
 
 /**

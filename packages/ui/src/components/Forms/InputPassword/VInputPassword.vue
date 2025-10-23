@@ -7,7 +7,7 @@
 
   defineProps<IVInputPasswordProps>();
 
-  const modelValue = defineModel<IVInputModelValue>('value', {
+  const modelValue = defineModel<IVInputModelValue>({
     required: true
   });
 

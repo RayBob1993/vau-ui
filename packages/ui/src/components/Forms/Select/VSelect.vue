@@ -8,7 +8,7 @@
   const props = defineProps<IVSelectProps>();
   const emit = defineEmits<IVSelectEmits>();
 
-  const modelValue = defineModel<IVSelectModelValue>('value', {
+  const modelValue = defineModel<IVSelectModelValue>({
     required: true
   });
 

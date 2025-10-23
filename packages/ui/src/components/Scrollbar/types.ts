@@ -18,13 +18,13 @@ export interface IVScrollbarProps {
  * @interface IVScrollbarEmits
  */
 export interface IVScrollbarEmits {
-  (event: 'scrollEndY'): void;
-  (event: 'scrollEndX'): void;
-  (event: 'scroll', payload: Event): void;
-  (event: 'mousedown', payload: MouseEvent): void;
-  (event: 'mouseleave', payload: MouseEvent): void;
-  (event: 'mouseup', payload: MouseEvent): void;
-  (event: 'mousemove', payload: MouseEvent): void;
+  scrollEndY: [];
+  scrollEndX: [];
+  scroll: [payload: Event];
+  mousedown: [payload: MouseEvent];
+  mouseleave: [payload: MouseEvent];
+  mouseup: [payload: MouseEvent];
+  mousemove: [payload: MouseEvent];
 }
 
 export interface IVScrollbarExpose {
