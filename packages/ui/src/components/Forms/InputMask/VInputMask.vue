@@ -16,7 +16,7 @@
 <template>
   <v-input
     ref="inputRef"
-    v-model:value="modelValue"
+    v-model="modelValue"
     class="v-input-mask"
   />
 </template>

@@ -48,7 +48,7 @@ describe('VButton', () => {
 
     const wrapper = mount(() => (
       <VForm
-        v-model:value={model.value}
+        v-model={model.value}
         disabled={true}
       >
         <VButton/>

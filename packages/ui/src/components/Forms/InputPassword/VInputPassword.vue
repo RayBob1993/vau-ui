@@ -24,7 +24,7 @@
 
 <template>
   <v-input
-    v-model:value="modelValue"
+    v-model="modelValue"
     class="v-input-password"
     :native-type="currentType"
   />
