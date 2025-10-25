@@ -1,20 +1,20 @@
 import type { ISizeProp } from '../../types';
 
 /**
- * Интерфейс свойств компонента VDialog
- * @interface IVDialogProps
+ * Интерфейс свойств компонента VModal
+ * @interface IVModalProps
  */
-export type IVDialogProps = {
+export type IVModalProps = {
   appendToBody?: boolean;
   title?: string;
   destroyOnClose?: boolean;
 } & Partial<ISizeProp>;
 
 /**
- * Интерфейс событий компонента VDialog
- * @interface IVDialogEmits
+ * Интерфейс событий компонента VModal
+ * @interface IVModalEmits
  */
-export interface IVDialogEmits {
+export interface IVModalEmits {
   opened: [payload: Element];
   closed: [payload: Element];
   open: [];
@@ -22,10 +22,10 @@ export interface IVDialogEmits {
 }
 
 /**
- * Интерфейс слотов компонента VDialog
- * @interface IVDialogSlots
+ * Интерфейс слотов компонента VModal
+ * @interface IVModalSlots
  */
-export interface IVDialogSlots {
+export interface IVModalSlots {
   default?: (props: {
     close: VoidFunction;
   }) => never;

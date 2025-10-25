@@ -9,7 +9,8 @@ import {
   ButtonPlugin,
   CollapsePlugin,
   ConfigProviderPlugin,
-  DialogPlugin,
+  ModalPlugin,
+  InplacePlugin,
   DrawerPlugin,
   DropdownPlugin,
   ImagePlugin,
@@ -49,7 +50,8 @@ import {
   ProgressPlugin,
   DividerPlugin,
   FlexPlugin,
-  TablePlugin
+  TablePlugin,
+  InputGroupPlugin
 } from '../components';
 import {
   VisiblePlugin,
@@ -69,7 +71,8 @@ export const VauUI: Plugin = {
     app.use(ButtonPlugin);
     app.use(CollapsePlugin);
     app.use(ConfigProviderPlugin);
-    app.use(DialogPlugin);
+    app.use(ModalPlugin);
+    app.use(InplacePlugin);
     app.use(DrawerPlugin);
     app.use(DropdownPlugin);
     app.use(ImagePlugin);
@@ -111,6 +114,7 @@ export const VauUI: Plugin = {
     app.use(DividerPlugin);
     app.use(FlexPlugin);
     app.use(TablePlugin);
+    app.use(InputGroupPlugin);
 
     // Directives
     app.use(VisiblePlugin);

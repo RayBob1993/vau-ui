@@ -1,0 +1,14 @@
+.v-input-group {
+  display: flex;
+  align-items: stretch;
+
+  & > *:not(.v-input-group-addon) {
+    flex: 1 1 auto;
+  }
+}
+
+.v-input-group-addon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

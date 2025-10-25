@@ -5,5 +5,11 @@
 </script>
 
 <template>
-  <div class="v-badge"/>
+  <div
+    class="v-badge"
+    :class="{
+      [`v-badge--size-${size}`]: size,
+      [`v-badge--theme-${theme}`]: theme
+    }"
+  />
 </template>

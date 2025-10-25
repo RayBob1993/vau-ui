@@ -1,5 +1,5 @@
 @use './button';
-@use './dialog';
+@use './modal';
 @use './alert';
 @use './avatar';
 @use './accordion';
@@ -38,3 +38,4 @@
 @use './datepicker';
 @use './form-item';
 @use './table';
+@use './input-group';

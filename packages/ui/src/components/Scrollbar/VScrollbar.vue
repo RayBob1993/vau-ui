@@ -31,7 +31,9 @@
       'v-scrollbar--draggable': draggable,
       'v-scrollbar--vertical': vertical,
       'v-scrollbar--horizontal': horizontal,
-      'v-scrollbar--grabbing': isGrabbing
+      'v-scrollbar--grabbing': isGrabbing,
+      [`v-scrollbar--size-${size}`]: size,
+      [`v-scrollbar--theme-${theme}`]: theme
     }"
   >
     <div

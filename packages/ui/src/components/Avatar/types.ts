@@ -1,10 +1,12 @@
-import type { ISizeProp } from '../../types';
+import type { ISizeProp, IThemeProp } from '../../types';
 
 /**
  * Интерфейс свойств компонента VAvatar
  * @interface IVAvatarProps
  */
 export type IVAvatarProps = {
-  src: string;
+  src?: string;
   fallback?: string;
-} & Partial<ISizeProp>;
+  circle?: boolean;
+  label?: string;
+} & Partial<ISizeProp> & Partial<IThemeProp>;

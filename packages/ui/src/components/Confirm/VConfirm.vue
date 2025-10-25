@@ -5,5 +5,11 @@
 </script>
 
 <template>
-  <div class="v-confirm"/>
+  <div
+    class="v-confirm"
+    :class="{
+      [`v-confirm--size-${size}`]: size,
+      [`v-confirm--theme-${theme}`]: theme
+    }"
+  />
 </template>

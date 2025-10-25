@@ -1,11 +1,11 @@
 <script lang="ts" setup>
-  import type { IVDialogProps, IVDialogEmits, IVDialogSlots } from './types';
+  import type { IVModalEmits, IVModalProps, IVModalSlots } from './types';
   import { useConfigProviderContext } from '../../components';
   import { computed, watch } from 'vue';
 
-  const props = defineProps<IVDialogProps>();
-  const emit = defineEmits<IVDialogEmits>();
-  const slots = defineSlots<IVDialogSlots>();
+  const props = defineProps<IVModalProps>();
+  const emit = defineEmits<IVModalEmits>();
+  const slots = defineSlots<IVModalSlots>();
 
   const modelValue = defineModel<boolean>({
     required: true
@@ -48,15 +48,15 @@
     >
       <div
         v-show="modelValue"
-        class="v-dialog"
+        class="v-modal"
         role="dialog"
         :class="{
-          'v-dialog--open': modelValue
+          'v-modal--open': modelValue
         }"
       >
         <div
           v-if="isHeaderVisible"
-          class="v-dialog__header"
+          class="v-modal__header"
         >
           <slot
             name="header"
@@ -66,7 +66,7 @@
           </slot>
 
           <button
-            class="v-dialog__close-button"
+            class="v-modal__close-button"
             type="button"
             @click="handleClose"
           >
@@ -74,13 +74,13 @@
           </button>
         </div>
 
-        <div class="v-dialog__body">
+        <div class="v-modal__body">
           <slot :close="handleClose"/>
         </div>
 
         <div
           v-if="isFooterVisible"
-          class="v-dialog__footer"
+          class="v-modal__footer"
         >
           <slot
             name="footer"

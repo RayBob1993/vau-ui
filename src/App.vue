@@ -1,10 +1,18 @@
 <script setup lang="ts">
-  import { VButton } from '@vau/ui';
+  import { VInputGroup, VInputGroupAddon, VInput } from '@vau/ui';
   import '@vau/themes/src/index.scss';
 </script>
 
 <template>
-  <v-button disabled>
-    sdfvdsfv
-  </v-button>
+  <v-input-group>
+    <v-input-group-addon>
+      www
+    </v-input-group-addon>
+
+    <v-input/>
+
+    <v-input-group-addon>
+      $
+    </v-input-group-addon>
+  </v-input-group>
 </template>

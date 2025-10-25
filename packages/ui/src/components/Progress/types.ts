@@ -5,5 +5,7 @@ import type { ISizeProp, IThemeProp } from '../../types';
  * @interface IVProgressProps
  */
 export type IVProgressProps = {
-
+  indeterminate?: boolean;
+  showValue?: boolean;
+  value: number;
 } & Partial<IThemeProp> & Partial<ISizeProp>;

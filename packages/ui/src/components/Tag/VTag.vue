@@ -5,7 +5,13 @@
 </script>
 
 <template>
-  <div class="v-tag">
+  <div
+    class="v-tag"
+    :class="{
+      [`v-tag--size-${size}`]: size,
+      [`v-tag--theme-${theme}`]: theme
+    }"
+  >
     <slot/>
   </div>
 </template>

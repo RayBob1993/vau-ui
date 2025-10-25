@@ -41,7 +41,13 @@
 </script>
 
 <template>
-  <div class="v-accordion">
+  <div
+    class="v-accordion"
+    :class="{
+      [`v-accordion--size-${size}`]: size,
+      [`v-accordion--theme-${theme}`]: theme
+    }"
+  >
     <slot/>
   </div>
 </template>

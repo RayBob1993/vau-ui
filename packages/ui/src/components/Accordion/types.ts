@@ -1,5 +1,6 @@
 import type { ModelRef } from 'vue';
 import type { Maybe, MaybeArray, MaybeNull } from '@vau/core';
+import type { ISizeProp, IThemeProp } from '../../types';
 
 export type IVAccordionValue = string | number;
 export type IVAccordionModelValue = Maybe<MaybeNull<MaybeArray<IVAccordionValue>>>;
@@ -8,9 +9,9 @@ export type IVAccordionModelValue = Maybe<MaybeNull<MaybeArray<IVAccordionValue>
  * Интерфейс свойств компонента VAccordion
  * @interface IVAccordionProps
  */
-export interface IVAccordionProps {
+export type IVAccordionProps = {
   multiple?: boolean;
-}
+} & Partial<ISizeProp> & Partial<IThemeProp>;
 
 /**
  * Интерфейс событий компонента VAccordion
@@ -24,11 +25,11 @@ export interface IVAccordionEmits {
  * Интерфейс событий компонента VAccordionItem
  * @interface IVAccordionItemProps
  */
-export interface IVAccordionItemProps {
+export type IVAccordionItemProps = {
   value: IVAccordionValue;
   title?: string;
   disabled?: boolean;
-}
+} & Partial<ISizeProp> & Partial<IThemeProp>;
 
 /**
  * Интерфейс слотов компонента VAccordionItem

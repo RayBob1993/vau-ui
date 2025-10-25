@@ -5,5 +5,11 @@
 </script>
 
 <template>
-  <div class="v-spinner"/>
+  <div
+    class="v-spinner"
+    :class="{
+      [`v-spinner--size-${size}`]: size,
+      [`v-spinner--theme-${theme}`]: theme
+    }"
+  />
 </template>

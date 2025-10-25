@@ -1,17 +1,18 @@
 import type { TemplateRef } from 'vue';
+import type { ISizeProp, IThemeProp } from '../../types';
 
 /**
  * Интерфейс свойств компонента VScrollbar
  * @interface IVScrollbarProps
  */
-export interface IVScrollbarProps {
+export type IVScrollbarProps = {
   vertical?: boolean;
   horizontal?: boolean;
   draggableMultiplier?: number;
   infiniteScrollOffset?: number;
   draggable?: boolean;
   hidden?: boolean;
-}
+} & Partial<ISizeProp> & Partial<IThemeProp>;
 
 /**
  * Интерфейс событий компонента VScrollbar
