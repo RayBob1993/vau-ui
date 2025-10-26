@@ -1,7 +1,6 @@
 <script lang="ts" setup>
   import type { IVInputNumberProps, IVInputNumberModelValue } from './types';
-  import { useForm } from '../Form';
-  import { computed } from 'vue';
+  import { useInputNumber } from './composables';
 
   const props = withDefaults(defineProps<IVInputNumberProps>(), {
     min: -Infinity,
@@ -13,23 +12,13 @@
     default: 0
   });
 
-  const { isFormDisabled } = useForm();
-
-  const isDisabled = computed<boolean>(() => props.disabled || isFormDisabled.value);
-  const isDecrementDisabled = computed<boolean>(() => isDisabled.value || modelValue.value === props.min);
-  const isIncrementDisabled = computed<boolean>(() => isDisabled.value || !(modelValue.value < props.max));
-
-  function handleDecrement () {
-    if (modelValue.value > props.min) {
-      modelValue.value -= props.step;
-    }
-  }
-
-  function handleIncrement () {
-    if (modelValue.value < props.max) {
-      modelValue.value += props.step;
-    }
-  }
+  const {
+    isDisabled,
+    isDecrementDisabled,
+    isIncrementDisabled,
+    handleDecrement,
+    handleIncrement
+  } = useInputNumber(props, modelValue);
 </script>
 
 <template>

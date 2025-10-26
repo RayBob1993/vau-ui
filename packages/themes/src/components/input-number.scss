@@ -1,3 +1,20 @@
 .v-input-number {
+  display: flex;
+  flex-flow: row nowrap;
 
+  &__input {
+    flex: 1;
+
+    &-native {
+      display: block;
+      width: 100%;
+
+      text-align: center;
+
+      &::-webkit-inner-spin-button,
+      &::-webkit-outer-spin-button {
+        display: none;
+      }
+    }
+  }
 }

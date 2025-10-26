@@ -1,3 +1,19 @@
-.v-text {
+:root {
+  --v-text-color: inherit;
+  --v-text-font-size: inherit;
+  --v-text-line-height: inherit;
+}
 
+.v-text {
+  color: var(--v-text-color);
+  font-size: var(--v-text-font-size);
+  line-height: var(--v-text-line-height);
+
+  &--uppercase {
+    text-transform: uppercase;
+  }
+
+  &--underline {
+    text-decoration: underline;
+  }
 }

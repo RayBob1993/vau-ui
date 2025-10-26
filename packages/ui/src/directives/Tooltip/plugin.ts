@@ -1,8 +1,8 @@
 import type { Plugin } from 'vue';
-import VTooltip from './VTooltip.vue';
+import { vTooltip } from './directive';
 
 export const TooltipPlugin: Plugin = {
   install (app) {
-    app.component('VTooltip', VTooltip);
+    app.directive('tooltip', vTooltip);
   }
 };

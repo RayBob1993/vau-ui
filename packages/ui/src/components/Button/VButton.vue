@@ -1,13 +1,13 @@
 <script setup lang="ts">
   import type { IVButtonProps } from './types';
-  import { useForm } from '../Forms';
+  import { useFormProvider } from '../../composables';
   import { computed } from 'vue';
 
   const props = withDefaults(defineProps<IVButtonProps>(), {
     type: 'button'
   });
 
-  const { isFormDisabled } = useForm();
+  const { isFormDisabled } = useFormProvider();
 
   const isDisabled = computed<boolean>(() => {
     return isFormDisabled.value ||

@@ -6,7 +6,7 @@
     IVFormItemSlots,
     IVFormItemValidationStatus
   } from './types';
-  import { useForm } from '../Form';
+  import { useFormContext } from '../Form';
   import { delay } from '@vau/core';
   import { useTemplateRef, defineAsyncComponent, useId, ref, onUnmounted, computed } from 'vue';
 
@@ -16,7 +16,7 @@
 
   const VFormItemErrors = defineAsyncComponent(() => import('./VFormItemErrors.vue'));
 
-  const { Form } = useForm();
+  const Form = useFormContext();
   const id = useId();
 
   const root = useTemplateRef<HTMLDivElement>('root');

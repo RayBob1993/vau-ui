@@ -42,7 +42,6 @@ import {
   RadioGroupPlugin,
   SwitchPlugin,
   SelectPlugin,
-  TooltipPlugin,
   OverlayPlugin,
   AlertPlugin,
   ToastPlugin,
@@ -56,7 +55,8 @@ import {
 import {
   VisiblePlugin,
   ClickOutsidePlugin,
-  LoadingPlugin
+  LoadingPlugin,
+  TooltipPlugin
 } from '../directives';
 
 export const VauUI: Plugin = {
@@ -105,7 +105,6 @@ export const VauUI: Plugin = {
     app.use(SwitchPlugin);
     app.use(SelectPlugin);
     app.use(SelectPlugin);
-    app.use(TooltipPlugin);
     app.use(OverlayPlugin);
     app.use(AlertPlugin);
     app.use(ToastPlugin);
@@ -120,5 +119,6 @@ export const VauUI: Plugin = {
     app.use(VisiblePlugin);
     app.use(ClickOutsidePlugin);
     app.use(LoadingPlugin);
+    app.use(TooltipPlugin);
   }
 };

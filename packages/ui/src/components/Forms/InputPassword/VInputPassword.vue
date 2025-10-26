@@ -1,25 +1,16 @@
 <script lang="ts" setup>
-  import type { IVInputPasswordProps, IVInputPasswordNativeType } from './types';
+  import type { IVInputPasswordProps } from './types';
   import type { IVInputModelValue } from '../Input/types';
+  import { useInputPassword } from './composables';
   import { VInput } from '../Input';
-  import { InputNativeTypes } from '../../../constants';
-  import { ref } from 'vue';
 
-  defineProps<IVInputPasswordProps>();
+  const props = defineProps<IVInputPasswordProps>();
 
   const modelValue = defineModel<IVInputModelValue>({
     required: true
   });
 
-  const currentType = ref<IVInputPasswordNativeType>(InputNativeTypes.PASSWORD);
-
-  function handleToggleType () {
-    if (currentType.value === InputNativeTypes.PASSWORD) {
-      currentType.value = InputNativeTypes.TEXT;
-    } else {
-      currentType.value = InputNativeTypes.PASSWORD;
-    }
-  }
+  const { currentType, handleToggleType } = useInputPassword();
 </script>
 
 <template>
@@ -27,5 +18,15 @@
     v-model="modelValue"
     class="v-input-password"
     :native-type="currentType"
-  />
+    v-bind="props"
+  >
+    <template #after>
+      <button
+        type="button"
+        @click="handleToggleType"
+      >
+        @
+      </button>
+    </template>
+  </v-input>
 </template>

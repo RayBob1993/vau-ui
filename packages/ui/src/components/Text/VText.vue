@@ -1,17 +1,27 @@
 <script setup lang="ts">
   import type { IVTextProps } from './types';
 
-  defineProps<IVTextProps>();
+  withDefaults(defineProps<IVTextProps>(), {
+    tag: 'div'
+  });
 </script>
 
 <template>
-  <div
+  <component
+    :is="tag"
     class="v-text"
     :class="{
+      'v-text--uppercase': uppercase,
+      'v-text--underline': underline,
       [`v-text--size-${size}`]: size,
       [`v-text--theme-${theme}`]: theme
     }"
   >
-    <slot/>
-  </div>
+    <span
+      v-if="content"
+      v-html="content"
+    />
+
+    <slot v-else/>
+  </component>
 </template>
