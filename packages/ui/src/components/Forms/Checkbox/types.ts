@@ -1,4 +1,4 @@
-import type { ISizeProp, IThemeProp } from '../../../types';
+import type { ISizeProp, IThemeProp, IDirectionProp } from '../../../types';
 
 export type IVCheckboxValue = number | string;
 export type IVCheckboxModelValue = boolean | Array<IVCheckboxValue>;
@@ -12,3 +12,9 @@ export type IVCheckboxProps = {
   indeterminate?: boolean;
   value?: IVCheckboxValue;
 } & Partial<IThemeProp> & Partial<ISizeProp>;
+
+/**
+ * Интерфейс свойств компонента VCheckboxGroup
+ * @interface IVCheckboxGroupProps
+ */
+export type IVCheckboxGroupProps = IDirectionProp;

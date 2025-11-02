@@ -1,3 +1,20 @@
-.v-radio-group {
+:root {
+  --v-radio-group-x: 16px;
+  --v-radio-group-y: 8px;
+}
 
+.v-radio-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--v-radio-group-y) var(--v-radio-group-x);
+
+  &--direction {
+    &-horizontal {
+      flex-direction: row;
+    }
+
+    &-vertical {
+      flex-direction: column;
+    }
+  }
 }

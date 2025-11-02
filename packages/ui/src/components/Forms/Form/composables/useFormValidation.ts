@@ -1,6 +1,5 @@
 import type { IVFormValidationResult } from '../types';
-import type { IVFormItemInstance } from '../../FormItem/types';
-import { delay } from '@vau/core';
+import type { IVFormItemInstance } from '../../FormItem';
 import { computed, type Ref } from 'vue';
 
 interface IUseFormValidationPayload {
@@ -8,7 +7,7 @@ interface IUseFormValidationPayload {
 }
 
 export function useFormValidation ({ formItems }: IUseFormValidationPayload) {
-  const validatableFormItems = computed<Array<IVFormItemInstance>>(() => formItems.value.filter(formItem => formItem.isValidatable.value));
+  const validatableFormItems = computed<Array<IVFormItemInstance>>(() => formItems.value.filter(formItem => formItem.isValidatable));
 
   async function validate (silent = false): IVFormValidationResult {
     const validationPromises = await Promise.all(validatableFormItems.value.map(formItem => formItem.validate(silent)));
@@ -16,13 +15,12 @@ export function useFormValidation ({ formItems }: IUseFormValidationPayload) {
     return validationPromises.every(Boolean);
   }
 
-  async function clearValidate () {
-    await delay(0);
-
+  function clearValidate () {
     formItems.value.forEach(formItem => formItem.clearValidate());
   }
 
   return {
+    validatableFormItems,
     validate,
     clearValidate
   };

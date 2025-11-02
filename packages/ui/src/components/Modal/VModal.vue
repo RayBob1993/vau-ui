@@ -46,48 +46,50 @@
       @after-enter="afterEnter"
       @after-leave="afterLeave"
     >
-      <div
-        v-show="modelValue"
-        class="v-modal"
-        role="dialog"
-        :class="{
-          'v-modal--open': modelValue
-        }"
-      >
+      <v-overlay>
         <div
-          v-if="isHeaderVisible"
-          class="v-modal__header"
+          v-show="modelValue"
+          class="v-modal"
+          role="dialog"
+          :class="{
+            'v-modal--open': modelValue
+          }"
         >
-          <slot
-            name="header"
-            :close="handleClose"
+          <div
+            v-if="isHeaderVisible"
+            class="v-modal__header"
           >
-            {{ title }}
-          </slot>
+            <slot
+              name="header"
+              :close="handleClose"
+            >
+              {{ title }}
+            </slot>
 
-          <button
-            class="v-modal__close-button"
-            type="button"
-            @click="handleClose"
+            <button
+              class="v-modal__close-button"
+              type="button"
+              @click="handleClose"
+            >
+              x
+            </button>
+          </div>
+
+          <div class="v-modal__body">
+            <slot :close="handleClose"/>
+          </div>
+
+          <div
+            v-if="isFooterVisible"
+            class="v-modal__footer"
           >
-            x
-          </button>
+            <slot
+              name="footer"
+              :close="handleClose"
+            />
+          </div>
         </div>
-
-        <div class="v-modal__body">
-          <slot :close="handleClose"/>
-        </div>
-
-        <div
-          v-if="isFooterVisible"
-          class="v-modal__footer"
-        >
-          <slot
-            name="footer"
-            :close="handleClose"
-          />
-        </div>
-      </div>
+      </v-overlay>
     </transition>
   </teleport>
 </template>

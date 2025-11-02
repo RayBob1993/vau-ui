@@ -44,8 +44,6 @@ import {
   SelectPlugin,
   OverlayPlugin,
   AlertPlugin,
-  ToastPlugin,
-  ConfirmPlugin,
   ProgressPlugin,
   DividerPlugin,
   FlexPlugin,
@@ -107,8 +105,6 @@ export const VauUI: Plugin = {
     app.use(SelectPlugin);
     app.use(OverlayPlugin);
     app.use(AlertPlugin);
-    app.use(ToastPlugin);
-    app.use(ConfirmPlugin);
     app.use(ProgressPlugin);
     app.use(DividerPlugin);
     app.use(FlexPlugin);

@@ -1,4 +1,4 @@
-import type { IVFormItemInstance } from '../../FormItem/types';
+import type { IVFormItemInstance } from '../../FormItem';
 import { ref } from 'vue';
 
 export function useFormItems () {
@@ -12,8 +12,8 @@ export function useFormItems () {
     }
   }
 
-  function unregisterFormItem (oldFormItem: IVFormItemInstance) {
-    formItems.value = formItems.value.filter(formItem => formItem.id !== oldFormItem.id);
+  function unregisterFormItem (id: string) {
+    formItems.value = formItems.value.filter(formItem => formItem.id !== id);
   }
 
   return {

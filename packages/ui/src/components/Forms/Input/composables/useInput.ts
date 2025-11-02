@@ -5,7 +5,7 @@ import { computed, type ModelRef } from 'vue';
 import { useToggle } from '@vau/core';
 
 export function useInput (props: IVInputProps, modelValue: ModelRef<IVInputModelValue>) {
-  const { isFormDisabled } = useFormProvider();
+  const { isFormDisabled, validationStatus } = useFormProvider();
   const [isFocus, setFocus] = useToggle();
 
   const isTextarea = computed<boolean>(() => props.type === InputTypes.TEXTAREA);
@@ -17,6 +17,7 @@ export function useInput (props: IVInputProps, modelValue: ModelRef<IVInputModel
     isDisabled,
     isFocus,
     setFocus,
-    hasValue
+    hasValue,
+    validationStatus
   };
 }

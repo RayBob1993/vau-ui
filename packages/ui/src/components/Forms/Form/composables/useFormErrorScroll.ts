@@ -9,7 +9,7 @@ interface IUseFormErrorScrollPayload {
 
 export function useFormErrorScroll ({ formItems, scrollIntoViewOptions }: IUseFormErrorScrollPayload) {
   function scrollToErrorField () {
-    const invalidFormItem = formItems.value.find(formItem => formItem.validationStatus.value.isError);
+    const invalidFormItem = formItems.value.find(formItem => formItem.validationStatus.isError);
 
     if (!invalidFormItem) {
       return;

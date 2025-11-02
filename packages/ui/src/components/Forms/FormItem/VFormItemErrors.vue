@@ -6,6 +6,12 @@
 
 <template>
   <div class="v-form-item-errors">
-    <div class="v-form-item-errors__item"/>
+    <div
+      v-for="(error, index) in errors"
+      :key="`error-${index}`"
+      class="v-form-item-errors__item"
+    >
+      {{ error.message }}
+    </div>
   </div>
 </template>

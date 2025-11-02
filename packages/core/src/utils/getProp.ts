@@ -1,3 +1,14 @@
+import { isUndefined } from './isUndefined';
+import { isObject } from './isObject';
+import { isNull } from './isNull';
+
+function isStringKeyObject (value: unknown): value is Record<string, unknown> {
+  return !isNull(value) &&
+    !isUndefined(value) &&
+    isObject(value) &&
+    !Array.isArray(value);
+}
+
 /**
  * @description `getProp` - Получить значение свойства по указанному пути
  * @param {object} object Изначальный объект.
@@ -19,20 +30,27 @@
  * // => 'value2'
  *
  */
-export function getProp (object: Record<string, any>, path: string): any {
-  if (!object) {
-    return null;
-  }
-
-  if (!path) {
+export function getProp<
+  T extends Record<string, unknown>,
+  R = unknown
+> (
+  object: T | null | undefined,
+  path: string
+): R | null {
+  if (!object || !path.trim()) {
     return null;
   }
 
   const _path = path.split('.');
+  let current: unknown = object;
 
-  if (_path.length === 1) {
-    return object[_path[0]];
+  for (const key of _path) {
+    if (!isStringKeyObject(current)) {
+      return null;
+    }
+
+    current = current[key];
   }
 
-  return getProp(object[_path[0]], _path.slice(1).join('.'));
+  return (current as R) ?? null;
 }

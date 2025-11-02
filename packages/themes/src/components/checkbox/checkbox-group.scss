@@ -1,3 +1,20 @@
+:root {
+  --v-checkbox-group-x: 16px;
+  --v-checkbox-group-y: 8px;
+}
+
 .v-checkbox-group {
-  
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--v-checkbox-group-y) var(--v-checkbox-group-x);
+
+  &--direction {
+    &-horizontal {
+      flex-direction: row;
+    }
+
+    &-vertical {
+      flex-direction: column;
+    }
+  }
 }

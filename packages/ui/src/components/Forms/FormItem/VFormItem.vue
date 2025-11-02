@@ -3,60 +3,64 @@
     IVFormItemExpose,
     IVFormItemInstance,
     IVFormItemProps,
-    IVFormItemSlots,
-    IVFormItemValidationStatus
+    IVFormItemSlots
   } from './types';
+  import { useFormItem } from './composables';
+  import { VFormItemContextKey } from './context';
   import { useFormContext } from '../Form';
-  import { delay } from '@vau/core';
-  import { useTemplateRef, defineAsyncComponent, useId, ref, onUnmounted, computed } from 'vue';
+  import { useTemplateRef, defineAsyncComponent, onUnmounted, provide, computed } from 'vue';
 
   const props = defineProps<IVFormItemProps>();
-
-  defineSlots<IVFormItemSlots>();
+  const slots = defineSlots<IVFormItemSlots>();
 
   const VFormItemErrors = defineAsyncComponent(() => import('./VFormItemErrors.vue'));
 
   const Form = useFormContext();
-  const id = useId();
+  const {
+    id,
+    validationErrors,
+    validationStatus,
+    isDisabled,
+    isRequired,
+    validate,
+    clearValidate,
+    isValidatable,
+    reset,
+    registerField,
+    unregisterField
+  } = useFormItem(props, Form);
 
   const root = useTemplateRef<HTMLDivElement>('root');
 
-  const validationStatus = ref<IVFormItemValidationStatus>({
-    isError: false,
-    isValidating: false,
-    isSuccess: false
-  });
-
-  const isRequired = computed<boolean>(() => true);
-
-  const isValidatable = computed<boolean>(() => true);
-
-  const formItemInstance = computed<IVFormItemInstance>(() => ({
-    el: root,
+  const formItemInstance: IVFormItemInstance = {
+    el: root.value,
     id,
     props,
-    validationStatus,
-    isRequired,
-    isValidatable,
+    validationStatus: validationStatus.value,
+    isRequired: isRequired.value,
+    isValidatable: isValidatable.value,
     reset,
     validate,
     clearValidate
-  }));
+  };
 
-  function reset () {}
-
-  async function validate (silent = false): Promise<boolean> {
-    await delay(0);
-
-    return true;
-  }
-
-  function clearValidate () {}
+  const isVisibleHeader = computed<boolean>(() => Boolean(slots?.label) || Boolean(props.title));
 
   Form?.registerFormItem(formItemInstance);
 
   onUnmounted(() => {
-    Form?.unregisterFormItem(formItemInstance);
+    Form?.unregisterFormItem(id);
+  });
+
+  provide(VFormItemContextKey, {
+    props,
+    validationStatus,
+    isRequired,
+    registerField,
+    unregisterField,
+    validate,
+    clearValidate,
+    reset
   });
 
   defineExpose<IVFormItemExpose>({
@@ -70,9 +74,53 @@
   <div
     ref="root"
     class="v-form-item"
+    :class="[
+      {
+        'v-form-item--disabled': isDisabled,
+        'v-form-item--required': isRequired,
+        'v-form-item--validation-error': validationStatus.isError,
+        'v-form-item--validation-validating': validationStatus.isValidating,
+        'v-form-item--validation-success': validationStatus.isSuccess
+      }
+    ]"
   >
-    <slot/>
+    <div
+      v-if="isVisibleHeader"
+      class="v-form-item__header"
+    >
+      <slot
+        name="label"
+        :validation-status="validationStatus"
+        :isRequired="isRequired"
+      >
+        <label
+          v-if="title"
+          class="v-form-item__label"
+        >
+          {{ title }}
 
-    <v-form-item-errors :errors="[]"/>
+          <span
+            v-if="isRequired"
+            class="v-form-item__label-required"
+          >
+            *
+          </span>
+        </label>
+      </slot>
+    </div>
+
+    <div class="v-form-item__body">
+      <slot
+        :validation-status="validationStatus"
+        :is-required="isRequired"
+      />
+    </div>
+
+    <div
+      v-if="validationErrors.length"
+      class="v-form-item__footer"
+    >
+      <v-form-item-errors :errors="validationErrors"/>
+    </div>
   </div>
 </template>

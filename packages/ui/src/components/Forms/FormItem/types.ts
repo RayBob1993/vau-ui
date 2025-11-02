@@ -1,4 +1,5 @@
-import type { ComputedRef, Ref, TemplateRef } from 'vue';
+import type { ComputedRef, Ref } from 'vue';
+import type { $ZodIssue } from 'zod/v4/core';
 
 /**
  * Интерфейс свойств компонента VFormItem
@@ -12,7 +13,12 @@ export interface IVFormItemProps {
 
 export interface IVFormItemSlots {
   default?: (props: {
-    validationStatus: string;
+    validationStatus: IVFormItemValidationStatus;
+    isRequired: boolean;
+  }) => never;
+  label?: (props: {
+    validationStatus: IVFormItemValidationStatus;
+    isRequired: boolean;
   }) => never;
 }
 
@@ -43,18 +49,18 @@ export interface IVFormItemValidationStatus {
 
 export interface IVFormItemInstance {
   id: string;
-  el: TemplateRef<HTMLDivElement>;
-  isValidatable: ComputedRef<boolean>;
-  isRequired: ComputedRef<boolean>;
+  el: HTMLDivElement | null;
+  isValidatable: boolean;
+  isRequired: boolean;
   props: IVFormItemProps;
   validate: (silent?: boolean) => Promise<boolean>;
-  validationStatus: Ref<IVFormItemValidationStatus>;
+  validationStatus: IVFormItemValidationStatus;
   clearValidate: VoidFunction;
   reset: VoidFunction;
 }
 
 export interface IVFormItemErrorsProps {
-  errors: Array<unknown>;
+  errors: Array<$ZodIssue>;
 }
 
 export type IVFormItemExpose = Pick<IVFormItemInstance, 'validate' | 'clearValidate' | 'reset'>;

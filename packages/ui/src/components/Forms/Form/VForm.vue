@@ -1,8 +1,7 @@
 <script lang="ts" setup>
-  import type { IVFormExpose, IVFormModel, IVFormProps } from './types';
-  import { useFormItems, useFormValidation, useFormErrorScroll } from './composables';
+  import type { IVFormExpose, IVFormModel, IVFormProps, IVFormSlots } from './types';
+  import { useForm } from './composables';
   import { VFormContextKey } from './context';
-  import { useToggle } from '@vau/core';
   import { provide } from 'vue';
 
   const props = withDefaults(defineProps<IVFormProps>(), {
@@ -11,28 +10,13 @@
     })
   });
 
+  defineSlots<IVFormSlots>();
+
   const modelValue = defineModel<IVFormModel>({
     required: true
   });
 
-  const { formItems, registerFormItem, unregisterFormItem } = useFormItems();
-
-  const { validate, clearValidate } = useFormValidation({
-    formItems
-  });
-
-  const { scrollToErrorField } = useFormErrorScroll({
-    formItems,
-    scrollIntoViewOptions: props.scrollIntoViewOptions,
-  });
-
-  const [isValid] = useToggle();
-
-  async function reset () {
-    formItems.value.forEach(formItem => formItem.reset());
-
-    await clearValidate();
-  }
+  const { isValid, registerFormItem, unregisterFormItem, validate, clearValidate, reset } = useForm(modelValue);
 
   defineExpose<IVFormExpose>({
     validate,
