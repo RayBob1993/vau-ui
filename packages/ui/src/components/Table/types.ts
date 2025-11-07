@@ -2,17 +2,40 @@ import type { ValueOf } from '@vau/core';
 import { TableLayout } from './constants';
 
 /**
- * Базовый тип данных компонента IVTable
+ * Базовый тип данных компонента VTable
  * @interface IVTableBaseData
  */
 export type IVTableBaseData = Record<string, unknown>;
+
+/**
+ * Интерфейс свойств колонки VTable
+ * @interface IVTableColumn
+ */
+export interface IVTableColumn <KEYS extends IVTableBaseData> {
+  /**
+   * @description Заголовок колонки
+   */
+  title?: string;
+  /**
+   * @description Имя свойства объекта, значение которого нужно отобразить в колонке
+   */
+  prop: keyof KEYS;
+  /**
+   * @description Указывает, можно ли сортировать столбец
+   */
+  sortable?: boolean;
+}
 
 /**
  * Интерфейс свойств компонента VTable
  * @interface IVTableProps
  * @template DATA - Тип данных строк таблицы
  */
-export interface IVTableProps <DATA extends IVTableBaseData> {
+export interface IVTableProps <DATA extends IVTableBaseData = IVTableBaseData> {
+  /**
+   * @description Описание колонок
+   */
+  columns: Array<IVTableColumn<DATA>>;
   /**
    * @description Данные таблицы
    */
@@ -35,47 +58,31 @@ export interface IVTableProps <DATA extends IVTableBaseData> {
  * Интерфейс событий компонента VTable
  * @interface IVTableEmits
  */
-export interface IVTableEmits {
-  select: [];
-  'select:all': [];
-  'sort:change': [];
+export interface IVTableEmits <DATA extends IVTableBaseData = IVTableBaseData> {
+  select: [payload: DATA];
+  'select:all': [payload: Array<DATA>];
+  sort: [];
 }
 
 /**
  * Интерфейс слотов компонента VTable
  * @interface IVTableSlots
  */
-export interface IVTableSlots {
+export interface IVTableSlots <DATA extends IVTableBaseData = IVTableBaseData> {
   default?: () => never;
   empty?: () => never;
-}
-
-/**
- * Интерфейс свойств компонента VTableColumn
- * @interface IVTableColumnProps
- * @template T - Тип данных строк таблицы
- */
-export interface IVTableColumnProps <T extends IVTableBaseData = IVTableBaseData> {
-  /**
-   * @description Заголовок колонки
-   */
-  title: string;
-  /**
-   * @description Свойство объекта, значение которого нужно отобразить в колонке
-   */
-  prop: keyof T;
-  /**
-   * @description Активация сортировки колонки
-   */
-  sortable?: boolean;
+  // Динамические слоты
+  [key: string]: ((props: {
+    row: DATA;
+  }) => never) | undefined;
 }
 
 /**
  * Интерфейс контекста компонента VTable
- * @interface IVTableColumnProps
+ * @interface IVTableContext
  */
 export interface IVTableContext {
-  props: IVTableProps<IVTableBaseData>;
+  props: IVTableProps;
 }
 
 /**
@@ -107,6 +114,4 @@ export interface IVTableExpose {
 /**
  * @interface IVTableInstance
  */
-export interface IVTableInstance extends IVTableExpose {
-
-}
+export type IVTableInstance = IVTableExpose;
