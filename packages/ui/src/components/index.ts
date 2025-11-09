@@ -27,3 +27,4 @@ export * from './Divider';
 export * from './Flex';
 export * from './Table';
 export * from './InputGroup';
+export * from './Countdown';

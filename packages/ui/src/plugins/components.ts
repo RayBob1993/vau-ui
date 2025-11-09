@@ -48,7 +48,8 @@ import {
   DividerPlugin,
   FlexPlugin,
   TablePlugin,
-  InputGroupPlugin
+  InputGroupPlugin,
+  CountdownPlugin
 } from '../components';
 import {
   VisiblePlugin,
@@ -102,7 +103,6 @@ export const VauUI: Plugin = {
     app.use(RadioGroupPlugin);
     app.use(SwitchPlugin);
     app.use(SelectPlugin);
-    app.use(SelectPlugin);
     app.use(OverlayPlugin);
     app.use(AlertPlugin);
     app.use(ProgressPlugin);
@@ -110,6 +110,7 @@ export const VauUI: Plugin = {
     app.use(FlexPlugin);
     app.use(TablePlugin);
     app.use(InputGroupPlugin);
+    app.use(CountdownPlugin);
 
     // Directives
     app.use(VisiblePlugin);

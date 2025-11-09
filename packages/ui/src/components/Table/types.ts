@@ -68,21 +68,21 @@ export interface IVTableEmits <DATA extends IVTableBaseData = IVTableBaseData> {
  * Интерфейс слотов компонента VTable
  * @interface IVTableSlots
  */
-export interface IVTableSlots <DATA extends IVTableBaseData = IVTableBaseData> {
+export type IVTableSlots<DATA extends IVTableBaseData = IVTableBaseData> = {
   default?: () => never;
   empty?: () => never;
-  // Динамические слоты
-  [key: string]: ((props: {
+} & {
+  [K in keyof DATA]?: (props: {
     row: DATA;
-  }) => never) | undefined;
-}
+  }) => never;
+};
 
 /**
  * Интерфейс контекста компонента VTable
  * @interface IVTableContext
  */
-export interface IVTableContext {
-  props: IVTableProps;
+export interface IVTableContext<T extends IVTableBaseData = IVTableBaseData> {
+  props: IVTableProps<T>;
 }
 
 /**

@@ -1,7 +1,7 @@
-import type { IVTableProps } from '../types';
+import type { IVTableProps, IVTableBaseData } from '../types';
 import { computed } from 'vue';
 
-export function useTable (props: IVTableProps) {
+export function useTable<T extends IVTableBaseData = IVTableBaseData> (props: IVTableProps<T>) {
   const isHeaderVisible = computed<boolean>(() => props.columns.some(column => Boolean(column.title)));
 
   function clearSelection () {

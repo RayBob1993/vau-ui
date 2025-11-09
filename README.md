@@ -1,11 +1,23 @@
-# 🤝 VauUI
+# VauUI
 
-## 🎮 Системные требования
+## Системные требования
 
 * [Node.js](https://nodejs.org/en/download/package-manager) >= 22.17.1
 * [pnpm](https://pnpm.io/installation) >= 10.20.0
-* 
-## 🚀 Запуск проекта
+
+## Установка
+
+```bash
+pnpm add vau-ui
+```
+```bash
+npm install vau-ui
+```
+```bash
+yarn add vau-ui
+```
+
+## Локальная разработка
 
 ### Установка зависимостей
 ``` bash
@@ -19,7 +31,7 @@ pnpm serve
 
 ### Создание билда
 ``` bash
-pnpm build && pnpm start
+pnpm build
 ```
 
 ## 🪛 Инструменты

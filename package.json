@@ -3,20 +3,9 @@
   "version": "0.0.0",
   "license": "MIT",
   "repository": "https://github.com/RayBob1993/vau-ui.git",
-  "description": "Компонент для создания баннеров с Canvas и Fabric.js",
   "type": "module",
-  "main": "./dist/index.js",
-  "module": "./dist/index.js",
-  "types": "./dist/index.d.ts",
-  "exports": {
-    ".": {
-      "import": "./dist/index.js",
-      "types": "./dist/index.d.ts"
-    },
-    "./dist/style.css": "./dist/style.css"
-  },
-  "files": [
-    "dist"
+  "workspaces": [
+    "packages/*"
   ],
   "scripts": {
     "serve": "vite",

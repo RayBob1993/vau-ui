@@ -3,7 +3,7 @@
   import { useTable } from './composables';
   import { TableEmpty, TableBodyCell, TableHeaderCell, TableRow } from './components';
   import { VTableContextKey } from './context';
-  import { provide } from 'vue';
+  import { provide, type InjectionKey } from 'vue';
 
   const props = defineProps<IVTableProps<T>>();
 
@@ -21,7 +21,7 @@
 
   provide(VTableContextKey, {
     props
-  });
+  } as typeof VTableContextKey extends InjectionKey<infer U> ? U : never);
 
   defineExpose<IVTableExpose>({
     clearSelection,

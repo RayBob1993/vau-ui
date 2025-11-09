@@ -1,0 +1,45 @@
+/**
+ * Интерфейс свойств компонента VCountdown
+ * @interface IVCountdownProps
+ */
+export interface IVCountdownProps {
+  autoStart?: boolean;
+  interval?: number;
+  start: number;
+}
+
+/**
+ * Интерфейс событий компонента VCountdown
+ * @interface IVCountdownEmits
+ */
+export interface IVCountdownEmits {
+  start: [];
+  progress: [];
+  abort: [];
+  end: [];
+}
+
+/**
+ * Интерфейс слотов компонента VCountdown
+ * @interface IVCountdownSlots
+ */
+export interface IVCountdownSlots {
+  default?: (props: {
+    years: number;
+    months: number;
+    days: number;
+    hours: number;
+    minutes: number;
+    seconds: number;
+    milliseconds: number;
+  }) => never;
+}
+
+export interface IVCountdownExpose {
+  start: VoidFunction;
+  abort: VoidFunction;
+  end: VoidFunction;
+  restart: VoidFunction;
+}
+
+export type IVCountdownInstance = IVCountdownExpose;
