@@ -1,6 +1,7 @@
 <script lang="ts" setup>
   import type { IVModalEmits, IVModalProps, IVModalSlots } from './types';
-  import { useConfigProviderContext } from '../../components';
+  import { useConfigProviderContext } from '../ConfigProvider';
+  import { VOverlay } from '../Overlay';
   import { computed, watch } from 'vue';
 
   const props = defineProps<IVModalProps>();

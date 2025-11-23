@@ -1,12 +1,12 @@
 import type { IConfirmServiceOpenOptions } from './types';
 import type { MaybeNull } from '@vau/core';
 import  { VConfirm } from '../../components/Confirm';
-import { h, render } from 'vue';
+import { type AppContext, h, render } from 'vue';
 
 export class ConfirmService {
   static #container: MaybeNull<HTMLDivElement> = null;
 
-  static async open (options: IConfirmServiceOpenOptions, appContext = null): Promise<boolean> {
+  static async open (options: IConfirmServiceOpenOptions, appContext?: AppContext): Promise<boolean> {
     return new Promise<boolean>(resolve => {
       if (!this.#container) {
         this.#container = document.createElement('div');
