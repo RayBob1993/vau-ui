@@ -8,18 +8,6 @@
   });
 
   const emit = defineEmits<IVConfirmEmits>();
-
-  function handleCancel () {
-    emit('cancel');
-  }
-
-  function handleClose () {
-    emit('close');
-  }
-
-  function handleSuccess () {
-    emit('success');
-  }
 </script>
 
 <template>
@@ -32,14 +20,16 @@
       }"
     >
       <div class="v-confirm__header">
+        <div class="v-confirm__title">
+          {{ title }}
+        </div>
+
         <button
           type="button"
-          @click="handleClose"
+          @click="emit('close')"
         >
           X
         </button>
-
-        {{ title }}
       </div>
 
       <div class="v-confirm__body">
@@ -49,14 +39,14 @@
       <div class="v-confirm__footer">
         <button
           type="button"
-          @click="handleSuccess"
+          @click="emit('success')"
         >
           {{ confirmText }}
         </button>
 
         <button
           type="button"
-          @click="handleCancel"
+          @click="emit('cancel')"
         >
           {{ cancelText }}
         </button>

@@ -10,6 +10,7 @@ export type IVScrollbarProps = {
   horizontal?: boolean;
   draggableMultiplier?: number;
   infiniteScrollOffset?: number;
+  debounceDelay?: number;
   draggable?: boolean;
   hidden?: boolean;
 } & Partial<ISizeProp> & Partial<IThemeProp>;

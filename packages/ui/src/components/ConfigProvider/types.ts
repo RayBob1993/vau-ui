@@ -1,9 +1,11 @@
+import type { IVLocale } from '../../types';
+
 /**
  * Интерфейс свойств компонента VConfigProvider
  * @interface IVConfigProviderProps
  */
 export interface IVConfigProviderProps {
-  locale?: unknown;
+  locale?: IVLocale;
   teleportTarget?: string | HTMLElement;
   direction?: 'ltr' | 'rtl';
 }
@@ -12,4 +14,4 @@ export interface IVConfigProviderProps {
  * Интерфейс контекста компонента VConfigProvider
  * @interface IVConfigProviderContext
  */
-export interface IVConfigProviderContext extends IVConfigProviderProps {}
+export type IVConfigProviderContext = IVConfigProviderProps;

@@ -208,6 +208,9 @@ export default defineConfigWithVueTs([
       'unused-imports': unusedImports,
     },
     rules: {
+      '@typescript-eslint/array-type': ['error', {
+        'default': 'generic'
+      }],
       '@stylistic/linebreak-style': ['error', 'unix'],
       'no-unused-vars': 'off',
       'guard-for-in': 'error',

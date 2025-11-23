@@ -5,3 +5,8 @@
 export interface IVImageProps {
   src: string;
 }
+
+export interface IVImageEmits {
+  error: [payload: Event];
+  load: [payload: Event];
+}

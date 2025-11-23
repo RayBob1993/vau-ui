@@ -1,15 +1,53 @@
 <script setup lang="ts">
-  import type { IVToastProps } from './types';
+  import type { IVToastProps, IVToastEmits } from './types';
+  import { useToast } from './composables';
+  import { TOAST_DURATION } from './constants';
 
-  defineProps<IVToastProps>();
+  const props = withDefaults(defineProps<IVToastProps>(), {
+    duration: TOAST_DURATION,
+    useHtml: false,
+    clearable: true
+  });
+
+  const emit = defineEmits<IVToastEmits>();
+
+  const { isVisible, setVisible, startTimer, clearTimer } = useToast(props);
 </script>
 
 <template>
-  <div
-    class="v-toast"
-    :class="{
-      [`v-toast--size-${size}`]: size,
-      [`v-toast--theme-${theme}`]: theme
-    }"
-  />
+  <transition
+    name="fade-in-up"
+    @after-leave="emit('close')"
+  >
+    <div
+      v-show="isVisible"
+      class="v-toast"
+      role="alert"
+      :class="{
+        [`v-toast--size-${size}`]: size,
+        [`v-toast--theme-${theme}`]: theme
+      }"
+      @mouseenter="clearTimer"
+      @mouseleave="startTimer"
+    >
+      <div class="v-toast__header">
+        <div class="v-toast__title">
+          {{ title }}
+        </div>
+
+        <button
+          v-if="clearable"
+          type="button"
+          class="v-toast__button-close"
+          @click="setVisible(false)"
+        >
+          X
+        </button>
+      </div>
+
+      <div class="v-toast__body">
+        <div class="v-toast__text"/>
+      </div>
+    </div>
+  </transition>
 </template>

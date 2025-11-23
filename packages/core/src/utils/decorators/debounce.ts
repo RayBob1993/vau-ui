@@ -20,13 +20,17 @@ interface DebounceOptions {
  * @returns {(...args: Parameters<T>) => void} - Обертка вокруг оригинальной функции, которая ограничивает её вызовы.
  *
  * @example
- * const debouncedFn = debounce(300, () => console.log('Debounced'));
+ * const debouncedFn = debounce(() => console.log('Debounced'), 300);
  * window.addEventListener('resize', debouncedFn);
  */
-export function debounce <T extends (...args: any[]) => any>(delay: number, callback: T, options: DebounceOptions = {}) {
+export function debounce <T extends Array<unknown>> (
+  callback: (...args: T) => unknown,
+  delay: number,
+  options: DebounceOptions = {}
+) {
   const { atBegin = false } = options;
 
-  return throttle(delay, callback, {
+  return throttle(callback, delay,{
     debounceMode: atBegin
   });
 }

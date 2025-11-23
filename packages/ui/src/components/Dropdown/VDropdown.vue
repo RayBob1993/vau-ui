@@ -14,11 +14,11 @@
 
   const hide = () => setVisible(false);
 
-  function onAfterEnter (payload: Element) {
+  function handleAfterEnter (payload: Element) {
     emit('opened', payload);
   }
 
-  function onAfterLeave (payload: Element) {
+  function handleAfterLeave (payload: Element) {
     emit('opened', payload);
   }
 
@@ -44,6 +44,9 @@
   <div
     v-click-outside="hide"
     class="v-dropdown"
+    :class="{
+      'v-dropdown--open': isVisible
+    }"
   >
     <slot
       name="trigger"
@@ -53,8 +56,8 @@
     />
 
     <transition
-      @after-enter="onAfterEnter"
-      @after-leave="onAfterLeave"
+      @after-enter="handleAfterEnter"
+      @after-leave="handleAfterLeave"
     >
       <div
         v-show="isVisible"

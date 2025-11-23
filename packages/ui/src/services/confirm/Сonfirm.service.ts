@@ -1,16 +1,17 @@
 import type { IConfirmServiceOpenOptions } from './types';
+import type { MaybeNull } from '@vau/core';
 import  { VConfirm } from '../../components/Confirm';
 import { h, render } from 'vue';
 
 export class ConfirmService {
-  private static container: HTMLDivElement | null = null;
+  static #container: MaybeNull<HTMLDivElement> = null;
 
   static async open (options: IConfirmServiceOpenOptions, appContext = null): Promise<boolean> {
     return new Promise<boolean>(resolve => {
-      if (!this.container) {
-        this.container = document.createElement('div');
-        this.container.id = 'confirm-service-container';
-        document.body.appendChild(this.container);
+      if (!this.#container) {
+        this.#container = document.createElement('div');
+        this.#container.id = 'confirm-container';
+        document.body.appendChild(this.#container);
       }
 
       const handleClose = (result: boolean)=> {
@@ -40,13 +41,15 @@ export class ConfirmService {
         appContext
       });
 
-      render(VConfirmVNode, this.container);
+      render(VConfirmVNode, this.#container);
     });
   }
 
   private static close () {
-    if (this.container) {
-      render(null, this.container);
+    if (!this.#container) {
+      return;
     }
+
+    render(null, this.#container);
   }
 }
