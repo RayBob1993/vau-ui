@@ -33,7 +33,18 @@
       </div>
 
       <div class="v-confirm__body">
-        {{ message }}
+        <div
+          v-if="!useHtml"
+          class="v-confirm__text"
+        >
+          {{ message }}
+        </div>
+
+        <div
+          v-else
+          class="v-confirm__text"
+          v-html="message"
+        />
       </div>
 
       <div class="v-confirm__footer">

@@ -1,4 +1,5 @@
 import type { ISizeProp, IThemeProp } from '../../types';
+import type { VNode } from 'vue';
 
 /**
  * Интерфейс свойств компонента VConfirm
@@ -6,7 +7,8 @@ import type { ISizeProp, IThemeProp } from '../../types';
  */
 export type IVConfirmProps = {
   title?: string;
-  message?: string;
+  message?: string | VNode;
+  useHtml?: boolean;
   confirmText?: string;
   cancelText?: string;
 } & Partial<IThemeProp> & Partial<ISizeProp>;

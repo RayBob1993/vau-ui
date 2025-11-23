@@ -46,7 +46,18 @@
       </div>
 
       <div class="v-toast__body">
-        <div class="v-toast__text"/>
+        <div
+          v-if="!useHtml"
+          class="v-toast__text"
+        >
+          {{ message }}
+        </div>
+
+        <div
+          v-else
+          class="v-toast__text"
+          v-html="message"
+        />
       </div>
     </div>
   </transition>
