@@ -1,7 +1,7 @@
 <script setup lang="ts">
-  import type { IVAccordionProps, IVAccordionEmits, IVAccordionModelValue, IVAccordionValue } from './types';
-  import type { Maybe } from '@vau/core';
+  import type { IVAccordionProps, IVAccordionEmits, IVAccordionModelValue } from './types';
   import { VAccordionContextKey } from './context';
+  import { useAccordion } from './composables';
   import { provide } from 'vue';
 
   const props = defineProps<IVAccordionProps>();
@@ -11,27 +11,14 @@
     required: true,
   });
 
-  function handleChange (value: Maybe<IVAccordionValue>) {
-    if (props.multiple && Array.isArray(modelValue.value)) {
-      if (!value) {
-        return;
-      }
-
-      const items = new Set(modelValue.value);
-
-      if (items.has(value)) {
-        items.delete(value);
-      } else {
-        items.add(value);
-      }
-
-      modelValue.value = [...items];
-    } else {
+  const { handleChange } = useAccordion({
+    props,
+    modelValue,
+    onChange: value => emit('change', value),
+    onChangeModel: value => {
       modelValue.value = value;
     }
-
-    emit('change', value);
-  }
+  });
 
   provide(VAccordionContextKey, {
     props,
