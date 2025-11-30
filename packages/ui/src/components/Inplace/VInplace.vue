@@ -1,22 +1,15 @@
 <script setup lang="ts">
   import type { IVInplaceSlots, IVInplaceEmits } from './types';
-  import { useToggle } from '@vau/core';
+  import { useInplace } from './composables';
 
   const emit = defineEmits<IVInplaceEmits>();
 
   defineSlots<IVInplaceSlots>();
 
-  const [isVisible, setVisible] = useToggle();
-
-  function handleOpen () {
-    setVisible(true);
-    emit('open');
-  }
-
-  function handleClose () {
-    setVisible(false);
-    emit('close');
-  }
+  const { isVisible, handleOpen, handleClose } = useInplace({
+    onOpen: () => emit('open'),
+    onClose: () => emit('close')
+  });
 </script>
 
 <template>
