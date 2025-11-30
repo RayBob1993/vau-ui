@@ -10,7 +10,7 @@
   const { content } = useBadge(props);
 
   const isVisibleContent = computed<boolean>(() => {
-    return !props.hidden && (content.value || props.dot || slots?.content);
+    return !props.hidden && Boolean(content.value || props.dot || slots?.content);
   });
 </script>
 
