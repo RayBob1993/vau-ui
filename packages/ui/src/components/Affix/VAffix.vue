@@ -1,11 +1,22 @@
 <script setup lang="ts">
   import type { IVAffixProps } from './types';
+  import { AFFIX_OFFSET_BOTTOM, AFFIX_OFFSET_TOP } from './constants';
+  import { useAffix } from './composables';
   import { useTemplateRef } from 'vue';
 
-  defineProps<IVAffixProps>();
+  const props = withDefaults(defineProps<IVAffixProps>(), {
+    offsetTop: AFFIX_OFFSET_TOP,
+    offsetBottom: AFFIX_OFFSET_BOTTOM,
+    disabled: false
+  });
 
   const root = useTemplateRef<HTMLDivElement>('root');
   const content = useTemplateRef<HTMLDivElement>('content');
+
+  useAffix(props, {
+    root,
+    content
+  });
 </script>
 
 <template>
