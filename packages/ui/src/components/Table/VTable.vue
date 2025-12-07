@@ -17,7 +17,7 @@
     clearSort,
     sort,
     toggleAllSelection
-  } = useTable(props);
+  } = useTable<T>(props);
 
   provide(VTableContextKey, {
     props

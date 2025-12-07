@@ -1,9 +1,9 @@
 import { describe, expect, it } from 'vitest';
-import { DialogPlugin } from '../plugin';
+import { ModalPlugin } from '../plugin';
 
-describe('DialogPlugin', () => {
+describe('ModalPlugin', () => {
   it('Плагин имеет функцию install', () => {
-    expect(DialogPlugin.install).toBeDefined();
-    expect(typeof DialogPlugin.install).toBe('function');
+    expect(ModalPlugin.install).toBeDefined();
+    expect(typeof ModalPlugin.install).toBe('function');
   });
 });

@@ -25,7 +25,7 @@
     :disabled="isDisabled"
     :type="type"
   >
-    <span class="v-button__content">
+    <span class="v-button__label">
       <slot/>
     </span>
   </button>

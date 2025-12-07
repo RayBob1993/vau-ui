@@ -11,9 +11,9 @@ importers:
       '@vau/core':
         specifier: workspace:*
         version: link:packages/core
-      '@vau/themes':
+      '@vau/theme-base':
         specifier: workspace:*
-        version: link:packages/themes
+        version: link:packages/themes/base
       '@vau/ui':
         specifier: workspace:*
         version: link:packages/ui
@@ -99,7 +99,7 @@ importers:
 
   packages/core: {}
 
-  packages/themes: {}
+  packages/themes/base: {}
 
   packages/ui:
     dependencies:

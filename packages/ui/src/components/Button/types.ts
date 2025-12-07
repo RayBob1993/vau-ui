@@ -1,4 +1,4 @@
-import type { IThemeProp, ISizeProp } from '../../types';
+import type { IThemeProp, ISizeProp, IDirectionProp } from '../../types';
 
 /**
  * Интерфейс свойств компонента VButton
@@ -11,3 +11,9 @@ export type IVButtonProps = {
   wide?: boolean;
   type?: HTMLButtonElement['type'];
 } & Partial<IThemeProp> & Partial<ISizeProp>;
+
+/**
+ * Интерфейс свойств компонента VButtonGroup
+ * @interface IVButtonGroupProps
+ */
+export type IVButtonGroupProps = Partial<IDirectionProp>;

@@ -3,8 +3,8 @@
  * @param {*} value Значение для проверки.
  * @returns {boolean} Возвращает true, если value — null, иначе — false.
  * @example
- * isNull(undefined); // => true
  * isNull(null); // => true
+ * isNull(undefined); // => false
  * isNull(''); // => false
  * isNull([]); // => false
  * isNull({}); // => false

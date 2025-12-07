@@ -17,4 +17,4 @@ export type IVCheckboxProps = {
  * Интерфейс свойств компонента VCheckboxGroup
  * @interface IVCheckboxGroupProps
  */
-export type IVCheckboxGroupProps = IDirectionProp;
+export type IVCheckboxGroupProps = Partial<IDirectionProp>;

@@ -5,13 +5,8 @@
   const props = defineProps<IVAlertProps>();
   const slots = defineSlots<IVAlertSlots>();
 
-  const isTitleVisible = computed<boolean>(() => {
-    return Boolean(props.title) || Boolean(slots?.title);
-  });
-
-  const isDescriptionVisible = computed<boolean>(() => {
-    return Boolean(props.description) || Boolean(slots?.description);
-  });
+  const isTitleVisible = computed<boolean>(() => Boolean(props.title) || Boolean(slots?.title));
+  const isDescriptionVisible = computed<boolean>(() => Boolean(props.description) || Boolean(slots?.description));
 </script>
 
 <template>

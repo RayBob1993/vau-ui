@@ -17,4 +17,4 @@ export type IVRadioProps = {
  * Интерфейс свойств компонента VRadioGroup
  * @interface IVRadioGroupProps
  */
-export type IVRadioGroupProps = IDirectionProp;
+export type IVRadioGroupProps = Partial<IDirectionProp>;

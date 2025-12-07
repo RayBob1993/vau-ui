@@ -12,7 +12,7 @@ export default defineConfigWithVueTs([
   vueTsConfigs.recommendedTypeChecked,
   importPlugin.flatConfigs.typescript,
   {
-    files: ['**/*.{ts,js}'],
+    files: ['**/*.{ts,tsx,js}'],
     plugins: {
       '@stylistic': stylistic
     },
@@ -202,7 +202,7 @@ export default defineConfigWithVueTs([
     }
   },
   {
-    files: ['**/*.{ts,js,vue}'],
+    files: ['**/*.{ts,tsx,js,vue}'],
     plugins: {
       '@stylistic': stylistic,
       'unused-imports': unusedImports,

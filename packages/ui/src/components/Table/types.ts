@@ -1,11 +1,21 @@
-import type { ValueOf } from '@vau/core';
-import { TableLayout } from './constants';
+import type { MaybeNull, ValueOf } from '@vau/core';
+import { TableLayout, TableSort } from './constants';
+
+export type IVTableSortDirection = ValueOf<typeof TableSort>;
 
 /**
  * Базовый тип данных компонента VTable
  * @interface IVTableBaseData
  */
 export type IVTableBaseData = Record<string, unknown>;
+
+/**
+ * @interface IVTableSortState
+ */
+export interface IVTableSortState <T extends IVTableBaseData = IVTableBaseData> {
+  prop: MaybeNull<keyof T>;
+  order: MaybeNull<IVTableSortDirection>
+}
 
 /**
  * Интерфейс свойств колонки VTable
@@ -104,7 +114,7 @@ export interface IVTableExpose {
   /**
    * @description Указать сортировку по полю
    */
-  sort: VoidFunction;
+  sort: (prop: string, order: IVTableSortDirection) => void;
   /**
    * @description Выделить или снять выделение с всех строк
    */

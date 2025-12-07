@@ -1,0 +1,8 @@
+.v-avatar-group {
+  display: flex;
+  align-items: center;
+
+  .v-avatar + .v-avatar {
+    margin-inline-start: var(--v-avatar-group-offset);
+  }
+}

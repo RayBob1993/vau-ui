@@ -1,0 +1,11 @@
+{
+  "name": "@vau/theme-base",
+  "version": "0.0.0",
+  "main": "./src/index.scss",
+  "exports": {
+    ".": {
+      "import": "./src/index.scss"
+    },
+    "./*": "./*"
+  }
+}
