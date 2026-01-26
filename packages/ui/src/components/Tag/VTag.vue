@@ -1,7 +1,9 @@
 <script setup lang="ts">
-  import type { IVTagProps } from './types';
+  import type { IVTagProps, IVTagEmits } from './types';
 
   defineProps<IVTagProps>();
+
+  const emit = defineEmits<IVTagEmits>();
 </script>
 
 <template>
@@ -13,5 +15,13 @@
     }"
   >
     <slot/>
+
+    <button
+      v-if="canDelete"
+      type="button"
+      @click="emit('delete')"
+    >
+      X
+    </button>
   </div>
 </template>

@@ -1,20 +1,14 @@
 <script setup lang="ts">
-  import { VButton, VButtonGroup } from '@vau/ui';
+  import { VCountdown } from '@vau/ui';
   import '@vau/theme-base';
 </script>
 
 <template>
-  <v-button-group direction="vertical">
-    <v-button>
-      Отправить
-    </v-button>
-
-    <v-button>
-      Отправить
-    </v-button>
-
-    <v-button>
-      Отправить
-    </v-button>
-  </v-button-group>
+  <v-countdown
+    v-slot="{ days, hours, minutes, seconds }"
+    :start="2 * 24 * 60 * 60 * 1000"
+    auto-start
+  >
+    Time Remaining：{{ days }} days, {{ hours }} hours, {{ minutes }} minutes, {{ seconds }} seconds.
+  </v-countdown>
 </template>

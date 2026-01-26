@@ -2,13 +2,17 @@ import type { IVButtonProps } from '../types';
 import { useFormProvider } from '../../../composables';
 import { computed } from 'vue';
 
-export function useButton (props: IVButtonProps) {
+export interface IUseButtonOptions {
+  props: IVButtonProps;
+}
+
+export function useButton (options: IUseButtonOptions) {
   const { isFormDisabled } = useFormProvider();
 
   const isDisabled = computed<boolean>(() => {
     return isFormDisabled.value ||
-      Boolean(props.loading) ||
-      Boolean(props.disabled);
+      Boolean(options.props.loading) ||
+      Boolean(options.props.disabled);
   });
 
   return {

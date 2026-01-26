@@ -1,14 +1,17 @@
 <script lang="ts" setup>
   import type { IVTabProps, IVTabContext, IVTabSlots } from './types';
   import { useTabsContext } from './context';
-  import { onUnmounted, computed, reactive, useId } from 'vue';
+  import { useTab } from './composables';
+  import { onUnmounted, reactive } from 'vue';
 
   const props = defineProps<IVTabProps>();
   const slots = defineSlots<IVTabSlots>();
 
   const Tabs = useTabsContext();
-  const id = useId();
-  const isActive = computed<boolean>(() => Tabs?.modelValue.value === props.value);
+  const { id, isActive } = useTab({
+    context: Tabs,
+    props,
+  });
 
   const tabContext = reactive<IVTabContext>({
     id,

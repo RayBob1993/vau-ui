@@ -12,3 +12,4 @@ export * from './InputRange';
 export * from './Radio';
 export * from './Select';
 export * from './Switch';
+export * from './Rating';

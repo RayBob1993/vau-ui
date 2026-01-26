@@ -55,6 +55,7 @@ export interface IVSelectEmits {
   closed: [payload: Element];
   open: [];
   close: [];
+  clear: [];
 }
 
 /**

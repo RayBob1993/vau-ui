@@ -18,7 +18,16 @@
     isIncrementDisabled,
     handleDecrement,
     handleIncrement
-  } = useInputNumber(props, modelValue);
+  } = useInputNumber({
+    props,
+    modelValue,
+    onDecrement: value => {
+      modelValue.value = value;
+    },
+    onIncrement: value => {
+      modelValue.value = value;
+    },
+  });
 </script>
 
 <template>

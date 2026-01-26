@@ -2,10 +2,14 @@ import type { IVInputFileProps } from '../types';
 import { useFormProvider } from '../../../../composables';
 import { computed } from 'vue';
 
-export function useInputFile (props: IVInputFileProps) {
+export interface IUseInputFile {
+  props: IVInputFileProps;
+}
+
+export function useInputFile (options: IUseInputFile) {
   const { isFormDisabled } = useFormProvider();
 
-  const isDisabled = computed<boolean>(() => props.disabled || isFormDisabled.value);
+  const isDisabled = computed<boolean>(() => Boolean(options.props.disabled) || isFormDisabled.value);
 
   return {
     isDisabled

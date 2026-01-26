@@ -1,6 +1,6 @@
 import type { Ref } from 'vue';
 import type { IVFormItemInstance } from '../../FormItem/types';
-import { useScrollTo } from '../../../../composables';
+import { type Maybe, useScrollTo } from '@vau/core';
 
 interface IUseFormErrorScrollPayload {
   formItems: Ref<Array<IVFormItemInstance>>;
@@ -9,7 +9,7 @@ interface IUseFormErrorScrollPayload {
 
 export function useFormErrorScroll ({ formItems, scrollIntoViewOptions }: IUseFormErrorScrollPayload) {
   function scrollToErrorField () {
-    const invalidFormItem = formItems.value.find(formItem => formItem.validationStatus.isError);
+    const invalidFormItem: Maybe<IVFormItemInstance> = formItems.value.find(formItem => formItem.validationStatus.isError);
 
     if (!invalidFormItem) {
       return;

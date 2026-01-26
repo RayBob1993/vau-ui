@@ -1,37 +1,24 @@
 <script setup lang="ts">
-  import type { IVOptionInstance, IVOptionProps, IVOptionSlots, IVOptionValue } from './types';
+  import type { IVOptionInstance, IVOptionProps, IVOptionSlots } from './types';
   import { useSelectContext } from './context';
-  import { computed, onUnmounted, reactive, useId } from 'vue';
+  import { useOption } from './composables';
+  import { onUnmounted, reactive } from 'vue';
 
   const props = defineProps<IVOptionProps>();
 
   defineSlots<IVOptionSlots>();
 
   const Select = useSelectContext();
-  const id = useId();
+
+  const { id, isActive, isDisabled, handleChange } = useOption({
+    context: Select,
+    props
+  });
 
   const optionInstance = reactive<IVOptionInstance>({
     id,
     props
   });
-
-  const isActive = computed<boolean>(() => {
-    if (Select?.props.multiple && Array.isArray(Select?.modelValue.value)) {
-      return Select.modelValue.value.includes(props.value);
-    }
-
-    return Select?.modelValue.value === props.value;
-  });
-
-  const isDisabled = computed<boolean>(() => Select?.isDisabled.value || props.disabled);
-
-  function handleChange (value: IVOptionValue) {
-    if (props.disabled) {
-      return;
-    }
-
-    Select?.handleChange(value);
-  }
 
   Select?.registerOption(optionInstance);
 

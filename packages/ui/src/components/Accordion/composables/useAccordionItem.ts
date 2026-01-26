@@ -1,25 +1,28 @@
-import type { IVAccordionItemProps, IVAccordionModelValue } from '../types';
-import { useAccordionContext } from '../context';
+import type { IVAccordionItemProps, IVAccordionModelValue, IVAccordionContext } from '../types';
+import type { MaybeNull } from '@vau/core';
 import { computed } from 'vue';
 
-export function useAccordionItem (props: IVAccordionItemProps) {
-  const Accordion = useAccordionContext();
+export interface IUseAccordionItem {
+  context: MaybeNull<IVAccordionContext>;
+  props: IVAccordionItemProps;
+}
 
-  const modelValue = computed<IVAccordionModelValue>(() => Accordion?.modelValue.value);
-  const isMultiple = computed<boolean>(() => Boolean(Accordion?.props.multiple));
+export function useAccordionItem (options: IUseAccordionItem) {
+  const modelValue = computed<IVAccordionModelValue>(() => options.context?.modelValue.value);
+  const isMultiple = computed<boolean>(() => Boolean(options.context?.props.multiple));
 
   const isActive = computed<boolean>(() => {
     return isMultiple.value && Array.isArray(modelValue.value)
-      ? modelValue.value.includes(props.value)
-      : modelValue.value === props.value;
+      ? modelValue.value.includes(options.props.value)
+      : modelValue.value === options.props.value;
   });
 
-  const tabIndex = computed<number>(() => props.disabled ? -1 : 0);
+  const tabIndex = computed<number>(() => options.props.disabled ? -1 : 0);
 
   function handleToggle () {
-    const changeValue = modelValue.value === props.value ? undefined : props.value;
+    const changeValue = modelValue.value === options.props.value ? undefined : options.props.value;
 
-    Accordion?.handleChange(changeValue);
+    options.context?.handleChange(changeValue);
   }
 
   return {

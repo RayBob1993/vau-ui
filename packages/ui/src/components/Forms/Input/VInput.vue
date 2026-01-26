@@ -16,7 +16,10 @@
 
   const input = useTemplateRef<IVInputNative>('input');
 
-  const { isDisabled, isTextarea, isFocus, validationStatus } = useInput(props, modelValue);
+  const { isDisabled, isTextarea, isFocus, validationStatus } = useInput({
+    modelValue,
+    props
+  });
 
   function focus () {
     input.value?.focus();

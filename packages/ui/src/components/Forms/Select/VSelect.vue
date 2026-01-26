@@ -1,9 +1,9 @@
 <script lang="ts" setup>
-  import type { IVSelectProps, IVSelectEmits, IVSelectModelValue, IVOptionInstance, IVOptionValue } from './types';
+  import type { IVSelectProps, IVSelectEmits, IVSelectModelValue } from './types';
   import { VSelectContextKey } from './context';
+  import { useSelect } from './composables';
   import { VScrollbar } from '../../Scrollbar';
-  import { useToggle } from '@vau/core';
-  import { computed, provide, ref, watch } from 'vue';
+  import { provide, watch } from 'vue';
 
   const props = defineProps<IVSelectProps>();
   const emit = defineEmits<IVSelectEmits>();
@@ -12,95 +12,30 @@
     required: true
   });
 
-  const [isOpen, , toggleOpen] = useToggle();
-
-  const optionInstances = ref<Array<IVOptionInstance>>([]);
-
-  const hasValue = computed<boolean>(() => {
-    if (props.multiple && Array.isArray(modelValue.value)) {
-      return modelValue.value.length > 0;
-    }
-
-    return Boolean(modelValue.value);
+  const {
+    isOpen,
+    toggleOpen,
+    hasValue,
+    isDisabled,
+    activeValue,
+    handleRemoveTag,
+    handleClear,
+    handleChange,
+    registerOption,
+    unregisterOption
+  } = useSelect({
+    modelValue,
+    props,
+    onChangeModel: value => {
+      modelValue.value = value;
+    },
+    onChange: value => {
+      emit('change', value);
+    },
+    onClear: () => {
+      emit('clear');
+    },
   });
-
-  const isDisabled = computed<boolean>(() => props.disabled);
-
-  const activeValue = computed<IVOptionInstance | Array<IVOptionInstance> | undefined>(() => {
-    if (modelValue.value && props.multiple && Array.isArray(modelValue.value)) {
-      const arrayValue = modelValue.value;
-
-      return optionInstances.value.filter(option => arrayValue.includes(option.props.value));
-    }
-
-    return optionInstances.value.find(option => option.props.value === modelValue.value);
-  });
-
-  function handleClear () {
-    if (props.multiple && Array.isArray(modelValue.value)) {
-      modelValue.value = [];
-
-      emit('change', []);
-
-      return;
-    }
-
-    modelValue.value = undefined;
-
-    emit('change', undefined);
-  }
-
-  function handleChange (value: IVOptionValue) {
-    if (isDisabled.value) {
-      return;
-    }
-
-    if (props.multiple && Array.isArray(modelValue.value)) {
-      const values = new Set<IVOptionValue>([...modelValue.value]);
-
-      if (values.has(value)) {
-        values.delete(value);
-      } else {
-        values.add(value);
-      }
-
-      modelValue.value = [...values];
-
-      emit('change', [...values]);
-
-      return;
-    }
-
-    modelValue.value = value;
-
-    emit('change', value);
-  }
-
-  function handleRemoveTag (value: IVOptionValue) {
-    if (!props.multiple || !Array.isArray(modelValue.value)) {
-      return;
-    }
-
-    const newValue = modelValue.value.filter(val => val !== value);
-
-    modelValue.value = newValue;
-
-    emit('change', newValue);
-  }
-
-  function registerOption (newOption: IVOptionInstance) {
-    const option: IVOptionInstance | undefined = optionInstances.value.find(option => option.id === newOption.id);
-
-    if (option) {
-      return;
-    }
-
-    optionInstances.value.push(newOption);
-  }
-
-  function unregisterOption (oldOption: IVOptionInstance) {
-    optionInstances.value = optionInstances.value.filter(option => option.id !== oldOption.id);
-  }
 
   function handleAfterEnter (payload: Element) {
     emit('opened', payload);

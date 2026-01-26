@@ -4,21 +4,22 @@ import { Affix } from '../Affix';
 import { onBeforeUnmount, onMounted, shallowRef, type TemplateRef, toRef, watch } from 'vue';
 import { isNumber } from '@vau/core';
 
-interface IUseAffixOptions {
+export interface IUseAffixOptions {
+  props: IVAffixProps;
   root: TemplateRef<HTMLDivElement>;
   content: TemplateRef<HTMLDivElement>;
 }
 
-export function useAffix (props: IVAffixProps, options: IUseAffixOptions) {
+export function useAffix (options: IUseAffixOptions) {
   const container = shallowRef<HTMLElement>();
   const stickySidebar = shallowRef<Affix>();
 
-  const offsetTop = toRef(() => isNumber(props.offsetTop) ? props.offsetTop : AFFIX_OFFSET_TOP);
-  const offsetBottom = toRef(() => isNumber(props.offsetBottom) ? props.offsetBottom : AFFIX_OFFSET_BOTTOM);
+  const offsetTop = toRef(() => isNumber(options.props.offsetTop) ? options.props.offsetTop : AFFIX_OFFSET_TOP);
+  const offsetBottom = toRef(() => isNumber(options.props.offsetBottom) ? options.props.offsetBottom : AFFIX_OFFSET_BOTTOM);
 
   function setContainer () {
-    if (props.container) {
-      container.value = document.querySelector<HTMLElement>(props.container) ?? undefined;
+    if (options.props.container) {
+      container.value = document.querySelector<HTMLElement>(options.props.container) ?? undefined;
     } else {
       container.value = options.root.value?.parentElement ?? undefined;
     }
@@ -43,7 +44,7 @@ export function useAffix (props: IVAffixProps, options: IUseAffixOptions) {
   }
 
   onMounted(() => {
-    if (props.disabled) {
+    if (options.props.disabled) {
       return;
     }
 
@@ -54,7 +55,7 @@ export function useAffix (props: IVAffixProps, options: IUseAffixOptions) {
     destroyAffix();
   });
 
-  watch(() => props.disabled, value => {
+  watch(() => options.props.disabled, value => {
     if (value) {
       destroyAffix();
     } else {

@@ -5,7 +5,12 @@ import { getProp, type MaybeNull } from '@vau/core';
 import { computed, ref, useId, toRaw, watch, shallowRef } from 'vue';
 import { z, type ZodType } from 'zod';
 
-export function useFormItem (props: IVFormItemProps, formContext: MaybeNull<IVFormContext>) {
+export interface IUseFormItem {
+  context: MaybeNull<IVFormContext>;
+  props: IVFormItemProps;
+}
+
+export function useFormItem (options: IUseFormItem) {
   const id = useId();
 
   const validationErrors = ref<Array<$ZodIssue>>([]);
@@ -17,18 +22,24 @@ export function useFormItem (props: IVFormItemProps, formContext: MaybeNull<IVFo
     isSuccess: false
   });
 
-  const isDisabled = computed<boolean>(() => !!(props.disabled || formContext?.props.disabled));
-  const modelValue = computed<IVFormModelValues>(() => props.prop && formContext?.modelValue.value && getProp(formContext.modelValue.value, props.prop));
+  const isDisabled = computed<boolean>(() => Boolean(options.props.disabled || options.context?.props.disabled));
+
+  const modelValue = computed<IVFormModelValues>(() => {
+    return options.props.prop && options.context?.modelValue.value && getProp(options.context.modelValue.value, options.props.prop);
+  });
+
   const rule = computed<MaybeNull<ZodType>>(() => {
-    if (!props.prop || !formContext?.props?.rules) {
+    if (!options.props.prop || !options.context?.props?.rules) {
       return null;
     }
 
-    const ruleValue = getProp(formContext.props.rules, props.prop);
+    const ruleValue = getProp(options.context.props.rules, options.props.prop);
 
     return ruleValue instanceof z.ZodType ? ruleValue : null;
   });
+
   const isValidatable = computed<boolean>(() => !!rule.value);
+
   const isRequired = computed<boolean>(() => {
     if (!rule.value) {
       return false;
@@ -38,11 +49,11 @@ export function useFormItem (props: IVFormItemProps, formContext: MaybeNull<IVFo
   });
 
   async function validate (silent = false): Promise<boolean> {
-    if (!props.prop) {
+    if (!options.props.prop) {
       return false;
     }
 
-    if (!modelValue.value && !props.prop && !rule.value) {
+    if (!modelValue.value && !rule.value) {
       return false;
     }
 
@@ -51,13 +62,13 @@ export function useFormItem (props: IVFormItemProps, formContext: MaybeNull<IVFo
     }
 
     const schema = z.object({
-      [props.prop]: toRaw(rule.value)
+      [options.props.prop]: toRaw(rule.value)
     });
 
     validationStatus.value.isValidating = true;
 
     const result = await schema.safeParseAsync({
-      [props.prop]: toRaw(modelValue.value)
+      [options.props.prop]: toRaw(modelValue.value)
     });
 
     validationStatus.value.isValidating = false;
@@ -86,7 +97,7 @@ export function useFormItem (props: IVFormItemProps, formContext: MaybeNull<IVFo
   }
 
   function registerField (child: IVFormItemField) {
-    if (props.prop) {
+    if (options.props.prop) {
       field.value = child;
     }
   }
@@ -96,7 +107,7 @@ export function useFormItem (props: IVFormItemProps, formContext: MaybeNull<IVFo
   }
 
   function reset () {
-    if (!modelValue.value || !props.prop) {
+    if (!modelValue.value || !options.props.prop) {
       return;
     }
 

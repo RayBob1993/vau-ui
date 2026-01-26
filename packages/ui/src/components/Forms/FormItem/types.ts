@@ -34,7 +34,7 @@ export interface IVFormItemContext {
   props: IVFormItemProps;
   validationStatus: Ref<IVFormItemValidationStatus>;
   registerField: (field: IVFormItemField) => void;
-  unregisterField: () => void;
+  unregisterField: VoidFunction;
   isRequired: ComputedRef<boolean>;
   validate: (silent?: boolean) => Promise<boolean>;
   clearValidate: VoidFunction;

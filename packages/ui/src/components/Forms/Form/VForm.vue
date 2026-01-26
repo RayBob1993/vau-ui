@@ -16,7 +16,14 @@
     required: true
   });
 
-  const { isValid, registerFormItem, unregisterFormItem, validate, clearValidate, reset } = useForm(modelValue);
+  const {
+    isValid,
+    registerFormItem,
+    unregisterFormItem,
+    validate,
+    clearValidate,
+    reset 
+  } = useForm(modelValue);
 
   defineExpose<IVFormExpose>({
     validate,

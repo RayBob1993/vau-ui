@@ -1,12 +1,15 @@
 <script setup lang="ts">
   import type { IVCountdownProps, IVCountdownEmits, IVCountdownExpose, IVCountdownSlots } from './types';
   import { useCountdown } from './composables';
+  import { COUNTDOWN_INTERVAL, COUNTDOWN_NOW } from './constants';
 
   const props = withDefaults(defineProps<IVCountdownProps>(), {
-    interval: () => 1000
+    interval: () => COUNTDOWN_INTERVAL,
+    now: () => COUNTDOWN_NOW
   });
 
-  defineEmits<IVCountdownEmits>();
+  const emit = defineEmits<IVCountdownEmits>();
+
   defineSlots<IVCountdownSlots>();
 
   const {
@@ -21,7 +24,13 @@
     abort,
     end,
     restart
-  } = useCountdown(props);
+  } = useCountdown({
+    props,
+    onAbort: () => emit('abort'),
+    onEnd: () => emit('end'),
+    onProgress: payload => emit('progress', payload),
+    onStart: () => emit('start'),
+  });
 
   defineExpose<IVCountdownExpose>({
     start,

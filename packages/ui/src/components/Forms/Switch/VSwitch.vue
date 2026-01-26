@@ -4,7 +4,9 @@
 
   const props = defineProps<IVSwitchProps>();
 
-  const { isDisabled } = useSwitch(props);
+  const { isDisabled } = useSwitch({
+    props
+  });
 </script>
 
 <template>

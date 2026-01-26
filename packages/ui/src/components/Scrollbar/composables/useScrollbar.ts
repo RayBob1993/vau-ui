@@ -4,6 +4,7 @@ import { ref, type TemplateRef, toRef } from 'vue';
 import { useToggle, debounce, throttle, isNumber } from '@vau/core';
 
 export interface IUseScrollbarOptions {
+  props: IVScrollbarProps;
   scrollbar: TemplateRef<HTMLDivElement>;
   content: TemplateRef<HTMLDivElement>;
   onScroll?: (event: Event) => void;
@@ -15,10 +16,10 @@ export interface IUseScrollbarOptions {
   onScrollEndX?: VoidFunction;
 }
 
-export function useScrollbar (props: IVScrollbarProps, options: IUseScrollbarOptions) {
-  const infiniteScrollOffset = toRef<number>(props?.infiniteScrollOffset || SCROLLBAR_INFINITE_SCROLL_OFFSET);
-  const draggableMultiplier = toRef<number>(props?.draggableMultiplier || SCROLLBAR_DRAGGABLE_MULTIPLIER);
-  const debounceDelay = toRef<number>(isNumber(props.debounceDelay) ? props.debounceDelay : SCROLLBAR_DEBOUNCE_DELAY);
+export function useScrollbar (options: IUseScrollbarOptions) {
+  const infiniteScrollOffset = toRef<number>(options.props?.infiniteScrollOffset || SCROLLBAR_INFINITE_SCROLL_OFFSET);
+  const draggableMultiplier = toRef<number>(options.props?.draggableMultiplier || SCROLLBAR_DRAGGABLE_MULTIPLIER);
+  const debounceDelay = toRef<number>(isNumber(options.props.debounceDelay) ? options.props.debounceDelay : SCROLLBAR_DEBOUNCE_DELAY);
 
   const [isGrabbing, setGrabbing] = useToggle();
   const [isDown, setDown] = useToggle();
@@ -32,7 +33,7 @@ export function useScrollbar (props: IVScrollbarProps, options: IUseScrollbarOpt
   const handleScroll = debounce((event: Event) => {
     options?.onScroll?.(event);
 
-    if (!props.draggable) {
+    if (!options.props.draggable) {
       scrollTop.value = getScrollbarScrollTop();
       scrollLeft.value = getScrollbarScrollLeft();
     }
@@ -45,8 +46,8 @@ export function useScrollbar (props: IVScrollbarProps, options: IUseScrollbarOpt
     const scrollBottom: number = scrollTop.value + scrollbarHeight;
     const scrollRight: number = scrollLeft.value + scrollbarWidth;
 
-    const isScrollEndY: boolean = Boolean(props.vertical && (contentScrollHeight - scrollBottom <= infiniteScrollOffset.value));
-    const isScrollEndX: boolean = Boolean(props.horizontal && (contentScrollWidth - scrollRight <= infiniteScrollOffset.value));
+    const isScrollEndY: boolean = Boolean(options.props.vertical && (contentScrollHeight - scrollBottom <= infiniteScrollOffset.value));
+    const isScrollEndX: boolean = Boolean(options.props.horizontal && (contentScrollWidth - scrollRight <= infiniteScrollOffset.value));
 
     if (isScrollEndY) {
       options?.onScrollEndY?.();
@@ -60,7 +61,7 @@ export function useScrollbar (props: IVScrollbarProps, options: IUseScrollbarOpt
   const handleMousemove = throttle((event: MouseEvent) => {
     options?.onMousemove?.(event);
 
-    if (!props.draggable) {
+    if (!options.props.draggable) {
       return;
     }
 
@@ -78,11 +79,11 @@ export function useScrollbar (props: IVScrollbarProps, options: IUseScrollbarOpt
       const walkX: number = (x - startX.value) * draggableMultiplier.value;
       const walkY: number = (y - startY.value) * draggableMultiplier.value;
 
-      if (props.horizontal) {
+      if (options.props.horizontal) {
         options.scrollbar.value.scrollLeft = scrollLeft.value - walkX;
       }
 
-      if (props.vertical) {
+      if (options.props.vertical) {
         options.scrollbar.value.scrollTop = scrollTop.value - walkY;
       }
     }
@@ -91,7 +92,7 @@ export function useScrollbar (props: IVScrollbarProps, options: IUseScrollbarOpt
   function handleMousedown (event: MouseEvent) {
     options?.onMousedown?.(event);
 
-    if (!props.draggable) {
+    if (!options.props.draggable) {
       return;
     }
 
@@ -110,7 +111,7 @@ export function useScrollbar (props: IVScrollbarProps, options: IUseScrollbarOpt
   function handleMouseleave (event: MouseEvent) {
     options?.onMouseleave?.(event);
 
-    if (!props.draggable) {
+    if (!options.props.draggable) {
       return;
     }
 
@@ -121,7 +122,7 @@ export function useScrollbar (props: IVScrollbarProps, options: IUseScrollbarOpt
   function handleMouseup (event: MouseEvent) {
     options?.onMouseup?.(event);
 
-    if (!props.draggable) {
+    if (!options.props.draggable) {
       return;
     }
 
@@ -130,25 +131,25 @@ export function useScrollbar (props: IVScrollbarProps, options: IUseScrollbarOpt
   }
 
   function getScrollbarScrollTop (): number {
-    return props.vertical && options.scrollbar.value
+    return options.props.vertical && options.scrollbar.value
       ? options.scrollbar.value.scrollTop
       : 0;
   }
 
   function getScrollbarScrollLeft (): number {
-    return props.horizontal && options.scrollbar.value
+    return options.props.horizontal && options.scrollbar.value
       ? options.scrollbar.value.scrollLeft
       : 0;
   }
 
   function getScrollbarOffsetTop (): number {
-    return props.vertical && options.scrollbar.value
+    return options.props.vertical && options.scrollbar.value
       ? options.scrollbar.value.offsetTop
       : 0;
   }
 
   function getScrollbarOffsetLeft (): number {
-    return props.horizontal && options.scrollbar.value
+    return options.props.horizontal && options.scrollbar.value
       ? options.scrollbar.value.offsetLeft
       : 0;
   }

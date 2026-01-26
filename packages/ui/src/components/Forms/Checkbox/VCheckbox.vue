@@ -8,7 +8,10 @@
     required: true
   });
 
-  const { isDisabled, isChecked } = useCheckbox(props, modelValue);
+  const { isDisabled, isChecked } = useCheckbox({
+    props,
+    modelValue
+  });
 </script>
 
 <template>

@@ -28,7 +28,10 @@
     reset,
     registerField,
     unregisterField
-  } = useFormItem(props, Form);
+  } = useFormItem({
+    context: Form,
+    props
+  });
 
   const root = useTemplateRef<HTMLDivElement>('root');
 
@@ -44,7 +47,7 @@
     clearValidate
   };
 
-  const isVisibleHeader = computed<boolean>(() => Boolean(slots?.label) || Boolean(props.title));
+  const isVisibleHeader = computed<boolean>(() => Boolean(slots?.label || props.title));
 
   Form?.registerFormItem(formItemInstance);
 

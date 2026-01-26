@@ -4,7 +4,9 @@
 
   const props = defineProps<IVInputCodeProps>();
 
-  const { isDisabled } = useInputCode(props);
+  const { isDisabled } = useInputCode({
+    props
+  });
 </script>
 
 <template>

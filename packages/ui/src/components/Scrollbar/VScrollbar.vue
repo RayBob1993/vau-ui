@@ -24,7 +24,8 @@
     handleMouseleave,
     handleMouseup,
     handleMousemove
-  } = useScrollbar(props, {
+  } = useScrollbar({
+    props,
     scrollbar,
     content,
     onScroll: event => emit('scroll', event),

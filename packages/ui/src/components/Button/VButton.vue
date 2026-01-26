@@ -6,7 +6,9 @@
     type: 'button'
   });
 
-  const { isDisabled } = useButton(props);
+  const { isDisabled } = useButton({
+    props
+  });
 </script>
 
 <template>

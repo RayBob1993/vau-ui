@@ -2,10 +2,14 @@ import type { IVDatepickerProps } from '../types';
 import { useFormProvider } from '../../../../composables';
 import { computed } from 'vue';
 
-export function useDatepicker (props: IVDatepickerProps) {
+export interface IUseDatepickerOptions {
+  props: IVDatepickerProps;
+}
+
+export function useDatepicker (options: IUseDatepickerOptions) {
   const { isFormDisabled } = useFormProvider();
 
-  const isDisabled = computed<boolean>(() => props.disabled || isFormDisabled.value);
+  const isDisabled = computed<boolean>(() => Boolean(options.props.disabled) || isFormDisabled.value);
 
   return {
     isDisabled

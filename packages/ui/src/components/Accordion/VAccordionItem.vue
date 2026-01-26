@@ -1,12 +1,18 @@
 <script setup lang="ts">
   import type { IVAccordionItemProps, IVAccordionItemSlots } from './types';
   import { useAccordionItem } from './composables';
+  import { useAccordionContext } from './context';
 
   const props = defineProps<IVAccordionItemProps>();
 
   defineSlots<IVAccordionItemSlots>();
 
-  const { isActive, tabIndex, handleToggle } = useAccordionItem(props);
+  const Accordion = useAccordionContext();
+
+  const { isActive, tabIndex, handleToggle } = useAccordionItem({
+    context: Accordion,
+    props
+  });
 </script>
 
 <template>

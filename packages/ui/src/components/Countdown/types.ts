@@ -6,6 +6,20 @@ export interface IVCountdownProps {
   autoStart?: boolean;
   interval?: number;
   start: number;
+  now?: number;
+}
+
+export interface IVCountdownProgress {
+  days: number;
+  hours: number;
+  minutes: number;
+  seconds: number;
+  milliseconds: number;
+  totalDays: number;
+  totalHours: number;
+  totalMinutes: number;
+  totalSeconds: number;
+  totalMilliseconds: number;
 }
 
 /**
@@ -14,7 +28,7 @@ export interface IVCountdownProps {
  */
 export interface IVCountdownEmits {
   start: [];
-  progress: [];
+  progress: [payload: IVCountdownProgress];
   abort: [];
   end: [];
 }

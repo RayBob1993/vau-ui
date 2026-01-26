@@ -2,17 +2,21 @@ import type { IVBadgeProps } from '../types';
 import { computed } from 'vue';
 import { isNumber } from '@vau/core';
 
-export function useBadge (props: IVBadgeProps) {
+export interface IUseBadgeOptions {
+  props: IVBadgeProps;
+}
+
+export function useBadge (options: IUseBadgeOptions) {
   const content = computed<string>(() => {
-    if (props.isDot) {
+    if (options.props.dot) {
       return '';
     }
 
-    if (isNumber(props.value) && isNumber(props.max)) {
-      return props.max < props.value ? `${props.max}+` : `${props.value}`;
+    if (isNumber(options.props.value) && isNumber(options.props.max)) {
+      return options.props.max < options.props.value ? `${options.props.max}+` : `${options.props.value}`;
     }
 
-    return `${props.value}`;
+    return `${options.props.value}`;
   });
 
   return {

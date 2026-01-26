@@ -3,18 +3,23 @@ import { useFormProvider } from '../../../../composables';
 import { computed, type ModelRef } from 'vue';
 import { isBoolean } from '@vau/core';
 
-export function useCheckbox (props: IVCheckboxProps, modelValue: ModelRef<IVCheckboxModelValue>) {
+export interface IUseCheckbox {
+  props: IVCheckboxProps;
+  modelValue: ModelRef<IVCheckboxModelValue>;
+}
+
+export function useCheckbox (options: IUseCheckbox) {
   const { isFormDisabled } = useFormProvider();
 
-  const isDisabled = computed<boolean>(() => props.disabled || isFormDisabled.value);
+  const isDisabled = computed<boolean>(() => Boolean(options.props.disabled) || isFormDisabled.value);
 
   const isChecked = computed<boolean>(() => {
-    if (isBoolean(modelValue.value)) {
-      return modelValue.value;
+    if (isBoolean(options.modelValue.value)) {
+      return options.modelValue.value;
     }
 
-    if (props.value && Array.isArray(modelValue.value)) {
-      return modelValue.value.includes(props.value);
+    if (options.props.value && Array.isArray(options.modelValue.value)) {
+      return options.modelValue.value.includes(options.props.value);
     }
 
     return false;

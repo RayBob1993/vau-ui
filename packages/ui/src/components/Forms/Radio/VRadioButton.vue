@@ -8,7 +8,10 @@
     required: true
   });
 
-  const { isDisabled, isChecked } = useRadio(props, modelValue);
+  const { isDisabled, isChecked } = useRadio({
+    props,
+    modelValue
+  });
 </script>
 
 <template>

@@ -13,7 +13,8 @@
   const root = useTemplateRef<HTMLDivElement>('root');
   const content = useTemplateRef<HTMLDivElement>('content');
 
-  useAffix(props, {
+  useAffix({
+    props,
     root,
     content
   });

@@ -7,7 +7,9 @@
 
   const slots = defineSlots<IVBadgeSlots>();
 
-  const { content } = useBadge(props);
+  const { content } = useBadge({
+    props
+  });
 
   const isVisibleContent = computed<boolean>(() => {
     return !props.hidden && Boolean(content.value || props.dot || slots?.content);

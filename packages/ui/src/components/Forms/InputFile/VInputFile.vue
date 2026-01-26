@@ -4,7 +4,9 @@
 
   const props = defineProps<IVInputFileProps>();
 
-  const { isDisabled } = useInputFile(props);
+  const { isDisabled } = useInputFile({
+    props
+  });
 </script>
 
 <template>
