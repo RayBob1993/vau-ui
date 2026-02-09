@@ -31,8 +31,6 @@ export function useInputNumberWheel (options: IUseInputNumberWheel) {
     } else {
       options.onDecrement();
     }
-
-    return false;
   }, mousewheelDelay.value);
 
   return {
