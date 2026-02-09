@@ -1,6 +1,6 @@
 <script lang="ts" setup>
   import type { IVInputNumberProps, IVInputNumberModelValue } from './types';
-  import { useInputNumber } from './composables';
+  import { useInputNumber, useInputNumberWheel } from './composables';
   import { INPUT_NUMBER_STEP } from './constants';
 
   const props = withDefaults(defineProps<IVInputNumberProps>(), {
@@ -29,6 +29,12 @@
       modelValue.value = value;
     },
   });
+
+  const { handleWheel } = useInputNumberWheel({
+    mousewheel: () => props.mousewheel,
+    onDecrement: handleDecrement,
+    onIncrement: handleIncrement
+  });
 </script>
 
 <template>
@@ -51,6 +57,8 @@
         :min="min"
         :max="max"
         :disabled="isDisabled"
+        :readonly="readonly"
+        @wheel="handleWheel"
       >
     </div>
 

@@ -26,6 +26,10 @@ export function useInputNumber (options: IUseInputNumber) {
   });
 
   function handleDecrement () {
+    if (options.props.readonly) {
+      return;
+    }
+
     const newValue = modelValue.value - step.value;
 
     // Если min не указан или значение больше минимального
@@ -35,6 +39,10 @@ export function useInputNumber (options: IUseInputNumber) {
   }
 
   function handleIncrement () {
+    if (options.props.readonly) {
+      return;
+    }
+
     const newValue = modelValue.value + step.value;
 
     // Если max не указан или значение меньше максимального
