@@ -38,7 +38,12 @@
 </script>
 
 <template>
-  <div class="v-input-number">
+  <div
+    class="v-input-number"
+    :class="{
+      [`v-input-number--direction-${direction}`]: direction
+    }"
+  >
     <button
       class="v-input-number__button v-input-number__button--decrement"
       type="button"
