@@ -1,4 +1,5 @@
-import type { Ref } from 'vue';
+import type { Ref, VNode } from 'vue';
+import type { UnscopedSlot } from '@vau/core';
 
 /**
  * Интерфейс свойств компонента VDropdown
@@ -22,12 +23,12 @@ export interface IVDropdownEmits {
  * @interface IVDropdownSlots
  */
 export interface IVDropdownSlots {
-  default?: () => never;
+  default?: UnscopedSlot;
   trigger?: (props: {
     isVisible: boolean;
     toggle: VoidFunction;
     setVisible: (payload: boolean) => void;
-  }) => never;
+  }) => Array<VNode>;
 }
 
 export interface IVDropdownInstance {

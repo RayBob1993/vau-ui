@@ -1,4 +1,5 @@
 import type { ISizeProp } from '../../types';
+import type { VNode } from 'vue';
 
 /**
  * Интерфейс свойств компонента VModal
@@ -21,18 +22,16 @@ export interface IVModalEmits {
   close: [];
 }
 
+export interface IVModalScopedSlot {
+  close: VoidFunction;
+}
+
 /**
  * Интерфейс слотов компонента VModal
  * @interface IVModalSlots
  */
 export interface IVModalSlots {
-  default?: (props: {
-    close: VoidFunction;
-  }) => never;
-  header?: (props: {
-    close: VoidFunction;
-  }) => never;
-  footer?: (props: {
-    close: VoidFunction;
-  }) => never;
+  default?: (props: IVModalScopedSlot) => Array<VNode>;
+  header?: (props: IVModalScopedSlot) => Array<VNode>;
+  footer?: (props: IVModalScopedSlot) => Array<VNode>;
 }

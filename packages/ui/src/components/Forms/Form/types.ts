@@ -1,4 +1,4 @@
-import type { ModelRef } from 'vue';
+import type { ModelRef, VNode } from 'vue';
 import type { IVFormItemInstance } from '../FormItem';
 import type { ISizeProp, IThemeProp } from '../../../types';
 import type { z } from 'zod';
@@ -35,6 +35,19 @@ export type IVFormProps = {
   scrollIntoViewOptions?: ScrollIntoViewOptions;
 } & Partial<IThemeProp> & Partial<ISizeProp>;
 
+export interface IVFormSubmitEvent {
+  isValid: boolean;
+  reset: VoidFunction;
+}
+
+/**
+ * Интерфейс событий компонента VForm
+ * @interface IVFormEmits
+ */
+export type IVFormEmits = {
+  submit: [payload: IVFormSubmitEvent];
+};
+
 /**
  * Интерфейс слотов компонента VForm
  * @interface IVFormSlots
@@ -42,7 +55,7 @@ export type IVFormProps = {
 export interface IVFormSlots {
   default?: (props: {
     isValid: boolean;
-  }) => never;
+  }) => Array<VNode>;
 }
 
 export type IVFormValidationResult = Promise<boolean>;

@@ -1,4 +1,5 @@
 import type { ISizeProp, IThemeProp } from '../../types';
+import type { UnscopedSlot } from '@vau/core';
 
 /**
  * Интерфейс свойств компонента VBadge
@@ -16,7 +17,7 @@ export type IVBadgeProps = {
  * @interface IVBadgeSlots
  */
 export interface IVBadgeSlots {
-  default?: VoidFunction;
+  default?: UnscopedSlot;
   content?: (props: {
     value: string;
   }) => void;

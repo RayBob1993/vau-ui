@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-  import type { IVFormExpose, IVFormModel, IVFormProps, IVFormSlots } from './types';
+  import type { IVFormEmits, IVFormExpose, IVFormModel, IVFormProps, IVFormSlots } from './types';
   import { useForm } from './composables';
   import { VFormContextKey } from './context';
   import { provide } from 'vue';
@@ -9,6 +9,8 @@
       block: 'center'
     })
   });
+
+  const emit = defineEmits<IVFormEmits>();
 
   defineSlots<IVFormSlots>();
 
@@ -22,8 +24,17 @@
     unregisterFormItem,
     validate,
     clearValidate,
-    reset 
-  } = useForm(modelValue);
+    reset
+  } = useForm({
+    modelValue: () => modelValue.value,
+  });
+
+  function handleSubmit () {
+    emit('submit', {
+      isValid: isValid.value,
+      reset
+    });
+  }
 
   defineExpose<IVFormExpose>({
     validate,
@@ -45,6 +56,7 @@
     :class="{
       'v-form--disabled': disabled
     }"
+    @submit.prevent="handleSubmit"
   >
     <slot :is-valid="isValid"/>
   </form>

@@ -1,10 +1,12 @@
+import type { VNode } from 'vue';
+
 export interface IVInplaceSlots {
   display?: (props: {
     open: VoidFunction;
-  }) => never;
+  }) => Array<VNode>;
   content?: (props: {
     close: VoidFunction;
-  }) => never;
+  }) => Array<VNode>;
 }
 
 export interface IVInplaceEmits {

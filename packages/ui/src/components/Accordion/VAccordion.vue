@@ -13,7 +13,7 @@
 
   const { handleChange } = useAccordion({
     props,
-    modelValue,
+    modelValue: () => modelValue.value,
     onChange: value => emit('change', value),
     onChangeModel: value => {
       modelValue.value = value;

@@ -17,7 +17,7 @@
   const input = useTemplateRef<IVInputNative>('input');
 
   const { isDisabled, isTextarea, isFocus, validationStatus } = useInput({
-    modelValue,
+    modelValue: () => modelValue.value,
     props
   });
 

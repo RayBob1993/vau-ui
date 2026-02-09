@@ -33,7 +33,7 @@ export function useToggle (initial: boolean = false): IUseToggle {
   }
 
   function toggleState () {
-    state.value = !state.value;
+    setState(!state.value);
   }
 
   return [

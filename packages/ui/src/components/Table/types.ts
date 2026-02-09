@@ -1,4 +1,5 @@
-import type { MaybeNull, ValueOf } from '@vau/core';
+import type { MaybeNull, UnscopedSlot, ValueOf } from '@vau/core';
+import type { VNode } from 'vue';
 import { TableLayout, TableSort } from './constants';
 
 export type IVTableSortDirection = ValueOf<typeof TableSort>;
@@ -79,12 +80,12 @@ export interface IVTableEmits <DATA extends IVTableBaseData = IVTableBaseData> {
  * @interface IVTableSlots
  */
 export type IVTableSlots<DATA extends IVTableBaseData = IVTableBaseData> = {
-  default?: () => never;
-  empty?: () => never;
+  default?: UnscopedSlot;
+  empty?: UnscopedSlot;
 } & {
   [K in keyof DATA]?: (props: {
     row: DATA;
-  }) => never;
+  }) => Array<VNode>;
 };
 
 /**

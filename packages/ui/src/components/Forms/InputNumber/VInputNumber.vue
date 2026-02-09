@@ -1,11 +1,12 @@
 <script lang="ts" setup>
   import type { IVInputNumberProps, IVInputNumberModelValue } from './types';
   import { useInputNumber } from './composables';
+  import { INPUT_NUMBER_STEP } from './constants';
 
   const props = withDefaults(defineProps<IVInputNumberProps>(), {
     min: -Infinity,
     max: Infinity,
-    step: 1
+    step: INPUT_NUMBER_STEP
   });
 
   const modelValue = defineModel<IVInputNumberModelValue>({
@@ -20,7 +21,7 @@
     handleIncrement
   } = useInputNumber({
     props,
-    modelValue,
+    modelValue: () => modelValue.value,
     onDecrement: value => {
       modelValue.value = value;
     },

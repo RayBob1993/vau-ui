@@ -1,4 +1,5 @@
 import type { ISizeProp } from '../../types';
+import type { VNode } from 'vue';
 
 /**
  * Интерфейс слотов компонента VDrawer
@@ -21,18 +22,16 @@ export interface IVDrawerEmits {
   close: [];
 }
 
+export interface IVDrawerScopedSlot {
+  close: VoidFunction;
+}
+
 /**
  * Интерфейс слотов компонента VDrawer
  * @interface IVDrawerSlots
  */
 export interface IVDrawerSlots {
-  default?: (props: {
-    close: VoidFunction;
-  }) => never;
-  header?: (props: {
-    close: VoidFunction;
-  }) => never;
-  footer?: (props: {
-    close: VoidFunction;
-  }) => never;
+  default?: (props: IVDrawerScopedSlot) => Array<VNode>;
+  header?: (props: IVDrawerScopedSlot) => Array<VNode>;
+  footer?: (props: IVDrawerScopedSlot) => Array<VNode>;
 }

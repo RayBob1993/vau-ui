@@ -1,5 +1,5 @@
 import type { ModelRef } from 'vue';
-import type { Maybe, MaybeArray, MaybeNull } from '@vau/core';
+import type { Maybe, MaybeArray, MaybeNull, UnscopedSlot } from '@vau/core';
 import type { ISizeProp, IThemeProp } from '../../types';
 
 export type IVAccordionValue = string | number;
@@ -36,7 +36,7 @@ export type IVAccordionItemProps = {
  * @interface IVAccordionItemSlots
  */
 export interface IVAccordionItemSlots {
-  default?: VoidFunction;
+  default?: UnscopedSlot;
   icon?: (props: {
     isActive: boolean
   }) => void;

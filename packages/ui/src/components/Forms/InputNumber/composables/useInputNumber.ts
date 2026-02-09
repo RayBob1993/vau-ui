@@ -1,11 +1,12 @@
 import type { IVInputNumberModelValue, IVInputNumberProps } from '../types';
 import { useFormProvider } from '../../../../composables';
-import { computed, type ModelRef } from 'vue';
+import { INPUT_NUMBER_STEP } from '../constants';
+import { computed, type MaybeRefOrGetter, toValue } from 'vue';
 import { isNumber } from '@vau/core';
 
 export interface IUseInputNumber {
   props: IVInputNumberProps;
-  modelValue: ModelRef<IVInputNumberModelValue>;
+  modelValue: MaybeRefOrGetter<IVInputNumberModelValue>;
   onDecrement?: (value: IVInputNumberModelValue) => void;
   onIncrement?: (value: IVInputNumberModelValue) => void;
 }
@@ -13,39 +14,32 @@ export interface IUseInputNumber {
 export function useInputNumber (options: IUseInputNumber) {
   const { isFormDisabled } = useFormProvider();
 
-  const isDisabled = computed<boolean>(() => options.props.disabled || isFormDisabled.value);
+  const modelValue = computed<IVInputNumberModelValue>(() => toValue(options.modelValue));
+  const step = computed<number>(() => options.props?.step || INPUT_NUMBER_STEP);
+
+  const isDisabled = computed<boolean>(() => Boolean(options.props.disabled) || isFormDisabled.value);
   const isDecrementDisabled = computed<boolean>(() => {
-    return isDisabled.value || (isNumber(options.props.min) && options.modelValue.value === options.props.min);
+    return isDisabled.value || (isNumber(options.props.min) && modelValue.value === options.props.min);
   });
   const isIncrementDisabled = computed<boolean>(() => {
-    return isDisabled.value || (isNumber(options.props.max) && !(options.modelValue.value < options.props.max));
+    return isDisabled.value || (isNumber(options.props.max) && !(modelValue.value < options.props.max));
   });
 
   function handleDecrement () {
-    if (!options.props.min) {
-      options.modelValue.value--;
-    }
+    const newValue = modelValue.value - step.value;
 
-    if (isNumber(options.props.min) && isNumber(options.props.step)) {
-      if (options.modelValue.value > options.props.min) {
-        const value = options.modelValue.value - options.props.step;
-
-        options.onDecrement?.(value);
-      }
+    // Если min не указан или значение больше минимального
+    if (!isNumber(options.props.min) || newValue >= options.props.min) {
+      options.onDecrement?.(newValue);
     }
   }
 
   function handleIncrement () {
-    if (!options.props.max) {
-      options.modelValue.value++;
-    }
+    const newValue = modelValue.value + step.value;
 
-    if (isNumber(options.props.max) && isNumber(options.props.step)) {
-      if (options.modelValue.value < options.props.max) {
-        const value = options.modelValue.value + options.props.step;
-
-        options.onIncrement?.(value);
-      }
+    // Если max не указан или значение меньше максимального
+    if (!isNumber(options.props.max) || newValue <= options.props.max) {
+      options.onIncrement?.(newValue);
     }
   }
 

@@ -24,7 +24,7 @@
     registerOption,
     unregisterOption
   } = useSelect({
-    modelValue,
+    modelValue: () => modelValue.value,
     props,
     onChangeModel: value => {
       modelValue.value = value;

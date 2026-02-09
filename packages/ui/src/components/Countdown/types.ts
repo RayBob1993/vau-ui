@@ -1,3 +1,5 @@
+import type { VNode } from 'vue';
+
 /**
  * Интерфейс свойств компонента VCountdown
  * @interface IVCountdownProps
@@ -46,7 +48,7 @@ export interface IVCountdownSlots {
     minutes: number;
     seconds: number;
     milliseconds: number;
-  }) => never;
+  }) => Array<VNode>;
 }
 
 export interface IVCountdownExpose {

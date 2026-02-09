@@ -1,4 +1,5 @@
 import type { ISizeProp, IThemeProp } from '../../types';
+import type { UnscopedSlot } from '@vau/core';
 
 /**
  * Интерфейс свойств компонента VAlert
@@ -15,7 +16,7 @@ export type IVAlertProps = {
  * @interface IVAlertSlots
  */
 export interface IVAlertSlots {
-  default?: VoidFunction;
-  title?: VoidFunction;
-  description?: VoidFunction;
+  default?: UnscopedSlot;
+  title?: UnscopedSlot;
+  description?: UnscopedSlot;
 }

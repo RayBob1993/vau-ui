@@ -1,3 +1,5 @@
+import type { UnscopedSlot } from '@vau/core';
+
 export type IVRatingModelValue = number;
 
 /**
@@ -12,6 +14,6 @@ export interface IVRatingProps {
 }
 
 export interface IVRatingSlots {
-  onIcon: VoidFunction;
-  offIcon: VoidFunction;
+  onIcon: UnscopedSlot;
+  offIcon: UnscopedSlot;
 }

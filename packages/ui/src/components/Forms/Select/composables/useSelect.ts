@@ -1,9 +1,9 @@
 import type { IVOptionInstance, IVSelectProps, IVSelectModelValue, IVOptionValue } from '../types';
 import { type Maybe, useToggle } from '@vau/core';
-import { computed, type ModelRef, ref } from 'vue';
+import { computed, type MaybeRefOrGetter, ref, toValue } from 'vue';
 
 export interface IUseSelectOptions {
-  modelValue: ModelRef<IVSelectModelValue>;
+  modelValue: MaybeRefOrGetter<IVSelectModelValue>;
   props: IVSelectProps;
   onChange?: (value: IVSelectModelValue) => void;
   onChangeModel?: (value: IVSelectModelValue) => void;
@@ -15,28 +15,30 @@ export function useSelect (options: IUseSelectOptions) {
 
   const optionInstances = ref<Array<IVOptionInstance>>([]);
 
+  const modelValue = computed<IVSelectModelValue>(() => toValue(options.modelValue));
+
   const hasValue = computed<boolean>(() => {
-    if (options.props.multiple && Array.isArray(options.modelValue.value)) {
-      return options.modelValue.value.length > 0;
+    if (options.props.multiple && Array.isArray(modelValue.value)) {
+      return modelValue.value.length > 0;
     }
 
-    return Boolean(options.modelValue.value);
+    return Boolean(modelValue.value);
   });
 
   const isDisabled = computed<boolean>(() => Boolean(options.props.disabled));
 
-  const activeValue = computed<IVOptionInstance | Array<IVOptionInstance> | undefined>(() => {
-    if (options.modelValue.value && options.props.multiple && Array.isArray(options.modelValue.value)) {
-      const arrayValue = options.modelValue.value;
+  const activeValue = computed<Maybe<IVOptionInstance | Array<IVOptionInstance>>>(() => {
+    if (modelValue.value && options.props.multiple && Array.isArray(modelValue.value)) {
+      const arrayValue: Array<IVOptionValue> = modelValue.value;
 
       return optionInstances.value.filter(option => arrayValue.includes(option.props.value));
     }
 
-    return optionInstances.value.find(option => option.props.value === options.modelValue.value);
+    return optionInstances.value.find(option => option.props.value === modelValue.value);
   });
 
   function handleClear () {
-    if (options.props.multiple && Array.isArray(options.modelValue.value)) {
+    if (options.props.multiple && Array.isArray(modelValue.value)) {
       options.onChangeModel?.([]);
       options.onChange?.([]);
 
@@ -53,8 +55,8 @@ export function useSelect (options: IUseSelectOptions) {
       return;
     }
 
-    if (options.props.multiple && Array.isArray(options.modelValue.value)) {
-      const values = new Set<IVOptionValue>([...options.modelValue.value]);
+    if (options.props.multiple && Array.isArray(modelValue.value)) {
+      const values: Set<IVOptionValue> = new Set<IVOptionValue>([...modelValue.value]);
 
       if (values.has(value)) {
         values.delete(value);
@@ -73,11 +75,11 @@ export function useSelect (options: IUseSelectOptions) {
   }
 
   function handleRemoveTag (value: IVOptionValue) {
-    if (!options.props.multiple || !Array.isArray(options.modelValue.value)) {
+    if (!options.props.multiple || !Array.isArray(modelValue.value)) {
       return;
     }
 
-    const newValue = options.modelValue.value.filter(val => val !== value);
+    const newValue: Array<IVOptionValue> = modelValue.value.filter(val => val !== value);
 
     options.onChangeModel?.(newValue);
     options.onChange?.(newValue);

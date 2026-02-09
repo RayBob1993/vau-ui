@@ -1,5 +1,5 @@
 import type { Maybe } from '@vau/core';
-import type { ModelRef, Ref } from 'vue';
+import type { ModelRef, Ref, VNode } from 'vue';
 
 export type IVTabValue = number | string;
 export type IVTabsModelValue = Maybe<IVTabValue>;
@@ -30,17 +30,17 @@ export interface IVTabProps {
   disabled?: boolean;
 }
 
+export interface IVTabScopedSlot {
+  isActive: boolean;
+}
+
 /**
  * Интерфейс слотов компонента VTab
  * @interface IVTabSlots
  */
 export interface IVTabSlots {
-  default?: (props: {
-    isActive: boolean;
-  }) => never;
-  title?: (props: {
-    isActive: boolean;
-  }) => never;
+  default?: (props: IVTabScopedSlot) => Array<VNode>;
+  title?: (props: IVTabScopedSlot) => Array<VNode>;
 }
 
 /**

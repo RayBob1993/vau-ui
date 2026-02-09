@@ -1,4 +1,4 @@
-import type { ComputedRef, Ref } from 'vue';
+import type { ComputedRef, Ref, VNode } from 'vue';
 import type { $ZodIssue } from 'zod/v4/core';
 
 /**
@@ -11,15 +11,14 @@ export interface IVFormItemProps {
   title?: string;
 }
 
+export interface IVFormItemScopedSlot {
+  validationStatus: IVFormItemValidationStatus;
+  isRequired: boolean;
+}
+
 export interface IVFormItemSlots {
-  default?: (props: {
-    validationStatus: IVFormItemValidationStatus;
-    isRequired: boolean;
-  }) => never;
-  label?: (props: {
-    validationStatus: IVFormItemValidationStatus;
-    isRequired: boolean;
-  }) => never;
+  default?: (props: IVFormItemScopedSlot) => Array<VNode>;
+  label?: (props: IVFormItemScopedSlot) => Array<VNode>;
 }
 
 export interface IVFormItemField {
