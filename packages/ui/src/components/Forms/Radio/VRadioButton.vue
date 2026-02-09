@@ -10,7 +10,7 @@
 
   const { isDisabled, isChecked } = useRadio({
     props,
-    modelValue
+    modelValue: () => modelValue.value
   });
 </script>
 

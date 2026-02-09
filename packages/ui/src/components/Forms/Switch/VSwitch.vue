@@ -4,6 +4,10 @@
 
   const props = defineProps<IVSwitchProps>();
 
+  const modelValue = defineModel<boolean>({
+    required: true,
+  });
+
   const { isDisabled } = useSwitch({
     props
   });
@@ -17,6 +21,7 @@
     }"
   >
     <input
+      v-model="modelValue"
       type="checkbox"
       :disabled="isDisabled"
       class="v-switch__native"

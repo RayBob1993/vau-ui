@@ -11,7 +11,9 @@
 
   const emit = defineEmits<IVToastEmits>();
 
-  const { isVisible, setVisible, startTimer, clearTimer } = useToast(props);
+  const { isVisible, setVisible, startTimer, clearTimer } = useToast({
+    props
+  });
 </script>
 
 <template>

@@ -10,7 +10,7 @@
 
   const { isDisabled, isChecked } = useCheckbox({
     props,
-    modelValue
+    modelValue: () => modelValue.value
   });
 </script>
 

@@ -1,7 +1,7 @@
 import type { IVAffixProps } from '../types';
 import { AFFIX_OFFSET_BOTTOM, AFFIX_OFFSET_TOP } from '../constants';
 import { Affix } from '../Affix';
-import { onBeforeUnmount, onMounted, shallowRef, type TemplateRef, toRef, watch } from 'vue';
+import { computed, onBeforeUnmount, onMounted, shallowRef, type TemplateRef, watch } from 'vue';
 import { isNumber } from '@vau/core';
 
 export interface IUseAffixOptions {
@@ -14,8 +14,8 @@ export function useAffix (options: IUseAffixOptions) {
   const container = shallowRef<HTMLElement>();
   const stickySidebar = shallowRef<Affix>();
 
-  const offsetTop = toRef(() => isNumber(options.props.offsetTop) ? options.props.offsetTop : AFFIX_OFFSET_TOP);
-  const offsetBottom = toRef(() => isNumber(options.props.offsetBottom) ? options.props.offsetBottom : AFFIX_OFFSET_BOTTOM);
+  const offsetTop = computed<number>(() => isNumber(options.props.offsetTop) ? options.props.offsetTop : AFFIX_OFFSET_TOP);
+  const offsetBottom = computed<number>(() => isNumber(options.props.offsetBottom) ? options.props.offsetBottom : AFFIX_OFFSET_BOTTOM);
 
   function setContainer () {
     if (options.props.container) {
