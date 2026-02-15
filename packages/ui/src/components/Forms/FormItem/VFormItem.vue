@@ -81,9 +81,9 @@
       {
         'v-form-item--disabled': isDisabled,
         'v-form-item--required': isRequired,
-        'v-form-item--validation-error': validationStatus.isError,
-        'v-form-item--validation-validating': validationStatus.isValidating,
-        'v-form-item--validation-success': validationStatus.isSuccess
+        'v-form-item--invalid': validationStatus.isError,
+        'v-form-item--validating': validationStatus.isValidating,
+        'v-form-item--valid': validationStatus.isSuccess
       }
     ]"
   >

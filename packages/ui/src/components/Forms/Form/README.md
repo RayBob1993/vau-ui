@@ -16,7 +16,9 @@
     VForm,
     VFormItem,
     VInput,
+    VRadioGroup,
     VRadio,
+    VCheckboxGroup,
     VCheckbox,
     VButton
   } from 'vau';
@@ -41,18 +43,34 @@
     policy: false
   });
 
-  const rules = ref<IVFormRules<FormModel>>({
-    name: z.string(),
-    gender: z.string(),
-    email: z.email(),
-    message: z.string()
-  });
+  const rules: IVFormRules<FormModel> = {
+    name: z.string().nonempty({
+      error: 'Поле обязательно для заполнения'
+    }),
+    gender: z.string().nonempty({
+      error: 'Поле обязательно для заполнения'
+    }),
+    email: z.email({
+      error: 'Не верный формат email адреса'
+    }),
+    message: z.string().nonempty({
+      error: 'Поле обязательно для заполнения'
+    }),
+    hobbies: z.array(z.string()).nonempty({
+      error: 'Поле обязательно для заполнения'
+    }),
+    policy: z.literal(true, {
+      error: 'Поле обязательно для выбора'
+    })
+  };
 
   function handleSubmit ({ isValid, reset }: IVFormSubmitEvent) {
     if (isValid) {
       console.log('Валидация прошла успешно');
 
       reset();
+    } else {
+      console.log('Валидация не прошла');
     }
   }
 </script>
@@ -148,10 +166,9 @@
     </v-form-item>
 
     <v-form-item name="policy">
-      <v-checkbox
-        v-model="model.policy"
-        label="Согласие на обработку данных"
-      />
+      <v-checkbox v-model="model.policy">
+        Согласие на обработку данных
+      </v-checkbox>
     </v-form-item>
 
     <v-button 
