@@ -1,6 +1,5 @@
 import type { ModelRef, VNode } from 'vue';
 import type { IVFormItemInstance } from '../FormItem';
-import type { ISizeProp, IThemeProp } from '../../../types';
 import type { z } from 'zod';
 
 export type IVFormModelValues = any;
@@ -33,7 +32,7 @@ export type IVFormProps = {
   disabled?: boolean;
   scrollToError?: boolean;
   scrollIntoViewOptions?: ScrollIntoViewOptions;
-} & Partial<IThemeProp> & Partial<ISizeProp>;
+};
 
 export interface IVFormSubmitEvent {
   isValid: boolean;
