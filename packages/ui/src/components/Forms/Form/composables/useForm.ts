@@ -11,7 +11,7 @@ export interface IUseFormOptions {
 export function useForm (options: IUseFormOptions) {
   const { formItems, registerFormItem, unregisterFormItem } = useFormItems();
   const { validate, clearValidate, validatableFormItems } = useFormValidation({
-    formItems
+    formItems: () => formItems.value
   });
 
   const [isValid, setIsValid] = useToggle();

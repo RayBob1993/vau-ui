@@ -1,5 +1,5 @@
 import type { ISizeProp, IThemeProp } from '../../../types';
-import type { Maybe, MaybeNull, ValueOf } from '@vau/core';
+import type { Maybe, MaybeNull, ValueOf, UnscopedSlot } from '@vau/core';
 import type { TemplateRef } from 'vue';
 import { InputModes, InputNativeTypes, InputTypes } from '../../../constants';
 
@@ -29,6 +29,12 @@ export interface IVInputProps extends IVInputBaseProps {
   nativeType?: IVInputNativeType;
   inputMode?: IVInputMode;
   clearable?: boolean;
+}
+
+export interface IVInputSlots {
+  default?: UnscopedSlot;
+  before?: UnscopedSlot;
+  after?: UnscopedSlot;
 }
 
 export interface IVInputExpose {

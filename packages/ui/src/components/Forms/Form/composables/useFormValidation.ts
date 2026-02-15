@@ -1,13 +1,13 @@
 import type { IVFormValidationResult } from '../types';
 import type { IVFormItemInstance } from '../../FormItem';
-import { computed, type Ref } from 'vue';
+import { computed, toValue, type MaybeRefOrGetter } from 'vue';
 
-interface IUseFormValidationPayload {
-  formItems: Ref<Array<IVFormItemInstance>>;
+interface IUseFormValidationOptions {
+  formItems: MaybeRefOrGetter<Array<IVFormItemInstance>>;
 }
 
-export function useFormValidation ({ formItems }: IUseFormValidationPayload) {
-  const validatableFormItems = computed<Array<IVFormItemInstance>>(() => formItems.value.filter(formItem => formItem.isValidatable));
+export function useFormValidation (options: IUseFormValidationOptions) {
+  const validatableFormItems = computed<Array<IVFormItemInstance>>(() => toValue(options.formItems).filter(formItem => formItem.isValidatable));
 
   async function validate (silent = false): IVFormValidationResult {
     const validationPromises = await Promise.all(validatableFormItems.value.map(formItem => formItem.validate(silent)));
@@ -16,7 +16,7 @@ export function useFormValidation ({ formItems }: IUseFormValidationPayload) {
   }
 
   function clearValidate () {
-    formItems.value.forEach(formItem => formItem.clearValidate());
+    toValue(options.formItems).forEach(formItem => formItem.clearValidate());
   }
 
   return {

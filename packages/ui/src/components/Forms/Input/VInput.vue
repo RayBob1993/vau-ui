@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-  import type { IVInputExpose, IVInputModelValue, IVInputNative, IVInputProps } from './types';
+  import type { IVInputExpose, IVInputModelValue, IVInputNative, IVInputProps, IVInputSlots } from './types';
   import { useInput } from './composables';
   import { InputModes, InputNativeTypes, InputTypes } from '../../../constants';
   import { useTemplateRef } from 'vue';
@@ -9,6 +9,8 @@
     nativeType: InputNativeTypes.TEXT,
     inputMode: InputModes.TEXT
   });
+
+  defineSlots<IVInputSlots>();
 
   const modelValue = defineModel<IVInputModelValue>({
     required: true
@@ -42,25 +44,43 @@
       'v-input--valid': validationStatus?.isSuccess
     }"
   >
-    <input
-      v-if="!isTextarea"
-      ref="input"
-      v-model="modelValue"
-      :type="nativeType"
-      :inputmode="inputMode"
-      class="v-input__native"
-      :readonly="readonly"
-      :disabled="isDisabled"
-      :autocomplete="autocomplete"
-    >
+    <div class="v-input__body">
+      <div
+        v-if="$slots?.before"
+        class="v-input__body-content v-input__body-content--before"
+      >
+        <slot name="before"/>
+      </div>
 
-    <textarea
-      v-else
-      ref="input"
-      v-model="modelValue"
-      class="v-input__native"
-      :readonly="readonly"
-      :disabled="isDisabled"
-    />
+      <div class="v-input__body-control">
+        <input
+          v-if="!isTextarea"
+          ref="input"
+          v-model="modelValue"
+          :type="nativeType"
+          :inputmode="inputMode"
+          class="v-input__native"
+          :readonly="readonly"
+          :disabled="isDisabled"
+          :autocomplete="autocomplete"
+        >
+
+        <textarea
+          v-else
+          ref="input"
+          v-model="modelValue"
+          class="v-input__native"
+          :readonly="readonly"
+          :disabled="isDisabled"
+        />
+      </div>
+
+      <div
+        v-if="$slots?.after"
+        class="v-input__body-content v-input__body-content--after"
+      >
+        <slot name="after"/>
+      </div>
+    </div>
   </div>
 </template>

@@ -30,8 +30,7 @@ export type IVFormRules <T extends IVFormModel = IVFormModel> = Record<keyof T, 
 export type IVFormProps = {
   rules?: IVFormRules;
   disabled?: boolean;
-  scrollToError?: boolean;
-  scrollIntoViewOptions?: ScrollIntoViewOptions;
+  scrollToError?: boolean | ScrollIntoViewOptions;
 };
 
 export interface IVFormSubmitEvent {

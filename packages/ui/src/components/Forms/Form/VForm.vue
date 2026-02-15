@@ -4,11 +4,7 @@
   import { VFormContextKey } from './context';
   import { provide } from 'vue';
 
-  const props = withDefaults(defineProps<IVFormProps>(), {
-    scrollIntoViewOptions: () => ({
-      block: 'center'
-    })
-  });
+  const props = defineProps<IVFormProps>();
 
   const emit = defineEmits<IVFormEmits>();
 
