@@ -38,8 +38,8 @@
       'v-input--textarea': isTextarea,
       'v-input--focus': isFocus,
       'v-input--disabled': isDisabled,
-      'v-input--validation-error': validationStatus?.isError,
-      'v-input--validation-success': validationStatus?.isSuccess
+      'v-input--invalid': validationStatus?.isError,
+      'v-input--valid': validationStatus?.isSuccess
     }"
   >
     <input

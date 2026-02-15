@@ -9,7 +9,7 @@ export interface IUseCheckbox {
 }
 
 export function useCheckbox (options: IUseCheckbox) {
-  const { isFormDisabled } = useFormProvider();
+  const { isFormDisabled, validationStatus } = useFormProvider();
 
   const modelValue = computed<IVCheckboxModelValue>(() => toValue(options.modelValue));
   const isDisabled = computed<boolean>(() => Boolean(options.props.disabled) || isFormDisabled.value);
@@ -28,6 +28,7 @@ export function useCheckbox (options: IUseCheckbox) {
 
   return {
     isDisabled,
-    isChecked
+    isChecked,
+    validationStatus
   };
 }

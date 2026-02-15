@@ -4,7 +4,7 @@
 
   const props = defineProps<IVInputFileProps>();
 
-  const { isDisabled } = useInputFile({
+  const { isDisabled, validationStatus } = useInputFile({
     props
   });
 </script>
@@ -13,11 +13,12 @@
   <div
     class="v-input-file"
     :class="{
-      'v-input-file--disabled': isDisabled
+      'v-input-file--disabled': isDisabled,
+      'v-input-file--invalid': validationStatus?.isError,
+      'v-input-file--valid': validationStatus?.isSuccess
     }"
   >
     <input
-      ref="input"
       class="v-input-file__native"
       type="file"
       :disabled="isDisabled"

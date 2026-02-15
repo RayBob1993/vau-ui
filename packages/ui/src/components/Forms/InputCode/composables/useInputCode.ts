@@ -7,11 +7,12 @@ export interface IUseInputCode {
 }
 
 export function useInputCode (options: IUseInputCode) {
-  const { isFormDisabled } = useFormProvider();
+  const { isFormDisabled, validationStatus } = useFormProvider();
 
   const isDisabled = computed<boolean>(() => Boolean(options.props.disabled) || isFormDisabled.value);
 
   return {
-    isDisabled
+    isDisabled,
+    validationStatus
   };
 }

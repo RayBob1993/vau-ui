@@ -3,7 +3,8 @@
   import { VSelectContextKey } from './context';
   import { useSelect } from './composables';
   import { VScrollbar } from '../../Scrollbar';
-  import { provide, watch } from 'vue';
+  import { computed, provide, watch } from 'vue';
+  import { type Booleanish, booleanToBooleanish } from "@vau/core";
 
   const props = defineProps<IVSelectProps>();
   const emit = defineEmits<IVSelectEmits>();
@@ -18,6 +19,7 @@
     hasValue,
     isDisabled,
     activeValue,
+    validationStatus,
     handleRemoveTag,
     handleClear,
     handleChange,
@@ -36,6 +38,8 @@
       emit('clear');
     },
   });
+
+  const ariaExpanded = computed<Booleanish>(() => booleanToBooleanish(isOpen.value));
 
   function handleAfterEnter (payload: Element) {
     emit('opened', payload);
@@ -70,11 +74,13 @@
     :class="{
       'v-select--open': isOpen,
       'v-select--disabled': isDisabled,
-      'v-select--multiple': multiple
+      'v-select--multiple': multiple,
+      'v-select--invalid': validationStatus?.isError,
+      'v-select--valid': validationStatus?.isSuccess
     }"
     tabindex="0"
     role="combobox"
-    :aria-expanded="isOpen"
+    :aria-expanded="ariaExpanded"
     :aria-disabled="isDisabled"
     aria-haspopup="listbox"
   >

@@ -1,12 +1,13 @@
-import type { IVSwitchProps } from '../types';
+import type { IVRatingModelValue, IVRatingProps } from '../types';
 import { useFormProvider } from '../../../../composables';
-import { computed } from 'vue';
+import { computed, type MaybeRefOrGetter } from 'vue';
 
-export interface IUseSwitch {
-  props: IVSwitchProps;
+export interface IUseRangeOptions {
+  modelValue: MaybeRefOrGetter<IVRatingModelValue>;
+  props: IVRatingProps;
 }
 
-export function useSwitch (options: IUseSwitch) {
+export function useRange (options: IUseRangeOptions) {
   const { isFormDisabled, validationStatus } = useFormProvider();
 
   const isDisabled = computed<boolean>(() => Boolean(options.props.disabled) || isFormDisabled.value);

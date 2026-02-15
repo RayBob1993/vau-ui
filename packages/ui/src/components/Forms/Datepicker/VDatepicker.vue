@@ -4,14 +4,18 @@
 
   const props = defineProps<IVDatepickerProps>();
 
-  const { isDisabled } = useDatepicker(props);
+  const { isDisabled, validationStatus } = useDatepicker({
+    props
+  });
 </script>
 
 <template>
   <div
     class="v-datepicker"
     :class="{
-      'v-datepicker-disabled': isDisabled
+      'v-datepicker--disabled': isDisabled,
+      'v-datepicker--invalid': validationStatus?.isError,
+      'v-datepicker--valid': validationStatus?.isSuccess
     }"
   />
 </template>

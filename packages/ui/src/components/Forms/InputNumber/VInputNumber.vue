@@ -17,6 +17,7 @@
     isDisabled,
     isDecrementDisabled,
     isIncrementDisabled,
+    validationStatus,
     handleDecrement,
     handleIncrement
   } = useInputNumber({
@@ -41,7 +42,9 @@
   <div
     class="v-input-number"
     :class="{
-      [`v-input-number--direction-${direction}`]: direction
+      [`v-input-number--direction-${direction}`]: direction,
+      'v-input-number--invalid': validationStatus?.isError,
+      'v-input-number--valid': validationStatus?.isSuccess
     }"
   >
     <button

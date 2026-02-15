@@ -3,7 +3,7 @@ import type { IVFormItemInstance } from '../FormItem';
 import type { ISizeProp, IThemeProp } from '../../../types';
 import type { z } from 'zod';
 
-export type IVFormModelValues = unknown;
+export type IVFormModelValues = any;
 
 export type IVFormModel = Record<string, IVFormModelValues>;
 

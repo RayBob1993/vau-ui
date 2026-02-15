@@ -1,7 +1,8 @@
 <script setup lang="ts">
   import type { IVRatingProps, IVRatingSlots, IVRatingModelValue } from './types';
+  import { useRange } from './composables';
 
-  withDefaults(defineProps<IVRatingProps>(), {
+  const props = withDefaults(defineProps<IVRatingProps>(), {
     stars: 5,
     step: 1
   });
@@ -11,14 +12,21 @@
   const modelValue = defineModel<IVRatingModelValue>({
     required: true
   });
+
+  const { isDisabled, validationStatus } = useRange({
+    modelValue: () => modelValue.value,
+    props
+  })
 </script>
 
 <template>
   <div
     class="v-rating"
     :class="{
-      'v-rating--disabled': disabled,
-      'v-rating--readonly': readonly
+      'v-rating--disabled': isDisabled,
+      'v-rating--readonly': readonly,
+      'v-rating--invalid': validationStatus?.isError,
+      'v-rating--valid': validationStatus?.isSuccess
     }"
   >
     <div

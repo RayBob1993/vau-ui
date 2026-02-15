@@ -11,4 +11,5 @@ export * from './clone';
 export * from './delay';
 export * from './pick';
 export * from './omit';
+export * from './booleanToBooleanish';
 export * from './decorators';

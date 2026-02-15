@@ -8,7 +8,7 @@
     required: true
   });
 
-  const { isDisabled, isChecked } = useCheckbox({
+  const { isDisabled, isChecked, validationStatus } = useCheckbox({
     props,
     modelValue: () => modelValue.value
   });
@@ -19,7 +19,9 @@
     class="v-checkbox"
     :class="{
       'v-checkbox--disabled': isDisabled,
-      'v-checkbox--active': isChecked
+      'v-checkbox--active': isChecked,
+      'v-checkbox--invalid': validationStatus?.isError,
+      'v-checkbox--valid': validationStatus?.isSuccess
     }"
   >
     <input

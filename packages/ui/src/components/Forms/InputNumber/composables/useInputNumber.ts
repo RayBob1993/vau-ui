@@ -12,7 +12,7 @@ export interface IUseInputNumber {
 }
 
 export function useInputNumber (options: IUseInputNumber) {
-  const { isFormDisabled } = useFormProvider();
+  const { isFormDisabled, validationStatus } = useFormProvider();
 
   const modelValue = computed<IVInputNumberModelValue>(() => toValue(options.modelValue));
   const step = computed<number>(() => options.props?.step || INPUT_NUMBER_STEP);
@@ -55,6 +55,7 @@ export function useInputNumber (options: IUseInputNumber) {
     isDisabled,
     isDecrementDisabled,
     isIncrementDisabled,
+    validationStatus,
     handleDecrement,
     handleIncrement
   };

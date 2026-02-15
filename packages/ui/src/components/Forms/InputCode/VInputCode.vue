@@ -4,7 +4,7 @@
 
   const props = defineProps<IVInputCodeProps>();
 
-  const { isDisabled } = useInputCode({
+  const { isDisabled, validationStatus } = useInputCode({
     props
   });
 </script>
@@ -13,7 +13,9 @@
   <fieldset
     class="v-input-code"
     :class="{
-      'v-input-code--disabled': isDisabled
+      'v-input-code--disabled': isDisabled,
+      'v-input-code--invalid': validationStatus?.isError,
+      'v-input-code--valid': validationStatus?.isSuccess
     }"
   >
     <input

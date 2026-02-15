@@ -29,9 +29,11 @@
     modelValue: () => modelValue.value,
   });
 
-  function handleSubmit () {
+  async function handleSubmit () {
+    const isValid = await validate();
+
     emit('submit', {
-      isValid: isValid.value,
+      isValid,
       reset
     });
   }

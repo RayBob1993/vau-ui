@@ -8,7 +8,7 @@
     required: true
   });
 
-  const { isDisabled, isChecked } = useRadio({
+  const { isDisabled, isChecked, validationStatus } = useRadio({
     props,
     modelValue: () => modelValue.value
   });
@@ -19,7 +19,9 @@
     class="v-radio"
     :class="{
       'v-radio--active': isChecked,
-      'v-radio--disabled': isDisabled
+      'v-radio--disabled': isDisabled,
+      'v-radio--invalid': validationStatus?.isError,
+      'v-radio--valid': validationStatus?.isSuccess
     }"
   >
     <input

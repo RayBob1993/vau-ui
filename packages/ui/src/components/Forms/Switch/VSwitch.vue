@@ -8,7 +8,7 @@
     required: true,
   });
 
-  const { isDisabled } = useSwitch({
+  const { isDisabled, validationStatus } = useSwitch({
     props
   });
 </script>
@@ -17,7 +17,9 @@
   <div
     class="v-switch"
     :class="{
-      'v-switch--disabled': isDisabled
+      'v-switch--disabled': isDisabled,
+      'v-switch--invalid': validationStatus?.isError,
+      'v-switch--valid': validationStatus?.isSuccess
     }"
   >
     <input

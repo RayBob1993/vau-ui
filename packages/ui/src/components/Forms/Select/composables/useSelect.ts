@@ -1,5 +1,6 @@
 import type { IVOptionInstance, IVSelectProps, IVSelectModelValue, IVOptionValue } from '../types';
 import { type Maybe, useToggle } from '@vau/core';
+import { useFormProvider } from '../../../../composables';
 import { computed, type MaybeRefOrGetter, ref, toValue } from 'vue';
 
 export interface IUseSelectOptions {
@@ -11,6 +12,7 @@ export interface IUseSelectOptions {
 }
 
 export function useSelect (options: IUseSelectOptions) {
+  const { isFormDisabled, validationStatus } = useFormProvider();
   const [isOpen, , toggleOpen] = useToggle();
 
   const optionInstances = ref<Array<IVOptionInstance>>([]);
@@ -25,7 +27,7 @@ export function useSelect (options: IUseSelectOptions) {
     return Boolean(modelValue.value);
   });
 
-  const isDisabled = computed<boolean>(() => Boolean(options.props.disabled));
+  const isDisabled = computed<boolean>(() => Boolean(options.props.disabled) || isFormDisabled.value);
 
   const activeValue = computed<Maybe<IVOptionInstance | Array<IVOptionInstance>>>(() => {
     if (modelValue.value && options.props.multiple && Array.isArray(modelValue.value)) {
@@ -105,6 +107,7 @@ export function useSelect (options: IUseSelectOptions) {
     hasValue,
     isDisabled,
     activeValue,
+    validationStatus,
     handleClear,
     handleChange,
     handleRemoveTag,

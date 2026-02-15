@@ -1,6 +1,5 @@
 import type { Maybe } from '@vau/core';
-import type { IVFormItemValidationStatus } from '../components/Forms/FormItem/types';
-import { useFormContext, useFormItemContext } from '../components';
+import { useFormContext, useFormItemContext, type IVFormItemValidationStatus } from '../components';
 import { computed } from 'vue';
 
 export function useFormProvider () {

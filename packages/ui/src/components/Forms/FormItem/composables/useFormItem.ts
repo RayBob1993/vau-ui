@@ -25,15 +25,15 @@ export function useFormItem (options: IUseFormItem) {
   const isDisabled = computed<boolean>(() => Boolean(options.props.disabled || options.context?.props.disabled));
 
   const modelValue = computed<IVFormModelValues>(() => {
-    return options.props.prop && options.context?.modelValue.value && getProp(options.context.modelValue.value, options.props.prop);
+    return options.props.name && options.context?.modelValue.value && getProp(options.context.modelValue.value, options.props.name);
   });
 
   const rule = computed<MaybeNull<ZodType>>(() => {
-    if (!options.props.prop || !options.context?.props?.rules) {
+    if (!options.props.name || !options.context?.props?.rules) {
       return null;
     }
 
-    const ruleValue = getProp(options.context.props.rules, options.props.prop);
+    const ruleValue = getProp(options.context.props.rules, options.props.name);
 
     return ruleValue instanceof z.ZodType ? ruleValue : null;
   });
@@ -49,7 +49,7 @@ export function useFormItem (options: IUseFormItem) {
   });
 
   async function validate (silent = false): Promise<boolean> {
-    if (!options.props.prop) {
+    if (!options.props.name) {
       return false;
     }
 
@@ -62,13 +62,13 @@ export function useFormItem (options: IUseFormItem) {
     }
 
     const schema = z.object({
-      [options.props.prop]: toRaw(rule.value)
+      [options.props.name]: toRaw(rule.value)
     });
 
     validationStatus.value.isValidating = true;
 
     const result = await schema.safeParseAsync({
-      [options.props.prop]: toRaw(modelValue.value)
+      [options.props.name]: toRaw(modelValue.value)
     });
 
     validationStatus.value.isValidating = false;
@@ -97,7 +97,7 @@ export function useFormItem (options: IUseFormItem) {
   }
 
   function registerField (child: IVFormItemField) {
-    if (options.props.prop) {
+    if (options.props.name) {
       field.value = child;
     }
   }
@@ -107,7 +107,7 @@ export function useFormItem (options: IUseFormItem) {
   }
 
   function reset () {
-    if (!modelValue.value || !options.props.prop) {
+    if (!modelValue.value || !options.props.name) {
       return;
     }
 
