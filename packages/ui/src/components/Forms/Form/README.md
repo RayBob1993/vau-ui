@@ -139,18 +139,18 @@
           GO
         </v-checkbox>
 
-        <v-checkbox 
+        <v-checkbox
           v-model="model.hobbies"
           value="php"
         >
-          GO
+          PHP
         </v-checkbox>
 
-        <v-checkbox 
+        <v-checkbox
           v-model="model.hobbies"
           value="node.js"
         >
-          GO
+          Node.js
         </v-checkbox>
       </v-checkbox-group>
     </v-form-item>
