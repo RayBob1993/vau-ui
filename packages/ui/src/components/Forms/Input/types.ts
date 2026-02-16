@@ -18,6 +18,7 @@ export type IVInputBaseProps = {
   disabled?: boolean;
   readonly?: boolean;
   autocomplete?: string;
+  clearable?: boolean;
 } & Partial<IThemeProp> & Partial<ISizeProp>;
 
 /**

@@ -49,7 +49,8 @@ import {
   FlexPlugin,
   TablePlugin,
   InputGroupPlugin,
-  CountdownPlugin
+  CountdownPlugin,
+  CalendarPlugin,
 } from '../components';
 import {
   VisiblePlugin,
@@ -111,6 +112,7 @@ export const VauUI: Plugin = {
     app.use(TablePlugin);
     app.use(InputGroupPlugin);
     app.use(CountdownPlugin);
+    app.use(CalendarPlugin);
 
     // Directives
     app.use(VisiblePlugin);

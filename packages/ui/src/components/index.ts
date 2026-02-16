@@ -28,3 +28,4 @@ export * from './Flex';
 export * from './Table';
 export * from './InputGroup';
 export * from './Countdown';
+export * from './Calendar';
