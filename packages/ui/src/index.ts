@@ -5,3 +5,4 @@ export * from './directives';
 export * from './plugins';
 export * from './services';
 export * from './locale';
+export * from './utils';

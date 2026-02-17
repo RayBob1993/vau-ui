@@ -1,16 +1,16 @@
-<script lang="ts" setup>
+<script lang="ts" setup generic="MODEL extends IVFormModel">
   import type { IVFormEmits, IVFormExpose, IVFormModel, IVFormProps, IVFormSlots } from './types';
   import { useForm } from './composables';
   import { VFormContextKey } from './context';
   import { provide } from 'vue';
 
-  const props = defineProps<IVFormProps>();
+  const props = defineProps<IVFormProps<MODEL>>();
 
   const emit = defineEmits<IVFormEmits>();
 
   defineSlots<IVFormSlots>();
 
-  const modelValue = defineModel<IVFormModel>({
+  const modelValue = defineModel<MODEL>({
     required: true
   });
 
@@ -21,7 +21,7 @@
     validate,
     clearValidate,
     reset
-  } = useForm({
+  } = useForm<MODEL>({
     modelValue: () => modelValue.value,
   });
 

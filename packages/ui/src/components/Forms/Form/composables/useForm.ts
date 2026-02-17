@@ -4,11 +4,11 @@ import { useFormValidation } from './useFormValidation';
 import { type MaybeRefOrGetter, toValue, watch } from 'vue';
 import { useToggle } from '@vau/core';
 
-export interface IUseFormOptions {
-  modelValue: MaybeRefOrGetter<IVFormModel>;
+export interface IUseFormOptions <MODEL extends IVFormModel> {
+  modelValue: MaybeRefOrGetter<MODEL>;
 }
 
-export function useForm (options: IUseFormOptions) {
+export function useForm <MODEL extends IVFormModel> (options: IUseFormOptions<MODEL>) {
   const { formItems, registerFormItem, unregisterFormItem } = useFormItems();
   const { validate, clearValidate, validatableFormItems } = useFormValidation({
     formItems: () => formItems.value

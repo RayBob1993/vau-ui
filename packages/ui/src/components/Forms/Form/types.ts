@@ -1,8 +1,8 @@
 import type { ModelRef, VNode } from 'vue';
 import type { IVFormItemInstance } from '../FormItem';
-import type { z } from 'zod';
+import type { ZodType } from 'zod';
 
-export type IVFormModelValues = any;
+export type IVFormModelValues = unknown;
 
 export type IVFormModel = Record<string, IVFormModelValues>;
 
@@ -21,14 +21,16 @@ export type IVFormModel = Record<string, IVFormModelValues>;
  *   password: z.string().min(6)
  * };
  */
-export type IVFormRules <T extends IVFormModel = IVFormModel> = Record<keyof T, z.ZodTypeAny>;
+export type IVFormRules <MODEL> = {
+  [K in keyof MODEL]: ZodType<MODEL[K], MODEL[K]>;
+};
 
 /**
  * Интерфейс свойств компонента VForm
  * @interface IVFormProps
  */
-export type IVFormProps = {
-  rules?: IVFormRules;
+export type IVFormProps<MODEL> = {
+  rules?: IVFormRules<MODEL>;
   disabled?: boolean;
   scrollToError?: boolean | ScrollIntoViewOptions;
 };
@@ -63,7 +65,7 @@ export type IVFormValidationResult = Promise<boolean>;
  * @interface IVFormContext
  */
 export interface IVFormContext {
-  props: IVFormProps;
+  props: IVFormProps<IVFormModel>;
   modelValue: ModelRef<IVFormModel>;
   registerFormItem: (formItem: IVFormItemInstance) => void;
   unregisterFormItem: (id: string) => void;
