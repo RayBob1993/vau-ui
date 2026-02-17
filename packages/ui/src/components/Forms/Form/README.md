@@ -15,7 +15,8 @@
     VRadio,
     VCheckboxGroup,
     VCheckbox,
-    VButton
+    VButton,
+    defineFormRules
   } from 'vau';
   import { ref } from 'vue';
   import { z } from 'zod';
@@ -38,7 +39,7 @@
     policy: false
   });
 
-  const rules: IVFormRules<FormModel> = {
+  const rules = defineFormRules<FormModel>({
     name: z.string().nonempty({
       error: 'Поле обязательно для заполнения'
     }),
@@ -57,7 +58,7 @@
     policy: z.literal(true, {
       error: 'Поле обязательно для выбора'
     })
-  };
+  });
 
   function handleSubmit ({ isValid, reset }: IVFormSubmitEvent) {
     if (isValid) {
