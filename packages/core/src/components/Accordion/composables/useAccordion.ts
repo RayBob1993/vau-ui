@@ -1,16 +1,16 @@
-import type { IVAccordionModelValue, IVAccordionProps, IVAccordionValue } from '../types';
-import type { Maybe } from '@vau/core';
+import type { AccordionModelValue, AccordionProps, AccordionValue } from '../types';
+import type { Maybe } from '../../../types';
 import { type MaybeRefOrGetter, toValue } from 'vue';
 
 export interface IUseAccordionOptions {
-  props: IVAccordionProps;
-  modelValue: MaybeRefOrGetter<IVAccordionModelValue>;
-  onChange?: (payload: Maybe<IVAccordionValue>) => void;
-  onChangeModel?: (payload: IVAccordionModelValue) => void;
+  props: AccordionProps;
+  modelValue: MaybeRefOrGetter<AccordionModelValue>;
+  onChange?: (payload: Maybe<AccordionValue>) => void;
+  onChangeModel?: (payload: AccordionModelValue) => void;
 }
 
 export function useAccordion (options: IUseAccordionOptions) {
-  function handleChange (value: Maybe<IVAccordionValue>) {
+  function handleChange (value: Maybe<AccordionValue>) {
     const modelValue = toValue(options.modelValue);
 
     if (options.props.multiple && Array.isArray(modelValue)) {

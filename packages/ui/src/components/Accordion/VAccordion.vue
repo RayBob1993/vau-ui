@@ -1,40 +1,20 @@
 <script setup lang="ts">
-  import type { IVAccordionProps, IVAccordionEmits, IVAccordionModelValue } from './types';
-  import { VAccordionContextKey } from './context';
-  import { useAccordion } from './composables';
-  import { provide } from 'vue';
+  import { Accordion, type AccordionProps, type AccordionEmits, type AccordionModelValue } from '@vau/core';
 
-  const props = defineProps<IVAccordionProps>();
-  const emit = defineEmits<IVAccordionEmits>();
+  const props = defineProps<AccordionProps>();
+  const emit = defineEmits<AccordionEmits>();
 
-  const modelValue = defineModel<IVAccordionModelValue>({
+  const modelValue = defineModel<AccordionModelValue>({
     required: true,
-  });
-
-  const { handleChange } = useAccordion({
-    props,
-    modelValue: () => modelValue.value,
-    onChange: value => emit('change', value),
-    onChangeModel: value => {
-      modelValue.value = value;
-    }
-  });
-
-  provide(VAccordionContextKey, {
-    props,
-    modelValue,
-    handleChange
   });
 </script>
 
 <template>
-  <div
-    class="v-accordion"
-    :class="{
-      [`v-accordion--size-${size}`]: size,
-      [`v-accordion--theme-${theme}`]: theme
-    }"
+  <Accordion.Root
+    v-bind="props"
+    v-model="modelValue"
+    v-on="emit"
   >
     <slot/>
-  </div>
+  </Accordion.Root>
 </template>

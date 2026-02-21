@@ -1,56 +1,9 @@
-import type { ModelRef } from 'vue';
-import type { Maybe, MaybeArray, MaybeNull, UnscopedSlot } from '@vau/core';
-import type { ISizeProp, IThemeProp } from '../../types';
+import type { AccordionItemProps, AccordionItemSlots, UnscopedSlot } from '@vau/core';
 
-export type IVAccordionValue = string | number;
-export type IVAccordionModelValue = Maybe<MaybeNull<MaybeArray<IVAccordionValue>>>;
-
-/**
- * Интерфейс свойств компонента VAccordion
- * @interface IVAccordionProps
- */
-export type IVAccordionProps = {
-  multiple?: boolean;
-} & Partial<ISizeProp> & Partial<IThemeProp>;
-
-/**
- * Интерфейс событий компонента VAccordion
- * @interface IVAccordionEmits
- */
-export interface IVAccordionEmits {
-  change: [payload: Maybe<IVAccordionValue>];
-}
-
-/**
- * Интерфейс событий компонента VAccordionItem
- * @interface IVAccordionItemProps
- */
-export type IVAccordionItemProps = {
-  value: IVAccordionValue;
+export interface VAccordionItemProps extends AccordionItemProps {
   title?: string;
-  disabled?: boolean;
-} & Partial<ISizeProp> & Partial<IThemeProp>;
-
-/**
- * Интерфейс слотов компонента VAccordionItem
- * @interface IVAccordionItemSlots
- */
-export interface IVAccordionItemSlots {
-  default?: UnscopedSlot;
-  icon?: (props: {
-    isActive: boolean
-  }) => void;
-  header?: (props: {
-    isActive: boolean
-  }) => void;
 }
 
-/**
- * Интерфейс контекста компонента VAccordion
- * @interface IVAccordionContext
- */
-export interface IVAccordionContext {
-  props: IVAccordionProps
-  modelValue: ModelRef<IVAccordionModelValue>;
-  handleChange: (value: Maybe<IVAccordionValue>) => void;
+export interface VAccordionItemSlots extends AccordionItemSlots {
+  title?: UnscopedSlot;
 }
