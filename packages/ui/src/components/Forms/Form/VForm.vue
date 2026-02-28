@@ -1,61 +1,30 @@
-<script lang="ts" setup generic="MODEL extends IVFormModel">
-  import type { IVFormEmits, IVFormExpose, IVFormModel, IVFormProps, IVFormSlots } from './types';
-  import { useForm } from './composables';
-  import { VFormContextKey } from './context';
-  import { provide } from 'vue';
+<script lang="ts" setup generic="MODEL extends FormModel">
+  import {
+    type FormEmits,
+    type FormModel,
+    type FormProps,
+    type FormSlots,
+    Form
+  } from '@vau/core';
 
-  const props = defineProps<IVFormProps<MODEL>>();
+  const props = defineProps<FormProps<MODEL>>();
 
-  const emit = defineEmits<IVFormEmits>();
+  const emit = defineEmits<FormEmits>();
 
-  defineSlots<IVFormSlots>();
+  defineSlots<FormSlots>();
 
   const modelValue = defineModel<MODEL>({
     required: true
   });
-
-  const {
-    isValid,
-    registerFormItem,
-    unregisterFormItem,
-    validate,
-    clearValidate,
-    reset
-  } = useForm<MODEL>({
-    modelValue: () => modelValue.value,
-  });
-
-  async function handleSubmit () {
-    const isValid = await validate();
-
-    emit('submit', {
-      isValid,
-      reset
-    });
-  }
-
-  defineExpose<IVFormExpose>({
-    validate,
-    clearValidate,
-    reset
-  });
-
-  provide(VFormContextKey, {
-    props,
-    modelValue,
-    registerFormItem,
-    unregisterFormItem
-  });
 </script>
 
 <template>
-  <form
-    class="v-form"
-    :class="{
-      'v-form--disabled': disabled
-    }"
-    @submit.prevent="handleSubmit"
+  <Form.Root
+    v-slot="scope"
+    v-model="modelValue"
+    v-bind="props"
+    v-on="emit"
   >
-    <slot :is-valid="isValid"/>
-  </form>
+    <slot v-bind="scope"/>
+  </Form.Root>
 </template>

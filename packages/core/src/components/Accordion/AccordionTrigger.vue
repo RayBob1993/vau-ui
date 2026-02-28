@@ -1,8 +1,8 @@
 <script setup lang="ts">
-  import { useAccordionContext, useAccordionItemContext } from './context';
+  import { useAccordionRootContext, useAccordionItemContext } from './context';
   import { computed } from 'vue';
 
-  const Accordion = useAccordionContext();
+  const Accordion = useAccordionRootContext();
   const AccordionItem = useAccordionItemContext();
 
   const isDisabled = computed<boolean>(() => Boolean(AccordionItem?.props.disabled));

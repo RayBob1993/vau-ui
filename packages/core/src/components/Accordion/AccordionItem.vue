@@ -1,6 +1,6 @@
 <script setup lang="ts">
   import type { AccordionItemProps, AccordionItemSlots } from './types';
-  import { AccordionItemContextKey, useAccordionContext } from './context';
+  import { AccordionItemContextKey, useAccordionRootContext } from './context';
   import { useAccordionItem } from './composables';
   import { provide } from 'vue';
 
@@ -8,11 +8,11 @@
 
   defineSlots<AccordionItemSlots>();
 
-  const Accordion = useAccordionContext();
+  const Accordion = useAccordionRootContext();
 
   const { isActive } = useAccordionItem({
     context: Accordion,
-    props
+    props: () => props
   });
 
   provide(AccordionItemContextKey, {
@@ -25,7 +25,7 @@
   <div
     class="accordion-item"
     :class="{
-      'accordion-item--active': isActive,
+      'accordion-item--open': isActive,
       'accordion-item--disabled': disabled
     }"
   >

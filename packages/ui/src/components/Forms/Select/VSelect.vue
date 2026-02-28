@@ -4,7 +4,7 @@
   import { useSelect } from './composables';
   import { VScrollbar } from '../../Scrollbar';
   import { computed, provide, watch } from 'vue';
-  import { type Booleanish, booleanToBooleanish } from "@vau/core";
+  import { type Booleanish, booleanToBooleanish } from '@vau/core';
 
   const props = defineProps<IVSelectProps>();
   const emit = defineEmits<IVSelectEmits>();

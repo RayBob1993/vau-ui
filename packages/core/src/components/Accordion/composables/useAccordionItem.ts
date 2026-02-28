@@ -1,19 +1,21 @@
 import type { AccordionItemProps, AccordionModelValue, AccordionContext } from '../types';
 import type { MaybeNull } from '@vau/core';
-import { computed } from 'vue';
+import { computed, toValue, type MaybeRefOrGetter } from 'vue';
 
 export interface IUseAccordionItem {
   context: MaybeNull<AccordionContext>;
-  props: AccordionItemProps;
+  props: MaybeRefOrGetter<AccordionItemProps>;
 }
 
 export function useAccordionItem (options: IUseAccordionItem) {
+  const props = computed(() => toValue(options.props));
+
   const modelValue = computed<AccordionModelValue>(() => options.context?.modelValue.value);
 
   const isActive = computed<boolean>(() => {
     return Boolean(options.context?.props.multiple) && Array.isArray(modelValue.value)
-      ? modelValue.value.includes(options.props.value)
-      : modelValue.value === options.props.value;
+      ? modelValue.value.includes(props.value.value)
+      : modelValue.value === props.value.value;
   });
 
   return {

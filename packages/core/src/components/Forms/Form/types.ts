@@ -1,0 +1,108 @@
+import type { ZodType } from 'zod';
+import type { ComputedRef, ModelRef, Ref, VNode } from 'vue';
+import type { $ZodIssue } from 'zod/v4/core';
+
+export type FormModelValues = unknown;
+
+export type FormModel = Record<string, FormModelValues>;
+
+export type FormRules <MODEL> = {
+  [K in keyof MODEL]: ZodType<MODEL[K], MODEL[K]>;
+};
+
+export interface FormProps<MODEL> {
+  rules?: FormRules<MODEL>;
+  disabled?: boolean;
+  scrollToError?: boolean | ScrollIntoViewOptions;
+}
+
+export interface FormSubmitEvent {
+  isValid: boolean;
+  reset: VoidFunction;
+}
+
+export interface FormItemEmits {
+  valid: [];
+  invalid: [];
+}
+
+export interface FormEmits extends FormItemEmits {
+  submit: [payload: FormSubmitEvent];
+}
+
+export interface FormSlots {
+  default?: (props: {
+    isValid: boolean;
+  }) => Array<VNode>;
+}
+
+export type FormValidationResult = Promise<boolean>;
+
+export interface FormInstance {
+  validate: (silent?: boolean) => FormValidationResult;
+  clearValidate: VoidFunction;
+  reset: VoidFunction;
+}
+
+export type FormItemError = $ZodIssue;
+
+export interface FormItemProps {
+  disabled?: boolean;
+  name?: string;
+}
+
+export interface FormItemScopedSlot {
+  validationStatus: FormItemValidationStatus;
+  isRequired: boolean;
+  errors: Array<FormItemError>;
+}
+
+export interface FormItemSlots {
+  default?: (props: FormItemScopedSlot) => Array<VNode>;
+  header?: (props: FormItemScopedSlot) => Array<VNode>;
+  footer?: (props: FormItemScopedSlot) => Array<VNode>;
+}
+
+export interface FormItemField {
+  reset: VoidFunction;
+}
+
+export interface FormItemContext {
+  props: FormItemProps;
+  validationStatus: Ref<FormItemValidationStatus>;
+  validationErrors: Ref<Array<FormItemError>>;
+  registerField: (field: FormItemField) => void;
+  unregisterField: VoidFunction;
+  isRequired: ComputedRef<boolean>;
+  validate: (silent?: boolean) => Promise<boolean>;
+  clearValidateErrors: VoidFunction;
+  reset: VoidFunction;
+}
+
+export interface FormItemValidationStatus {
+  isError: boolean;
+  isValidating: boolean;
+  isSuccess: boolean;
+}
+
+export interface FormItemInstance {
+  id: string;
+  isValidatable: boolean;
+  isRequired: boolean;
+  props: FormItemProps;
+  validate: (silent?: boolean) => Promise<boolean>;
+  validationStatus: FormItemValidationStatus;
+  clearValidateErrors: VoidFunction;
+  reset: VoidFunction;
+}
+
+export interface FormContext {
+  props: FormProps<FormModel>;
+  modelValue: ModelRef<FormModel>;
+  registerFormItem: (formItem: FormItemInstance) => void;
+  unregisterFormItem: (id: string) => void;
+}
+
+export type FormItemExpose = Pick<FormItemInstance, 'validate' | 'clearValidateErrors' | 'reset'>;
+
+export type FormExpose = FormInstance;

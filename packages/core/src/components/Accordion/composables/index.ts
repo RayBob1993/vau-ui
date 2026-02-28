@@ -1,2 +1,2 @@
-export * from './useAccordion';
+export * from './useAccordionRoot.ts';
 export * from './useAccordionItem';
