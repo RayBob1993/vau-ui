@@ -1,7 +1,7 @@
 import type { OptionInstance, OptionProps, OptionValue, SelectContext, SelectModelValue } from '../types';
 import type { MaybeNull } from '../../../../types';
 import { isSelectMultiple } from '../utils';
-import { computed, type MaybeRefOrGetter, onUnmounted, toValue, useId } from 'vue';
+import { computed, type MaybeRefOrGetter, onMounted, onUnmounted, toValue, useId } from 'vue';
 
 export interface IUseSelectOptionOptions {
   context: MaybeNull<SelectContext>;
@@ -37,10 +37,12 @@ export function useSelectOption (options: IUseSelectOptionOptions) {
     options.context?.handleChange(value);
   }
 
-  options.context?.registerOption(instance.value);
+  onMounted(() => {
+    options.context?.registerOption(instance.value);
+  });
 
   onUnmounted(() => {
-    options.context?.unregisterOption(instance.value.id);
+    options.context?.unregisterOption(id);
   });
 
   return {

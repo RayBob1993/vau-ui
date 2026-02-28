@@ -4,7 +4,7 @@ import { useFormField } from './useFormField';
 import { useFormItemValidation } from './useFormItemValidation';
 import { getProp } from '../../../../utils';
 import { z, type ZodType } from 'zod';
-import { computed, type MaybeRefOrGetter, onUnmounted, toValue, useId, watch } from 'vue';
+import { computed, type MaybeRefOrGetter, onMounted, onUnmounted, toValue, useId, watch } from 'vue';
 
 export interface IUseFormItem {
   context: MaybeNull<FormContext>;
@@ -105,7 +105,9 @@ export function useFormItem (options: IUseFormItem) {
     clearValidateErrors();
   }
 
-  options.context?.registerFormItem(instance.value);
+  onMounted(() => {
+    options.context?.registerFormItem(instance.value);
+  });
 
   onUnmounted(() => {
     options.context?.unregisterFormItem(id);
