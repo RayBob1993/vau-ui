@@ -250,6 +250,17 @@ export default defineConfigWithVueTs([
       'no-duplicate-imports': ['error', {
         includeExports: true
       }],
+      'no-restricted-imports': 'off',
+      '@typescript-eslint/no-restricted-imports': [
+        'error',
+        {
+          patterns: [
+            {
+              group: ['**/*.ts', '**/*.tsx'],
+            }
+          ]
+        }
+      ],
       'object-curly-spacing': ['error', 'always'],
       'space-before-function-paren': ['error', 'always'],
       'arrow-parens': ['error', 'as-needed'],
