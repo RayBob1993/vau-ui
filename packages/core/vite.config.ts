@@ -1,7 +1,7 @@
-import { resolve } from 'path';
 import { defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
 import dts from 'vite-plugin-dts';
+import { resolve } from 'path';
 
 export default defineConfig({
   resolve: {
@@ -13,8 +13,7 @@ export default defineConfig({
     vue(),
     dts({
       tsconfigPath: resolve(__dirname, 'tsconfig.json'),
-      rollupTypes: false,
-      skipDiagnostics: true
+      rollupTypes: false
     })
   ],
   build: {

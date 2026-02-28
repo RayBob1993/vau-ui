@@ -24,8 +24,8 @@
     "node": "22.17.1"
   },
   "peerDependencies": {
-    "vue": "3.5.29",
-    "zod": "4.3.6"
+    "vue": ">=3.5.28",
+    "zod": ">=4.3.6"
   },
   "dependencies": {
     "@vau/ui": "workspace:*",
