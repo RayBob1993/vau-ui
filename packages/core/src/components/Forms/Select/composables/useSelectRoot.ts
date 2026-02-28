@@ -1,6 +1,6 @@
 import type { SelectProps, SelectModelValue, OptionValue } from '../types';
 import type { MaybeNull } from '../../../../types';
-import type { FormContext, FormItemContext } from '../../Form';
+import type { FormRootContext, FormItemContext } from '../../Form';
 import { useSelectOptions } from './useSelectOptions';
 import { useActiveSelectOptions } from './useActiveSelectOptions';
 import { useToggle } from '../../../../composables';
@@ -8,7 +8,7 @@ import { isSelectMultiple } from '../utils';
 import { computed, type MaybeRefOrGetter, onUnmounted, toValue } from 'vue';
 
 export interface IUseSelectOptions {
-  formContext: MaybeNull<FormContext>;
+  formRootContext: MaybeNull<FormRootContext>;
   formItemContext: MaybeNull<FormItemContext>;
   modelValue: MaybeRefOrGetter<SelectModelValue>;
   props: MaybeRefOrGetter<SelectProps>;
@@ -41,7 +41,7 @@ export function useSelectRoot (options: IUseSelectOptions) {
 
   const isDisabled = computed<boolean>(() => {
     return Boolean(
-      options.formContext?.props.disabled ||
+      options.formRootContext?.props.disabled ||
       options.formItemContext?.props.disabled ||
       props.value?.disabled
     );

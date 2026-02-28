@@ -12,7 +12,7 @@
     required: true
   });
 
-  const { Root, Item, validationStatus } = useFormContext();
+  const { FormRootContext, FormItemContext, isValid, isInvalid } = useFormContext();
 
   const {
     activeOption,
@@ -25,8 +25,8 @@
     unregisterOption,
     handleChange
   } = useSelectRoot({
-    formContext: Root,
-    formItemContext: Item,
+    formRootContext: FormRootContext,
+    formItemContext: FormItemContext,
     modelValue: () => modelValue.value,
     props: () => props,
     onChangeModel: value => {
@@ -62,8 +62,8 @@
       'select--disabled': isDisabled,
       'select--open': isOpen,
       'select--filled': hasValue,
-      'select--invalid': validationStatus?.isError,
-      'select--valid': validationStatus?.isSuccess
+      'select--invalid': isInvalid,
+      'select--valid': isValid
     }"
   >
     <slot/>

@@ -1,5 +1,5 @@
 import type { InjectionKey } from 'vue';
-import type { AccordionContext, AccordionItemContext } from '../types';
+import type { AccordionRootContext, AccordionItemContext } from '../types';
 
-export const AccordionRootContextKey: InjectionKey<AccordionContext> = Symbol('AccordionRootContextKey');
+export const AccordionRootContextKey: InjectionKey<AccordionRootContext> = Symbol('AccordionRootContextKey');
 export const AccordionItemContextKey: InjectionKey<AccordionItemContext> = Symbol('AccordionItemContextKey');

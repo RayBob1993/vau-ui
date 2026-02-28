@@ -1,37 +1,37 @@
 <script setup lang="ts">
-  import { VAccordion, VAccordionItem } from '@vau/ui';
+  import { Input } from '@vau/core';
   import '@vau/theme-base';
   import { ref } from 'vue';
-  import type { AccordionModelValue } from '@vau/core';
 
-  const model = ref<AccordionModelValue>([]);
+  const model = ref();
 </script>
 
 <template>
-  <v-accordion
+  <Input.Root
     v-model="model"
-    multiple
+    placeholder="ывамывам"
   >
-    <v-accordion-item
-      v-slot="{ isActive }"
-      title="1"
-      value="1"
-    >
-      {{ isActive }}
-    </v-accordion-item>
+    <Input.Before/>
 
-    <v-accordion-item
-      title="2"
-      value="2"
-    >
-      sdfvsdsfv
-    </v-accordion-item>
+    <Input.Control>
+      <Input.Native/>
+    </Input.Control>
 
-    <v-accordion-item
-      title="3"
-      value="3"
-    >
-      sdfvsdsfv
-    </v-accordion-item>
-  </v-accordion>
+    <Input.After/>
+  </Input.Root>
+
+  <Input.Root
+    v-model="model"
+    placeholder="ывамывам"
+  >
+    <Input.Before/>
+
+    <Input.Control>
+      <Input.Textarea/>
+    </Input.Control>
+
+    <Input.After/>
+  </Input.Root>
+
+  {{ model }}
 </template>

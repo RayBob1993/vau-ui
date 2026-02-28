@@ -2,9 +2,9 @@
   import { useAccordionItemContext } from './context';
   import { computed, toValue } from 'vue';
 
-  const AccordionItem = useAccordionItemContext();
+  const ItemContext = useAccordionItemContext();
 
-  const isActive = computed<boolean>(() => Boolean(toValue(AccordionItem?.isActive)));
+  const isActive = computed<boolean>(() => Boolean(toValue(ItemContext?.isActive)));
 </script>
 
 <template>

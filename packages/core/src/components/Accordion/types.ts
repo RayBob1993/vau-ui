@@ -1,4 +1,4 @@
-import type { ComputedRef, ModelRef, VNode } from 'vue';
+import type { MaybeRefOrGetter, VNode } from 'vue';
 import type { Maybe, MaybeArray, MaybeNull, ISizeProp, IThemeProp } from '../../types';
 
 export type AccordionValue = string | number;
@@ -23,13 +23,13 @@ export interface AccordionItemSlots {
   }) => Array<VNode>;
 }
 
-export interface AccordionContext {
-  props: AccordionProps;
-  modelValue: ModelRef<AccordionModelValue>;
-  handleChange: (value: Maybe<AccordionValue>) => void;
+export interface AccordionRootContext {
+  props: MaybeRefOrGetter<AccordionProps>;
+  modelValue: MaybeRefOrGetter<AccordionModelValue>;
+  setModelValue: (value: Maybe<AccordionValue>) => void;
 }
 
 export interface AccordionItemContext {
-  props: AccordionItemProps;
-  isActive: ComputedRef<boolean>;
+  props: MaybeRefOrGetter<AccordionItemProps>;
+  isActive: MaybeRefOrGetter<boolean>;
 }

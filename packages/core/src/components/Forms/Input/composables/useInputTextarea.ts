@@ -1,19 +1,21 @@
-import type { InputContext, InputTextareaProps } from '../types';
-import type { MaybeNull } from '../../../../types';
-import { computed } from 'vue';
+import type { InputRootContext, InputProps, InputTextareaProps } from '../types';
+import type { Maybe, MaybeNull } from '../../../../types';
+import { computed, toValue } from 'vue';
 
 export interface IUseInputTextareaOptions {
-  context: MaybeNull<InputContext>;
+  inputRootContext: MaybeNull<InputRootContext>;
 }
 
 export function useInputTextarea (options: IUseInputTextareaOptions) {
+  const inputRootProps = computed<Maybe<InputProps>>(() => toValue(options.inputRootContext?.props));
+
   const props = computed<InputTextareaProps>(() => ({
-    disabled: Boolean(options.context?.isDisabled.value),
-    placeholder: options.context?.props.placeholder,
-    rows: options.context?.props.rows,
-    cols: options.context?.props.cols,
-    readonly: options.context?.props.readonly,
-    autocomplete: options.context?.props.autocomplete,
+    disabled: Boolean(toValue(options.inputRootContext?.isDisabled)),
+    placeholder: inputRootProps.value?.placeholder,
+    rows: inputRootProps.value?.rows,
+    cols: inputRootProps.value?.cols,
+    readonly: inputRootProps.value?.readonly,
+    autocomplete: inputRootProps.value?.autocomplete,
   }));
 
   return {

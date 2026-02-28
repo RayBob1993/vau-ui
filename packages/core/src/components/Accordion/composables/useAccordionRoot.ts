@@ -12,7 +12,7 @@ export interface IUseAccordionRootOptions {
 export function useAccordionRoot (options: IUseAccordionRootOptions) {
   const props = computed<AccordionProps>(() => toValue(options.props));
 
-  function handleChange (value: Maybe<AccordionValue>) {
+  function setModelValue (value: Maybe<AccordionValue>) {
     const modelValue = toValue(options.modelValue);
 
     if (props.value.multiple && Array.isArray(modelValue)) {
@@ -37,6 +37,6 @@ export function useAccordionRoot (options: IUseAccordionRootOptions) {
   }
 
   return {
-    handleChange
+    setModelValue
   };
 }

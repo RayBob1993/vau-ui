@@ -7,10 +7,10 @@
 
   defineSlots<OptionSlots>();
 
-  const Select = useSelectRootContext();
+  const SelectRootContext = useSelectRootContext();
 
   const { isActive, isDisabled, handleChange } = useSelectOption({
-    context: Select,
+    selectRootContext: SelectRootContext,
     props: () => props
   });
 </script>

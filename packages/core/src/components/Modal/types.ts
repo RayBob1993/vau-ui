@@ -11,6 +11,6 @@ export interface ModalEmits {
   close: [];
 }
 
-export interface ModalContext {
+export interface ModalRootContext {
   close: VoidFunction;
 }

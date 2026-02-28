@@ -1,4 +1,4 @@
 import type { InjectionKey } from 'vue';
-import type { ModalContext } from '../types';
+import type { ModalRootContext } from '../types';
 
-export const ModalRootContextKey: InjectionKey<ModalContext> = Symbol('ModalRootContextKey');
+export const ModalRootContextKey: InjectionKey<ModalRootContext> = Symbol('ModalRootContextKey');

@@ -1,15 +1,13 @@
 <script setup lang="ts">
-  import { useAccordionRootContext, useAccordionItemContext } from './context';
-  import { computed } from 'vue';
+  import { useAccordionContext } from './context';
+  import { useAccordionTrigger } from './composables';
 
-  const Accordion = useAccordionRootContext();
-  const AccordionItem = useAccordionItemContext();
+  const { AccordionRootContext, AccordionItemContext } = useAccordionContext();
 
-  const isDisabled = computed<boolean>(() => Boolean(AccordionItem?.props.disabled));
-
-  function handleToggle () {
-    Accordion?.handleChange(AccordionItem?.props.value);
-  }
+  const { isDisabled, handleToggle } = useAccordionTrigger({
+    accordionRootContext: AccordionRootContext,
+    accordionItemContext: AccordionItemContext
+  });
 </script>
 
 <template>

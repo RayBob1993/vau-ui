@@ -1,19 +1,21 @@
-import type { InputContext, InputNativeProps } from '../types';
-import type { MaybeNull } from '../../../../types';
-import { computed } from 'vue';
+import type { InputRootContext, InputNativeProps, InputProps } from '../types';
+import type { Maybe, MaybeNull } from '../../../../types';
+import { computed, toValue } from 'vue';
 
 export interface IUseInputOptions {
-  context: MaybeNull<InputContext>;
+  inputRootContext: MaybeNull<InputRootContext>;
 }
 
 export function useInputNative (options: IUseInputOptions) {
+  const inputRootProps = computed<Maybe<InputProps>>(() => toValue(options.inputRootContext?.props));
+
   const props = computed<InputNativeProps>(() => ({
-    disabled: Boolean(options.context?.isDisabled.value),
-    placeholder: options.context?.props.placeholder,
-    type: options.context?.props.nativeType,
-    inputMode: options.context?.props.inputMode,
-    readonly: options.context?.props.readonly,
-    autocomplete: options.context?.props.autocomplete,
+    disabled: Boolean(toValue(options.inputRootContext?.isDisabled)),
+    placeholder: inputRootProps.value?.placeholder,
+    type: inputRootProps.value?.nativeType,
+    inputMode: inputRootProps.value?.inputMode,
+    readonly: inputRootProps.value?.readonly,
+    autocomplete: inputRootProps.value?.autocomplete,
   }));
 
   return {

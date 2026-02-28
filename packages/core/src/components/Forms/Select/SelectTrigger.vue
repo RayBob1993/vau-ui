@@ -1,10 +1,10 @@
 <script setup lang="ts">
   import { useSelectRootContext } from './context';
 
-  const Select = useSelectRootContext();
+  const SelectRootContext = useSelectRootContext();
 
   function handleToggle () {
-    Select?.toggleOpen();
+    SelectRootContext?.toggleOpen();
   }
 </script>
 

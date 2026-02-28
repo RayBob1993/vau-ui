@@ -5,17 +5,17 @@
   import { isSelectMultiple } from './utils';
   import { computed } from 'vue';
 
-  const Select = useSelectRootContext();
+  const SelectRootContext = useSelectRootContext();
 
-  const activeOption = computed<Maybe<OptionInstance>>(() => Select?.activeOption.value);
+  const activeOption = computed<Maybe<OptionInstance>>(() => SelectRootContext?.activeOption.value);
 
-  const activeOptions = computed<Array<OptionInstance>>(() => Select?.activeOptions.value ?? []);
+  const activeOptions = computed<Array<OptionInstance>>(() => SelectRootContext?.activeOptions.value ?? []);
 
-  const hasValue = computed<boolean>(() => Boolean(Select?.hasValue.value));
+  const hasValue = computed<boolean>(() => Boolean(SelectRootContext?.hasValue.value));
 
-  const isMultiple = computed<boolean>(() => isSelectMultiple(Select?.modelValue.value, Boolean(Select?.props.multiple)));
+  const isMultiple = computed<boolean>(() => isSelectMultiple(SelectRootContext?.modelValue.value, Boolean(SelectRootContext?.props.multiple)));
 
-  const placeholder = computed<Maybe<string>>(() => Select?.props?.placeholder);
+  const placeholder = computed<Maybe<string>>(() => SelectRootContext?.props?.placeholder);
 </script>
 
 <template>

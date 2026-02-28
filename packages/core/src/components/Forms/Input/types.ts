@@ -1,5 +1,5 @@
 import type { ISizeProp, IThemeProp, Maybe, MaybeNull, ValueOf } from '../../../types';
-import type { ComputedRef, EmitFn, ModelRef } from 'vue';
+import type { EmitFn, MaybeRefOrGetter, VNode } from 'vue';
 import { InputModes, InputNativeTypes, InputTypes } from '../../../constants';
 
 export type InputModelValue = MaybeNull<Maybe<string>>;
@@ -30,6 +30,17 @@ export type InputProps = {
   clearable?: boolean;
 } & InputBaseProps & Partial<InputNativeProps> & Partial<InputTextareaProps>;
 
+export interface InputScopedSlot {
+  isFocus: boolean;
+  hasValue: boolean;
+  isValid: boolean;
+  isInvalid: boolean;
+}
+
+export interface InputSlots {
+  default?: (props: InputScopedSlot) => Array<VNode>;
+}
+
 export interface InputEmits {
   click: [event: PointerEvent];
   dblclick: [event: MouseEvent];
@@ -54,10 +65,17 @@ export interface InputEmits {
   cut: [event: ClipboardEvent];
 }
 
-export interface InputContext {
-  props: InputProps;
-  modelValue: ModelRef<InputModelValue>;
-  isDisabled: ComputedRef<boolean>;
+export interface InputRootContext {
+  props: MaybeRefOrGetter<InputProps>;
+  modelValue: MaybeRefOrGetter<InputModelValue>;
+  isDisabled: MaybeRefOrGetter<boolean>;
   setFocus: (payload: boolean) => void;
+  setModelValue: (value: InputModelValue) => void;
   emit: EmitFn<InputEmits>;
 }
+
+export interface InputExpose {
+  setFocus: (payload: boolean) => void;
+}
+
+export type InputInstance = InputExpose;

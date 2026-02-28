@@ -1,18 +1,18 @@
-import type { Maybe } from '../../../../types';
-import type { FormItemValidationStatus } from '../types';
 import { useFormRootContext } from './useFormRootContext';
 import { useFormItemContext } from './useFormItemContext';
 import { computed } from 'vue';
 
 export function useFormContext () {
-  const Root = useFormRootContext();
-  const Item = useFormItemContext();
+  const FormRootContext = useFormRootContext();
+  const FormItemContext = useFormItemContext();
 
-  const validationStatus = computed<Maybe<FormItemValidationStatus>>(() => Item?.validationStatus.value);
+  const isValid = computed<boolean>(() => Boolean(FormItemContext?.validationStatus.value.isSuccess));
+  const isInvalid = computed<boolean>(() => Boolean(FormItemContext?.validationStatus.value.isError));
 
   return {
-    Root,
-    Item,
-    validationStatus
+    FormRootContext,
+    FormItemContext,
+    isValid,
+    isInvalid
   };
 }

@@ -1,4 +1,4 @@
 import type { InjectionKey } from 'vue';
-import type { InputContext } from '../types';
+import type { InputRootContext } from '../types';
 
-export const InputRootContextKey: InjectionKey<InputContext> = Symbol('InputRootContextKey');
+export const InputRootContextKey: InjectionKey<InputRootContext> = Symbol('InputRootContextKey');

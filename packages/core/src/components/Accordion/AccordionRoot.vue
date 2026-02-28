@@ -11,7 +11,7 @@
     required: true,
   });
 
-  const { handleChange } = useAccordionRoot({
+  const { setModelValue } = useAccordionRoot({
     props: () => props,
     modelValue: () => modelValue.value,
     onChange: value => emit('change', value),
@@ -21,9 +21,9 @@
   });
 
   provide(AccordionRootContextKey, {
-    props,
-    modelValue,
-    handleChange
+    props: () => props,
+    modelValue: () => modelValue.value,
+    setModelValue
   });
 </script>
 

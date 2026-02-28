@@ -1,28 +1,28 @@
-import type { OptionInstance, OptionProps, OptionValue, SelectContext, SelectModelValue } from '../types';
+import type { OptionInstance, OptionProps, OptionValue, SelectRootContext, SelectModelValue } from '../types';
 import type { MaybeNull } from '../../../../types';
 import { isSelectMultiple } from '../utils';
 import { computed, type MaybeRefOrGetter, onMounted, onUnmounted, toValue, useId } from 'vue';
 
 export interface IUseSelectOptionOptions {
-  context: MaybeNull<SelectContext>;
+  selectRootContext: MaybeNull<SelectRootContext>;
   props: MaybeRefOrGetter<OptionProps>;
 }
 
 export function useSelectOption (options: IUseSelectOptionOptions) {
   const id = useId();
 
-  const modelValue = computed<SelectModelValue>(() => options.context?.modelValue.value);
+  const modelValue = computed<SelectModelValue>(() => options.selectRootContext?.modelValue.value);
   const props = computed<OptionProps>(() => toValue(options.props));
 
   const isActive = computed<boolean>(() => {
-    if (isSelectMultiple(modelValue.value, options.context?.props.multiple)) {
+    if (isSelectMultiple(modelValue.value, options.selectRootContext?.props.multiple)) {
       return modelValue.value.includes(props.value.value);
     }
 
     return modelValue.value === props.value.value;
   });
 
-  const isDisabled = computed<boolean>(() => Boolean(options.context?.isDisabled.value || props.value?.disabled));
+  const isDisabled = computed<boolean>(() => Boolean(options.selectRootContext?.isDisabled.value || props.value?.disabled));
 
   const instance = computed<OptionInstance>(() => ({
     id,
@@ -34,15 +34,15 @@ export function useSelectOption (options: IUseSelectOptionOptions) {
       return;
     }
 
-    options.context?.handleChange(value);
+    options.selectRootContext?.handleChange(value);
   }
 
   onMounted(() => {
-    options.context?.registerOption(instance.value);
+    options.selectRootContext?.registerOption(instance.value);
   });
 
   onUnmounted(() => {
-    options.context?.unregisterOption(id);
+    options.selectRootContext?.unregisterOption(id);
   });
 
   return {

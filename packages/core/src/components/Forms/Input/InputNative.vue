@@ -2,14 +2,14 @@
   import { useInputBase, useInputNative } from './composables';
   import { useInputRootContext } from './context';
 
-  const Input = useInputRootContext();
+  const InputRootContext = useInputRootContext();
 
   const { modelValue, listeners } = useInputBase({
-    context: Input
+    inputRootContext: InputRootContext
   });
 
   const { props } = useInputNative({
-    context: Input
+    inputRootContext: InputRootContext
   });
 </script>
 

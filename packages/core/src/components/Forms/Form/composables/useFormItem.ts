@@ -1,5 +1,5 @@
 import type { Maybe, MaybeNull } from '../../../../types';
-import type { FormContext, FormItemProps, FormModelValues, FormItemInstance, FormModel, FormRules } from '../types';
+import type { FormRootContext, FormItemProps, FormModelValues, FormItemInstance, FormModel, FormRules } from '../types';
 import { useFormField } from './useFormField';
 import { useFormItemValidation } from './useFormItemValidation';
 import { getProp } from '../../../../utils';
@@ -7,7 +7,7 @@ import { z, type ZodType } from 'zod';
 import { computed, type MaybeRefOrGetter, onMounted, onUnmounted, toValue, useId, watch } from 'vue';
 
 export interface IUseFormItem {
-  context: MaybeNull<FormContext>;
+  formRootContext: MaybeNull<FormRootContext>;
   props: MaybeRefOrGetter<FormItemProps>;
   onValid?: VoidFunction;
   onInvalid?: VoidFunction;
@@ -22,13 +22,13 @@ export function useFormItem (options: IUseFormItem) {
 
   const name = computed<Maybe<string>>(() => props.value.name);
 
-  const modelValue = computed<Maybe<FormModel>>(() => options.context?.modelValue.value);
+  const modelValue = computed<Maybe<FormModel>>(() => options.formRootContext?.modelValue.value);
 
-  const rules = computed<Maybe<FormRules<FormModel>>>(() => options.context?.props?.rules);
+  const rules = computed<Maybe<FormRules<FormModel>>>(() => options.formRootContext?.props?.rules);
 
   const value = computed<FormModelValues>(() => name.value && modelValue.value && getProp(modelValue.value, name.value));
 
-  const isDisabled = computed<boolean>(() => Boolean(props.value.disabled || options.context?.props.disabled));
+  const isDisabled = computed<boolean>(() => Boolean(props.value.disabled || options.formRootContext?.props.disabled));
 
   const rule = computed<MaybeNull<ZodType>>(() => {
     if (!name.value || !rules.value) {
@@ -106,11 +106,11 @@ export function useFormItem (options: IUseFormItem) {
   }
 
   onMounted(() => {
-    options.context?.registerFormItem(instance.value);
+    options.formRootContext?.registerFormItem(instance.value);
   });
 
   onUnmounted(() => {
-    options.context?.unregisterFormItem(id);
+    options.formRootContext?.unregisterFormItem(id);
   });
 
   watch(value, () => validate());

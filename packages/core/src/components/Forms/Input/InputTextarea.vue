@@ -2,14 +2,14 @@
   import { useInputBase, useInputTextarea } from './composables';
   import { useInputRootContext } from './context';
 
-  const Input = useInputRootContext();
+  const InputRootContext = useInputRootContext();
 
   const { modelValue, listeners } = useInputBase({
-    context: Input
+    inputRootContext: InputRootContext
   });
 
   const { props } = useInputTextarea({
-    context: Input
+    inputRootContext: InputRootContext
   });
 </script>
 

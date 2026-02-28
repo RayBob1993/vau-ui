@@ -2,9 +2,9 @@
   import { useSelectRootContext } from './context';
   import { computed } from 'vue';
 
-  const Select = useSelectRootContext();
+  const SelectRootContext = useSelectRootContext();
 
-  const isOpen = computed<boolean>(() => Boolean(Select?.isOpen.value));
+  const isOpen = computed<boolean>(() => Boolean(SelectRootContext?.isOpen.value));
 </script>
 
 <template>

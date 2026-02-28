@@ -96,7 +96,7 @@ export interface FormItemInstance {
   reset: VoidFunction;
 }
 
-export interface FormContext {
+export interface FormRootContext {
   props: FormProps<FormModel>;
   modelValue: ModelRef<FormModel>;
   registerFormItem: (formItem: FormItemInstance) => void;

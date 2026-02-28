@@ -1,5 +1,5 @@
 <script setup lang="ts">
-  import type { InputModelValue, InputProps, InputEmits } from './types';
+  import type { InputModelValue, InputProps, InputEmits, InputSlots, InputExpose } from './types';
   import { useInputRoot } from './composables';
   import { InputRootContextKey } from './context';
   import { InputModes, InputNativeTypes, InputTypes } from '../../../constants';
@@ -14,25 +14,35 @@
 
   const emit = defineEmits<InputEmits>();
 
+  defineSlots<InputSlots>();
+
   const modelValue = defineModel<InputModelValue>({
     required: true
   });
 
-  const { Root, Item, validationStatus } = useFormContext();
+  const { FormRootContext, FormItemContext, isValid, isInvalid } = useFormContext();
 
-  const { isDisabled, isTextarea, hasValue, isFocus, setFocus } = useInputRoot({
-    formContext: Root,
-    formItemContext: Item,
+  const { isDisabled, isTextarea, hasValue, isFocus, setFocus, setModelValue } = useInputRoot({
+    formRootContext: FormRootContext,
+    formItemContext: FormItemContext,
     modelValue: () => modelValue.value,
     props: () => props,
+    onSetValue: value => {
+      modelValue.value = value;
+    }
   });
 
   provide(InputRootContextKey, {
-    isDisabled,
-    props,
-    modelValue,
+    isDisabled: () => isDisabled.value,
+    props: () => props,
+    modelValue: () => modelValue.value,
     setFocus,
+    setModelValue,
     emit
+  });
+
+  defineExpose<InputExpose>({
+    setFocus
   });
 </script>
 
@@ -44,10 +54,15 @@
       'input--textarea': isTextarea,
       'input--filled': hasValue,
       'input--disabled': isDisabled,
-      'input--invalid': validationStatus?.isError,
-      'input--valid': validationStatus?.isSuccess
+      'input--invalid': isInvalid,
+      'input--valid': isValid
     }"
   >
-    <slot/>
+    <slot
+      :is-focus="isFocus"
+      :has-value="hasValue"
+      :is-invalid="isInvalid"
+      :is-valid="isValid"
+    />
   </div>
 </template>

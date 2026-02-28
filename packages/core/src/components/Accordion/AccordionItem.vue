@@ -8,16 +8,16 @@
 
   defineSlots<AccordionItemSlots>();
 
-  const Accordion = useAccordionRootContext();
+  const AccordionRootContext = useAccordionRootContext();
 
   const { isActive } = useAccordionItem({
-    context: Accordion,
+    accordionRootContext: AccordionRootContext,
     props: () => props
   });
 
   provide(AccordionItemContextKey, {
-    props,
-    isActive
+    props: () => props,
+    isActive: () => isActive.value
   });
 </script>
 

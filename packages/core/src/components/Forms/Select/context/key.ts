@@ -1,4 +1,4 @@
 import type { InjectionKey } from 'vue';
-import type { SelectContext } from '../types';
+import type { SelectRootContext } from '../types';
 
-export const SelectRootContextKey: InjectionKey<SelectContext> = Symbol('SelectRootContextKey');
+export const SelectRootContextKey: InjectionKey<SelectRootContext> = Symbol('SelectRootContextKey');

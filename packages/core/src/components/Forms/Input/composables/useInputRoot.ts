@@ -1,15 +1,16 @@
 import type { MaybeNull } from '../../../../types';
-import type { FormContext, FormItemContext } from '../../Form';
+import type { FormRootContext, FormItemContext } from '../../Form';
 import type { InputModelValue, InputProps } from '../types';
 import { InputTypes } from '../../../../constants';
 import { useToggle } from '../../../../composables';
 import { computed, type MaybeRefOrGetter, toValue } from 'vue';
 
 export interface IUseInputRootOptions {
-  formContext: MaybeNull<FormContext>;
+  formRootContext: MaybeNull<FormRootContext>;
   formItemContext: MaybeNull<FormItemContext>;
   modelValue: MaybeRefOrGetter<InputModelValue>;
   props: MaybeRefOrGetter<InputProps>;
+  onSetValue?: (value: InputModelValue) => void;
 }
 
 export function useInputRoot (options: IUseInputRootOptions) {
@@ -19,7 +20,7 @@ export function useInputRoot (options: IUseInputRootOptions) {
 
   const isDisabled = computed<boolean>(() => {
     return Boolean(
-      options.formContext?.props.disabled ||
+      options.formRootContext?.props.disabled ||
       options.formItemContext?.props.disabled ||
       props.value?.disabled
     );
@@ -29,11 +30,16 @@ export function useInputRoot (options: IUseInputRootOptions) {
 
   const hasValue = computed<boolean>(() => Boolean(toValue(options.modelValue)?.trim()));
 
+  function setModelValue (value: InputModelValue) {
+    options.onSetValue?.(value);
+  }
+
   return {
     isFocus,
     isDisabled,
     isTextarea,
     hasValue,
-    setFocus
+    setFocus,
+    setModelValue
   };
 }

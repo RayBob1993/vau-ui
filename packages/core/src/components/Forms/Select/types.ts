@@ -9,11 +9,13 @@ export interface OptionProps {
   disabled?: boolean;
 }
 
+export interface OptionScopedSlots {
+  isActive: boolean;
+  isDisabled: boolean;
+}
+
 export interface OptionSlots {
-  default: (props: {
-    isActive: boolean;
-    isDisabled: boolean;
-  }) => Array<VNode>;
+  default?: (props: OptionScopedSlots) => Array<VNode>;
 }
 
 export interface OptionInstance {
@@ -39,7 +41,7 @@ export interface SelectEmits {
   clear: [];
 }
 
-export interface SelectContext {
+export interface SelectRootContext {
   activeOption: ComputedRef<Maybe<OptionInstance>>;
   activeOptions: ComputedRef<Array<OptionInstance>>;
   isOpen: Ref<boolean>;
