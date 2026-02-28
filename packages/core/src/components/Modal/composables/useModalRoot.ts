@@ -1,13 +1,13 @@
 import type { ModalProps } from '../types';
 import type { MaybeRefOrGetter } from 'vue';
 
-export interface IUseModalRootOptions {
+export interface UseModalRootOptions {
   props: MaybeRefOrGetter<ModalProps>;
   modelValue: MaybeRefOrGetter<boolean>;
   onClose?: VoidFunction;
 }
 
-export function useModalRoot (options: IUseModalRootOptions) {
+export function useModalRoot (options: UseModalRootOptions) {
   function close () {
     options.onClose?.();
   }

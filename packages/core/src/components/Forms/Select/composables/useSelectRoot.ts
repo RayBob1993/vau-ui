@@ -7,7 +7,7 @@ import { useToggle } from '../../../../composables';
 import { isSelectMultiple } from '../utils';
 import { computed, type MaybeRefOrGetter, onUnmounted, toValue } from 'vue';
 
-export interface IUseSelectOptions {
+export interface UseSelectRootOptions {
   formRootContext: MaybeNull<FormRootContext>;
   formItemContext: MaybeNull<FormItemContext>;
   modelValue: MaybeRefOrGetter<SelectModelValue>;
@@ -17,8 +17,9 @@ export interface IUseSelectOptions {
   onClear?: VoidFunction;
 }
 
-export function useSelectRoot (options: IUseSelectOptions) {
+export function useSelectRoot (options: UseSelectRootOptions) {
   const modelValue = computed<SelectModelValue>(() => toValue(options.modelValue));
+
   const props = computed<SelectProps>(() => toValue(options.props));
 
   const { options: selectOptions, registerOption, unregisterOption } = useSelectOptions();

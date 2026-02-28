@@ -4,13 +4,13 @@ import { useFormValidation } from './useFormValidation';
 import { useToggle } from '../../../../composables';
 import { type MaybeRefOrGetter, toValue, watch } from 'vue';
 
-export interface IUseFormOptions <MODEL extends FormModel> {
+export interface UseFormRootOptions <MODEL extends FormModel> {
   modelValue: MaybeRefOrGetter<MODEL>;
   onValid?: VoidFunction;
   onInvalid?: VoidFunction;
 }
 
-export function useFormRoot <MODEL extends FormModel> (options: IUseFormOptions<MODEL>) {
+export function useFormRoot <MODEL extends FormModel> (options: UseFormRootOptions<MODEL>) {
   const { formItems, registerFormItem, unregisterFormItem } = useFormItems();
   const { validate, clearValidate, validatableFormItems } = useFormValidation({
     formItems: () => formItems.value,

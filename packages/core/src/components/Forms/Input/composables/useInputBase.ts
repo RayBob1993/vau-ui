@@ -2,11 +2,11 @@ import type { InputRootContext, InputModelValue } from '../types';
 import type { MaybeNull } from '../../../../types';
 import { computed, toValue } from 'vue';
 
-export interface IUseInputBaseOptions {
+export interface UseInputBaseOptions {
   inputRootContext: MaybeNull<InputRootContext>;
 }
 
-export function useInputBase (options: IUseInputBaseOptions) {
+export function useInputBase (options: UseInputBaseOptions) {
   const modelValue = computed<InputModelValue>({
     get: () => toValue(options.inputRootContext?.modelValue),
     set (value: InputModelValue) {

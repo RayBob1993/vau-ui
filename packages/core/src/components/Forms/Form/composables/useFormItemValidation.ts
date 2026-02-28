@@ -4,14 +4,14 @@ import type { ZodObject } from 'zod';
 import type { MaybeNull } from '../../../../types';
 import { computed, type MaybeRefOrGetter, ref, toValue } from 'vue';
 
-export interface IUseFormItemValidationOptions {
+export interface UseFormItemValidationOptions {
   data: MaybeRefOrGetter<MaybeNull<FormModel>>;
   schema: MaybeRefOrGetter<MaybeNull<ZodObject>>;
   onValid?: VoidFunction;
   onInvalid?: VoidFunction;
 }
 
-export function useFormItemValidation (options: IUseFormItemValidationOptions) {
+export function useFormItemValidation (options: UseFormItemValidationOptions) {
   const data = computed<MaybeNull<FormModel>>(() => toValue(options.data));
   const schema = computed<MaybeNull<ZodObject>>(() => toValue(options.schema));
 

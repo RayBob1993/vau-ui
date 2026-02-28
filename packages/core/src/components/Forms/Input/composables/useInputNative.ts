@@ -2,11 +2,11 @@ import type { InputRootContext, InputNativeProps, InputProps } from '../types';
 import type { Maybe, MaybeNull } from '../../../../types';
 import { computed, toValue } from 'vue';
 
-export interface IUseInputOptions {
+export interface UseInputNativeOptions {
   inputRootContext: MaybeNull<InputRootContext>;
 }
 
-export function useInputNative (options: IUseInputOptions) {
+export function useInputNative (options: UseInputNativeOptions) {
   const inputRootProps = computed<Maybe<InputProps>>(() => toValue(options.inputRootContext?.props));
 
   const props = computed<InputNativeProps>(() => ({

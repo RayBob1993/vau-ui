@@ -1,13 +1,13 @@
 import type { FormItemInstance, FormValidationResult } from '../types';
 import { computed, toValue, type MaybeRefOrGetter } from 'vue';
 
-export interface IUseFormValidationOptions {
+export interface UseFormValidationOptions {
   formItems: MaybeRefOrGetter<Array<FormItemInstance>>;
   onValid?: VoidFunction;
   onInvalid?: VoidFunction;
 }
 
-export function useFormValidation (options: IUseFormValidationOptions) {
+export function useFormValidation (options: UseFormValidationOptions) {
   const formItems = computed<Array<FormItemInstance>>(() => toValue(options.formItems));
 
   const validatableFormItems = computed<Array<FormItemInstance>>(() => formItems.value.filter(formItem => formItem.isValidatable));

@@ -3,13 +3,13 @@ import type { OptionInstance, SelectModelValue } from '../types';
 import { isSelectMultiple } from '../utils';
 import { computed, type MaybeRefOrGetter, toValue } from 'vue';
 
-export interface IUseActiveSelectOptionsOptions {
+export interface UseActiveSelectOptionsOptions {
   multiple: MaybeRefOrGetter<boolean>;
   modelValue: MaybeRefOrGetter<SelectModelValue>;
   options: MaybeRefOrGetter<Array<OptionInstance>>;
 }
 
-export function useActiveSelectOptions (options: IUseActiveSelectOptionsOptions) {
+export function useActiveSelectOptions (options: UseActiveSelectOptionsOptions) {
   const multiple = computed<boolean>(() => toValue(options.multiple));
   const modelValue = computed<SelectModelValue>(() => toValue(options.modelValue));
   const selectOptions = computed<Array<OptionInstance>>(() => toValue(options.options));

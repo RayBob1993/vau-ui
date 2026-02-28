@@ -2,14 +2,14 @@ import type { AccordionModelValue, AccordionProps, AccordionValue } from '../typ
 import type { Maybe } from '../../../types';
 import { computed, type MaybeRefOrGetter, toValue } from 'vue';
 
-export interface IUseAccordionRootOptions {
+export interface UseAccordionRootOptions {
   props: MaybeRefOrGetter<AccordionProps>;
   modelValue: MaybeRefOrGetter<AccordionModelValue>;
   onChange?: (payload: Maybe<AccordionValue>) => void;
   onChangeModel?: (payload: AccordionModelValue) => void;
 }
 
-export function useAccordionRoot (options: IUseAccordionRootOptions) {
+export function useAccordionRoot (options: UseAccordionRootOptions) {
   const props = computed<AccordionProps>(() => toValue(options.props));
 
   function setModelValue (value: Maybe<AccordionValue>) {

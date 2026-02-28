@@ -6,14 +6,14 @@ import { getProp } from '../../../../utils';
 import { z, type ZodType } from 'zod';
 import { computed, type MaybeRefOrGetter, onMounted, onUnmounted, toValue, useId, watch } from 'vue';
 
-export interface IUseFormItem {
+export interface UseFormItemOptions {
   formRootContext: MaybeNull<FormRootContext>;
   props: MaybeRefOrGetter<FormItemProps>;
   onValid?: VoidFunction;
   onInvalid?: VoidFunction;
 }
 
-export function useFormItem (options: IUseFormItem) {
+export function useFormItem (options: UseFormItemOptions) {
   const id = useId();
 
   const { field, registerField, unregisterField } = useFormField();

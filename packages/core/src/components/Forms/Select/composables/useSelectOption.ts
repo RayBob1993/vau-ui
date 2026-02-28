@@ -3,12 +3,12 @@ import type { MaybeNull } from '../../../../types';
 import { isSelectMultiple } from '../utils';
 import { computed, type MaybeRefOrGetter, onMounted, onUnmounted, toValue, useId } from 'vue';
 
-export interface IUseSelectOptionOptions {
+export interface UseSelectOptionOptions {
   selectRootContext: MaybeNull<SelectRootContext>;
   props: MaybeRefOrGetter<OptionProps>;
 }
 
-export function useSelectOption (options: IUseSelectOptionOptions) {
+export function useSelectOption (options: UseSelectOptionOptions) {
   const id = useId();
 
   const modelValue = computed<SelectModelValue>(() => options.selectRootContext?.modelValue.value);

@@ -2,11 +2,11 @@ import type { InputRootContext, InputProps, InputTextareaProps } from '../types'
 import type { Maybe, MaybeNull } from '../../../../types';
 import { computed, toValue } from 'vue';
 
-export interface IUseInputTextareaOptions {
+export interface UseInputTextareaOptions {
   inputRootContext: MaybeNull<InputRootContext>;
 }
 
-export function useInputTextarea (options: IUseInputTextareaOptions) {
+export function useInputTextarea (options: UseInputTextareaOptions) {
   const inputRootProps = computed<Maybe<InputProps>>(() => toValue(options.inputRootContext?.props));
 
   const props = computed<InputTextareaProps>(() => ({

@@ -2,12 +2,12 @@ import type { AccordionItemProps, AccordionModelValue, AccordionRootContext } fr
 import type { MaybeNull } from '../../../types';
 import { computed, toValue, type MaybeRefOrGetter } from 'vue';
 
-export interface IUseAccordionItem {
+export interface UseAccordionItem {
   accordionRootContext: MaybeNull<AccordionRootContext>;
   props: MaybeRefOrGetter<AccordionItemProps>;
 }
 
-export function useAccordionItem (options: IUseAccordionItem) {
+export function useAccordionItem (options: UseAccordionItem) {
   const props = computed(() => toValue(options.props));
 
   const modelValue = computed<AccordionModelValue>(() => toValue(options.accordionRootContext?.modelValue));

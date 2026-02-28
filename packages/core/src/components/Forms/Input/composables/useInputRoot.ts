@@ -5,7 +5,7 @@ import { InputTypes } from '../../../../constants';
 import { useToggle } from '../../../../composables';
 import { computed, type MaybeRefOrGetter, toValue } from 'vue';
 
-export interface IUseInputRootOptions {
+export interface UseInputRootOptions {
   formRootContext: MaybeNull<FormRootContext>;
   formItemContext: MaybeNull<FormItemContext>;
   modelValue: MaybeRefOrGetter<InputModelValue>;
@@ -13,7 +13,7 @@ export interface IUseInputRootOptions {
   onSetValue?: (value: InputModelValue) => void;
 }
 
-export function useInputRoot (options: IUseInputRootOptions) {
+export function useInputRoot (options: UseInputRootOptions) {
   const [isFocus, setFocus] = useToggle();
 
   const props = computed<InputProps>(() => toValue(options.props));

@@ -2,12 +2,12 @@ import type { Maybe, MaybeNull } from '../../../types';
 import type { AccordionRootContext, AccordionItemContext, AccordionItemProps } from '../types';
 import { computed, toValue } from 'vue';
 
-export interface IUseAccordionTriggerOptions {
+export interface UseAccordionTriggerOptions {
   accordionRootContext: MaybeNull<AccordionRootContext>;
   accordionItemContext: MaybeNull<AccordionItemContext>;
 }
 
-export function useAccordionTrigger (options: IUseAccordionTriggerOptions) {
+export function useAccordionTrigger (options: UseAccordionTriggerOptions) {
   const accordionItemProps = computed<Maybe<AccordionItemProps>>(() => toValue(options.accordionItemContext?.props));
 
   const isDisabled = computed<boolean>(() => Boolean(accordionItemProps.value?.disabled));
