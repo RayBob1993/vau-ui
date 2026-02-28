@@ -1,7 +1,7 @@
 <script setup lang="ts">
   import type { InputModelValue, InputProps, InputEmits } from './types';
   import { useInputRoot } from './composables';
-  import { InputRootContextKey } from './context/key.ts';
+  import { InputRootContextKey } from './context';
   import { InputModes, InputNativeTypes, InputTypes } from '../../../constants';
   import { useFormContext } from '../Form/context';
   import { provide } from 'vue';

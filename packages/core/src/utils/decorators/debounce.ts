@@ -1,6 +1,6 @@
-import { throttle } from './throttle';
+import { throttle, type ThrottledFunction } from './throttle';
 
-interface DebounceOptions {
+export interface DebounceOptions {
   /**
    * Если установлено в true, то функция будет вызвана сразу же при первом вызове.
    * @default false
@@ -27,7 +27,7 @@ export function debounce <T extends Array<unknown>> (
   callback: (...args: T) => unknown,
   delay: number,
   options: DebounceOptions = {}
-) {
+): ThrottledFunction<T> {
   const { atBegin = false } = options;
 
   return throttle(callback, delay,{

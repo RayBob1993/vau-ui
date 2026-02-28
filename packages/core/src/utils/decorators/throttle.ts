@@ -21,7 +21,7 @@ export interface ThrottleOptions {
   debounceMode?: boolean;
 }
 
-interface CancelOptions {
+export interface CancelOptions {
   /**
    * Если установлено в true, то только запланированный вызов будет отменен, а текущий выполнится.
    * @default false
@@ -29,7 +29,7 @@ interface CancelOptions {
   upcomingOnly?: boolean;
 }
 
-interface ThrottledFunction <T extends Array<unknown>> {
+export interface ThrottledFunction <T extends Array<unknown>> {
   (...args: T): void
   cancel: (options?: CancelOptions) => void;
 }

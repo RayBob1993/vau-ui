@@ -1,4 +1,4 @@
-import { AccordionRootContextKey } from './key';
+import { ModalRootContextKey } from './key';
 import { inject } from 'vue';
 
-export const useModalRootContext = () => inject(AccordionRootContextKey, null);
+export const useModalRootContext = () => inject(ModalRootContextKey, null);

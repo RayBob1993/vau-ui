@@ -1,2 +1,2 @@
-export * from './useSelectRoot.ts';
+export * from './useSelectRoot';
 export * from './useSelectOption';

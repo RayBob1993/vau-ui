@@ -1,4 +1,4 @@
-import { isString } from '@vau/core';
+import { isString } from '../utils';
 import { type Ref, isRef, unref, type ShallowRef } from 'vue';
 
 /**

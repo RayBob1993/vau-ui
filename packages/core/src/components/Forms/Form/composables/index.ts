@@ -1,2 +1,2 @@
-export * from './useFormRoot.ts';
+export * from './useFormRoot';
 export * from './useFormItem';

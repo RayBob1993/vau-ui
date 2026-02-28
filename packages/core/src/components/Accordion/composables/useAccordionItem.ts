@@ -1,5 +1,5 @@
 import type { AccordionItemProps, AccordionModelValue, AccordionContext } from '../types';
-import type { MaybeNull } from '@vau/core';
+import type { MaybeNull } from '../../../types';
 import { computed, toValue, type MaybeRefOrGetter } from 'vue';
 
 export interface IUseAccordionItem {

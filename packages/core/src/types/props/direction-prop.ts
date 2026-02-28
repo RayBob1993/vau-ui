@@ -1,4 +1,4 @@
-import type { ValueOf } from '@vau/core';
+import type { ValueOf } from '../value-of';
 import { Direction } from '../../constants';
 
 export type IDirection = ValueOf<typeof Direction>;

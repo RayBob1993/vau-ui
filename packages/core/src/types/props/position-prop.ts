@@ -1,4 +1,4 @@
-import type { ValueOf } from '@vau/core';
+import type { ValueOf } from '../value-of';
 import { Position } from '../../constants';
 
 export type IPosition = ValueOf<typeof Position>;

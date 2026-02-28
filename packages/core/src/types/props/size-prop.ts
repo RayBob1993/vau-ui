@@ -1,4 +1,4 @@
-import type { ValueOf } from '@vau/core';
+import type { ValueOf } from '../value-of';
 import { Sizes } from '../../constants';
 
 export type ISize = ValueOf<typeof Sizes>;
