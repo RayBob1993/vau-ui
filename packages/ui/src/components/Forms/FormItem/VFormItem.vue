@@ -2,15 +2,22 @@
   import type { IVFormItemProps } from './types';
   import {
     type FormItemSlots,
+    type FormItemEmits,
     Form
   } from '@vau/core';
 
   const { title, ...props } = defineProps<IVFormItemProps>();
+
+  const emit = defineEmits<FormItemEmits>();
+
   const slots = defineSlots<FormItemSlots>();
 </script>
 
 <template>
-  <Form.Item v-bind="props">
+  <Form.Item
+    v-bind="props"
+    v-on="emit"
+  >
     <template
       v-if="slots.header"
       #header="headerScope"
