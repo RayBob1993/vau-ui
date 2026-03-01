@@ -1,5 +1,5 @@
 import type { ISizeProp, IThemeProp, Maybe, MaybeArray, MaybeNull } from '../../../types';
-import type { ComputedRef, ModelRef, Ref, VNode } from 'vue';
+import type { VNode, MaybeRefOrGetter } from 'vue';
 
 export type OptionValue = string | number;
 export type SelectModelValue = Maybe<MaybeNull<MaybeArray<OptionValue>>>;
@@ -42,14 +42,14 @@ export interface SelectEmits {
 }
 
 export interface SelectRootContext {
-  activeOption: ComputedRef<Maybe<OptionInstance>>;
-  activeOptions: ComputedRef<Array<OptionInstance>>;
-  isOpen: Ref<boolean>;
-  hasValue: ComputedRef<boolean>;
-  props: SelectProps;
-  modelValue: ModelRef<SelectModelValue>;
-  isDisabled: ComputedRef<boolean>;
-  toggleOpen: () => void;
+  activeOption: MaybeRefOrGetter<Maybe<OptionInstance>>;
+  activeOptions: MaybeRefOrGetter<Array<OptionInstance>>;
+  isOpen: MaybeRefOrGetter<boolean>;
+  hasValue: MaybeRefOrGetter<boolean>;
+  props: MaybeRefOrGetter<SelectProps>;
+  modelValue: MaybeRefOrGetter<SelectModelValue>;
+  isDisabled: MaybeRefOrGetter<boolean>;
+  toggle: () => void;
   handleChange: (value: OptionValue) => void;
   registerOption: (option: OptionInstance) => void;
   unregisterOption: (id: string) => void;

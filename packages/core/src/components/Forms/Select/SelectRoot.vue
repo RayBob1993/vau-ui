@@ -20,7 +20,7 @@
     hasValue,
     isOpen,
     isDisabled,
-    toggleOpen,
+    toggle,
     registerOption,
     unregisterOption,
     handleChange
@@ -41,14 +41,14 @@
   });
 
   provide(SelectRootContextKey, {
-    activeOption,
-    activeOptions,
-    modelValue,
-    props,
-    hasValue,
-    isOpen,
-    isDisabled,
-    toggleOpen,
+    activeOption: () => activeOption.value,
+    activeOptions: () => activeOptions.value,
+    modelValue: () => modelValue.value,
+    props: () => props,
+    hasValue: () => hasValue.value,
+    isOpen: () => isOpen.value,
+    isDisabled: () => isDisabled.value,
+    toggle,
     registerOption,
     unregisterOption,
     handleChange

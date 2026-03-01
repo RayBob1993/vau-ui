@@ -11,18 +11,19 @@ export interface UseSelectOptionOptions {
 export function useSelectOption (options: UseSelectOptionOptions) {
   const id = useId();
 
-  const modelValue = computed<SelectModelValue>(() => options.selectRootContext?.modelValue.value);
+  const modelValue = computed<SelectModelValue>(() => toValue(options.selectRootContext?.modelValue));
   const props = computed<OptionProps>(() => toValue(options.props));
+  const isMultiple = computed<boolean>(() => Boolean(toValue(options.selectRootContext?.props)?.multiple));
 
   const isActive = computed<boolean>(() => {
-    if (isSelectMultiple(modelValue.value, options.selectRootContext?.props.multiple)) {
+    if (isSelectMultiple(modelValue.value, isMultiple.value)) {
       return modelValue.value.includes(props.value.value);
     }
 
     return modelValue.value === props.value.value;
   });
 
-  const isDisabled = computed<boolean>(() => Boolean(options.selectRootContext?.isDisabled.value || props.value?.disabled));
+  const isDisabled = computed<boolean>(() => Boolean(toValue(options.selectRootContext?.isDisabled) || props.value?.disabled));
 
   const instance = computed<OptionInstance>(() => ({
     id,

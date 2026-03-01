@@ -4,6 +4,8 @@ import { default as After } from './InputAfter.vue';
 import { default as Native } from './InputNative.vue';
 import { default as Textarea } from './InputTextarea.vue';
 import { default as Control } from './InputControl.vue';
+import { default as Group } from './InputGroup.vue';
+import { default as GroupAddon } from './InputGroupAddon.vue';
 
 export const Input = {
   Root,
@@ -11,8 +13,9 @@ export const Input = {
   After,
   Native,
   Textarea,
-  Control
+  Control,
+  Group,
+  GroupAddon
 };
 
 export * from './types';
-export * from './composables';

@@ -87,6 +87,14 @@ export function useSelectRoot (options: UseSelectRootOptions) {
     options.onClear?.();
   }
 
+  function toggle () {
+    if (isDisabled.value) {
+      return;
+    }
+
+    toggleOpen();
+  }
+
   options.formItemContext?.registerField({
     reset
   });
@@ -101,7 +109,7 @@ export function useSelectRoot (options: UseSelectRootOptions) {
     hasValue,
     isOpen,
     isDisabled,
-    toggleOpen,
+    toggle,
     registerOption,
     unregisterOption,
     handleChange,

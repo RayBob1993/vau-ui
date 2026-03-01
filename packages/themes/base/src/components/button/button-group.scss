@@ -1,11 +1,11 @@
-.v-button-group {
+.button-group {
   display: inline-flex;
 
   &--direction {
     &-horizontal {
       flex-direction: row;
 
-      .v-button {
+      .button {
         &:first-of-type:not(:only-of-type) {
           border-top-right-radius: 0;
           border-bottom-right-radius: 0;
@@ -25,7 +25,7 @@
     &-vertical {
       flex-direction: column;
 
-      .v-button {
+      .button {
         &:first-of-type:not(:only-of-type) {
           border-bottom-left-radius: 0;
           border-bottom-right-radius: 0;

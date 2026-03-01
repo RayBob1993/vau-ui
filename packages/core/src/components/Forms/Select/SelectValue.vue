@@ -1,21 +1,12 @@
 <script setup lang="ts">
-  import type { OptionInstance } from './types';
-  import type { Maybe } from '../../../types';
   import { useSelectRootContext } from './context';
-  import { isSelectMultiple } from './utils';
-  import { computed } from 'vue';
+  import { useSelectValue } from './composables';
 
   const SelectRootContext = useSelectRootContext();
 
-  const activeOption = computed<Maybe<OptionInstance>>(() => SelectRootContext?.activeOption.value);
-
-  const activeOptions = computed<Array<OptionInstance>>(() => SelectRootContext?.activeOptions.value ?? []);
-
-  const hasValue = computed<boolean>(() => Boolean(SelectRootContext?.hasValue.value));
-
-  const isMultiple = computed<boolean>(() => isSelectMultiple(SelectRootContext?.modelValue.value, Boolean(SelectRootContext?.props.multiple)));
-
-  const placeholder = computed<Maybe<string>>(() => SelectRootContext?.props?.placeholder);
+  const { activeOption, activeOptions, hasValue, isMultiple, placeholder } = useSelectValue({
+    selectRootContext: SelectRootContext
+  });
 </script>
 
 <template>

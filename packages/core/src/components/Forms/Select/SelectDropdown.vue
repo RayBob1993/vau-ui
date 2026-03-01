@@ -1,10 +1,10 @@
 <script setup lang="ts">
   import { useSelectRootContext } from './context';
-  import { computed } from 'vue';
+  import { computed, toValue } from 'vue';
 
   const SelectRootContext = useSelectRootContext();
 
-  const isOpen = computed<boolean>(() => Boolean(SelectRootContext?.isOpen.value));
+  const isOpen = computed<boolean>(() => Boolean(toValue(SelectRootContext?.isOpen)));
 </script>
 
 <template>

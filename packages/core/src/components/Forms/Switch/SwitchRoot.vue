@@ -35,7 +35,7 @@
       v-model="modelValue"
       type="checkbox"
       :disabled="isDisabled"
-      class="switch__native"
+      class="switch__input"
     >
 
     <slot/>

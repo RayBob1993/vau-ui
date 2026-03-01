@@ -4,7 +4,7 @@
   const SelectRootContext = useSelectRootContext();
 
   function handleToggle () {
-    SelectRootContext?.toggleOpen();
+    SelectRootContext?.toggle();
   }
 </script>
 
