@@ -9,3 +9,5 @@ export const Checkbox = {
   Title,
   Group
 };
+
+export * from './types';
