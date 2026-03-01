@@ -74,6 +74,7 @@ export interface FormItemContext {
   registerField: (field: FormItemField) => void;
   unregisterField: VoidFunction;
   isRequired: ComputedRef<boolean>;
+  isDisabled: ComputedRef<boolean>;
   validate: (silent?: boolean) => Promise<boolean>;
   clearValidateErrors: VoidFunction;
   reset: VoidFunction;

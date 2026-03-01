@@ -45,6 +45,7 @@
     validationStatus,
     validationErrors,
     isRequired,
+    isDisabled,
     registerField,
     unregisterField,
     reset,

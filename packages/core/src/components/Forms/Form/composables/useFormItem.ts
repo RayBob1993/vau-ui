@@ -2,7 +2,7 @@ import type { Maybe, MaybeNull } from '../../../../types';
 import type { FormRootContext, FormItemProps, FormModelValues, FormItemInstance, FormModel, FormRules } from '../types';
 import { useFormField } from './useFormField';
 import { useFormItemValidation } from './useFormItemValidation';
-import { getProp } from '../../../../utils';
+import { getProp, debounce } from '../../../../utils';
 import { z, type ZodType } from 'zod';
 import { computed, type MaybeRefOrGetter, onMounted, onUnmounted, toValue, useId, watch } from 'vue';
 
@@ -28,7 +28,7 @@ export function useFormItem (options: UseFormItemOptions) {
 
   const value = computed<FormModelValues>(() => name.value && modelValue.value && getProp(modelValue.value, name.value));
 
-  const isDisabled = computed<boolean>(() => Boolean(props.value.disabled || options.formRootContext?.props.disabled));
+  const isDisabled = computed<boolean>(() => Boolean(options.formRootContext?.props.disabled || props.value?.disabled));
 
   const rule = computed<MaybeNull<ZodType>>(() => {
     if (!name.value || !rules.value) {
@@ -109,11 +109,14 @@ export function useFormItem (options: UseFormItemOptions) {
     options.formRootContext?.registerFormItem(instance.value);
   });
 
+  const debouncedValidate = debounce(() => validate(), 300);
+
   onUnmounted(() => {
+    debouncedValidate.cancel();
     options.formRootContext?.unregisterFormItem(id);
   });
 
-  watch(value, () => validate());
+  watch(value, () => debouncedValidate());
 
   watch(() => validationStatus.value.isSuccess, boolean => {
     if (boolean) {

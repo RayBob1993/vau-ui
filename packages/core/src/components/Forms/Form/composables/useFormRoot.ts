@@ -2,7 +2,8 @@ import type { FormModel } from '../types';
 import { useFormItems } from './useFormItems';
 import { useFormValidation } from './useFormValidation';
 import { useToggle } from '../../../../composables';
-import { type MaybeRefOrGetter, toValue, watch } from 'vue';
+import { debounce } from '../../../../utils';
+import { type MaybeRefOrGetter, onScopeDispose, toValue, watch } from 'vue';
 
 export interface UseFormRootOptions <MODEL extends FormModel> {
   modelValue: MaybeRefOrGetter<MODEL>;
@@ -36,12 +37,20 @@ export function useFormRoot <MODEL extends FormModel> (options: UseFormRootOptio
     immediate: true
   });
 
-  watch(() => toValue(options.modelValue), async () => {
+  const debouncedValidateModel = debounce(async () => {
     const isValid = await validate(true);
 
     setIsValid(isValid);
+  }, 400);
+
+  watch(() => toValue(options.modelValue), () => {
+    debouncedValidateModel();
   }, {
     deep: true
+  });
+
+  onScopeDispose(() => {
+    debouncedValidateModel.cancel();
   });
 
   return {
