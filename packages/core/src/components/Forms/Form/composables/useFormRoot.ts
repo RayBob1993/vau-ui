@@ -3,7 +3,7 @@ import { useFormItems } from './useFormItems';
 import { useFormValidation } from './useFormValidation';
 import { useToggle } from '../../../../composables';
 import { debounce } from '../../../../utils';
-import { type MaybeRefOrGetter, onMounted, onScopeDispose, toValue, watch } from 'vue';
+import { type MaybeRefOrGetter, nextTick, onMounted, onScopeDispose, ref, toValue, watch } from 'vue';
 
 export interface UseFormRootOptions <MODEL extends FormModel> {
   modelValue: MaybeRefOrGetter<MODEL>;
@@ -13,7 +13,7 @@ export interface UseFormRootOptions <MODEL extends FormModel> {
 
 export function useFormRoot <MODEL extends FormModel> (options: UseFormRootOptions<MODEL>) {
   const { formItems, registerFormItem, unregisterFormItem } = useFormItems();
-  const { validate, clearValidate } = useFormValidation({
+  const { validate, clearValidate, validatableFormItems } = useFormValidation({
     formItems: () => formItems.value,
     onValid: () => {
       options.onValid?.();
@@ -23,7 +23,13 @@ export function useFormRoot <MODEL extends FormModel> (options: UseFormRootOptio
     }
   });
 
-  const [isValid, setIsValid] = useToggle();
+  const [isValid, setIsValid] = useToggle(false);
+
+  /** Были ли хотя бы раз зарегистрированы валидируемые поля (нужно для корректного isValid при пустом списке после v-if). */
+  const hadValidatableItems = ref(false);
+
+  /** Строка id полей при последнем запуске watch; сравнение предотвращает цикл при обновлении validationStatus. */
+  const lastValidatableItemIds = ref<string>('');
 
   function reset () {
     formItems.value.forEach(formItem => formItem.reset());
@@ -31,9 +37,39 @@ export function useFormRoot <MODEL extends FormModel> (options: UseFormRootOptio
     clearValidate();
   }
 
+  /**
+   * Реакция на изменение списка валидируемых полей (добавление/удаление через v-if).
+   * При появлении полей — тихая валидация и обновление isValid; при пустом списке — true только если поля уже были (hadValidatableItems).
+   */
+  watch(validatableFormItems, async formItems => {
+    const currentIds = formItems.map(item => item.id).sort().join(',');
+
+    if (currentIds === lastValidatableItemIds.value) {
+      return;
+    }
+
+    /* Иначе после validate → validationStatus → instance → registerFormItem → formItems цикл бы повторялся. */
+    lastValidatableItemIds.value = currentIds;
+
+    if (formItems.length === 0) {
+      if (hadValidatableItems.value) {
+        setIsValid(true);
+      }
+
+      return;
+    }
+
+    hadValidatableItems.value = true;
+
+    const result = await validate(true);
+
+    setIsValid(result);
+  }, {
+    immediate: true
+  });
 
   const debouncedValidateModel = debounce(async () => {
-    const result = await validate();
+    const result = await validate(true);
 
     setIsValid(result);
   }, 400);
@@ -53,6 +89,8 @@ export function useFormRoot <MODEL extends FormModel> (options: UseFormRootOptio
   });
 
   onMounted(async () => {
+    /* nextTick даёт время зарегистрироваться полям (validatableFormItems заполняется по мере монтирования Form.Item). */
+    await nextTick();
     await validateAndSyncIsValid(true);
   });
 
