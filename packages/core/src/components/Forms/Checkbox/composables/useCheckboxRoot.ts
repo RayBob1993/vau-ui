@@ -36,8 +36,11 @@ export function useCheckboxRoot (options: UseCheckboxRootOptions) {
     return false;
   });
 
+  const isIndeterminate = computed<boolean>(() => Boolean(props.value?.indeterminate));
+
   return {
     isActive,
     isDisabled,
+    isIndeterminate
   };
 }

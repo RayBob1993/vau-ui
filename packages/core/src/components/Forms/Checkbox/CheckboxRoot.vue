@@ -3,7 +3,7 @@
   import { CheckboxRootContextKey } from './context';
   import { useCheckboxRoot } from './composables';
   import { useFormContext } from '../Form/context';
-  import { provide } from 'vue';
+  import { provide, useTemplateRef, watch } from 'vue';
 
   const props = defineProps<CheckboxProps>();
 
@@ -15,11 +15,21 @@
 
   const { FormRootContext, FormItemContext, isValid, isInvalid } = useFormContext();
 
-  const { isActive, isDisabled } = useCheckboxRoot({
+  const { isActive, isDisabled, isIndeterminate } = useCheckboxRoot({
     formRootContext: FormRootContext,
     formItemContext: FormItemContext,
     props: () => props,
     modelValue: () => modelValue.value
+  });
+
+  const inputRef = useTemplateRef<HTMLInputElement>('inputRef');
+
+  watch([inputRef, isIndeterminate], ([el, indeterminate]) => {
+    if (el) {
+      el.indeterminate = Boolean(indeterminate);
+    }
+  }, {
+    immediate: true
   });
 
   provide(CheckboxRootContextKey, {
@@ -27,6 +37,7 @@
     modelValue: () => modelValue.value,
     isActive: () => isActive.value,
     isDisabled: () => isDisabled.value,
+    isIndeterminate: () => isIndeterminate.value,
     isValid: () => isValid.value,
     isInvalid: () => isInvalid.value
   });
@@ -38,11 +49,13 @@
     :class="{
       'checkbox--disabled': isDisabled,
       'checkbox--active': isActive,
+      'checkbox--indeterminate': isIndeterminate,
       'checkbox--invalid': isInvalid,
       'checkbox--valid': isValid
     }"
   >
     <input
+      ref="inputRef"
       v-model="modelValue"
       :value="value"
       type="checkbox"
