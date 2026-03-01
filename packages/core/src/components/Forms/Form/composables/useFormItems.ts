@@ -5,10 +5,12 @@ export function useFormItems () {
   const formItems = ref<Array<FormItemInstance>>([]);
 
   function registerFormItem (newFormItem: FormItemInstance) {
-    const formItem = formItems.value.find(formItem => formItem.id === newFormItem.id);
+    const index = formItems.value.findIndex(item => item.id === newFormItem.id);
 
-    if (!formItem) {
+    if (index === -1) {
       formItems.value.push(newFormItem);
+    } else {
+      formItems.value[index] = newFormItem;
     }
   }
 

@@ -4,7 +4,7 @@ import { useFormField } from './useFormField';
 import { useFormItemValidation } from './useFormItemValidation';
 import { getProp, debounce } from '../../../../utils';
 import { z, type ZodType } from 'zod';
-import { computed, type MaybeRefOrGetter, onMounted, onUnmounted, toValue, useId, watch } from 'vue';
+import { computed, type MaybeRefOrGetter, onUnmounted, toValue, useId, watch } from 'vue';
 
 export interface UseFormItemOptions {
   formRootContext: MaybeNull<FormRootContext>;
@@ -105,15 +105,18 @@ export function useFormItem (options: UseFormItemOptions) {
     clearValidateErrors();
   }
 
-  onMounted(() => {
-    options.formRootContext?.registerFormItem(instance.value);
-  });
-
   const debouncedValidate = debounce(() => validate(), 300);
 
   onUnmounted(() => {
     debouncedValidate.cancel();
     options.formRootContext?.unregisterFormItem(id);
+  });
+
+  watch(instance, newInstance => {
+    options.formRootContext?.registerFormItem(newInstance);
+  }, {
+    deep: true,
+    immediate: true
   });
 
   watch(value, () => debouncedValidate());
