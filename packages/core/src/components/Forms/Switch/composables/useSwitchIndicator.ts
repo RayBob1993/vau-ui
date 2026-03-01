@@ -2,11 +2,11 @@ import type { SwitchRootContext } from '../types';
 import type { MaybeNull } from '../../../../types';
 import { computed, toValue } from 'vue';
 
-export interface UseCheckboxIndicatorOptions {
+export interface UseSwitchIndicatorOptions {
   switchRootContext: MaybeNull<SwitchRootContext>;
 }
 
-export function useSwitchIndicator (options: UseCheckboxIndicatorOptions) {
+export function useSwitchIndicator (options: UseSwitchIndicatorOptions) {
   const isDisabled = computed<boolean>(() => Boolean(toValue(options.switchRootContext?.isDisabled)));
   const isActive = computed<boolean>(() => Boolean(toValue(options.switchRootContext?.isActive)));
   const isValid = computed<boolean>(() => Boolean(toValue(options.switchRootContext?.isValid)));
