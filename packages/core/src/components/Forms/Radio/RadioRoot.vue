@@ -33,7 +33,15 @@
 </script>
 
 <template>
-  <label class="radio">
+  <label
+    class="radio"
+    :class="{
+      'radio--disabled': isDisabled,
+      'radio--active': isActive,
+      'radio--invalid': isInvalid,
+      'radio--valid': isValid
+    }"
+  >
     <input
       v-model="modelValue"
       :value="value"
