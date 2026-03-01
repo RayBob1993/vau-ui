@@ -1,6 +1,5 @@
-import type { ZodType } from 'zod';
+import type { ZodError, ZodType } from 'zod';
 import type { ComputedRef, ModelRef, Ref, VNode } from 'vue';
-import type { $ZodIssue } from 'zod/v4/core';
 
 export type FormModelValues = unknown;
 
@@ -44,7 +43,7 @@ export interface FormInstance {
   reset: VoidFunction;
 }
 
-export type FormItemError = $ZodIssue;
+export type FormItemError = ZodError['issues'][number];
 
 export interface FormItemProps {
   disabled?: boolean;

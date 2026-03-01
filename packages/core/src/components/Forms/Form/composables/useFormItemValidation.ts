@@ -1,5 +1,4 @@
-import type { FormItemValidationStatus, FormModel } from '../types';
-import type { $ZodIssue } from 'zod/v4/core';
+import type { FormItemError, FormItemValidationStatus, FormModel } from '../types';
 import type { ZodObject } from 'zod';
 import type { MaybeNull } from '../../../../types';
 import { computed, type MaybeRefOrGetter, ref, toValue } from 'vue';
@@ -21,7 +20,7 @@ export function useFormItemValidation (options: UseFormItemValidationOptions) {
     isSuccess: false
   });
 
-  const validationErrors = ref<Array<$ZodIssue>>([]);
+  const validationErrors = ref<Array<FormItemError>>([]);
 
   function clearValidateErrors () {
     validationErrors.value = [];

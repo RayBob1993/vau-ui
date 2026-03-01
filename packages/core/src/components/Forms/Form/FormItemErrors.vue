@@ -13,7 +13,7 @@
     <div
       v-for="(error, index) in errors"
       :key="`error-${index}`"
-      class="v-form-item-errors__item"
+      class="form-item-errors__item"
     >
       {{ error.message }}
     </div>
