@@ -3,7 +3,7 @@ import { useFormItems } from './useFormItems';
 import { useFormValidation } from './useFormValidation';
 import { useToggle } from '../../../../composables';
 import { debounce } from '../../../../utils';
-import { type MaybeRefOrGetter, onScopeDispose, toValue, watch } from 'vue';
+import { type MaybeRefOrGetter, onMounted, onScopeDispose, toValue, watch } from 'vue';
 
 export interface UseFormRootOptions <MODEL extends FormModel> {
   modelValue: MaybeRefOrGetter<MODEL>;
@@ -13,7 +13,7 @@ export interface UseFormRootOptions <MODEL extends FormModel> {
 
 export function useFormRoot <MODEL extends FormModel> (options: UseFormRootOptions<MODEL>) {
   const { formItems, registerFormItem, unregisterFormItem } = useFormItems();
-  const { validate, clearValidate, validatableFormItems } = useFormValidation({
+  const { validate, clearValidate } = useFormValidation({
     formItems: () => formItems.value,
     onValid: () => {
       options.onValid?.();
@@ -31,22 +31,29 @@ export function useFormRoot <MODEL extends FormModel> (options: UseFormRootOptio
     clearValidate();
   }
 
-  watch(validatableFormItems, formItems => {
-    setIsValid(!formItems.length);
-  }, {
-    immediate: true
-  });
 
   const debouncedValidateModel = debounce(async () => {
-    const isValid = await validate(true);
+    const result = await validate();
 
-    setIsValid(isValid);
+    setIsValid(result);
   }, 400);
+
+  async function validateAndSyncIsValid (silent = false) {
+    const result = await validate(silent);
+
+    setIsValid(result);
+
+    return result;
+  }
 
   watch(() => toValue(options.modelValue), () => {
     debouncedValidateModel();
   }, {
     deep: true
+  });
+
+  onMounted(async () => {
+    await validateAndSyncIsValid(true);
   });
 
   onScopeDispose(() => {
@@ -55,7 +62,7 @@ export function useFormRoot <MODEL extends FormModel> (options: UseFormRootOptio
 
   return {
     isValid,
-    validate,
+    validate: validateAndSyncIsValid,
     clearValidate,
     registerFormItem,
     unregisterFormItem,
