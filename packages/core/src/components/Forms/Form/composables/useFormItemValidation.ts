@@ -22,6 +22,10 @@ export function useFormItemValidation (options: UseFormItemValidationOptions) {
 
   const validationErrors = ref<Array<FormItemError>>([]);
 
+  function setValidationStatus (partial: Partial<FormItemValidationStatus>) {
+    validationStatus.value = { ...validationStatus.value, ...partial };
+  }
+
   function clearValidateErrors () {
     validationErrors.value = [];
   }
@@ -35,23 +39,21 @@ export function useFormItemValidation (options: UseFormItemValidationOptions) {
       return false;
     }
 
-    validationStatus.value.isValidating = true;
+    setValidationStatus({ isValidating: true });
 
     const result = await schema.value.safeParseAsync(data.value);
 
-    validationStatus.value.isValidating = false;
+    setValidationStatus({ isValidating: false });
 
     if (result.success) {
-      validationStatus.value.isError = false;
-      validationStatus.value.isSuccess = true;
+      setValidationStatus({ isError: false, isSuccess: true });
 
       options.onValid?.();
 
       return true;
     } else {
       if (!silent) {
-        validationStatus.value.isError = true;
-        validationStatus.value.isSuccess = false;
+        setValidationStatus({ isError: true, isSuccess: false });
 
         if (result.error) {
           validationErrors.value = result.error.issues;
