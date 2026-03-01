@@ -5,7 +5,7 @@ import { useSelectOptions } from './useSelectOptions';
 import { useActiveSelectOptions } from './useActiveSelectOptions';
 import { useToggle } from '../../../../composables';
 import { isSelectMultiple } from '../utils';
-import { computed, type MaybeRefOrGetter, onUnmounted, toValue } from 'vue';
+import { computed, type MaybeRefOrGetter, onMounted, onUnmounted, toValue } from 'vue';
 
 export interface UseSelectRootOptions {
   formRootContext: MaybeNull<FormRootContext>;
@@ -95,8 +95,10 @@ export function useSelectRoot (options: UseSelectRootOptions) {
     toggleOpen();
   }
 
-  options.formItemContext?.registerField({
-    reset
+  onMounted(() => {
+    options.formItemContext?.registerField({
+      reset
+    });
   });
 
   onUnmounted(() => {

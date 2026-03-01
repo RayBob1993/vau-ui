@@ -1,18 +1,17 @@
 import type { OptionInstance } from '../types';
-import type { Maybe } from '../../../../types';
 import { ref } from 'vue';
 
 export function useSelectOptions () {
   const options = ref<Array<OptionInstance>>([]);
 
   function registerOption (newOption: OptionInstance) {
-    const option: Maybe<OptionInstance> = options.value.find(option => option.id === newOption.id);
+    const index = options.value.findIndex(option => option.id === newOption.id);
 
-    if (option) {
-      return;
+    if (index === -1) {
+      options.value.push(newOption);
+    } else {
+      options.value[index] = newOption;
     }
-
-    options.value.push(newOption);
   }
 
   function unregisterOption (id: string) {

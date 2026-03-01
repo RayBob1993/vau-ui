@@ -1,7 +1,7 @@
 import type { OptionInstance, OptionProps, OptionValue, SelectRootContext, SelectModelValue } from '../types';
 import type { MaybeNull } from '../../../../types';
 import { isSelectMultiple } from '../utils';
-import { computed, type MaybeRefOrGetter, onMounted, onUnmounted, toValue, useId } from 'vue';
+import { computed, type MaybeRefOrGetter, onUnmounted, toValue, useId, watch } from 'vue';
 
 export interface UseSelectOptionOptions {
   selectRootContext: MaybeNull<SelectRootContext>;
@@ -38,8 +38,11 @@ export function useSelectOption (options: UseSelectOptionOptions) {
     options.selectRootContext?.handleChange(value);
   }
 
-  onMounted(() => {
-    options.selectRootContext?.registerOption(instance.value);
+  watch(instance, newInstance => {
+    options.selectRootContext?.registerOption(newInstance);
+  }, {
+    deep: true,
+    immediate: true
   });
 
   onUnmounted(() => {
