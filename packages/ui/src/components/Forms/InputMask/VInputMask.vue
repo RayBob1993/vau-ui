@@ -3,8 +3,7 @@
   import type { IVInputInstance, IVInputMode, IVInputModelValue } from '../Input/types';
   import { MaskModes, MASK_DATE_OPTIONS, MASK_PHONE_OPTIONS } from './constants';
   import { VInput } from '../Input';
-  import { InputModes } from '../../../constants';
-  import { type Maybe, omit } from '@vau/core';
+  import { type Maybe, omit, InputModes } from '@vau/core';
   import { computed, useTemplateRef } from 'vue';
 
   const props = defineProps<IVInputMaskProps>();
