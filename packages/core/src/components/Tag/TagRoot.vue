@@ -1,9 +1,17 @@
 <script setup lang="ts">
   import type { TagProps, TagEmits } from './types';
+  import { useTagRoot } from './composables';
 
-  defineProps<TagProps>();
+  const props = defineProps<TagProps>();
 
   const emit = defineEmits<TagEmits>();
+
+  const { handleDelete } = useTagRoot({
+    props: () => props,
+    onDelete (value) {
+      emit('delete', value);
+    },
+  });
 </script>
 
 <template>
@@ -19,7 +27,7 @@
     <button
       v-if="canDelete"
       type="button"
-      @click="emit('delete')"
+      @click="handleDelete"
     >
       X
     </button>
