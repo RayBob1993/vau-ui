@@ -1,5 +1,5 @@
 import type { IVInputBaseProps } from '../Input/types';
-import type { IDirectionProp } from "../../../types";
+import type { DirectionProp } from '@vau/core';
 
 export type IVInputNumberModelValue = number;
 
@@ -14,4 +14,4 @@ export type IVInputNumberProps = {
   max?: number;
   step?: number;
   mousewheel?: IVInputNumberMousewheel;
-} & IVInputBaseProps & Partial<IDirectionProp>
+} & IVInputBaseProps & Partial<DirectionProp>;
