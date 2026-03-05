@@ -1,86 +1,33 @@
 <script lang="ts" setup>
-  import type { IVInputExpose, IVInputModelValue, IVInputNative, IVInputProps, IVInputSlots } from './types';
-  import { useInput } from './composables';
-  import { InputModes, InputNativeTypes, InputTypes } from '@vau/core';
-  import { useTemplateRef } from 'vue';
+  import { Input, type InputProps, type InputSlots, type InputModelValue } from '@vau/core';
 
-  const props = withDefaults(defineProps<IVInputProps>(), {
-    type: InputTypes.INPUT,
-    nativeType: InputNativeTypes.TEXT,
-    inputMode: InputModes.TEXT
-  });
+  const props = defineProps<InputProps>();
 
-  defineSlots<IVInputSlots>();
+  const slots = defineSlots<InputSlots>();
 
-  const modelValue = defineModel<IVInputModelValue>({
+  const modelValue = defineModel<InputModelValue>({
     required: true
-  });
-
-  const input = useTemplateRef<IVInputNative>('input');
-
-  const { isDisabled, isTextarea, isFocus, validationStatus } = useInput({
-    modelValue: () => modelValue.value,
-    props
-  });
-
-  function focus () {
-    input.value?.focus();
-  }
-
-  defineExpose<IVInputExpose>({
-    input,
-    focus
   });
 </script>
 
 <template>
-  <div
-    class="v-input"
-    :class="{
-      'v-input--textarea': isTextarea,
-      'v-input--focus': isFocus,
-      'v-input--disabled': isDisabled,
-      'v-input--invalid': validationStatus?.isError,
-      'v-input--valid': validationStatus?.isSuccess
-    }"
+  <Input.Root
+    v-slot="{ isTextarea }"
+    v-bind="props"
+    v-model="modelValue"
   >
-    <div class="v-input__body">
-      <div
-        v-if="$slots?.before"
-        class="v-input__body-content v-input__body-content--before"
-      >
-        <slot name="before"/>
-      </div>
+    <Input.Before v-if="slots?.before">
+      <slot name="before"/>
+    </Input.Before>
 
-      <div class="v-input__body-control">
-        <input
-          v-if="!isTextarea"
-          ref="input"
-          v-model="modelValue"
-          :type="nativeType"
-          :inputmode="inputMode"
-          class="v-input__native"
-          :readonly="readonly"
-          :disabled="isDisabled"
-          :autocomplete="autocomplete"
-        >
+    <Input.Control>
+      <Input.Textarea v-if="isTextarea"/>
 
-        <textarea
-          v-else
-          ref="input"
-          v-model="modelValue"
-          class="v-input__native"
-          :readonly="readonly"
-          :disabled="isDisabled"
-        />
-      </div>
+      <Input.Native v-else/>
+    </Input.Control>
 
-      <div
-        v-if="$slots?.after"
-        class="v-input__body-content v-input__body-content--after"
-      >
-        <slot name="after"/>
-      </div>
-    </div>
-  </div>
+    <Input.After v-if="slots?.after">
+      <slot name="after"/>
+    </Input.After>
+  </Input.Root>
 </template>

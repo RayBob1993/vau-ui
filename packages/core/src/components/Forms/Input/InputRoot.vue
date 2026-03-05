@@ -59,6 +59,7 @@
     }"
   >
     <slot
+      :is-textarea="isTextarea"
       :is-focus="isFocus"
       :has-value="hasValue"
       :is-invalid="isInvalid"

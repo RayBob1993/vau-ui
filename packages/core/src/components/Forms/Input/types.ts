@@ -31,6 +31,7 @@ export type InputProps = {
 } & InputBaseProps & Partial<InputNativeProps> & Partial<InputTextareaProps>;
 
 export interface InputScopedSlot {
+  isTextarea: boolean;
   isFocus: boolean;
   hasValue: boolean;
   isValid: boolean;

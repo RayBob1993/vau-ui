@@ -1,9 +1,9 @@
 <script setup lang="ts">
-
+  import { Input } from '@vau/core';
 </script>
 
 <template>
-  <div class="v-input-group-addon">
+  <Input.GroupAddon>
     <slot/>
-  </div>
+  </Input.GroupAddon>
 </template>
