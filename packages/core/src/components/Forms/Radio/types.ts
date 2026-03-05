@@ -1,5 +1,5 @@
 import type { MaybeRefOrGetter, VNode } from 'vue';
-import type { ISizeProp, IThemeProp, IDirectionProp, Maybe } from '../../../types';
+import type { SizeProp, ThemeProp, DirectionProp, Maybe } from '../../../types';
 
 export type RadioValue = number | string;
 export type RadioModelValue = Maybe<RadioValue>;
@@ -7,7 +7,7 @@ export type RadioModelValue = Maybe<RadioValue>;
 export type RadioProps = {
   disabled?: boolean;
   value: RadioValue;
-} & Partial<IThemeProp> & Partial<ISizeProp>;
+} & Partial<ThemeProp> & Partial<SizeProp>;
 
 export interface RadioEmits {
   change: [value: RadioValue];
@@ -33,4 +33,4 @@ export interface RadioRootContext {
   isInvalid: MaybeRefOrGetter<boolean>;
 }
 
-export type RadioGroupProps = Partial<IDirectionProp>;
+export type RadioGroupProps = Partial<DirectionProp>;

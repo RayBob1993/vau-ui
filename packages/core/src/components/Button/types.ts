@@ -1,4 +1,4 @@
-import type { IThemeProp, ISizeProp, IDirectionProp } from '../../types';
+import type { ThemeProp, SizeProp, DirectionProp } from '../../types';
 
 export type ButtonProps = {
   loading?: boolean;
@@ -6,6 +6,6 @@ export type ButtonProps = {
   plain?: boolean;
   wide?: boolean;
   type?: HTMLButtonElement['type'];
-} & Partial<IThemeProp> & Partial<ISizeProp>;
+} & Partial<ThemeProp> & Partial<SizeProp>;
 
-export type ButtonGroupProps = Partial<IDirectionProp>;
+export type ButtonGroupProps = Partial<DirectionProp>;

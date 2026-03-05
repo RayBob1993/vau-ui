@@ -1,11 +1,11 @@
-import type { ISizeProp, IThemeProp } from '../../../types';
+import type { SizeProp, ThemeProp } from '../../../types';
 import type { MaybeRefOrGetter } from 'vue';
 
 export type SwitchModelValue = boolean;
 
 export type SwitchProps = {
   disabled?: boolean;
-} & Partial<IThemeProp> & Partial<ISizeProp>;
+} & Partial<ThemeProp> & Partial<SizeProp>;
 
 export interface SwitchRootContext {
   props: MaybeRefOrGetter<SwitchProps>;

@@ -1,4 +1,4 @@
-import type { IFlexAlignProp, IFlexJustifyProp, IDirectionProp } from '../../types';
+import type { FlexAlignProp, FlexJustifyProp, DirectionProp } from '@vau/core';
 
 /**
  * Интерфейс свойств компонента VFlex
@@ -7,4 +7,4 @@ import type { IFlexAlignProp, IFlexJustifyProp, IDirectionProp } from '../../typ
 export type IVFlexProps = {
   wrap?: boolean;
   gap?: number | [number, number];
-} & Partial<IFlexAlignProp> & Partial<IFlexJustifyProp> & Partial<IDirectionProp>;
+} & Partial<FlexAlignProp> & Partial<FlexJustifyProp> & Partial<DirectionProp>;

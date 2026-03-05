@@ -1,5 +1,5 @@
 import type { IVInputPasswordNativeType } from '../types';
-import { InputNativeTypes } from '../../../../constants';
+import { InputNativeTypes } from '@vau/core';
 import { ref } from 'vue';
 
 export function useInputPassword () {

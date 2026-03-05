@@ -1,4 +1,4 @@
-import type { ISizeProp, IThemeProp, Maybe, MaybeNull, ValueOf } from '../../../types';
+import type { SizeProp, ThemeProp, Maybe, MaybeNull, ValueOf } from '../../../types';
 import type { EmitFn, MaybeRefOrGetter, VNode } from 'vue';
 import { InputModes, InputNativeTypes, InputTypes } from '../../../constants';
 
@@ -13,7 +13,7 @@ export type InputBaseProps = {
   disabled?: boolean;
   readonly?: boolean;
   autocomplete?: AutoFill;
-} & Partial<IThemeProp> & Partial<ISizeProp>;
+} & Partial<ThemeProp> & Partial<SizeProp>;
 
 export interface InputNativeProps extends InputBaseProps {
   nativeType?: InputNativeType;

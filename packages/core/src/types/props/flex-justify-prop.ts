@@ -1,8 +1,8 @@
 import type { ValueOf } from '../value-of';
 import { FlexJustify } from '../../constants';
 
-export type IFlexJustify = ValueOf<typeof FlexJustify>;
+export type _FlexJustify = ValueOf<typeof FlexJustify>;
 
-export interface IFlexJustifyProp {
-  justify: IFlexJustify;
+export interface FlexJustifyProp {
+  justify: _FlexJustify;
 }

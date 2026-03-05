@@ -1,4 +1,4 @@
-import type { IThemeProp, ISizeProp, IDirectionProp } from '../../types';
+import type { ThemeProp, SizeProp, DirectionProp } from '@vau/core';
 
 /**
  * Интерфейс свойств компонента VButton
@@ -10,10 +10,10 @@ export type IVButtonProps = {
   plain?: boolean;
   wide?: boolean;
   type?: HTMLButtonElement['type'];
-} & Partial<IThemeProp> & Partial<ISizeProp>;
+} & Partial<ThemeProp> & Partial<SizeProp>;
 
 /**
  * Интерфейс свойств компонента VButtonGroup
  * @interface IVButtonGroupProps
  */
-export type IVButtonGroupProps = Partial<IDirectionProp>;
+export type IVButtonGroupProps = Partial<DirectionProp>;

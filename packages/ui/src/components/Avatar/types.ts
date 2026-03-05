@@ -1,4 +1,4 @@
-import type { ISizeProp, IThemeProp } from '../../types';
+import type { SizeProp, ThemeProp } from '@vau/core';
 
 /**
  * Интерфейс свойств компонента VAvatar
@@ -9,4 +9,4 @@ export type IVAvatarProps = {
   fallback?: string;
   circle?: boolean;
   label?: string;
-} & Partial<ISizeProp> & Partial<IThemeProp>;
+} & Partial<SizeProp> & Partial<ThemeProp>;

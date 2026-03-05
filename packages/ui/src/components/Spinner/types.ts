@@ -1,4 +1,4 @@
-import type { ISizeProp, IThemeProp } from '../../types';
+import type { SizeProp, ThemeProp } from '@vau/core';
 
 /**
  * Интерфейс свойств компонента VSpinner
@@ -6,4 +6,4 @@ import type { ISizeProp, IThemeProp } from '../../types';
  */
 export type IVSpinnerProps = {
 
-} & Partial<ISizeProp> & Partial<IThemeProp>;
+} & Partial<SizeProp> & Partial<ThemeProp>;

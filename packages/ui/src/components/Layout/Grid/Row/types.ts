@@ -1,4 +1,4 @@
-import type { IFlexAlignProp, IFlexJustifyProp } from '../../../../types';
+import type { FlexAlignProp, FlexJustifyProp } from '@vau/core';
 
 /**
  * Интерфейс свойств компонента VRow
@@ -8,4 +8,4 @@ export type IVRowProps = {
   wrap?: boolean;
   guttersX?: boolean;
   guttersY?: boolean;
-} & Partial<IFlexAlignProp> & Partial<IFlexJustifyProp>;
+} & Partial<FlexAlignProp> & Partial<FlexJustifyProp>;

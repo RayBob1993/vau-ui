@@ -1,5 +1,4 @@
-import type { ISizeProp, IThemeProp } from '../../types';
-import type { UnscopedSlot } from '@vau/core';
+import type { SizeProp, ThemeProp, UnscopedSlot } from '@vau/core';
 
 /**
  * Интерфейс свойств компонента VBadge
@@ -10,7 +9,7 @@ export type IVBadgeProps = {
   hidden?: boolean;
   max?: number;
   value?: string | number;
-} & Partial<IThemeProp> & Partial<ISizeProp>;
+} & Partial<ThemeProp> & Partial<SizeProp>;
 
 /**
  * Интерфейс слотов компонента VBadge

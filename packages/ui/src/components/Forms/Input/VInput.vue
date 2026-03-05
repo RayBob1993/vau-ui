@@ -1,7 +1,7 @@
 <script lang="ts" setup>
   import type { IVInputExpose, IVInputModelValue, IVInputNative, IVInputProps, IVInputSlots } from './types';
   import { useInput } from './composables';
-  import { InputModes, InputNativeTypes, InputTypes } from '../../../constants';
+  import { InputModes, InputNativeTypes, InputTypes } from '@vau/core';
   import { useTemplateRef } from 'vue';
 
   const props = withDefaults(defineProps<IVInputProps>(), {

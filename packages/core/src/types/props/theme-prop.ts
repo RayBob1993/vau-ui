@@ -1,8 +1,8 @@
 import type { ValueOf } from '../value-of';
 import { Themes } from '../../constants';
 
-export type ITheme = ValueOf<typeof Themes>;
+export type Theme = ValueOf<typeof Themes>;
 
-export interface IThemeProp {
-  theme: ITheme;
+export interface ThemeProp {
+  theme: Theme;
 }

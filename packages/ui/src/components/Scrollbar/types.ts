@@ -1,5 +1,5 @@
 import type { TemplateRef } from 'vue';
-import type { ISizeProp, IThemeProp } from '../../types';
+import type { SizeProp, ThemeProp } from '@vau/core';
 
 /**
  * Интерфейс свойств компонента VScrollbar
@@ -13,7 +13,7 @@ export type IVScrollbarProps = {
   debounceDelay?: number;
   draggable?: boolean;
   hidden?: boolean;
-} & Partial<ISizeProp> & Partial<IThemeProp>;
+} & Partial<SizeProp> & Partial<ThemeProp>;
 
 /**
  * Интерфейс событий компонента VScrollbar

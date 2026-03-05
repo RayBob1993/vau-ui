@@ -1,5 +1,4 @@
-import type { ISizeProp, IThemeProp } from '../../types';
-import type { UnscopedSlot } from '@vau/core';
+import type { SizeProp, ThemeProp, UnscopedSlot } from '@vau/core';
 
 /**
  * Интерфейс свойств компонента VAlert
@@ -9,7 +8,7 @@ export type IVAlertProps = {
   title?: string;
   description?: string;
   showIcon?: boolean;
-} & Partial<IThemeProp> & Partial<ISizeProp>;
+} & Partial<ThemeProp> & Partial<SizeProp>;
 
 /**
  * Интерфейс слотов компонента VAlert

@@ -1,4 +1,4 @@
-import type { ISizeProp, IThemeProp } from '../../types';
+import type { SizeProp, ThemeProp } from '@vau/core';
 
 /**
  * Интерфейс свойств компонента VText
@@ -9,4 +9,4 @@ export type IVTextProps = {
   uppercase?: boolean;
   underline?: boolean;
   content?: string | number;
-} & Partial<IThemeProp> & Partial<ISizeProp>;
+} & Partial<ThemeProp> & Partial<SizeProp>;

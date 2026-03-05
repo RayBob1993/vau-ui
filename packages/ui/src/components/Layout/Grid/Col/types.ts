@@ -1,4 +1,4 @@
-import type { ISizeProp } from '../../../../types';
+import type { SizeProp } from '@vau/core';
 
 export type ISizeValues = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12;
 
@@ -11,4 +11,4 @@ export type IOffsetSize = ISizeValues;
 export type IVColProps = {
   order?: number;
   offset?: IOffsetSize;
-} & Partial<ISizeProp>;
+} & Partial<SizeProp>;

@@ -1,7 +1,15 @@
-import type { ISizeProp, IThemeProp } from '../../../types';
-import type { Maybe, MaybeNull, ValueOf, UnscopedSlot } from '@vau/core';
 import type { TemplateRef } from 'vue';
-import { InputModes, InputNativeTypes, InputTypes } from '../../../constants';
+import  {
+  type SizeProp,
+  type ThemeProp,
+  type Maybe,
+  type MaybeNull,
+  type ValueOf,
+  type UnscopedSlot,
+  InputModes,
+  InputNativeTypes,
+  InputTypes
+} from '@vau/core';
 
 export type IVInputModelValue = MaybeNull<Maybe<string>>;
 
@@ -19,7 +27,7 @@ export type IVInputBaseProps = {
   readonly?: boolean;
   autocomplete?: string;
   clearable?: boolean;
-} & Partial<IThemeProp> & Partial<ISizeProp>;
+} & Partial<ThemeProp> & Partial<SizeProp>;
 
 /**
  * Интерфейс свойств компонента VInput

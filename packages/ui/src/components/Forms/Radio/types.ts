@@ -1,5 +1,4 @@
-import type { ISizeProp, IThemeProp, IDirectionProp } from '../../../types';
-import type { Maybe } from '@vau/core';
+import type { SizeProp, ThemeProp, DirectionProp, Maybe } from '@vau/core';
 
 export type IVRadioValue = number | string;
 export type IVRadioModelValue = Maybe<IVRadioValue>;
@@ -11,10 +10,10 @@ export type IVRadioModelValue = Maybe<IVRadioValue>;
 export type IVRadioProps = {
   disabled?: boolean;
   value: IVRadioValue;
-} & Partial<IThemeProp> & Partial<ISizeProp>;
+} & Partial<ThemeProp> & Partial<SizeProp>;
 
 /**
  * Интерфейс свойств компонента VRadioGroup
  * @interface IVRadioGroupProps
  */
-export type IVRadioGroupProps = Partial<IDirectionProp>;
+export type IVRadioGroupProps = Partial<DirectionProp>;

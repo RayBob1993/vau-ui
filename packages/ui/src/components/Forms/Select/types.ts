@@ -1,6 +1,5 @@
 import type { ComputedRef, ModelRef, VNode } from 'vue';
-import type { ISizeProp, IThemeProp } from '../../../types';
-import type { Maybe, MaybeArray, MaybeNull } from '@vau/core';
+import type { SizeProp, ThemeProp, Maybe, MaybeArray, MaybeNull } from '@vau/core';
 
 export type IVOptionValue = string | number;
 
@@ -43,7 +42,7 @@ export type IVSelectProps = {
   searchable?: boolean;
   loading?: boolean;
   placeholder?: string;
-} & Partial<IThemeProp> & Partial<ISizeProp>;
+} & Partial<ThemeProp> & Partial<SizeProp>;
 
 /**
  * Интерфейс событий компонента VSelect

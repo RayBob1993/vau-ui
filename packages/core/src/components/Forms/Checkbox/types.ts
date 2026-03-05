@@ -1,5 +1,5 @@
 import type { MaybeRefOrGetter, VNode } from 'vue';
-import type { IDirectionProp, ISizeProp, IThemeProp } from '../../../types';
+import type { DirectionProp, SizeProp, ThemeProp } from '../../../types';
 
 export type CheckboxValue = number | string;
 export type CheckboxModelValue = boolean | Array<CheckboxValue>;
@@ -8,7 +8,7 @@ export type CheckboxProps = {
   disabled?: boolean;
   indeterminate?: boolean;
   value?: CheckboxValue;
-} & Partial<IThemeProp> & Partial<ISizeProp>;
+} & Partial<ThemeProp> & Partial<SizeProp>;
 
 export interface CheckboxEmits {
   change: [payload: CheckboxValue];
@@ -36,4 +36,4 @@ export interface CheckboxIndicatorSlots {
   default?: (props: CheckboxIndicatorScopedSlots) => Array<VNode>;
 }
 
-export type CheckboxGroupProps = Partial<IDirectionProp>;
+export type CheckboxGroupProps = Partial<DirectionProp>;

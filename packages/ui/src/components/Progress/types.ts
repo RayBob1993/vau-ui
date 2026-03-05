@@ -1,4 +1,4 @@
-import type { ISizeProp, IThemeProp } from '../../types';
+import type { SizeProp, ThemeProp } from '@vau/core';
 
 /**
  * Интерфейс свойств компонента VProgress
@@ -8,4 +8,4 @@ export type IVProgressProps = {
   indeterminate?: boolean;
   showValue?: boolean;
   value: number;
-} & Partial<IThemeProp> & Partial<ISizeProp>;
+} & Partial<ThemeProp> & Partial<SizeProp>;

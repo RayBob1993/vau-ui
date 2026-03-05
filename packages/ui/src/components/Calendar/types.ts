@@ -1,8 +1,8 @@
-import type { IThemeProp, ISizeProp } from '../../types';
+import type { ThemeProp, SizeProp } from '@vau/core';
 
 /**
  * Интерфейс свойств компонента VCalendar
  * @interface IVCalendarProps
  */
 export type IVCalendarProps = {
-} & Partial<IThemeProp> & Partial<ISizeProp>;
+} & Partial<ThemeProp> & Partial<SizeProp>;

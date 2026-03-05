@@ -1,8 +1,8 @@
-import type { ISizeProp } from '../../types';
+import type { SizeProp } from '../../types';
 
 export type ModalProps = {
 
-} & Partial<ISizeProp>;
+} & Partial<SizeProp>;
 
 export interface ModalEmits {
   opened: [payload: Element];

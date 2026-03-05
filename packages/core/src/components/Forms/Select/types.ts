@@ -1,4 +1,4 @@
-import type { ISizeProp, IThemeProp, Maybe, MaybeArray, MaybeNull } from '../../../types';
+import type { SizeProp, ThemeProp, Maybe, MaybeArray, MaybeNull } from '../../../types';
 import type { VNode, MaybeRefOrGetter } from 'vue';
 
 export type OptionValue = string | number;
@@ -30,7 +30,7 @@ export type SelectProps = {
   searchable?: boolean;
   loading?: boolean;
   placeholder?: string;
-} & Partial<IThemeProp> & Partial<ISizeProp>;
+} & Partial<ThemeProp> & Partial<SizeProp>;
 
 export interface SelectEmits {
   change: [payload: SelectModelValue];

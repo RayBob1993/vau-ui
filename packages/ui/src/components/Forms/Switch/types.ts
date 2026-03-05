@@ -1,4 +1,4 @@
-import type { ISizeProp, IThemeProp } from '../../../types';
+import type { SizeProp, ThemeProp } from '@vau/core';
 
 /**
  * Интерфейс свойств компонента VSwitch
@@ -6,4 +6,4 @@ import type { ISizeProp, IThemeProp } from '../../../types';
  */
 export type IVSwitchProps = {
   disabled?: boolean;
-} & Partial<IThemeProp> & Partial<ISizeProp>;
+} & Partial<ThemeProp> & Partial<SizeProp>;

@@ -1,4 +1,4 @@
-import type { ISizeProp } from '../../types';
+import type { SizeProp } from '@vau/core';
 import type { VNode } from 'vue';
 
 /**
@@ -9,7 +9,7 @@ export type IVModalProps = {
   appendToBody?: boolean;
   title?: string;
   destroyOnClose?: boolean;
-} & Partial<ISizeProp>;
+} & Partial<SizeProp>;
 
 /**
  * Интерфейс событий компонента VModal

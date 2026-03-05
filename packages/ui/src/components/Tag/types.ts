@@ -1,4 +1,4 @@
-import type { ISizeProp, IThemeProp } from '../../types';
+import type { SizeProp, ThemeProp } from '@vau/core';
 
 /**
  * Интерфейс свойств компонента VTag
@@ -6,7 +6,7 @@ import type { ISizeProp, IThemeProp } from '../../types';
  */
 export type IVTagProps = {
   canDelete?: boolean;
-} & Partial<IThemeProp> & Partial<ISizeProp>;
+} & Partial<ThemeProp> & Partial<SizeProp>;
 
 /**
  * Интерфейс событий компонента VTag

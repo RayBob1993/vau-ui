@@ -1,8 +1,8 @@
 import type { ValueOf } from '../value-of';
 import { FlexAlign } from '../../constants';
 
-export type IFlexAlign = ValueOf<typeof FlexAlign>;
+export type _FlexAlign = ValueOf<typeof FlexAlign>;
 
-export interface IFlexAlignProp {
-  align: IFlexAlign;
+export interface FlexAlignProp {
+  align: _FlexAlign;
 }

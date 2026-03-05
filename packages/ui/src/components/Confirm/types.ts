@@ -1,4 +1,4 @@
-import type { ISizeProp, IThemeProp } from '../../types';
+import type { SizeProp, ThemeProp } from '@vau/core';
 import type { VNode } from 'vue';
 
 /**
@@ -11,7 +11,7 @@ export type IVConfirmProps = {
   useHtml?: boolean;
   confirmText?: string;
   cancelText?: string;
-} & Partial<IThemeProp> & Partial<ISizeProp>;
+} & Partial<ThemeProp> & Partial<SizeProp>;
 
 /**
  * Интерфейс событий компонента VConfirm

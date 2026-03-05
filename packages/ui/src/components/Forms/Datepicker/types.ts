@@ -1,4 +1,4 @@
-import type { ISizeProp, IThemeProp } from '../../../types';
+import type { SizeProp, ThemeProp } from '@vau/core';
 
 /**
  * Интерфейс свойств компонента VDatepicker
@@ -11,4 +11,4 @@ export type IVDatepickerProps = {
   showWeekNumber?: boolean;
   valueFormat?: string;
   format?: string;
-} & Partial<IThemeProp> & Partial<ISizeProp>;
+} & Partial<ThemeProp> & Partial<SizeProp>;
