@@ -1,27 +1,16 @@
 <script setup lang="ts">
-  import type { IVTagProps, IVTagEmits } from './types';
+  import  { Tag, type TagProps, type TagEmits } from '@vau/core';
 
-  defineProps<IVTagProps>();
+  const props = defineProps<TagProps>();
 
-  const emit = defineEmits<IVTagEmits>();
+  const emit = defineEmits<TagEmits>();
 </script>
 
 <template>
-  <div
-    class="v-tag"
-    :class="{
-      [`v-tag--size-${size}`]: size,
-      [`v-tag--theme-${theme}`]: theme
-    }"
+  <Tag.Root
+    v-bind="props"
+    v-on="emit"
   >
     <slot/>
-
-    <button
-      v-if="canDelete"
-      type="button"
-      @click="emit('delete')"
-    >
-      X
-    </button>
-  </div>
+  </Tag.Root>
 </template>
