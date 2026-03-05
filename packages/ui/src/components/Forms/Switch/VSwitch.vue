@@ -1,32 +1,22 @@
 <script lang="ts" setup>
-  import type { IVSwitchProps } from './types';
-  import { useSwitch } from './composables';
+  import { Switch, type SwitchProps, type SwitchModelValue } from '@vau/core';
 
-  const props = defineProps<IVSwitchProps>();
+  const props = defineProps<SwitchProps>();
 
-  const modelValue = defineModel<boolean>({
+  const modelValue = defineModel<SwitchModelValue>({
     required: true,
-  });
-
-  const { isDisabled, validationStatus } = useSwitch({
-    props
   });
 </script>
 
 <template>
-  <div
-    class="v-switch"
-    :class="{
-      'v-switch--disabled': isDisabled,
-      'v-switch--invalid': validationStatus?.isError,
-      'v-switch--valid': validationStatus?.isSuccess
-    }"
+  <Switch.Root
+    v-bind="props"
+    v-model="modelValue"
   >
-    <input
-      v-model="modelValue"
-      type="checkbox"
-      :disabled="isDisabled"
-      class="v-switch__native"
-    >
-  </div>
+    <Switch.Indicator/>
+
+    <Switch.Title>
+      <slot/>
+    </Switch.Title>
+  </Switch.Root>
 </template>

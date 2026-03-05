@@ -1,16 +1,11 @@
 <script setup lang="ts">
-  import type { IVCheckboxGroupProps } from './types';
+  import { Checkbox, type CheckboxGroupProps } from '@vau/core';
 
-  defineProps<IVCheckboxGroupProps>();
+  const props = defineProps<CheckboxGroupProps>();
 </script>
 
 <template>
-  <div
-    class="v-checkbox-group"
-    :class="{
-      [`v-checkbox-group--direction-${direction}`]: direction
-    }"
-  >
+  <Checkbox.Group v-bind="props">
     <slot/>
-  </div>
+  </Checkbox.Group>
 </template>

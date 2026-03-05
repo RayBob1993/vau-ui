@@ -1,39 +1,22 @@
 <script lang="ts" setup>
-  import type { IVRadioProps, IVRadioModelValue } from './types';
-  import { useRadio } from './composables';
+  import { Radio, type RadioProps, type RadioModelValue } from '@vau/core';
 
-  const props = defineProps<IVRadioProps>();
+  const props = defineProps<RadioProps>();
 
-  const modelValue = defineModel<IVRadioModelValue>({
+  const modelValue = defineModel<RadioModelValue>({
     required: true
-  });
-
-  const { isDisabled, isChecked, validationStatus } = useRadio({
-    props,
-    modelValue: () => modelValue.value
   });
 </script>
 
 <template>
-  <label
-    class="v-radio"
-    :class="{
-      'v-radio--active': isChecked,
-      'v-radio--disabled': isDisabled,
-      'v-radio--invalid': validationStatus?.isError,
-      'v-radio--valid': validationStatus?.isSuccess
-    }"
+  <Radio.Root
+    v-bind="props"
+    v-model="modelValue"
   >
-    <input
-      v-model="modelValue"
-      type="radio"
-      :disabled="isDisabled"
-      :value="value"
-      class="v-radio__native"
-    >
+    <Radio.Indicator/>
 
-    <span class="v-radio__label">
+    <Radio.Title>
       <slot/>
-    </span>
-  </label>
+    </Radio.Title>
+  </Radio.Root>
 </template>

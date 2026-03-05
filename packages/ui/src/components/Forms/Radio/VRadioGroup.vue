@@ -1,16 +1,11 @@
 <script setup lang="ts">
-  import type { IVRadioGroupProps } from './types';
+  import { Radio, type RadioGroupProps } from '@vau/core';
 
-  defineProps<IVRadioGroupProps>();
+  const props = defineProps<RadioGroupProps>();
 </script>
 
 <template>
-  <div
-    class="v-radio-group"
-    :class="{
-      [`v-radio-group--direction-${direction}`]: direction
-    }"
-  >
+  <Radio.Group v-bind="props">
     <slot/>
-  </div>
+  </Radio.Group>
 </template>

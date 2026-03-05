@@ -1,16 +1,11 @@
 <script setup lang="ts">
-  import type { IVButtonGroupProps } from './types';
+  import { Button, type ButtonGroupProps } from '@vau/core';
 
-  defineProps<IVButtonGroupProps>();
+  const props = defineProps<ButtonGroupProps>();
 </script>
 
 <template>
-  <div
-    class="v-button-group"
-    :class="{
-      [`v-button-group--direction-${direction}`]: direction
-    }"
-  >
+  <Button.Group v-bind="props">
     <slot/>
-  </div>
+  </Button.Group>
 </template>
