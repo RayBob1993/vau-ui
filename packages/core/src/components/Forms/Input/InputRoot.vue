@@ -27,7 +27,7 @@
     formItemContext: FormItemContext,
     modelValue: () => modelValue.value,
     props: () => props,
-    onSetValue: value => {
+    onUpdateModelValue: value => {
       modelValue.value = value;
     }
   });

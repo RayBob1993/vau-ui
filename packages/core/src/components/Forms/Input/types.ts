@@ -13,7 +13,7 @@ export type InputBaseProps = {
   disabled?: boolean;
   readonly?: boolean;
   autocomplete?: AutoFill;
-} & Partial<ThemeProp> & Partial<SizeProp>;
+};
 
 export interface InputNativeProps extends InputBaseProps {
   nativeType?: InputNativeType;
@@ -28,7 +28,7 @@ export interface InputTextareaProps extends InputBaseProps {
 export type InputProps = {
   type?: InputType;
   clearable?: boolean;
-} & InputBaseProps & Partial<InputNativeProps> & Partial<InputTextareaProps>;
+} & InputBaseProps & Partial<InputNativeProps> & Partial<InputTextareaProps> & Partial<ThemeProp> & Partial<SizeProp>;
 
 export interface InputScopedSlot {
   isTextarea: boolean;

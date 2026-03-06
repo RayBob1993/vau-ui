@@ -10,7 +10,7 @@ export interface UseInputRootOptions {
   formItemContext: MaybeNull<FormItemContext>;
   modelValue: MaybeRefOrGetter<InputModelValue>;
   props: MaybeRefOrGetter<InputProps>;
-  onSetValue?: (value: InputModelValue) => void;
+  onUpdateModelValue?: (value: InputModelValue) => void;
 }
 
 export function useInputRoot (options: UseInputRootOptions) {
@@ -31,7 +31,7 @@ export function useInputRoot (options: UseInputRootOptions) {
   const hasValue = computed<boolean>(() => Boolean(toValue(options.modelValue)?.trim()));
 
   function setModelValue (value: InputModelValue) {
-    options.onSetValue?.(value);
+    options.onUpdateModelValue?.(value);
   }
 
   return {
