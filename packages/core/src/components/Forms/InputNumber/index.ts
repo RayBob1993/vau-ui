@@ -8,4 +8,5 @@ export const InputNumber = {
   Button
 };
 
+export * from './constants';
 export * from './types';
