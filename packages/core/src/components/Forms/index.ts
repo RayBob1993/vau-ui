@@ -8,3 +8,4 @@ export * from './InputNumber';
 export * from './InputPassword';
 export * from './InputCode';
 export * from './InputTags';
+export * from './InputRange';

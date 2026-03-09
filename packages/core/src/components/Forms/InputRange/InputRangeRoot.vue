@@ -1,0 +1,40 @@
+<script setup lang="ts">
+  import type { InputRangeModelValue, InputRangeProps } from './types';
+  import { useInputRangeRoot } from './composables';
+  import { InputRangeRootContextKey } from './context';
+  import { useFormContext } from '../Form/context';
+  import { provide } from 'vue';
+
+  const props = defineProps<InputRangeProps>();
+
+  const modelValue = defineModel<InputRangeModelValue>({
+    required: true,
+  });
+
+  const { FormRootContext, FormItemContext, isValid, isInvalid } = useFormContext();
+
+  const { isDisabled } = useInputRangeRoot({
+    formRootContext: FormRootContext,
+    formItemContext: FormItemContext,
+    modelValue: () => modelValue.value,
+    props: () => props
+  });
+
+  provide(InputRangeRootContextKey, {
+    props: () => props,
+    isDisabled: () => isDisabled.value,
+  });
+</script>
+
+<template>
+  <div
+    class="input-range"
+    :class="{
+      'input-range--disabled': isDisabled,
+      'input-range--invalid': isInvalid,
+      'input-range--valid': isValid
+    }"
+  >
+    <slot/>
+  </div>
+</template>
