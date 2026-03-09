@@ -14,8 +14,8 @@ export function useAffix (options: IUseAffixOptions) {
   const container = shallowRef<HTMLElement>();
   const stickySidebar = shallowRef<Affix>();
 
-  const offsetTop = computed<number>(() => isNumber(options.props.offsetTop) ? options.props.offsetTop : AFFIX_OFFSET_TOP);
-  const offsetBottom = computed<number>(() => isNumber(options.props.offsetBottom) ? options.props.offsetBottom : AFFIX_OFFSET_BOTTOM);
+  const offsetTop = computed<number>(() => isNumber(options.props?.offsetTop) ? options.props.offsetTop : AFFIX_OFFSET_TOP);
+  const offsetBottom = computed<number>(() => isNumber(options.props?.offsetBottom) ? options.props.offsetBottom : AFFIX_OFFSET_BOTTOM);
 
   function setContainer () {
     if (options.props.container) {

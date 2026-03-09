@@ -22,6 +22,7 @@ export function useInputRoot (options: UseInputRootOptions) {
     return Boolean(
       options.formRootContext?.props.disabled ||
       options.formItemContext?.props.disabled ||
+      props.value?.loading ||
       props.value?.disabled
     );
   });

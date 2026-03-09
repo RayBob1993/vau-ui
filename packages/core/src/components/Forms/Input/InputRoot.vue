@@ -54,6 +54,7 @@
       'input--textarea': isTextarea,
       'input--filled': hasValue,
       'input--disabled': isDisabled,
+      'input--loading': loading,
       'input--invalid': isInvalid,
       'input--valid': isValid
     }"
@@ -62,6 +63,7 @@
       :is-textarea="isTextarea"
       :is-focus="isFocus"
       :has-value="hasValue"
+      :loading="Boolean(loading)"
       :is-invalid="isInvalid"
       :is-valid="isValid"
     />

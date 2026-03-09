@@ -12,7 +12,7 @@ export function useInputNative (options: UseInputNativeOptions) {
   const props = computed<InputNativeProps>(() => ({
     disabled: Boolean(toValue(options.inputRootContext?.isDisabled)),
     placeholder: inputRootProps.value?.placeholder,
-    type: inputRootProps.value?.nativeType,
+    nativeType: inputRootProps.value?.nativeType,
     inputMode: inputRootProps.value?.inputMode,
     readonly: inputRootProps.value?.readonly,
     autocomplete: inputRootProps.value?.autocomplete,

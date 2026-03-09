@@ -19,7 +19,7 @@ export interface IUseScrollbarOptions {
 export function useScrollbar (options: IUseScrollbarOptions) {
   const infiniteScrollOffset = toRef<number>(options.props?.infiniteScrollOffset || SCROLLBAR_INFINITE_SCROLL_OFFSET);
   const draggableMultiplier = toRef<number>(options.props?.draggableMultiplier || SCROLLBAR_DRAGGABLE_MULTIPLIER);
-  const debounceDelay = toRef<number>(isNumber(options.props.debounceDelay) ? options.props.debounceDelay : SCROLLBAR_DEBOUNCE_DELAY);
+  const debounceDelay = toRef<number>(isNumber(options.props?.debounceDelay) ? options.props.debounceDelay : SCROLLBAR_DEBOUNCE_DELAY);
 
   const [isGrabbing, setGrabbing] = useToggle();
   const [isDown, setDown] = useToggle();
@@ -33,7 +33,7 @@ export function useScrollbar (options: IUseScrollbarOptions) {
   const handleScroll = debounce((event: Event) => {
     options?.onScroll?.(event);
 
-    if (!options.props.draggable) {
+    if (!options.props?.draggable) {
       scrollTop.value = getScrollbarScrollTop();
       scrollLeft.value = getScrollbarScrollLeft();
     }
@@ -46,20 +46,20 @@ export function useScrollbar (options: IUseScrollbarOptions) {
     const scrollBottom: number = scrollTop.value + scrollbarHeight;
     const scrollRight: number = scrollLeft.value + scrollbarWidth;
 
-    const isScrollEndY: boolean = Boolean(options.props.vertical && (contentScrollHeight - scrollBottom <= infiniteScrollOffset.value));
-    const isScrollEndX: boolean = Boolean(options.props.horizontal && (contentScrollWidth - scrollRight <= infiniteScrollOffset.value));
+    const isScrollEndY: boolean = Boolean(options.props?.vertical && (contentScrollHeight - scrollBottom <= infiniteScrollOffset.value));
+    const isScrollEndX: boolean = Boolean(options.props?.horizontal && (contentScrollWidth - scrollRight <= infiniteScrollOffset.value));
 
     if (isScrollEndY) {
-      options?.onScrollEndY?.();
+      options.onScrollEndY?.();
     }
 
     if (isScrollEndX) {
-      options?.onScrollEndX?.();
+      options.onScrollEndX?.();
     }
   }, debounceDelay.value);
 
   const handleMousemove = throttle((event: MouseEvent) => {
-    options?.onMousemove?.(event);
+    options.onMousemove?.(event);
 
     if (!options.props.draggable) {
       return;
@@ -109,7 +109,7 @@ export function useScrollbar (options: IUseScrollbarOptions) {
   }
 
   function handleMouseleave (event: MouseEvent) {
-    options?.onMouseleave?.(event);
+    options.onMouseleave?.(event);
 
     if (!options.props.draggable) {
       return;
@@ -120,7 +120,7 @@ export function useScrollbar (options: IUseScrollbarOptions) {
   }
 
   function handleMouseup (event: MouseEvent) {
-    options?.onMouseup?.(event);
+    options.onMouseup?.(event);
 
     if (!options.props.draggable) {
       return;

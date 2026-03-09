@@ -28,18 +28,22 @@ export interface InputTextareaProps extends InputBaseProps {
 export type InputProps = {
   type?: InputType;
   clearable?: boolean;
+  loading?: boolean;
 } & InputBaseProps & Partial<InputNativeProps> & Partial<InputTextareaProps> & Partial<ThemeProp> & Partial<SizeProp>;
 
 export interface InputScopedSlot {
   isTextarea: boolean;
   isFocus: boolean;
   hasValue: boolean;
+  loading: boolean;
   isValid: boolean;
   isInvalid: boolean;
 }
 
 export interface InputSlots {
   default?: (props: InputScopedSlot) => Array<VNode>;
+  before?: (props: InputScopedSlot) => Array<VNode>;
+  after?: (props: InputScopedSlot) => Array<VNode>;
 }
 
 export interface InputEmits {
