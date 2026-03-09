@@ -22,7 +22,7 @@
 
   const { FormRootContext, FormItemContext, isValid, isInvalid } = useFormContext();
 
-  const { isDisabled, isTextarea, hasValue, isFocus, setFocus, setModelValue } = useInputRoot({
+  const { isDisabled, isTextarea, hasValue, isFocus, setFocus, setModelValue, reset } = useInputRoot({
     formRootContext: FormRootContext,
     formItemContext: FormItemContext,
     modelValue: () => modelValue.value,
@@ -38,6 +38,7 @@
     modelValue: () => modelValue.value,
     setFocus,
     setModelValue,
+    reset,
     emit
   });
 

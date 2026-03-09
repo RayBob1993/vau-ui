@@ -76,6 +76,7 @@ export interface InputRootContext {
   isDisabled: MaybeRefOrGetter<boolean>;
   setFocus: (payload: boolean) => void;
   setModelValue: (value: InputModelValue) => void;
+  reset: VoidFunction;
   emit: EmitFn<InputEmits>;
 }
 

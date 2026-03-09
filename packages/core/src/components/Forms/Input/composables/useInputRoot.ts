@@ -35,12 +35,17 @@ export function useInputRoot (options: UseInputRootOptions) {
     options.onUpdateModelValue?.(value);
   }
 
+  function reset () {
+    setModelValue('');
+  }
+
   return {
     isFocus,
     isDisabled,
     isTextarea,
     hasValue,
     setFocus,
-    setModelValue
+    setModelValue,
+    reset
   };
 }
