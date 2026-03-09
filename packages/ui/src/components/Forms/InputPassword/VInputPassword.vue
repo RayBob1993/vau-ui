@@ -1,32 +1,16 @@
 <script lang="ts" setup>
-  import type { IVInputPasswordProps } from './types';
-  import type { IVInputModelValue } from '../Input/types';
-  import { useInputPassword } from './composables';
-  import { VInput } from '../Input';
+  import { InputPassword, type InputPasswordProps, type InputModelValue } from '@vau/core';
 
-  const props = defineProps<IVInputPasswordProps>();
+  const props = defineProps<InputPasswordProps>();
 
-  const modelValue = defineModel<IVInputModelValue>({
+  const modelValue = defineModel<InputModelValue>({
     required: true
   });
-
-  const { currentType, handleToggleType } = useInputPassword();
 </script>
 
 <template>
-  <v-input
+  <InputPassword.Root
     v-model="modelValue"
-    class="v-input-password"
-    :native-type="currentType"
     v-bind="props"
-  >
-    <template #after>
-      <button
-        type="button"
-        @click="handleToggleType"
-      >
-        @
-      </button>
-    </template>
-  </v-input>
+  />
 </template>
