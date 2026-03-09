@@ -5,7 +5,7 @@ import { INPUT_NUMBER_STEP } from '../constants';
 import { isNumber } from '../../../../utils';
 import { computed, type MaybeRefOrGetter, toValue } from 'vue';
 
-export interface UseInputNumberOptions {
+export interface UseInputNumberRootOptions {
   formRootContext: MaybeNull<FormRootContext>;
   formItemContext: MaybeNull<FormItemContext>;
   props: MaybeRefOrGetter<InputNumberProps>;
@@ -15,7 +15,7 @@ export interface UseInputNumberOptions {
   onUpdateModelValue?: (value: InputNumberModelValue) => void;
 }
 
-export function useInputNumber (options: UseInputNumberOptions) {
+export function useInputNumberRoot (options: UseInputNumberRootOptions) {
   const props = computed<InputNumberProps>(() => toValue(options.props));
 
   const modelValue = computed<InputNumberModelValue>(() => toValue(options.modelValue));

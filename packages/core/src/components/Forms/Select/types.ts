@@ -50,7 +50,7 @@ export interface SelectRootContext {
   modelValue: MaybeRefOrGetter<SelectModelValue>;
   isDisabled: MaybeRefOrGetter<boolean>;
   toggle: () => void;
-  handleChange: (value: OptionValue) => void;
+  setModelValue: (value: OptionValue) => void;
   registerOption: (option: OptionInstance) => void;
   unregisterOption: (id: string) => void;
 }

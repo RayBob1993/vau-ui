@@ -1,6 +1,6 @@
 import type { CheckboxProps, CheckboxModelValue } from '../types';
 import type { FormRootContext, FormItemContext } from '../../Form';
-import type { MaybeNull } from '../../../../types';
+import type { MaybeNull, Maybe } from '../../../../types';
 import { isBoolean } from '../../../../utils';
 import { computed, MaybeRefOrGetter, toValue } from 'vue';
 
@@ -8,13 +8,13 @@ export interface UseCheckboxRootOptions {
   formRootContext: MaybeNull<FormRootContext>;
   formItemContext: MaybeNull<FormItemContext>;
   props: MaybeRefOrGetter<CheckboxProps>;
-  modelValue: MaybeRefOrGetter<CheckboxModelValue>;
+  modelValue: MaybeRefOrGetter<Maybe<CheckboxModelValue>>;
 }
 
 export function useCheckboxRoot (options: UseCheckboxRootOptions) {
   const props = computed<CheckboxProps>(() => toValue(options.props));
 
-  const modelValue = computed<CheckboxModelValue>(() => toValue(options.modelValue));
+  const modelValue = computed<Maybe<CheckboxModelValue>>(() => toValue(options.modelValue));
 
   const isDisabled = computed<boolean>(() => {
     return Boolean(
@@ -36,11 +36,14 @@ export function useCheckboxRoot (options: UseCheckboxRootOptions) {
     return false;
   });
 
+  const isChecked = computed<boolean>(() => Boolean(isActive.value || props.value?.checked));
+
   const isIndeterminate = computed<boolean>(() => Boolean(props.value?.indeterminate));
 
   return {
     isActive,
     isDisabled,
+    isChecked,
     isIndeterminate
   };
 }

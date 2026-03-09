@@ -48,7 +48,7 @@ export function useSelectRoot (options: UseSelectRootOptions) {
     );
   });
 
-  function handleChange (value: OptionValue) {
+  function setModelValue (value: OptionValue) {
     if (isDisabled.value) {
       return;
     }
@@ -114,7 +114,7 @@ export function useSelectRoot (options: UseSelectRootOptions) {
     toggle,
     registerOption,
     unregisterOption,
-    handleChange,
+    setModelValue,
     reset
   };
 }

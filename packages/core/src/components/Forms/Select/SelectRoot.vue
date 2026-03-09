@@ -23,7 +23,7 @@
     toggle,
     registerOption,
     unregisterOption,
-    handleChange
+    setModelValue
   } = useSelectRoot({
     formRootContext: FormRootContext,
     formItemContext: FormItemContext,
@@ -51,7 +51,7 @@
     toggle,
     registerOption,
     unregisterOption,
-    handleChange
+    setModelValue
   });
 </script>
 

@@ -31,11 +31,7 @@ export function useSelectOption (options: UseSelectOptionOptions) {
   }));
 
   function handleChange (value: OptionValue) {
-    if (props.value?.disabled) {
-      return;
-    }
-
-    options.selectRootContext?.handleChange(value);
+    options.selectRootContext?.setModelValue(value);
   }
 
   watch(instance, newInstance => {

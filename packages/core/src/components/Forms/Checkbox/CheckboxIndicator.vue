@@ -29,6 +29,8 @@
       :is-indeterminate="isIndeterminate"
       :is-valid="isValid"
       :is-invalid="isInvalid"
-    />
+    >
+      {{ isActive ? '☑' : '□' }}
+    </slot>
   </span>
 </template>

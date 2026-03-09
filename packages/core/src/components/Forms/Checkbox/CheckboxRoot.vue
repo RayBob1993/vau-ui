@@ -9,13 +9,11 @@
 
   const emit = defineEmits<CheckboxEmits>();
 
-  const modelValue = defineModel<CheckboxModelValue>({
-    required: true
-  });
+  const modelValue = defineModel<CheckboxModelValue>();
 
   const { FormRootContext, FormItemContext, isValid, isInvalid } = useFormContext();
 
-  const { isActive, isDisabled, isIndeterminate } = useCheckboxRoot({
+  const { isChecked, isDisabled, isIndeterminate } = useCheckboxRoot({
     formRootContext: FormRootContext,
     formItemContext: FormItemContext,
     props: () => props,
@@ -35,7 +33,7 @@
   provide(CheckboxRootContextKey, {
     props: () => props,
     modelValue: () => modelValue.value,
-    isActive: () => isActive.value,
+    isActive: () => isChecked.value,
     isDisabled: () => isDisabled.value,
     isIndeterminate: () => isIndeterminate.value,
     isValid: () => isValid.value,
@@ -48,7 +46,7 @@
     class="checkbox"
     :class="{
       'checkbox--disabled': isDisabled,
-      'checkbox--active': isActive,
+      'checkbox--active': isChecked,
       'checkbox--indeterminate': isIndeterminate,
       'checkbox--invalid': isInvalid,
       'checkbox--valid': isValid
@@ -60,6 +58,7 @@
       :value="value"
       type="checkbox"
       :disabled="isDisabled"
+      :checked="isChecked"
       class="checkbox__input"
       v-on="emit"
     >

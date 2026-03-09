@@ -20,7 +20,7 @@
       type="button"
       @click="handleClear"
     >
-      x
+      ×
     </button>
   </div>
 </template>

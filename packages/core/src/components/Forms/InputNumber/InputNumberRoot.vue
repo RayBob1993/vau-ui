@@ -1,6 +1,6 @@
 <script setup lang="ts">
   import type { InputNumberProps, InputNumberModelValue } from './types';
-  import { useInputNumber } from './composables';
+  import { useInputNumberRoot } from './composables';
   import { INPUT_NUMBER_STEP, INPUT_NUMBER_VALUE_DEFAULT, INPUT_NUMBER_MIN, INPUT_NUMBER_MAX } from './constants';
   import { InputNumberRootContextKey } from './context';
   import { useFormContext } from '../Form/context';
@@ -26,7 +26,7 @@
     handleDecrement,
     handleIncrement,
     setModelValue
-  } = useInputNumber({
+  } = useInputNumberRoot({
     formRootContext: FormRootContext,
     formItemContext: FormItemContext,
     props: () => props,

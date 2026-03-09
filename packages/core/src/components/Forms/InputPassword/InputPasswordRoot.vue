@@ -41,7 +41,7 @@
           type="button"
           @click="handleToggleType"
         >
-          @
+          👁
         </button>
       </slot>
     </Input.After>
