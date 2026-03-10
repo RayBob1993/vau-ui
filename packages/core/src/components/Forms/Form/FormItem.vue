@@ -9,7 +9,7 @@
 
   const slots  = defineSlots<FormItemSlots>();
 
-  const FormRootContext = useFormRootContext();
+  const formRootContext = useFormRootContext();
 
   const {
     validationErrors,
@@ -22,7 +22,7 @@
     validate,
     clearValidateErrors
   } = useFormItem({
-    formRootContext: FormRootContext,
+    formRootContext,
     props: () => props,
     onValid: () => {
       emit('valid');

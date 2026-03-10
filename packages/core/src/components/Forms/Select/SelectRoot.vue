@@ -12,7 +12,7 @@
     required: true
   });
 
-  const { FormRootContext, FormItemContext, isValid, isInvalid } = useFormContext();
+  const { formRootContext, formItemContext, isValid, isInvalid } = useFormContext();
 
   const {
     activeOption,
@@ -25,8 +25,8 @@
     unregisterOption,
     setModelValue
   } = useSelectRoot({
-    formRootContext: FormRootContext,
-    formItemContext: FormItemContext,
+    formRootContext,
+    formItemContext,
     modelValue: () => modelValue.value,
     props: () => props,
     onChangeModel: value => {

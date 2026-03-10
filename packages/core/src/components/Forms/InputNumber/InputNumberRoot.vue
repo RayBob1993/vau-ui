@@ -16,7 +16,7 @@
     default: INPUT_NUMBER_VALUE_DEFAULT
   });
 
-  const { FormRootContext, FormItemContext, isValid, isInvalid } = useFormContext();
+  const { formRootContext, formItemContext, isValid, isInvalid } = useFormContext();
 
   const {
     step,
@@ -27,8 +27,8 @@
     handleIncrement,
     setModelValue
   } = useInputNumberRoot({
-    formRootContext: FormRootContext,
-    formItemContext: FormItemContext,
+    formRootContext,
+    formItemContext,
     props: () => props,
     modelValue: () => modelValue.value,
     onUpdateModelValue: value => {

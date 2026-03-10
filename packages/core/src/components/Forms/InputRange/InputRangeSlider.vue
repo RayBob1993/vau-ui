@@ -2,13 +2,16 @@
   import { useInputRangeSlider } from './composables';
   import { useInputRangeRootContext } from './context';
 
-  const InputRangeRootContext = useInputRangeRootContext();
+  const inputRangeRootContext = useInputRangeRootContext();
 
-  const {} = useInputRangeSlider({
-    inputRangeRootContext: InputRangeRootContext
+  const { isDisabled } = useInputRangeSlider({
+    inputRangeRootContext
   });
 </script>
 
 <template>
-  <div class="input-range-slider"/>
+  <div
+    class="input-range-slider"
+    :aria-disabled="isDisabled"
+  />
 </template>

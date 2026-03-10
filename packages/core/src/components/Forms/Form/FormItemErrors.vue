@@ -3,9 +3,9 @@
   import { useFormItemContext } from './context';
   import { computed } from 'vue';
 
-  const FormItemContext = useFormItemContext();
+  const formItemContext = useFormItemContext();
 
-  const errors = computed<Array<FormItemError>>(() => FormItemContext?.validationErrors.value ?? []);
+  const errors = computed<Array<FormItemError>>(() => formItemContext?.validationErrors.value ?? []);
 </script>
 
 <template>

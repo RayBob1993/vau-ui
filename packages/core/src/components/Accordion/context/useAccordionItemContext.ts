@@ -1,4 +1,6 @@
 import { AccordionItemContextKey } from './key';
 import { inject } from 'vue';
 
-export const useAccordionItemContext = () => inject(AccordionItemContextKey, null);
+export function useAccordionItemContext () {
+  return inject(AccordionItemContextKey, null);
+}

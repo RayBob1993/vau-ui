@@ -1,4 +1,6 @@
 import { InputCodeRootContextKey } from './key';
 import { inject } from 'vue';
 
-export const useInputCodeRootContext = () => inject(InputCodeRootContextKey, null);
+export function useInputCodeRootContext () {
+  return inject(InputCodeRootContextKey, null);
+}

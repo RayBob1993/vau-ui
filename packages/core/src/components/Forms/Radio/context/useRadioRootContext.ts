@@ -1,4 +1,6 @@
 import { RadioRootContextKey } from './key';
 import { inject } from 'vue';
 
-export const useRadioRootContext = () => inject(RadioRootContextKey, null);
+export function useRadioRootContext () {
+  return inject(RadioRootContextKey, null);
+}

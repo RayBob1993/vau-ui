@@ -1,4 +1,6 @@
 import { SwitchRootContextKey } from './key';
 import { inject } from 'vue';
 
-export const useSwitchRootContext = () => inject(SwitchRootContextKey, null);
+export function useSwitchRootContext () {
+  return inject(SwitchRootContextKey, null);
+}

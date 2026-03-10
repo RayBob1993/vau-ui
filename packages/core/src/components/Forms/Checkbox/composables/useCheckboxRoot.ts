@@ -2,7 +2,7 @@ import type { CheckboxProps, CheckboxModelValue } from '../types';
 import type { FormRootContext, FormItemContext } from '../../Form';
 import type { MaybeNull, Maybe } from '../../../../types';
 import { isBoolean } from '../../../../utils';
-import { computed, MaybeRefOrGetter, toValue } from 'vue';
+import { computed, type MaybeRefOrGetter, toValue } from 'vue';
 
 export interface UseCheckboxRootOptions {
   formRootContext: MaybeNull<FormRootContext>;

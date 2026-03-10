@@ -3,15 +3,15 @@ import { useFormItemContext } from './useFormItemContext';
 import { computed } from 'vue';
 
 export function useFormContext () {
-  const FormRootContext = useFormRootContext();
-  const FormItemContext = useFormItemContext();
+  const formRootContext = useFormRootContext();
+  const formItemContext = useFormItemContext();
 
-  const isValid = computed<boolean>(() => Boolean(FormItemContext?.validationStatus.value.isSuccess));
-  const isInvalid = computed<boolean>(() => Boolean(FormItemContext?.validationStatus.value.isError));
+  const isValid = computed<boolean>(() => Boolean(formItemContext?.validationStatus.value.isSuccess));
+  const isInvalid = computed<boolean>(() => Boolean(formItemContext?.validationStatus.value.isError));
 
   return {
-    FormRootContext,
-    FormItemContext,
+    formRootContext,
+    formItemContext,
     isValid,
     isInvalid
   };

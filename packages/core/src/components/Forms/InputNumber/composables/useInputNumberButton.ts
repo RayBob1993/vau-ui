@@ -1,7 +1,7 @@
 import type { InputNumberButtonProps, InputNumberRootContext } from '../types';
 import type { MaybeNull } from '../../../../types';
 import { INPUT_NUMBER_ACTIONS } from '../constants';
-import { computed, MaybeRefOrGetter, toValue } from 'vue';
+import { computed, type MaybeRefOrGetter, toValue } from 'vue';
 
 export interface UseInputNumberButtonOptions {
   inputNumberRootContext: MaybeNull<InputNumberRootContext>;

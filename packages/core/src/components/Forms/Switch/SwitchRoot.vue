@@ -11,11 +11,11 @@
     required: true,
   });
 
-  const { FormRootContext, FormItemContext, isValid, isInvalid } = useFormContext();
+  const { formRootContext, formItemContext, isValid, isInvalid } = useFormContext();
 
   const { isDisabled, isActive } = useSwitchRoot({
-    formRootContext: FormRootContext,
-    formItemContext: FormItemContext,
+    formRootContext,
+    formItemContext,
     props: () => props,
     modelValue: () => modelValue.value,
   });

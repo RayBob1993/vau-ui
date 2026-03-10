@@ -11,11 +11,11 @@
     required: true,
   });
 
-  const { FormRootContext, FormItemContext, isValid, isInvalid } = useFormContext();
+  const { formRootContext, formItemContext, isValid, isInvalid } = useFormContext();
 
   const { isDisabled } = useInputRangeRoot({
-    formRootContext: FormRootContext,
-    formItemContext: FormItemContext,
+    formRootContext,
+    formItemContext,
     modelValue: () => modelValue.value,
     props: () => props
   });

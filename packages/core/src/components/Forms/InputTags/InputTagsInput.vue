@@ -1,7 +1,12 @@
 <script setup lang="ts">
   import { useInputTagsInput } from './composables';
+  import { useInputTagsRootContext } from './context';
 
-  const { handleEnter, handleTab } = useInputTagsInput();
+  const inputTagsRootContext = useInputTagsRootContext();
+
+  const { handleEnter, handleTab } = useInputTagsInput({
+    inputTagsRootContext
+  });
 </script>
 
 <template>

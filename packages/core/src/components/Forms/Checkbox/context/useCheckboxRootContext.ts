@@ -1,4 +1,6 @@
 import { CheckboxRootContextKey } from './key';
 import { inject } from 'vue';
 
-export const useCheckboxRootContext = () => inject(CheckboxRootContextKey, null);
+export function useCheckboxRootContext () {
+  return inject(CheckboxRootContextKey, null);
+}

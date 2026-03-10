@@ -1,4 +1,6 @@
 import { AccordionRootContextKey } from './key';
 import { inject } from 'vue';
 
-export const useAccordionRootContext = () => inject(AccordionRootContextKey, null);
+export function useAccordionRootContext () {
+  return inject(AccordionRootContextKey, null);
+}

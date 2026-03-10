@@ -13,11 +13,11 @@
     required: true
   });
 
-  const { FormRootContext, FormItemContext, isValid, isInvalid } = useFormContext();
+  const { formRootContext, formItemContext, isValid, isInvalid } = useFormContext();
 
   const { isActive, isDisabled } = useRadioRoot({
-    formRootContext: FormRootContext,
-    formItemContext: FormItemContext,
+    formRootContext,
+    formItemContext,
     props: () => props,
     modelValue: () => modelValue.value
   });

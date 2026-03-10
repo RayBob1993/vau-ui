@@ -11,11 +11,11 @@
 
   const modelValue = defineModel<CheckboxModelValue>();
 
-  const { FormRootContext, FormItemContext, isValid, isInvalid } = useFormContext();
+  const { formRootContext, formItemContext, isValid, isInvalid } = useFormContext();
 
   const { isChecked, isDisabled, isIndeterminate } = useCheckboxRoot({
-    formRootContext: FormRootContext,
-    formItemContext: FormItemContext,
+    formRootContext,
+    formItemContext,
     props: () => props,
     modelValue: () => modelValue.value
   });

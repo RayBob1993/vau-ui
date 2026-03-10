@@ -1,4 +1,6 @@
 import { ModalRootContextKey } from './key';
 import { inject } from 'vue';
 
-export const useModalRootContext = () => inject(ModalRootContextKey, null);
+export function useModalRootContext () {
+  return inject(ModalRootContextKey, null);
+}

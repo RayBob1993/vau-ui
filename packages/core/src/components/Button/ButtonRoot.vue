@@ -5,11 +5,11 @@
 
   const props = defineProps<ButtonProps>();
 
-  const { FormRootContext, FormItemContext } = useFormContext();
+  const { formRootContext, formItemContext } = useFormContext();
 
   const { isDisabled } = useButtonRoot({
-    formRootContext: FormRootContext,
-    formItemContext: FormItemContext,
+    formRootContext,
+    formItemContext,
     props: () => props
   });
 </script>

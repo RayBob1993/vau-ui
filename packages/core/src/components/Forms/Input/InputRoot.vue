@@ -20,11 +20,11 @@
     required: true
   });
 
-  const { FormRootContext, FormItemContext, isValid, isInvalid } = useFormContext();
+  const { formRootContext, formItemContext, isValid, isInvalid } = useFormContext();
 
   const { isDisabled, isTextarea, hasValue, isFocus, setFocus, setModelValue, reset } = useInputRoot({
-    formRootContext: FormRootContext,
-    formItemContext: FormItemContext,
+    formRootContext,
+    formItemContext,
     modelValue: () => modelValue.value,
     props: () => props,
     onUpdateModelValue: value => {
