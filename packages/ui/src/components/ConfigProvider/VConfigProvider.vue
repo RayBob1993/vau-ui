@@ -1,18 +1,11 @@
 <script lang="ts" setup>
-  import type { IVConfigProviderProps } from './types';
-  import { VConfigProviderContextKey } from './context';
-  import { ru } from '../../locale';
-  import { provide } from 'vue';
+  import  { ConfigProvider, type ConfigProviderProps } from '@vau/core';
 
-  const props = withDefaults(defineProps<IVConfigProviderProps>(), {
-    locale: () => ru,
-    direction: 'ltr',
-    teleportTarget: 'body'
-  });
-
-  provide(VConfigProviderContextKey, props);
+  const props = defineProps<ConfigProviderProps>();
 </script>
 
 <template>
-  <slot/>
+  <ConfigProvider.Root v-bind="props">
+    <slot/>
+  </ConfigProvider.Root>
 </template>

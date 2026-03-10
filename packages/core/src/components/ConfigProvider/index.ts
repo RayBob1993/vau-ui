@@ -5,3 +5,4 @@ export const ConfigProvider = {
 };
 
 export * from './types';
+export * from './context';

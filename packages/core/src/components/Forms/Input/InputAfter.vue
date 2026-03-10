@@ -1,14 +1,12 @@
 <script lang="ts" setup>
   import { useInputRootContext } from './context';
-  import { computed, toValue } from 'vue';
+  import { useInputAfter } from './composables';
 
-  const InputRootContext = useInputRootContext();
+  const inputRootContext = useInputRootContext();
 
-  const isClearable = computed<boolean>(() => Boolean(toValue(InputRootContext?.props)?.clearable));
-
-  function handleClear () {
-    InputRootContext?.reset();
-  }
+  const { isClearable, handleClear } = useInputAfter({
+    inputRootContext
+  });
 </script>
 
 <template>

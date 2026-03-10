@@ -5,3 +5,4 @@ export * from './value-of';
 export * from './unscoped-slot';
 export * from './booleanish';
 export * from './props';
+export * from './locale-translation';

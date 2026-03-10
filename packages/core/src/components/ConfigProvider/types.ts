@@ -1,8 +1,5 @@
 import type { MaybeRefOrGetter } from 'vue';
-
-export interface LocaleTranslation {
-
-}
+import type { LocaleTranslation } from '../../types';
 
 export type ConfigProviderProps = {
   locale?: LocaleTranslation;
@@ -12,4 +9,5 @@ export type ConfigProviderProps = {
 
 export interface ConfigProviderRootContext {
   props: MaybeRefOrGetter<ConfigProviderProps>;
+  t: (path: string) => string;
 }
