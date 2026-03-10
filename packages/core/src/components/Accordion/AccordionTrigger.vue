@@ -2,11 +2,11 @@
   import { useAccordionContext } from './context';
   import { useAccordionTrigger } from './composables';
 
-  const { AccordionRootContext, AccordionItemContext } = useAccordionContext();
+  const { accordionRootContext, accordionItemContext } = useAccordionContext();
 
   const { isDisabled, handleToggle } = useAccordionTrigger({
-    accordionRootContext: AccordionRootContext,
-    accordionItemContext: AccordionItemContext
+    accordionRootContext,
+    accordionItemContext
   });
 </script>
 

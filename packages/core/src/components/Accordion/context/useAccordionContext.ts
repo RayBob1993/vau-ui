@@ -2,11 +2,11 @@ import { useAccordionRootContext } from './useAccordionRootContext';
 import { useAccordionItemContext } from './useAccordionItemContext';
 
 export function useAccordionContext () {
-  const AccordionRootContext = useAccordionRootContext();
-  const AccordionItemContext = useAccordionItemContext();
+  const accordionRootContext = useAccordionRootContext();
+  const accordionItemContext = useAccordionItemContext();
 
   return {
-    AccordionRootContext,
-    AccordionItemContext
+    accordionRootContext,
+    accordionItemContext
   };
 }

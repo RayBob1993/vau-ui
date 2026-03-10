@@ -8,10 +8,10 @@
 
   defineSlots<AccordionItemSlots>();
 
-  const AccordionRootContext = useAccordionRootContext();
+  const accordionRootContext = useAccordionRootContext();
 
   const { isActive } = useAccordionItem({
-    accordionRootContext: AccordionRootContext,
+    accordionRootContext,
     props: () => props
   });
 
