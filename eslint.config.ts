@@ -211,6 +211,19 @@ export default defineConfigWithVueTs([
     },
     rules: {
       'vau/composable-variable-name': 'error',
+      '@stylistic/member-delimiter-style': [
+        'error',
+        {
+          multiline: {
+            delimiter: 'semi',
+            requireLast: true,
+          },
+          singleline: {
+            delimiter: 'semi',
+            requireLast: true,
+          },
+        },
+      ],
       '@typescript-eslint/array-type': ['error', {
         'default': 'generic'
       }],
