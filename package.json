@@ -8,6 +8,7 @@
     "packages/*"
   ],
   "scripts": {
+    "core:create-component": "node tools/create-core-component/cli.js",
     "serve": "vite",
     "prepare": "husky",
     "build": "vue-tsc && vite build",
@@ -33,6 +34,7 @@
     "@vau/theme-base": "workspace:*"
   },
   "devDependencies": {
+    "ejs": "3.1.10",
     "@commitlint/cli": "20.4.2",
     "@commitlint/config-conventional": "20.4.2",
     "@stylistic/eslint-plugin": "5.9.0",

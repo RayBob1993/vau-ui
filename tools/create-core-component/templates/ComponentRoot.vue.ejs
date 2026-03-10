@@ -1,0 +1,22 @@
+<script setup lang="ts">
+  import type { <%= componentName %>Props } from './types';
+  import { use<%= componentName %>Root } from './composables';
+  import { <%= rootContextKey %> } from './context';
+  import { provide } from 'vue';
+
+  const props = defineProps<<%= componentName %>Props>();
+
+  const {} = use<%= componentName %>Root({
+    props: () => props
+  });
+
+  provide(<%= rootContextKey %>, {
+    props: () => props
+  });
+</script>
+
+<template>
+  <div class="<%= kebab %>">
+    <slot/>
+  </div>
+</template>

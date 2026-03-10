@@ -1,0 +1,13 @@
+import type { <%= componentName %>Props } from '../types';
+import type { MaybeRefOrGetter } from 'vue';
+import { computed, toValue } from 'vue';
+
+export interface Use<%= componentName %>RootOptions {
+  props: MaybeRefOrGetter<<%= componentName %>Props>;
+}
+
+export function use<%= componentName %>Root (options: Use<%= componentName %>RootOptions) {
+  const props = computed<<%= componentName %>Props>(() => toValue(options.props));
+
+  return {};
+}

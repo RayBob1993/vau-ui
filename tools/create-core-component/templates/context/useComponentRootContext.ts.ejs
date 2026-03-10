@@ -1,0 +1,6 @@
+import { <%= rootContextKey %> } from './key';
+import { inject } from 'vue';
+
+export function use<%= componentName %>RootContext () {
+  return inject(<%= rootContextKey %>, null);
+}
