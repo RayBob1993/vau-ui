@@ -25,7 +25,7 @@
     "node": "22.17.1"
   },
   "peerDependencies": {
-    "vue": ">=3.5.28",
+    "vue": ">=3.5.30",
     "zod": ">=4.3.6"
   },
   "dependencies": {
@@ -35,10 +35,10 @@
   },
   "devDependencies": {
     "ejs": "3.1.10",
-    "@commitlint/cli": "20.4.2",
-    "@commitlint/config-conventional": "20.4.2",
+    "@commitlint/cli": "20.4.3",
+    "@commitlint/config-conventional": "20.4.3",
     "@stylistic/eslint-plugin": "5.9.0",
-    "@types/node": "25.3.1",
+    "@types/node": "25.4.0",
     "@vitejs/plugin-vue": "6.0.4",
     "@vitejs/plugin-vue-jsx": "5.1.4",
     "@vue/test-utils": "2.4.6",
@@ -49,9 +49,9 @@
     "eslint-plugin-unused-imports": "4.4.1",
     "eslint-plugin-vue": "10.8.0",
     "eslint-plugin-import": "2.32.0",
-    "happy-dom": "20.6.1",
+    "happy-dom": "20.8.3",
     "husky": "9.1.7",
-    "lint-staged": "16.2.7",
+    "lint-staged": "16.3.3",
     "typescript": "5.9.3",
     "vite": "7.3.1",
     "vite-plugin-dts": "4.5.4",
