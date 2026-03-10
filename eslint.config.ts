@@ -1,4 +1,3 @@
-import vauEslintPlugin from './tools/eslint-plugin-vau/index.js';
 import {
   defineConfigWithVueTs,
   vueTsConfigs,
@@ -207,7 +206,6 @@ export default defineConfigWithVueTs([
     plugins: {
       '@stylistic': stylistic,
       'unused-imports': unusedImports,
-      vau: vauEslintPlugin,
     },
     rules: {
       'vau/composable-variable-name': 'error',
