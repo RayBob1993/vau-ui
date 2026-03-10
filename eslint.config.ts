@@ -208,7 +208,6 @@ export default defineConfigWithVueTs([
       'unused-imports': unusedImports,
     },
     rules: {
-      'vau/composable-variable-name': 'error',
       '@stylistic/member-delimiter-style': [
         'error',
         {

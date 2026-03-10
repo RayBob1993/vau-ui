@@ -4,3 +4,5 @@ export * from './Forms';
 export * from './Modal';
 export * from './Tag';
 export * from './ConfigProvider';
+export * from './Scrollbar';
+export * from './Layout';
