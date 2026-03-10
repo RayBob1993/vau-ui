@@ -1,11 +1,11 @@
 <script lang="ts" setup>
-  import type { IVColProps } from './types';
+  import { Grid, type ColProps } from '@vau/core';
 
-  defineProps<IVColProps>();
+  const props = defineProps<ColProps>();
 </script>
 
 <template>
-  <div class="v-col">
+  <Grid.Col v-bind="props">
     <slot/>
-  </div>
+  </Grid.Col>
 </template>
