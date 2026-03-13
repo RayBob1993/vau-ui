@@ -24,6 +24,7 @@ import {
   ContainerPlugin,
   ColPlugin,
   RowPlugin,
+  LayoutPlugin,
   FormPlugin,
   FormItemPlugin,
   InputPlugin,
@@ -84,6 +85,7 @@ export const VauUI: Plugin = {
     app.use(ContainerPlugin);
     app.use(ColPlugin);
     app.use(RowPlugin);
+    app.use(LayoutPlugin);
     app.use(FormPlugin);
     app.use(FormItemPlugin);
     app.use(InputPlugin);

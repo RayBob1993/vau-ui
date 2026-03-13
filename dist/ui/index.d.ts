@@ -1718,6 +1718,8 @@ declare type IVToastProps = {
     clearable?: boolean;
 } & Partial<ThemeProp> & Partial<SizeProp>;
 
+export declare const LayoutPlugin: Plugin_2;
+
 export declare const LoadingPlugin: Plugin_2;
 
 export declare const ModalPlugin: Plugin_2;
