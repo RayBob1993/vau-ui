@@ -46,11 +46,6 @@
     "vue": ">=3.5.30",
     "zod": ">=4.3.6"
   },
-  "dependencies": {
-    "@vau/core": "file:./packages/core",
-    "@vau/ui": "file:./packages/ui",
-    "@vau/theme-base": "file:./packages/themes/base"
-  },
   "devDependencies": {
     "ejs": "3.1.10",
     "@commitlint/cli": "20.4.3",

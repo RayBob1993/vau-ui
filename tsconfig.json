@@ -27,6 +27,7 @@
     "jsx": "preserve"
   },
   "include": [
+    "entry-lib.ts",
     "src/**/*",
     "eslint.config.ts",
     "vitest.config.ts",
