@@ -10,7 +10,6 @@
   "scripts": {
     "core:create-component": "node tools/create-core-component/cli.js",
     "serve": "vite",
-    "prepare": "husky",
     "build:app": "vue-tsc && vite build",
     "build:core": "pnpm --filter @vau/core build",
     "build:ui": "pnpm --filter @vau/ui build",
