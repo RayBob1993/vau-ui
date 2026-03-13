@@ -42,23 +42,23 @@
 
   &--align {
     &-start {
-      align-content: flex-start;
+      align-items: flex-start;
     }
 
     &-center {
-      align-content: center;
+      align-items: center;
     }
 
     &-end {
-      align-content: flex-end;
+      align-items: flex-end;
     }
 
     &-baseline {
-      align-content: baseline;
+      align-items: baseline;
     }
 
     &-stretch {
-      align-content: stretch;
+      align-items: stretch;
     }
   }
 }
