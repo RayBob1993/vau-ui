@@ -17,4 +17,48 @@
       gap: calc(var(--row-gutter-y) * 2) 0;
     }
   }
+
+  &--justify {
+    &-start {
+      justify-content: flex-start;
+    }
+
+    &-center {
+      justify-content: center;
+    }
+
+    &-end {
+      justify-content: flex-end;
+    }
+
+    &-around {
+      justify-content: space-around;
+    }
+
+    &-between {
+      justify-content: space-between;
+    }
+  }
+
+  &--align {
+    &-start {
+      align-content: flex-start;
+    }
+
+    &-center {
+      align-content: center;
+    }
+
+    &-end {
+      align-content: flex-end;
+    }
+
+    &-baseline {
+      align-content: baseline;
+    }
+
+    &-stretch {
+      align-content: stretch;
+    }
+  }
 }
