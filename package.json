@@ -47,9 +47,9 @@
     "zod": ">=4.3.6"
   },
   "dependencies": {
-    "@vau/ui": "workspace:*",
-    "@vau/core": "workspace:*",
-    "@vau/theme-base": "workspace:*"
+    "@vau/core": "file:./packages/core",
+    "@vau/ui": "file:./packages/ui",
+    "@vau/theme-base": "file:./packages/themes/base"
   },
   "devDependencies": {
     "ejs": "3.1.10",
