@@ -1,29 +1,22 @@
 <script setup lang="ts">
   import type { IVInputCodeProps } from './types';
-  import { useInputCode } from './composables';
+  import { InputCode, type InputCodeModelValue } from '@vau/core';
 
   const props = defineProps<IVInputCodeProps>();
 
-  const { isDisabled, validationStatus } = useInputCode({
-    props
+  const modelValue = defineModel<InputCodeModelValue>({
+    required: true,
   });
 </script>
 
 <template>
-  <fieldset
-    class="v-input-code"
-    :class="{
-      'v-input-code--disabled': isDisabled,
-      'v-input-code--invalid': validationStatus?.isError,
-      'v-input-code--valid': validationStatus?.isSuccess
-    }"
+  <InputCode.Root
+    v-bind="props"
+    v-model="modelValue"
   >
-    <input
-      type="text"
-      maxlength="1"
-      class="v-input-code__native"
-      inputmode="numeric"
-      :disabled="isDisabled"
-    >
-  </fieldset>
+    <InputCode.Pin
+      v-for="(pin, index) in length"
+      :key="`pin-${index}`"
+    />
+  </InputCode.Root>
 </template>

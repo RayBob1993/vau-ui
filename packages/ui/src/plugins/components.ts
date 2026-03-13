@@ -29,17 +29,17 @@ import {
   InputPlugin,
   CheckboxPlugin,
   CheckboxGroupPlugin,
-  DatepickerPlugin,
-  InputRangePlugin,
+  //DatepickerPlugin,
+  //InputRangePlugin,
   InputPasswordPlugin,
   InputNumberPlugin,
-  InputMaskPlugin,
-  InputFilePlugin,
+  //InputMaskPlugin,
+  //InputFilePlugin,
   InputCodePlugin,
   RadioPlugin,
   RadioGroupPlugin,
   SwitchPlugin,
-  SelectPlugin,
+  //SelectPlugin,
   OverlayPlugin,
   AlertPlugin,
   ProgressPlugin,
@@ -89,17 +89,17 @@ export const VauUI: Plugin = {
     app.use(InputPlugin);
     app.use(CheckboxPlugin);
     app.use(CheckboxGroupPlugin);
-    app.use(DatepickerPlugin);
-    app.use(InputRangePlugin);
+    //app.use(DatepickerPlugin);
+    //app.use(InputRangePlugin);
     app.use(InputPasswordPlugin);
     app.use(InputNumberPlugin);
-    app.use(InputMaskPlugin);
-    app.use(InputFilePlugin);
+    //app.use(InputMaskPlugin);
+    //app.use(InputFilePlugin);
     app.use(InputCodePlugin);
     app.use(RadioPlugin);
     app.use(RadioGroupPlugin);
     app.use(SwitchPlugin);
-    app.use(SelectPlugin);
+    //app.use(SelectPlugin);
     app.use(OverlayPlugin);
     app.use(AlertPlugin);
     app.use(ProgressPlugin);

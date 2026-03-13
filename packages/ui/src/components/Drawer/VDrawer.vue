@@ -1,6 +1,5 @@
 <script lang="ts" setup>
   import type { IVDrawerProps, IVDrawerEmits, IVDrawerSlots } from './types';
-  import { useConfigProviderContext } from '../ConfigProvider';
   import { VOverlay } from '../Overlay';
   import { computed, watch } from 'vue';
 
@@ -11,8 +10,6 @@
   const modelValue = defineModel<boolean>({
     required: true
   });
-
-  const ConfigProvider = useConfigProviderContext();
 
   const isHeaderVisible = computed<boolean>(() => Boolean(props.title) || Boolean(slots?.header));
   const isFooterVisible = computed<boolean>(() => Boolean(slots?.footer));
@@ -40,7 +37,7 @@
 
 <template>
   <teleport
-    :to="ConfigProvider.teleportTarget"
+    to="body"
     :disabled="!appendToBody"
   >
     <transition

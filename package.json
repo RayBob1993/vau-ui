@@ -11,15 +11,34 @@
     "core:create-component": "node tools/create-core-component/cli.js",
     "serve": "vite",
     "prepare": "husky",
-    "build": "vue-tsc && vite build",
+    "build:app": "vue-tsc && vite build",
     "build:core": "pnpm --filter @vau/core build",
     "build:ui": "pnpm --filter @vau/ui build",
-    "build:lib": "pnpm run build:core && pnpm run build:ui",
+    "build:lib": "pnpm run build:core && pnpm run build:ui && vite build --config vite.lib.config.ts",
+    "build": "pnpm run build:lib",
     "preview": "vite preview",
     "test": "vitest run",
     "lint:js": "eslint --fix",
     "lint": "pnpm lint:js"
   },
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./theme-base": {
+      "import": "./packages/themes/base/src/index.scss"
+    }
+  },
+  "files": [
+    "dist",
+    "packages/themes/base/src",
+    "package.json",
+    "README.md"
+  ],
   "packageManager": "pnpm@10.30.3",
   "engines": {
     "node": "22.17.1"

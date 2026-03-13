@@ -1,9 +1,5 @@
-import type { IVInputBaseProps } from '../Input/types';
+import type { InputCodeProps } from '@vau/core';
 
-/**
- * Интерфейс свойств компонента VInputCode
- * @interface IVInputCodeProps
- */
-export interface IVInputCodeProps extends IVInputBaseProps {
+export interface IVInputCodeProps extends InputCodeProps {
   length?: number;
 }
