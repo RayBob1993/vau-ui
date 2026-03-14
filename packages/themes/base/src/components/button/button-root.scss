@@ -3,26 +3,29 @@
   position: relative;
   align-items: center;
   justify-content: center;
-  margin: 0;
-  gap: var(--v-button-gap);
+  margin: var(--button-margin, 0);
+  padding: var(--button-padding-y, 0) var(--button-padding-x, 0);
+  gap: var(--button-gap);
+  border: var(--button-border-size) var(--button-border-type) var(--button-border-color);
 
-  font-family: inherit;
+  font-family: var(--button-font-family, inherit);
   font-feature-settings: inherit;
-  font-size: var(--v-button-font-size);
-  line-height: var(--v-button-line-height);
-  color: var(--v-button-color);
+  font-size: var(--button-font-size);
+  line-height: var(--button-line-height);
+  color: var(--button-color);
+  font-weight: var(--button-font-weight);
 
   text-align: center;
-  text-transform: none;
+  text-transform: var(--button-text-transform, none);
   text-decoration: none;
   text-shadow: none;
   white-space: nowrap;
 
   cursor: pointer;
 
-  transition: var(--v-transition-base);
+  transition: var(--transition-base);
 
-  border-radius: var(--v-button-border-radius);
+  border-radius: var(--button-border-radius);
 
   outline: 0;
   -webkit-tap-highlight-color: transparent;
@@ -40,7 +43,7 @@
       cursor: wait;
     }
 
-    .v-button__label {
+    .button-content {
       opacity: 0;
     }
   }

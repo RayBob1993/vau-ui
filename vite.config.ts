@@ -10,7 +10,8 @@ export default defineConfig({
   resolve: {
     alias: {
       '@vau/core': resolve(process.cwd(), 'packages/core/index.ts'),
-      '@vau/ui': resolve(process.cwd(), 'packages/ui/index.ts')
+      '@vau/ui': resolve(process.cwd(), 'packages/ui/index.ts'),
+      '@vau/theme-base': resolve(process.cwd(), 'packages/themes/base/src/index.scss')
     }
   }
 });

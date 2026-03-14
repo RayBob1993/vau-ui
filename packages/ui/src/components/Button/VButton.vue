@@ -8,6 +8,8 @@
 
 <template>
   <Button.Root v-bind="props">
-    <slot/>
+    <Button.Content>
+      <slot/>
+    </Button.Content>
   </Button.Root>
 </template>
