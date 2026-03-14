@@ -7,6 +7,10 @@
   padding: var(--button-padding-y, 0) var(--button-padding-x, 0);
   gap: var(--button-gap);
   border: var(--button-border-size) var(--button-border-type) var(--button-border-color);
+  min-height: var(--button-min-height, 0);
+  max-height: var(--button-max-height, none);
+  min-width: var(--button-min-width, 0);
+  max-width: var(--button-max-width, none);
 
   font-family: var(--button-font-family, inherit);
   font-feature-settings: inherit;
