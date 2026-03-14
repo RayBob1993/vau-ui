@@ -1,15 +1,17 @@
 import type { _FlexAlign, _FlexJustify, SizeProp } from '../../../types';
 
 export type ColSizeValue = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12;
+export type ColSize = ColSizeValue | 'auto' | 'content';
+export type ColOffset = ColSizeValue;
 
 export interface ColProps {
-  size?: ColSizeValue;
-  sizeXs?: ColSizeValue;
-  sizeSm?: ColSizeValue;
-  sizeMd?: ColSizeValue;
-  sizeLg?: ColSizeValue;
-  sizeXl?: ColSizeValue;
-  sizeXxl?: ColSizeValue;
+  size?: ColSize;
+  sizeXs?: ColSize;
+  sizeSm?: ColSize;
+  sizeMd?: ColSize;
+  sizeLg?: ColSize;
+  sizeXl?: ColSize;
+  sizeXxl?: ColSize;
   order?: number;
   orderXs?: number;
   orderSm?: number;
@@ -17,13 +19,13 @@ export interface ColProps {
   orderLg?: number;
   orderXl?: number;
   orderXxl?: number;
-  offset?: ColSizeValue;
-  offsetXs?: ColSizeValue;
-  offsetSm?: ColSizeValue;
-  offsetMd?: ColSizeValue;
-  offsetLg?: ColSizeValue;
-  offsetXl?: ColSizeValue;
-  offsetXxl?: ColSizeValue;
+  offset?: ColOffset;
+  offsetXs?: ColOffset;
+  offsetSm?: ColOffset;
+  offsetMd?: ColOffset;
+  offsetLg?: ColOffset;
+  offsetXl?: ColOffset;
+  offsetXxl?: ColOffset;
 }
 
 export type ContainerProps = SizeProp;
