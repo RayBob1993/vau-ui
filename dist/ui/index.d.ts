@@ -49,6 +49,7 @@ import { SwitchModelValue } from '@vau/core';
 import { SwitchProps } from '@vau/core';
 import { TagProps } from '@vau/core';
 import { TagValue } from '@vau/core';
+import { TextProps } from '@vau/core';
 import { ThemeProp } from '@vau/core';
 import { UnscopedSlot } from '@vau/core';
 import { ValueOf } from '@vau/core';
@@ -158,9 +159,7 @@ onDelete?: ((payload: Maybe<TagValue>) => any) | undefined;
 
 declare const __VLS_component_23: DefineComponent<Partial<DirectionProp>, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, PublicProps, Readonly<Partial<DirectionProp>> & Readonly<{}>, {}, {}, {}, {}, string, ComponentProvideOptions, false, {}, HTMLDivElement>;
 
-declare const __VLS_component_24: DefineComponent<IVTextProps, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, PublicProps, Readonly<IVTextProps> & Readonly<{}>, {
-tag: keyof HTMLElementTagNameMap;
-}, {}, {}, {}, string, ComponentProvideOptions, false, {}, any>;
+declare const __VLS_component_24: DefineComponent<TextProps, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, PublicProps, Readonly<TextProps> & Readonly<{}>, {}, {}, {}, {}, string, ComponentProvideOptions, false, {}, any>;
 
 declare const __VLS_component_25: DefineComponent<IVFormItemProps, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {
 invalid: () => any;
@@ -1694,17 +1693,6 @@ export declare interface IVTabsProps {
 }
 
 export declare type IVTabValue = number | string;
-
-/**
- * Интерфейс свойств компонента VText
- * @interface IVTextProps
- */
-export declare type IVTextProps = {
-    tag?: keyof HTMLElementTagNameMap;
-    uppercase?: boolean;
-    underline?: boolean;
-    content?: string | number;
-} & Partial<ThemeProp> & Partial<SizeProp>;
 
 /**
  * Интерфейс свойств компонента VToast

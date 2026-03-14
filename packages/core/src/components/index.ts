@@ -6,3 +6,4 @@ export * from './Tag';
 export * from './ConfigProvider';
 export * from './Scrollbar';
 export * from './Layout';
+export * from './Text';

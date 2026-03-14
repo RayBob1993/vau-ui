@@ -1,4 +1,4 @@
-import { computed as u, toValue as b, inject as U, defineComponent as p, mergeModels as T, useModel as E, provide as j, createElementBlock as d, openBlock as r, normalizeClass as C, renderSlot as m, unref as a, withDirectives as G, createElementVNode as I, vShow as le, ref as S, watch as K, onBeforeUnmount as Fe, markRaw as Jt, onMounted as ae, onScopeDispose as je, isRef as Se, nextTick as Qt, useId as He, onUnmounted as Me, withModifiers as eo, useSlots as J, useTemplateRef as ne, createCommentVNode as X, normalizeProps as L, guardReactiveProps as N, createTextVNode as F, Fragment as q, renderList as ce, toDisplayString as O, mergeProps as H, toHandlers as te, vModelDynamic as to, vModelText as dt, vModelCheckbox as mt, vModelRadio as oo, createBlock as x, withCtx as $, createVNode as A, withKeys as Qe, createPropsRestProxy as ft, shallowRef as et, Teleport as pt, Transition as Ae, createSlots as vt, reactive as no, resolveDynamicComponent as so, defineAsyncComponent as Ee, h as ke, render as be } from "vue";
+import { computed as u, toValue as b, inject as U, defineComponent as p, mergeModels as T, useModel as E, provide as j, createElementBlock as d, openBlock as r, normalizeClass as C, renderSlot as m, unref as a, withDirectives as G, createElementVNode as I, vShow as le, ref as S, watch as K, onBeforeUnmount as Fe, markRaw as Jt, onMounted as ae, onScopeDispose as je, isRef as Se, nextTick as Qt, useId as He, onUnmounted as Me, withModifiers as eo, useSlots as J, useTemplateRef as ne, createCommentVNode as X, normalizeProps as P, guardReactiveProps as L, createTextVNode as F, Fragment as q, renderList as ce, toDisplayString as O, mergeProps as H, toHandlers as te, vModelDynamic as to, vModelText as dt, vModelCheckbox as mt, vModelRadio as oo, createBlock as x, withCtx as $, createVNode as A, withKeys as Qe, resolveDynamicComponent as no, createPropsRestProxy as ft, shallowRef as et, Teleport as pt, Transition as Ae, createSlots as vt, reactive as so, defineAsyncComponent as Ee, h as De, render as be } from "vue";
 import { z as tt } from "zod";
 function lo(e) {
   const t = u(() => b(e.props));
@@ -258,7 +258,7 @@ function Eo() {
     unregisterFormItem: o
   };
 }
-function ko(e) {
+function Do(e) {
   const t = u(() => b(e.formItems)), o = u(() => t.value.filter((l) => l.isValidatable));
   async function n(l = !1) {
     const c = (await Promise.all(o.value.map((f) => f.validate(l)))).every(Boolean);
@@ -287,7 +287,7 @@ function Z(e = !1) {
     n
   ];
 }
-function Mu(e) {
+function Au(e) {
   const t = new Intl.PluralRules("ru-RU"), o = /* @__PURE__ */ new Map([
     ["one", e[0]],
     ["few", e[1]],
@@ -303,7 +303,7 @@ function Mu(e) {
     plural: n
   };
 }
-function Do(e, t, o) {
+function ko(e, t, o) {
   let n;
   const s = K(e, (c) => {
     i(), c && (n = new IntersectionObserver(t, o), n.observe(c));
@@ -343,7 +343,7 @@ const Ct = Object.freeze({
   URL: "url",
   SEARCH: "search",
   PASSWORD: "password"
-}), Au = Object.freeze({
+}), Eu = Object.freeze({
   BASE: "base",
   PRIMARY: "primary",
   SECONDARY: "secondary",
@@ -351,7 +351,7 @@ const Ct = Object.freeze({
   DANGER: "danger",
   SUCCESS: "success",
   WARNING: "warning"
-}), Eu = Object.freeze({
+}), Du = Object.freeze({
   MINI: "mini",
   SMALL: "small",
   MEDIUM: "medium",
@@ -362,19 +362,19 @@ const Ct = Object.freeze({
 }), ku = Object.freeze({
   HORIZONTAL: "horizontal",
   VERTICAL: "vertical"
-}), Du = Object.freeze({
+}), zu = Object.freeze({
   top: "top",
   left: "left",
   right: "right",
   center: "center",
   bottom: "bottom"
-}), zu = Object.freeze({
+}), Ou = Object.freeze({
   START: "start",
   CENTER: "center",
   END: "end",
   BASELINE: "baseline",
   STRETCH: "stretch"
-}), Ou = Object.freeze({
+}), Pu = Object.freeze({
   START: "start",
   CENTER: "center",
   END: "end",
@@ -411,17 +411,17 @@ function Oo(e) {
 function _e(e) {
   return Object.prototype.toString.call(e) === "[object String]";
 }
-function De(e) {
+function ke(e) {
   return e === null;
 }
 function Ue(e) {
-  return !De(e) && typeof e == "object" && Object.getPrototypeOf(e) === Object.prototype;
+  return !ke(e) && typeof e == "object" && Object.getPrototypeOf(e) === Object.prototype;
 }
 function me(e) {
   return typeof e > "u";
 }
-function Pu(e) {
-  return De(e) || me(e) ? !0 : _e(e) ? e === "" : Array.isArray(e) ? !e.length : e instanceof Map || e instanceof Set ? e.size === 0 : Ue(e) ? e instanceof Date || e instanceof RegExp ? !1 : Object.keys(e).length === 0 : !1;
+function Lu(e) {
+  return ke(e) || me(e) ? !0 : _e(e) ? e === "" : Array.isArray(e) ? !e.length : e instanceof Map || e instanceof Set ? e.size === 0 : Ue(e) ? e instanceof Date || e instanceof RegExp ? !1 : Object.keys(e).length === 0 : !1;
 }
 function Po(e) {
   return Object.prototype.toString.call(e) === "[object Function]";
@@ -430,7 +430,7 @@ function W(e) {
   return (typeof e == "number" || e instanceof Number) && !isNaN(Number(e));
 }
 function Lo(e) {
-  return !De(e) && !me(e) && Ue(e) && !Array.isArray(e);
+  return !ke(e) && !me(e) && Ue(e) && !Array.isArray(e);
 }
 function nt(e, t) {
   if (!e || !t.trim())
@@ -500,22 +500,22 @@ function pe(e, t = /* @__PURE__ */ new WeakMap()) {
   }
   return e;
 }
-function Lu(e) {
+function Nu(e) {
   return new Promise((t) => setTimeout(t, e));
 }
-function Nu(e, t) {
+function Xu(e, t) {
   const o = {};
   for (const n of t)
     Object.prototype.hasOwnProperty.call(e, n) && (o[n] = e[n]);
   return o;
 }
-function Xu(e, t) {
+function Fu(e, t) {
   const o = { ...e };
   for (const n of t)
     Object.prototype.hasOwnProperty.call(e, n) && delete o[n];
   return o;
 }
-function Fu(e) {
+function ju(e) {
   return e ? "true" : "false";
 }
 function Ge(e, t, o = {}) {
@@ -559,32 +559,32 @@ function Ye(e, t, o = {}) {
     debounceMode: n
   });
 }
-function ju(e) {
+function Hu(e) {
   return Jt(e);
 }
-function Hu(e, t, o = {}) {
+function Uu(e, t, o = {}) {
   const {
     rootMargin: n = ot.LAZY_IMAGE.rootMargin,
     threshold: s = ot.LAZY_IMAGE.threshold,
     enableNativeLazyLoading: l = !0,
     immediate: i = !1
-  } = o, { stop: c } = Do(e, w, {
+  } = o, { stop: c } = ko(e, w, {
     rootMargin: n,
     threshold: s
   }), [f, v] = Z(), [_, h] = Z(), y = S(""), V = S(""), g = S(""), R = _e(t) ? { src: t } : t;
   function B() {
     if (f.value || _.value)
       return;
-    const k = new Image();
-    k.src = R.src, R.srcset && (k.srcset = R.srcset), R.sizes && (k.sizes = R.sizes), k.onload = () => {
+    const D = new Image();
+    D.src = R.src, R.srcset && (D.srcset = R.srcset), R.sizes && (D.sizes = R.sizes), D.onload = () => {
       y.value = R.src, V.value = R.srcset || "", g.value = R.sizes || "", v(!0), h(!1);
-    }, k.onerror = () => {
+    }, D.onerror = () => {
       v(!1), h(!0);
     };
   }
-  function w(k) {
-    k.forEach((D) => {
-      D.isIntersecting && !f.value && !_.value && B();
+  function w(D) {
+    D.forEach((k) => {
+      k.isIntersecting && !f.value && !_.value && B();
     });
   }
   return ae(() => {
@@ -602,10 +602,10 @@ function Hu(e, t, o = {}) {
     stop: c
   };
 }
-function Uu() {
+function Gu() {
   return {};
 }
-function Gu() {
+function Yu() {
   if (!window)
     return {
       number: S(0),
@@ -627,7 +627,7 @@ function Gu() {
     animate: t
   };
 }
-function Yu() {
+function qu() {
   if (!window)
     return {
       x: S(0),
@@ -650,13 +650,13 @@ function Yu() {
     setScroll: n
   };
 }
-function qu(e, t) {
+function Ku(e, t) {
   (_e(e) ? document.querySelector(e) : Se(e) ? a(e) : e)?.scrollIntoView({
     behavior: "smooth",
     ...t
   });
 }
-function Ku(e, t) {
+function Wu(e, t) {
   return {
     listeners: t.reduce((n, s) => {
       const l = s, i = String(l);
@@ -665,7 +665,7 @@ function Ku(e, t) {
   };
 }
 function No(e) {
-  const { formItems: t, registerFormItem: o, unregisterFormItem: n } = Eo(), { validate: s, clearValidate: l, validatableFormItems: i } = ko({
+  const { formItems: t, registerFormItem: o, unregisterFormItem: n } = Eo(), { validate: s, clearValidate: l, validatableFormItems: i } = Do({
     formItems: () => t.value,
     onValid: () => {
       e.onValid?.();
@@ -780,7 +780,7 @@ function jo(e) {
     onInvalid: () => {
       e.onInvalid?.();
     }
-  }), k = u(() => ({
+  }), D = u(() => ({
     id: t,
     props: l.value,
     validationStatus: g.value,
@@ -788,22 +788,22 @@ function jo(e) {
     isRequired: V.value,
     registerField: n,
     unregisterField: s,
-    reset: D,
+    reset: k,
     validate: w,
     clearValidateErrors: B
   }));
-  function D() {
+  function k() {
     !v.value || !l.value.name || (o.value?.reset(), B());
   }
-  const P = Ye(() => w(), 300);
+  const N = Ye(() => w(), 300);
   return Me(() => {
-    P.cancel(), e.formRootContext?.unregisterFormItem(t);
-  }), K(k, (z) => {
+    N.cancel(), e.formRootContext?.unregisterFormItem(t);
+  }), K(D, (z) => {
     e.formRootContext?.registerFormItem(z);
   }, {
     deep: !0,
     immediate: !0
-  }), K(v, () => P()), K(() => g.value.isSuccess, (z) => {
+  }), K(v, () => N()), K(() => g.value.isSuccess, (z) => {
     z && B();
   }), {
     id: t,
@@ -811,7 +811,7 @@ function jo(e) {
     validationStatus: g,
     isDisabled: _,
     isRequired: V,
-    reset: D,
+    reset: k,
     validate: w,
     clearValidateErrors: B,
     registerField: n,
@@ -926,7 +926,7 @@ const Ho = /* @__PURE__ */ p({
       reset: V,
       validate: g,
       clearValidateErrors: R
-    }), (k, D) => (r(), d("div", {
+    }), (D, k) => (r(), d("div", {
       ref_key: "root",
       ref: B,
       class: C(["form-item", [
@@ -940,13 +940,13 @@ const Ho = /* @__PURE__ */ p({
       ]])
     }, [
       l?.header ? (r(), d("div", Uo, [
-        m(k.$slots, "header", L(N(w.value)))
+        m(D.$slots, "header", P(L(w.value)))
       ])) : X("", !0),
       I("div", Go, [
-        m(k.$slots, "default", L(N(w.value)))
+        m(D.$slots, "default", P(L(w.value)))
       ]),
       l.footer ? (r(), d("div", Yo, [
-        m(k.$slots, "footer", L(N(w.value)))
+        m(D.$slots, "footer", P(L(w.value)))
       ])) : X("", !0)
     ], 2));
   }
@@ -1126,11 +1126,11 @@ const dn = /* @__PURE__ */ p({
       formItemContext: i,
       modelValue: () => s.value,
       props: () => o,
-      onChangeModel: (k) => {
-        s.value = k;
+      onChangeModel: (D) => {
+        s.value = D;
       },
-      onChange: (k) => {
-        n("change", k);
+      onChange: (D) => {
+        n("change", D);
       },
       onClear: () => {
         n("clear");
@@ -1148,7 +1148,7 @@ const dn = /* @__PURE__ */ p({
       registerOption: R,
       unregisterOption: B,
       setModelValue: w
-    }), (k, D) => (r(), d("div", {
+    }), (D, k) => (r(), d("div", {
       class: C(["select", {
         "select--disabled": a(V),
         "select--open": a(y),
@@ -1157,7 +1157,7 @@ const dn = /* @__PURE__ */ p({
         "select--valid": a(c)
       }])
     }, [
-      m(k.$slots, "default")
+      m(D.$slots, "default")
     ], 2));
   }
 }), mn = /* @__PURE__ */ p({
@@ -1229,7 +1229,7 @@ const dn = /* @__PURE__ */ p({
       ])
     ]));
   }
-}), Wu = {
+}), Zu = {
   Root: dn,
   Option: mn,
   Trigger: fn,
@@ -1412,7 +1412,7 @@ const $n = /* @__PURE__ */ p({
       emit: s
     }), t({
       setFocus: g
-    }), (w, k) => (r(), d("div", {
+    }), (w, D) => (r(), d("div", {
       class: C(["input", {
         "input--focus": a(V),
         "input--textarea": a(h),
@@ -1497,13 +1497,13 @@ const In = /* @__PURE__ */ M(xn, [["render", Rn]]), Tn = { class: "input-after" 
       [dt, a(o)]
     ]);
   }
-}), En = {}, kn = { class: "input-control" };
-function Dn(e, t) {
-  return r(), d("div", kn, [
+}), En = {}, Dn = { class: "input-control" };
+function kn(e, t) {
+  return r(), d("div", Dn, [
     m(e.$slots, "default")
   ]);
 }
-const zn = /* @__PURE__ */ M(En, [["render", Dn]]), On = {}, Pn = { class: "input-group" };
+const zn = /* @__PURE__ */ M(En, [["render", kn]]), On = {}, Pn = { class: "input-group" };
 function Ln(e, t) {
   return r(), d("div", Pn, [
     m(e.$slots, "default")
@@ -2027,7 +2027,7 @@ const Ms = /* @__PURE__ */ p({
       ])
     ]));
   }
-}), ks = ["disabled"], Ds = /* @__PURE__ */ p({
+}), Ds = ["disabled"], ks = /* @__PURE__ */ p({
   __name: "InputNumberButton",
   props: {
     action: {}
@@ -2053,12 +2053,12 @@ const Ms = /* @__PURE__ */ p({
           F(" + ")
         ], 64)) : X("", !0)
       ])
-    ], 10, ks));
+    ], 10, Ds));
   }
 }), $e = {
   Root: Ms,
   Input: Es,
-  Button: Ds
+  Button: ks
 };
 function zs() {
   const e = S(ve.PASSWORD);
@@ -2098,7 +2098,7 @@ const Os = /* @__PURE__ */ p({
       default: $((f) => [
         o?.before ? (r(), x(a(Y).Before, { key: 0 }, {
           default: $(() => [
-            m(i.$slots, "before", L(N(f)))
+            m(i.$slots, "before", P(L(f)))
           ]),
           _: 2
         }, 1024)) : X("", !0),
@@ -2110,7 +2110,7 @@ const Os = /* @__PURE__ */ p({
         }),
         A(a(Y).After, null, {
           default: $(() => [
-            m(i.$slots, "after", L(N(f)), () => [
+            m(i.$slots, "after", P(L(f)), () => [
               I("button", {
                 type: "button",
                 onClick: c[0] || (c[0] = //@ts-ignore
@@ -2141,9 +2141,9 @@ function Ns(e) {
     })
   };
 }
-const kt = /* @__PURE__ */ Symbol("InputCodeRootContextKey");
+const Dt = /* @__PURE__ */ Symbol("InputCodeRootContextKey");
 function Xs() {
-  return U(kt, null);
+  return U(Dt, null);
 }
 const Fs = /* @__PURE__ */ p({
   __name: "InputCodeRoot",
@@ -2169,7 +2169,7 @@ const Fs = /* @__PURE__ */ p({
       formItemContext: n,
       props: () => t
     });
-    return j(kt, {
+    return j(Dt, {
       props: () => t,
       isDisabled: () => i.value
     }), (c, f) => (r(), d("div", {
@@ -2198,9 +2198,9 @@ const Fs = /* @__PURE__ */ p({
 }), st = {
   Root: Fs,
   Pin: Hs
-}, Dt = /* @__PURE__ */ Symbol("InputTagsRootContextKey");
+}, kt = /* @__PURE__ */ Symbol("InputTagsRootContextKey");
 function zt() {
-  return U(Dt, null);
+  return U(kt, null);
 }
 function Us(e) {
   const t = u(() => b(e.props));
@@ -2240,7 +2240,7 @@ const Ys = /* @__PURE__ */ p({
       formItemContext: l,
       props: () => o
     });
-    return j(Dt, {
+    return j(kt, {
       props: () => o,
       modelValue: () => n.value,
       isDisabled: () => f.value
@@ -2282,7 +2282,7 @@ const Ys = /* @__PURE__ */ p({
   setup(e) {
     return zt(), (t, o) => (r(), d("div", Ws));
   }
-}), Zu = {
+}), Ju = {
   Root: Ys,
   Input: Ks,
   Tags: Zs
@@ -2353,7 +2353,7 @@ const tl = /* @__PURE__ */ p({
       "aria-disabled": a(o)
     }, null, 8, ol));
   }
-}), Ju = {
+}), Qu = {
   Root: tl,
   Slider: nl
 }, sl = /* @__PURE__ */ Symbol("ModalRootContextKey");
@@ -2420,7 +2420,7 @@ function Tl(e, t) {
     m(e.$slots, "default")
   ]);
 }
-const Bl = /* @__PURE__ */ M(Rl, [["render", Tl]]), Qu = {
+const Bl = /* @__PURE__ */ M(Rl, [["render", Tl]]), ec = {
   Root: il,
   Body: cl,
   Close: fl,
@@ -2487,7 +2487,7 @@ const Sl = /* @__PURE__ */ p({
   Root: Sl,
   Group: Ml
 }, Lt = /* @__PURE__ */ Symbol("ConfigProviderRootContextKey");
-function ec() {
+function tc() {
   return U(Lt, {
     props: () => ({}),
     t: () => ""
@@ -2501,7 +2501,7 @@ function Al(e) {
     const s = n.split(".");
     let l = t.value.locale;
     for (const i of s) {
-      if (me(l) || De(l) || _e(l))
+      if (me(l) || ke(l) || _e(l))
         return n;
       l = l[i];
     }
@@ -2527,7 +2527,7 @@ const El = /* @__PURE__ */ p({
       t: o
     }), (n, s) => m(n.$slots, "default");
   }
-}), kl = {
+}), Dl = {
   Root: El
 }, Nt = 300, Xt = 1, Ft = 10;
 function lt(e, t = !1) {
@@ -2542,41 +2542,41 @@ function it(e, t = !1) {
 function rt(e, t = !1) {
   return t && e ? e.offsetLeft : 0;
 }
-function Dl(e) {
+function kl(e) {
   const t = u(() => b(e.props)), o = u(() => t.value?.infiniteScrollOffset ?? Ft), n = u(() => t.value?.draggableMultiplier ?? Xt), s = u(() => W(t.value?.debounceDelay) ? t.value.debounceDelay : Nt), [l, i] = Z(), [c, f] = Z(), v = S(0), _ = S(0), h = S(0), y = S(0);
   function V() {
     f(!1), i(!1);
   }
-  const g = Ye((D) => {
-    e.onScroll?.(D), t.value?.draggable || (h.value = lt(e.scrollbar.value, !!t.value?.vertical), y.value = at(e.scrollbar.value, !!t.value?.horizontal));
-    const P = e.scrollbar.value, z = e.content.value, oe = P ? P.clientHeight : 0, se = P ? P.clientWidth : 0, ge = z ? z.scrollWidth : 0, ie = z ? z.scrollHeight : 0, re = h.value + oe, Pe = y.value + se, ye = !!(t.value?.vertical && ie - re <= o.value), ee = !!(t.value?.horizontal && ge - Pe <= o.value);
+  const g = Ye((k) => {
+    e.onScroll?.(k), t.value?.draggable || (h.value = lt(e.scrollbar.value, !!t.value?.vertical), y.value = at(e.scrollbar.value, !!t.value?.horizontal));
+    const N = e.scrollbar.value, z = e.content.value, oe = N ? N.clientHeight : 0, se = N ? N.clientWidth : 0, ge = z ? z.scrollWidth : 0, ie = z ? z.scrollHeight : 0, re = h.value + oe, Pe = y.value + se, ye = !!(t.value?.vertical && ie - re <= o.value), ee = !!(t.value?.horizontal && ge - Pe <= o.value);
     ye && e.onScrollEndY?.(), ee && e.onScrollEndX?.();
-  }, s.value), R = Ge((D) => {
-    if (e.onMousemove?.(D), !t.value?.draggable || !c.value)
+  }, s.value), R = Ge((k) => {
+    if (e.onMousemove?.(k), !t.value?.draggable || !c.value)
       return;
-    D.preventDefault(), D.stopPropagation();
-    const P = e.scrollbar.value;
-    if (!P)
+    k.preventDefault(), k.stopPropagation();
+    const N = e.scrollbar.value;
+    if (!N)
       return;
-    const z = !!t.value?.vertical, oe = !!t.value?.horizontal, se = D.pageY - it(P, z), ie = (D.pageX - rt(P, oe) - v.value) * n.value, re = (se - _.value) * n.value;
-    oe && (P.scrollLeft = y.value - ie), z && (P.scrollTop = h.value - re);
+    const z = !!t.value?.vertical, oe = !!t.value?.horizontal, se = k.pageY - it(N, z), ie = (k.pageX - rt(N, oe) - v.value) * n.value, re = (se - _.value) * n.value;
+    oe && (N.scrollLeft = y.value - ie), z && (N.scrollTop = h.value - re);
   }, s.value);
-  function B(D) {
-    if (e.onMousedown?.(D), !t.value?.draggable)
+  function B(k) {
+    if (e.onMousedown?.(k), !t.value?.draggable)
       return;
     f(!0), i(!0);
-    const P = e.scrollbar.value;
-    if (P) {
+    const N = e.scrollbar.value;
+    if (N) {
       const z = !!t.value?.vertical, oe = !!t.value?.horizontal;
-      _.value = D.pageY - it(P, z), v.value = D.pageX - rt(P, oe);
+      _.value = k.pageY - it(N, z), v.value = k.pageX - rt(N, oe);
     }
     h.value = lt(e.scrollbar.value, !!t.value?.vertical), y.value = at(e.scrollbar.value, !!t.value?.horizontal);
   }
-  function w(D) {
-    e.onMouseleave?.(D), t.value?.draggable && V();
+  function w(k) {
+    e.onMouseleave?.(k), t.value?.draggable && V();
   }
-  function k(D) {
-    e.onMouseup?.(D), t.value?.draggable && V();
+  function D(k) {
+    e.onMouseup?.(k), t.value?.draggable && V();
   }
   return je(() => {
     g.cancel?.(), R.cancel?.();
@@ -2585,7 +2585,7 @@ function Dl(e) {
     handleScroll: g,
     handleMousedown: B,
     handleMouseleave: w,
-    handleMouseup: k,
+    handleMouseup: D,
     handleMousemove: R
   };
 }
@@ -2611,7 +2611,7 @@ const zl = /* @__PURE__ */ p({
       handleMouseleave: v,
       handleMouseup: _,
       handleMousemove: h
-    } = Dl({
+    } = kl({
       props: () => o,
       scrollbar: s,
       content: l,
@@ -2804,7 +2804,7 @@ function na(e, t) {
     m(e.$slots, "default")
   ]);
 }
-const sa = /* @__PURE__ */ M(ta, [["render", na]]), tc = {
+const sa = /* @__PURE__ */ M(ta, [["render", na]]), oc = {
   Root: Fl,
   Header: Gl,
   Title: Wl,
@@ -2828,7 +2828,33 @@ function ua(e, t) {
 const ca = /* @__PURE__ */ M(ia, [["render", ua]]), ut = {
   Root: aa,
   Body: ca
-}, oc = {}, da = /* @__PURE__ */ p({
+}, da = /* @__PURE__ */ p({
+  __name: "TextRoot",
+  props: {
+    tag: { default: "div" },
+    uppercase: { type: Boolean },
+    underline: { type: Boolean },
+    theme: {},
+    size: {}
+  },
+  setup(e) {
+    return (t, o) => (r(), x(no(e.tag), {
+      class: C(["text", {
+        "text--uppercase": e.uppercase,
+        "text--underline": e.underline,
+        [`text--size-${e.size}`]: e.size,
+        [`text--theme-${e.theme}`]: e.theme
+      }])
+    }, {
+      default: $(() => [
+        m(t.$slots, "default")
+      ]),
+      _: 3
+    }, 8, ["class"]));
+  }
+}), ma = {
+  Root: da
+}, nc = {}, fa = /* @__PURE__ */ p({
   __name: "VButton",
   props: {
     loading: { type: Boolean },
@@ -2841,7 +2867,7 @@ const ca = /* @__PURE__ */ M(ia, [["render", ua]]), ut = {
   },
   setup(e) {
     const t = e;
-    return (o, n) => (r(), x(a(Xe).Root, L(N(t)), {
+    return (o, n) => (r(), x(a(Xe).Root, P(L(t)), {
       default: $(() => [
         A(a(Xe).Content, null, {
           default: $(() => [
@@ -2853,29 +2879,29 @@ const ca = /* @__PURE__ */ M(ia, [["render", ua]]), ut = {
       _: 3
     }, 16));
   }
-}), ma = /* @__PURE__ */ p({
+}), pa = /* @__PURE__ */ p({
   __name: "VButtonGroup",
   props: {
     direction: {}
   },
   setup(e) {
     const t = e;
-    return (o, n) => (r(), x(a(Xe).Group, L(N(t)), {
+    return (o, n) => (r(), x(a(Xe).Group, P(L(t)), {
       default: $(() => [
         m(o.$slots, "default")
       ]),
       _: 3
     }, 16));
   }
-}), fa = {
+}), va = {
   install(e) {
-    e.component("VButton", da);
+    e.component("VButton", fa);
   }
-}, nc = {
+}, sc = {
   install(e) {
-    e.component("VButtonGroup", ma);
+    e.component("VButtonGroup", pa);
   }
-}, pa = /* @__PURE__ */ p({
+}, ha = /* @__PURE__ */ p({
   __name: "VAccordion",
   props: /* @__PURE__ */ T({
     multiple: { type: Boolean },
@@ -2900,7 +2926,7 @@ const ca = /* @__PURE__ */ M(ia, [["render", ua]]), ut = {
       _: 3
     }, 16, ["modelValue"]));
   }
-}), va = /* @__PURE__ */ p({
+}), ba = /* @__PURE__ */ p({
   __name: "VAccordionItem",
   props: {
     title: {},
@@ -2909,7 +2935,7 @@ const ca = /* @__PURE__ */ M(ia, [["render", ua]]), ut = {
   },
   setup(e) {
     const t = ft(e, ["title"]);
-    return (o, n) => (r(), x(a(ue).Item, L(N(t)), {
+    return (o, n) => (r(), x(a(ue).Item, P(L(t)), {
       default: $(({ isActive: s }) => [
         A(a(ue).Header, null, {
           default: $(() => [
@@ -2939,14 +2965,14 @@ const ca = /* @__PURE__ */ M(ia, [["render", ua]]), ut = {
       _: 3
     }, 16));
   }
-}), ha = {
+}), _a = {
   install(e) {
-    e.component("VAccordion", pa), e.component("VAccordionItem", va);
+    e.component("VAccordion", ha), e.component("VAccordionItem", ba);
   }
-}, ba = {
+}, ga = {
   key: 0,
   class: "v-avatar__label"
-}, _a = /* @__PURE__ */ p({
+}, ya = /* @__PURE__ */ p({
   __name: "VAvatar",
   props: {
     src: {},
@@ -2964,30 +2990,30 @@ const ca = /* @__PURE__ */ M(ia, [["render", ua]]), ut = {
         [`v-avatar--theme-${e.theme}`]: e.theme
       }])
     }, [
-      e.label ? (r(), d("div", ba, O(e.label), 1)) : X("", !0)
+      e.label ? (r(), d("div", ga, O(e.label), 1)) : X("", !0)
     ], 2));
   }
-}), ga = {}, ya = { class: "v-avatar-group" };
-function Va(e, t) {
-  return r(), d("div", ya, [
+}), Va = {}, $a = { class: "v-avatar-group" };
+function xa(e, t) {
+  return r(), d("div", $a, [
     m(e.$slots, "default")
   ]);
 }
-const $a = /* @__PURE__ */ M(ga, [["render", Va]]), xa = {
+const Ca = /* @__PURE__ */ M(Va, [["render", xa]]), Ra = {
   install(e) {
-    e.component("VAvatar", _a);
+    e.component("VAvatar", ya);
   }
-}, Ca = {
+}, Ia = {
   install(e) {
-    e.component("VAvatarGroup", $a);
+    e.component("VAvatarGroup", Ca);
   }
-}, Ra = { class: "v-alert__content" }, Ia = {
+}, Ta = { class: "v-alert__content" }, Ba = {
   key: 0,
   class: "v-alert__title"
-}, Ta = {
+}, wa = {
   key: 1,
   class: "v-alert__description"
-}, Ba = /* @__PURE__ */ p({
+}, Sa = /* @__PURE__ */ p({
   __name: "VAlert",
   props: {
     title: {},
@@ -3004,14 +3030,14 @@ const $a = /* @__PURE__ */ M(ga, [["render", Va]]), xa = {
         [`v-alert--theme-${e.theme}`]: e.theme
       }])
     }, [
-      I("div", Ra, [
+      I("div", Ta, [
         o?.default ? m(l.$slots, "default", { key: 0 }) : (r(), d(q, { key: 1 }, [
-          n.value ? (r(), d("div", Ia, [
+          n.value ? (r(), d("div", Ba, [
             m(l.$slots, "title", {}, () => [
               F(O(e.title), 1)
             ])
           ])) : X("", !0),
-          s.value ? (r(), d("div", Ta, [
+          s.value ? (r(), d("div", wa, [
             m(l.$slots, "description", {}, () => [
               F(O(e.description), 1)
             ])
@@ -3020,11 +3046,11 @@ const $a = /* @__PURE__ */ M(ga, [["render", Va]]), xa = {
       ])
     ], 2));
   }
-}), wa = {
+}), Ma = {
   install(e) {
-    e.component("VAlert", Ba);
+    e.component("VAlert", Sa);
   }
-}, jt = 0, Ht = 0, Sa = {
+}, jt = 0, Ht = 0, Aa = {
   offsetTop: 0,
   offsetBottom: 0,
   affixClass: "is-affixed"
@@ -3065,7 +3091,7 @@ class we {
   }
   #_(t) {
     return {
-      ...Sa,
+      ...Aa,
       ...t
     };
   }
@@ -3227,7 +3253,7 @@ class we {
     return n;
   }
 }
-function Ma(e) {
+function Ea(e) {
   const t = et(), o = et(), n = u(() => W(e.props?.offsetTop) ? e.props.offsetTop : jt), s = u(() => W(e.props?.offsetBottom) ? e.props.offsetBottom : Ht);
   function l() {
     e.props.container ? t.value = document.querySelector(e.props.container) ?? void 0 : t.value = e.root.value?.parentElement ?? void 0;
@@ -3251,7 +3277,7 @@ function Ma(e) {
     f ? c() : i();
   }), {};
 }
-const Aa = /* @__PURE__ */ p({
+const Da = /* @__PURE__ */ p({
   __name: "VAffix",
   props: {
     offsetTop: { default: jt },
@@ -3261,7 +3287,7 @@ const Aa = /* @__PURE__ */ p({
   },
   setup(e) {
     const t = e, o = ne("root"), n = ne("content");
-    return Ma({
+    return Ea({
       props: t,
       root: o,
       content: n
@@ -3279,29 +3305,29 @@ const Aa = /* @__PURE__ */ p({
       ], 512)
     ], 512));
   }
-}), Ea = {
+}), ka = {
   install(e) {
-    e.component("VAffix", Aa);
+    e.component("VAffix", Da);
   }
-}, ka = { class: "v-breadcrumbs" }, Da = /* @__PURE__ */ p({
+}, za = { class: "v-breadcrumbs" }, Oa = /* @__PURE__ */ p({
   __name: "VBreadcrumbs",
   setup(e) {
-    return (t, o) => (r(), d("nav", ka));
+    return (t, o) => (r(), d("nav", za));
   }
-}), za = {
+}), Pa = {
   install(e) {
-    e.component("VBreadcrumbs", Da);
+    e.component("VBreadcrumbs", Oa);
   }
 };
-function Oa(e) {
+function La(e) {
   return {
     content: u(() => e.props.dot ? "" : W(e.props.value) && W(e.props.max) ? e.props.max < e.props.value ? `${e.props.max}+` : `${e.props.value}` : `${e.props.value}`)
   };
 }
-const Pa = {
+const Na = {
   key: 0,
   class: "v-badge__content"
-}, La = /* @__PURE__ */ p({
+}, Xa = /* @__PURE__ */ p({
   __name: "VBadge",
   props: {
     dot: { type: Boolean },
@@ -3312,7 +3338,7 @@ const Pa = {
     size: {}
   },
   setup(e) {
-    const t = e, o = J(), { content: n } = Oa({
+    const t = e, o = J(), { content: n } = La({
       props: t
     }), s = u(() => !t.hidden && !!(n.value || t.dot || o?.content));
     return (l, i) => (r(), d("div", {
@@ -3324,31 +3350,31 @@ const Pa = {
       }])
     }, [
       m(l.$slots, "default"),
-      s.value ? (r(), d("sup", Pa, [
+      s.value ? (r(), d("sup", Na, [
         m(l.$slots, "content", { value: a(n) }, () => [
           F(O(a(n)), 1)
         ])
       ])) : X("", !0)
     ], 2));
   }
-}), Na = {
+}), Fa = {
   install(e) {
-    e.component("VBadge", La);
+    e.component("VBadge", Xa);
   }
-}, Xa = { class: "v-collapse" }, Fa = /* @__PURE__ */ p({
+}, ja = { class: "v-collapse" }, Ha = /* @__PURE__ */ p({
   __name: "VCollapse",
   emits: ["change"],
   setup(e) {
-    return (t, o) => (r(), d("div", Xa, [
+    return (t, o) => (r(), d("div", ja, [
       m(t.$slots, "default")
     ]));
   }
-}), ja = {
+}), Ua = {
   install(e) {
-    e.component("VCollapse", Fa);
+    e.component("VCollapse", Ha);
   }
 };
-function Ha(e) {
+function Ga(e) {
   const [t, o] = Z();
   function n() {
     o(!0), e?.onOpen?.();
@@ -3362,11 +3388,11 @@ function Ha(e) {
     handleClose: s
   };
 }
-const Ua = /* @__PURE__ */ p({
+const Ya = /* @__PURE__ */ p({
   __name: "VInplace",
   emits: ["open", "close"],
   setup(e, { emit: t }) {
-    const o = t, { isVisible: n, handleOpen: s, handleClose: l } = Ha({
+    const o = t, { isVisible: n, handleOpen: s, handleClose: l } = Ga({
       onOpen: () => o("open"),
       onClose: () => o("close")
     });
@@ -3378,9 +3404,9 @@ const Ua = /* @__PURE__ */ p({
       open: a(s)
     });
   }
-}), Ga = {
+}), qa = {
   install(e) {
-    e.component("VInplace", Ua);
+    e.component("VInplace", Ya);
   }
 }, Oe = /* @__PURE__ */ p({
   __name: "VOverlay",
@@ -3398,14 +3424,14 @@ const Ua = /* @__PURE__ */ p({
       m(t.$slots, "default")
     ], 2));
   }
-}), Ya = {
+}), Ka = {
   install(e) {
     e.component("VOverlay", Oe);
   }
-}, qa = {
+}, Wa = {
   key: 0,
   class: "v-modal__header"
-}, Ka = { class: "v-modal__body" }, Wa = {
+}, Za = { class: "v-modal__body" }, Ja = {
   key: 1,
   class: "v-modal__footer"
 }, Ut = /* @__PURE__ */ p({
@@ -3450,7 +3476,7 @@ const Ua = /* @__PURE__ */ p({
                 }]),
                 role: "dialog"
               }, [
-                i.value ? (r(), d("div", qa, [
+                i.value ? (r(), d("div", Wa, [
                   m(h.$slots, "header", { close: f }, () => [
                     F(O(e.title), 1)
                   ]),
@@ -3460,10 +3486,10 @@ const Ua = /* @__PURE__ */ p({
                     onClick: f
                   }, " x ")
                 ])) : X("", !0),
-                I("div", Ka, [
+                I("div", Za, [
                   m(h.$slots, "default", { close: f })
                 ]),
-                c.value ? (r(), d("div", Wa, [
+                c.value ? (r(), d("div", Ja, [
                   m(h.$slots, "footer", { close: f })
                 ])) : X("", !0)
               ], 2), [
@@ -3477,14 +3503,14 @@ const Ua = /* @__PURE__ */ p({
       })
     ], 8, ["disabled"]));
   }
-}), Za = {
+}), Qa = {
   install(e) {
     e.component("VModal", Ut);
   }
-}, Ja = { class: "v-drawer__dialog" }, Qa = {
+}, ei = { class: "v-drawer__dialog" }, ti = {
   key: 0,
   class: "v-drawer__header"
-}, ei = { class: "v-drawer__body" }, ti = {
+}, oi = { class: "v-drawer__body" }, ni = {
   key: 1,
   class: "v-drawer__footer"
 }, Gt = /* @__PURE__ */ p({
@@ -3529,8 +3555,8 @@ const Ua = /* @__PURE__ */ p({
                 }]),
                 role: "dialog"
               }, [
-                I("div", Ja, [
-                  i.value ? (r(), d("div", Qa, [
+                I("div", ei, [
+                  i.value ? (r(), d("div", ti, [
                     m(h.$slots, "header", { close: f }, () => [
                       F(O(e.title), 1)
                     ]),
@@ -3540,10 +3566,10 @@ const Ua = /* @__PURE__ */ p({
                       onClick: f
                     }, " x ")
                   ])) : X("", !0),
-                  I("div", ei, [
+                  I("div", oi, [
                     m(h.$slots, "default", { close: f })
                   ]),
-                  c.value ? (r(), d("div", ti, [
+                  c.value ? (r(), d("div", ni, [
                     m(h.$slots, "footer", { close: f })
                   ])) : X("", !0)
                 ])
@@ -3558,51 +3584,51 @@ const Ua = /* @__PURE__ */ p({
       })
     ], 8, ["disabled"]));
   }
-}), oi = {
+}), si = {
   install(e) {
     e.component("VDrawer", Gt);
   }
 };
-function sc() {
+function lc() {
   return {};
 }
-const ni = /* @__PURE__ */ Symbol("VDropdownContextKey"), si = {
-  mounted() {
-  },
-  unmounted() {
-  }
-}, li = {
-  install(e) {
-    e.directive("visible", si);
-  }
-}, ai = {
+const li = /* @__PURE__ */ Symbol("VDropdownContextKey"), ai = {
   mounted() {
   },
   unmounted() {
   }
 }, ii = {
   install(e) {
-    e.directive("loading", ai);
+    e.directive("visible", ai);
+  }
+}, ri = {
+  mounted() {
+  },
+  unmounted() {
+  }
+}, ui = {
+  install(e) {
+    e.directive("loading", ri);
   }
 }, Yt = {
   mounted() {
   },
   unmounted() {
   }
-}, ri = {
+}, ci = {
   install(e) {
     e.directive("click-outside", Yt);
   }
-}, ui = {
+}, di = {
   mounted() {
   },
   unmounted() {
   }
-}, ci = {
+}, mi = {
   install(e) {
-    e.directive("tooltip", ui);
+    e.directive("tooltip", di);
   }
-}, di = { class: "v-dropdown__menu" }, mi = /* @__PURE__ */ p({
+}, fi = { class: "v-dropdown__menu" }, pi = /* @__PURE__ */ p({
   __name: "VDropdown",
   emits: ["opened", "closed", "open", "close"],
   setup(e, { expose: t, emit: o }) {
@@ -3618,7 +3644,7 @@ const ni = /* @__PURE__ */ Symbol("VDropdownContextKey"), si = {
     }), t({
       setVisible: i,
       isVisible: l
-    }), j(ni, {
+    }), j(li, {
       props: n
     }), (h, y) => G((r(), d("div", {
       class: C(["v-dropdown", {
@@ -3635,7 +3661,7 @@ const ni = /* @__PURE__ */ Symbol("VDropdownContextKey"), si = {
         onAfterLeave: _
       }, {
         default: $(() => [
-          G(I("div", di, [
+          G(I("div", fi, [
             m(h.$slots, "default")
           ], 512), [
             [le, a(l)]
@@ -3647,11 +3673,11 @@ const ni = /* @__PURE__ */ Symbol("VDropdownContextKey"), si = {
       [a(Yt), f]
     ]);
   }
-}), fi = {
+}), vi = {
   install(e) {
-    e.component("VDropdown", mi);
+    e.component("VDropdown", pi);
   }
-}, pi = /* @__PURE__ */ p({
+}, hi = /* @__PURE__ */ p({
   __name: "VImage",
   props: {
     src: {}
@@ -3681,29 +3707,29 @@ const ni = /* @__PURE__ */ Symbol("VDropdownContextKey"), si = {
       ])
     ], 2));
   }
-}), vi = {
+}), bi = {
   install(e) {
-    e.component("VImage", pi);
+    e.component("VImage", hi);
   }
-}, hi = /* @__PURE__ */ p({
+}, _i = /* @__PURE__ */ p({
   __name: "VContainer",
   props: {
     size: {}
   },
   setup(e) {
     const t = e;
-    return (o, n) => (r(), x(a(We).Container, L(N(t)), {
+    return (o, n) => (r(), x(a(We).Container, P(L(t)), {
       default: $(() => [
         m(o.$slots, "default")
       ]),
       _: 3
     }, 16));
   }
-}), bi = {
+}), gi = {
   install(e) {
-    e.component("VContainer", hi);
+    e.component("VContainer", _i);
   }
-}, _i = /* @__PURE__ */ p({
+}, yi = /* @__PURE__ */ p({
   __name: "VCol",
   props: {
     size: {},
@@ -3730,18 +3756,18 @@ const ni = /* @__PURE__ */ Symbol("VDropdownContextKey"), si = {
   },
   setup(e) {
     const t = e;
-    return (o, n) => (r(), x(a(We).Col, L(N(t)), {
+    return (o, n) => (r(), x(a(We).Col, P(L(t)), {
       default: $(() => [
         m(o.$slots, "default")
       ]),
       _: 3
     }, 16));
   }
-}), gi = {
+}), Vi = {
   install(e) {
-    e.component("VCol", _i);
+    e.component("VCol", yi);
   }
-}, yi = /* @__PURE__ */ p({
+}, $i = /* @__PURE__ */ p({
   __name: "VRow",
   props: {
     guttersX: { type: Boolean },
@@ -3763,18 +3789,18 @@ const ni = /* @__PURE__ */ Symbol("VDropdownContextKey"), si = {
   },
   setup(e) {
     const t = e;
-    return (o, n) => (r(), x(a(We).Row, L(N(t)), {
+    return (o, n) => (r(), x(a(We).Row, P(L(t)), {
       default: $(() => [
         m(o.$slots, "default")
       ]),
       _: 3
     }, 16));
   }
-}), Vi = {
+}), xi = {
   install(e) {
-    e.component("VRow", yi);
+    e.component("VRow", $i);
   }
-}, $i = /* @__PURE__ */ p({
+}, Ci = /* @__PURE__ */ p({
   __name: "VLayout",
   setup(e) {
     const t = J();
@@ -3805,11 +3831,11 @@ const ni = /* @__PURE__ */ Symbol("VDropdownContextKey"), si = {
       } : void 0
     ]), 1024));
   }
-}), xi = {
+}), Ri = {
   install(e) {
-    e.component("VLayout", $i);
+    e.component("VLayout", Ci);
   }
-}, Ci = { class: "v-pagination" }, Ri = /* @__PURE__ */ p({
+}, Ii = { class: "v-pagination" }, Ti = /* @__PURE__ */ p({
   __name: "VPagination",
   props: {
     total: {},
@@ -3821,27 +3847,27 @@ const ni = /* @__PURE__ */ Symbol("VDropdownContextKey"), si = {
   },
   emits: ["change", "load"],
   setup(e) {
-    return (t, o) => (r(), d("div", Ci));
+    return (t, o) => (r(), d("div", Ii));
   }
-}), Ii = {
+}), Bi = {
   install(e) {
-    e.component("VPagination", Ri);
+    e.component("VPagination", Ti);
   }
-}, Ti = { class: "v-placeholder" }, Bi = /* @__PURE__ */ p({
+}, wi = { class: "v-placeholder" }, Si = /* @__PURE__ */ p({
   __name: "VPlaceholder",
   props: {
     animated: { type: Boolean }
   },
   setup(e) {
-    return (t, o) => (r(), d("div", Ti, [
+    return (t, o) => (r(), d("div", wi, [
       m(t.$slots, "default")
     ]));
   }
-}), wi = {
+}), Mi = {
   install(e) {
-    e.component("VPlaceholder", Bi);
+    e.component("VPlaceholder", Si);
   }
-}, Si = /* @__PURE__ */ p({
+}, Ai = /* @__PURE__ */ p({
   __name: "VScrollbar",
   props: {
     vertical: { type: Boolean },
@@ -3864,11 +3890,11 @@ const ni = /* @__PURE__ */ Symbol("VDropdownContextKey"), si = {
       _: 3
     }, 16));
   }
-}), Mi = {
+}), Ei = {
   install(e) {
-    e.component("VScrollbar", Si);
+    e.component("VScrollbar", Ai);
   }
-}, Ai = /* @__PURE__ */ p({
+}, Di = /* @__PURE__ */ p({
   __name: "VSpinner",
   props: {
     size: {},
@@ -3882,12 +3908,12 @@ const ni = /* @__PURE__ */ Symbol("VDropdownContextKey"), si = {
       }])
     }, null, 2));
   }
-}), Ei = {
+}), ki = {
   install(e) {
-    e.component("VSpinner", Ai);
+    e.component("VSpinner", Di);
   }
-}, qt = /* @__PURE__ */ Symbol("VTabsContextKey"), ki = () => U(qt, null);
-function Di() {
+}, qt = /* @__PURE__ */ Symbol("VTabsContextKey"), zi = () => U(qt, null);
+function Oi() {
   const e = S([]);
   function t(n) {
     e.value.find((s) => s.id === n.id) || e.value.push(n);
@@ -3901,14 +3927,14 @@ function Di() {
     unregisterTab: o
   };
 }
-function zi(e) {
+function Pi(e) {
   const t = He(), o = u(() => e.context?.modelValue.value === e.props.value);
   return {
     id: t,
     isActive: o
   };
 }
-const Oi = { class: "v-tabs" }, Pi = { class: "v-tabs__content" }, Li = /* @__PURE__ */ p({
+const Li = { class: "v-tabs" }, Ni = { class: "v-tabs__content" }, Xi = /* @__PURE__ */ p({
   __name: "VTabs",
   props: /* @__PURE__ */ T({
     scrollable: { type: Boolean }
@@ -3924,7 +3950,7 @@ const Oi = { class: "v-tabs" }, Pi = { class: "v-tabs__content" }, Li = /* @__PU
       tabs: l,
       registerTab: i,
       unregisterTab: c
-    } = Di();
+    } = Oi();
     function f(v) {
       s.value = v, n("change", v);
     }
@@ -3935,13 +3961,13 @@ const Oi = { class: "v-tabs" }, Pi = { class: "v-tabs__content" }, Li = /* @__PU
       handleChange: f,
       registerTab: i,
       unregisterTab: c
-    }), (v, _) => (r(), d("div", Oi, [
-      I("div", Pi, [
+    }), (v, _) => (r(), d("div", Li, [
+      I("div", Ni, [
         m(v.$slots, "default")
       ])
     ]));
   }
-}), Ni = /* @__PURE__ */ p({
+}), Fi = /* @__PURE__ */ p({
   __name: "VTab",
   props: {
     title: {},
@@ -3949,10 +3975,10 @@ const Oi = { class: "v-tabs" }, Pi = { class: "v-tabs__content" }, Li = /* @__PU
     disabled: { type: Boolean }
   },
   setup(e) {
-    const t = e, o = J(), n = ki(), { id: s, isActive: l } = zi({
+    const t = e, o = J(), n = zi(), { id: s, isActive: l } = Pi({
       context: n,
       props: t
-    }), i = no({
+    }), i = so({
       id: s,
       props: t,
       slots: o
@@ -3969,11 +3995,11 @@ const Oi = { class: "v-tabs" }, Pi = { class: "v-tabs__content" }, Li = /* @__PU
       [le, a(l)]
     ]);
   }
-}), Xi = {
+}), ji = {
   install(e) {
-    e.component("VTabs", Li), e.component("VTab", Ni);
+    e.component("VTabs", Xi), e.component("VTab", Fi);
   }
-}, Fi = /* @__PURE__ */ p({
+}, Hi = /* @__PURE__ */ p({
   __name: "VTag",
   props: {
     value: {},
@@ -3991,61 +4017,51 @@ const Oi = { class: "v-tabs" }, Pi = { class: "v-tabs__content" }, Li = /* @__PU
       _: 3
     }, 16));
   }
-}), ji = /* @__PURE__ */ p({
+}), Ui = /* @__PURE__ */ p({
   __name: "VTagGroup",
   props: {
     direction: {}
   },
   setup(e) {
     const t = e;
-    return (o, n) => (r(), x(a(Pt).Group, L(N(t)), {
+    return (o, n) => (r(), x(a(Pt).Group, P(L(t)), {
       default: $(() => [
         m(o.$slots, "default")
       ]),
       _: 3
     }, 16));
   }
-}), Hi = {
+}), Gi = {
   install(e) {
-    e.component("VTag", Fi);
+    e.component("VTag", Hi);
   }
-}, lc = {
+}, ac = {
   install(e) {
-    e.component("VTagGroup", ji);
+    e.component("VTagGroup", Ui);
   }
-}, Ui = ["innerHTML"], Gi = /* @__PURE__ */ p({
+}, Yi = /* @__PURE__ */ p({
   __name: "VText",
   props: {
-    tag: { default: "div" },
+    tag: {},
     uppercase: { type: Boolean },
     underline: { type: Boolean },
-    content: {},
     theme: {},
     size: {}
   },
   setup(e) {
-    return (t, o) => (r(), x(so(e.tag), {
-      class: C(["v-text", {
-        "v-text--uppercase": e.uppercase,
-        "v-text--underline": e.underline,
-        [`v-text--size-${e.size}`]: e.size,
-        [`v-text--theme-${e.theme}`]: e.theme
-      }])
-    }, {
+    const t = e;
+    return (o, n) => (r(), x(a(ma).Root, P(L(t)), {
       default: $(() => [
-        e.content ? (r(), d("span", {
-          key: 0,
-          innerHTML: e.content
-        }, null, 8, Ui)) : m(t.$slots, "default", { key: 1 })
+        m(o.$slots, "default")
       ]),
       _: 3
-    }, 8, ["class"]));
+    }, 16));
   }
-}), Yi = {
+}), qi = {
   install(e) {
-    e.component("VText", Gi);
+    e.component("VText", Yi);
   }
-}, qi = /* @__PURE__ */ p({
+}, Ki = /* @__PURE__ */ p({
   __name: "VForm",
   props: /* @__PURE__ */ T({
     rules: {},
@@ -4065,16 +4081,16 @@ const Oi = { class: "v-tabs" }, Pi = { class: "v-tabs__content" }, Li = /* @__PU
       "onUpdate:modelValue": i[0] || (i[0] = (c) => s.value = c)
     }, o, te(n)), {
       default: $((c) => [
-        m(l.$slots, "default", L(N(c)))
+        m(l.$slots, "default", P(L(c)))
       ]),
       _: 3
     }, 16, ["modelValue"]));
   }
-}), Ki = {
+}), Wi = {
   install(e) {
-    e.component("VForm", qi);
+    e.component("VForm", Ki);
   }
-}, Wi = /* @__PURE__ */ p({
+}, Zi = /* @__PURE__ */ p({
   __name: "VFormItem",
   props: {
     title: {},
@@ -4086,10 +4102,10 @@ const Oi = { class: "v-tabs" }, Pi = { class: "v-tabs__content" }, Li = /* @__PU
     const o = ft(e, ["title"]), n = t, s = J();
     return (l, i) => (r(), x(a(he).Item, H(o, te(n)), vt({
       default: $((c) => [
-        m(l.$slots, "default", L(N(c)))
+        m(l.$slots, "default", P(L(c)))
       ]),
       footer: $((c) => [
-        m(l.$slots, "footer", L(N(c)), () => [
+        m(l.$slots, "footer", P(L(c)), () => [
           A(a(he).ItemErrors)
         ])
       ]),
@@ -4098,7 +4114,7 @@ const Oi = { class: "v-tabs" }, Pi = { class: "v-tabs__content" }, Li = /* @__PU
       s.header ? {
         name: "header",
         fn: $((c) => [
-          m(l.$slots, "header", L(N(c)), () => [
+          m(l.$slots, "header", P(L(c)), () => [
             A(a(he).ItemTitle, null, {
               default: $(() => [
                 F(O(e.title) + " ", 1),
@@ -4112,11 +4128,11 @@ const Oi = { class: "v-tabs" }, Pi = { class: "v-tabs__content" }, Li = /* @__PU
       } : void 0
     ]), 1040));
   }
-}), Zi = {
+}), Ji = {
   install(e) {
-    e.component("VFormItem", Wi);
+    e.component("VFormItem", Zi);
   }
-}, Ji = /* @__PURE__ */ p({
+}, Qi = /* @__PURE__ */ p({
   __name: "VCheckbox",
   props: /* @__PURE__ */ T({
     disabled: { type: Boolean },
@@ -4148,29 +4164,29 @@ const Oi = { class: "v-tabs" }, Pi = { class: "v-tabs__content" }, Li = /* @__PU
       _: 3
     }, 16, ["modelValue"]));
   }
-}), Qi = /* @__PURE__ */ p({
+}), er = /* @__PURE__ */ p({
   __name: "VCheckboxGroup",
   props: {
     direction: {}
   },
   setup(e) {
     const t = e;
-    return (o, n) => (r(), x(a(xe).Group, L(N(t)), {
+    return (o, n) => (r(), x(a(xe).Group, P(L(t)), {
       default: $(() => [
         m(o.$slots, "default")
       ]),
       _: 3
     }, 16));
   }
-}), er = {
+}), tr = {
   install(e) {
-    e.component("VCheckbox", Ji);
+    e.component("VCheckbox", Qi);
   }
-}, tr = {
+}, or = {
   install(e) {
-    e.component("VCheckboxGroup", Qi);
+    e.component("VCheckboxGroup", er);
   }
-}, or = /* @__PURE__ */ p({
+}, nr = /* @__PURE__ */ p({
   __name: "VInput",
   props: /* @__PURE__ */ T({
     type: {},
@@ -4202,7 +4218,7 @@ const Oi = { class: "v-tabs" }, Pi = { class: "v-tabs__content" }, Li = /* @__PU
       default: $((i) => [
         o?.before ? (r(), x(a(Y).Before, { key: 0 }, {
           default: $(() => [
-            m(s.$slots, "before", L(N(i)))
+            m(s.$slots, "before", P(L(i)))
           ]),
           _: 2
         }, 1024)) : X("", !0),
@@ -4214,7 +4230,7 @@ const Oi = { class: "v-tabs" }, Pi = { class: "v-tabs__content" }, Li = /* @__PU
         }, 1024),
         o?.after ? (r(), x(a(Y).After, { key: 1 }, {
           default: $(() => [
-            m(s.$slots, "after", L(N(i)))
+            m(s.$slots, "after", P(L(i)))
           ]),
           _: 2
         }, 1024)) : X("", !0)
@@ -4222,11 +4238,11 @@ const Oi = { class: "v-tabs" }, Pi = { class: "v-tabs__content" }, Li = /* @__PU
       _: 3
     }, 16, ["modelValue"]));
   }
-}), nr = {
+}), sr = {
   install(e) {
-    e.component("VInput", or);
+    e.component("VInput", nr);
   }
-}, sr = /* @__PURE__ */ p({
+}, lr = /* @__PURE__ */ p({
   __name: "VInputCode",
   props: /* @__PURE__ */ T({
     length: {},
@@ -4257,11 +4273,11 @@ const Oi = { class: "v-tabs" }, Pi = { class: "v-tabs__content" }, Li = /* @__PU
       _: 1
     }, 16, ["modelValue"]));
   }
-}), lr = {
+}), ar = {
   install(e) {
-    e.component("VInputCode", sr);
+    e.component("VInputCode", lr);
   }
-}, ar = /* @__PURE__ */ p({
+}, ir = /* @__PURE__ */ p({
   __name: "VInputNumber",
   props: /* @__PURE__ */ T({
     mousewheel: { type: [Boolean, Number] },
@@ -4300,11 +4316,11 @@ const Oi = { class: "v-tabs" }, Pi = { class: "v-tabs__content" }, Li = /* @__PU
       _: 1
     }, 16, ["modelValue"]));
   }
-}), ir = {
+}), rr = {
   install(e) {
-    e.component("VInputNumber", ar);
+    e.component("VInputNumber", ir);
   }
-}, rr = /* @__PURE__ */ p({
+}, ur = /* @__PURE__ */ p({
   __name: "VInputPassword",
   props: /* @__PURE__ */ T({
     clearable: { type: Boolean },
@@ -4329,11 +4345,11 @@ const Oi = { class: "v-tabs" }, Pi = { class: "v-tabs__content" }, Li = /* @__PU
       "onUpdate:modelValue": s[0] || (s[0] = (l) => o.value = l)
     }, t), null, 16, ["modelValue"]));
   }
-}), ur = {
+}), cr = {
   install(e) {
-    e.component("VInputPassword", rr);
+    e.component("VInputPassword", ur);
   }
-}, cr = /* @__PURE__ */ p({
+}, dr = /* @__PURE__ */ p({
   __name: "VRadio",
   props: /* @__PURE__ */ T({
     disabled: { type: Boolean },
@@ -4365,29 +4381,29 @@ const Oi = { class: "v-tabs" }, Pi = { class: "v-tabs__content" }, Li = /* @__PU
       _: 3
     }, 16, ["modelValue"]));
   }
-}), dr = /* @__PURE__ */ p({
+}), mr = /* @__PURE__ */ p({
   __name: "VRadioGroup",
   props: {
     direction: {}
   },
   setup(e) {
     const t = e;
-    return (o, n) => (r(), x(a(Ce).Group, L(N(t)), {
+    return (o, n) => (r(), x(a(Ce).Group, P(L(t)), {
       default: $(() => [
         m(o.$slots, "default")
       ]),
       _: 3
     }, 16));
   }
-}), mr = {
+}), fr = {
   install(e) {
-    e.component("VRadio", cr);
+    e.component("VRadio", dr);
   }
-}, fr = {
+}, pr = {
   install(e) {
-    e.component("VRadioGroup", dr);
+    e.component("VRadioGroup", mr);
   }
-}, pr = /* @__PURE__ */ p({
+}, vr = /* @__PURE__ */ p({
   __name: "VSwitch",
   props: /* @__PURE__ */ T({
     disabled: { type: Boolean },
@@ -4416,11 +4432,11 @@ const Oi = { class: "v-tabs" }, Pi = { class: "v-tabs__content" }, Li = /* @__PU
       _: 3
     }, 16, ["modelValue"]));
   }
-}), vr = {
+}), hr = {
   install(e) {
-    e.component("VSwitch", pr);
+    e.component("VSwitch", vr);
   }
-}, hr = /* @__PURE__ */ p({
+}, br = /* @__PURE__ */ p({
   __name: "VConfigProvider",
   props: {
     locale: {},
@@ -4429,21 +4445,21 @@ const Oi = { class: "v-tabs" }, Pi = { class: "v-tabs__content" }, Li = /* @__PU
   },
   setup(e) {
     const t = e;
-    return (o, n) => (r(), x(a(kl).Root, L(N(t)), {
+    return (o, n) => (r(), x(a(Dl).Root, P(L(t)), {
       default: $(() => [
         m(o.$slots, "default")
       ]),
       _: 3
     }, 16));
   }
-}), br = {
+}), _r = {
   install(e) {
-    e.component("VConfigProvider", hr);
+    e.component("VConfigProvider", br);
   }
-}, _r = { class: "v-progress__value" }, gr = {
+}, gr = { class: "v-progress__value" }, yr = {
   key: 0,
   class: "v-progress__label"
-}, yr = /* @__PURE__ */ p({
+}, Vr = /* @__PURE__ */ p({
   __name: "VProgress",
   props: {
     indeterminate: { type: Boolean },
@@ -4461,29 +4477,29 @@ const Oi = { class: "v-tabs" }, Pi = { class: "v-tabs__content" }, Li = /* @__PU
       }]),
       role: "progressbar"
     }, [
-      I("div", _r, [
-        e.showValue ? (r(), d("div", gr, [
+      I("div", gr, [
+        e.showValue ? (r(), d("div", yr, [
           m(t.$slots, "default")
         ])) : X("", !0)
       ])
     ], 2));
   }
-}), Vr = {
+}), $r = {
   install(e) {
-    e.component("VProgress", yr);
+    e.component("VProgress", Vr);
   }
-}, $r = { class: "v-divider" }, xr = /* @__PURE__ */ p({
+}, xr = { class: "v-divider" }, Cr = /* @__PURE__ */ p({
   __name: "VDivider",
   setup(e) {
-    return (t, o) => (r(), d("div", $r, [
+    return (t, o) => (r(), d("div", xr, [
       m(t.$slots, "default")
     ]));
   }
-}), Cr = {
+}), Rr = {
   install(e) {
-    e.component("VDivider", xr);
+    e.component("VDivider", Cr);
   }
-}, Rr = /* @__PURE__ */ p({
+}, Ir = /* @__PURE__ */ p({
   __name: "VFlex",
   props: {
     wrap: { type: Boolean, default: !0 },
@@ -4504,12 +4520,12 @@ const Oi = { class: "v-tabs" }, Pi = { class: "v-tabs__content" }, Li = /* @__PU
       m(t.$slots, "default")
     ], 2));
   }
-}), Ir = {
+}), Tr = {
   install(e) {
-    e.component("VFlex", Rr);
+    e.component("VFlex", Ir);
   }
 };
-function Tr(e) {
+function Br(e) {
   const t = S([]), o = S({
     prop: null,
     order: null
@@ -4544,10 +4560,10 @@ function Tr(e) {
     toggleAllSelection: f
   };
 }
-const Br = Ee(() => Promise.resolve().then(() => mu)), wr = Ee(() => Promise.resolve().then(() => bu)), Sr = Ee(() => Promise.resolve().then(() => xu)), Mr = Ee(() => Promise.resolve().then(() => Bu)), Ar = /* @__PURE__ */ Symbol("VTableContextKey"), Er = { class: "v-table" }, kr = {
+const wr = Ee(() => Promise.resolve().then(() => fu)), Sr = Ee(() => Promise.resolve().then(() => _u)), Mr = Ee(() => Promise.resolve().then(() => Cu)), Ar = Ee(() => Promise.resolve().then(() => wu)), Er = /* @__PURE__ */ Symbol("VTableContextKey"), Dr = { class: "v-table" }, kr = {
   key: 0,
   class: "v-table__native"
-}, Dr = { key: 0 }, zr = /* @__PURE__ */ p({
+}, zr = { key: 0 }, Or = /* @__PURE__ */ p({
   __name: "VTable",
   props: {
     columns: {},
@@ -4565,8 +4581,8 @@ const Br = Ee(() => Promise.resolve().then(() => mu)), wr = Ee(() => Promise.res
       clearSort: i,
       sort: c,
       toggleAllSelection: f
-    } = Tr(o);
-    return j(Ar, {
+    } = Br(o);
+    return j(Er, {
       props: o
     }), t({
       clearSelection: s,
@@ -4574,11 +4590,11 @@ const Br = Ee(() => Promise.resolve().then(() => mu)), wr = Ee(() => Promise.res
       clearSort: i,
       sort: c,
       toggleAllSelection: f
-    }), (v, _) => (r(), d("div", Er, [
+    }), (v, _) => (r(), d("div", Dr, [
       e.data.length ? (r(), d("table", kr, [
-        a(n) ? (r(), d("thead", Dr, [
+        a(n) ? (r(), d("thead", zr, [
           I("tr", null, [
-            (r(!0), d(q, null, ce(e.columns, (h) => (r(), x(a(Mr), {
+            (r(!0), d(q, null, ce(e.columns, (h) => (r(), x(a(Ar), {
               key: h.prop
             }, {
               default: $(() => [
@@ -4589,11 +4605,11 @@ const Br = Ee(() => Promise.resolve().then(() => mu)), wr = Ee(() => Promise.res
           ])
         ])) : X("", !0),
         I("tbody", null, [
-          (r(!0), d(q, null, ce(e.data, (h, y) => (r(), x(a(Br), {
+          (r(!0), d(q, null, ce(e.data, (h, y) => (r(), x(a(wr), {
             key: `row-${y}`
           }, {
             default: $(() => [
-              (r(!0), d(q, null, ce(e.columns, (V) => (r(), x(a(Sr), {
+              (r(!0), d(q, null, ce(e.columns, (V) => (r(), x(a(Mr), {
                 key: `row-${y}-${String(V.prop)}`
               }, {
                 default: $(() => [
@@ -4607,7 +4623,7 @@ const Br = Ee(() => Promise.resolve().then(() => mu)), wr = Ee(() => Promise.res
             _: 2
           }, 1024))), 128))
         ])
-      ])) : (r(), x(a(wr), { key: 1 }, {
+      ])) : (r(), x(a(Sr), { key: 1 }, {
         default: $(() => [
           m(v.$slots, "empty")
         ]),
@@ -4615,11 +4631,11 @@ const Br = Ee(() => Promise.resolve().then(() => mu)), wr = Ee(() => Promise.res
       }))
     ]));
   }
-}), Or = {
+}), Pr = {
   install(e) {
-    e.component("VTable", zr);
+    e.component("VTable", Or);
   }
-}, Pr = /* @__PURE__ */ p({
+}, Lr = /* @__PURE__ */ p({
   __name: "VInputGroup",
   setup(e) {
     return (t, o) => (r(), x(a(Y).Group, null, {
@@ -4629,7 +4645,7 @@ const Br = Ee(() => Promise.resolve().then(() => mu)), wr = Ee(() => Promise.res
       _: 3
     }));
   }
-}), Lr = /* @__PURE__ */ p({
+}), Nr = /* @__PURE__ */ p({
   __name: "VInputGroupAddon",
   setup(e) {
     return (t, o) => (r(), x(a(Y).GroupAddon, null, {
@@ -4639,14 +4655,14 @@ const Br = Ee(() => Promise.resolve().then(() => mu)), wr = Ee(() => Promise.res
       _: 3
     }));
   }
-}), Nr = {
+}), Xr = {
   install(e) {
-    e.component("VInputGroup", Pr), e.component("VInputGroupAddon", Lr);
+    e.component("VInputGroup", Lr), e.component("VInputGroupAddon", Nr);
   }
 }, Re = 1e3, Ie = 60 * Re, Te = 60 * Ie, ct = 24 * Te, Kt = Date.now(), Wt = 1e3;
-function Xr(e) {
-  const [t, o] = Z(), [n, s] = Z(), l = S(0), i = S(0), c = S(0), f = u(() => e.props.now || Kt), v = u(() => e.props.interval || Wt), _ = u(() => 0), h = u(() => 0), y = u(() => Math.floor(l.value / ct)), V = u(() => Math.floor(l.value % ct / Te)), g = u(() => Math.floor(l.value % Te / Ie)), R = u(() => Math.floor(l.value % Ie / Re)), B = u(() => Math.floor(l.value % Re)), w = u(() => Math.floor(l.value / Te)), k = u(() => Math.floor(l.value / Ie)), D = u(() => Math.floor(l.value / Re));
-  function P() {
+function Fr(e) {
+  const [t, o] = Z(), [n, s] = Z(), l = S(0), i = S(0), c = S(0), f = u(() => e.props.now || Kt), v = u(() => e.props.interval || Wt), _ = u(() => 0), h = u(() => 0), y = u(() => Math.floor(l.value / ct)), V = u(() => Math.floor(l.value % ct / Te)), g = u(() => Math.floor(l.value % Te / Ie)), R = u(() => Math.floor(l.value % Ie / Re)), B = u(() => Math.floor(l.value % Re)), w = u(() => Math.floor(l.value / Te)), D = u(() => Math.floor(l.value / Ie)), k = u(() => Math.floor(l.value / Re));
+  function N() {
     t.value || (o(!0), e.props?.autoStart || (l.value = e.props.start, i.value = f.value + e.props.start), e.onStart?.(), document.visibilityState === "visible" && se());
   }
   function z() {
@@ -4661,8 +4677,8 @@ function Xr(e) {
       milliseconds: B.value,
       totalDays: y.value,
       totalHours: w.value,
-      totalMinutes: k.value,
-      totalSeconds: D.value,
+      totalMinutes: D.value,
+      totalSeconds: k.value,
       totalMilliseconds: l.value
     }), se());
   }
@@ -4690,7 +4706,7 @@ function Xr(e) {
     t.value && (l.value = Math.max(0, i.value - f.value));
   }
   function Pe() {
-    z(), l.value = e.props.start, i.value = f.value + e.props.start, o(!1), P();
+    z(), l.value = e.props.start, i.value = f.value + e.props.start, o(!1), N();
   }
   function ye() {
     switch (document.visibilityState) {
@@ -4707,7 +4723,7 @@ function Xr(e) {
   }), Fe(() => {
     document.removeEventListener("visibilitychange", ye), z();
   }), K(() => e.props, (ee) => {
-    l.value = ee.start, i.value = f.value + ee.start, ee.autoStart && P();
+    l.value = ee.start, i.value = f.value + ee.start, ee.autoStart && N();
   }, {
     deep: !0,
     immediate: !0
@@ -4719,13 +4735,13 @@ function Xr(e) {
     minutes: g,
     seconds: R,
     milliseconds: B,
-    start: P,
+    start: N,
     abort: ge,
     end: ie,
     restart: Pe
   };
 }
-const Fr = { class: "v-countdown" }, jr = /* @__PURE__ */ p({
+const jr = { class: "v-countdown" }, Hr = /* @__PURE__ */ p({
   __name: "VCountdown",
   props: {
     autoStart: { type: Boolean },
@@ -4747,7 +4763,7 @@ const Fr = { class: "v-countdown" }, jr = /* @__PURE__ */ p({
       abort: V,
       end: g,
       restart: R
-    } = Xr({
+    } = Fr({
       props: n,
       onAbort: () => s("abort"),
       onEnd: () => s("end"),
@@ -4759,7 +4775,7 @@ const Fr = { class: "v-countdown" }, jr = /* @__PURE__ */ p({
       abort: V,
       end: g,
       restart: R
-    }), (B, w) => (r(), d("div", Fr, [
+    }), (B, w) => (r(), d("div", jr, [
       m(B.$slots, "default", {
         years: a(l),
         months: a(i),
@@ -4771,31 +4787,31 @@ const Fr = { class: "v-countdown" }, jr = /* @__PURE__ */ p({
       })
     ]));
   }
-}), Hr = {
+}), Ur = {
   install(e) {
-    e.component("VCountdown", jr);
+    e.component("VCountdown", Hr);
   }
-}, Ur = { class: "v-calendar" }, Gr = /* @__PURE__ */ p({
+}, Gr = { class: "v-calendar" }, Yr = /* @__PURE__ */ p({
   __name: "VCalendar",
   props: {
     theme: {},
     size: {}
   },
   setup(e) {
-    return (t, o) => (r(), d("div", Ur));
+    return (t, o) => (r(), d("div", Gr));
   }
-}), Yr = {
+}), qr = {
   install(e) {
-    e.component("VCalendar", Gr);
+    e.component("VCalendar", Yr);
   }
-}, ac = {
+}, ic = {
   install(e) {
-    e.use(ha), e.use(Ea), e.use(xa), e.use(Ca), e.use(Na), e.use(za), e.use(fa), e.use(ja), e.use(br), e.use(Za), e.use(Ga), e.use(oi), e.use(fi), e.use(vi), e.use(Ii), e.use(wi), e.use(Mi), e.use(Ei), e.use(Xi), e.use(Hi), e.use(Yi), e.use(bi), e.use(gi), e.use(Vi), e.use(xi), e.use(Ki), e.use(Zi), e.use(nr), e.use(er), e.use(tr), e.use(ur), e.use(ir), e.use(lr), e.use(mr), e.use(fr), e.use(vr), e.use(Ya), e.use(wa), e.use(Vr), e.use(Cr), e.use(Ir), e.use(Or), e.use(Nr), e.use(Hr), e.use(Yr), e.use(li), e.use(ri), e.use(ii), e.use(ci);
+    e.use(_a), e.use(ka), e.use(Ra), e.use(Ia), e.use(Fa), e.use(Pa), e.use(va), e.use(Ua), e.use(_r), e.use(Qa), e.use(qa), e.use(si), e.use(vi), e.use(bi), e.use(Bi), e.use(Mi), e.use(Ei), e.use(ki), e.use(ji), e.use(Gi), e.use(qi), e.use(gi), e.use(Vi), e.use(xi), e.use(Ri), e.use(Wi), e.use(Ji), e.use(sr), e.use(tr), e.use(or), e.use(cr), e.use(rr), e.use(ar), e.use(fr), e.use(pr), e.use(hr), e.use(Ka), e.use(Ma), e.use($r), e.use(Rr), e.use(Tr), e.use(Pr), e.use(Xr), e.use(Ur), e.use(qr), e.use(ii), e.use(ci), e.use(ui), e.use(mi);
   }
-}, qr = { class: "v-confirm__header" }, Kr = { class: "v-confirm__title" }, Wr = { class: "v-confirm__body" }, Zr = {
+}, Kr = { class: "v-confirm__header" }, Wr = { class: "v-confirm__title" }, Zr = { class: "v-confirm__body" }, Jr = {
   key: 0,
   class: "v-confirm__text"
-}, Jr = ["innerHTML"], Qr = { class: "v-confirm__footer" }, eu = /* @__PURE__ */ p({
+}, Qr = ["innerHTML"], eu = { class: "v-confirm__footer" }, tu = /* @__PURE__ */ p({
   __name: "VConfirm",
   props: {
     title: {},
@@ -4817,21 +4833,21 @@ const Fr = { class: "v-countdown" }, jr = /* @__PURE__ */ p({
             [`v-confirm--theme-${e.theme}`]: e.theme
           }])
         }, [
-          I("div", qr, [
-            I("div", Kr, O(e.title), 1),
+          I("div", Kr, [
+            I("div", Wr, O(e.title), 1),
             I("button", {
               type: "button",
               onClick: s[0] || (s[0] = (l) => o("close"))
             }, " X ")
           ]),
-          I("div", Wr, [
+          I("div", Zr, [
             e.useHtml ? (r(), d("div", {
               key: 1,
               class: "v-confirm__text",
               innerHTML: e.message
-            }, null, 8, Jr)) : (r(), d("div", Zr, O(e.message), 1))
+            }, null, 8, Qr)) : (r(), d("div", Jr, O(e.message), 1))
           ]),
-          I("div", Qr, [
+          I("div", eu, [
             I("button", {
               type: "button",
               onClick: s[1] || (s[1] = (l) => o("success"))
@@ -4847,7 +4863,7 @@ const Fr = { class: "v-countdown" }, jr = /* @__PURE__ */ p({
     }));
   }
 });
-class ic {
+class rc {
   static #e = null;
   static async open(t, o) {
     return new Promise((n) => {
@@ -4858,7 +4874,7 @@ class ic {
         } catch (c) {
           console.error(c), n(!1);
         }
-      }, l = ke(eu, {
+      }, l = De(tu, {
         ...t,
         onSuccess: () => {
           s(!0), t.onSuccess?.();
@@ -4878,11 +4894,11 @@ class ic {
     this.#e && be(null, this.#e);
   }
 }
-const rc = {
+const uc = {
   install() {
   }
 }, Zt = 1500;
-function tu(e) {
+function ou(e) {
   const t = u(() => W(e.props.duration) ? e.props.duration : Zt), [o, n] = Z(!1);
   let s = null;
   function l() {
@@ -4902,10 +4918,10 @@ function tu(e) {
     startTimer: i
   };
 }
-const ou = { class: "v-toast__header" }, nu = { class: "v-toast__title" }, su = { class: "v-toast__body" }, lu = {
+const nu = { class: "v-toast__header" }, su = { class: "v-toast__title" }, lu = { class: "v-toast__body" }, au = {
   key: 0,
   class: "v-toast__text"
-}, au = ["innerHTML"], iu = /* @__PURE__ */ p({
+}, iu = ["innerHTML"], ru = /* @__PURE__ */ p({
   __name: "VToast",
   props: {
     title: {},
@@ -4918,7 +4934,7 @@ const ou = { class: "v-toast__header" }, nu = { class: "v-toast__title" }, su = 
   },
   emits: ["close"],
   setup(e, { emit: t }) {
-    const o = e, n = t, { isVisible: s, setVisible: l, startTimer: i, clearTimer: c } = tu({
+    const o = e, n = t, { isVisible: s, setVisible: l, startTimer: i, clearTimer: c } = ou({
       props: o
     });
     return (f, v) => (r(), x(Ae, {
@@ -4937,8 +4953,8 @@ const ou = { class: "v-toast__header" }, nu = { class: "v-toast__title" }, su = 
           onMouseleave: v[2] || (v[2] = //@ts-ignore
           (..._) => a(i) && a(i)(..._))
         }, [
-          I("div", ou, [
-            I("div", nu, O(e.title), 1),
+          I("div", nu, [
+            I("div", su, O(e.title), 1),
             e.clearable ? (r(), d("button", {
               key: 0,
               type: "button",
@@ -4946,12 +4962,12 @@ const ou = { class: "v-toast__header" }, nu = { class: "v-toast__title" }, su = 
               onClick: v[0] || (v[0] = (_) => a(l)(!1))
             }, " X ")) : X("", !0)
           ]),
-          I("div", su, [
+          I("div", lu, [
             e.useHtml ? (r(), d("div", {
               key: 1,
               class: "v-toast__text",
               innerHTML: e.message
-            }, null, 8, au)) : (r(), d("div", lu, O(e.message), 1))
+            }, null, 8, iu)) : (r(), d("div", au, O(e.message), 1))
           ])
         ], 34), [
           [le, a(s)]
@@ -4961,119 +4977,119 @@ const ou = { class: "v-toast__header" }, nu = { class: "v-toast__title" }, su = 
     }));
   }
 });
-class uc {
+class cc {
   static #e = null;
   static open(t, o) {
     this.#e || (this.#e = document.createElement("div"), this.#e.id = "toast-container", document.body.appendChild(this.#e));
-    const n = ke(iu, {
+    const n = De(ru, {
       ...t,
       appContext: o
     });
     be(n, this.#e);
   }
 }
-class cc {
-  static open(t, o) {
-    const n = ke(Ut, {
-      ...t,
-      appContext: o
-    });
-    be(n, document.body);
-  }
-}
 class dc {
   static open(t, o) {
-    const n = ke(Gt, {
+    const n = De(Ut, {
       ...t,
       appContext: o
     });
     be(n, document.body);
   }
 }
-const mc = {
+class mc {
+  static open(t, o) {
+    const n = De(Gt, {
+      ...t,
+      appContext: o
+    });
+    be(n, document.body);
+  }
+}
+const fc = {
   name: "ru",
   vau: {}
-}, fc = {
+}, pc = {
   name: "en",
   vau: {}
-}, ru = {}, uu = { class: "v-table-row" };
-function cu(e, t) {
-  return r(), d("tr", uu, [
+}, uu = {}, cu = { class: "v-table-row" };
+function du(e, t) {
+  return r(), d("tr", cu, [
     m(e.$slots, "default")
   ]);
 }
-const du = /* @__PURE__ */ M(ru, [["render", cu]]), mu = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+const mu = /* @__PURE__ */ M(uu, [["render", du]]), fu = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
-  default: du
-}, Symbol.toStringTag, { value: "Module" })), fu = {}, pu = { class: "v-table-empty" };
-function vu(e, t) {
-  return r(), d("div", pu, [
+  default: mu
+}, Symbol.toStringTag, { value: "Module" })), pu = {}, vu = { class: "v-table-empty" };
+function hu(e, t) {
+  return r(), d("div", vu, [
     m(e.$slots, "default", {}, () => [
       t[0] || (t[0] = F(" Данных нет ", -1))
     ])
   ]);
 }
-const hu = /* @__PURE__ */ M(fu, [["render", vu]]), bu = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+const bu = /* @__PURE__ */ M(pu, [["render", hu]]), _u = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
-  default: hu
-}, Symbol.toStringTag, { value: "Module" })), _u = {}, gu = { class: "v-table-body-cell" }, yu = { class: "v-table-body-cell__content" };
-function Vu(e, t) {
-  return r(), d("td", gu, [
-    I("div", yu, [
+  default: bu
+}, Symbol.toStringTag, { value: "Module" })), gu = {}, yu = { class: "v-table-body-cell" }, Vu = { class: "v-table-body-cell__content" };
+function $u(e, t) {
+  return r(), d("td", yu, [
+    I("div", Vu, [
       m(e.$slots, "default")
     ])
   ]);
 }
-const $u = /* @__PURE__ */ M(_u, [["render", Vu]]), xu = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+const xu = /* @__PURE__ */ M(gu, [["render", $u]]), Cu = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
-  default: $u
-}, Symbol.toStringTag, { value: "Module" })), Cu = {}, Ru = { class: "v-table-header-cell" };
-function Iu(e, t) {
-  return r(), d("th", Ru, [
+  default: xu
+}, Symbol.toStringTag, { value: "Module" })), Ru = {}, Iu = { class: "v-table-header-cell" };
+function Tu(e, t) {
+  return r(), d("th", Iu, [
     m(e.$slots, "default")
   ]);
 }
-const Tu = /* @__PURE__ */ M(Cu, [["render", Iu]]), Bu = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+const Bu = /* @__PURE__ */ M(Ru, [["render", Tu]]), wu = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
-  default: Tu
+  default: Bu
 }, Symbol.toStringTag, { value: "Module" }));
 export {
   ue as Accordion,
-  ha as AccordionPlugin,
-  Ea as AffixPlugin,
-  wa as AlertPlugin,
-  Ca as AvatarGroupPlugin,
-  xa as AvatarPlugin,
-  Na as BadgePlugin,
-  za as BreadcrumbsPlugin,
+  _a as AccordionPlugin,
+  ka as AffixPlugin,
+  Ma as AlertPlugin,
+  Ia as AvatarGroupPlugin,
+  Ra as AvatarPlugin,
+  Fa as BadgePlugin,
+  Pa as BreadcrumbsPlugin,
   Xe as Button,
-  nc as ButtonGroupPlugin,
-  fa as ButtonPlugin,
-  Yr as CalendarPlugin,
+  sc as ButtonGroupPlugin,
+  va as ButtonPlugin,
+  qr as CalendarPlugin,
   xe as Checkbox,
-  tr as CheckboxGroupPlugin,
-  er as CheckboxPlugin,
-  ri as ClickOutsidePlugin,
-  gi as ColPlugin,
-  ja as CollapsePlugin,
-  kl as ConfigProvider,
-  br as ConfigProviderPlugin,
+  or as CheckboxGroupPlugin,
+  tr as CheckboxPlugin,
+  ci as ClickOutsidePlugin,
+  Vi as ColPlugin,
+  Ua as CollapsePlugin,
+  Dl as ConfigProvider,
+  _r as ConfigProviderPlugin,
   Lt as ConfigProviderRootContextKey,
-  rc as ConfirmPlugin,
-  ic as ConfirmService,
-  bi as ContainerPlugin,
-  Hr as CountdownPlugin,
+  uc as ConfirmPlugin,
+  rc as ConfirmService,
+  gi as ContainerPlugin,
+  Ur as CountdownPlugin,
   ku as Direction,
-  Cr as DividerPlugin,
-  oi as DrawerPlugin,
-  dc as DrawerService,
-  fi as DropdownPlugin,
-  zu as FlexAlign,
-  Ou as FlexJustify,
-  Ir as FlexPlugin,
+  Rr as DividerPlugin,
+  si as DrawerPlugin,
+  mc as DrawerService,
+  vi as DropdownPlugin,
+  Ou as FlexAlign,
+  Pu as FlexJustify,
+  Tr as FlexPlugin,
   he as Form,
-  Zi as FormItemPlugin,
-  Ki as FormPlugin,
+  Ji as FormItemPlugin,
+  Wi as FormPlugin,
   We as Grid,
   Be as INPUT_NUMBER_ACTIONS,
   Rs as INPUT_NUMBER_MAX,
@@ -5081,145 +5097,146 @@ export {
   Mt as INPUT_NUMBER_STEP,
   Ke as INPUT_NUMBER_VALUE_DEFAULT,
   Is as INPUT_NUMBER_WHEEL_DELAY,
-  vi as ImagePlugin,
-  Ga as InplacePlugin,
+  bi as ImagePlugin,
+  qa as InplacePlugin,
   Y as Input,
   st as InputCode,
-  lr as InputCodePlugin,
-  Nr as InputGroupPlugin,
+  ar as InputCodePlugin,
+  Xr as InputGroupPlugin,
   zo as InputModes,
   ve as InputNativeTypes,
   $e as InputNumber,
-  ir as InputNumberPlugin,
+  rr as InputNumberPlugin,
   Ps as InputPassword,
-  ur as InputPasswordPlugin,
-  nr as InputPlugin,
-  Ju as InputRange,
-  Zu as InputTags,
+  cr as InputPasswordPlugin,
+  sr as InputPlugin,
+  Qu as InputRange,
+  Ju as InputTags,
   Ct as InputTypes,
   ot as IntersectionPresets,
   ut as Layout,
-  xi as LayoutPlugin,
-  ii as LoadingPlugin,
-  Qu as Modal,
-  Za as ModalPlugin,
-  cc as ModalService,
-  Ya as OverlayPlugin,
-  Ii as PaginationPlugin,
-  wi as PlaceholderPlugin,
-  Du as Position,
-  Vr as ProgressPlugin,
+  Ri as LayoutPlugin,
+  ui as LoadingPlugin,
+  ec as Modal,
+  Qa as ModalPlugin,
+  dc as ModalService,
+  Ka as OverlayPlugin,
+  Bi as PaginationPlugin,
+  Mi as PlaceholderPlugin,
+  zu as Position,
+  $r as ProgressPlugin,
   Ce as Radio,
-  fr as RadioGroupPlugin,
-  mr as RadioPlugin,
-  Vi as RowPlugin,
+  pr as RadioGroupPlugin,
+  fr as RadioPlugin,
+  xi as RowPlugin,
   Ol as Scrollbar,
-  Mi as ScrollbarPlugin,
-  tc as Section,
-  Wu as Select,
-  Eu as Sizes,
-  Ei as SpinnerPlugin,
+  Ei as ScrollbarPlugin,
+  oc as Section,
+  Zu as Select,
+  Du as Sizes,
+  ki as SpinnerPlugin,
   Ne as Switch,
-  vr as SwitchPlugin,
-  Or as TablePlugin,
-  Xi as TabsPlugin,
+  hr as SwitchPlugin,
+  Pr as TablePlugin,
+  ji as TabsPlugin,
   Pt as Tag,
-  lc as TagGroupPlugin,
-  Hi as TagPlugin,
-  Yi as TextPlugin,
-  Au as Themes,
-  uc as ToastService,
-  ci as TooltipPlugin,
-  pa as VAccordion,
-  va as VAccordionItem,
-  Aa as VAffix,
-  Ba as VAlert,
-  _a as VAvatar,
-  $a as VAvatarGroup,
-  La as VBadge,
-  Da as VBreadcrumbs,
-  da as VButton,
-  ma as VButtonGroup,
-  Gr as VCalendar,
-  Ji as VCheckbox,
-  Qi as VCheckboxGroup,
-  _i as VCol,
-  Fa as VCollapse,
-  hr as VConfigProvider,
-  hi as VContainer,
-  jr as VCountdown,
-  xr as VDivider,
+  ac as TagGroupPlugin,
+  Gi as TagPlugin,
+  ma as Text,
+  qi as TextPlugin,
+  Eu as Themes,
+  cc as ToastService,
+  mi as TooltipPlugin,
+  ha as VAccordion,
+  ba as VAccordionItem,
+  Da as VAffix,
+  Sa as VAlert,
+  ya as VAvatar,
+  Ca as VAvatarGroup,
+  Xa as VBadge,
+  Oa as VBreadcrumbs,
+  fa as VButton,
+  pa as VButtonGroup,
+  Yr as VCalendar,
+  Qi as VCheckbox,
+  er as VCheckboxGroup,
+  yi as VCol,
+  Ha as VCollapse,
+  br as VConfigProvider,
+  _i as VContainer,
+  Hr as VCountdown,
+  Cr as VDivider,
   Gt as VDrawer,
-  mi as VDropdown,
-  Rr as VFlex,
-  qi as VForm,
-  Wi as VFormItem,
-  pi as VImage,
-  Ua as VInplace,
-  or as VInput,
-  sr as VInputCode,
-  Pr as VInputGroup,
-  Lr as VInputGroupAddon,
-  ar as VInputNumber,
-  rr as VInputPassword,
-  $i as VLayout,
+  pi as VDropdown,
+  Ir as VFlex,
+  Ki as VForm,
+  Zi as VFormItem,
+  hi as VImage,
+  Ya as VInplace,
+  nr as VInput,
+  lr as VInputCode,
+  Lr as VInputGroup,
+  Nr as VInputGroupAddon,
+  ir as VInputNumber,
+  ur as VInputPassword,
+  Ci as VLayout,
   Ut as VModal,
   Oe as VOverlay,
-  Ri as VPagination,
-  Bi as VPlaceholder,
-  yr as VProgress,
-  cr as VRadio,
-  dr as VRadioGroup,
-  yi as VRow,
-  Si as VScrollbar,
-  Ai as VSpinner,
-  pr as VSwitch,
-  Ni as VTab,
-  zr as VTable,
-  Li as VTabs,
-  Fi as VTag,
-  ji as VTagGroup,
-  Gi as VText,
-  ac as VauUI,
-  li as VisiblePlugin,
-  Fu as booleanToBooleanish,
+  Ti as VPagination,
+  Si as VPlaceholder,
+  Vr as VProgress,
+  dr as VRadio,
+  mr as VRadioGroup,
+  $i as VRow,
+  Ai as VScrollbar,
+  Di as VSpinner,
+  vr as VSwitch,
+  Fi as VTab,
+  Or as VTable,
+  Xi as VTabs,
+  Hi as VTag,
+  Ui as VTagGroup,
+  Yi as VText,
+  ic as VauUI,
+  ii as VisiblePlugin,
+  ju as booleanToBooleanish,
   pe as clone,
   Ye as debounce,
-  ju as defineFormRules,
-  Lu as delay,
-  fc as en,
+  Hu as defineFormRules,
+  Nu as delay,
+  pc as en,
   nt as getProp,
   Oo as isBoolean,
-  Pu as isEmpty,
+  Lu as isEmpty,
   Po as isFunction,
-  De as isNull,
+  ke as isNull,
   W as isNumber,
   Ue as isObject,
   _e as isString,
   me as isUndefined,
-  Xu as omit,
-  Nu as pick,
-  mc as ru,
-  oc as ruRU,
+  Fu as omit,
+  Xu as pick,
+  fc as ru,
+  nc as ruRU,
   Ge as throttle,
   ao as useAccordionItem,
   lo as useAccordionRoot,
   io as useAccordionTrigger,
-  Gu as useAnimatedNumber,
-  Uu as useClipboard,
-  ec as useConfigProviderRootContext,
-  sc as useDrawer,
-  Ku as useEmitProxy,
+  Yu as useAnimatedNumber,
+  Gu as useClipboard,
+  tc as useConfigProviderRootContext,
+  lc as useDrawer,
+  Wu as useEmitProxy,
   jo as useFormItem,
   No as useFormRoot,
-  Do as useIntersectionObserver,
-  Hu as useLoadImage,
-  Mu as usePlural,
-  qu as useScrollTo,
+  ko as useIntersectionObserver,
+  Uu as useLoadImage,
+  Au as usePlural,
+  Ku as useScrollTo,
   Z as useToggle,
-  Yu as useWindowScroll,
+  qu as useWindowScroll,
   Yt as vClickOutside,
-  ai as vLoading,
-  ui as vTooltip,
-  si as vVisible
+  ri as vLoading,
+  di as vTooltip,
+  ai as vVisible
 };
