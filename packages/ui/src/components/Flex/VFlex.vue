@@ -1,21 +1,11 @@
 <script setup lang="ts">
-  import type { IVFlexProps } from './types';
+  import { Flex, type FlexProps } from '@vau/core';
 
-  withDefaults(defineProps<IVFlexProps>(), {
-    wrap: true
-  });
+  const props = defineProps<FlexProps>();
 </script>
 
 <template>
-  <div
-    class="v-flex"
-    :class="{
-      [`v-flex--justify-${justify}`]: justify,
-      [`v-flex--align-${align}`]: align,
-      [`v-flex--direction-${direction}`]: direction,
-      'v-flex--no-wrap': !wrap
-    }"
-  >
+  <Flex.Root v-bind="props">
     <slot/>
-  </div>
+  </Flex.Root>
 </template>

@@ -7,3 +7,4 @@ export * from './ConfigProvider';
 export * from './Scrollbar';
 export * from './Layout';
 export * from './Text';
+export * from './Flex';

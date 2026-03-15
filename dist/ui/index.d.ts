@@ -15,8 +15,7 @@ import { ComponentProvideOptions } from 'vue';
 import { ConfigProviderProps } from '../core';
 import { DefineComponent } from 'vue';
 import { DirectionProp } from '../core';
-import { FlexAlignProp } from '../core';
-import { FlexJustifyProp } from '../core';
+import { FlexProps } from '../core';
 import { FormItemProps } from '../core';
 import { FormItemSlots } from '../core';
 import { FormModel } from '../core';
@@ -218,9 +217,7 @@ showValue: boolean;
 
 declare const __VLS_component_35: DefineComponent<IVDividerProps, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, PublicProps, Readonly<IVDividerProps> & Readonly<{}>, {}, {}, {}, {}, string, ComponentProvideOptions, false, {}, HTMLDivElement>;
 
-declare const __VLS_component_36: DefineComponent<IVFlexProps, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, PublicProps, Readonly<IVFlexProps> & Readonly<{}>, {
-wrap: boolean;
-}, {}, {}, {}, string, ComponentProvideOptions, false, {}, HTMLDivElement>;
+declare const __VLS_component_36: DefineComponent<FlexProps, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, PublicProps, Readonly<FlexProps> & Readonly<{}>, {}, {}, {}, {}, string, ComponentProvideOptions, false, {}, HTMLDivElement>;
 
 declare const __VLS_component_37: DefineComponent<    {}, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, PublicProps, Readonly<{}> & Readonly<{}>, {}, {}, {}, {}, string, ComponentProvideOptions, true, {}, HTMLDivElement>;
 
@@ -1349,15 +1346,6 @@ export declare interface IVDropdownSlots {
         setVisible: (payload: boolean) => void;
     }) => Array<VNode>;
 }
-
-/**
- * Интерфейс свойств компонента VFlex
- * @interface IVFlexProps
- */
-export declare type IVFlexProps = {
-    wrap?: boolean;
-    gap?: number | [number, number];
-} & Partial<FlexAlignProp> & Partial<FlexJustifyProp> & Partial<DirectionProp>;
 
 export declare interface IVFormItemProps extends FormItemProps {
     title?: string;
