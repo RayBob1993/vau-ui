@@ -4575,6 +4575,7 @@ const Uc = /* @__PURE__ */ E(Lc, [["render", Xc]]), El = {
     tag: { default: "div" },
     uppercase: { type: Boolean },
     underline: { type: Boolean },
+    weight: {},
     theme: {},
     size: {}
   },
@@ -4584,7 +4585,8 @@ const Uc = /* @__PURE__ */ E(Lc, [["render", Xc]]), El = {
         "text--uppercase": e.uppercase,
         "text--underline": e.underline,
         [`text--size-${e.size}`]: e.size,
-        [`text--theme-${e.theme}`]: e.theme
+        [`text--theme-${e.theme}`]: e.theme,
+        [`text--weight-${e.weight}`]: e.weight
       }])
     }, {
       default: me(() => [

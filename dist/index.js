@@ -2834,6 +2834,7 @@ const ca = /* @__PURE__ */ M(ia, [["render", ua]]), ut = {
     tag: { default: "div" },
     uppercase: { type: Boolean },
     underline: { type: Boolean },
+    weight: {},
     theme: {},
     size: {}
   },
@@ -2843,7 +2844,8 @@ const ca = /* @__PURE__ */ M(ia, [["render", ua]]), ut = {
         "text--uppercase": e.uppercase,
         "text--underline": e.underline,
         [`text--size-${e.size}`]: e.size,
-        [`text--theme-${e.theme}`]: e.theme
+        [`text--theme-${e.theme}`]: e.theme,
+        [`text--weight-${e.weight}`]: e.weight
       }])
     }, {
       default: $(() => [
@@ -4045,6 +4047,7 @@ const Li = { class: "v-tabs" }, Ni = { class: "v-tabs__content" }, Xi = /* @__PU
     tag: {},
     uppercase: { type: Boolean },
     underline: { type: Boolean },
+    weight: {},
     theme: {},
     size: {}
   },
