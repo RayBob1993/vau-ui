@@ -28,7 +28,7 @@ export interface ColProps {
   offsetXxl?: ColOffset;
 }
 
-export type ContainerProps = SizeProp;
+export type ContainerProps = Partial<SizeProp>;
 
 export type RowProps = {
   guttersX?: boolean;
