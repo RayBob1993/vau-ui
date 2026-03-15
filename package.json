@@ -1,6 +1,6 @@
 {
   "name": "vau-ui",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "license": "MIT",
   "repository": "https://github.com/RayBob1993/vau-ui.git",
   "type": "module",
@@ -28,13 +28,13 @@
       "import": "./dist/index.js",
       "types": "./dist/index.d.ts"
     },
-    "./theme-base": {
-      "import": "./packages/themes/base/src/index.scss"
+    "./styles": {
+      "import": "./packages/styles/src/core/index.scss"
     }
   },
   "files": [
     "dist",
-    "packages/themes/base/src",
+    "packages/styles/src/core",
     "package.json",
     "README.md"
   ],
