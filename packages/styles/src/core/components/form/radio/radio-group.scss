@@ -1,0 +1,15 @@
+.radio-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--radio-group-y) var(--radio-group-x);
+
+  &--direction {
+    &-horizontal {
+      flex-direction: row;
+    }
+
+    &-vertical {
+      flex-direction: column;
+    }
+  }
+}

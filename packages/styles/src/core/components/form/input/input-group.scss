@@ -1,0 +1,8 @@
+.input-group {
+  display: flex;
+  align-items: stretch;
+
+  & > *:not(.input-group-addon) {
+    flex: 1 1 auto;
+  }
+}

@@ -1,0 +1,15 @@
+.checkbox-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--checkbox-group-y) var(--checkbox-group-x);
+
+  &--direction {
+    &-horizontal {
+      flex-direction: row;
+    }
+
+    &-vertical {
+      flex-direction: column;
+    }
+  }
+}

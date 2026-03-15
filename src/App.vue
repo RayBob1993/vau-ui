@@ -1,6 +1,6 @@
 <script setup lang="ts">
   import { Form, Select, Input, Checkbox, Radio, Button, Switch, InputNumber, InputPassword, defineFormRules, type FormSubmitEvent } from '@vau/core';
-  import '@vau/theme-base';
+  import '@vau/styles';
   import { ref } from 'vue';
   import { z } from 'zod';
 

@@ -1,0 +1,11 @@
+{
+  "name": "@vau/styles",
+  "version": "0.0.0",
+  "main": "./src/core/index.scss",
+  "exports": {
+    ".": {
+      "import": "./src/core/index.scss"
+    },
+    "./*": "./*"
+  }
+}

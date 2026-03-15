@@ -1,0 +1,97 @@
+@use '../vadiables/scss/breakpoints' as *;
+
+@mixin media-xxl-up {
+  @media screen and (min-width: $xxl) {
+    @content;
+  }
+}
+
+@mixin media-xxl-down {
+  @media screen and (max-width: $xxl - 1) {
+    @content;
+  }
+}
+
+@mixin media-xl-up {
+  @media screen and (min-width: $xl) {
+    @content;
+  }
+}
+
+@mixin media-xl-down {
+  @media screen and (max-width: $xl - 1) {
+    @content;
+  }
+}
+
+@mixin media-lg-up {
+  @media screen and (min-width: $lg) {
+    @content;
+  }
+}
+
+@mixin media-lg-down {
+  @media screen and (max-width: $lg - 1) {
+    @content;
+  }
+}
+
+@mixin media-md-up {
+  @media screen and (min-width: $md) {
+    @content;
+  }
+}
+
+@mixin media-md-down {
+  @media screen and (max-width: $md - 1) {
+    @content;
+  }
+}
+
+@mixin media-sm-up {
+  @media screen and (min-width: $sm) {
+    @content;
+  }
+}
+
+@mixin media-sm-down {
+  @media screen and (max-width: $sm - 1) {
+    @content;
+  }
+}
+
+@mixin media-xs-up {
+  @media screen and (min-width: $xs) {
+    @content;
+  }
+}
+
+@mixin media-xs-down {
+  @media screen and (max-width: $xs - 1) {
+    @content;
+  }
+}
+
+@mixin media-custom-up ($width) {
+  @media screen and (min-width: $width) {
+    @content;
+  }
+}
+
+@mixin media-custom-down ($width) {
+  @media screen and (max-width: $width) {
+    @content;
+  }
+}
+
+@mixin media-min-max ($minWidth, $maxWidth) {
+  @media screen and (max-width: $maxWidth) and (min-width: $minWidth) {
+    @content;
+  }
+}
+
+@mixin media-print {
+  @media print {
+    @content;
+  }
+}
