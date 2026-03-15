@@ -28,6 +28,9 @@
       "import": "./dist/index.js",
       "types": "./dist/index.d.ts"
     },
+    "./vue-global": {
+      "types": "./dist/vue-global.d.ts"
+    },
     "./styles": {
       "import": "./packages/styles/src/core/index.scss"
     }

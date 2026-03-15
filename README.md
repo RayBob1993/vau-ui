@@ -17,6 +17,20 @@ npm install vau-ui
 yarn add vau-ui
 ```
 
+## Подсказки типов в IDE (глобальные компоненты)
+
+Если компоненты регистрируются глобально через плагин и редактор не подсказывает пропсы, добавьте в проект файл типов (например `env.d.ts` или `types/vau-ui.d.ts`):
+
+```ts
+/// <reference types="vau-ui/vue-global" />
+
+declare module 'vue' {
+  export interface GlobalComponents extends import('vau-ui/vue-global').VauUIGlobalComponents {}
+}
+```
+
+После этого Volar/TypeScript будут знать типы компонентов в шаблонах.
+
 ## Локальная разработка
 
 ### Установка зависимостей

@@ -52,6 +52,27 @@ export default defineConfig({
         const indexDts = '/** Реэкспорт публичного API vau-ui */\nexport * from \'./core\';\nexport * from \'./ui\';\n';
 
         writeFileSync(resolve(dist, 'index.d.ts'), indexDts);
+
+        // Типы для расширения GlobalComponents в проекте потребителя (подсказки в шаблонах)
+        const componentNames = [
+          'VAccordion', 'VAccordionItem', 'VAffix', 'VAlert', 'VAvatar', 'VAvatarGroup', 'VBadge', 'VBreadcrumbs',
+          'VButton', 'VButtonGroup', 'VCalendar', 'VCheckbox', 'VCheckboxGroup', 'VCol', 'VCollapse', 'VConfigProvider',
+          'VContainer', 'VCountdown', 'VDivider', 'VDrawer', 'VDropdown', 'VFlex', 'VForm', 'VFormItem', 'VImage',
+          'VInplace', 'VInput', 'VInputCode', 'VInputGroup', 'VInputGroupAddon', 'VInputNumber', 'VInputPassword',
+          'VLayout', 'VModal', 'VOverlay', 'VPagination', 'VPlaceholder', 'VProgress', 'VRadio', 'VRadioGroup',
+          'VRow', 'VScrollbar', 'VSpinner', 'VSwitch', 'VTab', 'VTable', 'VTabs', 'VTag', 'VTagGroup', 'VText'
+        ];
+        const vueGlobalLines = [
+          '/** Типы компонентов vau-ui для расширения vue GlobalComponents (подсказки в шаблонах) */',
+          'import type * as VauUI from \'.\';',
+          '',
+          'export interface VauUIGlobalComponents {',
+          ...componentNames.map(name => `  ${name}: typeof VauUI.${name};`),
+          '}',
+          ''
+        ];
+
+        writeFileSync(resolve(dist, 'vue-global.d.ts'), vueGlobalLines.join('\n'));
       }
     }
   ],
