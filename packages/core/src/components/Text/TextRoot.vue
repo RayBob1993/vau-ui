@@ -14,7 +14,8 @@
       'text--uppercase': uppercase,
       'text--underline': underline,
       [`text--size-${size}`]: size,
-      [`text--theme-${theme}`]: theme
+      [`text--theme-${theme}`]: theme,
+      [`text--weight-${weight}`]: weight
     }"
   >
     <slot/>
