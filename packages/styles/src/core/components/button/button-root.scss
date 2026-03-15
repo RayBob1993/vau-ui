@@ -3,7 +3,7 @@
   position: relative;
   align-items: center;
   justify-content: center;
-  margin: var(--button-margin, 0);
+  margin: var(--button-margin-y, 0) var(--button-margin-x, 0);
   padding: var(--button-padding-y, 0) var(--button-padding-x, 0);
   gap: var(--button-gap);
   border: var(--button-border-size) var(--button-border-type) var(--button-border-color);

@@ -1,11 +1,15 @@
 <script setup lang="ts">
-  import type { IVDividerProps } from './types';
+  import type { IVDividerSlots } from './types';
+  import { Divider, type DividerProps } from '@vau/core';
 
-  defineProps<IVDividerProps>();
+  const props = defineProps<DividerProps>();
+  const slots = defineSlots<IVDividerSlots>();
 </script>
 
 <template>
-  <div class="v-divider">
-    <slot/>
-  </div>
+  <Divider.Root v-bind="props">
+    <Divider.Content v-if="slots?.default">
+      <slot/>
+    </Divider.Content>
+  </Divider.Root>
 </template>

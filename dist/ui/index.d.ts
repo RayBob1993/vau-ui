@@ -215,7 +215,7 @@ declare const __VLS_component_34: DefineComponent<IVProgressProps, {}, {}, {}, {
 showValue: boolean;
 }, {}, {}, {}, string, ComponentProvideOptions, false, {}, HTMLDivElement>;
 
-declare const __VLS_component_35: DefineComponent<IVDividerProps, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, PublicProps, Readonly<IVDividerProps> & Readonly<{}>, {}, {}, {}, {}, string, ComponentProvideOptions, false, {}, HTMLDivElement>;
+declare const __VLS_component_35: DefineComponent<Partial<DirectionProp>, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, PublicProps, Readonly<Partial<DirectionProp>> & Readonly<{}>, {}, {}, {}, {}, string, ComponentProvideOptions, false, {}, HTMLDivElement>;
 
 declare const __VLS_component_36: DefineComponent<FlexProps, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, PublicProps, Readonly<FlexProps> & Readonly<{}>, {}, {}, {}, {}, string, ComponentProvideOptions, false, {}, HTMLDivElement>;
 
@@ -578,9 +578,7 @@ declare function __VLS_template_34(): {
 
 declare function __VLS_template_35(): {
     attrs: Partial<{}>;
-    slots: {
-        default?(_: {}): any;
-    };
+    slots: Readonly<IVDividerSlots> & IVDividerSlots;
     refs: {};
     rootEl: HTMLDivElement;
 };
@@ -1256,12 +1254,9 @@ export declare interface IVCountdownSlots {
     }) => Array<VNode>;
 }
 
-/**
- * Интерфейс слотов компонента VDivider
- * @interface IVDividerProps
- */
-export declare interface IVDividerProps {
-}
+declare type IVDividerSlots = {
+    default?: UnscopedSlot;
+};
 
 /**
  * Интерфейс событий компонента VDrawer

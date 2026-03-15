@@ -1,5 +1,5 @@
-/**
- * Интерфейс слотов компонента VDivider
- * @interface IVDividerProps
- */
-export interface IVDividerProps {}
+import type { UnscopedSlot } from '@vau/core';
+
+export type IVDividerSlots = {
+  default?: UnscopedSlot;
+};

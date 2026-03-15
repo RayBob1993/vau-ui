@@ -1,0 +1,5 @@
+.divider-content {
+  margin: var(--divider-content-margin-y, 0) var(--divider-content-margin-x, 0);
+  padding: var(--divider-content-padding-y, 0) var(--divider-content-padding-x, 0);
+  background-color: var(--divider-content-background-color);
+}

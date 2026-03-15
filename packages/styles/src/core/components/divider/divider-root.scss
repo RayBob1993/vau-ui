@@ -1,0 +1,40 @@
+.divider {
+  position: relative;
+  display: flex;
+
+  &:before,
+  &:after {
+    content: '';
+    border-width: 0;
+    border-style: var(--divider-style, solid);
+    border-color: var(--divider-color);
+  }
+
+  &--direction {
+    &-horizontal {
+      flex-direction: row;
+      align-items: center;
+      margin: var(--divider-horizontal-margin-y, 0) var(--divider-horizontal-margin-x, 0);
+      padding: var(--divider-horizontal-padding-y, 0) var(--divider-horizontal-padding-x, 0);
+
+      &:before,
+      &:after {
+        border-bottom-width: var(--divider-size, 1px);
+      }
+    }
+
+    &-vertical {
+      flex-direction: column;
+      min-height: 100%;
+      justify-content: center;
+      align-items: center;
+      margin: var(--divider-vertical-margin-y, 0) var(--divider-vertical-margin-x, 0);
+      padding: var(--divider-vertical-padding-y, 0) var(--divider-vertical-padding-x, 0);
+
+      &:before,
+      &:after {
+        border-left-width: var(--divider-size, 1px);
+      }
+    }
+  }
+}
