@@ -1,6 +1,9 @@
+@use '../../../variables/scss/breakpoints' as *;
+
 .container {
   margin: 0 auto;
   padding-right: var(--container-gutter);
   padding-left: var(--container-gutter);
   min-height: 1px;
+  width: var(--container-width);
 }
