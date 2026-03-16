@@ -33,6 +33,7 @@
 
       &:before,
       &:after {
+        height: 50%;
         border-left-width: var(--divider-size, 1px);
       }
     }
