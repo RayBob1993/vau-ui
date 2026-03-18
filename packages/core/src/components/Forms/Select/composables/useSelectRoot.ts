@@ -77,7 +77,7 @@ export function useSelectRoot (options: UseSelectRootOptions) {
       return;
     }
 
-    options.onChangeModel?.(undefined);
+    options.onChangeModel?.('');
     options.onClear?.();
   }
 

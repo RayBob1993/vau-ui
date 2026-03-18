@@ -1,6 +1,7 @@
 import type { OptionInstance, OptionProps, OptionValue, SelectRootContext, SelectModelValue } from '../types';
-import type { MaybeNull } from '../../../../types';
+import type { Maybe, MaybeNull } from '../../../../types';
 import { isSelectMultiple } from '../utils';
+import { isUndefined } from '../../../../utils';
 import { computed, type MaybeRefOrGetter, onUnmounted, toValue, useId, watch } from 'vue';
 
 export interface UseSelectOptionOptions {
@@ -11,11 +12,15 @@ export interface UseSelectOptionOptions {
 export function useSelectOption (options: UseSelectOptionOptions) {
   const id = useId();
 
-  const modelValue = computed<SelectModelValue>(() => toValue(options.selectRootContext?.modelValue));
+  const modelValue = computed<Maybe<SelectModelValue>>(() => toValue(options.selectRootContext?.modelValue));
   const props = computed<OptionProps>(() => toValue(options.props));
   const isMultiple = computed<boolean>(() => Boolean(toValue(options.selectRootContext?.props)?.multiple));
 
   const isActive = computed<boolean>(() => {
+    if (isUndefined(modelValue.value)) {
+      return false;
+    }
+
     if (isSelectMultiple(modelValue.value, isMultiple.value)) {
       return modelValue.value.includes(props.value.value);
     }

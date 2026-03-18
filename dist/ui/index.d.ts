@@ -37,7 +37,6 @@ import { ModelRef } from 'vue';
 import { ObjectDirective } from 'vue';
 import { OptionProps } from '../core';
 import { OptionSlots } from '../core';
-import { OptionValue } from '../core';
 import { Plugin as Plugin_2 } from 'vue';
 import { PublicProps } from 'vue';
 import { RadioModelValue } from '../core';
@@ -205,7 +204,7 @@ declare const __VLS_component_30: DefineComponent<Partial<DirectionProp>, {}, {}
 
 declare const __VLS_component_31: DefineComponent<__VLS_PublicProps_11, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {
 clear: () => any;
-change: (payload: OptionValue) => any;
+change: (payload: string) => any;
 "update:modelValue": (value: SelectModelValue) => any;
 close: () => any;
 open: () => any;
@@ -213,7 +212,7 @@ opened: (payload: Element) => any;
 closed: (payload: Element) => any;
 }, string, PublicProps, Readonly<__VLS_PublicProps_11> & Readonly<{
 onClear?: (() => any) | undefined;
-onChange?: ((payload: OptionValue) => any) | undefined;
+onChange?: ((payload: string) => any) | undefined;
 "onUpdate:modelValue"?: ((value: SelectModelValue) => any) | undefined;
 onClose?: (() => any) | undefined;
 onOpen?: (() => any) | undefined;

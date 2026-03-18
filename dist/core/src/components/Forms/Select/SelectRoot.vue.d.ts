@@ -13,7 +13,7 @@ declare function __VLS_template(): {
 };
 type __VLS_TemplateResult = ReturnType<typeof __VLS_template>;
 declare const __VLS_component: import('vue').DefineComponent<__VLS_PublicProps, {}, {}, {}, {}, import('vue').ComponentOptionsMixin, import('vue').ComponentOptionsMixin, {
-    change: (payload: import('./types').OptionValue) => any;
+    change: (payload: string) => any;
     "update:modelValue": (value: SelectModelValue) => any;
     close: () => any;
     open: () => any;
@@ -21,7 +21,7 @@ declare const __VLS_component: import('vue').DefineComponent<__VLS_PublicProps, 
     closed: (payload: Element) => any;
     clear: () => any;
 }, string, import('vue').PublicProps, Readonly<__VLS_PublicProps> & Readonly<{
-    onChange?: ((payload: import('./types').OptionValue) => any) | undefined;
+    onChange?: ((payload: string) => any) | undefined;
     "onUpdate:modelValue"?: ((value: SelectModelValue) => any) | undefined;
     onClose?: (() => any) | undefined;
     onOpen?: (() => any) | undefined;

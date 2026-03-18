@@ -1,6 +1,7 @@
 import type { OptionInstance, SelectRootContext, SelectProps, OptionValue } from '../types';
 import type { Maybe, MaybeNull } from '../../../../types';
 import { isSelectMultiple } from '../utils';
+import { isUndefined } from '../../../../utils';
 import { computed, toValue } from 'vue';
 
 export interface UseSelectValueOptions {
@@ -18,7 +19,13 @@ export function useSelectValue (options: UseSelectValueOptions) {
 
   const hasValue = computed<boolean>(() => Boolean(toValue(options.selectRootContext?.hasValue)));
 
-  const isMultiple = computed<boolean>(() => isSelectMultiple(toValue(options.selectRootContext?.modelValue), Boolean(selectRootProps.value?.multiple)));
+  const isMultiple = computed<boolean>(() => {
+    if (isUndefined(options.selectRootContext?.modelValue)) {
+      return false;
+    }
+
+    return isSelectMultiple(toValue(options.selectRootContext.modelValue), Boolean(selectRootProps.value?.multiple));
+  });
 
   const placeholder = computed<Maybe<string>>(() => selectRootProps.value?.placeholder);
 

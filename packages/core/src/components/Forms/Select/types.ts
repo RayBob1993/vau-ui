@@ -1,8 +1,8 @@
-import type { SizeProp, ThemeProp, Maybe, MaybeArray, MaybeNull } from '../../../types';
+import type { SizeProp, ThemeProp, Maybe, MaybeArray } from '../../../types';
 import type { VNode, MaybeRefOrGetter } from 'vue';
 
-export type OptionValue = string | number;
-export type SelectModelValue = Maybe<MaybeNull<MaybeArray<OptionValue>>>;
+export type OptionValue <T extends string = string> = T;
+export type SelectModelValue = MaybeArray<OptionValue>;
 
 export interface OptionProps {
   value: OptionValue;
