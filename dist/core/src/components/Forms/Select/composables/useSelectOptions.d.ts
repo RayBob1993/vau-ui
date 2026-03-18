@@ -3,14 +3,14 @@ export declare function useSelectOptions(): {
     options: import('vue').Ref<{
         id: string;
         props: {
-            value: import('../types').OptionValue;
+            value: import('..').OptionValue;
             title?: string | undefined;
             disabled?: boolean | undefined;
         };
     }[], OptionInstance[] | {
         id: string;
         props: {
-            value: import('../types').OptionValue;
+            value: import('..').OptionValue;
             title?: string | undefined;
             disabled?: boolean | undefined;
         };

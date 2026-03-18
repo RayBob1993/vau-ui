@@ -11,3 +11,5 @@ export const Select = {
   Dropdown,
   Value
 };
+
+export * from './types';

@@ -12,15 +12,15 @@ export interface UseSelectRootOptions {
     onClear?: VoidFunction;
 }
 export declare function useSelectRoot(options: UseSelectRootOptions): {
-    activeOption: import('vue').ComputedRef<import('../../../..').Maybe<import('../types').OptionInstance>>;
-    activeOptions: import('vue').ComputedRef<import('../types').OptionInstance[]>;
+    activeOption: import('vue').ComputedRef<import('../../../..').Maybe<import('..').OptionInstance>>;
+    activeOptions: import('vue').ComputedRef<import('..').OptionInstance[]>;
     hasValue: import('vue').ComputedRef<boolean>;
     isOpen: import('vue').Ref<boolean, boolean>;
     isDisabled: import('vue').ComputedRef<boolean>;
     open: () => void;
     close: () => void;
     toggle: () => void;
-    registerOption: (newOption: import('../types').OptionInstance) => void;
+    registerOption: (newOption: import('..').OptionInstance) => void;
     unregisterOption: (id: string) => void;
     setModelValue: (value: OptionValue) => void;
     reset: () => void;

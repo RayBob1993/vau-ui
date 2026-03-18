@@ -1,1 +1,1 @@
-export declare function useSelectRootContext(): import('../types').SelectRootContext | null;
+export declare function useSelectRootContext(): import('..').SelectRootContext | null;
