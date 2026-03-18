@@ -30,7 +30,7 @@ export function useSelectRoot (options: UseSelectRootOptions) {
     modelValue: () => modelValue.value
   });
 
-  const [isOpen, setOpen, toggleOpen] = useToggle();
+  const [isOpen, setOpen] = useToggle();
 
   const hasValue = computed<boolean>(() => {
     if (isSelectMultiple(modelValue.value, props.value.multiple)) {
@@ -70,8 +70,6 @@ export function useSelectRoot (options: UseSelectRootOptions) {
 
     options.onChangeModel?.(value);
     options.onChange?.(value);
-
-    setOpen(false);
   }
 
   function reset () {
@@ -87,12 +85,28 @@ export function useSelectRoot (options: UseSelectRootOptions) {
     options.onClear?.();
   }
 
-  function toggle () {
+  function open () {
     if (isDisabled.value) {
       return;
     }
 
-    toggleOpen();
+    setOpen(true);
+  }
+
+  function close () {
+    if (isDisabled.value) {
+      return;
+    }
+
+    setOpen(false);
+  }
+
+  function toggle () {
+    if (isOpen.value) {
+      close();
+    } else {
+      open();
+    }
   }
 
   onMounted(() => {
@@ -111,6 +125,8 @@ export function useSelectRoot (options: UseSelectRootOptions) {
     hasValue,
     isOpen,
     isDisabled,
+    open,
+    close,
     toggle,
     registerOption,
     unregisterOption,

@@ -2,15 +2,18 @@
   import { useSelectRootContext } from './context';
   import { useSelectValue } from './composables';
 
-  const SelectRootContext = useSelectRootContext();
+  const selectRootContext = useSelectRootContext();
 
-  const { activeOption, activeOptions, hasValue, isMultiple, placeholder } = useSelectValue({
-    selectRootContext: SelectRootContext
+  const { activeOptionValue, activeOptions, hasValue, isMultiple, placeholder, toggle } = useSelectValue({
+    selectRootContext
   });
 </script>
 
 <template>
-  <div class="select-value">
+  <div
+    class="select-value"
+    @click="toggle"
+  >
     <slot>
       <template v-if="hasValue">
         <template v-if="isMultiple">
@@ -20,7 +23,7 @@
         </template>
 
         <template v-else>
-          {{ activeOption?.props.value }}
+          {{ activeOptionValue }}
         </template>
       </template>
 

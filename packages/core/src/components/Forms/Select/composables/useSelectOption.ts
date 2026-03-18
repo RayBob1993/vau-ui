@@ -32,6 +32,7 @@ export function useSelectOption (options: UseSelectOptionOptions) {
 
   function handleChange (value: OptionValue) {
     options.selectRootContext?.setModelValue(value);
+    options.selectRootContext?.close();
   }
 
   watch(instance, newInstance => {

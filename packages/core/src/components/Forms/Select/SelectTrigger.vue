@@ -1,19 +1,21 @@
 <script setup lang="ts">
+  import type { SelectTriggerSlots } from './types';
   import { useSelectRootContext } from './context';
+  import { useSelectTrigger } from './composables';
 
-  const SelectRootContext = useSelectRootContext();
+  defineSlots<SelectTriggerSlots>();
 
-  function handleToggle () {
-    SelectRootContext?.toggle();
-  }
+  const selectRootContext = useSelectRootContext();
+
+  const { open, close, toggle } = useSelectTrigger({
+    selectRootContext
+  });
 </script>
 
 <template>
-  <button
-    type="button"
-    class="select-trigger"
-    @click="handleToggle"
-  >
-    <slot/>
-  </button>
+  <slot
+    :open="open"
+    :close="close"
+    :toggle="toggle"
+  />
 </template>
