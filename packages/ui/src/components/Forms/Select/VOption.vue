@@ -1,46 +1,16 @@
 <script setup lang="ts">
-  import type { IVOptionInstance, IVOptionProps, IVOptionSlots } from './types';
-  import { useSelectContext } from './context';
-  import { useOption } from './composables';
-  import { onUnmounted, reactive } from 'vue';
+  import { Select, type OptionProps, type OptionSlots } from '@vau/core';
 
-  const props = defineProps<IVOptionProps>();
+  const props = defineProps<OptionProps>();
 
-  defineSlots<IVOptionSlots>();
-
-  const Select = useSelectContext();
-
-  const { id, isActive, isDisabled, handleChange } = useOption({
-    context: Select,
-    props
-  });
-
-  const optionInstance = reactive<IVOptionInstance>({
-    id,
-    props
-  });
-
-  Select?.registerOption(optionInstance);
-
-  onUnmounted(() => {
-    Select?.unregisterOption(optionInstance);
-  });
+  defineSlots<OptionSlots>();
 </script>
 
 <template>
-  <div
-    class="v-option"
-    :class="{
-      'v-option--active': isActive,
-      'v-option--disabled': isDisabled
-    }"
-    @click="handleChange(value)"
+  <Select.Option
+    v-slot="scopedSlot"
+    v-bind="props"
   >
-    {{ label }}
-
-    <slot
-      :is-active="isActive"
-      :is-disabled="isDisabled"
-    />
-  </div>
+    <slot v-bind="scopedSlot"/>
+  </Select.Option>
 </template>

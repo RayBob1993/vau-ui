@@ -69,6 +69,7 @@
       'select--invalid': isInvalid,
       'select--valid': isValid
     }"
+    :aria-disabled="isDisabled"
   >
     <slot/>
   </div>
