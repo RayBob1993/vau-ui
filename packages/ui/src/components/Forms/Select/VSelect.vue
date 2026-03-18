@@ -1,9 +1,14 @@
 <script lang="ts" setup>
-  import { Select, type SelectProps, type SelectModelValue, type SelectEmits } from '@vau/core';
+  import { Select, type SelectProps, type SelectModelValue, type SelectEmits, type UnscopedSlot } from '@vau/core';
 
   const props = defineProps<SelectProps>();
 
   const emit = defineEmits<SelectEmits>();
+
+  defineSlots<{
+    default?: UnscopedSlot;
+    value?: UnscopedSlot;
+  }>();
 
   const modelValue = defineModel<SelectModelValue>({
     required: true
@@ -18,7 +23,9 @@
     @close="emit('close')"
     @clear="emit('clear')"
   >
-    <Select.Value/>
+    <Select.Value>
+      <slot name="value"/>
+    </Select.Value>
 
     <Select.Dropdown>
       <slot/>

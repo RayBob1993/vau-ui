@@ -572,8 +572,12 @@ declare function __VLS_template_30(): {
 
 declare function __VLS_template_31(): {
     attrs: Partial<{}>;
-    slots: {
-        default?(_: {}): any;
+    slots: Readonly<{
+        default?: UnscopedSlot;
+        value?: UnscopedSlot;
+    }> & {
+        default?: UnscopedSlot;
+        value?: UnscopedSlot;
     };
     refs: {};
     rootEl: HTMLDivElement;
