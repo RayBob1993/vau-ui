@@ -4,6 +4,7 @@ export type OptionValue = string | number;
 export type SelectModelValue = Maybe<MaybeNull<MaybeArray<OptionValue>>>;
 export interface OptionProps {
     value: OptionValue;
+    title?: string;
     disabled?: boolean;
 }
 export interface OptionScopedSlots {
@@ -33,6 +34,14 @@ export interface SelectEmits {
     close: [];
     clear: [];
 }
+export interface SelectTriggerScopedSlots {
+    open: () => void;
+    close: () => void;
+    toggle: () => void;
+}
+export interface SelectTriggerSlots {
+    default: (props: SelectTriggerScopedSlots) => Array<VNode>;
+}
 export interface SelectRootContext {
     activeOption: MaybeRefOrGetter<Maybe<OptionInstance>>;
     activeOptions: MaybeRefOrGetter<Array<OptionInstance>>;
@@ -41,6 +50,8 @@ export interface SelectRootContext {
     props: MaybeRefOrGetter<SelectProps>;
     modelValue: MaybeRefOrGetter<SelectModelValue>;
     isDisabled: MaybeRefOrGetter<boolean>;
+    open: () => void;
+    close: () => void;
     toggle: () => void;
     setModelValue: (value: OptionValue) => void;
     registerOption: (option: OptionInstance) => void;

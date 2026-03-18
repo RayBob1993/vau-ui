@@ -5,15 +5,15 @@ export declare const Modal: {
         } & Partial<import('../..').SizeProp>> & Readonly<{
             "onUpdate:modelValue"?: ((value: boolean) => any) | undefined;
             onClose?: (() => any) | undefined;
+            onOpen?: (() => any) | undefined;
             onOpened?: ((payload: Element) => any) | undefined;
             onClosed?: ((payload: Element) => any) | undefined;
-            onOpen?: (() => any) | undefined;
         }>, {}, {}, {}, {}, import('vue').ComponentOptionsMixin, import('vue').ComponentOptionsMixin, {
             "update:modelValue": (value: boolean) => any;
             close: () => any;
+            open: () => any;
             opened: (payload: Element) => any;
             closed: (payload: Element) => any;
-            open: () => any;
         }, import('vue').PublicProps, {}, false, {}, {}, import('vue').GlobalComponents, import('vue').GlobalDirectives, string, {}, HTMLDivElement, import('vue').ComponentProvideOptions, {
             P: {};
             B: {};
@@ -26,9 +26,9 @@ export declare const Modal: {
         } & Partial<import('../..').SizeProp>> & Readonly<{
             "onUpdate:modelValue"?: ((value: boolean) => any) | undefined;
             onClose?: (() => any) | undefined;
+            onOpen?: (() => any) | undefined;
             onOpened?: ((payload: Element) => any) | undefined;
             onClosed?: ((payload: Element) => any) | undefined;
-            onOpen?: (() => any) | undefined;
         }>, {}, {}, {}, {}, {}>;
         __isFragment?: never;
         __isTeleport?: never;
@@ -38,15 +38,15 @@ export declare const Modal: {
     } & Partial<import('../..').SizeProp>> & Readonly<{
         "onUpdate:modelValue"?: ((value: boolean) => any) | undefined;
         onClose?: (() => any) | undefined;
+        onOpen?: (() => any) | undefined;
         onOpened?: ((payload: Element) => any) | undefined;
         onClosed?: ((payload: Element) => any) | undefined;
-        onOpen?: (() => any) | undefined;
     }>, {}, {}, {}, {}, import('vue').ComponentOptionsMixin, import('vue').ComponentOptionsMixin, {
         "update:modelValue": (value: boolean) => any;
         close: () => any;
+        open: () => any;
         opened: (payload: Element) => any;
         closed: (payload: Element) => any;
-        open: () => any;
     }, string, {}, {}, string, {}, import('vue').GlobalComponents, import('vue').GlobalDirectives, string, import('vue').ComponentProvideOptions> & import('vue').VNodeProps & import('vue').AllowedComponentProps & import('vue').ComponentCustomProps & (new () => {
         $slots: {
             default?(_: {}): any;

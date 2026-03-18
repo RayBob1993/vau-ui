@@ -4,12 +4,14 @@ export declare function useSelectOptions(): {
         id: string;
         props: {
             value: import('../types').OptionValue;
+            title?: string | undefined;
             disabled?: boolean | undefined;
         };
     }[], OptionInstance[] | {
         id: string;
         props: {
             value: import('../types').OptionValue;
+            title?: string | undefined;
             disabled?: boolean | undefined;
         };
     }[]>;

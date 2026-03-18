@@ -16,17 +16,17 @@ declare const __VLS_component: import('vue').DefineComponent<__VLS_PublicProps, 
     change: (payload: SelectModelValue) => any;
     "update:modelValue": (value: SelectModelValue) => any;
     close: () => any;
+    open: () => any;
     opened: (payload: Element) => any;
     closed: (payload: Element) => any;
-    open: () => any;
     clear: () => any;
 }, string, import('vue').PublicProps, Readonly<__VLS_PublicProps> & Readonly<{
     onChange?: ((payload: SelectModelValue) => any) | undefined;
     "onUpdate:modelValue"?: ((value: SelectModelValue) => any) | undefined;
     onClose?: (() => any) | undefined;
+    onOpen?: (() => any) | undefined;
     onOpened?: ((payload: Element) => any) | undefined;
     onClosed?: ((payload: Element) => any) | undefined;
-    onOpen?: (() => any) | undefined;
     onClear?: (() => any) | undefined;
 }>, {}, {}, {}, {}, string, import('vue').ComponentProvideOptions, false, {}, HTMLDivElement>;
 declare const _default: __VLS_WithTemplateSlots<typeof __VLS_component, __VLS_TemplateResult["slots"]>;

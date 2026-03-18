@@ -17,6 +17,8 @@ export declare function useSelectRoot(options: UseSelectRootOptions): {
     hasValue: import('vue').ComputedRef<boolean>;
     isOpen: import('vue').Ref<boolean, boolean>;
     isDisabled: import('vue').ComputedRef<boolean>;
+    open: () => void;
+    close: () => void;
     toggle: () => void;
     registerOption: (newOption: import('../types').OptionInstance) => void;
     unregisterOption: (id: string) => void;

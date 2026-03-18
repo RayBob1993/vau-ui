@@ -13,17 +13,17 @@ export declare const Select: {
             onChange?: ((payload: import('./types').SelectModelValue) => any) | undefined;
             "onUpdate:modelValue"?: ((value: import('./types').SelectModelValue) => any) | undefined;
             onClose?: (() => any) | undefined;
+            onOpen?: (() => any) | undefined;
             onOpened?: ((payload: Element) => any) | undefined;
             onClosed?: ((payload: Element) => any) | undefined;
-            onOpen?: (() => any) | undefined;
             onClear?: (() => any) | undefined;
         }>, {}, {}, {}, {}, import('vue').ComponentOptionsMixin, import('vue').ComponentOptionsMixin, {
             change: (payload: import('./types').SelectModelValue) => any;
             "update:modelValue": (value: import('./types').SelectModelValue) => any;
             close: () => any;
+            open: () => any;
             opened: (payload: Element) => any;
             closed: (payload: Element) => any;
-            open: () => any;
             clear: () => any;
         }, import('vue').PublicProps, {}, false, {}, {}, import('vue').GlobalComponents, import('vue').GlobalDirectives, string, {}, HTMLDivElement, import('vue').ComponentProvideOptions, {
             P: {};
@@ -45,9 +45,9 @@ export declare const Select: {
             onChange?: ((payload: import('./types').SelectModelValue) => any) | undefined;
             "onUpdate:modelValue"?: ((value: import('./types').SelectModelValue) => any) | undefined;
             onClose?: (() => any) | undefined;
+            onOpen?: (() => any) | undefined;
             onOpened?: ((payload: Element) => any) | undefined;
             onClosed?: ((payload: Element) => any) | undefined;
-            onOpen?: (() => any) | undefined;
             onClear?: (() => any) | undefined;
         }>, {}, {}, {}, {}, {}>;
         __isFragment?: never;
@@ -66,17 +66,17 @@ export declare const Select: {
         onChange?: ((payload: import('./types').SelectModelValue) => any) | undefined;
         "onUpdate:modelValue"?: ((value: import('./types').SelectModelValue) => any) | undefined;
         onClose?: (() => any) | undefined;
+        onOpen?: (() => any) | undefined;
         onOpened?: ((payload: Element) => any) | undefined;
         onClosed?: ((payload: Element) => any) | undefined;
-        onOpen?: (() => any) | undefined;
         onClear?: (() => any) | undefined;
     }>, {}, {}, {}, {}, import('vue').ComponentOptionsMixin, import('vue').ComponentOptionsMixin, {
         change: (payload: import('./types').SelectModelValue) => any;
         "update:modelValue": (value: import('./types').SelectModelValue) => any;
         close: () => any;
+        open: () => any;
         opened: (payload: Element) => any;
         closed: (payload: Element) => any;
-        open: () => any;
         clear: () => any;
     }, string, {}, {}, string, {}, import('vue').GlobalComponents, import('vue').GlobalDirectives, string, import('vue').ComponentProvideOptions> & import('vue').VNodeProps & import('vue').AllowedComponentProps & import('vue').ComponentCustomProps & (new () => {
         $slots: {
@@ -99,7 +99,7 @@ export declare const Select: {
         $slots: Readonly<import('./types').OptionSlots> & import('./types').OptionSlots;
     });
     Trigger: {
-        new (...args: any[]): import('vue').CreateComponentPublicInstanceWithMixins<Readonly<{}> & Readonly<{}>, {}, {}, {}, {}, import('vue').ComponentOptionsMixin, import('vue').ComponentOptionsMixin, {}, import('vue').PublicProps, {}, true, {}, {}, import('vue').GlobalComponents, import('vue').GlobalDirectives, string, {}, HTMLButtonElement, import('vue').ComponentProvideOptions, {
+        new (...args: any[]): import('vue').CreateComponentPublicInstanceWithMixins<Readonly<{}> & Readonly<{}>, {}, {}, {}, {}, import('vue').ComponentOptionsMixin, import('vue').ComponentOptionsMixin, {}, import('vue').PublicProps, {}, true, {}, {}, import('vue').GlobalComponents, import('vue').GlobalDirectives, string, {}, any, import('vue').ComponentProvideOptions, {
             P: {};
             B: {};
             D: {};
@@ -111,9 +111,7 @@ export declare const Select: {
         __isTeleport?: never;
         __isSuspense?: never;
     } & import('vue').ComponentOptionsBase<Readonly<{}> & Readonly<{}>, {}, {}, {}, {}, import('vue').ComponentOptionsMixin, import('vue').ComponentOptionsMixin, {}, string, {}, {}, string, {}, import('vue').GlobalComponents, import('vue').GlobalDirectives, string, import('vue').ComponentProvideOptions> & import('vue').VNodeProps & import('vue').AllowedComponentProps & import('vue').ComponentCustomProps & (new () => {
-        $slots: {
-            default?(_: {}): any;
-        };
+        $slots: Readonly<import('./types').SelectTriggerSlots> & import('./types').SelectTriggerSlots;
     });
     Dropdown: {
         new (...args: any[]): import('vue').CreateComponentPublicInstanceWithMixins<Readonly<{}> & Readonly<{}>, {}, {}, {}, {}, import('vue').ComponentOptionsMixin, import('vue').ComponentOptionsMixin, {}, import('vue').PublicProps, {}, true, {}, {}, import('vue').GlobalComponents, import('vue').GlobalDirectives, string, {}, HTMLDivElement, import('vue').ComponentProvideOptions, {
