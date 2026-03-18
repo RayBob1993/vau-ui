@@ -1,4 +1,4 @@
-import { computed as c, toValue as _, inject as U, defineComponent as p, mergeModels as I, useModel as O, provide as H, createElementBlock as m, openBlock as r, normalizeClass as C, renderSlot as d, unref as a, withDirectives as G, createElementVNode as T, vShow as le, ref as M, watch as K, onBeforeUnmount as je, markRaw as eo, onMounted as ae, onScopeDispose as He, isRef as Me, nextTick as to, useId as Ue, onUnmounted as Ae, withModifiers as oo, useSlots as J, useTemplateRef as ne, createCommentVNode as F, normalizeProps as k, guardReactiveProps as z, createTextVNode as X, Fragment as q, renderList as ce, toDisplayString as N, mergeProps as j, toHandlers as Q, vModelDynamic as no, vModelText as ft, vModelCheckbox as pt, vModelRadio as so, createBlock as x, withCtx as y, createVNode as A, withKeys as et, resolveDynamicComponent as lo, createPropsRestProxy as vt, shallowRef as tt, Teleport as ht, Transition as De, createSlots as bt, reactive as ao, defineAsyncComponent as Ee, h as ke, render as be } from "vue";
+import { computed as c, toValue as _, inject as U, defineComponent as p, mergeModels as I, useModel as O, provide as H, createElementBlock as m, openBlock as r, normalizeClass as C, renderSlot as d, unref as a, withDirectives as G, createElementVNode as T, vShow as le, ref as M, watch as K, onBeforeUnmount as je, markRaw as eo, onMounted as ae, onScopeDispose as He, isRef as Me, nextTick as to, useId as Ue, onUnmounted as Ae, withModifiers as oo, useSlots as J, useTemplateRef as ne, createCommentVNode as F, normalizeProps as k, guardReactiveProps as z, createTextVNode as X, Fragment as q, renderList as ce, toDisplayString as N, mergeProps as j, toHandlers as te, vModelDynamic as no, vModelText as ft, vModelCheckbox as pt, vModelRadio as so, createBlock as x, withCtx as y, createVNode as A, withKeys as et, resolveDynamicComponent as lo, createPropsRestProxy as vt, shallowRef as tt, Teleport as ht, Transition as De, createSlots as bt, reactive as ao, defineAsyncComponent as Ee, h as ke, render as be } from "vue";
 import { z as ot } from "zod";
 function io(e) {
   const t = c(() => _(e.props));
@@ -175,7 +175,7 @@ function Ct() {
 function Rt() {
   return U(xt, null);
 }
-function ee() {
+function Q() {
   const e = Ct(), t = Rt(), o = c(() => !!t?.validationStatus.value.isSuccess), n = c(() => !!t?.validationStatus.value.isError);
   return {
     formRootContext: e,
@@ -196,7 +196,7 @@ const Bo = ["disabled", "type"], wo = /* @__PURE__ */ p({
     size: {}
   },
   setup(e) {
-    const t = e, { formRootContext: o, formItemContext: n } = ee(), { isDisabled: s } = To({
+    const t = e, { formRootContext: o, formItemContext: n } = Q(), { isDisabled: s } = To({
       formRootContext: o,
       formItemContext: n,
       props: () => t
@@ -1139,7 +1139,7 @@ const pn = ["aria-disabled"], vn = /* @__PURE__ */ p({
   }),
   emits: /* @__PURE__ */ I(["change", "opened", "closed", "open", "close", "clear"], ["update:modelValue"]),
   setup(e, { emit: t }) {
-    const o = e, n = t, s = O(e, "modelValue"), { formRootContext: l, formItemContext: i, isValid: u, isInvalid: f } = ee(), {
+    const o = e, n = t, s = O(e, "modelValue"), { formRootContext: l, formItemContext: i, isValid: u, isInvalid: f } = Q(), {
       activeOption: v,
       activeOptions: b,
       hasValue: h,
@@ -1430,7 +1430,7 @@ const Rn = /* @__PURE__ */ p({
   }),
   emits: /* @__PURE__ */ I(["click", "dblclick", "mousedown", "mouseup", "mouseenter", "mouseleave", "mousemove", "mouseover", "mouseout", "contextmenu", "focusin", "focusout", "change", "blur", "focus", "keyup", "keydown", "keypress", "paste", "copy", "cut"], ["update:modelValue"]),
   setup(e, { expose: t, emit: o }) {
-    const n = e, s = o, l = O(e, "modelValue"), { formRootContext: i, formItemContext: u, isValid: f, isInvalid: v } = ee(), { isDisabled: b, isTextarea: h, hasValue: V, isFocus: $, setFocus: g, setModelValue: R, reset: B } = xn({
+    const n = e, s = o, l = O(e, "modelValue"), { formRootContext: i, formItemContext: u, isValid: f, isInvalid: v } = Q(), { isDisabled: b, isTextarea: h, hasValue: V, isFocus: $, setFocus: g, setModelValue: R, reset: B } = xn({
       formRootContext: i,
       formItemContext: u,
       modelValue: () => l.value,
@@ -1509,7 +1509,7 @@ const wn = /* @__PURE__ */ w(In, [["render", Bn]]), Sn = { class: "input-after" 
       autocomplete: a(s).autocomplete,
       placeholder: a(s).placeholder,
       class: "input-native"
-    }, Q(a(n), !0)), null, 16, An)), [
+    }, te(a(n), !0)), null, 16, An)), [
       [no, a(o)]
     ]);
   }
@@ -1530,7 +1530,7 @@ const wn = /* @__PURE__ */ w(In, [["render", Bn]]), Sn = { class: "input-after" 
       cols: a(s).cols,
       placeholder: a(s).placeholder,
       class: "input-textarea"
-    }, Q(a(n), !0)), null, 16, En)), [
+    }, te(a(n), !0)), null, 16, En)), [
       [ft, a(o)]
     ]);
   }
@@ -1599,7 +1599,7 @@ const Zn = ["value", "disabled", "checked"], Jn = /* @__PURE__ */ p({
   }),
   emits: /* @__PURE__ */ I(["change"], ["update:modelValue"]),
   setup(e, { emit: t }) {
-    const o = e, n = t, s = O(e, "modelValue"), { formRootContext: l, formItemContext: i, isValid: u, isInvalid: f } = ee(), { isChecked: v, isDisabled: b, isIndeterminate: h } = Kn({
+    const o = e, n = t, s = O(e, "modelValue"), { formRootContext: l, formItemContext: i, isValid: u, isInvalid: f } = Q(), { isChecked: v, isDisabled: b, isIndeterminate: h } = Kn({
       formRootContext: l,
       formItemContext: i,
       props: () => o,
@@ -1635,7 +1635,7 @@ const Zn = ["value", "disabled", "checked"], Jn = /* @__PURE__ */ p({
         disabled: a(b),
         checked: a(v),
         class: "checkbox__input"
-      }, Q(n, !0)), null, 16, Zn), [
+      }, te(n, !0)), null, 16, Zn), [
         [pt, s.value]
       ]),
       d($.$slots, "default")
@@ -1728,7 +1728,7 @@ const rs = ["value", "disabled"], us = /* @__PURE__ */ p({
   }),
   emits: /* @__PURE__ */ I(["change"], ["update:modelValue"]),
   setup(e, { emit: t }) {
-    const o = e, n = t, s = O(e, "modelValue"), { formRootContext: l, formItemContext: i, isValid: u, isInvalid: f } = ee(), { isActive: v, isDisabled: b } = ls({
+    const o = e, n = t, s = O(e, "modelValue"), { formRootContext: l, formItemContext: i, isValid: u, isInvalid: f } = Q(), { isActive: v, isDisabled: b } = ls({
       formRootContext: l,
       formItemContext: i,
       props: () => o,
@@ -1755,7 +1755,7 @@ const rs = ["value", "disabled"], us = /* @__PURE__ */ p({
         type: "radio",
         disabled: a(b),
         class: "radio__input"
-      }, Q(n, !0)), null, 16, rs), [
+      }, te(n, !0)), null, 16, rs), [
         [so, s.value]
       ]),
       d(h.$slots, "default")
@@ -1843,7 +1843,7 @@ const gs = { class: "switch" }, ys = ["disabled"], Vs = /* @__PURE__ */ p({
   }),
   emits: ["update:modelValue"],
   setup(e) {
-    const t = e, o = O(e, "modelValue"), { formRootContext: n, formItemContext: s, isValid: l, isInvalid: i } = ee(), { isDisabled: u, isActive: f } = hs({
+    const t = e, o = O(e, "modelValue"), { formRootContext: n, formItemContext: s, isValid: l, isInvalid: i } = Q(), { isDisabled: u, isActive: f } = hs({
       formRootContext: n,
       formItemContext: s,
       props: () => t,
@@ -1989,7 +1989,7 @@ const Es = /* @__PURE__ */ p({
   }),
   emits: ["update:modelValue"],
   setup(e) {
-    const t = e, o = O(e, "modelValue"), { formRootContext: n, formItemContext: s, isValid: l, isInvalid: i } = ee(), {
+    const t = e, o = O(e, "modelValue"), { formRootContext: n, formItemContext: s, isValid: l, isInvalid: i } = Q(), {
       step: u,
       isDisabled: f,
       isDecrementDisabled: v,
@@ -2201,7 +2201,7 @@ const Us = /* @__PURE__ */ p({
   setup(e) {
     const t = e;
     O(e, "modelValue");
-    const { formRootContext: o, formItemContext: n, isValid: s, isInvalid: l } = ee(), { isDisabled: i } = Xs({
+    const { formRootContext: o, formItemContext: n, isValid: s, isInvalid: l } = Q(), { isDisabled: i } = Xs({
       formRootContext: o,
       formItemContext: n,
       props: () => t
@@ -2272,7 +2272,7 @@ const Ws = /* @__PURE__ */ p({
   }),
   emits: /* @__PURE__ */ I(["addTag", "removeTag"], ["update:modelValue"]),
   setup(e, { emit: t }) {
-    const o = e, n = O(e, "modelValue"), { formRootContext: s, formItemContext: l, isValid: i, isInvalid: u } = ee(), { isDisabled: f } = qs({
+    const o = e, n = O(e, "modelValue"), { formRootContext: s, formItemContext: l, isValid: i, isInvalid: u } = Q(), { isDisabled: f } = qs({
       formRootContext: s,
       formItemContext: l,
       props: () => o
@@ -2361,7 +2361,7 @@ const sl = /* @__PURE__ */ p({
   setup(e) {
     const t = e;
     O(e, "modelValue");
-    const { formRootContext: o, formItemContext: n, isValid: s, isInvalid: l } = ee(), { isDisabled: i } = tl({
+    const { formRootContext: o, formItemContext: n, isValid: s, isInvalid: l } = Q(), { isDisabled: i } = tl({
       formRootContext: o,
       formItemContext: n,
       props: () => t
@@ -2586,8 +2586,8 @@ function Pl(e) {
   }
   const g = qe((P) => {
     e.onScroll?.(P), t.value?.draggable || (h.value = at(e.scrollbar.value, !!t.value?.vertical), V.value = it(e.scrollbar.value, !!t.value?.horizontal));
-    const D = e.scrollbar.value, L = e.content.value, oe = D ? D.clientHeight : 0, se = D ? D.clientWidth : 0, ge = L ? L.scrollWidth : 0, ie = L ? L.scrollHeight : 0, re = h.value + oe, Le = V.value + se, ye = !!(t.value?.vertical && ie - re <= o.value), te = !!(t.value?.horizontal && ge - Le <= o.value);
-    ye && e.onScrollEndY?.(), te && e.onScrollEndX?.();
+    const D = e.scrollbar.value, L = e.content.value, oe = D ? D.clientHeight : 0, se = D ? D.clientWidth : 0, ge = L ? L.scrollWidth : 0, ie = L ? L.scrollHeight : 0, re = h.value + oe, Le = V.value + se, ye = !!(t.value?.vertical && ie - re <= o.value), ee = !!(t.value?.horizontal && ge - Le <= o.value);
+    ye && e.onScrollEndY?.(), ee && e.onScrollEndX?.();
   }, s.value), R = Ye((P) => {
     if (e.onMousemove?.(P), !t.value?.draggable || !u.value)
       return;
@@ -3003,7 +3003,7 @@ const $a = /* @__PURE__ */ w(ga, [["render", Va]]), dt = {
     return (l, i) => (r(), x(a(ue).Root, j(o, {
       modelValue: s.value,
       "onUpdate:modelValue": i[0] || (i[0] = (u) => s.value = u)
-    }, Q(n)), {
+    }, te(n)), {
       default: y(() => [
         d(l.$slots, "default")
       ]),
@@ -3967,7 +3967,7 @@ const vi = /* @__PURE__ */ Symbol("VDropdownContextKey"), hi = {
   emits: ["scrollEndY", "scrollEndX", "scroll", "mousedown", "mouseleave", "mouseup", "mousemove"],
   setup(e, { emit: t }) {
     const o = e, n = t;
-    return (s, l) => (r(), x(a(Nl).Root, j(o, Q(n)), {
+    return (s, l) => (r(), x(a(Nl).Root, j(o, te(n)), {
       default: y(() => [
         d(s.$slots, "default")
       ]),
@@ -4094,7 +4094,7 @@ const Ki = { class: "v-tabs" }, Wi = { class: "v-tabs__content" }, Zi = /* @__PU
   emits: ["delete"],
   setup(e, { emit: t }) {
     const o = e, n = t;
-    return (s, l) => (r(), x(a(Nt).Root, j(o, Q(n)), {
+    return (s, l) => (r(), x(a(Nt).Root, j(o, te(n)), {
       default: y(() => [
         d(s.$slots, "default")
       ]),
@@ -4164,7 +4164,7 @@ const Ki = { class: "v-tabs" }, Wi = { class: "v-tabs__content" }, Zi = /* @__PU
     return (l, i) => (r(), x(a(he).Root, j({
       modelValue: s.value,
       "onUpdate:modelValue": i[0] || (i[0] = (u) => s.value = u)
-    }, o, Q(n)), {
+    }, o, te(n)), {
       default: y((u) => [
         d(l.$slots, "default", k(z(u)))
       ]),
@@ -4185,7 +4185,7 @@ const Ki = { class: "v-tabs" }, Wi = { class: "v-tabs__content" }, Zi = /* @__PU
   emits: ["valid", "invalid"],
   setup(e, { emit: t }) {
     const o = vt(e, ["title"]), n = t, s = J();
-    return (l, i) => (r(), x(a(he).Item, j(o, Q(n)), bt({
+    return (l, i) => (r(), x(a(he).Item, j(o, te(n)), bt({
       default: y((u) => [
         d(l.$slots, "default", k(z(u)))
       ]),
@@ -4510,8 +4510,11 @@ const Ki = { class: "v-tabs" }, Wi = { class: "v-tabs__content" }, Zi = /* @__PU
     const o = e, n = t, s = O(e, "modelValue");
     return (l, i) => (r(), x(a(xe).Root, j(o, {
       modelValue: s.value,
-      "onUpdate:modelValue": i[0] || (i[0] = (u) => s.value = u)
-    }, Q(n)), {
+      "onUpdate:modelValue": i[0] || (i[0] = (u) => s.value = u),
+      onChange: i[1] || (i[1] = (u) => n("change", u)),
+      onClose: i[2] || (i[2] = (u) => n("close")),
+      onClear: i[3] || (i[3] = (u) => n("clear"))
+    }), {
       default: y(() => [
         A(a(xe).Value),
         A(a(xe).Dropdown, null, {
@@ -4834,12 +4837,12 @@ function Qr(e) {
   function se() {
     if (!t.value)
       return;
-    const te = Math.min(l.value, v.value);
-    if (te > 0) {
+    const ee = Math.min(l.value, v.value);
+    if (ee > 0) {
       let Je = function(fe) {
         Ne || (Ne = fe), Ve || (Ve = fe);
         const Qe = fe - Ne;
-        Qe >= te || Qe + (fe - Ve) / 2 >= te ? oe() : u.value = requestAnimationFrame(Je), Ve = fe;
+        Qe >= ee || Qe + (fe - Ve) / 2 >= ee ? oe() : u.value = requestAnimationFrame(Je), Ve = fe;
       }, Ne, Ve;
       u.value = requestAnimationFrame(Je);
     } else
@@ -4871,8 +4874,8 @@ function Qr(e) {
     document.addEventListener("visibilitychange", ye);
   }), je(() => {
     document.removeEventListener("visibilitychange", ye), L();
-  }), K(() => e.props, (te) => {
-    l.value = te.start, i.value = f.value + te.start, te.autoStart && D();
+  }), K(() => e.props, (ee) => {
+    l.value = ee.start, i.value = f.value + ee.start, ee.autoStart && D();
   }, {
     deep: !0,
     immediate: !0

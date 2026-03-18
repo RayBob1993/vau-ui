@@ -14,7 +14,9 @@
   <Select.Root
     v-bind="props"
     v-model="modelValue"
-    v-on="emit"
+    @change="emit('change', $event)"
+    @close="emit('close')"
+    @clear="emit('clear')"
   >
     <Select.Value/>
 
