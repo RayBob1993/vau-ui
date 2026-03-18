@@ -34,7 +34,7 @@ export type SelectProps = {
 } & Partial<ThemeProp> & Partial<SizeProp>;
 
 export interface SelectEmits {
-  change: [payload: SelectModelValue];
+  change: [payload: OptionValue];
   opened: [payload: Element];
   closed: [payload: Element];
   open: [];

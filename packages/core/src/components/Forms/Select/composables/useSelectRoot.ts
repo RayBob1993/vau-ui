@@ -12,7 +12,7 @@ export interface UseSelectRootOptions {
   formItemContext: MaybeNull<FormItemContext>;
   modelValue: MaybeRefOrGetter<SelectModelValue>;
   props: MaybeRefOrGetter<SelectProps>;
-  onChange?: (value: SelectModelValue) => void;
+  onChange?: (value: OptionValue) => void;
   onChangeModel?: (value: SelectModelValue) => void;
   onClear?: VoidFunction;
 }
@@ -63,25 +63,21 @@ export function useSelectRoot (options: UseSelectRootOptions) {
       }
 
       options.onChangeModel?.([...values]);
-      options.onChange?.([...values]);
-
-      return;
+    } else {
+      options.onChangeModel?.(value);
     }
 
-    options.onChangeModel?.(value);
     options.onChange?.(value);
   }
 
   function reset () {
     if (isSelectMultiple(modelValue.value, props.value.multiple)) {
       options.onChangeModel?.([]);
-      options.onChange?.([]);
 
       return;
     }
 
     options.onChangeModel?.(undefined);
-    options.onChange?.(undefined);
     options.onClear?.();
   }
 

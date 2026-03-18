@@ -10,7 +10,7 @@ export declare const Select: {
             loading?: boolean;
             placeholder?: string;
         } & Partial<import('../../..').ThemeProp> & Partial<import('../../..').SizeProp>> & Readonly<{
-            onChange?: ((payload: import('./types').SelectModelValue) => any) | undefined;
+            onChange?: ((payload: import('./types').OptionValue) => any) | undefined;
             "onUpdate:modelValue"?: ((value: import('./types').SelectModelValue) => any) | undefined;
             onClose?: (() => any) | undefined;
             onOpen?: (() => any) | undefined;
@@ -18,7 +18,7 @@ export declare const Select: {
             onClosed?: ((payload: Element) => any) | undefined;
             onClear?: (() => any) | undefined;
         }>, {}, {}, {}, {}, import('vue').ComponentOptionsMixin, import('vue').ComponentOptionsMixin, {
-            change: (payload: import('./types').SelectModelValue) => any;
+            change: (payload: import('./types').OptionValue) => any;
             "update:modelValue": (value: import('./types').SelectModelValue) => any;
             close: () => any;
             open: () => any;
@@ -42,7 +42,7 @@ export declare const Select: {
             loading?: boolean;
             placeholder?: string;
         } & Partial<import('../../..').ThemeProp> & Partial<import('../../..').SizeProp>> & Readonly<{
-            onChange?: ((payload: import('./types').SelectModelValue) => any) | undefined;
+            onChange?: ((payload: import('./types').OptionValue) => any) | undefined;
             "onUpdate:modelValue"?: ((value: import('./types').SelectModelValue) => any) | undefined;
             onClose?: (() => any) | undefined;
             onOpen?: (() => any) | undefined;
@@ -63,7 +63,7 @@ export declare const Select: {
         loading?: boolean;
         placeholder?: string;
     } & Partial<import('../../..').ThemeProp> & Partial<import('../../..').SizeProp>> & Readonly<{
-        onChange?: ((payload: import('./types').SelectModelValue) => any) | undefined;
+        onChange?: ((payload: import('./types').OptionValue) => any) | undefined;
         "onUpdate:modelValue"?: ((value: import('./types').SelectModelValue) => any) | undefined;
         onClose?: (() => any) | undefined;
         onOpen?: (() => any) | undefined;
@@ -71,7 +71,7 @@ export declare const Select: {
         onClosed?: ((payload: Element) => any) | undefined;
         onClear?: (() => any) | undefined;
     }>, {}, {}, {}, {}, import('vue').ComponentOptionsMixin, import('vue').ComponentOptionsMixin, {
-        change: (payload: import('./types').SelectModelValue) => any;
+        change: (payload: import('./types').OptionValue) => any;
         "update:modelValue": (value: import('./types').SelectModelValue) => any;
         close: () => any;
         open: () => any;

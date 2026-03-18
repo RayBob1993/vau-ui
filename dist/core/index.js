@@ -2763,18 +2763,18 @@ function Js(e) {
     if (!v.value) {
       if (ae(t.value, n.value.multiple)) {
         const T = /* @__PURE__ */ new Set([...t.value]);
-        T.has(k) ? T.delete(k) : T.add(k), e.onChangeModel?.([...T]), e.onChange?.([...T]);
-        return;
-      }
-      e.onChangeModel?.(k), e.onChange?.(k);
+        T.has(k) ? T.delete(k) : T.add(k), e.onChangeModel?.([...T]);
+      } else
+        e.onChangeModel?.(k);
+      e.onChange?.(k);
     }
   }
   function m() {
     if (ae(t.value, n.value.multiple)) {
-      e.onChangeModel?.([]), e.onChange?.([]);
+      e.onChangeModel?.([]);
       return;
     }
-    e.onChangeModel?.(void 0), e.onChange?.(void 0), e.onClear?.();
+    e.onChangeModel?.(void 0), e.onClear?.();
   }
   function _() {
     v.value || u(!0);

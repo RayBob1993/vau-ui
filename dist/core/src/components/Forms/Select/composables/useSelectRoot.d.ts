@@ -7,7 +7,7 @@ export interface UseSelectRootOptions {
     formItemContext: MaybeNull<FormItemContext>;
     modelValue: MaybeRefOrGetter<SelectModelValue>;
     props: MaybeRefOrGetter<SelectProps>;
-    onChange?: (value: SelectModelValue) => void;
+    onChange?: (value: OptionValue) => void;
     onChangeModel?: (value: SelectModelValue) => void;
     onClear?: VoidFunction;
 }
