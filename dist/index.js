@@ -289,7 +289,7 @@ function Z(e = !1) {
     n
   ];
 }
-function Yu(e) {
+function Fu(e) {
   const t = new Intl.PluralRules("ru-RU"), o = /* @__PURE__ */ new Map([
     ["one", e[0]],
     ["few", e[1]],
@@ -345,7 +345,7 @@ const It = Object.freeze({
   URL: "url",
   SEARCH: "search",
   PASSWORD: "password"
-}), qu = Object.freeze({
+}), Xu = Object.freeze({
   BASE: "base",
   PRIMARY: "primary",
   SECONDARY: "secondary",
@@ -353,7 +353,7 @@ const It = Object.freeze({
   DANGER: "danger",
   SUCCESS: "success",
   WARNING: "warning"
-}), Ku = Object.freeze({
+}), ju = Object.freeze({
   MINI: "mini",
   SMALL: "small",
   MEDIUM: "medium",
@@ -361,22 +361,22 @@ const It = Object.freeze({
   BIG: "big",
   HUGE: "huge",
   MASSIVE: "massive"
-}), Wu = Object.freeze({
+}), Hu = Object.freeze({
   HORIZONTAL: "horizontal",
   VERTICAL: "vertical"
-}), Zu = Object.freeze({
+}), Uu = Object.freeze({
   top: "top",
   left: "left",
   right: "right",
   center: "center",
   bottom: "bottom"
-}), Ju = Object.freeze({
+}), Gu = Object.freeze({
   START: "start",
   CENTER: "center",
   END: "end",
   BASELINE: "baseline",
   STRETCH: "stretch"
-}), Qu = Object.freeze({
+}), Yu = Object.freeze({
   START: "start",
   CENTER: "center",
   END: "end",
@@ -422,7 +422,7 @@ function Ge(e) {
 function se(e) {
   return typeof e > "u";
 }
-function ec(e) {
+function qu(e) {
   return ze(e) || se(e) ? !0 : pe(e) ? e === "" : Array.isArray(e) ? !e.length : e instanceof Map || e instanceof Set ? e.size === 0 : Ge(e) ? e instanceof Date || e instanceof RegExp ? !1 : Object.keys(e).length === 0 : !1;
 }
 function Ho(e) {
@@ -502,22 +502,22 @@ function he(e, t = /* @__PURE__ */ new WeakMap()) {
   }
   return e;
 }
-function tc(e) {
+function Ku(e) {
   return new Promise((t) => setTimeout(t, e));
 }
-function oc(e, t) {
+function Wu(e, t) {
   const o = {};
   for (const n of t)
     Object.prototype.hasOwnProperty.call(e, n) && (o[n] = e[n]);
   return o;
 }
-function nc(e, t) {
+function Zu(e, t) {
   const o = { ...e };
   for (const n of t)
     Object.prototype.hasOwnProperty.call(e, n) && delete o[n];
   return o;
 }
-function sc(e) {
+function Ju(e) {
   return e ? "true" : "false";
 }
 function Ye(e, t, o = {}) {
@@ -561,13 +561,13 @@ function qe(e, t, o = {}) {
     debounceMode: n
   });
 }
-function lc(e) {
+function Qu(e) {
   return oo(e);
 }
 function Tt(e) {
   return e ? e.flatMap((t) => t.type === G ? Tt(t.children) : [t]) : [];
 }
-function ac(e, t, o = {}) {
+function ec(e, t, o = {}) {
   const {
     rootMargin: n = nt.LAZY_IMAGE.rootMargin,
     threshold: s = nt.LAZY_IMAGE.threshold,
@@ -607,10 +607,10 @@ function ac(e, t, o = {}) {
     stop: u
   };
 }
-function ic() {
+function tc() {
   return {};
 }
-function rc() {
+function oc() {
   if (!window)
     return {
       number: A(0),
@@ -632,7 +632,7 @@ function rc() {
     animate: t
   };
 }
-function uc() {
+function nc() {
   if (!window)
     return {
       x: A(0),
@@ -655,13 +655,13 @@ function uc() {
     setScroll: n
   };
 }
-function cc(e, t) {
+function sc(e, t) {
   (pe(e) ? document.querySelector(e) : Ae(e) ? a(e) : e)?.scrollIntoView({
     behavior: "smooth",
     ...t
   });
 }
-function dc(e, t) {
+function lc(e, t) {
   return {
     listeners: t.reduce((n, s) => {
       const l = s, i = String(l);
@@ -1130,7 +1130,7 @@ const _n = {
   },
   unmounted() {
   }
-}, mc = {
+}, ac = {
   install(e) {
     e.directive("visible", _n);
   }
@@ -1139,7 +1139,7 @@ const _n = {
   },
   unmounted() {
   }
-}, fc = {
+}, ic = {
   install(e) {
     e.directive("loading", gn);
   }
@@ -1152,7 +1152,7 @@ const _n = {
   unmounted(e) {
     window.removeEventListener("click", e.clickOutside);
   }
-}, pc = {
+}, rc = {
   install(e) {
     e.directive("click-outside", St);
   }
@@ -1161,7 +1161,7 @@ const _n = {
   },
   unmounted() {
   }
-}, vc = {
+}, uc = {
   install(e) {
     e.directive("tooltip", yn);
   }
@@ -2505,7 +2505,7 @@ const al = /* @__PURE__ */ p({
   setup(e) {
     return Ht(), (t, o) => (r(), m("div", ul));
   }
-}), hc = {
+}), cc = {
   Root: al,
   Input: rl,
   Tags: cl
@@ -2576,7 +2576,7 @@ const pl = /* @__PURE__ */ p({
       "aria-disabled": a(o)
     }, null, 8, vl));
   }
-}), bc = {
+}), dc = {
   Root: pl,
   Slider: hl
 }, bl = /* @__PURE__ */ Symbol("ModalRootContextKey");
@@ -2643,7 +2643,7 @@ function Nl(e, t) {
     d(e.$slots, "default")
   ]);
 }
-const Fl = /* @__PURE__ */ w(Pl, [["render", Nl]]), _c = {
+const Fl = /* @__PURE__ */ w(Pl, [["render", Nl]]), mc = {
   Root: yl,
   Body: xl,
   Close: Il,
@@ -2710,7 +2710,7 @@ const jl = /* @__PURE__ */ p({
   Root: jl,
   Group: Hl
 }, Yt = /* @__PURE__ */ Symbol("ConfigProviderRootContextKey");
-function gc() {
+function fc() {
   return U(Yt, {
     props: () => ({}),
     t: () => ""
@@ -2917,7 +2917,7 @@ function ga(e, t) {
     d(e.$slots, "default")
   ]);
 }
-const ya = /* @__PURE__ */ w(ba, [["render", ga]]), yc = {
+const ya = /* @__PURE__ */ w(ba, [["render", ga]]), pc = {
   Root: sa,
   Header: ra,
   Title: ma,
@@ -3050,9 +3050,9 @@ const Sa = /* @__PURE__ */ w(Ia, [["render", Ba]]), dt = {
       default: o.default
     });
   }
-}), Vc = {
+}), vc = {
   Root: Aa
-}, $c = {}, ka = /* @__PURE__ */ p({
+}, hc = {}, ka = /* @__PURE__ */ p({
   __name: "VButton",
   props: {
     asChild: { type: Boolean },
@@ -3097,7 +3097,7 @@ const Sa = /* @__PURE__ */ w(Ia, [["render", Ba]]), dt = {
   install(e) {
     e.component("VButton", ka);
   }
-}, xc = {
+}, bc = {
   install(e) {
     e.component("VButtonGroup", Ea);
   }
@@ -3789,7 +3789,7 @@ const fi = /* @__PURE__ */ p({
     e.component("VDrawer", Zt);
   }
 };
-function Cc() {
+function _c() {
   return {};
 }
 const Ri = /* @__PURE__ */ Symbol("VDropdownContextKey"), Ii = { class: "v-dropdown__menu" }, Ti = /* @__PURE__ */ p({
@@ -3908,7 +3908,7 @@ const Ri = /* @__PURE__ */ Symbol("VDropdownContextKey"), Ii = { class: "v-dropd
   install(e) {
     e.component("VLayout", Mi);
   }
-}, ki = /* @__PURE__ */ p({
+}, gc = /* @__PURE__ */ p({
   __name: "VContainer",
   props: {
     size: {}
@@ -3922,11 +3922,7 @@ const Ri = /* @__PURE__ */ Symbol("VDropdownContextKey"), Ii = { class: "v-dropd
       _: 3
     }, 16));
   }
-}), Ei = {
-  install(e) {
-    e.component("VContainer", ki);
-  }
-}, Di = /* @__PURE__ */ p({
+}), yc = /* @__PURE__ */ p({
   __name: "VRow",
   props: {
     guttersX: { type: Boolean },
@@ -3955,11 +3951,7 @@ const Ri = /* @__PURE__ */ Symbol("VDropdownContextKey"), Ii = { class: "v-dropd
       _: 3
     }, 16));
   }
-}), zi = {
-  install(e) {
-    e.component("VRow", Di);
-  }
-}, Oi = /* @__PURE__ */ p({
+}), Vc = /* @__PURE__ */ p({
   __name: "VCol",
   props: {
     size: {},
@@ -3993,11 +3985,7 @@ const Ri = /* @__PURE__ */ Symbol("VDropdownContextKey"), Ii = { class: "v-dropd
       _: 3
     }, 16));
   }
-}), Pi = {
-  install(e) {
-    e.component("VCol", Oi);
-  }
-}, Li = { class: "v-pagination" }, Ni = /* @__PURE__ */ p({
+}), ki = { class: "v-pagination" }, Ei = /* @__PURE__ */ p({
   __name: "VPagination",
   props: {
     total: {},
@@ -4009,27 +3997,27 @@ const Ri = /* @__PURE__ */ Symbol("VDropdownContextKey"), Ii = { class: "v-dropd
   },
   emits: ["change", "load"],
   setup(e) {
-    return (t, o) => (r(), m("div", Li));
+    return (t, o) => (r(), m("div", ki));
   }
-}), Fi = {
+}), Di = {
   install(e) {
-    e.component("VPagination", Ni);
+    e.component("VPagination", Ei);
   }
-}, Xi = { class: "v-placeholder" }, ji = /* @__PURE__ */ p({
+}, zi = { class: "v-placeholder" }, Oi = /* @__PURE__ */ p({
   __name: "VPlaceholder",
   props: {
     animated: { type: Boolean }
   },
   setup(e) {
-    return (t, o) => (r(), m("div", Xi, [
+    return (t, o) => (r(), m("div", zi, [
       d(t.$slots, "default")
     ]));
   }
-}), Hi = {
+}), Pi = {
   install(e) {
-    e.component("VPlaceholder", ji);
+    e.component("VPlaceholder", Oi);
   }
-}, Ui = /* @__PURE__ */ p({
+}, Li = /* @__PURE__ */ p({
   __name: "VScrollbar",
   props: {
     vertical: { type: Boolean },
@@ -4052,11 +4040,11 @@ const Ri = /* @__PURE__ */ Symbol("VDropdownContextKey"), Ii = { class: "v-dropd
       _: 3
     }, 16));
   }
-}), Gi = {
+}), Ni = {
   install(e) {
-    e.component("VScrollbar", Ui);
+    e.component("VScrollbar", Li);
   }
-}, Yi = /* @__PURE__ */ p({
+}, Fi = /* @__PURE__ */ p({
   __name: "VSpinner",
   props: {
     size: {},
@@ -4070,12 +4058,12 @@ const Ri = /* @__PURE__ */ Symbol("VDropdownContextKey"), Ii = { class: "v-dropd
       }])
     }, null, 2));
   }
-}), qi = {
+}), Xi = {
   install(e) {
-    e.component("VSpinner", Yi);
+    e.component("VSpinner", Fi);
   }
-}, Jt = /* @__PURE__ */ Symbol("VTabsContextKey"), Ki = () => U(Jt, null);
-function Wi() {
+}, Jt = /* @__PURE__ */ Symbol("VTabsContextKey"), ji = () => U(Jt, null);
+function Hi() {
   const e = A([]);
   function t(n) {
     e.value.find((s) => s.id === n.id) || e.value.push(n);
@@ -4089,14 +4077,14 @@ function Wi() {
     unregisterTab: o
   };
 }
-function Zi(e) {
+function Ui(e) {
   const t = Ue(), o = c(() => e.context?.modelValue.value === e.props.value);
   return {
     id: t,
     isActive: o
   };
 }
-const Ji = { class: "v-tabs" }, Qi = { class: "v-tabs__content" }, er = /* @__PURE__ */ p({
+const Gi = { class: "v-tabs" }, Yi = { class: "v-tabs__content" }, qi = /* @__PURE__ */ p({
   __name: "VTabs",
   props: /* @__PURE__ */ I({
     scrollable: { type: Boolean }
@@ -4112,7 +4100,7 @@ const Ji = { class: "v-tabs" }, Qi = { class: "v-tabs__content" }, er = /* @__PU
       tabs: l,
       registerTab: i,
       unregisterTab: u
-    } = Wi();
+    } = Hi();
     function f(v) {
       s.value = v, n("change", v);
     }
@@ -4123,13 +4111,13 @@ const Ji = { class: "v-tabs" }, Qi = { class: "v-tabs__content" }, er = /* @__PU
       handleChange: f,
       registerTab: i,
       unregisterTab: u
-    }), (v, h) => (r(), m("div", Ji, [
-      T("div", Qi, [
+    }), (v, h) => (r(), m("div", Gi, [
+      T("div", Yi, [
         d(v.$slots, "default")
       ])
     ]));
   }
-}), tr = /* @__PURE__ */ p({
+}), Ki = /* @__PURE__ */ p({
   __name: "VTab",
   props: {
     title: {},
@@ -4137,7 +4125,7 @@ const Ji = { class: "v-tabs" }, Qi = { class: "v-tabs__content" }, er = /* @__PU
     disabled: { type: Boolean }
   },
   setup(e) {
-    const t = e, o = J(), n = Ki(), { id: s, isActive: l } = Zi({
+    const t = e, o = J(), n = ji(), { id: s, isActive: l } = Ui({
       context: n,
       props: t
     }), i = co({
@@ -4157,11 +4145,11 @@ const Ji = { class: "v-tabs" }, Qi = { class: "v-tabs__content" }, er = /* @__PU
       [ie, a(l)]
     ]);
   }
-}), or = {
+}), Wi = {
   install(e) {
-    e.component("VTabs", er), e.component("VTab", tr);
+    e.component("VTabs", qi), e.component("VTab", Ki);
   }
-}, nr = /* @__PURE__ */ p({
+}, Zi = /* @__PURE__ */ p({
   __name: "VTag",
   props: {
     value: {},
@@ -4179,7 +4167,7 @@ const Ji = { class: "v-tabs" }, Qi = { class: "v-tabs__content" }, er = /* @__PU
       _: 3
     }, 16));
   }
-}), sr = /* @__PURE__ */ p({
+}), Ji = /* @__PURE__ */ p({
   __name: "VTagGroup",
   props: {
     direction: {}
@@ -4193,15 +4181,15 @@ const Ji = { class: "v-tabs" }, Qi = { class: "v-tabs__content" }, er = /* @__PU
       _: 3
     }, 16));
   }
-}), lr = {
+}), Qi = {
   install(e) {
-    e.component("VTag", nr);
+    e.component("VTag", Zi);
   }
-}, Rc = {
+}, $c = {
   install(e) {
-    e.component("VTagGroup", sr);
+    e.component("VTagGroup", Ji);
   }
-}, ar = /* @__PURE__ */ p({
+}, er = /* @__PURE__ */ p({
   __name: "VText",
   props: {
     tag: {},
@@ -4220,11 +4208,11 @@ const Ji = { class: "v-tabs" }, Qi = { class: "v-tabs__content" }, er = /* @__PU
       _: 3
     }, 16));
   }
-}), ir = {
+}), tr = {
   install(e) {
-    e.component("VText", ar);
+    e.component("VText", er);
   }
-}, rr = /* @__PURE__ */ p({
+}, or = /* @__PURE__ */ p({
   __name: "VForm",
   props: /* @__PURE__ */ I({
     rules: {},
@@ -4249,11 +4237,11 @@ const Ji = { class: "v-tabs" }, Qi = { class: "v-tabs__content" }, er = /* @__PU
       _: 3
     }, 16, ["modelValue"]));
   }
-}), ur = {
+}), nr = {
   install(e) {
-    e.component("VForm", rr);
+    e.component("VForm", or);
   }
-}, cr = /* @__PURE__ */ p({
+}, sr = /* @__PURE__ */ p({
   __name: "VFormItem",
   props: {
     title: {},
@@ -4291,11 +4279,11 @@ const Ji = { class: "v-tabs" }, Qi = { class: "v-tabs__content" }, er = /* @__PU
       } : void 0
     ]), 1040));
   }
-}), dr = {
+}), lr = {
   install(e) {
-    e.component("VFormItem", cr);
+    e.component("VFormItem", sr);
   }
-}, mr = /* @__PURE__ */ p({
+}, ar = /* @__PURE__ */ p({
   __name: "VCheckbox",
   props: /* @__PURE__ */ I({
     disabled: { type: Boolean },
@@ -4327,7 +4315,7 @@ const Ji = { class: "v-tabs" }, Qi = { class: "v-tabs__content" }, er = /* @__PU
       _: 3
     }, 16, ["modelValue"]));
   }
-}), fr = /* @__PURE__ */ p({
+}), ir = /* @__PURE__ */ p({
   __name: "VCheckboxGroup",
   props: {
     direction: {}
@@ -4341,15 +4329,15 @@ const Ji = { class: "v-tabs" }, Qi = { class: "v-tabs__content" }, er = /* @__PU
       _: 3
     }, 16));
   }
-}), pr = {
+}), rr = {
   install(e) {
-    e.component("VCheckbox", mr);
+    e.component("VCheckbox", ar);
   }
-}, vr = {
+}, ur = {
   install(e) {
-    e.component("VCheckboxGroup", fr);
+    e.component("VCheckboxGroup", ir);
   }
-}, hr = /* @__PURE__ */ p({
+}, cr = /* @__PURE__ */ p({
   __name: "VInput",
   props: /* @__PURE__ */ I({
     type: {},
@@ -4401,11 +4389,11 @@ const Ji = { class: "v-tabs" }, Qi = { class: "v-tabs__content" }, er = /* @__PU
       _: 3
     }, 16, ["modelValue"]));
   }
-}), br = {
+}), dr = {
   install(e) {
-    e.component("VInput", hr);
+    e.component("VInput", cr);
   }
-}, _r = /* @__PURE__ */ p({
+}, mr = /* @__PURE__ */ p({
   __name: "VInputCode",
   props: /* @__PURE__ */ I({
     length: {},
@@ -4436,11 +4424,11 @@ const Ji = { class: "v-tabs" }, Qi = { class: "v-tabs__content" }, er = /* @__PU
       _: 1
     }, 16, ["modelValue"]));
   }
-}), gr = {
+}), fr = {
   install(e) {
-    e.component("VInputCode", _r);
+    e.component("VInputCode", mr);
   }
-}, yr = /* @__PURE__ */ p({
+}, pr = /* @__PURE__ */ p({
   __name: "VInputNumber",
   props: /* @__PURE__ */ I({
     mousewheel: { type: [Boolean, Number] },
@@ -4479,11 +4467,11 @@ const Ji = { class: "v-tabs" }, Qi = { class: "v-tabs__content" }, er = /* @__PU
       _: 1
     }, 16, ["modelValue"]));
   }
-}), Vr = {
+}), vr = {
   install(e) {
-    e.component("VInputNumber", yr);
+    e.component("VInputNumber", pr);
   }
-}, $r = /* @__PURE__ */ p({
+}, hr = /* @__PURE__ */ p({
   __name: "VInputPassword",
   props: /* @__PURE__ */ I({
     clearable: { type: Boolean },
@@ -4508,11 +4496,11 @@ const Ji = { class: "v-tabs" }, Qi = { class: "v-tabs__content" }, er = /* @__PU
       "onUpdate:modelValue": s[0] || (s[0] = (l) => o.value = l)
     }, t), null, 16, ["modelValue"]));
   }
-}), xr = {
+}), br = {
   install(e) {
-    e.component("VInputPassword", $r);
+    e.component("VInputPassword", hr);
   }
-}, Cr = /* @__PURE__ */ p({
+}, _r = /* @__PURE__ */ p({
   __name: "VRadio",
   props: /* @__PURE__ */ I({
     disabled: { type: Boolean },
@@ -4544,7 +4532,7 @@ const Ji = { class: "v-tabs" }, Qi = { class: "v-tabs__content" }, er = /* @__PU
       _: 3
     }, 16, ["modelValue"]));
   }
-}), Rr = /* @__PURE__ */ p({
+}), gr = /* @__PURE__ */ p({
   __name: "VRadioGroup",
   props: {
     direction: {}
@@ -4558,15 +4546,15 @@ const Ji = { class: "v-tabs" }, Qi = { class: "v-tabs__content" }, er = /* @__PU
       _: 3
     }, 16));
   }
-}), Ir = {
+}), yr = {
   install(e) {
-    e.component("VRadio", Cr);
+    e.component("VRadio", _r);
   }
-}, Tr = {
+}, Vr = {
   install(e) {
-    e.component("VRadioGroup", Rr);
+    e.component("VRadioGroup", gr);
   }
-}, Br = /* @__PURE__ */ p({
+}, $r = /* @__PURE__ */ p({
   __name: "VSelect",
   props: /* @__PURE__ */ I({
     disabled: { type: Boolean },
@@ -4615,7 +4603,7 @@ const Ji = { class: "v-tabs" }, Qi = { class: "v-tabs__content" }, er = /* @__PU
       _: 3
     }, 16, ["modelValue"]));
   }
-}), Sr = /* @__PURE__ */ p({
+}), xr = /* @__PURE__ */ p({
   __name: "VOption",
   props: {
     value: {},
@@ -4631,11 +4619,11 @@ const Ji = { class: "v-tabs" }, Qi = { class: "v-tabs__content" }, er = /* @__PU
       _: 3
     }, 16));
   }
-}), wr = {
+}), Cr = {
   install(e) {
-    e.component("VSelect", Br), e.component("VOption", Sr);
+    e.component("VSelect", $r), e.component("VOption", xr);
   }
-}, Mr = /* @__PURE__ */ p({
+}, Rr = /* @__PURE__ */ p({
   __name: "VSwitch",
   props: /* @__PURE__ */ I({
     disabled: { type: Boolean },
@@ -4664,11 +4652,11 @@ const Ji = { class: "v-tabs" }, Qi = { class: "v-tabs__content" }, er = /* @__PU
       _: 3
     }, 16, ["modelValue"]));
   }
-}), Ar = {
+}), Ir = {
   install(e) {
-    e.component("VSwitch", Mr);
+    e.component("VSwitch", Rr);
   }
-}, kr = /* @__PURE__ */ p({
+}, Tr = /* @__PURE__ */ p({
   __name: "VConfigProvider",
   props: {
     locale: {},
@@ -4684,14 +4672,14 @@ const Ji = { class: "v-tabs" }, Qi = { class: "v-tabs__content" }, er = /* @__PU
       _: 3
     }, 16));
   }
-}), Er = {
+}), Br = {
   install(e) {
-    e.component("VConfigProvider", kr);
+    e.component("VConfigProvider", Tr);
   }
-}, Dr = { class: "v-progress__value" }, zr = {
+}, Sr = { class: "v-progress__value" }, wr = {
   key: 0,
   class: "v-progress__label"
-}, Or = /* @__PURE__ */ p({
+}, Mr = /* @__PURE__ */ p({
   __name: "VProgress",
   props: {
     indeterminate: { type: Boolean },
@@ -4709,18 +4697,18 @@ const Ji = { class: "v-tabs" }, Qi = { class: "v-tabs__content" }, er = /* @__PU
       }]),
       role: "progressbar"
     }, [
-      T("div", Dr, [
-        e.showValue ? (r(), m("div", zr, [
+      T("div", Sr, [
+        e.showValue ? (r(), m("div", wr, [
           d(t.$slots, "default")
         ])) : F("", !0)
       ])
     ], 2));
   }
-}), Pr = {
+}), Ar = {
   install(e) {
-    e.component("VProgress", Or);
+    e.component("VProgress", Mr);
   }
-}, Lr = /* @__PURE__ */ p({
+}, kr = /* @__PURE__ */ p({
   __name: "VDivider",
   props: {
     direction: {}
@@ -4739,11 +4727,11 @@ const Ji = { class: "v-tabs" }, Qi = { class: "v-tabs__content" }, er = /* @__PU
       _: 3
     }, 16));
   }
-}), Nr = {
+}), Er = {
   install(e) {
-    e.component("VDivider", Lr);
+    e.component("VDivider", kr);
   }
-}, Fr = /* @__PURE__ */ p({
+}, Dr = /* @__PURE__ */ p({
   __name: "VFlex",
   props: {
     wrap: { type: Boolean },
@@ -4760,12 +4748,12 @@ const Ji = { class: "v-tabs" }, Qi = { class: "v-tabs__content" }, er = /* @__PU
       _: 3
     }, 16));
   }
-}), Xr = {
+}), zr = {
   install(e) {
-    e.component("VFlex", Fr);
+    e.component("VFlex", Dr);
   }
 };
-function jr(e) {
+function Or(e) {
   const t = A([]), o = A({
     prop: null,
     order: null
@@ -4800,10 +4788,10 @@ function jr(e) {
     toggleAllSelection: f
   };
 }
-const Hr = De(() => Promise.resolve().then(() => Bu)), Ur = De(() => Promise.resolve().then(() => ku)), Gr = De(() => Promise.resolve().then(() => Lu)), Yr = De(() => Promise.resolve().then(() => Hu)), qr = /* @__PURE__ */ Symbol("VTableContextKey"), Kr = { class: "v-table" }, Wr = {
+const Pr = De(() => Promise.resolve().then(() => $u)), Lr = De(() => Promise.resolve().then(() => Tu)), Nr = De(() => Promise.resolve().then(() => ku)), Fr = De(() => Promise.resolve().then(() => Pu)), Xr = /* @__PURE__ */ Symbol("VTableContextKey"), jr = { class: "v-table" }, Hr = {
   key: 0,
   class: "v-table__native"
-}, Zr = { key: 0 }, Jr = /* @__PURE__ */ p({
+}, Ur = { key: 0 }, Gr = /* @__PURE__ */ p({
   __name: "VTable",
   props: {
     columns: {},
@@ -4821,8 +4809,8 @@ const Hr = De(() => Promise.resolve().then(() => Bu)), Ur = De(() => Promise.res
       clearSort: i,
       sort: u,
       toggleAllSelection: f
-    } = jr(o);
-    return H(qr, {
+    } = Or(o);
+    return H(Xr, {
       props: o
     }), t({
       clearSelection: s,
@@ -4830,11 +4818,11 @@ const Hr = De(() => Promise.resolve().then(() => Bu)), Ur = De(() => Promise.res
       clearSort: i,
       sort: u,
       toggleAllSelection: f
-    }), (v, h) => (r(), m("div", Kr, [
-      e.data.length ? (r(), m("table", Wr, [
-        a(n) ? (r(), m("thead", Zr, [
+    }), (v, h) => (r(), m("div", jr, [
+      e.data.length ? (r(), m("table", Hr, [
+        a(n) ? (r(), m("thead", Ur, [
           T("tr", null, [
-            (r(!0), m(G, null, me(e.columns, (b) => (r(), x(a(Yr), {
+            (r(!0), m(G, null, me(e.columns, (b) => (r(), x(a(Fr), {
               key: b.prop
             }, {
               default: g(() => [
@@ -4845,11 +4833,11 @@ const Hr = De(() => Promise.resolve().then(() => Bu)), Ur = De(() => Promise.res
           ])
         ])) : F("", !0),
         T("tbody", null, [
-          (r(!0), m(G, null, me(e.data, (b, V) => (r(), x(a(Hr), {
+          (r(!0), m(G, null, me(e.data, (b, V) => (r(), x(a(Pr), {
             key: `row-${V}`
           }, {
             default: g(() => [
-              (r(!0), m(G, null, me(e.columns, ($) => (r(), x(a(Gr), {
+              (r(!0), m(G, null, me(e.columns, ($) => (r(), x(a(Nr), {
                 key: `row-${V}-${String($.prop)}`
               }, {
                 default: g(() => [
@@ -4863,7 +4851,7 @@ const Hr = De(() => Promise.resolve().then(() => Bu)), Ur = De(() => Promise.res
             _: 2
           }, 1024))), 128))
         ])
-      ])) : (r(), x(a(Ur), { key: 1 }, {
+      ])) : (r(), x(a(Lr), { key: 1 }, {
         default: g(() => [
           d(v.$slots, "empty")
         ]),
@@ -4871,11 +4859,11 @@ const Hr = De(() => Promise.resolve().then(() => Bu)), Ur = De(() => Promise.res
       }))
     ]));
   }
-}), Qr = {
+}), Yr = {
   install(e) {
-    e.component("VTable", Jr);
+    e.component("VTable", Gr);
   }
-}, eu = /* @__PURE__ */ p({
+}, qr = /* @__PURE__ */ p({
   __name: "VInputGroup",
   setup(e) {
     return (t, o) => (r(), x(a(q).Group, null, {
@@ -4885,7 +4873,7 @@ const Hr = De(() => Promise.resolve().then(() => Bu)), Ur = De(() => Promise.res
       _: 3
     }));
   }
-}), tu = /* @__PURE__ */ p({
+}), Kr = /* @__PURE__ */ p({
   __name: "VInputGroupAddon",
   setup(e) {
     return (t, o) => (r(), x(a(q).GroupAddon, null, {
@@ -4895,12 +4883,12 @@ const Hr = De(() => Promise.resolve().then(() => Bu)), Ur = De(() => Promise.res
       _: 3
     }));
   }
-}), ou = {
+}), Wr = {
   install(e) {
-    e.component("VInputGroup", eu), e.component("VInputGroupAddon", tu);
+    e.component("VInputGroup", qr), e.component("VInputGroupAddon", Kr);
   }
 }, Te = 1e3, Be = 60 * Te, Se = 60 * Be, mt = 24 * Se, Qt = Date.now(), eo = 1e3;
-function nu(e) {
+function Zr(e) {
   const [t, o] = Z(), [n, s] = Z(), l = A(0), i = A(0), u = A(0), f = c(() => e.props.now || Qt), v = c(() => e.props.interval || eo), h = c(() => 0), b = c(() => 0), V = c(() => Math.floor(l.value / mt)), $ = c(() => Math.floor(l.value % mt / Se)), y = c(() => Math.floor(l.value % Se / Be)), C = c(() => Math.floor(l.value % Be / Te)), B = c(() => Math.floor(l.value % Te)), M = c(() => Math.floor(l.value / Se)), O = c(() => Math.floor(l.value / Be)), P = c(() => Math.floor(l.value / Te));
   function k() {
     t.value || (o(!0), e.props?.autoStart || (l.value = e.props.start, i.value = f.value + e.props.start), e.onStart?.(), document.visibilityState === "visible" && le());
@@ -4981,7 +4969,7 @@ function nu(e) {
     restart: Le
   };
 }
-const su = { class: "v-countdown" }, lu = /* @__PURE__ */ p({
+const Jr = { class: "v-countdown" }, Qr = /* @__PURE__ */ p({
   __name: "VCountdown",
   props: {
     autoStart: { type: Boolean },
@@ -5003,7 +4991,7 @@ const su = { class: "v-countdown" }, lu = /* @__PURE__ */ p({
       abort: $,
       end: y,
       restart: C
-    } = nu({
+    } = Zr({
       props: n,
       onAbort: () => s("abort"),
       onEnd: () => s("end"),
@@ -5015,7 +5003,7 @@ const su = { class: "v-countdown" }, lu = /* @__PURE__ */ p({
       abort: $,
       end: y,
       restart: C
-    }), (B, M) => (r(), m("div", su, [
+    }), (B, M) => (r(), m("div", Jr, [
       d(B.$slots, "default", {
         years: a(l),
         months: a(i),
@@ -5027,31 +5015,31 @@ const su = { class: "v-countdown" }, lu = /* @__PURE__ */ p({
       })
     ]));
   }
-}), au = {
+}), eu = {
   install(e) {
-    e.component("VCountdown", lu);
+    e.component("VCountdown", Qr);
   }
-}, iu = { class: "v-calendar" }, ru = /* @__PURE__ */ p({
+}, tu = { class: "v-calendar" }, ou = /* @__PURE__ */ p({
   __name: "VCalendar",
   props: {
     theme: {},
     size: {}
   },
   setup(e) {
-    return (t, o) => (r(), m("div", iu));
+    return (t, o) => (r(), m("div", tu));
   }
-}), uu = {
+}), nu = {
   install(e) {
-    e.component("VCalendar", ru);
+    e.component("VCalendar", ou);
   }
-}, Ic = {
+}, xc = {
   install(e) {
-    e.use(Pa), e.use(ti), e.use(Ua), e.use(Ga), e.use(ri), e.use(si), e.use(Da), e.use(di), e.use(Er), e.use(gi), e.use(pi), e.use(Ci), e.use(Bi), e.use(wi), e.use(Fi), e.use(Hi), e.use(Gi), e.use(qi), e.use(or), e.use(lr), e.use(ir), e.use(Ei), e.use(Pi), e.use(zi), e.use(Ai), e.use(ur), e.use(dr), e.use(br), e.use(pr), e.use(vr), e.use(xr), e.use(Vr), e.use(gr), e.use(Ir), e.use(Tr), e.use(Ar), e.use(wr), e.use(vi), e.use(Za), e.use(Pr), e.use(Nr), e.use(Xr), e.use(Qr), e.use(ou), e.use(au), e.use(uu);
+    e.use(Pa), e.use(ti), e.use(Ua), e.use(Ga), e.use(ri), e.use(si), e.use(Da), e.use(di), e.use(Br), e.use(gi), e.use(pi), e.use(Ci), e.use(Bi), e.use(wi), e.use(Di), e.use(Pi), e.use(Ni), e.use(Xi), e.use(Wi), e.use(Qi), e.use(tr), e.use(Ai), e.use(nr), e.use(lr), e.use(dr), e.use(rr), e.use(ur), e.use(br), e.use(vr), e.use(fr), e.use(yr), e.use(Vr), e.use(Ir), e.use(Cr), e.use(vi), e.use(Za), e.use(Ar), e.use(Er), e.use(zr), e.use(Yr), e.use(Wr), e.use(eu), e.use(nu);
   }
-}, cu = { class: "v-confirm__header" }, du = { class: "v-confirm__title" }, mu = { class: "v-confirm__body" }, fu = {
+}, su = { class: "v-confirm__header" }, lu = { class: "v-confirm__title" }, au = { class: "v-confirm__body" }, iu = {
   key: 0,
   class: "v-confirm__text"
-}, pu = ["innerHTML"], vu = { class: "v-confirm__footer" }, hu = /* @__PURE__ */ p({
+}, ru = ["innerHTML"], uu = { class: "v-confirm__footer" }, cu = /* @__PURE__ */ p({
   __name: "VConfirm",
   props: {
     title: {},
@@ -5073,21 +5061,21 @@ const su = { class: "v-countdown" }, lu = /* @__PURE__ */ p({
             [`v-confirm--theme-${e.theme}`]: e.theme
           }])
         }, [
-          T("div", cu, [
-            T("div", du, N(e.title), 1),
+          T("div", su, [
+            T("div", lu, N(e.title), 1),
             T("button", {
               type: "button",
               onClick: s[0] || (s[0] = (l) => o("close"))
             }, " X ")
           ]),
-          T("div", mu, [
+          T("div", au, [
             e.useHtml ? (r(), m("div", {
               key: 1,
               class: "v-confirm__text",
               innerHTML: e.message
-            }, null, 8, pu)) : (r(), m("div", fu, N(e.message), 1))
+            }, null, 8, ru)) : (r(), m("div", iu, N(e.message), 1))
           ]),
-          T("div", vu, [
+          T("div", uu, [
             T("button", {
               type: "button",
               onClick: s[1] || (s[1] = (l) => o("success"))
@@ -5103,7 +5091,7 @@ const su = { class: "v-countdown" }, lu = /* @__PURE__ */ p({
     }));
   }
 });
-class Tc {
+class Cc {
   static #e = null;
   static async open(t, o) {
     return new Promise((n) => {
@@ -5114,7 +5102,7 @@ class Tc {
         } catch (u) {
           console.error(u), n(!1);
         }
-      }, l = ae(hu, {
+      }, l = ae(cu, {
         ...t,
         onSuccess: () => {
           s(!0), t.onSuccess?.();
@@ -5134,11 +5122,11 @@ class Tc {
     this.#e && ye(null, this.#e);
   }
 }
-const Bc = {
+const Rc = {
   install() {
   }
 }, to = 1500;
-function bu(e) {
+function du(e) {
   const t = c(() => W(e.props.duration) ? e.props.duration : to), [o, n] = Z(!1);
   let s = null;
   function l() {
@@ -5158,10 +5146,10 @@ function bu(e) {
     startTimer: i
   };
 }
-const _u = { class: "v-toast__header" }, gu = { class: "v-toast__title" }, yu = { class: "v-toast__body" }, Vu = {
+const mu = { class: "v-toast__header" }, fu = { class: "v-toast__title" }, pu = { class: "v-toast__body" }, vu = {
   key: 0,
   class: "v-toast__text"
-}, $u = ["innerHTML"], xu = /* @__PURE__ */ p({
+}, hu = ["innerHTML"], bu = /* @__PURE__ */ p({
   __name: "VToast",
   props: {
     title: {},
@@ -5174,7 +5162,7 @@ const _u = { class: "v-toast__header" }, gu = { class: "v-toast__title" }, yu = 
   },
   emits: ["close"],
   setup(e, { emit: t }) {
-    const o = e, n = t, { isVisible: s, setVisible: l, startTimer: i, clearTimer: u } = bu({
+    const o = e, n = t, { isVisible: s, setVisible: l, startTimer: i, clearTimer: u } = du({
       props: o
     });
     return (f, v) => (r(), x(Ee, {
@@ -5193,8 +5181,8 @@ const _u = { class: "v-toast__header" }, gu = { class: "v-toast__title" }, yu = 
           onMouseleave: v[2] || (v[2] = //@ts-ignore
           (...h) => a(i) && a(i)(...h))
         }, [
-          T("div", _u, [
-            T("div", gu, N(e.title), 1),
+          T("div", mu, [
+            T("div", fu, N(e.title), 1),
             e.clearable ? (r(), m("button", {
               key: 0,
               type: "button",
@@ -5202,12 +5190,12 @@ const _u = { class: "v-toast__header" }, gu = { class: "v-toast__title" }, yu = 
               onClick: v[0] || (v[0] = (h) => a(l)(!1))
             }, " X ")) : F("", !0)
           ]),
-          T("div", yu, [
+          T("div", pu, [
             e.useHtml ? (r(), m("div", {
               key: 1,
               class: "v-toast__text",
               innerHTML: e.message
-            }, null, 8, $u)) : (r(), m("div", Vu, N(e.message), 1))
+            }, null, 8, hu)) : (r(), m("div", vu, N(e.message), 1))
           ])
         ], 34), [
           [ie, a(s)]
@@ -5217,18 +5205,18 @@ const _u = { class: "v-toast__header" }, gu = { class: "v-toast__title" }, yu = 
     }));
   }
 });
-class Sc {
+class Ic {
   static #e = null;
   static open(t, o) {
     this.#e || (this.#e = document.createElement("div"), this.#e.id = "toast-container", document.body.appendChild(this.#e));
-    const n = ae(xu, {
+    const n = ae(bu, {
       ...t,
       appContext: o
     });
     ye(n, this.#e);
   }
 }
-class wc {
+class Tc {
   static open(t, o) {
     const n = ae(Wt, {
       ...t,
@@ -5237,7 +5225,7 @@ class wc {
     ye(n, document.body);
   }
 }
-class Mc {
+class Bc {
   static open(t, o) {
     const n = ae(Zt, {
       ...t,
@@ -5246,52 +5234,52 @@ class Mc {
     ye(n, document.body);
   }
 }
-const Ac = {
+const Sc = {
   name: "ru",
   vau: {}
-}, kc = {
+}, wc = {
   name: "en",
   vau: {}
-}, Cu = {}, Ru = { class: "v-table-row" };
-function Iu(e, t) {
-  return r(), m("tr", Ru, [
+}, _u = {}, gu = { class: "v-table-row" };
+function yu(e, t) {
+  return r(), m("tr", gu, [
     d(e.$slots, "default")
   ]);
 }
-const Tu = /* @__PURE__ */ w(Cu, [["render", Iu]]), Bu = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+const Vu = /* @__PURE__ */ w(_u, [["render", yu]]), $u = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
-  default: Tu
-}, Symbol.toStringTag, { value: "Module" })), Su = {}, wu = { class: "v-table-empty" };
-function Mu(e, t) {
-  return r(), m("div", wu, [
+  default: Vu
+}, Symbol.toStringTag, { value: "Module" })), xu = {}, Cu = { class: "v-table-empty" };
+function Ru(e, t) {
+  return r(), m("div", Cu, [
     d(e.$slots, "default", {}, () => [
       t[0] || (t[0] = j(" Данных нет ", -1))
     ])
   ]);
 }
-const Au = /* @__PURE__ */ w(Su, [["render", Mu]]), ku = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+const Iu = /* @__PURE__ */ w(xu, [["render", Ru]]), Tu = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
-  default: Au
-}, Symbol.toStringTag, { value: "Module" })), Eu = {}, Du = { class: "v-table-body-cell" }, zu = { class: "v-table-body-cell__content" };
-function Ou(e, t) {
-  return r(), m("td", Du, [
-    T("div", zu, [
+  default: Iu
+}, Symbol.toStringTag, { value: "Module" })), Bu = {}, Su = { class: "v-table-body-cell" }, wu = { class: "v-table-body-cell__content" };
+function Mu(e, t) {
+  return r(), m("td", Su, [
+    T("div", wu, [
       d(e.$slots, "default")
     ])
   ]);
 }
-const Pu = /* @__PURE__ */ w(Eu, [["render", Ou]]), Lu = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+const Au = /* @__PURE__ */ w(Bu, [["render", Mu]]), ku = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
-  default: Pu
-}, Symbol.toStringTag, { value: "Module" })), Nu = {}, Fu = { class: "v-table-header-cell" };
-function Xu(e, t) {
-  return r(), m("th", Fu, [
+  default: Au
+}, Symbol.toStringTag, { value: "Module" })), Eu = {}, Du = { class: "v-table-header-cell" };
+function zu(e, t) {
+  return r(), m("th", Du, [
     d(e.$slots, "default")
   ]);
 }
-const ju = /* @__PURE__ */ w(Nu, [["render", Xu]]), Hu = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+const Ou = /* @__PURE__ */ w(Eu, [["render", zu]]), Pu = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
-  default: ju
+  default: Ou
 }, Symbol.toStringTag, { value: "Module" }));
 export {
   de as Accordion,
@@ -5303,35 +5291,33 @@ export {
   ri as BadgePlugin,
   si as BreadcrumbsPlugin,
   Xe as Button,
-  xc as ButtonGroupPlugin,
+  bc as ButtonGroupPlugin,
   Da as ButtonPlugin,
-  uu as CalendarPlugin,
+  nu as CalendarPlugin,
   Re as Checkbox,
-  vr as CheckboxGroupPlugin,
-  pr as CheckboxPlugin,
-  pc as ClickOutsidePlugin,
-  Pi as ColPlugin,
+  ur as CheckboxGroupPlugin,
+  rr as CheckboxPlugin,
+  rc as ClickOutsidePlugin,
   di as CollapsePlugin,
   Yl as ConfigProvider,
-  Er as ConfigProviderPlugin,
+  Br as ConfigProviderPlugin,
   Yt as ConfigProviderRootContextKey,
-  Bc as ConfirmPlugin,
-  Tc as ConfirmService,
-  Ei as ContainerPlugin,
-  au as CountdownPlugin,
-  Wu as Direction,
+  Rc as ConfirmPlugin,
+  Cc as ConfirmService,
+  eu as CountdownPlugin,
+  Hu as Direction,
   dt as Divider,
-  Nr as DividerPlugin,
+  Er as DividerPlugin,
   Ci as DrawerPlugin,
-  Mc as DrawerService,
+  Bc as DrawerService,
   Bi as DropdownPlugin,
   Ca as Flex,
-  Ju as FlexAlign,
-  Qu as FlexJustify,
-  Xr as FlexPlugin,
+  Gu as FlexAlign,
+  Yu as FlexJustify,
+  zr as FlexPlugin,
   _e as Form,
-  dr as FormItemPlugin,
-  ur as FormPlugin,
+  lr as FormItemPlugin,
+  nr as FormPlugin,
   Ze as Grid,
   we as INPUT_NUMBER_ACTIONS,
   Ps as INPUT_NUMBER_MAX,
@@ -5343,54 +5329,53 @@ export {
   pi as InplacePlugin,
   q as Input,
   ut as InputCode,
-  gr as InputCodePlugin,
-  ou as InputGroupPlugin,
+  fr as InputCodePlugin,
+  Wr as InputGroupPlugin,
   Xo as InputModes,
   be as InputNativeTypes,
   Ce as InputNumber,
-  Vr as InputNumberPlugin,
+  vr as InputNumberPlugin,
   Zs as InputPassword,
-  xr as InputPasswordPlugin,
-  br as InputPlugin,
-  bc as InputRange,
-  hc as InputTags,
+  br as InputPasswordPlugin,
+  dr as InputPlugin,
+  dc as InputRange,
+  cc as InputTags,
   It as InputTypes,
   nt as IntersectionPresets,
   ct as Layout,
   Ai as LayoutPlugin,
-  fc as LoadingPlugin,
-  _c as Modal,
+  ic as LoadingPlugin,
+  mc as Modal,
   gi as ModalPlugin,
-  wc as ModalService,
+  Tc as ModalService,
   vi as OverlayPlugin,
-  Fi as PaginationPlugin,
-  Hi as PlaceholderPlugin,
-  Zu as Position,
-  Vc as Primitive,
-  Pr as ProgressPlugin,
+  Di as PaginationPlugin,
+  Pi as PlaceholderPlugin,
+  Uu as Position,
+  vc as Primitive,
+  Ar as ProgressPlugin,
   Ie as Radio,
-  Tr as RadioGroupPlugin,
-  Ir as RadioPlugin,
-  zi as RowPlugin,
+  Vr as RadioGroupPlugin,
+  yr as RadioPlugin,
   kt as Scrollbar,
-  Gi as ScrollbarPlugin,
-  yc as Section,
+  Ni as ScrollbarPlugin,
+  pc as Section,
   ge as Select,
-  wr as SelectPlugin,
-  Ku as Sizes,
-  qi as SpinnerPlugin,
+  Cr as SelectPlugin,
+  ju as Sizes,
+  Xi as SpinnerPlugin,
   Fe as Switch,
-  Ar as SwitchPlugin,
-  Qr as TablePlugin,
-  or as TabsPlugin,
+  Ir as SwitchPlugin,
+  Yr as TablePlugin,
+  Wi as TabsPlugin,
   Gt as Tag,
-  Rc as TagGroupPlugin,
-  lr as TagPlugin,
+  $c as TagGroupPlugin,
+  Qi as TagPlugin,
   $a as Text,
-  ir as TextPlugin,
-  qu as Themes,
-  Sc as ToastService,
-  vc as TooltipPlugin,
+  tr as TextPlugin,
+  Xu as Themes,
+  Ic as ToastService,
+  uc as TooltipPlugin,
   za as VAccordion,
   Oa as VAccordionItem,
   ei as VAffix,
@@ -5401,87 +5386,87 @@ export {
   ni as VBreadcrumbs,
   ka as VButton,
   Ea as VButtonGroup,
-  ru as VCalendar,
-  mr as VCheckbox,
-  fr as VCheckboxGroup,
-  Oi as VCol,
+  ou as VCalendar,
+  ar as VCheckbox,
+  ir as VCheckboxGroup,
+  Vc as VCol,
   ci as VCollapse,
-  kr as VConfigProvider,
-  ki as VContainer,
-  lu as VCountdown,
-  Lr as VDivider,
+  Tr as VConfigProvider,
+  gc as VContainer,
+  Qr as VCountdown,
+  kr as VDivider,
   Zt as VDrawer,
   Ti as VDropdown,
-  Fr as VFlex,
-  rr as VForm,
-  cr as VFormItem,
+  Dr as VFlex,
+  or as VForm,
+  sr as VFormItem,
   Si as VImage,
   fi as VInplace,
-  hr as VInput,
-  _r as VInputCode,
-  eu as VInputGroup,
-  tu as VInputGroupAddon,
-  yr as VInputNumber,
-  $r as VInputPassword,
+  cr as VInput,
+  mr as VInputCode,
+  qr as VInputGroup,
+  Kr as VInputGroupAddon,
+  pr as VInputNumber,
+  hr as VInputPassword,
   Mi as VLayout,
   Wt as VModal,
-  Sr as VOption,
+  xr as VOption,
   Pe as VOverlay,
-  Ni as VPagination,
-  ji as VPlaceholder,
-  Or as VProgress,
-  Cr as VRadio,
-  Rr as VRadioGroup,
-  Di as VRow,
-  Ui as VScrollbar,
-  Br as VSelect,
-  Yi as VSpinner,
-  Mr as VSwitch,
-  tr as VTab,
-  Jr as VTable,
-  er as VTabs,
-  nr as VTag,
-  sr as VTagGroup,
-  ar as VText,
-  Ic as VauUI,
-  mc as VisiblePlugin,
-  sc as booleanToBooleanish,
+  Ei as VPagination,
+  Oi as VPlaceholder,
+  Mr as VProgress,
+  _r as VRadio,
+  gr as VRadioGroup,
+  yc as VRow,
+  Li as VScrollbar,
+  $r as VSelect,
+  Fi as VSpinner,
+  Rr as VSwitch,
+  Ki as VTab,
+  Gr as VTable,
+  qi as VTabs,
+  Zi as VTag,
+  Ji as VTagGroup,
+  er as VText,
+  xc as VauUI,
+  ac as VisiblePlugin,
+  Ju as booleanToBooleanish,
   he as clone,
   qe as debounce,
-  lc as defineFormRules,
-  tc as delay,
-  kc as en,
+  Qu as defineFormRules,
+  Ku as delay,
+  wc as en,
   st as getProp,
   jo as isBoolean,
-  ec as isEmpty,
+  qu as isEmpty,
   Ho as isFunction,
   ze as isNull,
   W as isNumber,
   Ge as isObject,
   pe as isString,
   se as isUndefined,
-  nc as omit,
-  oc as pick,
+  Zu as omit,
+  Wu as pick,
   Tt as renderSlotFragments,
-  Ac as ru,
-  $c as ruRU,
+  Sc as ru,
+  hc as ruRU,
   Ye as throttle,
   fo as useAccordionItem,
   mo as useAccordionRoot,
   po as useAccordionTrigger,
-  rc as useAnimatedNumber,
-  ic as useClipboard,
-  gc as useConfigProviderRootContext,
-  Cc as useDrawer,
-  dc as useEmitProxy,
+  oc as useAnimatedNumber,
+  tc as useClipboard,
+  fc as useConfigProviderRootContext,
+  _c as useDrawer,
+  lc as useEmitProxy,
   Ko as useFormItem,
   Go as useFormRoot,
   Fo as useIntersectionObserver,
-  ac as useLoadImage,
-  Yu as usePlural,
-  cc as useScrollTo,
+  ec as useLoadImage,
+  Fu as usePlural,
+  sc as useScrollTo,
   Z as useToggle,
-  uc as useWindowScroll,
+  nc as useWindowScroll,
   St as vClickOutside,
   gn as vLoading,
   yn as vTooltip,

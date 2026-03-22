@@ -21,9 +21,9 @@ import {
   TabsPlugin,
   TagPlugin,
   TextPlugin,
-  ContainerPlugin,
-  ColPlugin,
-  RowPlugin,
+  //ContainerPlugin,
+  //ColPlugin,
+  //RowPlugin,
   LayoutPlugin,
   FormPlugin,
   FormItemPlugin,
@@ -76,9 +76,9 @@ export const VauUI: Plugin = {
     app.use(TabsPlugin);
     app.use(TagPlugin);
     app.use(TextPlugin);
-    app.use(ContainerPlugin);
-    app.use(ColPlugin);
-    app.use(RowPlugin);
+    //app.use(ContainerPlugin);
+    //app.use(ColPlugin);
+    //app.use(RowPlugin);
     app.use(LayoutPlugin);
     app.use(FormPlugin);
     app.use(FormItemPlugin);
