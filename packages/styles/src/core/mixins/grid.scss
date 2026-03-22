@@ -5,7 +5,7 @@
   @for $i from 0 through $grid-columns {
     &-#{$i} {
       flex: 0 0 auto;
-      width: percentage(math.div($i, $grid-columns));
+      width: math.percentage(math.div($i, $grid-columns));
     }
   }
 
@@ -23,7 +23,7 @@
 @mixin generate-cols-offsets {
   @for $i from 0 through $grid-columns {
     &-#{$i} {
-      margin-left: percentage(math.div($i, $grid-columns));
+      margin-left: math.percentage(math.div($i, $grid-columns));
     }
   }
 }

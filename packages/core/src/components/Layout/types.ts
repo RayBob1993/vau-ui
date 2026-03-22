@@ -1,4 +1,4 @@
-import type { UnscopedSlot } from '../../../types';
+import type { UnscopedSlot } from '../../types';
 
 export interface LayoutSlots {
   default?: UnscopedSlot;
