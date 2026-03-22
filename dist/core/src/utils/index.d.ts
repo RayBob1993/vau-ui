@@ -14,3 +14,4 @@ export * from './omit';
 export * from './booleanToBooleanish';
 export * from './decorators';
 export * from './defines';
+export * from './renderSlotFragments';

@@ -28,7 +28,9 @@
     </Select.Value>
 
     <Select.Dropdown>
-      <slot/>
+      <Select.Scrollbar>
+        <slot/>
+      </Select.Scrollbar>
     </Select.Dropdown>
   </Select.Root>
 </template>

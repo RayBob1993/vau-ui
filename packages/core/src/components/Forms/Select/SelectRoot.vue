@@ -2,6 +2,7 @@
   import type { SelectProps, SelectEmits, SelectModelValue } from './types';
   import { useSelectRoot } from './composables';
   import { SelectRootContextKey } from './context';
+  import { vClickOutside } from '../../../directives';
   import { useFormContext } from '../Form/context';
   import { provide } from 'vue';
 
@@ -61,6 +62,7 @@
 
 <template>
   <div
+    v-click-outside="close"
     class="select"
     :class="{
       'select--disabled': isDisabled,

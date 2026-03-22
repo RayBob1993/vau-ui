@@ -1,5 +1,7 @@
 import { ThemeProp, SizeProp, DirectionProp } from '../../types';
 export type ButtonProps = {
+    asChild?: boolean;
+    as?: string;
     loading?: boolean;
     disabled?: boolean;
     plain?: boolean;

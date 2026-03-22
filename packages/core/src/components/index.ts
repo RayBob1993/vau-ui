@@ -9,3 +9,4 @@ export * from './Layout';
 export * from './Text';
 export * from './Flex';
 export * from './Divider';
+export * from './Primitive';

@@ -1,7 +1,6 @@
 <script lang="ts" setup>
   import type { IVDropdownProps, IVDropdownEmits, IVDropdownSlots, IVDropdownExpose } from './types';
   import { VDropdownContextKey } from './context';
-  import { vClickOutside } from '../../directives';
   import { useToggle } from '@vau/core';
   import { provide, watch } from 'vue';
 
@@ -11,8 +10,6 @@
   defineSlots<IVDropdownSlots>();
 
   const [isVisible, setVisible, toggleVisible] = useToggle();
-
-  const hide = () => setVisible(false);
 
   function handleAfterEnter (payload: Element) {
     emit('opened', payload);
@@ -42,7 +39,6 @@
 
 <template>
   <div
-    v-click-outside="hide"
     class="v-dropdown"
     :class="{
       'v-dropdown--open': isVisible

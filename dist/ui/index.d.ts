@@ -34,7 +34,6 @@ import { LayoutSlots } from '../core';
 import { Maybe } from '../core';
 import { MaybeNull } from '../core';
 import { ModelRef } from 'vue';
-import { ObjectDirective } from 'vue';
 import { OptionProps } from '../core';
 import { OptionSlots } from '../core';
 import { Plugin as Plugin_2 } from 'vue';
@@ -1070,8 +1069,6 @@ export declare const CheckboxGroupPlugin: Plugin_2;
 
 export declare const CheckboxPlugin: Plugin_2;
 
-export declare const ClickOutsidePlugin: Plugin_2;
-
 export declare const CollapsePlugin: Plugin_2;
 
 export declare const ColPlugin: Plugin_2;
@@ -1757,8 +1754,6 @@ declare type IVToastProps = {
 
 export declare const LayoutPlugin: Plugin_2;
 
-export declare const LoadingPlugin: Plugin_2;
-
 export declare const ModalPlugin: Plugin_2;
 
 export declare class ModalService {
@@ -1814,8 +1809,6 @@ export declare class ToastService {
     static open(options: IToastServiceOpenOptions, appContext?: AppContext): void;
 }
 
-export declare const TooltipPlugin: Plugin_2;
-
 export declare function useDrawer(): {};
 
 export declare const VAccordion: __VLS_WithTemplateSlots_3<typeof __VLS_component_3, __VLS_TemplateResult_3["slots"]>;
@@ -1853,8 +1846,6 @@ export declare const VCalendar: DefineComponent<IVCalendarProps, {}, {}, {}, {},
 export declare const VCheckbox: __VLS_WithTemplateSlots_26<typeof __VLS_component_26, __VLS_TemplateResult_26["slots"]>;
 
 export declare const VCheckboxGroup: __VLS_WithTemplateSlots_27<typeof __VLS_component_27, __VLS_TemplateResult_27["slots"]>;
-
-export declare const vClickOutside: ObjectDirective;
 
 export declare const VCol: __VLS_WithTemplateSlots_15<typeof __VLS_component_15, __VLS_TemplateResult_15["slots"]>;
 
@@ -1930,11 +1921,7 @@ export declare const VInputPassword: DefineComponent<__VLS_PublicProps_9, {}, {}
 "onUpdate:modelValue"?: ((value: InputModelValue) => any) | undefined;
 }>, {}, {}, {}, {}, string, ComponentProvideOptions, false, {}, HTMLDivElement>;
 
-export declare const VisiblePlugin: Plugin_2;
-
 export declare const VLayout: __VLS_WithTemplateSlots_17<typeof __VLS_component_17, __VLS_TemplateResult_17["slots"]>;
-
-export declare const vLoading: ObjectDirective;
 
 export declare const VModal: __VLS_WithTemplateSlots_11<typeof __VLS_component_11, __VLS_TemplateResult_11["slots"]>;
 
@@ -2001,9 +1988,5 @@ export declare const VTag: __VLS_WithTemplateSlots_22<typeof __VLS_component_22,
 export declare const VTagGroup: __VLS_WithTemplateSlots_23<typeof __VLS_component_23, __VLS_TemplateResult_23["slots"]>;
 
 export declare const VText: __VLS_WithTemplateSlots_24<typeof __VLS_component_24, __VLS_TemplateResult_24["slots"]>;
-
-export declare const vTooltip: ObjectDirective;
-
-export declare const vVisible: ObjectDirective;
 
 export { }

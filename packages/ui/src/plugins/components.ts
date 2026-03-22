@@ -40,7 +40,7 @@ import {
   RadioPlugin,
   RadioGroupPlugin,
   SwitchPlugin,
-  //SelectPlugin,
+  SelectPlugin,
   OverlayPlugin,
   AlertPlugin,
   ProgressPlugin,
@@ -51,12 +51,6 @@ import {
   CountdownPlugin,
   CalendarPlugin,
 } from '../components';
-import {
-  VisiblePlugin,
-  ClickOutsidePlugin,
-  LoadingPlugin,
-  TooltipPlugin
-} from '../directives';
 
 export const VauUI: Plugin = {
   install (app: App) {
@@ -101,7 +95,7 @@ export const VauUI: Plugin = {
     app.use(RadioPlugin);
     app.use(RadioGroupPlugin);
     app.use(SwitchPlugin);
-    //app.use(SelectPlugin);
+    app.use(SelectPlugin);
     app.use(OverlayPlugin);
     app.use(AlertPlugin);
     app.use(ProgressPlugin);
@@ -111,11 +105,5 @@ export const VauUI: Plugin = {
     app.use(InputGroupPlugin);
     app.use(CountdownPlugin);
     app.use(CalendarPlugin);
-
-    // Directives
-    app.use(VisiblePlugin);
-    app.use(ClickOutsidePlugin);
-    app.use(LoadingPlugin);
-    app.use(TooltipPlugin);
   }
 };

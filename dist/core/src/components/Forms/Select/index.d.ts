@@ -12,19 +12,19 @@ export declare const Select: {
         } & Partial<import('../../..').ThemeProp> & Partial<import('../../..').SizeProp>> & Readonly<{
             onChange?: ((payload: string) => any) | undefined;
             "onUpdate:modelValue"?: ((value: import('./types').SelectModelValue) => any) | undefined;
+            onClear?: (() => any) | undefined;
             onClose?: (() => any) | undefined;
             onOpen?: (() => any) | undefined;
             onOpened?: ((payload: Element) => any) | undefined;
             onClosed?: ((payload: Element) => any) | undefined;
-            onClear?: (() => any) | undefined;
         }>, {}, {}, {}, {}, import('vue').ComponentOptionsMixin, import('vue').ComponentOptionsMixin, {
             change: (payload: string) => any;
             "update:modelValue": (value: import('./types').SelectModelValue) => any;
+            clear: () => any;
             close: () => any;
             open: () => any;
             opened: (payload: Element) => any;
             closed: (payload: Element) => any;
-            clear: () => any;
         }, import('vue').PublicProps, {}, false, {}, {}, import('vue').GlobalComponents, import('vue').GlobalDirectives, string, {}, HTMLDivElement, import('vue').ComponentProvideOptions, {
             P: {};
             B: {};
@@ -44,11 +44,11 @@ export declare const Select: {
         } & Partial<import('../../..').ThemeProp> & Partial<import('../../..').SizeProp>> & Readonly<{
             onChange?: ((payload: string) => any) | undefined;
             "onUpdate:modelValue"?: ((value: import('./types').SelectModelValue) => any) | undefined;
+            onClear?: (() => any) | undefined;
             onClose?: (() => any) | undefined;
             onOpen?: (() => any) | undefined;
             onOpened?: ((payload: Element) => any) | undefined;
             onClosed?: ((payload: Element) => any) | undefined;
-            onClear?: (() => any) | undefined;
         }>, {}, {}, {}, {}, {}>;
         __isFragment?: never;
         __isTeleport?: never;
@@ -65,19 +65,19 @@ export declare const Select: {
     } & Partial<import('../../..').ThemeProp> & Partial<import('../../..').SizeProp>> & Readonly<{
         onChange?: ((payload: string) => any) | undefined;
         "onUpdate:modelValue"?: ((value: import('./types').SelectModelValue) => any) | undefined;
+        onClear?: (() => any) | undefined;
         onClose?: (() => any) | undefined;
         onOpen?: (() => any) | undefined;
         onOpened?: ((payload: Element) => any) | undefined;
         onClosed?: ((payload: Element) => any) | undefined;
-        onClear?: (() => any) | undefined;
     }>, {}, {}, {}, {}, import('vue').ComponentOptionsMixin, import('vue').ComponentOptionsMixin, {
         change: (payload: string) => any;
         "update:modelValue": (value: import('./types').SelectModelValue) => any;
+        clear: () => any;
         close: () => any;
         open: () => any;
         opened: (payload: Element) => any;
         closed: (payload: Element) => any;
-        clear: () => any;
     }, string, {}, {}, string, {}, import('vue').GlobalComponents, import('vue').GlobalDirectives, string, import('vue').ComponentProvideOptions> & import('vue').VNodeProps & import('vue').AllowedComponentProps & import('vue').ComponentCustomProps & (new () => {
         $slots: {
             default?(_: {}): any;
@@ -131,6 +131,23 @@ export declare const Select: {
         };
     });
     Value: {
+        new (...args: any[]): import('vue').CreateComponentPublicInstanceWithMixins<Readonly<{}> & Readonly<{}>, {}, {}, {}, {}, import('vue').ComponentOptionsMixin, import('vue').ComponentOptionsMixin, {}, import('vue').PublicProps, {}, true, {}, {}, import('vue').GlobalComponents, import('vue').GlobalDirectives, string, {}, HTMLDivElement, import('vue').ComponentProvideOptions, {
+            P: {};
+            B: {};
+            D: {};
+            C: {};
+            M: {};
+            Defaults: {};
+        }, Readonly<{}> & Readonly<{}>, {}, {}, {}, {}, {}>;
+        __isFragment?: never;
+        __isTeleport?: never;
+        __isSuspense?: never;
+    } & import('vue').ComponentOptionsBase<Readonly<{}> & Readonly<{}>, {}, {}, {}, {}, import('vue').ComponentOptionsMixin, import('vue').ComponentOptionsMixin, {}, string, {}, {}, string, {}, import('vue').GlobalComponents, import('vue').GlobalDirectives, string, import('vue').ComponentProvideOptions> & import('vue').VNodeProps & import('vue').AllowedComponentProps & import('vue').ComponentCustomProps & (new () => {
+        $slots: {
+            default?(_: {}): any;
+        };
+    });
+    Scrollbar: {
         new (...args: any[]): import('vue').CreateComponentPublicInstanceWithMixins<Readonly<{}> & Readonly<{}>, {}, {}, {}, {}, import('vue').ComponentOptionsMixin, import('vue').ComponentOptionsMixin, {}, import('vue').PublicProps, {}, true, {}, {}, import('vue').GlobalComponents, import('vue').GlobalDirectives, string, {}, HTMLDivElement, import('vue').ComponentProvideOptions, {
             P: {};
             B: {};
