@@ -3874,6 +3874,41 @@ const Ri = /* @__PURE__ */ Symbol("VDropdownContextKey"), Ii = { class: "v-dropd
     e.component("VImage", Si);
   }
 }, Mi = /* @__PURE__ */ p({
+  __name: "VLayout",
+  setup(e) {
+    const t = J();
+    return (o, n) => (r(), x(a(ct).Root, null, bt({
+      default: g(() => [
+        S(a(ct).Body, null, {
+          default: g(() => [
+            d(o.$slots, "default")
+          ]),
+          _: 3
+        })
+      ]),
+      _: 2
+    }, [
+      t?.header ? {
+        name: "header",
+        fn: g(() => [
+          d(o.$slots, "header")
+        ]),
+        key: "0"
+      } : void 0,
+      t?.footer ? {
+        name: "footer",
+        fn: g(() => [
+          d(o.$slots, "footer")
+        ]),
+        key: "1"
+      } : void 0
+    ]), 1024));
+  }
+}), Ai = {
+  install(e) {
+    e.component("VLayout", Mi);
+  }
+}, ki = /* @__PURE__ */ p({
   __name: "VContainer",
   props: {
     size: {}
@@ -3887,47 +3922,9 @@ const Ri = /* @__PURE__ */ Symbol("VDropdownContextKey"), Ii = { class: "v-dropd
       _: 3
     }, 16));
   }
-}), Ai = {
-  install(e) {
-    e.component("VContainer", Mi);
-  }
-}, ki = /* @__PURE__ */ p({
-  __name: "VCol",
-  props: {
-    size: {},
-    sizeXs: {},
-    sizeSm: {},
-    sizeMd: {},
-    sizeLg: {},
-    sizeXl: {},
-    sizeXxl: {},
-    order: {},
-    orderXs: {},
-    orderSm: {},
-    orderMd: {},
-    orderLg: {},
-    orderXl: {},
-    orderXxl: {},
-    offset: {},
-    offsetXs: {},
-    offsetSm: {},
-    offsetMd: {},
-    offsetLg: {},
-    offsetXl: {},
-    offsetXxl: {}
-  },
-  setup(e) {
-    const t = e;
-    return (o, n) => (r(), x(a(Ze).Col, E(D(t)), {
-      default: g(() => [
-        d(o.$slots, "default")
-      ]),
-      _: 3
-    }, 16));
-  }
 }), Ei = {
   install(e) {
-    e.component("VCol", ki);
+    e.component("VContainer", ki);
   }
 }, Di = /* @__PURE__ */ p({
   __name: "VRow",
@@ -3963,39 +3960,42 @@ const Ri = /* @__PURE__ */ Symbol("VDropdownContextKey"), Ii = { class: "v-dropd
     e.component("VRow", Di);
   }
 }, Oi = /* @__PURE__ */ p({
-  __name: "VLayout",
+  __name: "VCol",
+  props: {
+    size: {},
+    sizeXs: {},
+    sizeSm: {},
+    sizeMd: {},
+    sizeLg: {},
+    sizeXl: {},
+    sizeXxl: {},
+    order: {},
+    orderXs: {},
+    orderSm: {},
+    orderMd: {},
+    orderLg: {},
+    orderXl: {},
+    orderXxl: {},
+    offset: {},
+    offsetXs: {},
+    offsetSm: {},
+    offsetMd: {},
+    offsetLg: {},
+    offsetXl: {},
+    offsetXxl: {}
+  },
   setup(e) {
-    const t = J();
-    return (o, n) => (r(), x(a(ct).Root, null, bt({
+    const t = e;
+    return (o, n) => (r(), x(a(Ze).Col, E(D(t)), {
       default: g(() => [
-        S(a(ct).Body, null, {
-          default: g(() => [
-            d(o.$slots, "default")
-          ]),
-          _: 3
-        })
+        d(o.$slots, "default")
       ]),
-      _: 2
-    }, [
-      t?.header ? {
-        name: "header",
-        fn: g(() => [
-          d(o.$slots, "header")
-        ]),
-        key: "0"
-      } : void 0,
-      t?.footer ? {
-        name: "footer",
-        fn: g(() => [
-          d(o.$slots, "footer")
-        ]),
-        key: "1"
-      } : void 0
-    ]), 1024));
+      _: 3
+    }, 16));
   }
 }), Pi = {
   install(e) {
-    e.component("VLayout", Oi);
+    e.component("VCol", Oi);
   }
 }, Li = { class: "v-pagination" }, Ni = /* @__PURE__ */ p({
   __name: "VPagination",
@@ -5046,7 +5046,7 @@ const su = { class: "v-countdown" }, lu = /* @__PURE__ */ p({
   }
 }, Ic = {
   install(e) {
-    e.use(Pa), e.use(ti), e.use(Ua), e.use(Ga), e.use(ri), e.use(si), e.use(Da), e.use(di), e.use(Er), e.use(gi), e.use(pi), e.use(Ci), e.use(Bi), e.use(wi), e.use(Fi), e.use(Hi), e.use(Gi), e.use(qi), e.use(or), e.use(lr), e.use(ir), e.use(Ai), e.use(Ei), e.use(zi), e.use(Pi), e.use(ur), e.use(dr), e.use(br), e.use(pr), e.use(vr), e.use(xr), e.use(Vr), e.use(gr), e.use(Ir), e.use(Tr), e.use(Ar), e.use(wr), e.use(vi), e.use(Za), e.use(Pr), e.use(Nr), e.use(Xr), e.use(Qr), e.use(ou), e.use(au), e.use(uu);
+    e.use(Pa), e.use(ti), e.use(Ua), e.use(Ga), e.use(ri), e.use(si), e.use(Da), e.use(di), e.use(Er), e.use(gi), e.use(pi), e.use(Ci), e.use(Bi), e.use(wi), e.use(Fi), e.use(Hi), e.use(Gi), e.use(qi), e.use(or), e.use(lr), e.use(ir), e.use(Ei), e.use(Pi), e.use(zi), e.use(Ai), e.use(ur), e.use(dr), e.use(br), e.use(pr), e.use(vr), e.use(xr), e.use(Vr), e.use(gr), e.use(Ir), e.use(Tr), e.use(Ar), e.use(wr), e.use(vi), e.use(Za), e.use(Pr), e.use(Nr), e.use(Xr), e.use(Qr), e.use(ou), e.use(au), e.use(uu);
   }
 }, cu = { class: "v-confirm__header" }, du = { class: "v-confirm__title" }, mu = { class: "v-confirm__body" }, fu = {
   key: 0,
@@ -5310,14 +5310,14 @@ export {
   vr as CheckboxGroupPlugin,
   pr as CheckboxPlugin,
   pc as ClickOutsidePlugin,
-  Ei as ColPlugin,
+  Pi as ColPlugin,
   di as CollapsePlugin,
   Yl as ConfigProvider,
   Er as ConfigProviderPlugin,
   Yt as ConfigProviderRootContextKey,
   Bc as ConfirmPlugin,
   Tc as ConfirmService,
-  Ai as ContainerPlugin,
+  Ei as ContainerPlugin,
   au as CountdownPlugin,
   Wu as Direction,
   dt as Divider,
@@ -5357,7 +5357,7 @@ export {
   It as InputTypes,
   nt as IntersectionPresets,
   ct as Layout,
-  Pi as LayoutPlugin,
+  Ai as LayoutPlugin,
   fc as LoadingPlugin,
   _c as Modal,
   gi as ModalPlugin,
@@ -5404,10 +5404,10 @@ export {
   ru as VCalendar,
   mr as VCheckbox,
   fr as VCheckboxGroup,
-  ki as VCol,
+  Oi as VCol,
   ci as VCollapse,
   kr as VConfigProvider,
-  Mi as VContainer,
+  ki as VContainer,
   lu as VCountdown,
   Lr as VDivider,
   Zt as VDrawer,
@@ -5423,7 +5423,7 @@ export {
   tu as VInputGroupAddon,
   yr as VInputNumber,
   $r as VInputPassword,
-  Oi as VLayout,
+  Mi as VLayout,
   Wt as VModal,
   Sr as VOption,
   Pe as VOverlay,

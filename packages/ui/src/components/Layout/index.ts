@@ -1,2 +1,2 @@
-export * from './Grid';
-export * from './Layout';
+export { default as VLayout } from './VLayout.vue';
+export * from './plugin';
