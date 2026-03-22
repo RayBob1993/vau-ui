@@ -1,0 +1,43 @@
+@use './media' as *;
+
+@mixin breakpoints ($name) {
+  &--#{$name} {
+    @content;
+
+    &-xs {
+      @include media-xs-up {
+        @content;
+      }
+    }
+
+    &-sm {
+      @include media-sm-up {
+        @content;
+      }
+    }
+
+    &-md {
+      @include media-md-up {
+        @content;
+      }
+    }
+
+    &-lg {
+      @include media-lg-up {
+        @content;
+      }
+    }
+
+    &-xl {
+      @include media-xl-up {
+        @content;
+      }
+    }
+
+    &-xxl {
+      @include media-xxl-up {
+        @content;
+      }
+    }
+  }
+}

@@ -4493,7 +4493,25 @@ const Ol = /* @__PURE__ */ w({
   }
 }), Hc = {
   Root: Ol
-}, kl = /* @__PURE__ */ w({
+}, kl = { class: "layout" }, Tl = /* @__PURE__ */ w({
+  __name: "LayoutRoot",
+  setup(e) {
+    return (t, n) => (h(), g("div", kl, [
+      b(t.$slots, "header"),
+      b(t.$slots, "default"),
+      b(t.$slots, "footer")
+    ]));
+  }
+}), El = {}, Vl = { class: "layout-body" };
+function Pl(e, t) {
+  return h(), g("main", Vl, [
+    b(e.$slots, "default")
+  ]);
+}
+const Al = /* @__PURE__ */ E(El, [["render", Pl]]), Qc = {
+  Root: Tl,
+  Body: Al
+}, Dl = /* @__PURE__ */ w({
   __name: "Container",
   props: {
     size: {}
@@ -4507,7 +4525,7 @@ const Ol = /* @__PURE__ */ w({
       b(t.$slots, "default")
     ], 2));
   }
-}), Tl = /* @__PURE__ */ w({
+}), jl = /* @__PURE__ */ w({
   __name: "Col",
   props: {
     size: {},
@@ -4561,7 +4579,7 @@ const Ol = /* @__PURE__ */ w({
       b(t.$slots, "default")
     ], 2));
   }
-}), El = /* @__PURE__ */ w({
+}), Nl = /* @__PURE__ */ w({
   __name: "Row",
   props: {
     guttersX: { type: Boolean, default: !0 },
@@ -4605,64 +4623,46 @@ const Ol = /* @__PURE__ */ w({
       b(t.$slots, "default")
     ], 2));
   }
-}), Qc = {
-  Container: kl,
-  Row: El,
-  Col: Tl
-}, Vl = { class: "section" }, Pl = /* @__PURE__ */ w({
+}), eu = {
+  Container: Dl,
+  Row: Nl,
+  Col: jl
+}, Bl = { class: "section" }, Ml = /* @__PURE__ */ w({
   __name: "SectionRoot",
   setup(e) {
-    return (t, n) => (h(), g("section", Vl, [
+    return (t, n) => (h(), g("section", Bl, [
       b(t.$slots, "default")
     ]));
   }
-}), Al = {}, Dl = { class: "section-header" };
-function jl(e, t) {
-  return h(), g("header", Dl, [
+}), Zl = {}, Ll = { class: "section-header" };
+function Fl(e, t) {
+  return h(), g("header", Ll, [
     b(e.$slots, "default")
   ]);
 }
-const Nl = /* @__PURE__ */ E(Al, [["render", jl]]), Bl = {}, Ml = { class: "section-title" };
-function Zl(e, t) {
-  return h(), g("h1", Ml, [
+const Xl = /* @__PURE__ */ E(Zl, [["render", Fl]]), Ul = {}, Jl = { class: "section-title" };
+function Kl(e, t) {
+  return h(), g("h1", Jl, [
     b(e.$slots, "default")
   ]);
 }
-const Ll = /* @__PURE__ */ E(Bl, [["render", Zl]]), Fl = {}, Xl = { class: "section-footer" };
-function Ul(e, t) {
-  return h(), g("footer", Xl, [
+const Gl = /* @__PURE__ */ E(Ul, [["render", Kl]]), ql = {}, Yl = { class: "section-footer" };
+function Wl(e, t) {
+  return h(), g("footer", Yl, [
     b(e.$slots, "default")
   ]);
 }
-const Jl = /* @__PURE__ */ E(Fl, [["render", Ul]]), Kl = {}, Gl = { class: "section-body" };
-function ql(e, t) {
-  return h(), g("div", Gl, [
-    b(e.$slots, "default")
-  ]);
-}
-const Yl = /* @__PURE__ */ E(Kl, [["render", ql]]), eu = {
-  Root: Pl,
-  Header: Nl,
-  Title: Ll,
-  Footer: Jl,
-  Body: Yl
-}, Wl = { class: "layout" }, Hl = /* @__PURE__ */ w({
-  __name: "LayoutRoot",
-  setup(e) {
-    return (t, n) => (h(), g("div", Wl, [
-      b(t.$slots, "header"),
-      b(t.$slots, "default"),
-      b(t.$slots, "footer")
-    ]));
-  }
-}), Ql = {}, ec = { class: "layout-body" };
+const Hl = /* @__PURE__ */ E(ql, [["render", Wl]]), Ql = {}, ec = { class: "section-body" };
 function tc(e, t) {
-  return h(), g("main", ec, [
+  return h(), g("div", ec, [
     b(e.$slots, "default")
   ]);
 }
 const nc = /* @__PURE__ */ E(Ql, [["render", tc]]), tu = {
-  Root: Hl,
+  Root: Ml,
+  Header: Xl,
+  Title: Gl,
+  Footer: Hl,
   Body: nc
 }, oc = /* @__PURE__ */ w({
   __name: "TextRoot",
@@ -4807,7 +4807,7 @@ export {
   $c as FlexAlign,
   wc as FlexJustify,
   Ac as Form,
-  Qc as Grid,
+  eu as Grid,
   xt as INPUT_NUMBER_ACTIONS,
   wa as INPUT_NUMBER_MAX,
   $a as INPUT_NUMBER_MIN,
@@ -4824,14 +4824,14 @@ export {
   Kc as InputTags,
   Zt as InputTypes,
   rt as IntersectionPresets,
-  tu as Layout,
+  Qc as Layout,
   jc as LoadingPlugin,
   qc as Modal,
   bc as Position,
   su as Primitive,
   Lc as Radio,
   pi as Scrollbar,
-  eu as Section,
+  tu as Section,
   Mc as Select,
   _c as Sizes,
   Fc as Switch,

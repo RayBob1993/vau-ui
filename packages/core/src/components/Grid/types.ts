@@ -1,4 +1,4 @@
-import type { _FlexAlign, _FlexJustify, SizeProp } from '../../../types';
+import type { _FlexAlign, _FlexJustify, SizeProp } from '../../types';
 
 export type ColSizeValue = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12;
 export type ColSize = ColSizeValue | 'auto' | 'content';

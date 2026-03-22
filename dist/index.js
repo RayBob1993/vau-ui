@@ -2752,7 +2752,25 @@ const Gl = /* @__PURE__ */ p({
   }
 }), Yl = {
   Root: Gl
-}, ql = /* @__PURE__ */ p({
+}, ql = { class: "layout" }, Kl = /* @__PURE__ */ p({
+  __name: "LayoutRoot",
+  setup(e) {
+    return (t, o) => (r(), m("div", ql, [
+      d(t.$slots, "header"),
+      d(t.$slots, "default"),
+      d(t.$slots, "footer")
+    ]));
+  }
+}), Wl = {}, Zl = { class: "layout-body" };
+function Jl(e, t) {
+  return r(), m("main", Zl, [
+    d(e.$slots, "default")
+  ]);
+}
+const Ql = /* @__PURE__ */ w(Wl, [["render", Jl]]), ct = {
+  Root: Kl,
+  Body: Ql
+}, ea = /* @__PURE__ */ p({
   __name: "Container",
   props: {
     size: {}
@@ -2766,7 +2784,7 @@ const Gl = /* @__PURE__ */ p({
       d(t.$slots, "default")
     ], 2));
   }
-}), Kl = /* @__PURE__ */ p({
+}), ta = /* @__PURE__ */ p({
   __name: "Col",
   props: {
     size: {},
@@ -2820,7 +2838,7 @@ const Gl = /* @__PURE__ */ p({
       d(t.$slots, "default")
     ], 2));
   }
-}), Wl = /* @__PURE__ */ p({
+}), oa = /* @__PURE__ */ p({
   __name: "Row",
   props: {
     guttersX: { type: Boolean, default: !0 },
@@ -2865,63 +2883,45 @@ const Gl = /* @__PURE__ */ p({
     ], 2));
   }
 }), Ze = {
-  Container: ql,
-  Row: Wl,
-  Col: Kl
-}, Zl = { class: "section" }, Jl = /* @__PURE__ */ p({
+  Container: ea,
+  Row: oa,
+  Col: ta
+}, na = { class: "section" }, sa = /* @__PURE__ */ p({
   __name: "SectionRoot",
   setup(e) {
-    return (t, o) => (r(), m("section", Zl, [
+    return (t, o) => (r(), m("section", na, [
       d(t.$slots, "default")
     ]));
   }
-}), Ql = {}, ea = { class: "section-header" };
-function ta(e, t) {
-  return r(), m("header", ea, [
+}), la = {}, aa = { class: "section-header" };
+function ia(e, t) {
+  return r(), m("header", aa, [
     d(e.$slots, "default")
   ]);
 }
-const oa = /* @__PURE__ */ w(Ql, [["render", ta]]), na = {}, sa = { class: "section-title" };
-function la(e, t) {
-  return r(), m("h1", sa, [
+const ra = /* @__PURE__ */ w(la, [["render", ia]]), ua = {}, ca = { class: "section-title" };
+function da(e, t) {
+  return r(), m("h1", ca, [
     d(e.$slots, "default")
   ]);
 }
-const aa = /* @__PURE__ */ w(na, [["render", la]]), ia = {}, ra = { class: "section-footer" };
-function ua(e, t) {
-  return r(), m("footer", ra, [
+const ma = /* @__PURE__ */ w(ua, [["render", da]]), fa = {}, pa = { class: "section-footer" };
+function va(e, t) {
+  return r(), m("footer", pa, [
     d(e.$slots, "default")
   ]);
 }
-const ca = /* @__PURE__ */ w(ia, [["render", ua]]), da = {}, ma = { class: "section-body" };
-function fa(e, t) {
-  return r(), m("div", ma, [
-    d(e.$slots, "default")
-  ]);
-}
-const pa = /* @__PURE__ */ w(da, [["render", fa]]), yc = {
-  Root: Jl,
-  Header: oa,
-  Title: aa,
-  Footer: ca,
-  Body: pa
-}, va = { class: "layout" }, ha = /* @__PURE__ */ p({
-  __name: "LayoutRoot",
-  setup(e) {
-    return (t, o) => (r(), m("div", va, [
-      d(t.$slots, "header"),
-      d(t.$slots, "default"),
-      d(t.$slots, "footer")
-    ]));
-  }
-}), ba = {}, _a = { class: "layout-body" };
+const ha = /* @__PURE__ */ w(fa, [["render", va]]), ba = {}, _a = { class: "section-body" };
 function ga(e, t) {
-  return r(), m("main", _a, [
+  return r(), m("div", _a, [
     d(e.$slots, "default")
   ]);
 }
-const ya = /* @__PURE__ */ w(ba, [["render", ga]]), ct = {
-  Root: ha,
+const ya = /* @__PURE__ */ w(ba, [["render", ga]]), yc = {
+  Root: sa,
+  Header: ra,
+  Title: ma,
+  Footer: ha,
   Body: ya
 }, Va = /* @__PURE__ */ p({
   __name: "TextRoot",

@@ -6,6 +6,8 @@ export * from './Tag';
 export * from './ConfigProvider';
 export * from './Scrollbar';
 export * from './Layout';
+export * from './Grid';
+export * from './Section';
 export * from './Text';
 export * from './Flex';
 export * from './Divider';
