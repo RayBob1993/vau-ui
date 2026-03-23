@@ -1,5 +1,5 @@
 import { createElementBlock as t, openBlock as o, createElementVNode as c, renderSlot as l } from "vue";
-import { _ as s } from "./index-D8yBbwSC.js";
+import { _ as s } from "./index-B_HryAo1.js";
 const n = {}, r = { class: "v-table-body-cell" }, _ = { class: "v-table-body-cell__content" };
 function a(e, d) {
   return o(), t("td", r, [

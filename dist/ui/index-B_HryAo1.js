@@ -878,9 +878,16 @@ const to = /* @__PURE__ */ Symbol("VDropdownContextKey"), oo = { class: "v-dropd
 }), tn = /* @__PURE__ */ d({
   __name: "VRow",
   props: {
-    wrap: { type: Boolean, default: !0 },
     guttersX: { type: Boolean, default: !0 },
     guttersY: { type: Boolean },
+    wrap: { type: Boolean, default: !0 },
+    align: {},
+    alignXs: {},
+    alignSm: {},
+    alignMd: {},
+    alignLg: {},
+    alignXl: {},
+    alignXxl: {},
     justify: {},
     justifyXs: {},
     justifySm: {},
@@ -888,13 +895,7 @@ const to = /* @__PURE__ */ Symbol("VDropdownContextKey"), oo = { class: "v-dropd
     justifyLg: {},
     justifyXl: {},
     justifyXxl: {},
-    align: {},
-    alignXs: {},
-    alignSm: {},
-    alignMd: {},
-    alignLg: {},
-    alignXl: {},
-    alignXxl: {}
+    direction: {}
   },
   setup(e) {
     const t = e;
@@ -1772,7 +1773,7 @@ function vs(e) {
     toggleAllSelection: _
   };
 }
-const hs = ce(() => import("./TableRow-BQRBqPJA.js")), _s = ce(() => import("./TableEmpty-BWDWsRW8.js")), Vs = ce(() => import("./TableBodyCell-DzGa62pm.js")), gs = ce(() => import("./TableHeaderCell-Bg8_2mHz.js")), ys = /* @__PURE__ */ Symbol("VTableContextKey"), bs = { class: "v-table" }, $s = {
+const hs = ce(() => import("./TableRow-DAeLyUOR.js")), _s = ce(() => import("./TableEmpty-JDf4Xz4P.js")), Vs = ce(() => import("./TableBodyCell-dGeMSvp_.js")), gs = ce(() => import("./TableHeaderCell-DTJNBD8n.js")), ys = /* @__PURE__ */ Symbol("VTableContextKey"), bs = { class: "v-table" }, $s = {
   key: 0,
   class: "v-table__native"
 }, Ts = { key: 0 }, Bs = /* @__PURE__ */ d({
