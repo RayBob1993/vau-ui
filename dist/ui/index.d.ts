@@ -15,6 +15,7 @@ import { ComponentProvideOptions } from 'vue';
 import { ConfigProviderProps } from '../core';
 import { DefineComponent } from 'vue';
 import { DirectionProp } from '../core';
+import { FlexItemProps } from '../core';
 import { FlexProps } from '../core';
 import { FormItemProps } from '../core';
 import { FormItemSlots } from '../core';
@@ -250,7 +251,7 @@ declare const __VLS_component_38: DefineComponent<FlexProps, {}, {}, {}, {}, Com
 wrap: boolean;
 }, {}, {}, {}, string, ComponentProvideOptions, false, {}, HTMLDivElement>;
 
-declare const __VLS_component_39: DefineComponent<    {}, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, PublicProps, Readonly<{}> & Readonly<{}>, {}, {}, {}, {}, string, ComponentProvideOptions, true, {}, HTMLDivElement>;
+declare const __VLS_component_39: DefineComponent<FlexItemProps, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, PublicProps, Readonly<FlexItemProps> & Readonly<{}>, {}, {}, {}, {}, string, ComponentProvideOptions, false, {}, HTMLDivElement>;
 
 declare const __VLS_component_4: DefineComponent<ButtonProps, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, PublicProps, Readonly<ButtonProps> & Readonly<{}>, {
 type: HTMLButtonElement["type"];
@@ -258,7 +259,9 @@ type: HTMLButtonElement["type"];
 
 declare const __VLS_component_40: DefineComponent<    {}, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, PublicProps, Readonly<{}> & Readonly<{}>, {}, {}, {}, {}, string, ComponentProvideOptions, true, {}, HTMLDivElement>;
 
-declare const __VLS_component_41: DefineComponent<IVCountdownProps, {
+declare const __VLS_component_41: DefineComponent<    {}, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, PublicProps, Readonly<{}> & Readonly<{}>, {}, {}, {}, {}, string, ComponentProvideOptions, true, {}, HTMLDivElement>;
+
+declare const __VLS_component_42: DefineComponent<IVCountdownProps, {
 start: VoidFunction;
 abort: VoidFunction;
 end: VoidFunction;
@@ -676,6 +679,15 @@ declare function __VLS_template_40(): {
 
 declare function __VLS_template_41(): {
     attrs: Partial<{}>;
+    slots: {
+        default?(_: {}): any;
+    };
+    refs: {};
+    rootEl: HTMLDivElement;
+};
+
+declare function __VLS_template_42(): {
+    attrs: Partial<{}>;
     slots: Readonly<IVCountdownSlots> & IVCountdownSlots;
     refs: {};
     rootEl: HTMLDivElement;
@@ -793,6 +805,8 @@ declare type __VLS_TemplateResult_4 = ReturnType<typeof __VLS_template_4>;
 declare type __VLS_TemplateResult_40 = ReturnType<typeof __VLS_template_40>;
 
 declare type __VLS_TemplateResult_41 = ReturnType<typeof __VLS_template_41>;
+
+declare type __VLS_TemplateResult_42 = ReturnType<typeof __VLS_template_42>;
 
 declare type __VLS_TemplateResult_5 = ReturnType<typeof __VLS_template_5>;
 
@@ -1020,6 +1034,12 @@ declare type __VLS_WithTemplateSlots_41<T, S> = T & {
     };
 };
 
+declare type __VLS_WithTemplateSlots_42<T, S> = T & {
+    new (): {
+        $slots: S;
+    };
+};
+
 declare type __VLS_WithTemplateSlots_5<T, S> = T & {
     new (): {
         $slots: S;
@@ -1099,6 +1119,8 @@ export declare class DrawerService {
 export declare const DropdownPlugin: Plugin_2;
 
 export declare const en: IVLocale;
+
+export declare const FlexItemPlugin: Plugin_2;
 
 export declare const FlexPlugin: Plugin_2;
 
@@ -1854,7 +1876,7 @@ export declare const VConfigProvider: __VLS_WithTemplateSlots_34<typeof __VLS_co
 
 export declare const VContainer: __VLS_WithTemplateSlots<typeof __VLS_component, __VLS_TemplateResult["slots"]>;
 
-export declare const VCountdown: __VLS_WithTemplateSlots_41<typeof __VLS_component_41, __VLS_TemplateResult_41["slots"]>;
+export declare const VCountdown: __VLS_WithTemplateSlots_42<typeof __VLS_component_42, __VLS_TemplateResult_42["slots"]>;
 
 export declare const VDivider: __VLS_WithTemplateSlots_37<typeof __VLS_component_37, __VLS_TemplateResult_37["slots"]>;
 
@@ -1863,6 +1885,8 @@ export declare const VDrawer: __VLS_WithTemplateSlots_15<typeof __VLS_component_
 export declare const VDropdown: __VLS_WithTemplateSlots_16<typeof __VLS_component_16, __VLS_TemplateResult_16["slots"]>;
 
 export declare const VFlex: __VLS_WithTemplateSlots_38<typeof __VLS_component_38, __VLS_TemplateResult_38["slots"]>;
+
+export declare const VFlexItem: __VLS_WithTemplateSlots_39<typeof __VLS_component_39, __VLS_TemplateResult_39["slots"]>;
 
 export declare const VForm: <MODEL extends FormModel>(__VLS_props: NonNullable<Awaited<typeof __VLS_setup>>["props"], __VLS_ctx?: __VLS_PrettifyLocal<Pick<NonNullable<Awaited<typeof __VLS_setup>>, "attrs" | "emit" | "slots">>, __VLS_expose?: NonNullable<Awaited<typeof __VLS_setup>>["expose"], __VLS_setup?: Promise<{
     props: __VLS_PrettifyLocal<Pick<Partial<{}> & Omit<{
@@ -1904,9 +1928,9 @@ export declare const VInputCode: DefineComponent<__VLS_PublicProps_7, {}, {}, {}
 "onUpdate:modelValue"?: ((value: InputCodeModelValue) => any) | undefined;
 }>, {}, {}, {}, {}, string, ComponentProvideOptions, false, {}, HTMLDivElement>;
 
-export declare const VInputGroup: __VLS_WithTemplateSlots_39<typeof __VLS_component_39, __VLS_TemplateResult_39["slots"]>;
+export declare const VInputGroup: __VLS_WithTemplateSlots_40<typeof __VLS_component_40, __VLS_TemplateResult_40["slots"]>;
 
-export declare const VInputGroupAddon: __VLS_WithTemplateSlots_40<typeof __VLS_component_40, __VLS_TemplateResult_40["slots"]>;
+export declare const VInputGroupAddon: __VLS_WithTemplateSlots_41<typeof __VLS_component_41, __VLS_TemplateResult_41["slots"]>;
 
 export declare const VInputNumber: DefineComponent<__VLS_PublicProps_8, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {
 "update:modelValue": (value: number) => any;

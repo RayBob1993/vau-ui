@@ -1,5 +1,5 @@
 import { createElementBlock as o, openBlock as t, renderSlot as r } from "vue";
-import { _ as c } from "./index-CpQ1DEig.js";
+import { _ as c } from "./index-CojByXLQ.js";
 const s = {}, n = { class: "v-table-row" };
 function a(e, l) {
   return t(), o("tr", n, [
