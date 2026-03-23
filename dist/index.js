@@ -2982,10 +2982,12 @@ const Va = /* @__PURE__ */ S(_a, [["render", ya]]), hc = {
   },
   setup(e) {
     return (t, o) => (r(), m("div", {
-      class: C(["flex-item", {}])
+      class: C(["flex-item", {
+        [`flex-item--flex-${e.flex}`]: e.flex
+      }])
     }, [
       d(t.$slots, "default")
-    ]));
+    ], 2));
   }
 }), qt = {
   Root: Ca,

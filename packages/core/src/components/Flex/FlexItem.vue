@@ -8,7 +8,7 @@
   <div
     class="flex-item"
     :class="{
-
+      [`flex-item--flex-${flex}`]: flex
     }"
   >
     <slot/>
