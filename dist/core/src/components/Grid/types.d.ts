@@ -27,6 +27,7 @@ export interface ColProps {
 }
 export type ContainerProps = Partial<SizeProp>;
 export type RowProps = {
+    wrap?: boolean;
     guttersX?: boolean;
     guttersY?: boolean;
     justify?: _FlexJustify;

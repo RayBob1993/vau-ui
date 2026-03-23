@@ -1,7 +1,10 @@
 <script lang="ts" setup>
   import { Grid, type RowProps } from '@vau/core';
 
-  const props = defineProps<RowProps>();
+  const props = withDefaults(defineProps<RowProps>(), {
+    wrap: true,
+    guttersX: true
+  });
 </script>
 
 <template>

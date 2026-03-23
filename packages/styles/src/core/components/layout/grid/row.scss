@@ -1,6 +1,14 @@
 .row {
   display: flex;
-  flex-flow: row wrap;
+  flex-direction: row;
+
+  &--no-wrap {
+    flex-wrap: nowrap;
+  }
+
+  &--wrap {
+    flex-wrap: wrap;
+  }
 
   &--gutters {
     &-x {

@@ -11,6 +11,7 @@
     class="flex"
     :class="{
       'flex--wrap': wrap,
+      'flex--no-wrap': !wrap,
       [`flex--justify-${justify}`]: justify,
       [`flex--align-${align}`]: align,
       [`flex--direction-${direction}`]: direction

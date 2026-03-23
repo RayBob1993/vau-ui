@@ -1,5 +1,5 @@
 import { createElementBlock as t, openBlock as r, renderSlot as o } from "vue";
-import { _ as c } from "./index-BsGPVhm6.js";
+import { _ as c } from "./index-CpQ1DEig.js";
 const l = {}, s = { class: "v-table-header-cell" };
 function a(e, n) {
   return r(), t("th", s, [

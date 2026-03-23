@@ -1,5 +1,5 @@
 import { createElementBlock as o, openBlock as r, renderSlot as s, createTextVNode as n } from "vue";
-import { _ as c } from "./index-BsGPVhm6.js";
+import { _ as c } from "./index-CpQ1DEig.js";
 const l = {}, a = { class: "v-table-empty" };
 function d(t, e) {
   return r(), o("div", a, [

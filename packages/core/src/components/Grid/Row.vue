@@ -26,7 +26,9 @@
       [`row--align-xl-${alignXl}`]: alignXl,
       [`row--align-xxl-${alignXxl}`]: alignXxl,
       'row--gutters-x': guttersX,
-      'row--gutters-y': guttersY
+      'row--gutters-y': guttersY,
+      'row--wrap': wrap,
+      'row--no-wrap': !wrap
     }"
   >
     <slot/>

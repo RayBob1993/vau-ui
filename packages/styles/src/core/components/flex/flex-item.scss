@@ -1,0 +1,19 @@
+.flex-item {
+  &--flex {
+    &-content {
+      flex: 1 1 auto;
+    }
+
+    &-fixed {
+      flex: 0 0 auto;
+    }
+
+    &-grow {
+      flex: 1 0 auto;
+    }
+
+    &-shrink {
+      flex: 0 1 auto;
+    }
+  }
+}
