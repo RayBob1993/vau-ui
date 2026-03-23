@@ -35,3 +35,47 @@
     }
   }
 }
+
+@mixin generate-justify {
+  &-start {
+    justify-content: flex-start;
+  }
+
+  &-center {
+    justify-content: center;
+  }
+
+  &-end {
+    justify-content: flex-end;
+  }
+
+  &-around {
+    justify-content: space-around;
+  }
+
+  &-between {
+    justify-content: space-between;
+  }
+}
+
+@mixin generate-align {
+  &-start {
+    align-items: flex-start;
+  }
+
+  &-center {
+    align-items: center;
+  }
+
+  &-end {
+    align-items: flex-end;
+  }
+
+  &-baseline {
+    align-items: baseline;
+  }
+
+  &-stretch {
+    align-items: stretch;
+  }
+}

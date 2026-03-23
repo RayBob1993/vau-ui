@@ -1,0 +1,19 @@
+.row {
+  flex-direction: row;
+
+  &--gutters {
+    &-x {
+      margin-right: calc(-1 * var(--row-gutter-x));
+      margin-left: calc(-1 * var(--row-gutter-x));
+
+      > .col {
+        padding-right: var(--row-gutter-x);
+        padding-left: var(--row-gutter-x);
+      }
+    }
+
+    &-y {
+      gap: calc(var(--row-gutter-y) * 2) 0;
+    }
+  }
+}

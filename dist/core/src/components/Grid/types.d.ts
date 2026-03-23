@@ -1,4 +1,4 @@
-import { _FlexAlign, _FlexJustify, SizeProp } from '../../types';
+import { SizeProp, FlexJustifyProp, FlexAlignProp } from '../../types';
 export type ColSizeValue = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12;
 export type ColSize = ColSizeValue | 'auto' | 'content';
 export type ColOffset = ColSizeValue;
@@ -30,18 +30,4 @@ export type RowProps = {
     wrap?: boolean;
     guttersX?: boolean;
     guttersY?: boolean;
-    justify?: _FlexJustify;
-    justifyXs?: _FlexJustify;
-    justifySm?: _FlexJustify;
-    justifyMd?: _FlexJustify;
-    justifyLg?: _FlexJustify;
-    justifyXl?: _FlexJustify;
-    justifyXxl?: _FlexJustify;
-    align?: _FlexAlign;
-    alignXs?: _FlexAlign;
-    alignSm?: _FlexAlign;
-    alignMd?: _FlexAlign;
-    alignLg?: _FlexAlign;
-    alignXl?: _FlexAlign;
-    alignXxl?: _FlexAlign;
-};
+} & Partial<FlexJustifyProp> & Partial<FlexAlignProp>;

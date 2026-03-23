@@ -3,4 +3,10 @@ import { FlexJustify } from '../../constants';
 export type _FlexJustify = ValueOf<typeof FlexJustify>;
 export interface FlexJustifyProp {
     justify: _FlexJustify;
+    justifyXs: _FlexJustify;
+    justifySm: _FlexJustify;
+    justifyMd: _FlexJustify;
+    justifyLg: _FlexJustify;
+    justifyXl: _FlexJustify;
+    justifyXxl: _FlexJustify;
 }

@@ -9,26 +9,26 @@
 
 <template>
   <div
-    class="row"
+    class="flex row"
     :class="{
-      [`row--justify-${justify}`]: justify,
-      [`row--justify-xs-${justifyXs}`]: justifyXs,
-      [`row--justify-sm-${justifySm}`]: justifySm,
-      [`row--justify-md-${justifyMd}`]: justifyMd,
-      [`row--justify-lg-${justifyLg}`]: justifyLg,
-      [`row--justify-xl-${justifyXl}`]: justifyXl,
-      [`row--justify-xxl-${justifyXxl}`]: justifyXxl,
-      [`row--align-${align}`]: align,
-      [`row--align-xs-${alignXs}`]: alignXs,
-      [`row--align-sm-${alignSm}`]: alignSm,
-      [`row--align-md-${alignMd}`]: alignMd,
-      [`row--align-lg-${alignLg}`]: alignLg,
-      [`row--align-xl-${alignXl}`]: alignXl,
-      [`row--align-xxl-${alignXxl}`]: alignXxl,
+      'flex--wrap': wrap,
+      'flex--no-wrap': !wrap,
+      [`flex--justify-${justify}`]: justify,
+      [`flex--justify-xs-${justifyXs}`]: justifyXs,
+      [`flex--justify-sm-${justifySm}`]: justifySm,
+      [`flex--justify-md-${justifyMd}`]: justifyMd,
+      [`flex--justify-lg-${justifyLg}`]: justifyLg,
+      [`flex--justify-xl-${justifyXl}`]: justifyXl,
+      [`flex--justify-xxl-${justifyXxl}`]: justifyXxl,
+      [`flex--align-${align}`]: align,
+      [`flex--align-xs-${alignXs}`]: alignXs,
+      [`flex--align-sm-${alignSm}`]: alignSm,
+      [`flex--align-md-${alignMd}`]: alignMd,
+      [`flex--align-lg-${alignLg}`]: alignLg,
+      [`flex--align-xl-${alignXl}`]: alignXl,
+      [`flex--align-xxl-${alignXxl}`]: alignXxl,
       'row--gutters-x': guttersX,
-      'row--gutters-y': guttersY,
-      'row--wrap': wrap,
-      'row--no-wrap': !wrap
+      'row--gutters-y': guttersY
     }"
   >
     <slot/>
