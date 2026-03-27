@@ -9,10 +9,6 @@
 
 <template>
   <Button.Root v-bind="props">
-    <slot v-if="asChild"/>
-
-    <Button.Content v-else>
-      <slot/>
-    </Button.Content>
+    <slot/>
   </Button.Root>
 </template>

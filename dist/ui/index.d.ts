@@ -666,7 +666,6 @@ declare function __VLS_template_4(): {
     attrs: Partial<{}>;
     slots: {
         default?(_: {}): any;
-        default?(_: {}): any;
     };
     refs: {};
     rootEl: any;

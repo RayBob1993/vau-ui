@@ -3,7 +3,7 @@
   max-width: calc(var(--modal-dialog-width) + calc(var(--modal-dialog-padding-y, 0px) * 2));
   width: 100%;
   margin: 0 auto;
-  padding: var(--modal-dialog-padding-x, 0px) var(--modal-dialog-padding-y, 0px);
+  padding: var(--modal-dialog-padding-y, 0px) var(--modal-dialog-padding-x, 0px);
 
   &--position {
     &-top {
