@@ -1,5 +1,5 @@
 .modal-body {
   flex: 1;
-  padding: var(--modal-body-padding-y) var(--modal-body-padding-x);
+  padding: var(--modal-body-padding-y, 0) var(--modal-body-padding-x, 0);
   overflow: hidden;
 }

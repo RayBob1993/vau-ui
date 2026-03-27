@@ -4,7 +4,7 @@
   display: block;
   width: 100%;
   outline: none;
-  padding: var(--input-textarea-padding-x) var(--input-textarea-padding-y);
+  padding: var(--input-textarea-padding-xpadding-x, 0px) var(--input-textarea-padding-ypadding-x, 0px);
 
   @include utils-appearance(none);
 }

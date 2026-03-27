@@ -3,22 +3,22 @@
   max-width: calc(var(--modal-dialog-width) + calc(var(--modal-dialog-padding-y, 0px) * 2));
   width: 100%;
   margin: 0 auto;
-  padding: var(--modal-dialog-padding-y, 0px) var(--modal-dialog-padding-x, 0px);
+  padding: var(--modal-dialog-padding-y, 0) var(--modal-dialog-padding-x, 0);
 
   &--position {
     &-top {
       align-items: flex-start;
-      min-height: calc(var(--modal-dialog-min-height) - var(--modal-dialog-padding-y) * 2);
+      min-height: calc(var(--modal-dialog-min-height) - var(--modal-dialog-padding-y, 0px) * 2);
     }
 
     &-center {
       align-items: center;
-      min-height: calc(var(--modal-dialog-min-height) - var(--modal-dialog-padding-y) * 2);
+      min-height: calc(var(--modal-dialog-min-height) - var(--modal-dialog-padding-y, 0px) * 2);
     }
 
     &-bottom {
       align-items: flex-end;
-      min-height: calc(var(--modal-dialog-min-height) - var(--modal-dialog-padding-y) * 2);
+      min-height: calc(var(--modal-dialog-min-height) - var(--modal-dialog-padding-y, 0px) * 2);
     }
   }
 }

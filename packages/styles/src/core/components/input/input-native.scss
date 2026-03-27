@@ -4,7 +4,7 @@
   display: block;
   width: 100%;
   outline: none;
-  padding: var(--input-native-padding-x) var(--input-native-padding-y);
+  padding: var(--input-native-padding-x, 0) var(--input-native-padding-y, 0);
 
   @include utils-appearance(none);
 }
