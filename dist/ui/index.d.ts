@@ -256,7 +256,7 @@ declare const __VLS_component_39: DefineComponent<FlexItemProps, {}, {}, {}, {},
 
 declare const __VLS_component_4: DefineComponent<ButtonProps, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, PublicProps, Readonly<ButtonProps> & Readonly<{}>, {
 type: HTMLButtonElement["type"];
-}, {}, {}, {}, string, ComponentProvideOptions, false, {}, HTMLButtonElement>;
+}, {}, {}, {}, string, ComponentProvideOptions, false, {}, any>;
 
 declare const __VLS_component_40: DefineComponent<    {}, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, PublicProps, Readonly<{}> & Readonly<{}>, {}, {}, {}, {}, string, ComponentProvideOptions, true, {}, HTMLDivElement>;
 
@@ -666,7 +666,7 @@ declare function __VLS_template_4(): {
         default?(_: {}): any;
     };
     refs: {};
-    rootEl: HTMLButtonElement;
+    rootEl: any;
 };
 
 declare function __VLS_template_40(): {
@@ -1958,8 +1958,8 @@ export declare const VTab: __VLS_WithTemplateSlots_21<typeof __VLS_component_21,
 
 export declare const VTable: <T extends IVTableBaseData = IVTableBaseData>(__VLS_props: NonNullable<Awaited<typeof __VLS_setup>>["props"], __VLS_ctx?: __VLS_PrettifyLocal_2<Pick<NonNullable<Awaited<typeof __VLS_setup>>, "attrs" | "emit" | "slots">>, __VLS_expose?: NonNullable<Awaited<typeof __VLS_setup>>["expose"], __VLS_setup?: Promise<{
     props: __VLS_PrettifyLocal_2<Pick<Partial<{}> & Omit<{
-        readonly onSort?: (() => any) | undefined;
         readonly onSelect?: ((payload: T) => any) | undefined;
+        readonly onSort?: (() => any) | undefined;
         readonly "onSelect:all"?: ((payload: T[]) => any) | undefined;
     } & VNodeProps & AllowedComponentProps & ComponentCustomProps, never>, "onSelect" | "onSort" | "onSelect:all"> & IVTableProps<T> & Partial<{}>> & PublicProps;
     expose(exposed: ShallowUnwrapRef<IVTableExpose>): void;
@@ -1975,7 +1975,7 @@ export declare const VTable: <T extends IVTableBaseData = IVTableBaseData>(__VLS
     } & { [K in keyof T]?: ((props: {
             row: T;
         }) => Array<VNode>) | undefined; };
-    emit: ((evt: "sort") => void) & ((evt: "select", payload: T) => void) & ((evt: "select:all", payload: T[]) => void);
+    emit: ((evt: "select", payload: T) => void) & ((evt: "sort") => void) & ((evt: "select:all", payload: T[]) => void);
 }>) => VNode & {
     __ctx?: Awaited<typeof __VLS_setup>;
 };

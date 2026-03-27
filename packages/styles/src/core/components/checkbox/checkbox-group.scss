@@ -1,7 +1,7 @@
 .checkbox-group {
   display: flex;
   flex-wrap: wrap;
-  gap: var(--checkbox-group-y) var(--checkbox-group-x);
+  gap: var(--checkbox-group-gap-y) var(--checkbox-group-gap-x);
 
   &--direction {
     &-horizontal {

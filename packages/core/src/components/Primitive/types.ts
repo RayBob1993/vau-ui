@@ -1,3 +1,6 @@
-import type { PrimitiveProp } from '../../types';
+import type { Component } from 'vue';
 
-export type PrimitiveProps = Partial<PrimitiveProp>;
+export type PrimitiveProps = {
+  asChild: boolean;
+  as: keyof HTMLElementTagNameMap | Component;
+};

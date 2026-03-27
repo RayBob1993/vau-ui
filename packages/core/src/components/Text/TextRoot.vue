@@ -1,14 +1,16 @@
 <script setup lang="ts">
   import type { TextProps } from './types';
+  import { Primitive } from '../Primitive';
 
   withDefaults(defineProps<TextProps>(), {
-    tag: 'div'
+    as: 'div'
   });
 </script>
 
 <template>
-  <component
-    :is="tag"
+  <Primitive.Root
+    :as="as"
+    :as-child="asChild"
     class="text"
     :class="{
       'text--uppercase': uppercase,
@@ -19,5 +21,5 @@
     }"
   >
     <slot/>
-  </component>
+  </Primitive.Root>
 </template>

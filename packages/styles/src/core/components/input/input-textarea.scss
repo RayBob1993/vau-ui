@@ -1,0 +1,10 @@
+@use '../../mixins/appearance' as *;
+
+.input-textarea {
+  display: block;
+  width: 100%;
+  outline: none;
+  padding: var(--input-textarea-padding-x) var(--input-textarea-padding-y);
+
+  @include utils-appearance(none);
+}

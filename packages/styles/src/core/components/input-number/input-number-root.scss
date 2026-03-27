@@ -1,0 +1,14 @@
+.input-number {
+  display: flex;
+  flex-wrap: nowrap;
+
+  &--direction {
+    &-vertical {
+      flex-direction: column;
+    }
+
+    &-horizontal {
+      flex-direction: row;
+    }
+  }
+}

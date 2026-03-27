@@ -1,0 +1,10 @@
+@use '../../mixins/appearance' as *;
+
+.input-native {
+  display: block;
+  width: 100%;
+  outline: none;
+  padding: var(--input-native-padding-x) var(--input-native-padding-y);
+
+  @include utils-appearance(none);
+}

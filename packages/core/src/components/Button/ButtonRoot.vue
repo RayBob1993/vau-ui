@@ -2,8 +2,12 @@
   import type { ButtonProps } from './types';
   import { useButtonRoot } from './composables';
   import { useFormContext } from '../Forms/Form/context';
+  import { Primitive } from '../Primitive';
 
-  const props = defineProps<ButtonProps>();
+  const props = withDefaults(defineProps<ButtonProps>(), {
+    as: 'button',
+    type: 'button',
+  });
 
   const { formRootContext, formItemContext } = useFormContext();
 
@@ -15,7 +19,9 @@
 </script>
 
 <template>
-  <button
+  <Primitive.Root
+    :as="as"
+    :as-child="asChild"
     class="button"
     :class="[
       {
@@ -31,5 +37,5 @@
     :type="type"
   >
     <slot/>
-  </button>
+  </Primitive.Root>
 </template>

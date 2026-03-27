@@ -1,5 +1,4 @@
 @use './button';
-@use './form';
 @use './grid';
 @use './layout';
 @use './text';
@@ -7,3 +6,9 @@
 @use './divider';
 @use './modal';
 @use './scrollbar';
+@use './checkbox';
+@use './input';
+@use './radio';
+@use './switch';
+@use './input-number';
+

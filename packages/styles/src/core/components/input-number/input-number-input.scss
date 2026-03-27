@@ -1,0 +1,15 @@
+@use '../../mixins/appearance' as *;
+
+.input-number-input {
+  &__native {
+    display: block;
+    width: 100%;
+
+    @include utils-appearance(none);
+
+    &::-webkit-inner-spin-button,
+    &::-webkit-outer-spin-button {
+      display: none;
+    }
+  }
+}
