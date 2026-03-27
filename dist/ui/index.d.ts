@@ -9,6 +9,7 @@ import { ButtonProps } from '../core';
 import { CheckboxModelValue } from '../core';
 import { CheckboxProps } from '../core';
 import { ColProps } from '../core';
+import { Component } from 'vue';
 import { ComponentCustomProps } from 'vue';
 import { ComponentOptionsMixin } from 'vue';
 import { ComponentProvideOptions } from 'vue';
@@ -255,6 +256,7 @@ wrap: boolean;
 declare const __VLS_component_39: DefineComponent<FlexItemProps, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, PublicProps, Readonly<FlexItemProps> & Readonly<{}>, {}, {}, {}, {}, string, ComponentProvideOptions, false, {}, HTMLDivElement>;
 
 declare const __VLS_component_4: DefineComponent<ButtonProps, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, PublicProps, Readonly<ButtonProps> & Readonly<{}>, {
+as: keyof HTMLElementTagNameMap | Component;
 type: HTMLButtonElement["type"];
 }, {}, {}, {}, string, ComponentProvideOptions, false, {}, any>;
 
@@ -663,6 +665,7 @@ declare function __VLS_template_39(): {
 declare function __VLS_template_4(): {
     attrs: Partial<{}>;
     slots: {
+        default?(_: {}): any;
         default?(_: {}): any;
     };
     refs: {};
