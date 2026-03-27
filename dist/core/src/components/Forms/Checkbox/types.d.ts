@@ -20,7 +20,7 @@ export interface CheckboxRootContext {
     isValid: MaybeRefOrGetter<boolean>;
     isInvalid: MaybeRefOrGetter<boolean>;
 }
-export interface CheckboxIndicatorScopedSlots {
+export interface CheckboxIndicatorScopedSlot {
     isDisabled: boolean;
     isActive: boolean;
     isIndeterminate: boolean;
@@ -28,6 +28,6 @@ export interface CheckboxIndicatorScopedSlots {
     isInvalid: boolean;
 }
 export interface CheckboxIndicatorSlots {
-    default?: (props: CheckboxIndicatorScopedSlots) => Array<VNode>;
+    default?: (props: CheckboxIndicatorScopedSlot) => Array<VNode>;
 }
 export type CheckboxGroupProps = Partial<DirectionProp>;

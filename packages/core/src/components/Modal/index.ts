@@ -5,6 +5,7 @@ import { default as Header } from './ModalHeader.vue';
 import { default as Footer } from './ModalFooter.vue';
 import { default as Title } from './ModalTitle.vue';
 import { default as Content } from './ModalContent.vue';
+import { default as Dialog } from './ModalDialog.vue';
 
 export const Modal = {
   Root,
@@ -13,7 +14,8 @@ export const Modal = {
   Header,
   Footer,
   Title,
-  Content
+  Content,
+  Dialog
 };
 
 export * from './types';

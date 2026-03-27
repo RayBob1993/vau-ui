@@ -34,6 +34,7 @@ import { InputSlots } from '../core';
 import { LayoutSlots } from '../core';
 import { Maybe } from '../core';
 import { MaybeNull } from '../core';
+import { ModalProps } from '../core';
 import { ModelRef } from 'vue';
 import { OptionProps } from '../core';
 import { OptionSlots } from '../core';
@@ -1472,39 +1473,14 @@ declare type IVLocaleTranslate = {
     [key: string]: string | Array<string> | IVLocaleTranslate;
 };
 
-/**
- * Интерфейс событий компонента VModal
- * @interface IVModalEmits
- */
-export declare interface IVModalEmits {
-    opened: [payload: Element];
-    closed: [payload: Element];
-    open: [];
-    close: [];
-}
-
-/**
- * Интерфейс свойств компонента VModal
- * @interface IVModalProps
- */
-export declare type IVModalProps = {
-    appendToBody?: boolean;
+export declare interface IVModalProps extends ModalProps {
     title?: string;
-    destroyOnClose?: boolean;
-} & Partial<SizeProp>;
-
-export declare interface IVModalScopedSlot {
-    close: VoidFunction;
 }
 
-/**
- * Интерфейс слотов компонента VModal
- * @interface IVModalSlots
- */
 export declare interface IVModalSlots {
-    default?: (props: IVModalScopedSlot) => Array<VNode>;
-    header?: (props: IVModalScopedSlot) => Array<VNode>;
-    footer?: (props: IVModalScopedSlot) => Array<VNode>;
+    default?: UnscopedSlot;
+    header?: UnscopedSlot;
+    footer?: UnscopedSlot;
 }
 
 /**

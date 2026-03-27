@@ -1,37 +1,11 @@
-import type { SizeProp } from '@vau/core';
-import type { VNode } from 'vue';
+import type { UnscopedSlot, ModalProps } from '@vau/core';
 
-/**
- * Интерфейс свойств компонента VModal
- * @interface IVModalProps
- */
-export type IVModalProps = {
-  appendToBody?: boolean;
+export interface IVModalProps extends ModalProps {
   title?: string;
-  destroyOnClose?: boolean;
-} & Partial<SizeProp>;
+};
 
-/**
- * Интерфейс событий компонента VModal
- * @interface IVModalEmits
- */
-export interface IVModalEmits {
-  opened: [payload: Element];
-  closed: [payload: Element];
-  open: [];
-  close: [];
-}
-
-export interface IVModalScopedSlot {
-  close: VoidFunction;
-}
-
-/**
- * Интерфейс слотов компонента VModal
- * @interface IVModalSlots
- */
 export interface IVModalSlots {
-  default?: (props: IVModalScopedSlot) => Array<VNode>;
-  header?: (props: IVModalScopedSlot) => Array<VNode>;
-  footer?: (props: IVModalScopedSlot) => Array<VNode>;
+  default?: UnscopedSlot;
+  header?: UnscopedSlot;
+  footer?: UnscopedSlot;
 }

@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <div>
+  <div class="modal-body">
     <slot/>
   </div>
 </template>

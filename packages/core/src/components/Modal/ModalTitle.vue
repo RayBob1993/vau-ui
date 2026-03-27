@@ -3,5 +3,7 @@
 </script>
 
 <template>
-  <div/>
+  <div class="modal-title">
+    <slot/>
+  </div>
 </template>

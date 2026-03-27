@@ -34,13 +34,13 @@ export interface SelectEmits {
     close: [];
     clear: [];
 }
-export interface SelectTriggerScopedSlots {
+export interface SelectTriggerScopedSlot {
     open: () => void;
     close: () => void;
     toggle: () => void;
 }
 export interface SelectTriggerSlots {
-    default: (props: SelectTriggerScopedSlots) => Array<VNode>;
+    default: (props: SelectTriggerScopedSlot) => Array<VNode>;
 }
 export interface SelectRootContext {
     activeOption: MaybeRefOrGetter<Maybe<OptionInstance>>;

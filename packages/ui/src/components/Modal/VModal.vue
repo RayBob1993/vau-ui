@@ -1,93 +1,46 @@
 <script lang="ts" setup>
-  import type { IVModalEmits, IVModalProps, IVModalSlots } from './types';
-  import { VOverlay } from '../Overlay';
-  import { computed, watch } from 'vue';
+  import type { IVModalProps, IVModalSlots } from './types';
+  import { Modal, type ModalEmits } from '@vau/core';
 
-  const props = defineProps<IVModalProps>();
-  const emit = defineEmits<IVModalEmits>();
+  const { title, appendToBody = true, ...modalRootProps } = defineProps<IVModalProps>();
+  const emit = defineEmits<ModalEmits>();
   const slots = defineSlots<IVModalSlots>();
 
   const modelValue = defineModel<boolean>({
-    required: true
-  });
-
-  const isHeaderVisible = computed<boolean>(() => Boolean(props.title) || Boolean(slots?.header));
-  const isFooterVisible = computed<boolean>(() => Boolean(slots?.footer));
-
-  function handleClose () {
-    modelValue.value = false;
-  }
-
-  function afterEnter (payload: Element) {
-    emit('opened', payload);
-  }
-
-  function afterLeave (payload: Element) {
-    emit('closed', payload);
-  }
-
-  watch(modelValue, value => {
-    if (value) {
-      emit('open');
-    } else {
-      emit('close');
-    }
+    required: true,
   });
 </script>
 
 <template>
-  <teleport
-    to="body"
-    :disabled="!appendToBody"
+  <Modal.Root
+    v-model="modelValue"
+    v-bind="modalRootProps"
+    :append-to-body="appendToBody"
+    @close="emit('close')"
+    @open="emit('open')"
+    @opened="emit('opened', $event)"
+    @closed="emit('closed', $event)"
   >
-    <transition
-      @after-enter="afterEnter"
-      @after-leave="afterLeave"
-    >
-      <v-overlay>
-        <div
-          v-show="modelValue"
-          class="v-modal"
-          role="dialog"
-          :class="{
-            'v-modal--open': modelValue
-          }"
-        >
-          <div
-            v-if="isHeaderVisible"
-            class="v-modal__header"
-          >
-            <slot
-              name="header"
-              :close="handleClose"
-            >
+    <Modal.Dialog>
+      <Modal.Content>
+        <Modal.Header>
+          <slot name="header">
+            <Modal.Title v-if="title">
               {{ title }}
-            </slot>
+            </Modal.Title>
 
-            <button
-              class="v-modal__close-button"
-              type="button"
-              @click="handleClose"
-            >
-              x
-            </button>
-          </div>
+            <Modal.Close>X</Modal.Close>
+          </slot>
+        </Modal.Header>
 
-          <div class="v-modal__body">
-            <slot :close="handleClose"/>
-          </div>
+        <Modal.Body>
+          <slot/>
+        </Modal.Body>
 
-          <div
-            v-if="isFooterVisible"
-            class="v-modal__footer"
-          >
-            <slot
-              name="footer"
-              :close="handleClose"
-            />
-          </div>
-        </div>
-      </v-overlay>
-    </transition>
-  </teleport>
+        <Modal.Footer v-if="slots?.footer">
+          <slot name="footer"/>
+        </Modal.Footer>
+      </Modal.Content>
+    </Modal.Dialog>
+  </Modal.Root>
 </template>

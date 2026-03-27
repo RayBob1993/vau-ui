@@ -13,7 +13,7 @@ export interface RadioEmits {
   change: [value: RadioValue];
 }
 
-export interface RadioIndicatorScopedSlots {
+export interface RadioIndicatorScopedSlot {
   isDisabled: boolean;
   isActive: boolean;
   isValid: boolean;
@@ -21,7 +21,7 @@ export interface RadioIndicatorScopedSlots {
 }
 
 export interface RadioIndicatorSlots {
-  default?: (props: RadioIndicatorScopedSlots) => Array<VNode>;
+  default?: (props: RadioIndicatorScopedSlot) => Array<VNode>;
 }
 
 export interface RadioRootContext {

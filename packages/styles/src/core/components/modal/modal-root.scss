@@ -1,0 +1,13 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 1050;
+
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  background-color: var(--modal-background-color);
+}
