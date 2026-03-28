@@ -1,2 +1,2 @@
-@use './breakpoints';
-@use './grid';
+@forward './breakpoints';
+@forward './grid';
