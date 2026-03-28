@@ -31,6 +31,7 @@
     "jsx": "preserve"
   },
   "include": [
+    "vue-global.d.ts",
     "src/**/*",
     "eslint.config.ts",
     "vitest.config.ts",
