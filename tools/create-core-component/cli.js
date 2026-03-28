@@ -1,11 +1,11 @@
 /**
- * CLI для создания базового шаблона компонента в packages/core.
+ * CLI для создания базового шаблона компонента в src/lib/core.
  *
- * Использование: pnpm create-component <ComponentName>
- * Пример:       pnpm create-component MyPanel
+ * Использование: pnpm core:create-component <ComponentName>
+ * Пример:       pnpm core:create-component MyPanel
  *
  * Создаёт структуру:
- * packages/core/src/components/<ComponentName>/
+ * src/lib/core/components/<ComponentName>/
  * ├── context/
  * │   ├── key.ts
  * │   ├── useComponentRootContext.ts
@@ -28,7 +28,7 @@ import { fileURLToPath } from 'node:url';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, '../..');
-const CORE_COMPONENTS = path.join(ROOT, 'packages/core/src/components');
+const CORE_COMPONENTS = path.join(ROOT, 'src/lib/core/components');
 const TEMPLATES_DIR = path.join(__dirname, 'templates');
 
 /**
@@ -124,7 +124,7 @@ function main () {
   }
 
   console.log(`Создан компонент: ${componentDir}`);
-  console.log('Добавьте экспорт в packages/core/src/components/index.ts:');
+  console.log('Добавьте экспорт в src/lib/core/components/index.ts:');
   console.log(`  export * from './${componentName}';`);
 }
 

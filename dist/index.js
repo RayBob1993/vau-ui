@@ -5308,13 +5308,6 @@ class tc {
     _e(n, document.body);
   }
 }
-const oc = {
-  name: "ru",
-  vau: {}
-}, nc = {
-  name: "en",
-  vau: {}
-};
 export {
   me as Accordion,
   ja as AccordionPlugin,
@@ -5473,7 +5466,6 @@ export {
   Ye as debounce,
   yu as defineFormRules,
   vu as delay,
-  nc as en,
   st as getProp,
   zo as isBoolean,
   pu as isEmpty,
@@ -5486,7 +5478,6 @@ export {
   bu as omit,
   hu as pick,
   Bt as renderSlotFragments,
-  oc as ru,
   Nu as ruRU,
   He as throttle,
   bo as useAccordionItem,

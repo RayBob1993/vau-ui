@@ -1,3 +1,2 @@
-export * from '@vau/core';
-export * from '@vau/ui';
-
+export * from './core';
+export * from './ui';

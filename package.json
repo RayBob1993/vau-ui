@@ -1,19 +1,14 @@
 {
   "name": "vau-ui",
-  "version": "1.0.46",
+  "version": "1.0.47",
   "license": "MIT",
   "repository": "https://github.com/RayBob1993/vau-ui.git",
   "type": "module",
-  "workspaces": [
-    "packages/*"
-  ],
   "scripts": {
     "core:create-component": "node tools/create-core-component/cli.js",
     "serve": "vite",
     "build:app": "vue-tsc && vite build",
-    "build:core": "pnpm --filter @vau/core build",
-    "build:ui": "pnpm --filter @vau/ui build",
-    "build:lib": "pnpm run build:core && pnpm run build:ui && vite build --config vite.lib.config.ts",
+    "build:lib": "vite build --config vite.lib.config.ts",
     "build": "pnpm run build:lib",
     "preview": "vite preview",
     "test": "vitest run",
@@ -28,19 +23,13 @@
       "import": "./dist/index.js",
       "types": "./dist/index.d.ts"
     },
-    "./vue-global": {
-      "types": "./dist/vue-global.d.ts"
-    },
     "./styles": {
-      "import": "./packages/styles/src/core/index.scss"
-    },
-    "./styles/mixins": {
-      "import": "./packages/styles/src/core/mixins/index.scss"
+      "import": "./src/lib/styles/core/index.scss"
     }
   },
   "files": [
     "dist",
-    "packages/styles/src/core",
+    "src/lib/styles/core",
     "package.json",
     "README.md"
   ],
