@@ -2,7 +2,12 @@
   import type { IVModalProps, IVModalSlots } from './types';
   import { Modal, type ModalEmits } from '@vau/core';
 
-  const { title, appendToBody = true, ...modalRootProps } = defineProps<IVModalProps>();
+  const {
+    title,
+    appendToBody = true,
+    position = 'center',
+    ...modalRootProps
+  } = defineProps<IVModalProps>();
   const emit = defineEmits<ModalEmits>();
   const slots = defineSlots<IVModalSlots>();
 
@@ -16,6 +21,7 @@
     v-model="modelValue"
     v-bind="modalRootProps"
     :append-to-body="appendToBody"
+    :position="position"
     @close="emit('close')"
     @open="emit('open')"
     @opened="emit('opened', $event)"

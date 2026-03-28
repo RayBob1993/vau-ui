@@ -1,24 +1,37 @@
 .modal-dialog {
   display: flex;
-  max-width: calc(var(--modal-dialog-width) + calc(var(--modal-dialog-padding-y, 0px) * 2));
+  max-width: calc(var(--modal-dialog-width, 100%) + calc(var(--modal-dialog-padding-y, 0px) * 2));
   width: 100%;
   margin: 0 auto;
   padding: var(--modal-dialog-padding-y, 0) var(--modal-dialog-padding-x, 0);
+}
 
+.modal {
   &--position {
+    &-top,
+    &-center,
+    &-bottom {
+      .modal-dialog {
+        min-height: calc(var(--modal-dialog-min-height) - var(--modal-dialog-padding-y, 0px) * 2);
+      }
+    }
+
     &-top {
-      align-items: flex-start;
-      min-height: calc(var(--modal-dialog-min-height) - var(--modal-dialog-padding-y, 0px) * 2);
+      .modal-dialog {
+        align-items: flex-start;
+      }
     }
 
     &-center {
-      align-items: center;
-      min-height: calc(var(--modal-dialog-min-height) - var(--modal-dialog-padding-y, 0px) * 2);
+      .modal-dialog {
+        align-items: center;
+      }
     }
 
     &-bottom {
-      align-items: flex-end;
-      min-height: calc(var(--modal-dialog-min-height) - var(--modal-dialog-padding-y, 0px) * 2);
+      .modal-dialog {
+        align-items: flex-end;
+      }
     }
   }
 }

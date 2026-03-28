@@ -18,6 +18,7 @@ export declare const Modal: {
             opened: (payload: Element) => any;
             closed: (payload: Element) => any;
         }, import('vue').PublicProps, {
+            position: import('./types').ModalPosition;
             appendToBody: boolean;
         }, false, {}, {}, import('vue').GlobalComponents, import('vue').GlobalDirectives, string, {}, any, import('vue').ComponentProvideOptions, {
             P: {};
@@ -38,6 +39,7 @@ export declare const Modal: {
             onOpened?: ((payload: Element) => any) | undefined;
             onClosed?: ((payload: Element) => any) | undefined;
         }>, {}, {}, {}, {}, {
+            position: import('./types').ModalPosition;
             appendToBody: boolean;
         }>;
         __isFragment?: never;
@@ -61,6 +63,7 @@ export declare const Modal: {
         opened: (payload: Element) => any;
         closed: (payload: Element) => any;
     }, string, {
+        position: import('./types').ModalPosition;
         appendToBody: boolean;
     }, {}, string, {}, import('vue').GlobalComponents, import('vue').GlobalDirectives, string, import('vue').ComponentProvideOptions> & import('vue').VNodeProps & import('vue').AllowedComponentProps & import('vue').ComponentCustomProps & (new () => {
         $slots: {

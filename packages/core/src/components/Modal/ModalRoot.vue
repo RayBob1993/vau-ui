@@ -6,6 +6,7 @@
   import { provide, useAttrs } from 'vue';
 
   const props = withDefaults(defineProps<ModalProps>(), {
+    position: 'center',
     appendToBody: true
   });
 
@@ -59,6 +60,7 @@
         v-bind="attrs"
         :class="{
           'modal--open': modelValue,
+          [`modal--position-${position}`]: position,
           [`modal--size-${size}`]: size
         }"
         @click="close"

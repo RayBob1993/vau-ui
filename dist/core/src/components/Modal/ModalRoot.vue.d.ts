@@ -25,6 +25,7 @@ declare const __VLS_component: import('vue').DefineComponent<__VLS_PublicProps, 
     onOpened?: ((payload: Element) => any) | undefined;
     onClosed?: ((payload: Element) => any) | undefined;
 }>, {
+    position: import('./types').ModalPosition;
     appendToBody: boolean;
 }, {}, {}, {}, string, import('vue').ComponentProvideOptions, false, {}, any>;
 declare const _default: __VLS_WithTemplateSlots<typeof __VLS_component, __VLS_TemplateResult["slots"]>;
