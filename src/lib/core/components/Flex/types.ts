@@ -5,5 +5,5 @@ export type FlexProps = {
 } & Partial<FlexAlignProp> & Partial<FlexJustifyProp> & Partial<DirectionProp>;
 
 export interface FlexItemProps {
-  flex?: 'auto' | 'fixed' | 'grow' | 'shrink';
+  flex?: 'auto' | 'content' | 'grow' | 'shrink';
 }

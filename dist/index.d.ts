@@ -1759,7 +1759,7 @@ export declare interface FlexAlignProp {
 export declare const FlexItemPlugin: Plugin_2;
 
 export declare interface FlexItemProps {
-    flex?: 'auto' | 'fixed' | 'grow' | 'shrink';
+    flex?: 'auto' | 'content' | 'grow' | 'shrink';
 }
 
 export declare const FlexJustify: Readonly<{
@@ -3840,7 +3840,7 @@ export declare const Primitive: {
     };
     }>> & Readonly<{}>, {
     asChild: boolean;
-    as: Component | keyof HTMLElementTagNameMap;
+    as: keyof HTMLElementTagNameMap | Component;
     }, {}, {}, {}, string, ComponentProvideOptions, true, {}, any>;
 };
 
