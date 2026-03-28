@@ -41,12 +41,10 @@ import {
   RadioGroupPlugin,
   SwitchPlugin,
   SelectPlugin,
-  OverlayPlugin,
   AlertPlugin,
   ProgressPlugin,
   DividerPlugin,
   FlexPlugin,
-  TablePlugin,
   InputGroupPlugin,
   CountdownPlugin,
   CalendarPlugin,
@@ -96,12 +94,11 @@ export const VauUI: Plugin = {
     app.use(RadioGroupPlugin);
     app.use(SwitchPlugin);
     app.use(SelectPlugin);
-    app.use(OverlayPlugin);
     app.use(AlertPlugin);
     app.use(ProgressPlugin);
     app.use(DividerPlugin);
     app.use(FlexPlugin);
-    app.use(TablePlugin);
+    //app.use(TablePlugin);
     app.use(InputGroupPlugin);
     app.use(CountdownPlugin);
     app.use(CalendarPlugin);

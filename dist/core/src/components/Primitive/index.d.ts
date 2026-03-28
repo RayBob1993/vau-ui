@@ -21,7 +21,7 @@ export declare const Primitive: {
         };
     }>> & Readonly<{}>, {
         asChild: boolean;
-        as: keyof HTMLElementTagNameMap | import('vue').Component;
+        as: import('vue').Component | keyof HTMLElementTagNameMap;
     }, {}, {}, {}, string, import('vue').ComponentProvideOptions, true, {}, any>;
 };
 export * from './types';

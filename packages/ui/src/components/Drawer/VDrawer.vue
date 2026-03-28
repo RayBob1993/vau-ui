@@ -1,6 +1,5 @@
 <script lang="ts" setup>
   import type { IVDrawerProps, IVDrawerEmits, IVDrawerSlots } from './types';
-  import { VOverlay } from '../Overlay';
   import { computed, watch } from 'vue';
 
   const props = defineProps<IVDrawerProps>();
@@ -44,52 +43,50 @@
       @after-enter="afterEnter"
       @after-leave="afterLeave"
     >
-      <v-overlay>
-        <div
-          v-show="modelValue"
-          class="v-drawer"
-          role="dialog"
-          :class="{
-            'v-drawer--open': modelValue
-          }"
-        >
-          <div class="v-drawer__dialog">
-            <div
-              v-if="isHeaderVisible"
-              class="v-drawer__header"
+      <div
+        v-show="modelValue"
+        class="v-drawer"
+        role="dialog"
+        :class="{
+          'v-drawer--open': modelValue
+        }"
+      >
+        <div class="v-drawer__dialog">
+          <div
+            v-if="isHeaderVisible"
+            class="v-drawer__header"
+          >
+            <slot
+              name="header"
+              :close="handleClose"
             >
-              <slot
-                name="header"
-                :close="handleClose"
-              >
-                {{ title }}
-              </slot>
+              {{ title }}
+            </slot>
 
-              <button
-                class="v-drawer__close-button"
-                type="button"
-                @click="handleClose"
-              >
-                x
-              </button>
-            </div>
-
-            <div class="v-drawer__body">
-              <slot :close="handleClose"/>
-            </div>
-
-            <div
-              v-if="isFooterVisible"
-              class="v-drawer__footer"
+            <button
+              class="v-drawer__close-button"
+              type="button"
+              @click="handleClose"
             >
-              <slot
-                name="footer"
-                :close="handleClose"
-              />
-            </div>
+              x
+            </button>
+          </div>
+
+          <div class="v-drawer__body">
+            <slot :close="handleClose"/>
+          </div>
+
+          <div
+            v-if="isFooterVisible"
+            class="v-drawer__footer"
+          >
+            <slot
+              name="footer"
+              :close="handleClose"
+            />
           </div>
         </div>
-      </v-overlay>
+      </div>
     </transition>
   </teleport>
 </template>

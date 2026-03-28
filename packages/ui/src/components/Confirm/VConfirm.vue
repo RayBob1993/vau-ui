@@ -1,6 +1,5 @@
 <script setup lang="ts">
   import type { IVConfirmProps, IVConfirmEmits } from './types';
-  import { VOverlay } from '../Overlay';
 
   withDefaults(defineProps<IVConfirmProps>(), {
     confirmText: 'Ок',
@@ -11,57 +10,55 @@
 </script>
 
 <template>
-  <v-overlay>
-    <div
-      class="v-confirm"
-      :class="{
-        [`v-confirm--size-${size}`]: size,
-        [`v-confirm--theme-${theme}`]: theme
-      }"
-    >
-      <div class="v-confirm__header">
-        <div class="v-confirm__title">
-          {{ title }}
-        </div>
-
-        <button
-          type="button"
-          @click="emit('close')"
-        >
-          X
-        </button>
+  <div
+    class="v-confirm"
+    :class="{
+      [`v-confirm--size-${size}`]: size,
+      [`v-confirm--theme-${theme}`]: theme
+    }"
+  >
+    <div class="v-confirm__header">
+      <div class="v-confirm__title">
+        {{ title }}
       </div>
 
-      <div class="v-confirm__body">
-        <div
-          v-if="!useHtml"
-          class="v-confirm__text"
-        >
-          {{ message }}
-        </div>
-
-        <div
-          v-else
-          class="v-confirm__text"
-          v-html="message"
-        />
-      </div>
-
-      <div class="v-confirm__footer">
-        <button
-          type="button"
-          @click="emit('success')"
-        >
-          {{ confirmText }}
-        </button>
-
-        <button
-          type="button"
-          @click="emit('cancel')"
-        >
-          {{ cancelText }}
-        </button>
-      </div>
+      <button
+        type="button"
+        @click="emit('close')"
+      >
+        X
+      </button>
     </div>
-  </v-overlay>
+
+    <div class="v-confirm__body">
+      <div
+        v-if="!useHtml"
+        class="v-confirm__text"
+      >
+        {{ message }}
+      </div>
+
+      <div
+        v-else
+        class="v-confirm__text"
+        v-html="message"
+      />
+    </div>
+
+    <div class="v-confirm__footer">
+      <button
+        type="button"
+        @click="emit('success')"
+      >
+        {{ confirmText }}
+      </button>
+
+      <button
+        type="button"
+        @click="emit('cancel')"
+      >
+        {{ cancelText }}
+      </button>
+    </div>
+  </div>
 </template>

@@ -1,7 +1,7 @@
 <script setup lang="ts">
   import type { ButtonProps } from './types';
   import { useButtonRoot } from './composables';
-  import { useFormContext } from '../Forms/Form/context';
+  import { useFormContext } from '../Form/context';
   import { Primitive } from '../Primitive';
 
   const props = withDefaults(defineProps<ButtonProps>(), {

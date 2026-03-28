@@ -1,4 +1,4 @@
-import type { FormRules } from '../../components/Forms/Form/types';
+import type { FormRules } from '../../components/Form/types';
 import { markRaw } from 'vue';
 
 export function defineFormRules <MODEL> (rules: FormRules<MODEL>): FormRules<MODEL> {

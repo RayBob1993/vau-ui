@@ -4,6 +4,11 @@ import dts from 'vite-plugin-dts';
 import { resolve } from 'path';
 
 export default defineConfig({
+  resolve: {
+    alias: {
+      '@vau/core': resolve(__dirname, 'packages/core/index.ts')
+    }
+  },
   plugins: [
     vue(),
     dts({

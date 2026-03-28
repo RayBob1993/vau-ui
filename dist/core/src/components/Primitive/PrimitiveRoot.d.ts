@@ -22,5 +22,5 @@ export declare const Root: import('vue').DefineComponent<import('vue').ExtractPr
     };
 }>> & Readonly<{}>, {
     asChild: boolean;
-    as: keyof HTMLElementTagNameMap | import('vue').Component;
+    as: import('vue').Component | keyof HTMLElementTagNameMap;
 }, {}, {}, {}, string, import('vue').ComponentProvideOptions, true, {}, any>;

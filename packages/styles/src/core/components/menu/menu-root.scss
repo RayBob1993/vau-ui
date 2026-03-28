@@ -1,0 +1,15 @@
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--menu-gap-y) var(--menu-gap-x);
+
+  &--direction {
+    &-horizontal {
+      flex-direction: row;
+    }
+
+    &-vertical {
+      flex-direction: column;
+    }
+  }
+}
