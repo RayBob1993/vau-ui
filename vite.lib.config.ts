@@ -52,6 +52,10 @@ export default defineConfig({
 
           rewriteDts(out);
         }
+
+        const indexDts = '/** Реэкспорт публичного API vau-ui */\nexport * from \'./core\';\nexport * from \'./ui\';\n';
+
+        writeFileSync(resolve(dist, 'index.d.ts'), indexDts);
       }
     }
   ],
