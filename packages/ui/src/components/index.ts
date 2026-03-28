@@ -31,3 +31,4 @@ export * from './Flex';
 export * from './InputGroup';
 export * from './Countdown';
 export * from './Calendar';
+export * from './Menu';

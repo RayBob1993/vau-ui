@@ -34,11 +34,13 @@ import { InputProps } from '../core';
 import { InputSlots } from '../core';
 import { LayoutSlots } from '../core';
 import { Maybe } from '../core';
+import { MenuProps } from '../core';
 import { ModalProps } from '../core';
 import { ModelRef } from 'vue';
 import { OptionProps } from '../core';
 import { OptionSlots } from '../core';
 import { Plugin as Plugin_2 } from 'vue';
+import { PrimitiveProps } from '../core';
 import { PublicProps } from 'vue';
 import { RadioModelValue } from '../core';
 import { RadioProps } from '../core';
@@ -271,6 +273,12 @@ onEnd?: (() => any) | undefined;
 interval: number;
 now: number;
 }, {}, {}, {}, string, ComponentProvideOptions, false, {}, HTMLDivElement>;
+
+declare const __VLS_component_42: DefineComponent<Partial<PrimitiveProps>, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, PublicProps, Readonly<Partial<PrimitiveProps>> & Readonly<{}>, {
+as: keyof HTMLElementTagNameMap | Component;
+}, {}, {}, {}, string, ComponentProvideOptions, false, {}, any>;
+
+declare const __VLS_component_43: DefineComponent<MenuProps, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, PublicProps, Readonly<MenuProps> & Readonly<{}>, {}, {}, {}, {}, string, ComponentProvideOptions, false, {}, HTMLElement>;
 
 declare const __VLS_component_5: DefineComponent<    {}, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, PublicProps, Readonly<{}> & Readonly<{}>, {}, {}, {}, {}, string, ComponentProvideOptions, true, {}, HTMLDivElement>;
 
@@ -673,6 +681,24 @@ declare function __VLS_template_41(): {
     rootEl: HTMLDivElement;
 };
 
+declare function __VLS_template_42(): {
+    attrs: Partial<{}>;
+    slots: {
+        default?(_: {}): any;
+    };
+    refs: {};
+    rootEl: any;
+};
+
+declare function __VLS_template_43(): {
+    attrs: Partial<{}>;
+    slots: {
+        default?(_: {}): any;
+    };
+    refs: {};
+    rootEl: HTMLElement;
+};
+
 declare function __VLS_template_5(): {
     attrs: Partial<{}>;
     slots: {
@@ -788,6 +814,10 @@ declare type __VLS_TemplateResult_4 = ReturnType<typeof __VLS_template_4>;
 declare type __VLS_TemplateResult_40 = ReturnType<typeof __VLS_template_40>;
 
 declare type __VLS_TemplateResult_41 = ReturnType<typeof __VLS_template_41>;
+
+declare type __VLS_TemplateResult_42 = ReturnType<typeof __VLS_template_42>;
+
+declare type __VLS_TemplateResult_43 = ReturnType<typeof __VLS_template_43>;
 
 declare type __VLS_TemplateResult_5 = ReturnType<typeof __VLS_template_5>;
 
@@ -1010,6 +1040,18 @@ declare type __VLS_WithTemplateSlots_40<T, S> = T & {
 };
 
 declare type __VLS_WithTemplateSlots_41<T, S> = T & {
+    new (): {
+        $slots: S;
+    };
+};
+
+declare type __VLS_WithTemplateSlots_42<T, S> = T & {
+    new (): {
+        $slots: S;
+    };
+};
+
+declare type __VLS_WithTemplateSlots_43<T, S> = T & {
     new (): {
         $slots: S;
     };
@@ -1753,6 +1795,10 @@ export declare const VInputPassword: DefineComponent<__VLS_PublicProps_9, {}, {}
 }>, {}, {}, {}, {}, string, ComponentProvideOptions, false, {}, HTMLDivElement>;
 
 export declare const VLayout: __VLS_WithTemplateSlots_14<typeof __VLS_component_14, __VLS_TemplateResult_14["slots"]>;
+
+export declare const VMenu: __VLS_WithTemplateSlots_43<typeof __VLS_component_43, __VLS_TemplateResult_43["slots"]>;
+
+export declare const VMenuLink: __VLS_WithTemplateSlots_42<typeof __VLS_component_42, __VLS_TemplateResult_42["slots"]>;
 
 export declare const VModal: __VLS_WithTemplateSlots_11<typeof __VLS_component_11, __VLS_TemplateResult_11["slots"]>;
 
