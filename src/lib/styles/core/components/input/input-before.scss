@@ -1,0 +1,6 @@
+.input-before {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--input-before-padding-x, 0) var(--input-before-padding-y, 0);
+}

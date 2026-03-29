@@ -1,4 +1,7 @@
 .input {
   display: flex;
   flex-flow: row nowrap;
+  padding: var(--input-padding-x, 0) var(--input-padding-y, 0);
+
+  background-color: var(--input-background-color);
 }

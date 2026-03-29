@@ -3,8 +3,18 @@
 .input-native {
   display: block;
   width: 100%;
-  outline: none;
+  border: 0;
   padding: var(--input-native-padding-x, 0) var(--input-native-padding-y, 0);
+
+  font-size: var(--input-native-font-size);
+  line-height: var(--input-native-line-height);
+  font-weight: var(--input-native-font-weight);
+  color: var(--input-native-color);
+
+  background-color: transparent;
+  outline: none;
+  box-shadow: none;
+  border-radius: 0;
 
   @include utils-appearance(none);
 }

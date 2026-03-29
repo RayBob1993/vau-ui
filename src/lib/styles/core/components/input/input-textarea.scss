@@ -3,8 +3,19 @@
 .input-textarea {
   display: block;
   width: 100%;
+  border: 0;
+  padding: var(--input-textarea-padding-xpadding-x, 0) var(--input-textarea-padding-ypadding-x, 0);
+  min-height: var(--input-textarea-min-height);
+
+  font-size: var(--input-textarea-font-size);
+  line-height: var(--input-textarea-line-height);
+  font-weight: var(--input-textarea-font-weight);
+  color: var(--input-textarea-color);
+
+  background-color: transparent;
   outline: none;
-  padding: var(--input-textarea-padding-xpadding-x, 0px) var(--input-textarea-padding-ypadding-x, 0px);
+  box-shadow: none;
+  border-radius: 0;
 
   @include utils-appearance(none);
 }
