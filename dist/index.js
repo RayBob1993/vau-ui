@@ -1697,7 +1697,9 @@ const Pn = /* @__PURE__ */ p({
         "input--disabled": a(h),
         "input--loading": e.loading,
         "input--invalid": a(v),
-        "input--valid": a(f)
+        "input--valid": a(f),
+        [`input--theme-${e.theme}`]: e.theme,
+        [`input--size-${e.size}`]: e.size
       }])
     }, [
       d(S.$slots, "default", {

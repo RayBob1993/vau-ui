@@ -57,7 +57,9 @@
       'input--disabled': isDisabled,
       'input--loading': loading,
       'input--invalid': isInvalid,
-      'input--valid': isValid
+      'input--valid': isValid,
+      [`input--theme-${theme}`]: theme,
+      [`input--size-${size}`]: size
     }"
   >
     <slot
