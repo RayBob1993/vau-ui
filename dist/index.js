@@ -1750,7 +1750,7 @@ const Xn = /* @__PURE__ */ O(On, [["render", Nn]]), Fn = { class: "input-after" 
       disabled: a(s).disabled,
       autocomplete: a(s).autocomplete,
       placeholder: a(s).placeholder,
-      class: "input-native"
+      class: "input-field input-field--input"
     }, te(a(n), !0)), null, 16, Un)), [
       [mo, a(o)]
     ]);
@@ -1771,7 +1771,7 @@ const Xn = /* @__PURE__ */ O(On, [["render", Nn]]), Fn = { class: "input-after" 
       rows: a(s).rows,
       cols: a(s).cols,
       placeholder: a(s).placeholder,
-      class: "input-textarea"
+      class: "input-field input-field--textarea"
     }, te(a(n), !0)), null, 16, Hn)), [
       [vt, a(o)]
     ]);

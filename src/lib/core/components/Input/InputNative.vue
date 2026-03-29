@@ -22,7 +22,7 @@
     :disabled="props.disabled"
     :autocomplete="props.autocomplete"
     :placeholder="props.placeholder"
-    class="input-native"
+    class="input-field input-field--input"
     v-on="listeners"
   >
 </template>

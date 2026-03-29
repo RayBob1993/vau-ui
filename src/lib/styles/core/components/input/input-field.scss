@@ -1,0 +1,31 @@
+@use '../../mixins/appearance' as *;
+
+.input-field {
+  display: block;
+  width: 100%;
+  border: 0;
+  padding: var(--input-field-native-padding-x, 0) var(--input-field-native-padding-y, 0);
+
+  font-size: var(--input-field-native-font-size);
+  line-height: var(--input-field-native-line-height);
+  font-weight: var(--input-field-native-font-weight);
+  color: var(--input-field-native-color);
+
+  background-color: transparent;
+  outline: none;
+  box-shadow: none;
+  border-radius: 0;
+
+  @include utils-appearance(none);
+
+  &::placeholder {
+    font-size: var(--input-field-placeholder-font-size, inherit);
+    line-height: var(--input-field-placeholder-line-height, inherit);
+    font-weight: var(--input-field-placeholder-font-weight, inherit);
+    color: var(--input-field-placeholder-color, inherit);
+  }
+
+  &--textarea {
+    min-height: var(--input-textarea-min-height);
+  }
+}

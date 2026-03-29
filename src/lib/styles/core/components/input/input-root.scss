@@ -4,4 +4,6 @@
   padding: var(--input-padding-y, 0) var(--input-padding-x, 0);
 
   background-color: var(--input-background-color);
+
+  transition: var(--transition-base);
 }

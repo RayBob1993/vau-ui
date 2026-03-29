@@ -22,7 +22,7 @@
     :rows="props.rows"
     :cols="props.cols"
     :placeholder="props.placeholder"
-    class="input-textarea"
+    class="input-field input-field--textarea"
     v-on="listeners"
   />
 </template>
