@@ -1,0 +1,11 @@
+.select-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 100;
+
+  padding: var(--select-dropdown-padding-y, 0) var(--select-dropdown-padding-x, 0);
+
+  background-color: var(--select-dropdown-background-color);
+}

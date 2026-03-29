@@ -1,0 +1,14 @@
+.select-value {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--select-value-padding-y, 0) var(--select-value-padding-x, 0);
+  width: var(--select-value-width);
+  height: var(--select-value-height);
+
+  background-color: var(--select-value-background-color);
+
+  transition: var(--transition-base);
+
+  cursor: pointer;
+}

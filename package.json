@@ -1,6 +1,6 @@
 {
   "name": "vau-ui",
-  "version": "1.0.53",
+  "version": "1.0.54",
   "license": "MIT",
   "repository": "https://github.com/RayBob1993/vau-ui.git",
   "type": "module",
@@ -27,16 +27,12 @@
       "import": "./dist/index.js",
       "types": "./dist/index.d.ts"
     },
-    "./vue-global": {
-      "types": "./vue-global.d.ts"
-    },
     "./styles": "./src/lib/styles/core/index.scss",
     "./styles/mixins": "./src/lib/styles/core/mixins/index.scss"
   },
   "files": [
     "dist",
     "src/lib/styles/core",
-    "vue-global.d.ts",
     "package.json",
     "README.md"
   ],

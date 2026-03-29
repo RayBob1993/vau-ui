@@ -1,0 +1,10 @@
+.select-option {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--select-option-padding-y, 0) var(--select-option-padding-x, 0);
+
+  background-color: var(--select-option-background-color);
+
+  cursor: pointer;
+}
