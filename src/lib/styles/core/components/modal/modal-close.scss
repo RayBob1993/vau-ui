@@ -1,1 +1,29 @@
-.modal-close {}
+@use '../../mixins/appearance' as *;
+@use '../../mixins/user-select' as *;
+
+.modal-close {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: var(--modal-close-margin-y, 0) var(--modal-close-margin-x, 0);
+  padding: var(--modal-close-padding-y, 0) var(--modal-close-padding-x, 0);
+  gap: var(--modal-close-gap);
+  border: var(--modal-close-border-size) var(--modal-close-border-type) var(--modal-close-border-color);
+  min-height: var(--modal-close-min-height, 0);
+  max-height: var(--modal-close-max-height, none);
+  min-width: var(--modal-close-min-width, 0);
+  max-width: var(--modal-close-max-width, none);
+
+  @include utils-user-select(none);
+  @include utils-appearance(none);
+
+  cursor: pointer;
+
+  transition: var(--transition-base);
+
+  background-color: var(--modal-close-background-color);
+  border-radius: var(--modal-close-border-radius);
+
+  outline: 0;
+  -webkit-tap-highlight-color: transparent;
+}

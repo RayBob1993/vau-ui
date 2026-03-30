@@ -1,24 +1,24 @@
 import type { App, Plugin } from 'vue';
 import {
   AccordionPlugin,
-  AffixPlugin,
-  AvatarPlugin,
-  AvatarGroupPlugin,
-  BadgePlugin,
-  BreadcrumbsPlugin,
+  //AffixPlugin,
+  //AvatarPlugin,
+  //AvatarGroupPlugin,
+  //BadgePlugin,
+  //BreadcrumbsPlugin,
   ButtonPlugin,
-  CollapsePlugin,
+  //CollapsePlugin,
   ConfigProviderPlugin,
   ModalPlugin,
   InplacePlugin,
-  DrawerPlugin,
-  DropdownPlugin,
-  ImagePlugin,
-  PaginationPlugin,
-  PlaceholderPlugin,
+  //DrawerPlugin,
+  //DropdownPlugin,
+  //ImagePlugin,
+  //PaginationPlugin,
+  //PlaceholderPlugin,
   ScrollbarPlugin,
-  SpinnerPlugin,
-  TabsPlugin,
+  //SpinnerPlugin,
+  //TabsPlugin,
   TagPlugin,
   TextPlugin,
   //ContainerPlugin,
@@ -41,37 +41,37 @@ import {
   RadioGroupPlugin,
   SwitchPlugin,
   SelectPlugin,
-  AlertPlugin,
-  ProgressPlugin,
+  //AlertPlugin,
+  //ProgressPlugin,
   DividerPlugin,
   FlexPlugin,
   InputGroupPlugin,
-  CountdownPlugin,
-  CalendarPlugin,
+  //CountdownPlugin,
+  //CalendarPlugin,
 } from '../components';
 
 export const VauUI: Plugin = {
   install (app: App) {
     // Components
     app.use(AccordionPlugin);
-    app.use(AffixPlugin);
-    app.use(AvatarPlugin);
-    app.use(AvatarGroupPlugin);
-    app.use(BadgePlugin);
-    app.use(BreadcrumbsPlugin);
+    //app.use(AffixPlugin);
+    //app.use(AvatarPlugin);
+    //app.use(AvatarGroupPlugin);
+    //app.use(BadgePlugin);
+    //app.use(BreadcrumbsPlugin);
     app.use(ButtonPlugin);
-    app.use(CollapsePlugin);
+    //app.use(CollapsePlugin);
     app.use(ConfigProviderPlugin);
     app.use(ModalPlugin);
     app.use(InplacePlugin);
-    app.use(DrawerPlugin);
-    app.use(DropdownPlugin);
-    app.use(ImagePlugin);
-    app.use(PaginationPlugin);
-    app.use(PlaceholderPlugin);
+    //app.use(DrawerPlugin);
+    //app.use(DropdownPlugin);
+    //app.use(ImagePlugin);
+    //app.use(PaginationPlugin);
+    //app.use(PlaceholderPlugin);
     app.use(ScrollbarPlugin);
-    app.use(SpinnerPlugin);
-    app.use(TabsPlugin);
+    //app.use(SpinnerPlugin);
+    //app.use(TabsPlugin);
     app.use(TagPlugin);
     app.use(TextPlugin);
     //app.use(ContainerPlugin);
@@ -94,13 +94,13 @@ export const VauUI: Plugin = {
     app.use(RadioGroupPlugin);
     app.use(SwitchPlugin);
     app.use(SelectPlugin);
-    app.use(AlertPlugin);
-    app.use(ProgressPlugin);
+    //app.use(AlertPlugin);
+    //app.use(ProgressPlugin);
     app.use(DividerPlugin);
     app.use(FlexPlugin);
     //app.use(TablePlugin);
     app.use(InputGroupPlugin);
-    app.use(CountdownPlugin);
-    app.use(CalendarPlugin);
+    //app.use(CountdownPlugin);
+    //app.use(CalendarPlugin);
   }
 };

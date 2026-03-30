@@ -1,11 +1,15 @@
 <script setup lang="ts">
   import { useModalClose } from './composables';
   import { useModalRootContext } from './context';
+  import { IconRender } from '../ConfigProvider/icon-render';
+  import { useConfigProviderRootContext } from '../ConfigProvider/context';
 
   const modalRootContext = useModalRootContext();
+  const configProviderRootContext = useConfigProviderRootContext();
 
-  const { close } = useModalClose({
-    modalRootContext
+  const { close, icon } = useModalClose({
+    modalRootContext,
+    configProviderRootContext
   });
 </script>
 
@@ -15,6 +19,15 @@
     class="modal-close"
     @click="close"
   >
-    <slot/>
+    <slot>
+      <icon-render
+        v-if="icon"
+        :render="icon"
+      />
+
+      <template v-else>
+        ×
+      </template>
+    </slot>
   </button>
 </template>

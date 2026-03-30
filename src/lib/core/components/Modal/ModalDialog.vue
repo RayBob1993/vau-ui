@@ -2,7 +2,6 @@
   <div
     class="modal-dialog"
     role="dialog"
-    @click.stop
   >
     <slot/>
   </div>

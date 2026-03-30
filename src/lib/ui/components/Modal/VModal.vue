@@ -35,7 +35,7 @@
               {{ title }}
             </Modal.Title>
 
-            <Modal.Close>X</Modal.Close>
+            <Modal.Close/>
           </slot>
         </Modal.Header>
 

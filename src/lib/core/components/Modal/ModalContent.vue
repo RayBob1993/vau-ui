@@ -1,9 +1,8 @@
-<script setup lang="ts">
-
-</script>
-
 <template>
-  <div class="modal-content">
+  <div
+    class="modal-content"
+    @click.stop
+  >
     <slot/>
   </div>
 </template>

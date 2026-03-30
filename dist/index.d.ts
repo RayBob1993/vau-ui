@@ -1,5 +1,4 @@
 import { AllowedComponentProps } from 'vue';
-import { AppContext } from 'vue';
 import { Component } from 'vue';
 import { ComponentCustomProps } from 'vue';
 import { ComponentOptionsBase } from 'vue';
@@ -27,6 +26,7 @@ import { ShallowRef } from 'vue';
 import { ShallowUnwrapRef } from 'vue';
 import { TemplateRef } from 'vue';
 import { VNode } from 'vue';
+import { VNodeChild } from 'vue';
 import { VNodeProps } from 'vue';
 import { z } from 'zod';
 import { ZodError } from 'zod';
@@ -37,71 +37,9 @@ type: HTMLButtonElement["type"];
 as: keyof HTMLElementTagNameMap | Component;
 }, {}, {}, {}, string, ComponentProvideOptions, false, {}, any>;
 
-declare const __VLS_component_10: DefineComponent<    {}, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {
-close: () => any;
-open: () => any;
-}, string, PublicProps, Readonly<{}> & Readonly<{
-onClose?: (() => any) | undefined;
-onOpen?: (() => any) | undefined;
-}>, {}, {}, {}, {}, string, ComponentProvideOptions, true, {}, any>;
+declare const __VLS_component_10: DefineComponent<ColProps, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, PublicProps, Readonly<ColProps> & Readonly<{}>, {}, {}, {}, {}, string, ComponentProvideOptions, false, {}, HTMLDivElement>;
 
-declare const __VLS_component_11: DefineComponent<__VLS_PublicProps_2, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {
-"update:modelValue": (value: boolean) => any;
-close: () => any;
-open: () => any;
-opened: (payload: Element) => any;
-closed: (payload: Element) => any;
-}, string, PublicProps, Readonly<__VLS_PublicProps_2> & Readonly<{
-"onUpdate:modelValue"?: ((value: boolean) => any) | undefined;
-onClose?: (() => any) | undefined;
-onOpen?: (() => any) | undefined;
-onOpened?: ((payload: Element) => any) | undefined;
-onClosed?: ((payload: Element) => any) | undefined;
-}>, {}, {}, {}, {}, string, ComponentProvideOptions, false, {}, any>;
-
-declare const __VLS_component_12: DefineComponent<__VLS_PublicProps_3, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {
-"update:modelValue": (value: boolean) => any;
-close: () => any;
-open: () => any;
-opened: (payload: Element) => any;
-closed: (payload: Element) => any;
-}, string, PublicProps, Readonly<__VLS_PublicProps_3> & Readonly<{
-"onUpdate:modelValue"?: ((value: boolean) => any) | undefined;
-onClose?: (() => any) | undefined;
-onOpen?: (() => any) | undefined;
-onOpened?: ((payload: Element) => any) | undefined;
-onClosed?: ((payload: Element) => any) | undefined;
-}>, {}, {}, {}, {}, string, ComponentProvideOptions, false, {}, any>;
-
-declare const __VLS_component_13: DefineComponent<IVDropdownProps, {
-setVisible: (payload: boolean) => void;
-isVisible: Ref<boolean>;
-}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {
-close: () => any;
-open: () => any;
-opened: (payload: Element) => any;
-closed: (payload: Element) => any;
-}, string, PublicProps, Readonly<IVDropdownProps> & Readonly<{
-onClose?: (() => any) | undefined;
-onOpen?: (() => any) | undefined;
-onOpened?: ((payload: Element) => any) | undefined;
-onClosed?: ((payload: Element) => any) | undefined;
-}>, {}, {}, {}, {}, string, ComponentProvideOptions, false, {}, HTMLDivElement>;
-
-declare const __VLS_component_14: DefineComponent<    {}, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, PublicProps, Readonly<{}> & Readonly<{}>, {}, {}, {}, {}, string, ComponentProvideOptions, true, {}, HTMLDivElement>;
-
-declare const __VLS_component_15: DefineComponent<Partial<SizeProp>, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, PublicProps, Readonly<Partial<SizeProp>> & Readonly<{}>, {}, {}, {}, {}, string, ComponentProvideOptions, false, {}, HTMLDivElement>;
-
-declare const __VLS_component_16: DefineComponent<RowProps, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, PublicProps, Readonly<RowProps> & Readonly<{}>, {
-wrap: boolean;
-guttersX: boolean;
-}, {}, {}, {}, string, ComponentProvideOptions, false, {}, HTMLDivElement>;
-
-declare const __VLS_component_17: DefineComponent<ColProps, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, PublicProps, Readonly<ColProps> & Readonly<{}>, {}, {}, {}, {}, string, ComponentProvideOptions, false, {}, HTMLDivElement>;
-
-declare const __VLS_component_18: DefineComponent<IVPlaceholderProps, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, PublicProps, Readonly<IVPlaceholderProps> & Readonly<{}>, {}, {}, {}, {}, string, ComponentProvideOptions, false, {}, HTMLDivElement>;
-
-declare const __VLS_component_19: DefineComponent<ScrollbarProps, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {
+declare const __VLS_component_11: DefineComponent<ScrollbarProps, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {
 mousedown: (payload: MouseEvent) => any;
 mouseleave: (payload: MouseEvent) => any;
 mousemove: (payload: MouseEvent) => any;
@@ -119,29 +57,17 @@ onScrollEndY?: (() => any) | undefined;
 onScrollEndX?: (() => any) | undefined;
 }>, {}, {}, {}, {}, string, ComponentProvideOptions, false, {}, HTMLDivElement>;
 
-declare const __VLS_component_2: DefineComponent<Partial<DirectionProp>, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, PublicProps, Readonly<Partial<DirectionProp>> & Readonly<{}>, {}, {}, {}, {}, string, ComponentProvideOptions, false, {}, HTMLDivElement>;
-
-declare const __VLS_component_20: DefineComponent<__VLS_PublicProps_4, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {
-change: (payload: IVTabsModelValue) => any;
-"update:modelValue": (value: IVTabsModelValue) => any;
-}, string, PublicProps, Readonly<__VLS_PublicProps_4> & Readonly<{
-onChange?: ((payload: IVTabsModelValue) => any) | undefined;
-"onUpdate:modelValue"?: ((value: IVTabsModelValue) => any) | undefined;
-}>, {}, {}, {}, {}, string, ComponentProvideOptions, false, {}, HTMLDivElement>;
-
-declare const __VLS_component_21: DefineComponent<IVTabProps, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, PublicProps, Readonly<IVTabProps> & Readonly<{}>, {}, {}, {}, {}, string, ComponentProvideOptions, false, {}, HTMLDivElement>;
-
-declare const __VLS_component_22: DefineComponent<TagProps, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {
+declare const __VLS_component_12: DefineComponent<TagProps, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {
 delete: (payload: Maybe<TagValue>) => any;
 }, string, PublicProps, Readonly<TagProps> & Readonly<{
 onDelete?: ((payload: Maybe<TagValue>) => any) | undefined;
 }>, {}, {}, {}, {}, string, ComponentProvideOptions, false, {}, HTMLDivElement>;
 
-declare const __VLS_component_23: DefineComponent<Partial<DirectionProp>, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, PublicProps, Readonly<Partial<DirectionProp>> & Readonly<{}>, {}, {}, {}, {}, string, ComponentProvideOptions, false, {}, HTMLDivElement>;
+declare const __VLS_component_13: DefineComponent<Partial<DirectionProp>, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, PublicProps, Readonly<Partial<DirectionProp>> & Readonly<{}>, {}, {}, {}, {}, string, ComponentProvideOptions, false, {}, HTMLDivElement>;
 
-declare const __VLS_component_24: DefineComponent<TextProps, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, PublicProps, Readonly<TextProps> & Readonly<{}>, {}, {}, {}, {}, string, ComponentProvideOptions, false, {}, any>;
+declare const __VLS_component_14: DefineComponent<TextProps, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, PublicProps, Readonly<TextProps> & Readonly<{}>, {}, {}, {}, {}, string, ComponentProvideOptions, false, {}, any>;
 
-declare const __VLS_component_25: DefineComponent<IVFormItemProps, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {
+declare const __VLS_component_15: DefineComponent<IVFormItemProps, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {
 invalid: () => any;
 valid: () => any;
 }, string, PublicProps, Readonly<IVFormItemProps> & Readonly<{
@@ -149,37 +75,31 @@ onInvalid?: (() => any) | undefined;
 onValid?: (() => any) | undefined;
 }>, {}, {}, {}, {}, string, ComponentProvideOptions, false, {}, HTMLDivElement>;
 
-declare const __VLS_component_26: DefineComponent<__VLS_PublicProps_5, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {
+declare const __VLS_component_16: DefineComponent<__VLS_PublicProps_3, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {
 "update:modelValue": (value: CheckboxModelValue) => any;
-}, string, PublicProps, Readonly<__VLS_PublicProps_5> & Readonly<{
+}, string, PublicProps, Readonly<__VLS_PublicProps_3> & Readonly<{
 "onUpdate:modelValue"?: ((value: CheckboxModelValue) => any) | undefined;
 }>, {}, {}, {}, {}, string, ComponentProvideOptions, false, {}, HTMLLabelElement>;
 
-declare const __VLS_component_27: DefineComponent<Partial<DirectionProp>, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, PublicProps, Readonly<Partial<DirectionProp>> & Readonly<{}>, {}, {}, {}, {}, string, ComponentProvideOptions, false, {}, HTMLDivElement>;
+declare const __VLS_component_17: DefineComponent<Partial<DirectionProp>, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, PublicProps, Readonly<Partial<DirectionProp>> & Readonly<{}>, {}, {}, {}, {}, string, ComponentProvideOptions, false, {}, HTMLDivElement>;
 
-declare const __VLS_component_28: DefineComponent<__VLS_PublicProps_6, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {
+declare const __VLS_component_18: DefineComponent<__VLS_PublicProps_4, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {
 "update:modelValue": (value: InputModelValue) => any;
-}, string, PublicProps, Readonly<__VLS_PublicProps_6> & Readonly<{
+}, string, PublicProps, Readonly<__VLS_PublicProps_4> & Readonly<{
 "onUpdate:modelValue"?: ((value: InputModelValue) => any) | undefined;
 }>, {}, {}, {}, {}, string, ComponentProvideOptions, false, {}, HTMLDivElement>;
 
-declare const __VLS_component_29: DefineComponent<__VLS_PublicProps_10, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {
+declare const __VLS_component_19: DefineComponent<__VLS_PublicProps_8, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {
 "update:modelValue": (value: RadioModelValue) => any;
-}, string, PublicProps, Readonly<__VLS_PublicProps_10> & Readonly<{
+}, string, PublicProps, Readonly<__VLS_PublicProps_8> & Readonly<{
 "onUpdate:modelValue"?: ((value: RadioModelValue) => any) | undefined;
 }>, {}, {}, {}, {}, string, ComponentProvideOptions, false, {}, HTMLLabelElement>;
 
-declare const __VLS_component_3: DefineComponent<__VLS_PublicProps, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {
-change: (payload: Maybe<AccordionValue>) => any;
-"update:modelValue": (value: AccordionModelValue) => any;
-}, string, PublicProps, Readonly<__VLS_PublicProps> & Readonly<{
-onChange?: ((payload: Maybe<AccordionValue>) => any) | undefined;
-"onUpdate:modelValue"?: ((value: AccordionModelValue) => any) | undefined;
-}>, {}, {}, {}, {}, string, ComponentProvideOptions, false, {}, HTMLDivElement>;
+declare const __VLS_component_2: DefineComponent<Partial<DirectionProp>, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, PublicProps, Readonly<Partial<DirectionProp>> & Readonly<{}>, {}, {}, {}, {}, string, ComponentProvideOptions, false, {}, HTMLDivElement>;
 
-declare const __VLS_component_30: DefineComponent<Partial<DirectionProp>, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, PublicProps, Readonly<Partial<DirectionProp>> & Readonly<{}>, {}, {}, {}, {}, string, ComponentProvideOptions, false, {}, HTMLDivElement>;
+declare const __VLS_component_20: DefineComponent<Partial<DirectionProp>, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, PublicProps, Readonly<Partial<DirectionProp>> & Readonly<{}>, {}, {}, {}, {}, string, ComponentProvideOptions, false, {}, HTMLDivElement>;
 
-declare const __VLS_component_31: DefineComponent<__VLS_PublicProps_11, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {
+declare const __VLS_component_21: DefineComponent<__VLS_PublicProps_9, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {
 change: (payload: string) => any;
 "update:modelValue": (value: SelectModelValue) => any;
 clear: () => any;
@@ -187,7 +107,7 @@ close: () => any;
 open: () => any;
 opened: (payload: Element) => any;
 closed: (payload: Element) => any;
-}, string, PublicProps, Readonly<__VLS_PublicProps_11> & Readonly<{
+}, string, PublicProps, Readonly<__VLS_PublicProps_9> & Readonly<{
 onChange?: ((payload: string) => any) | undefined;
 "onUpdate:modelValue"?: ((value: SelectModelValue) => any) | undefined;
 onClear?: (() => any) | undefined;
@@ -197,80 +117,74 @@ onOpened?: ((payload: Element) => any) | undefined;
 onClosed?: ((payload: Element) => any) | undefined;
 }>, {}, {}, {}, {}, string, ComponentProvideOptions, false, {}, HTMLDivElement>;
 
-declare const __VLS_component_32: DefineComponent<OptionProps, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, PublicProps, Readonly<OptionProps> & Readonly<{}>, {}, {}, {}, {}, string, ComponentProvideOptions, false, {}, HTMLDivElement>;
+declare const __VLS_component_22: DefineComponent<OptionProps, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, PublicProps, Readonly<OptionProps> & Readonly<{}>, {}, {}, {}, {}, string, ComponentProvideOptions, false, {}, HTMLDivElement>;
 
-declare const __VLS_component_33: DefineComponent<__VLS_PublicProps_12, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {
+declare const __VLS_component_23: DefineComponent<__VLS_PublicProps_10, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {
 "update:modelValue": (value: boolean) => any;
-}, string, PublicProps, Readonly<__VLS_PublicProps_12> & Readonly<{
+}, string, PublicProps, Readonly<__VLS_PublicProps_10> & Readonly<{
 "onUpdate:modelValue"?: ((value: boolean) => any) | undefined;
 }>, {}, {}, {}, {}, string, ComponentProvideOptions, false, {}, HTMLLabelElement>;
 
-declare const __VLS_component_34: DefineComponent<ConfigProviderProps, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, PublicProps, Readonly<ConfigProviderProps> & Readonly<{}>, {}, {}, {}, {}, string, ComponentProvideOptions, false, {}, any>;
+declare const __VLS_component_24: DefineComponent<ConfigProviderProps, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, PublicProps, Readonly<ConfigProviderProps> & Readonly<{}>, {}, {}, {}, {}, string, ComponentProvideOptions, false, {}, any>;
 
-declare const __VLS_component_35: DefineComponent<IVProgressProps, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, PublicProps, Readonly<IVProgressProps> & Readonly<{}>, {
-showValue: boolean;
-}, {}, {}, {}, string, ComponentProvideOptions, false, {}, HTMLDivElement>;
+declare const __VLS_component_25: DefineComponent<Partial<DirectionProp>, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, PublicProps, Readonly<Partial<DirectionProp>> & Readonly<{}>, {}, {}, {}, {}, string, ComponentProvideOptions, false, {}, HTMLDivElement>;
 
-declare const __VLS_component_36: DefineComponent<Partial<DirectionProp>, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, PublicProps, Readonly<Partial<DirectionProp>> & Readonly<{}>, {}, {}, {}, {}, string, ComponentProvideOptions, false, {}, HTMLDivElement>;
-
-declare const __VLS_component_37: DefineComponent<FlexProps, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, PublicProps, Readonly<FlexProps> & Readonly<{}>, {
+declare const __VLS_component_26: DefineComponent<FlexProps, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, PublicProps, Readonly<FlexProps> & Readonly<{}>, {
 wrap: boolean;
 }, {}, {}, {}, string, ComponentProvideOptions, false, {}, HTMLDivElement>;
 
-declare const __VLS_component_38: DefineComponent<FlexItemProps, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, PublicProps, Readonly<FlexItemProps> & Readonly<{}>, {}, {}, {}, {}, string, ComponentProvideOptions, false, {}, HTMLDivElement>;
+declare const __VLS_component_27: DefineComponent<FlexItemProps, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, PublicProps, Readonly<FlexItemProps> & Readonly<{}>, {}, {}, {}, {}, string, ComponentProvideOptions, false, {}, HTMLDivElement>;
 
-declare const __VLS_component_39: DefineComponent<    {}, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, PublicProps, Readonly<{}> & Readonly<{}>, {}, {}, {}, {}, string, ComponentProvideOptions, true, {}, HTMLDivElement>;
+declare const __VLS_component_28: DefineComponent<    {}, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, PublicProps, Readonly<{}> & Readonly<{}>, {}, {}, {}, {}, string, ComponentProvideOptions, true, {}, HTMLDivElement>;
 
-declare const __VLS_component_4: DefineComponent<VAccordionItemProps, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, PublicProps, Readonly<VAccordionItemProps> & Readonly<{}>, {}, {}, {}, {}, string, ComponentProvideOptions, false, {}, HTMLDivElement>;
+declare const __VLS_component_29: DefineComponent<    {}, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, PublicProps, Readonly<{}> & Readonly<{}>, {}, {}, {}, {}, string, ComponentProvideOptions, true, {}, HTMLDivElement>;
 
-declare const __VLS_component_40: DefineComponent<    {}, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, PublicProps, Readonly<{}> & Readonly<{}>, {}, {}, {}, {}, string, ComponentProvideOptions, true, {}, HTMLDivElement>;
+declare const __VLS_component_3: DefineComponent<__VLS_PublicProps, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {
+change: (payload: Maybe<AccordionValue>) => any;
+"update:modelValue": (value: AccordionModelValue) => any;
+}, string, PublicProps, Readonly<__VLS_PublicProps> & Readonly<{
+onChange?: ((payload: Maybe<AccordionValue>) => any) | undefined;
+"onUpdate:modelValue"?: ((value: AccordionModelValue) => any) | undefined;
+}>, {}, {}, {}, {}, string, ComponentProvideOptions, false, {}, HTMLDivElement>;
 
-declare const __VLS_component_41: DefineComponent<IVCountdownProps, {
-start: VoidFunction;
-abort: VoidFunction;
-end: VoidFunction;
-restart: VoidFunction;
-}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {
-start: () => any;
-end: () => any;
-progress: (payload: IVCountdownProgress) => any;
-abort: () => any;
-}, string, PublicProps, Readonly<IVCountdownProps> & Readonly<{
-onStart?: (() => any) | undefined;
-onEnd?: (() => any) | undefined;
-onProgress?: ((payload: IVCountdownProgress) => any) | undefined;
-onAbort?: (() => any) | undefined;
-}>, {
-interval: number;
-now: number;
-}, {}, {}, {}, string, ComponentProvideOptions, false, {}, HTMLDivElement>;
-
-declare const __VLS_component_42: DefineComponent<Partial<PrimitiveProps>, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, PublicProps, Readonly<Partial<PrimitiveProps>> & Readonly<{}>, {
+declare const __VLS_component_30: DefineComponent<Partial<PrimitiveProps>, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, PublicProps, Readonly<Partial<PrimitiveProps>> & Readonly<{}>, {
 as: keyof HTMLElementTagNameMap | Component;
 }, {}, {}, {}, string, ComponentProvideOptions, false, {}, any>;
 
-declare const __VLS_component_43: DefineComponent<MenuProps, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, PublicProps, Readonly<MenuProps> & Readonly<{}>, {}, {}, {}, {}, string, ComponentProvideOptions, false, {}, HTMLElement>;
+declare const __VLS_component_31: DefineComponent<MenuProps, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, PublicProps, Readonly<MenuProps> & Readonly<{}>, {}, {}, {}, {}, string, ComponentProvideOptions, false, {}, HTMLElement>;
 
-declare const __VLS_component_5: DefineComponent<    {}, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, PublicProps, Readonly<{}> & Readonly<{}>, {}, {}, {}, {}, string, ComponentProvideOptions, true, {}, HTMLDivElement>;
+declare const __VLS_component_4: DefineComponent<VAccordionItemProps, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, PublicProps, Readonly<VAccordionItemProps> & Readonly<{}>, {}, {}, {}, {}, string, ComponentProvideOptions, false, {}, HTMLDivElement>;
 
-declare const __VLS_component_6: DefineComponent<IVAlertProps, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, PublicProps, Readonly<IVAlertProps> & Readonly<{}>, {}, {}, {}, {}, string, ComponentProvideOptions, false, {}, HTMLDivElement>;
+declare const __VLS_component_5: DefineComponent<    {}, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {
+close: () => any;
+open: () => any;
+}, string, PublicProps, Readonly<{}> & Readonly<{
+onClose?: (() => any) | undefined;
+onOpen?: (() => any) | undefined;
+}>, {}, {}, {}, {}, string, ComponentProvideOptions, true, {}, any>;
 
-declare const __VLS_component_7: DefineComponent<IVAffixProps, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, PublicProps, Readonly<IVAffixProps> & Readonly<{}>, {
-disabled: boolean;
-offsetTop: number;
-offsetBottom: number;
-}, {}, {}, {}, string, ComponentProvideOptions, false, {
-root: HTMLDivElement;
-content: HTMLDivElement;
-}, HTMLDivElement>;
+declare const __VLS_component_6: DefineComponent<__VLS_PublicProps_2, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {
+"update:modelValue": (value: boolean) => any;
+close: () => any;
+open: () => any;
+opened: (payload: Element) => any;
+closed: (payload: Element) => any;
+}, string, PublicProps, Readonly<__VLS_PublicProps_2> & Readonly<{
+"onUpdate:modelValue"?: ((value: boolean) => any) | undefined;
+onClose?: (() => any) | undefined;
+onOpen?: (() => any) | undefined;
+onOpened?: ((payload: Element) => any) | undefined;
+onClosed?: ((payload: Element) => any) | undefined;
+}>, {}, {}, {}, {}, string, ComponentProvideOptions, false, {}, any>;
 
-declare const __VLS_component_8: DefineComponent<IVBadgeProps, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, PublicProps, Readonly<IVBadgeProps> & Readonly<{}>, {}, {}, {}, {}, string, ComponentProvideOptions, false, {}, HTMLDivElement>;
+declare const __VLS_component_7: DefineComponent<    {}, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, PublicProps, Readonly<{}> & Readonly<{}>, {}, {}, {}, {}, string, ComponentProvideOptions, true, {}, HTMLDivElement>;
 
-declare const __VLS_component_9: DefineComponent<IVCollapseProps, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {
-change: (payload: boolean) => any;
-}, string, PublicProps, Readonly<IVCollapseProps> & Readonly<{
-onChange?: ((payload: boolean) => any) | undefined;
-}>, {}, {}, {}, {}, string, ComponentProvideOptions, false, {}, HTMLDivElement>;
+declare const __VLS_component_8: DefineComponent<Partial<SizeProp>, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, PublicProps, Readonly<Partial<SizeProp>> & Readonly<{}>, {}, {}, {}, {}, string, ComponentProvideOptions, false, {}, HTMLDivElement>;
+
+declare const __VLS_component_9: DefineComponent<RowProps, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, PublicProps, Readonly<RowProps> & Readonly<{}>, {
+wrap: boolean;
+guttersX: boolean;
+}, {}, {}, {}, string, ComponentProvideOptions, false, {}, HTMLDivElement>;
 
 declare type __VLS_PrettifyLocal<T> = {
     [K in keyof T]: T[K];
@@ -278,74 +192,62 @@ declare type __VLS_PrettifyLocal<T> = {
 
 declare type __VLS_Props = AccordionProps;
 
-declare type __VLS_Props_10 = RadioProps;
-
-declare type __VLS_Props_11 = SelectProps;
-
-declare type __VLS_Props_12 = SwitchProps;
+declare type __VLS_Props_10 = SwitchProps;
 
 declare type __VLS_Props_2 = IVModalProps;
 
-declare type __VLS_Props_3 = IVDrawerProps;
+declare type __VLS_Props_3 = CheckboxProps;
 
-declare type __VLS_Props_4 = IVTabsProps;
+declare type __VLS_Props_4 = InputProps;
 
-declare type __VLS_Props_5 = CheckboxProps;
+declare type __VLS_Props_5 = IVInputCodeProps;
 
-declare type __VLS_Props_6 = InputProps;
+declare type __VLS_Props_6 = InputNumberProps;
 
-declare type __VLS_Props_7 = IVInputCodeProps;
+declare type __VLS_Props_7 = InputPasswordProps;
 
-declare type __VLS_Props_8 = InputNumberProps;
+declare type __VLS_Props_8 = RadioProps;
 
-declare type __VLS_Props_9 = InputPasswordProps;
+declare type __VLS_Props_9 = SelectProps;
 
 declare type __VLS_PublicProps = {
     modelValue: AccordionModelValue;
 } & __VLS_Props;
 
 declare type __VLS_PublicProps_10 = {
-    modelValue: RadioModelValue;
-} & __VLS_Props_10;
-
-declare type __VLS_PublicProps_11 = {
-    modelValue: SelectModelValue;
-} & __VLS_Props_11;
-
-declare type __VLS_PublicProps_12 = {
     modelValue: SwitchModelValue;
-} & __VLS_Props_12;
+} & __VLS_Props_10;
 
 declare type __VLS_PublicProps_2 = {
     modelValue: boolean;
 } & __VLS_Props_2;
 
 declare type __VLS_PublicProps_3 = {
-    modelValue: boolean;
+    modelValue: CheckboxModelValue;
 } & __VLS_Props_3;
 
 declare type __VLS_PublicProps_4 = {
-    modelValue: IVTabsModelValue;
+    modelValue: InputModelValue;
 } & __VLS_Props_4;
 
 declare type __VLS_PublicProps_5 = {
-    modelValue: CheckboxModelValue;
+    modelValue: InputCodeModelValue;
 } & __VLS_Props_5;
 
 declare type __VLS_PublicProps_6 = {
-    modelValue: InputModelValue;
+    modelValue?: InputNumberModelValue;
 } & __VLS_Props_6;
 
 declare type __VLS_PublicProps_7 = {
-    modelValue: InputCodeModelValue;
+    modelValue: InputModelValue;
 } & __VLS_Props_7;
 
 declare type __VLS_PublicProps_8 = {
-    modelValue?: InputNumberModelValue;
+    modelValue: RadioModelValue;
 } & __VLS_Props_8;
 
 declare type __VLS_PublicProps_9 = {
-    modelValue: InputModelValue;
+    modelValue: SelectModelValue;
 } & __VLS_Props_9;
 
 declare function __VLS_template(): {
@@ -359,44 +261,52 @@ declare function __VLS_template(): {
 
 declare function __VLS_template_10(): {
     attrs: Partial<{}>;
-    slots: Readonly<IVInplaceSlots> & IVInplaceSlots;
+    slots: {
+        default?(_: {}): any;
+    };
     refs: {};
-    rootEl: any;
+    rootEl: HTMLDivElement;
 };
 
 declare function __VLS_template_11(): {
     attrs: Partial<{}>;
-    slots: Readonly<IVModalSlots> & IVModalSlots;
+    slots: {
+        default?(_: {}): any;
+    };
     refs: {};
-    rootEl: any;
+    rootEl: HTMLDivElement;
 };
 
 declare function __VLS_template_12(): {
     attrs: Partial<{}>;
-    slots: Readonly<IVDrawerSlots> & IVDrawerSlots;
+    slots: {
+        default?(_: {}): any;
+    };
     refs: {};
-    rootEl: any;
+    rootEl: HTMLDivElement;
 };
 
 declare function __VLS_template_13(): {
     attrs: Partial<{}>;
-    slots: Readonly<IVDropdownSlots> & IVDropdownSlots;
+    slots: {
+        default?(_: {}): any;
+    };
     refs: {};
     rootEl: HTMLDivElement;
 };
 
 declare function __VLS_template_14(): {
     attrs: Partial<{}>;
-    slots: Readonly<LayoutSlots> & LayoutSlots;
+    slots: {
+        default?(_: {}): any;
+    };
     refs: {};
-    rootEl: HTMLDivElement;
+    rootEl: any;
 };
 
 declare function __VLS_template_15(): {
     attrs: Partial<{}>;
-    slots: {
-        default?(_: {}): any;
-    };
+    slots: Readonly<FormItemSlots> & FormItemSlots;
     refs: {};
     rootEl: HTMLDivElement;
 };
@@ -407,7 +317,7 @@ declare function __VLS_template_16(): {
         default?(_: {}): any;
     };
     refs: {};
-    rootEl: HTMLDivElement;
+    rootEl: HTMLLabelElement;
 };
 
 declare function __VLS_template_17(): {
@@ -421,9 +331,7 @@ declare function __VLS_template_17(): {
 
 declare function __VLS_template_18(): {
     attrs: Partial<{}>;
-    slots: {
-        default?(_: {}): any;
-    };
+    slots: Readonly<InputSlots> & InputSlots;
     refs: {};
     rootEl: HTMLDivElement;
 };
@@ -434,7 +342,7 @@ declare function __VLS_template_19(): {
         default?(_: {}): any;
     };
     refs: {};
-    rootEl: HTMLDivElement;
+    rootEl: HTMLLabelElement;
 };
 
 declare function __VLS_template_2(): {
@@ -457,16 +365,20 @@ declare function __VLS_template_20(): {
 
 declare function __VLS_template_21(): {
     attrs: Partial<{}>;
-    slots: Readonly<IVTabSlots> & IVTabSlots;
+    slots: Readonly<{
+        default?: UnscopedSlot;
+        value?: UnscopedSlot;
+    }> & {
+        default?: UnscopedSlot;
+        value?: UnscopedSlot;
+    };
     refs: {};
     rootEl: HTMLDivElement;
 };
 
 declare function __VLS_template_22(): {
     attrs: Partial<{}>;
-    slots: {
-        default?(_: {}): any;
-    };
+    slots: Readonly<OptionSlots> & OptionSlots;
     refs: {};
     rootEl: HTMLDivElement;
 };
@@ -477,7 +389,7 @@ declare function __VLS_template_23(): {
         default?(_: {}): any;
     };
     refs: {};
-    rootEl: HTMLDivElement;
+    rootEl: HTMLLabelElement;
 };
 
 declare function __VLS_template_24(): {
@@ -491,7 +403,7 @@ declare function __VLS_template_24(): {
 
 declare function __VLS_template_25(): {
     attrs: Partial<{}>;
-    slots: Readonly<FormItemSlots> & FormItemSlots;
+    slots: Readonly<IVDividerSlots> & IVDividerSlots;
     refs: {};
     rootEl: HTMLDivElement;
 };
@@ -502,7 +414,7 @@ declare function __VLS_template_26(): {
         default?(_: {}): any;
     };
     refs: {};
-    rootEl: HTMLLabelElement;
+    rootEl: HTMLDivElement;
 };
 
 declare function __VLS_template_27(): {
@@ -516,7 +428,9 @@ declare function __VLS_template_27(): {
 
 declare function __VLS_template_28(): {
     attrs: Partial<{}>;
-    slots: Readonly<InputSlots> & InputSlots;
+    slots: {
+        default?(_: {}): any;
+    };
     refs: {};
     rootEl: HTMLDivElement;
 };
@@ -527,7 +441,7 @@ declare function __VLS_template_29(): {
         default?(_: {}): any;
     };
     refs: {};
-    rootEl: HTMLLabelElement;
+    rootEl: HTMLDivElement;
 };
 
 declare function __VLS_template_3(): {
@@ -545,88 +459,16 @@ declare function __VLS_template_30(): {
         default?(_: {}): any;
     };
     refs: {};
-    rootEl: HTMLDivElement;
+    rootEl: any;
 };
 
 declare function __VLS_template_31(): {
     attrs: Partial<{}>;
-    slots: Readonly<{
-        default?: UnscopedSlot;
-        value?: UnscopedSlot;
-    }> & {
-        default?: UnscopedSlot;
-        value?: UnscopedSlot;
-    };
-    refs: {};
-    rootEl: HTMLDivElement;
-};
-
-declare function __VLS_template_32(): {
-    attrs: Partial<{}>;
-    slots: Readonly<OptionSlots> & OptionSlots;
-    refs: {};
-    rootEl: HTMLDivElement;
-};
-
-declare function __VLS_template_33(): {
-    attrs: Partial<{}>;
     slots: {
         default?(_: {}): any;
     };
     refs: {};
-    rootEl: HTMLLabelElement;
-};
-
-declare function __VLS_template_34(): {
-    attrs: Partial<{}>;
-    slots: {
-        default?(_: {}): any;
-    };
-    refs: {};
-    rootEl: any;
-};
-
-declare function __VLS_template_35(): {
-    attrs: Partial<{}>;
-    slots: {
-        default?(_: {}): any;
-    };
-    refs: {};
-    rootEl: HTMLDivElement;
-};
-
-declare function __VLS_template_36(): {
-    attrs: Partial<{}>;
-    slots: Readonly<IVDividerSlots> & IVDividerSlots;
-    refs: {};
-    rootEl: HTMLDivElement;
-};
-
-declare function __VLS_template_37(): {
-    attrs: Partial<{}>;
-    slots: {
-        default?(_: {}): any;
-    };
-    refs: {};
-    rootEl: HTMLDivElement;
-};
-
-declare function __VLS_template_38(): {
-    attrs: Partial<{}>;
-    slots: {
-        default?(_: {}): any;
-    };
-    refs: {};
-    rootEl: HTMLDivElement;
-};
-
-declare function __VLS_template_39(): {
-    attrs: Partial<{}>;
-    slots: {
-        default?(_: {}): any;
-    };
-    refs: {};
-    rootEl: HTMLDivElement;
+    rootEl: HTMLElement;
 };
 
 declare function __VLS_template_4(): {
@@ -636,71 +478,32 @@ declare function __VLS_template_4(): {
     rootEl: HTMLDivElement;
 };
 
-declare function __VLS_template_40(): {
+declare function __VLS_template_5(): {
     attrs: Partial<{}>;
-    slots: {
-        default?(_: {}): any;
-    };
-    refs: {};
-    rootEl: HTMLDivElement;
-};
-
-declare function __VLS_template_41(): {
-    attrs: Partial<{}>;
-    slots: Readonly<IVCountdownSlots> & IVCountdownSlots;
-    refs: {};
-    rootEl: HTMLDivElement;
-};
-
-declare function __VLS_template_42(): {
-    attrs: Partial<{}>;
-    slots: {
-        default?(_: {}): any;
-    };
+    slots: Readonly<IVInplaceSlots> & IVInplaceSlots;
     refs: {};
     rootEl: any;
 };
 
-declare function __VLS_template_43(): {
-    attrs: Partial<{}>;
-    slots: {
-        default?(_: {}): any;
-    };
-    refs: {};
-    rootEl: HTMLElement;
-};
-
-declare function __VLS_template_5(): {
-    attrs: Partial<{}>;
-    slots: {
-        default?(_: {}): any;
-    };
-    refs: {};
-    rootEl: HTMLDivElement;
-};
-
 declare function __VLS_template_6(): {
     attrs: Partial<{}>;
-    slots: Readonly<IVAlertSlots> & IVAlertSlots;
+    slots: Readonly<IVModalSlots> & IVModalSlots;
     refs: {};
-    rootEl: HTMLDivElement;
+    rootEl: any;
 };
 
 declare function __VLS_template_7(): {
     attrs: Partial<{}>;
-    slots: {
-        default?(_: {}): any;
-    };
-    refs: {
-        root: HTMLDivElement;
-        content: HTMLDivElement;
-    };
+    slots: Readonly<LayoutSlots> & LayoutSlots;
+    refs: {};
     rootEl: HTMLDivElement;
 };
 
 declare function __VLS_template_8(): {
     attrs: Partial<{}>;
-    slots: Readonly<IVBadgeSlots> & IVBadgeSlots;
+    slots: {
+        default?(_: {}): any;
+    };
     refs: {};
     rootEl: HTMLDivElement;
 };
@@ -764,31 +567,7 @@ declare type __VLS_TemplateResult_30 = ReturnType<typeof __VLS_template_30>;
 
 declare type __VLS_TemplateResult_31 = ReturnType<typeof __VLS_template_31>;
 
-declare type __VLS_TemplateResult_32 = ReturnType<typeof __VLS_template_32>;
-
-declare type __VLS_TemplateResult_33 = ReturnType<typeof __VLS_template_33>;
-
-declare type __VLS_TemplateResult_34 = ReturnType<typeof __VLS_template_34>;
-
-declare type __VLS_TemplateResult_35 = ReturnType<typeof __VLS_template_35>;
-
-declare type __VLS_TemplateResult_36 = ReturnType<typeof __VLS_template_36>;
-
-declare type __VLS_TemplateResult_37 = ReturnType<typeof __VLS_template_37>;
-
-declare type __VLS_TemplateResult_38 = ReturnType<typeof __VLS_template_38>;
-
-declare type __VLS_TemplateResult_39 = ReturnType<typeof __VLS_template_39>;
-
 declare type __VLS_TemplateResult_4 = ReturnType<typeof __VLS_template_4>;
-
-declare type __VLS_TemplateResult_40 = ReturnType<typeof __VLS_template_40>;
-
-declare type __VLS_TemplateResult_41 = ReturnType<typeof __VLS_template_41>;
-
-declare type __VLS_TemplateResult_42 = ReturnType<typeof __VLS_template_42>;
-
-declare type __VLS_TemplateResult_43 = ReturnType<typeof __VLS_template_43>;
 
 declare type __VLS_TemplateResult_5 = ReturnType<typeof __VLS_template_5>;
 
@@ -950,79 +729,7 @@ declare type __VLS_WithTemplateSlots_31<T, S> = T & {
     };
 };
 
-declare type __VLS_WithTemplateSlots_32<T, S> = T & {
-    new (): {
-        $slots: S;
-    };
-};
-
-declare type __VLS_WithTemplateSlots_33<T, S> = T & {
-    new (): {
-        $slots: S;
-    };
-};
-
-declare type __VLS_WithTemplateSlots_34<T, S> = T & {
-    new (): {
-        $slots: S;
-    };
-};
-
-declare type __VLS_WithTemplateSlots_35<T, S> = T & {
-    new (): {
-        $slots: S;
-    };
-};
-
-declare type __VLS_WithTemplateSlots_36<T, S> = T & {
-    new (): {
-        $slots: S;
-    };
-};
-
-declare type __VLS_WithTemplateSlots_37<T, S> = T & {
-    new (): {
-        $slots: S;
-    };
-};
-
-declare type __VLS_WithTemplateSlots_38<T, S> = T & {
-    new (): {
-        $slots: S;
-    };
-};
-
-declare type __VLS_WithTemplateSlots_39<T, S> = T & {
-    new (): {
-        $slots: S;
-    };
-};
-
 declare type __VLS_WithTemplateSlots_4<T, S> = T & {
-    new (): {
-        $slots: S;
-    };
-};
-
-declare type __VLS_WithTemplateSlots_40<T, S> = T & {
-    new (): {
-        $slots: S;
-    };
-};
-
-declare type __VLS_WithTemplateSlots_41<T, S> = T & {
-    new (): {
-        $slots: S;
-    };
-};
-
-declare type __VLS_WithTemplateSlots_42<T, S> = T & {
-    new (): {
-        $slots: S;
-    };
-};
-
-declare type __VLS_WithTemplateSlots_43<T, S> = T & {
     new (): {
         $slots: S;
     };
@@ -1224,16 +931,6 @@ export declare interface AccordionRootContext {
 
 export declare type AccordionValue = string | number;
 
-export declare const AffixPlugin: Plugin_2;
-
-export declare const AlertPlugin: Plugin_2;
-
-export declare const AvatarGroupPlugin: Plugin_2;
-
-export declare const AvatarPlugin: Plugin_2;
-
-export declare const BadgePlugin: Plugin_2;
-
 export declare type Booleanish = 'true' | 'false';
 
 /**
@@ -1242,8 +939,6 @@ export declare type Booleanish = 'true' | 'false';
  * @returns Booleanish значение
  */
 export declare function booleanToBooleanish(value: boolean): Booleanish;
-
-export declare const BreadcrumbsPlugin: Plugin_2;
 
 export declare const Button: {
     Root: {
@@ -1304,8 +999,6 @@ export declare type ButtonProps = {
     wide?: boolean;
     type?: HTMLButtonElement['type'];
 } & Partial<ThemeProp> & Partial<SizeProp> & Partial<PrimitiveProps>;
-
-export declare const CalendarPlugin: Plugin_2;
 
 export declare interface CancelOptions {
     /**
@@ -1503,8 +1196,6 @@ export declare const ClickOutsidePlugin: Plugin_2;
  */
 export declare function clone<T>(value: T, hash?: WeakMap<object, unknown>): T;
 
-export declare const CollapsePlugin: Plugin_2;
-
 export declare type ColOffset = ColSizeValue;
 
 export declare const ColPlugin: Plugin_2;
@@ -1569,6 +1260,7 @@ export declare type ConfigProviderProps = {
     locale?: LocaleTranslation;
     teleportTarget?: string | HTMLElement;
     direction?: 'ltr' | 'rtl';
+    icons?: VauIconRegistry;
 };
 
 export declare interface ConfigProviderRootContext {
@@ -1578,19 +1270,9 @@ export declare interface ConfigProviderRootContext {
 
 export declare const ConfigProviderRootContextKey: InjectionKey<ConfigProviderRootContext>;
 
-export declare const ConfirmPlugin: Plugin_2;
-
-export declare class ConfirmService {
-    #private;
-    static open(options: IConfirmServiceOpenOptions, appContext?: AppContext): Promise<boolean>;
-    private static close;
-}
-
 export declare const ContainerPlugin: Plugin_2;
 
 export declare type ContainerProps = Partial<SizeProp>;
-
-export declare const CountdownPlugin: Plugin_2;
 
 /**
  * @description `debounce` - Ограничивает вызов функции так, чтобы она выполнялась только один раз после завершения серии быстрых вызовов.
@@ -1682,14 +1364,6 @@ export declare const Divider: {
 export declare const DividerPlugin: Plugin_2;
 
 export declare type DividerProps = Partial<DirectionProp>;
-
-export declare const DrawerPlugin: Plugin_2;
-
-export declare class DrawerService {
-    static open(options: IDrawerServiceOpenOptions, appContext?: AppContext): void;
-}
-
-export declare const DropdownPlugin: Plugin_2;
 
 export declare type EmitReturn<T> = T extends (...args: Array<unknown>) => infer R ? R : never;
 
@@ -2081,33 +1755,7 @@ export declare const Grid: {
     });
 };
 
-declare interface IConfirmServiceEmits {
-    onSuccess?: VoidFunction;
-    onCancel?: VoidFunction;
-    onClose?: VoidFunction;
-}
-
-declare type IConfirmServiceOpenOptions = IVConfirmProps & IConfirmServiceEmits;
-
-declare interface IDrawerServiceEmits {
-    onOpened?: (payload: Element) => void;
-    onClosed?: (payload: Element) => void;
-    onOpen?: VoidFunction;
-    onClose?: VoidFunction;
-}
-
-declare type IDrawerServiceOpenOptions = IVDrawerProps & IDrawerServiceEmits;
-
-export declare const ImagePlugin: Plugin_2;
-
-declare interface IModalServiceEmits {
-    onOpened?: (payload: Element) => void;
-    onClosed?: (payload: Element) => void;
-    onOpen?: VoidFunction;
-    onClose?: VoidFunction;
-}
-
-declare type IModalServiceOpenOptions = IVModalProps & IModalServiceEmits;
+export declare type IconRenderFn = () => VNodeChild;
 
 export declare const InplacePlugin: Plugin_2;
 
@@ -2976,283 +2624,14 @@ export declare function isString(value: unknown): value is string;
  */
 export declare function isUndefined(value: unknown): value is undefined;
 
-declare interface IToastServiceEmits {
-    onSuccess?: VoidFunction;
-    onCancel?: VoidFunction;
-    onClose?: VoidFunction;
-}
-
-declare type IToastServiceOpenOptions = IVToastProps & IToastServiceEmits;
-
 export declare type IUseToggle = [Ref<boolean>, (payload: boolean) => void, VoidFunction];
-
-/**
- * Интерфейс свойств компонента VAffix
- * @interface IVAffixProps
- */
-export declare interface IVAffixProps {
-    offsetTop?: number;
-    offsetBottom?: number;
-    disabled?: boolean;
-    container?: string;
-}
-
-/**
- * Интерфейс свойств компонента VAlert
- * @interface IVAlertProps
- */
-export declare type IVAlertProps = {
-    title?: string;
-    description?: string;
-    showIcon?: boolean;
-} & Partial<ThemeProp> & Partial<SizeProp>;
-
-/**
- * Интерфейс слотов компонента VAlert
- * @interface IVAlertSlots
- */
-export declare interface IVAlertSlots {
-    default?: UnscopedSlot;
-    title?: UnscopedSlot;
-    description?: UnscopedSlot;
-}
-
-/**
- * Интерфейс свойств компонента VAvatar
- * @interface IVAvatarProps
- */
-export declare type IVAvatarProps = {
-    src?: string;
-    fallback?: string;
-    circle?: boolean;
-    label?: string;
-} & Partial<SizeProp> & Partial<ThemeProp>;
-
-/**
- * Интерфейс свойств компонента VBadge
- * @interface IVBadgeProps
- */
-export declare type IVBadgeProps = {
-    dot?: boolean;
-    hidden?: boolean;
-    max?: number;
-    value?: string | number;
-} & Partial<ThemeProp> & Partial<SizeProp>;
-
-/**
- * Интерфейс слотов компонента VBadge
- * @interface IVBadgeSlots
- */
-export declare interface IVBadgeSlots {
-    default?: UnscopedSlot;
-    content?: (props: {
-        value: string;
-    }) => void;
-}
-
-/**
- * Интерфейс свойств компонента VBreadcrumbs
- * @interface IVBreadcrumbsProps
- */
-export declare interface IVBreadcrumbsProps {
-}
-
-/**
- * Интерфейс свойств компонента VCalendar
- * @interface IVCalendarProps
- */
-export declare type IVCalendarProps = {} & Partial<ThemeProp> & Partial<SizeProp>;
-
-/**
- * Интерфейс событий компонента VCollapse
- * @interface IVCollapseEmits
- */
-export declare interface IVCollapseEmits {
-    change: [payload: boolean];
-}
-
-/**
- * Интерфейс свойств компонента VCollapse
- * @interface IVCollapseProps
- */
-export declare interface IVCollapseProps {
-}
-
-/**
- * Интерфейс свойств компонента VConfirm
- * @interface IVConfirmProps
- */
-declare type IVConfirmProps = {
-    title?: string;
-    message?: string | VNode;
-    useHtml?: boolean;
-    confirmText?: string;
-    cancelText?: string;
-} & Partial<ThemeProp> & Partial<SizeProp>;
-
-/**
- * Интерфейс событий компонента VCountdown
- * @interface IVCountdownEmits
- */
-export declare interface IVCountdownEmits {
-    start: [];
-    progress: [payload: IVCountdownProgress];
-    abort: [];
-    end: [];
-}
-
-export declare interface IVCountdownExpose {
-    start: VoidFunction;
-    abort: VoidFunction;
-    end: VoidFunction;
-    restart: VoidFunction;
-}
-
-export declare type IVCountdownInstance = IVCountdownExpose;
-
-export declare interface IVCountdownProgress {
-    days: number;
-    hours: number;
-    minutes: number;
-    seconds: number;
-    milliseconds: number;
-    totalDays: number;
-    totalHours: number;
-    totalMinutes: number;
-    totalSeconds: number;
-    totalMilliseconds: number;
-}
-
-/**
- * Интерфейс свойств компонента VCountdown
- * @interface IVCountdownProps
- */
-export declare interface IVCountdownProps {
-    autoStart?: boolean;
-    interval?: number;
-    start: number;
-    now?: number;
-}
-
-/**
- * Интерфейс слотов компонента VCountdown
- * @interface IVCountdownSlots
- */
-export declare interface IVCountdownSlots {
-    default?: (props: {
-        years: number;
-        months: number;
-        days: number;
-        hours: number;
-        minutes: number;
-        seconds: number;
-        milliseconds: number;
-    }) => Array<VNode>;
-}
 
 declare type IVDividerSlots = {
     default?: UnscopedSlot;
 };
 
-/**
- * Интерфейс событий компонента VDrawer
- * @interface IVDrawerEmits
- */
-export declare interface IVDrawerEmits {
-    opened: [payload: Element];
-    closed: [payload: Element];
-    open: [];
-    close: [];
-}
-
-/**
- * Интерфейс слотов компонента VDrawer
- * @interface IVDrawerProps
- */
-export declare type IVDrawerProps = {
-    appendToBody?: boolean;
-    title?: string;
-    destroyOnClose?: boolean;
-} & Partial<SizeProp>;
-
-export declare interface IVDrawerScopedSlot {
-    close: VoidFunction;
-}
-
-/**
- * Интерфейс слотов компонента VDrawer
- * @interface IVDrawerSlots
- */
-export declare interface IVDrawerSlots {
-    default?: (props: IVDrawerScopedSlot) => Array<VNode>;
-    header?: (props: IVDrawerScopedSlot) => Array<VNode>;
-    footer?: (props: IVDrawerScopedSlot) => Array<VNode>;
-}
-
-/**
- * Интерфейс контекста компонента VDropdown
- * @interface IVDropdownContext
- */
-export declare interface IVDropdownContext {
-    props: IVDropdownProps;
-}
-
-/**
- * Интерфейс событий компонента VDropdown
- * @interface IVDropdownEmits
- */
-export declare interface IVDropdownEmits {
-    opened: [payload: Element];
-    closed: [payload: Element];
-    open: [];
-    close: [];
-}
-
-export declare interface IVDropdownExpose {
-    setVisible: (payload: boolean) => void;
-    isVisible: Ref<boolean>;
-}
-
-export declare interface IVDropdownInstance {
-    setVisible: (payload: boolean) => void;
-    isVisible: boolean;
-}
-
-/**
- * Интерфейс свойств компонента VDropdown
- * @interface IVDropdownProps
- */
-export declare interface IVDropdownProps {
-}
-
-/**
- * Интерфейс слотов компонента VDropdown
- * @interface IVDropdownSlots
- */
-export declare interface IVDropdownSlots {
-    default?: UnscopedSlot;
-    trigger?: (props: {
-        isVisible: boolean;
-        toggle: VoidFunction;
-        setVisible: (payload: boolean) => void;
-    }) => Array<VNode>;
-}
-
 export declare interface IVFormItemProps extends FormItemProps {
     title?: string;
-}
-
-export declare interface IVImageEmits {
-    error: [payload: Event];
-    load: [payload: Event];
-}
-
-/**
- * Интерфейс свойств компонента VImage
- * @interface IVImageProps
- */
-export declare interface IVImageProps {
-    src: string;
 }
 
 export declare interface IVInplaceEmits {
@@ -3282,140 +2661,6 @@ export declare interface IVModalSlots {
     header?: UnscopedSlot;
     footer?: UnscopedSlot;
 }
-
-/**
- * Интерфейс событий компонента VPagination
- * @interface IVPaginationEmits
- */
-export declare interface IVPaginationEmits {
-    change: [payload: number];
-    load: [payload: number];
-}
-
-export declare interface IVPaginationExpose {
-    goToFirstPage: VoidFunction;
-    goToPrevPage: VoidFunction;
-    setPage: (page: number) => void;
-    goToNextPage: VoidFunction;
-    goToLastPage: VoidFunction;
-}
-
-export declare type IVPaginationInstance = IVPaginationExpose;
-
-/**
- * Интерфейс свойств компонента VPagination
- * @interface IVPaginationProps
- */
-export declare interface IVPaginationProps {
-    total: number;
-    current: number;
-    perPage: number;
-    range?: number;
-    visibleMenu?: boolean;
-    moreButton?: boolean;
-}
-
-/**
- * Интерфейс свойств компонента VPlaceholder
- * @interface IVPlaceholderProps
- */
-export declare interface IVPlaceholderProps {
-    animated?: boolean;
-}
-
-/**
- * Интерфейс свойств компонента VProgress
- * @interface IVProgressProps
- */
-export declare type IVProgressProps = {
-    indeterminate?: boolean;
-    showValue?: boolean;
-    value: number;
-} & Partial<ThemeProp> & Partial<SizeProp>;
-
-/**
- * Интерфейс свойств компонента VSpinner
- * @interface IVSpinnerProps
- */
-export declare type IVSpinnerProps = {} & Partial<SizeProp> & Partial<ThemeProp>;
-
-/**
- * Интерфейс контекста компонента VTab
- * @interface IVTabContext
- */
-export declare interface IVTabContext {
-    id: string;
-    props: IVTabProps;
-    slots: IVTabSlots;
-}
-
-/**
- * Интерфейс свойств компонента VTab
- * @interface IVTabProps
- */
-export declare interface IVTabProps {
-    title?: string;
-    value: IVTabValue;
-    disabled?: boolean;
-}
-
-/**
- * Интерфейс контекста компонента VTabs
- * @interface IVTabsContext
- */
-export declare interface IVTabsContext {
-    props: IVTabsProps;
-    modelValue: ModelRef<IVTabsModelValue>;
-    tabs: Ref<Array<IVTabContext>>;
-    handleChange: (value: IVTabValue) => void;
-    registerTab: (tab: IVTabContext) => void;
-    unregisterTab: (tab: IVTabContext) => void;
-}
-
-export declare interface IVTabScopedSlot {
-    isActive: boolean;
-}
-
-/**
- * Интерфейс событий компонента VTabs
- * @interface IVTabsProps
- */
-export declare interface IVTabsEmits {
-    change: [payload: IVTabsModelValue];
-}
-
-/**
- * Интерфейс слотов компонента VTab
- * @interface IVTabSlots
- */
-export declare interface IVTabSlots {
-    default?: (props: IVTabScopedSlot) => Array<VNode>;
-    title?: (props: IVTabScopedSlot) => Array<VNode>;
-}
-
-export declare type IVTabsModelValue = Maybe<IVTabValue>;
-
-/**
- * Интерфейс свойств компонента VTabs
- * @interface IVTabsProps
- */
-export declare interface IVTabsProps {
-    scrollable?: boolean;
-}
-
-export declare type IVTabValue = number | string;
-
-/**
- * Интерфейс свойств компонента VToast
- * @interface IVToastProps
- */
-declare type IVToastProps = {
-    title?: string;
-    message?: string | VNode;
-    useHtml?: boolean;
-    duration?: number;
-    clearable?: boolean;
-} & Partial<ThemeProp> & Partial<SizeProp>;
 
 export declare const Layout: {
     Root: {
@@ -3737,10 +2982,6 @@ export declare interface ModalRootContext {
     close: VoidFunction;
 }
 
-export declare class ModalService {
-    static open(options: IModalServiceOpenOptions, appContext?: AppContext): void;
-}
-
 /**
  * @description `omit` - Функция создает новый объект, который содержит все свойства исходного объекта, за исключением указанных ключей. Это полезно для исключения ненужных свойств из объекта.
  * @param {object} object Исходный объект, из которого будут исключаться свойства.
@@ -3781,8 +3022,6 @@ export declare interface OptionSlots {
 
 export declare type OptionValue = string;
 
-export declare const PaginationPlugin: Plugin_2;
-
 /**
  * @description `pick` - Функция создает новый объект, который содержит только указанные ключи из исходного объекта. Это полезно для извлечения подмножества свойств объекта.
  * @param {object} object Исходный объект, из которого будут извлекаться свойства.
@@ -3800,8 +3039,6 @@ export declare const PaginationPlugin: Plugin_2;
  *
  */
 export declare function pick<O extends Record<string, unknown>, K extends keyof O>(object: O, keys: K[]): Pick<O, K>;
-
-export declare const PlaceholderPlugin: Plugin_2;
 
 export declare const Position: Readonly<{
     readonly top: "top";
@@ -3848,8 +3085,6 @@ export declare type PrimitiveProps = {
     asChild: boolean;
     as: keyof HTMLElementTagNameMap | Component;
 };
-
-export declare const ProgressPlugin: Plugin_2;
 
 export declare const Radio: {
     Root: {
@@ -4423,8 +3658,6 @@ export declare const Sizes: Readonly<{
     readonly MASSIVE: "massive";
 }>;
 
-export declare const SpinnerPlugin: Plugin_2;
-
 export declare const Switch: {
     Root: {
         new (...args: any[]): CreateComponentPublicInstanceWithMixins<Readonly<{
@@ -4500,8 +3733,6 @@ export declare interface SwitchRootContext {
     isValid: MaybeRefOrGetter<boolean>;
     isInvalid: MaybeRefOrGetter<boolean>;
 }
-
-export declare const TabsPlugin: Plugin_2;
 
 export declare const Tag: {
     Root: {
@@ -4659,11 +3890,6 @@ export declare interface ThrottleOptions {
     debounceMode?: boolean;
 }
 
-export declare class ToastService {
-    #private;
-    static open(options: IToastServiceOpenOptions, appContext?: AppContext): void;
-}
-
 export declare const TooltipPlugin: Plugin_2;
 
 export declare type UnscopedSlot = () => Array<VNode>;
@@ -4731,8 +3957,6 @@ export declare interface UseAccordionTriggerOptions {
  export declare function useClipboard(): {};
 
  export declare function useConfigProviderRootContext(): ConfigProviderRootContext;
-
- export declare function useDrawer(): {};
 
  /**
   * Создаёт объект обработчиков событий, проксирующих вызовы в переданный emit.
@@ -7207,53 +6431,38 @@ export declare interface UseAccordionTriggerOptions {
      title?: UnscopedSlot;
  }
 
- export declare const VAffix: __VLS_WithTemplateSlots_7<typeof __VLS_component_7, __VLS_TemplateResult_7["slots"]>;
-
- export declare const VAlert: __VLS_WithTemplateSlots_6<typeof __VLS_component_6, __VLS_TemplateResult_6["slots"]>;
-
  export declare type ValueOf<T> = T[keyof T];
 
+ /**
+  * Реестр иконок приложения: ключи — семантика (modalClose и т.д.), значения — render-функции.
+  */
+ export declare type VauIconRegistry = {
+     modalClose?: IconRenderFn;
+ };
+
  export declare const VauUI: Plugin_2;
-
- export declare const VAvatar: DefineComponent<IVAvatarProps, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, PublicProps, Readonly<IVAvatarProps> & Readonly<{}>, {}, {}, {}, {}, string, ComponentProvideOptions, false, {}, HTMLDivElement>;
-
- export declare const VAvatarGroup: __VLS_WithTemplateSlots_5<typeof __VLS_component_5, __VLS_TemplateResult_5["slots"]>;
-
- export declare const VBadge: __VLS_WithTemplateSlots_8<typeof __VLS_component_8, __VLS_TemplateResult_8["slots"]>;
-
- export declare const VBreadcrumbs: DefineComponent<IVBreadcrumbsProps, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, PublicProps, Readonly<IVBreadcrumbsProps> & Readonly<{}>, {}, {}, {}, {}, string, ComponentProvideOptions, false, {}, HTMLElement>;
 
  export declare const VButton: __VLS_WithTemplateSlots<typeof __VLS_component, __VLS_TemplateResult["slots"]>;
 
  export declare const VButtonGroup: __VLS_WithTemplateSlots_2<typeof __VLS_component_2, __VLS_TemplateResult_2["slots"]>;
 
- export declare const VCalendar: DefineComponent<IVCalendarProps, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, PublicProps, Readonly<IVCalendarProps> & Readonly<{}>, {}, {}, {}, {}, string, ComponentProvideOptions, false, {}, HTMLDivElement>;
+ export declare const VCheckbox: __VLS_WithTemplateSlots_16<typeof __VLS_component_16, __VLS_TemplateResult_16["slots"]>;
 
- export declare const VCheckbox: __VLS_WithTemplateSlots_26<typeof __VLS_component_26, __VLS_TemplateResult_26["slots"]>;
-
- export declare const VCheckboxGroup: __VLS_WithTemplateSlots_27<typeof __VLS_component_27, __VLS_TemplateResult_27["slots"]>;
+ export declare const VCheckboxGroup: __VLS_WithTemplateSlots_17<typeof __VLS_component_17, __VLS_TemplateResult_17["slots"]>;
 
  export declare const vClickOutside: ObjectDirective;
 
- export declare const VCol: __VLS_WithTemplateSlots_17<typeof __VLS_component_17, __VLS_TemplateResult_17["slots"]>;
+ export declare const VCol: __VLS_WithTemplateSlots_10<typeof __VLS_component_10, __VLS_TemplateResult_10["slots"]>;
 
- export declare const VCollapse: __VLS_WithTemplateSlots_9<typeof __VLS_component_9, __VLS_TemplateResult_9["slots"]>;
+ export declare const VConfigProvider: __VLS_WithTemplateSlots_24<typeof __VLS_component_24, __VLS_TemplateResult_24["slots"]>;
 
- export declare const VConfigProvider: __VLS_WithTemplateSlots_34<typeof __VLS_component_34, __VLS_TemplateResult_34["slots"]>;
+ export declare const VContainer: __VLS_WithTemplateSlots_8<typeof __VLS_component_8, __VLS_TemplateResult_8["slots"]>;
 
- export declare const VContainer: __VLS_WithTemplateSlots_15<typeof __VLS_component_15, __VLS_TemplateResult_15["slots"]>;
+ export declare const VDivider: __VLS_WithTemplateSlots_25<typeof __VLS_component_25, __VLS_TemplateResult_25["slots"]>;
 
- export declare const VCountdown: __VLS_WithTemplateSlots_41<typeof __VLS_component_41, __VLS_TemplateResult_41["slots"]>;
+ export declare const VFlex: __VLS_WithTemplateSlots_26<typeof __VLS_component_26, __VLS_TemplateResult_26["slots"]>;
 
- export declare const VDivider: __VLS_WithTemplateSlots_36<typeof __VLS_component_36, __VLS_TemplateResult_36["slots"]>;
-
- export declare const VDrawer: __VLS_WithTemplateSlots_12<typeof __VLS_component_12, __VLS_TemplateResult_12["slots"]>;
-
- export declare const VDropdown: __VLS_WithTemplateSlots_13<typeof __VLS_component_13, __VLS_TemplateResult_13["slots"]>;
-
- export declare const VFlex: __VLS_WithTemplateSlots_37<typeof __VLS_component_37, __VLS_TemplateResult_37["slots"]>;
-
- export declare const VFlexItem: __VLS_WithTemplateSlots_38<typeof __VLS_component_38, __VLS_TemplateResult_38["slots"]>;
+ export declare const VFlexItem: __VLS_WithTemplateSlots_27<typeof __VLS_component_27, __VLS_TemplateResult_27["slots"]>;
 
  export declare const VForm: <MODEL extends FormModel>(__VLS_props: NonNullable<Awaited<typeof __VLS_setup>>["props"], __VLS_ctx?: __VLS_PrettifyLocal<Pick<NonNullable<Awaited<typeof __VLS_setup>>, "attrs" | "emit" | "slots">>, __VLS_expose?: NonNullable<Awaited<typeof __VLS_setup>>["expose"], __VLS_setup?: Promise<{
      props: __VLS_PrettifyLocal<Pick<Partial<{}> & Omit<{
@@ -7272,94 +6481,65 @@ export declare interface UseAccordionTriggerOptions {
      __ctx?: Awaited<typeof __VLS_setup>;
  };
 
- export declare const VFormItem: __VLS_WithTemplateSlots_25<typeof __VLS_component_25, __VLS_TemplateResult_25["slots"]>;
+ export declare const VFormItem: __VLS_WithTemplateSlots_15<typeof __VLS_component_15, __VLS_TemplateResult_15["slots"]>;
 
- export declare const VImage: DefineComponent<IVImageProps, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {
- error: (payload: Event) => any;
- load: (payload: Event) => any;
- }, string, PublicProps, Readonly<IVImageProps> & Readonly<{
- onError?: ((payload: Event) => any) | undefined;
- onLoad?: ((payload: Event) => any) | undefined;
- }>, {}, {}, {}, {}, string, ComponentProvideOptions, false, {
- root: HTMLElement;
- image: HTMLImageElement;
- }, HTMLElement>;
+ export declare const VInplace: __VLS_WithTemplateSlots_5<typeof __VLS_component_5, __VLS_TemplateResult_5["slots"]>;
 
- export declare const VInplace: __VLS_WithTemplateSlots_10<typeof __VLS_component_10, __VLS_TemplateResult_10["slots"]>;
+ export declare const VInput: __VLS_WithTemplateSlots_18<typeof __VLS_component_18, __VLS_TemplateResult_18["slots"]>;
 
- export declare const VInput: __VLS_WithTemplateSlots_28<typeof __VLS_component_28, __VLS_TemplateResult_28["slots"]>;
-
- export declare const VInputCode: DefineComponent<__VLS_PublicProps_7, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {
+ export declare const VInputCode: DefineComponent<__VLS_PublicProps_5, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {
  "update:modelValue": (value: InputCodeModelValue) => any;
- }, string, PublicProps, Readonly<__VLS_PublicProps_7> & Readonly<{
+ }, string, PublicProps, Readonly<__VLS_PublicProps_5> & Readonly<{
  "onUpdate:modelValue"?: ((value: InputCodeModelValue) => any) | undefined;
  }>, {}, {}, {}, {}, string, ComponentProvideOptions, false, {}, HTMLDivElement>;
 
- export declare const VInputGroup: __VLS_WithTemplateSlots_39<typeof __VLS_component_39, __VLS_TemplateResult_39["slots"]>;
+ export declare const VInputGroup: __VLS_WithTemplateSlots_28<typeof __VLS_component_28, __VLS_TemplateResult_28["slots"]>;
 
- export declare const VInputGroupAddon: __VLS_WithTemplateSlots_40<typeof __VLS_component_40, __VLS_TemplateResult_40["slots"]>;
+ export declare const VInputGroupAddon: __VLS_WithTemplateSlots_29<typeof __VLS_component_29, __VLS_TemplateResult_29["slots"]>;
 
- export declare const VInputNumber: DefineComponent<__VLS_PublicProps_8, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {
+ export declare const VInputNumber: DefineComponent<__VLS_PublicProps_6, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {
  "update:modelValue": (value: number) => any;
- }, string, PublicProps, Readonly<__VLS_PublicProps_8> & Readonly<{
+ }, string, PublicProps, Readonly<__VLS_PublicProps_6> & Readonly<{
  "onUpdate:modelValue"?: ((value: number) => any) | undefined;
  }>, {}, {}, {}, {}, string, ComponentProvideOptions, false, {}, HTMLDivElement>;
 
- export declare const VInputPassword: DefineComponent<__VLS_PublicProps_9, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {
+ export declare const VInputPassword: DefineComponent<__VLS_PublicProps_7, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {
  "update:modelValue": (value: InputModelValue) => any;
- }, string, PublicProps, Readonly<__VLS_PublicProps_9> & Readonly<{
+ }, string, PublicProps, Readonly<__VLS_PublicProps_7> & Readonly<{
  "onUpdate:modelValue"?: ((value: InputModelValue) => any) | undefined;
  }>, {}, {}, {}, {}, string, ComponentProvideOptions, false, {}, HTMLDivElement>;
 
  export declare const VisiblePlugin: Plugin_2;
 
- export declare const VLayout: __VLS_WithTemplateSlots_14<typeof __VLS_component_14, __VLS_TemplateResult_14["slots"]>;
+ export declare const VLayout: __VLS_WithTemplateSlots_7<typeof __VLS_component_7, __VLS_TemplateResult_7["slots"]>;
 
  export declare const vLoading: ObjectDirective;
 
- export declare const VMenu: __VLS_WithTemplateSlots_43<typeof __VLS_component_43, __VLS_TemplateResult_43["slots"]>;
+ export declare const VMenu: __VLS_WithTemplateSlots_31<typeof __VLS_component_31, __VLS_TemplateResult_31["slots"]>;
 
- export declare const VMenuLink: __VLS_WithTemplateSlots_42<typeof __VLS_component_42, __VLS_TemplateResult_42["slots"]>;
+ export declare const VMenuLink: __VLS_WithTemplateSlots_30<typeof __VLS_component_30, __VLS_TemplateResult_30["slots"]>;
 
- export declare const VModal: __VLS_WithTemplateSlots_11<typeof __VLS_component_11, __VLS_TemplateResult_11["slots"]>;
+ export declare const VModal: __VLS_WithTemplateSlots_6<typeof __VLS_component_6, __VLS_TemplateResult_6["slots"]>;
 
- export declare const VOption: __VLS_WithTemplateSlots_32<typeof __VLS_component_32, __VLS_TemplateResult_32["slots"]>;
+ export declare const VOption: __VLS_WithTemplateSlots_22<typeof __VLS_component_22, __VLS_TemplateResult_22["slots"]>;
 
- export declare const VPagination: DefineComponent<IVPaginationProps, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {
- change: (payload: number) => any;
- load: (payload: number) => any;
- }, string, PublicProps, Readonly<IVPaginationProps> & Readonly<{
- onChange?: ((payload: number) => any) | undefined;
- onLoad?: ((payload: number) => any) | undefined;
- }>, {}, {}, {}, {}, string, ComponentProvideOptions, false, {}, HTMLDivElement>;
+ export declare const VRadio: __VLS_WithTemplateSlots_19<typeof __VLS_component_19, __VLS_TemplateResult_19["slots"]>;
 
- export declare const VPlaceholder: __VLS_WithTemplateSlots_18<typeof __VLS_component_18, __VLS_TemplateResult_18["slots"]>;
+ export declare const VRadioGroup: __VLS_WithTemplateSlots_20<typeof __VLS_component_20, __VLS_TemplateResult_20["slots"]>;
 
- export declare const VProgress: __VLS_WithTemplateSlots_35<typeof __VLS_component_35, __VLS_TemplateResult_35["slots"]>;
+ export declare const VRow: __VLS_WithTemplateSlots_9<typeof __VLS_component_9, __VLS_TemplateResult_9["slots"]>;
 
- export declare const VRadio: __VLS_WithTemplateSlots_29<typeof __VLS_component_29, __VLS_TemplateResult_29["slots"]>;
+ export declare const VScrollbar: __VLS_WithTemplateSlots_11<typeof __VLS_component_11, __VLS_TemplateResult_11["slots"]>;
 
- export declare const VRadioGroup: __VLS_WithTemplateSlots_30<typeof __VLS_component_30, __VLS_TemplateResult_30["slots"]>;
+ export declare const VSelect: __VLS_WithTemplateSlots_21<typeof __VLS_component_21, __VLS_TemplateResult_21["slots"]>;
 
- export declare const VRow: __VLS_WithTemplateSlots_16<typeof __VLS_component_16, __VLS_TemplateResult_16["slots"]>;
+ export declare const VSwitch: __VLS_WithTemplateSlots_23<typeof __VLS_component_23, __VLS_TemplateResult_23["slots"]>;
 
- export declare const VScrollbar: __VLS_WithTemplateSlots_19<typeof __VLS_component_19, __VLS_TemplateResult_19["slots"]>;
+ export declare const VTag: __VLS_WithTemplateSlots_12<typeof __VLS_component_12, __VLS_TemplateResult_12["slots"]>;
 
- export declare const VSelect: __VLS_WithTemplateSlots_31<typeof __VLS_component_31, __VLS_TemplateResult_31["slots"]>;
+ export declare const VTagGroup: __VLS_WithTemplateSlots_13<typeof __VLS_component_13, __VLS_TemplateResult_13["slots"]>;
 
- export declare const VSpinner: DefineComponent<IVSpinnerProps, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, PublicProps, Readonly<IVSpinnerProps> & Readonly<{}>, {}, {}, {}, {}, string, ComponentProvideOptions, false, {}, HTMLDivElement>;
-
- export declare const VSwitch: __VLS_WithTemplateSlots_33<typeof __VLS_component_33, __VLS_TemplateResult_33["slots"]>;
-
- export declare const VTab: __VLS_WithTemplateSlots_21<typeof __VLS_component_21, __VLS_TemplateResult_21["slots"]>;
-
- export declare const VTabs: __VLS_WithTemplateSlots_20<typeof __VLS_component_20, __VLS_TemplateResult_20["slots"]>;
-
- export declare const VTag: __VLS_WithTemplateSlots_22<typeof __VLS_component_22, __VLS_TemplateResult_22["slots"]>;
-
- export declare const VTagGroup: __VLS_WithTemplateSlots_23<typeof __VLS_component_23, __VLS_TemplateResult_23["slots"]>;
-
- export declare const VText: __VLS_WithTemplateSlots_24<typeof __VLS_component_24, __VLS_TemplateResult_24["slots"]>;
+ export declare const VText: __VLS_WithTemplateSlots_14<typeof __VLS_component_14, __VLS_TemplateResult_14["slots"]>;
 
  export declare const vTooltip: ObjectDirective;
 
