@@ -3,18 +3,15 @@ import type { LocaleTranslation } from '../../types';
 
 export type IconRenderFn = () => VNodeChild;
 
-/**
- * Реестр иконок приложения: ключи — семантика (modalClose и т.д.), значения — render-функции.
- */
-export type VauIconRegistry = {
-  modalClose?: IconRenderFn;
-};
+export type Icons = 'modalClose';
+
+export type IconRegistry = Record<Icons, IconRenderFn>;
 
 export type ConfigProviderProps = {
   locale?: LocaleTranslation;
   teleportTarget?: string | HTMLElement;
   direction?: 'ltr' | 'rtl';
-  icons?: VauIconRegistry;
+  icons?: Partial<IconRegistry>;
 };
 
 export interface ConfigProviderRootContext {
