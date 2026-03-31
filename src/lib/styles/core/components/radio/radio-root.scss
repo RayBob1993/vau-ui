@@ -1,4 +1,7 @@
 .radio {
+  display: inline-flex;
+  align-items: center;
+
   &__input {
     position: absolute;
 
