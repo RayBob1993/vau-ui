@@ -19,6 +19,12 @@
     class="tag"
     :class="{
       [`tag--size-${size}`]: size,
+      [`tag--size-xs-${sizeXs}`]: sizeXs,
+      [`tag--size-sm-${sizeSm}`]: sizeSm,
+      [`tag--size-md-${sizeMd}`]: sizeMd,
+      [`tag--size-lg-${sizeLg}`]: sizeLg,
+      [`tag--size-xl-${sizeXl}`]: sizeXl,
+      [`tag--size-xxl-${sizeXxl}`]: sizeXxl,
       [`tag--theme-${theme}`]: theme
     }"
   >

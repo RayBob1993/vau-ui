@@ -59,7 +59,13 @@
       'input--invalid': isInvalid,
       'input--valid': isValid,
       [`input--theme-${theme}`]: theme,
-      [`input--size-${size}`]: size
+      [`input--size-${size}`]: size,
+      [`input--size-xs-${sizeXs}`]: sizeXs,
+      [`input--size-sm-${sizeSm}`]: sizeSm,
+      [`input--size-md-${sizeMd}`]: sizeMd,
+      [`input--size-lg-${sizeLg}`]: sizeLg,
+      [`input--size-xl-${sizeXl}`]: sizeXl,
+      [`input--size-xxl-${sizeXxl}`]: sizeXxl
     }"
   >
     <slot

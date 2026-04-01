@@ -1260,7 +1260,7 @@ export declare type ConfigProviderProps = {
     locale?: LocaleTranslation;
     teleportTarget?: string | HTMLElement;
     direction?: 'ltr' | 'rtl';
-    icons?: VauIconRegistry;
+    icons?: Partial<IconRegistry>;
 };
 
 export declare interface ConfigProviderRootContext {
@@ -1755,7 +1755,11 @@ export declare const Grid: {
     });
 };
 
+export declare type IconRegistry = Record<Icons, IconRenderFn>;
+
 export declare type IconRenderFn = () => VNodeChild;
+
+export declare type Icons = 'modalClose';
 
 export declare const InplacePlugin: Plugin_2;
 
@@ -3646,6 +3650,12 @@ export declare type Size = ValueOf<typeof Sizes>;
 
 export declare interface SizeProp {
     size: Size;
+    sizeXs: Size;
+    sizeSm: Size;
+    sizeMd: Size;
+    sizeLg: Size;
+    sizeXl: Size;
+    sizeXxl: Size;
 }
 
 export declare const Sizes: Readonly<{
@@ -6432,13 +6442,6 @@ export declare interface UseAccordionTriggerOptions {
  }
 
  export declare type ValueOf<T> = T[keyof T];
-
- /**
-  * Реестр иконок приложения: ключи — семантика (modalClose и т.д.), значения — render-функции.
-  */
- export declare type VauIconRegistry = {
-     modalClose?: IconRenderFn;
- };
 
  export declare const VauUI: Plugin_2;
 

@@ -16,6 +16,12 @@
       'text--uppercase': uppercase,
       'text--underline': underline,
       [`text--size-${size}`]: size,
+      [`text--size-xs-${sizeXs}`]: sizeXs,
+      [`text--size-sm-${sizeSm}`]: sizeSm,
+      [`text--size-md-${sizeMd}`]: sizeMd,
+      [`text--size-lg-${sizeLg}`]: sizeLg,
+      [`text--size-xl-${sizeXl}`]: sizeXl,
+      [`text--size-xxl-${sizeXxl}`]: sizeXxl,
       [`text--theme-${theme}`]: theme,
       [`text--weight-${weight}`]: weight
     }"

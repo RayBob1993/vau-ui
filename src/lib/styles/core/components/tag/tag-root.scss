@@ -1,0 +1,25 @@
+.tag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--tag-gap, 0);
+  padding: var(--tag-padding-y, 0) var(--tag-padding-x, 0);
+  min-height: var(--tag-min-height, 0);
+  max-height: var(--tag-max-height, none);
+  min-width: var(--tag-min-width, 0);
+  max-width: var(--tag-max-width, none);
+
+  font-size: var(--tag-font-size);
+  line-height: var(--tag-line-height);
+  color: var(--tag-color);
+  font-weight: var(--tag-font-weight);
+
+  background-color: var(--tag-background-color);
+  border-radius: var(--tag-border-radius);
+
+  text-align: center;
+  text-transform: var(--tag-text-transform, none);
+  text-decoration: none;
+  text-shadow: none;
+  white-space: nowrap;
+}

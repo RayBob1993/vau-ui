@@ -1,0 +1,15 @@
+.tag-group {
+  display: inline-flex;
+
+  &--direction {
+    &-horizontal {
+      gap: 0 var(--tag-group-gap-x);
+      flex-direction: row;
+    }
+
+    &-vertical {
+      gap: var(--tag-group-gap-y) 0;
+      flex-direction: column;
+    }
+  }
+}

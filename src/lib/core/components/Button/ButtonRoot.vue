@@ -30,7 +30,13 @@
         'button--plain': plain,
         'button--wide': wide,
         [`button--theme-${theme}`]: theme,
-        [`button--size-${size}`]: size
+        [`button--size-${size}`]: size,
+        [`button--size-xs-${sizeXs}`]: sizeXs,
+        [`button--size-sm-${sizeSm}`]: sizeSm,
+        [`button--size-md-${sizeMd}`]: sizeMd,
+        [`button--size-lg-${sizeLg}`]: sizeLg,
+        [`button--size-xl-${sizeXl}`]: sizeXl,
+        [`button--size-xxl-${sizeXxl}`]: sizeXxl
       }
     ]"
     :disabled="isDisabled"

@@ -10,7 +10,13 @@
     :class="{
       [`menu--direction-${direction}`]: direction,
       [`menu--theme-${theme}`]: theme,
-      [`menu--size-${size}`]: size
+      [`menu--size-${size}`]: size,
+      [`menu--size-xs-${sizeXs}`]: sizeXs,
+      [`menu--size-sm-${sizeSm}`]: sizeSm,
+      [`menu--size-md-${sizeMd}`]: sizeMd,
+      [`menu--size-lg-${sizeLg}`]: sizeLg,
+      [`menu--size-xl-${sizeXl}`]: sizeXl,
+      [`menu--size-xxl-${sizeXxl}`]: sizeXxl
     }"
   >
     <slot/>
