@@ -7,11 +7,12 @@ export type Icons = 'modalClose';
 
 export type IconRegistry = Record<Icons, IconRenderFn>;
 
-export type ConfigProviderProps = {
+export interface ConfigProviderProps {
   locale?: LocaleTranslation;
   teleportTarget?: string | HTMLElement;
   direction?: 'ltr' | 'rtl';
   icons?: Partial<IconRegistry>;
+  fontFamilies?: Array<string>;
 };
 
 export interface ConfigProviderRootContext {
