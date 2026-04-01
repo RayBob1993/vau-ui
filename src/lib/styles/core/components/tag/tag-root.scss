@@ -9,6 +9,7 @@
   min-width: var(--tag-min-width, 0);
   max-width: var(--tag-max-width, none);
 
+  font-family: var(--tag-font-family, inherit);
   font-size: var(--tag-font-size);
   line-height: var(--tag-line-height);
   color: var(--tag-color);
