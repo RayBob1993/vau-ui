@@ -3,20 +3,21 @@
   import { Section } from '@vau/core';
   import { computed } from 'vue';
 
-  const props = withDefaults(defineProps<VSectionProps>(), {
-    level: 'h1'
-  });
+  const { title, level = 'h1', ...sectionProps } = defineProps<VSectionProps>();
 
   const slots = defineSlots<VSectionSlots>();
 
-  const headerVisible = computed<boolean>(() => Boolean(props.title || slots?.header));
+  const headerVisible = computed<boolean>(() => Boolean(title || slots?.header));
 </script>
 
 <template>
-  <Section.Root v-bind="props">
+  <Section.Root v-bind="sectionProps">
     <Section.Header v-if="headerVisible">
       <slot name="header">
-        <Section.Title :level="level">
+        <Section.Title
+          v-if="title"
+          :level="level"
+        >
           {{ title }}
         </Section.Title>
       </slot>

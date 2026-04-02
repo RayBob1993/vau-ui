@@ -153,9 +153,7 @@ as: keyof HTMLElementTagNameMap | Component;
 
 declare const __VLS_component_31: DefineComponent<MenuProps, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, PublicProps, Readonly<MenuProps> & Readonly<{}>, {}, {}, {}, {}, string, ComponentProvideOptions, false, {}, HTMLElement>;
 
-declare const __VLS_component_32: DefineComponent<VSectionProps, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, PublicProps, Readonly<VSectionProps> & Readonly<{}>, {
-level: "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
-}, {}, {}, {}, string, ComponentProvideOptions, false, {}, HTMLElement>;
+declare const __VLS_component_32: DefineComponent<VSectionProps, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, PublicProps, Readonly<VSectionProps> & Readonly<{}>, {}, {}, {}, {}, string, ComponentProvideOptions, false, {}, HTMLElement>;
 
 declare const __VLS_component_4: DefineComponent<VAccordionItemProps, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, PublicProps, Readonly<VAccordionItemProps> & Readonly<{}>, {}, {}, {}, {}, string, ComponentProvideOptions, false, {}, HTMLDivElement>;
 
