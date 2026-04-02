@@ -12,7 +12,6 @@ export interface ConfigProviderProps {
   teleportTarget?: string | HTMLElement;
   direction?: 'ltr' | 'rtl';
   icons?: Partial<IconRegistry>;
-  fontFamilies?: Array<string>;
 };
 
 export interface ConfigProviderRootContext {

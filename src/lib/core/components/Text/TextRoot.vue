@@ -1,18 +1,9 @@
 <script setup lang="ts">
   import type { TextProps } from './types';
-  import { useTextRoot } from './composables';
   import { Primitive } from '../Primitive';
-  import { useConfigProviderRootContext } from '../ConfigProvider';
 
-  const props = withDefaults(defineProps<TextProps>(), {
+  withDefaults(defineProps<TextProps>(), {
     as: 'div'
-  });
-
-  const configProviderRootContext = useConfigProviderRootContext();
-
-  const { fontFamily } = useTextRoot({
-    configProviderRootContext,
-    props: () => props
   });
 </script>
 
@@ -32,8 +23,7 @@
       [`text--size-xl-${sizeXl}`]: sizeXl,
       [`text--size-xxl-${sizeXxl}`]: sizeXxl,
       [`text--theme-${theme}`]: theme,
-      [`text--weight-${weight}`]: weight,
-      [`text--font-family-${fontFamily}`]: fontFamily
+      [`text--weight-${weight}`]: weight
     }"
   >
     <slot/>

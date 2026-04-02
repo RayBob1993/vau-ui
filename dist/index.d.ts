@@ -153,6 +153,10 @@ as: keyof HTMLElementTagNameMap | Component;
 
 declare const __VLS_component_31: DefineComponent<MenuProps, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, PublicProps, Readonly<MenuProps> & Readonly<{}>, {}, {}, {}, {}, string, ComponentProvideOptions, false, {}, HTMLElement>;
 
+declare const __VLS_component_32: DefineComponent<VSectionProps, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, PublicProps, Readonly<VSectionProps> & Readonly<{}>, {
+level: "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
+}, {}, {}, {}, string, ComponentProvideOptions, false, {}, HTMLElement>;
+
 declare const __VLS_component_4: DefineComponent<VAccordionItemProps, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, PublicProps, Readonly<VAccordionItemProps> & Readonly<{}>, {}, {}, {}, {}, string, ComponentProvideOptions, false, {}, HTMLDivElement>;
 
 declare const __VLS_component_5: DefineComponent<    {}, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {
@@ -471,6 +475,13 @@ declare function __VLS_template_31(): {
     rootEl: HTMLElement;
 };
 
+declare function __VLS_template_32(): {
+    attrs: Partial<{}>;
+    slots: Readonly<VSectionSlots> & VSectionSlots;
+    refs: {};
+    rootEl: HTMLElement;
+};
+
 declare function __VLS_template_4(): {
     attrs: Partial<{}>;
     slots: Readonly<VAccordionItemSlots> & VAccordionItemSlots;
@@ -566,6 +577,8 @@ declare type __VLS_TemplateResult_3 = ReturnType<typeof __VLS_template_3>;
 declare type __VLS_TemplateResult_30 = ReturnType<typeof __VLS_template_30>;
 
 declare type __VLS_TemplateResult_31 = ReturnType<typeof __VLS_template_31>;
+
+declare type __VLS_TemplateResult_32 = ReturnType<typeof __VLS_template_32>;
 
 declare type __VLS_TemplateResult_4 = ReturnType<typeof __VLS_template_4>;
 
@@ -724,6 +737,12 @@ declare type __VLS_WithTemplateSlots_30<T, S> = T & {
 };
 
 declare type __VLS_WithTemplateSlots_31<T, S> = T & {
+    new (): {
+        $slots: S;
+    };
+};
+
+declare type __VLS_WithTemplateSlots_32<T, S> = T & {
     new (): {
         $slots: S;
     };
@@ -1000,6 +1019,58 @@ export declare type ButtonProps = {
     type?: HTMLButtonElement['type'];
 } & Partial<ThemeProp> & Partial<SizeProp> & Partial<PrimitiveProps>;
 
+export declare const Calendar: {
+    Root: {
+        new (...args: any[]): CreateComponentPublicInstanceWithMixins<Readonly<CalendarProps> & Readonly<{}>, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, PublicProps, {}, false, {}, {}, GlobalComponents, GlobalDirectives, string, {}, HTMLDivElement, ComponentProvideOptions, {
+        P: {};
+        B: {};
+        D: {};
+        C: {};
+        M: {};
+        Defaults: {};
+        }, Readonly<CalendarProps> & Readonly<{}>, {}, {}, {}, {}, {}>;
+        __isFragment?: never;
+        __isTeleport?: never;
+        __isSuspense?: never;
+    } & ComponentOptionsBase<Readonly<CalendarProps> & Readonly<{}>, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, {}, {}, string, {}, GlobalComponents, GlobalDirectives, string, ComponentProvideOptions> & VNodeProps & AllowedComponentProps & ComponentCustomProps & (new () => {
+        $slots: {
+            default?(_: {}): any;
+        };
+    });
+    Header: {
+        new (...args: any[]): CreateComponentPublicInstanceWithMixins<Readonly<{}> & Readonly<{}>, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, PublicProps, {}, true, {}, {}, GlobalComponents, GlobalDirectives, string, {}, HTMLDivElement, ComponentProvideOptions, {
+        P: {};
+        B: {};
+        D: {};
+        C: {};
+        M: {};
+        Defaults: {};
+        }, Readonly<{}> & Readonly<{}>, {}, {}, {}, {}, {}>;
+        __isFragment?: never;
+        __isTeleport?: never;
+        __isSuspense?: never;
+    } & ComponentOptionsBase<Readonly<{}> & Readonly<{}>, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, {}, {}, string, {}, GlobalComponents, GlobalDirectives, string, ComponentProvideOptions> & VNodeProps & AllowedComponentProps & ComponentCustomProps & (new () => {
+        $slots: {
+            default?(_: {}): any;
+        };
+    });
+    Title: DefineComponent<    {}, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, PublicProps, Readonly<{}> & Readonly<{}>, {}, {}, {}, {}, string, ComponentProvideOptions, true, {}, HTMLDivElement>;
+    Weeks: DefineComponent<    {}, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, PublicProps, Readonly<{}> & Readonly<{}>, {}, {}, {}, {}, string, ComponentProvideOptions, true, {}, HTMLDivElement>;
+    WeekDays: DefineComponent<    {}, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, PublicProps, Readonly<{}> & Readonly<{}>, {}, {}, {}, {}, string, ComponentProvideOptions, true, {}, HTMLDivElement>;
+};
+
+export declare interface CalendarProps {
+    disabled?: boolean;
+    readonly?: boolean;
+    multiple?: boolean;
+}
+
+export declare interface CalendarRootContext {
+    props: MaybeRefOrGetter<CalendarProps>;
+}
+
+export declare type CalendarWeekDayFormat = 'narrow' | 'short' | 'long';
+
 export declare interface CancelOptions {
     /**
      * Если установлено в true, то только запланированный вызов будет отменен, а текущий выполнится.
@@ -1256,12 +1327,12 @@ export declare const ConfigProvider: {
 
 export declare const ConfigProviderPlugin: Plugin_2;
 
-export declare type ConfigProviderProps = {
+export declare interface ConfigProviderProps {
     locale?: LocaleTranslation;
     teleportTarget?: string | HTMLElement;
     direction?: 'ltr' | 'rtl';
     icons?: Partial<IconRegistry>;
-};
+}
 
 export declare interface ConfigProviderRootContext {
     props: MaybeRefOrGetter<ConfigProviderProps>;
@@ -3375,18 +3446,24 @@ export declare const Section: {
         };
     });
     Title: {
-        new (...args: any[]): CreateComponentPublicInstanceWithMixins<Readonly<{}> & Readonly<{}>, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, PublicProps, {}, true, {}, {}, GlobalComponents, GlobalDirectives, string, {}, HTMLHeadingElement, ComponentProvideOptions, {
+        new (...args: any[]): CreateComponentPublicInstanceWithMixins<Readonly<SectionTitleProps> & Readonly<{}>, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, PublicProps, {
+        level: "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
+        }, false, {}, {}, GlobalComponents, GlobalDirectives, string, {}, any, ComponentProvideOptions, {
         P: {};
         B: {};
         D: {};
         C: {};
         M: {};
         Defaults: {};
-        }, Readonly<{}> & Readonly<{}>, {}, {}, {}, {}, {}>;
+        }, Readonly<SectionTitleProps> & Readonly<{}>, {}, {}, {}, {}, {
+        level: "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
+        }>;
         __isFragment?: never;
         __isTeleport?: never;
         __isSuspense?: never;
-    } & ComponentOptionsBase<Readonly<{}> & Readonly<{}>, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, {}, {}, string, {}, GlobalComponents, GlobalDirectives, string, ComponentProvideOptions> & VNodeProps & AllowedComponentProps & ComponentCustomProps & (new () => {
+    } & ComponentOptionsBase<Readonly<SectionTitleProps> & Readonly<{}>, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, {
+    level: "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
+    }, {}, string, {}, GlobalComponents, GlobalDirectives, string, ComponentProvideOptions> & VNodeProps & AllowedComponentProps & ComponentCustomProps & (new () => {
         $slots: {
             default?(_: {}): any;
         };
@@ -3427,7 +3504,10 @@ export declare const Section: {
     });
 };
 
-export declare interface SectionProps {
+export declare type SectionProps = Partial<SizeProp> & Partial<ThemeProp>;
+
+export declare interface SectionTitleProps {
+    level?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
 }
 
 export declare const Select: {
@@ -6533,6 +6613,18 @@ export declare interface UseAccordionTriggerOptions {
  export declare const VRow: __VLS_WithTemplateSlots_9<typeof __VLS_component_9, __VLS_TemplateResult_9["slots"]>;
 
  export declare const VScrollbar: __VLS_WithTemplateSlots_11<typeof __VLS_component_11, __VLS_TemplateResult_11["slots"]>;
+
+ export declare const VSection: __VLS_WithTemplateSlots_32<typeof __VLS_component_32, __VLS_TemplateResult_32["slots"]>;
+
+ declare type VSectionProps = {
+     title?: string;
+ } & SectionProps & SectionTitleProps;
+
+ declare interface VSectionSlots {
+     header?: UnscopedSlot;
+     default?: UnscopedSlot;
+     footer?: UnscopedSlot;
+ }
 
  export declare const VSelect: __VLS_WithTemplateSlots_21<typeof __VLS_component_21, __VLS_TemplateResult_21["slots"]>;
 

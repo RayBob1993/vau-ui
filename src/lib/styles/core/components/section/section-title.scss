@@ -1,0 +1,8 @@
+.section-title {
+  font-family: var(--section-title-font-family, inherit);
+  font-size: var(--section-title-font-size);
+  font-weight: var(--section-title-font-weight);
+  line-height: var(--section-title-line-height);
+  color: var(--section-title-color);
+  text-transform: var(--section-title-transform, none);
+}

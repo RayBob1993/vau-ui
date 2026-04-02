@@ -1,5 +1,9 @@
 import type { LocaleTranslation } from '../types';
 
 export const ruRU: LocaleTranslation = {
-
+  components: {
+    modal: {
+      close: 'Закрыть модальное окно'
+    }
+  }
 };
