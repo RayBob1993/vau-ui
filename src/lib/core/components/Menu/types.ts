@@ -3,4 +3,7 @@ import type { PrimitiveProps } from '../Primitive';
 
 export type MenuProps = Partial<DirectionProp> & Partial<ThemeProp> & Partial<SizeProp>;
 
-export type MenuLinkProps = Partial<PrimitiveProps>;
+export type MenuItemProps = {
+  active?: boolean;
+  disabled?: boolean;
+} & Partial<PrimitiveProps>;

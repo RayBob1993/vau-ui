@@ -147,7 +147,7 @@ onChange?: ((payload: Maybe<AccordionValue>) => any) | undefined;
 "onUpdate:modelValue"?: ((value: AccordionModelValue) => any) | undefined;
 }>, {}, {}, {}, {}, string, ComponentProvideOptions, false, {}, HTMLDivElement>;
 
-declare const __VLS_component_30: DefineComponent<Partial<PrimitiveProps>, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, PublicProps, Readonly<Partial<PrimitiveProps>> & Readonly<{}>, {
+declare const __VLS_component_30: DefineComponent<MenuItemProps, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, PublicProps, Readonly<MenuItemProps> & Readonly<{}>, {
 as: keyof HTMLElementTagNameMap | Component;
 }, {}, {}, {}, string, ComponentProvideOptions, false, {}, any>;
 
@@ -947,6 +947,28 @@ export declare interface AccordionRootContext {
 }
 
 export declare type AccordionValue = string | number;
+
+export declare const Badge: {
+    Root: {
+        new (...args: any[]): CreateComponentPublicInstanceWithMixins<Readonly<BadgeProps> & Readonly<{}>, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, PublicProps, {}, false, {}, {}, GlobalComponents, GlobalDirectives, string, {}, HTMLDivElement, ComponentProvideOptions, {
+        P: {};
+        B: {};
+        D: {};
+        C: {};
+        M: {};
+        Defaults: {};
+        }, Readonly<BadgeProps> & Readonly<{}>, {}, {}, {}, {}, {}>;
+        __isFragment?: never;
+        __isTeleport?: never;
+        __isSuspense?: never;
+    } & ComponentOptionsBase<Readonly<BadgeProps> & Readonly<{}>, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, {}, {}, string, {}, GlobalComponents, GlobalDirectives, string, ComponentProvideOptions> & VNodeProps & AllowedComponentProps & ComponentCustomProps & (new () => {
+        $slots: {
+            default?(_: {}): any;
+        };
+    });
+};
+
+export declare type BadgeProps = Partial<SizeProp> & Partial<ThemeProp>;
 
 export declare type Booleanish = 'true' | 'false';
 
@@ -2812,8 +2834,8 @@ export declare const Menu: {
             default?(_: {}): any;
         };
     });
-    Link: {
-        new (...args: any[]): CreateComponentPublicInstanceWithMixins<Readonly<Partial<PrimitiveProps>> & Readonly<{}>, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, PublicProps, {
+    Item: {
+        new (...args: any[]): CreateComponentPublicInstanceWithMixins<Readonly<MenuItemProps> & Readonly<{}>, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, PublicProps, {
         as: keyof HTMLElementTagNameMap | Component;
         }, false, {}, {}, GlobalComponents, GlobalDirectives, string, {}, any, ComponentProvideOptions, {
         P: {};
@@ -2822,13 +2844,13 @@ export declare const Menu: {
         C: {};
         M: {};
         Defaults: {};
-        }, Readonly<Partial<PrimitiveProps>> & Readonly<{}>, {}, {}, {}, {}, {
+        }, Readonly<MenuItemProps> & Readonly<{}>, {}, {}, {}, {}, {
         as: keyof HTMLElementTagNameMap | Component;
         }>;
         __isFragment?: never;
         __isTeleport?: never;
         __isSuspense?: never;
-    } & ComponentOptionsBase<Readonly<Partial<PrimitiveProps>> & Readonly<{}>, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, {
+    } & ComponentOptionsBase<Readonly<MenuItemProps> & Readonly<{}>, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, {
     as: keyof HTMLElementTagNameMap | Component;
     }, {}, string, {}, GlobalComponents, GlobalDirectives, string, ComponentProvideOptions> & VNodeProps & AllowedComponentProps & ComponentCustomProps & (new () => {
         $slots: {
@@ -2837,7 +2859,10 @@ export declare const Menu: {
     });
 };
 
-export declare type MenuLinkProps = Partial<PrimitiveProps>;
+export declare type MenuItemProps = {
+    active?: boolean;
+    disabled?: boolean;
+} & Partial<PrimitiveProps>;
 
 export declare type MenuProps = Partial<DirectionProp> & Partial<ThemeProp> & Partial<SizeProp>;
 
@@ -6598,7 +6623,7 @@ export declare interface UseAccordionTriggerOptions {
 
  export declare const VMenu: __VLS_WithTemplateSlots_31<typeof __VLS_component_31, __VLS_TemplateResult_31["slots"]>;
 
- export declare const VMenuLink: __VLS_WithTemplateSlots_30<typeof __VLS_component_30, __VLS_TemplateResult_30["slots"]>;
+ export declare const VMenuItem: __VLS_WithTemplateSlots_30<typeof __VLS_component_30, __VLS_TemplateResult_30["slots"]>;
 
  export declare const VModal: __VLS_WithTemplateSlots_6<typeof __VLS_component_6, __VLS_TemplateResult_6["slots"]>;
 
