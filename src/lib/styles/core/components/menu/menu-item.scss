@@ -1,0 +1,12 @@
+.menu-item {
+  padding: var(--menu-item-padding-y) var(--menu-item-padding-x);
+
+  font-size: var(--menu-item-font-size);
+  line-height: var(--menu-item-line-height);
+  font-weight: var(--menu-item-font-weight);
+  color: var(--menu-item-color);
+
+  background-color: var(--menu-item-background-color);
+
+  transition: var(--transition-base);
+}
