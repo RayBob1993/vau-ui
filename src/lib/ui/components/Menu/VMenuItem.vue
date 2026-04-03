@@ -1,15 +1,16 @@
 <script setup lang="ts">
   import { Menu, type MenuItemProps } from '@vau/core';
 
-  withDefaults(defineProps<MenuItemProps>(), {
-    as: 'div'
-  });
+  const {
+    as = 'div',
+    ...menuItemProps
+  } = defineProps<MenuItemProps>();
 </script>
 
 <template>
   <Menu.Item
+    v-bind="menuItemProps"
     :as="as"
-    :as-child="asChild"
   >
     <slot/>
   </Menu.Item>

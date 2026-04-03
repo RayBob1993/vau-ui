@@ -147,9 +147,7 @@ onChange?: ((payload: Maybe<AccordionValue>) => any) | undefined;
 "onUpdate:modelValue"?: ((value: AccordionModelValue) => any) | undefined;
 }>, {}, {}, {}, {}, string, ComponentProvideOptions, false, {}, HTMLDivElement>;
 
-declare const __VLS_component_30: DefineComponent<MenuItemProps, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, PublicProps, Readonly<MenuItemProps> & Readonly<{}>, {
-as: keyof HTMLElementTagNameMap | Component;
-}, {}, {}, {}, string, ComponentProvideOptions, false, {}, any>;
+declare const __VLS_component_30: DefineComponent<MenuItemProps, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, PublicProps, Readonly<MenuItemProps> & Readonly<{}>, {}, {}, {}, {}, string, ComponentProvideOptions, false, {}, any>;
 
 declare const __VLS_component_31: DefineComponent<MenuProps, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, PublicProps, Readonly<MenuProps> & Readonly<{}>, {}, {}, {}, {}, string, ComponentProvideOptions, false, {}, HTMLElement>;
 

@@ -1,4 +1,4 @@
-import { computed as c, toValue as v, inject as F, defineComponent as m, mergeModels as C, useModel as T, provide as O, createElementBlock as p, openBlock as r, normalizeClass as I, renderSlot as d, unref as l, withDirectives as q, createElementVNode as H, vShow as Se, markRaw as Ot, Fragment as U, Comment as Nt, mergeProps as L, cloneVNode as Ft, h as Ce, createBlock as y, withCtx as g, ref as k, watch as W, onBeforeUnmount as jt, onMounted as xe, onScopeDispose as Xe, isRef as ze, nextTick as Gt, useId as Ze, onUnmounted as Be, withModifiers as Je, useSlots as Q, useTemplateRef as ge, createCommentVNode as N, normalizeProps as X, guardReactiveProps as B, createTextVNode as j, renderList as _e, toDisplayString as K, toHandlers as ee, vModelDynamic as Ut, vModelText as Qe, vModelCheckbox as et, vModelRadio as Kt, createVNode as S, withKeys as Oe, useAttrs as qt, Teleport as Ht, Transition as Yt, createPropsRestProxy as me, resolveDynamicComponent as Wt, createSlots as tt } from "vue";
+import { computed as c, toValue as v, inject as F, defineComponent as m, mergeModels as C, useModel as T, provide as O, createElementBlock as p, openBlock as r, normalizeClass as I, renderSlot as d, unref as l, withDirectives as q, createElementVNode as H, vShow as Se, markRaw as Ot, Fragment as U, Comment as Nt, mergeProps as w, cloneVNode as Ft, h as Ce, createBlock as y, withCtx as g, ref as k, watch as W, onBeforeUnmount as jt, onMounted as xe, onScopeDispose as Xe, isRef as ze, nextTick as Gt, useId as Ze, onUnmounted as Be, withModifiers as Je, useSlots as Q, useTemplateRef as ge, createCommentVNode as N, normalizeProps as X, guardReactiveProps as B, createTextVNode as j, renderList as _e, toDisplayString as K, toHandlers as ee, vModelDynamic as Ut, vModelText as Qe, vModelCheckbox as et, vModelRadio as Kt, createVNode as S, withKeys as Oe, useAttrs as qt, Teleport as Ht, Transition as Yt, createPropsRestProxy as ae, resolveDynamicComponent as Wt, createSlots as tt } from "vue";
 import { z as Ne } from "zod";
 function Zt(e) {
   const t = c(() => v(e.props));
@@ -229,7 +229,7 @@ function Fe(e, t) {
   }
   return n ?? null;
 }
-function ae(e, t = /* @__PURE__ */ new WeakMap()) {
+function re(e, t = /* @__PURE__ */ new WeakMap()) {
   if (e === null || typeof e != "object")
     return e;
   if (t.has(e))
@@ -245,13 +245,13 @@ function ae(e, t = /* @__PURE__ */ new WeakMap()) {
   if (e instanceof Map) {
     const o = /* @__PURE__ */ new Map();
     return t.set(e, o), e.forEach((n, s) => {
-      o.set(ae(s, t), ae(n, t));
+      o.set(re(s, t), re(n, t));
     }), o;
   }
   if (e instanceof Set) {
     const o = /* @__PURE__ */ new Set();
     return t.set(e, o), e.forEach((n) => {
-      o.add(ae(n, t));
+      o.add(re(n, t));
     }), o;
   }
   if (e instanceof ArrayBuffer) {
@@ -264,7 +264,7 @@ function ae(e, t = /* @__PURE__ */ new WeakMap()) {
     const o = [];
     t.set(e, o);
     for (let n = 0; n < e.length; n++)
-      o[n] = ae(e[n], t);
+      o[n] = re(e[n], t);
     return o;
   }
   if (Me(e)) {
@@ -278,7 +278,7 @@ function ae(e, t = /* @__PURE__ */ new WeakMap()) {
       const i = Object.getOwnPropertyDescriptor(e, s);
       i && ("value" in i ? Object.defineProperty(o, s, {
         ...i,
-        value: ae(i.value, t)
+        value: re(i.value, t)
       }) : Object.defineProperty(o, s, i));
     }
     return o;
@@ -328,11 +328,11 @@ function Te(e, t, o = {}) {
       return;
     const R = Date.now() - f;
     b = z;
-    function w() {
+    function D() {
       a = null;
     }
-    x(), !s && i && !a && V.call(this), te(i) && R > t ? s ? (f = Date.now(), n || (a = setTimeout(i ? w : V.bind(this), t))) : V.call(this) : n || (a = setTimeout(
-      i ? w : V.bind(this),
+    x(), !s && i && !a && V.call(this), te(i) && R > t ? s ? (f = Date.now(), n || (a = setTimeout(i ? D : V.bind(this), t))) : V.call(this) : n || (a = setTimeout(
+      i ? D : V.bind(this),
       te(i) ? t - R : t
     ));
   }
@@ -362,7 +362,7 @@ const ho = m({
         return n;
       const i = n[s];
       delete i.props?.ref;
-      const a = i.props ? L(t, i.props) : t, u = Ft({
+      const a = i.props ? w(t, i.props) : t, u = Ft({
         ...i,
         props: {}
       }, a);
@@ -569,7 +569,7 @@ const mt = Object.freeze({
   EMAIL: "email",
   NONE: "none",
   URL: "url"
-}), ue = Object.freeze({
+}), ce = Object.freeze({
   TEXT: "text",
   EMAIL: "email",
   NUMBER: "number",
@@ -649,24 +649,24 @@ function nr(e, t, o = {}) {
     rootMargin: n,
     threshold: s
   }), [f, b] = J(), [x, h] = J(), V = k(""), $ = k(""), z = k(""), R = ie(t) ? { src: t } : t;
-  function w() {
+  function D() {
     if (f.value || x.value)
       return;
-    const D = new Image();
-    D.src = R.src, R.srcset && (D.srcset = R.srcset), R.sizes && (D.sizes = R.sizes), D.onload = () => {
+    const E = new Image();
+    E.src = R.src, R.srcset && (E.srcset = R.srcset), R.sizes && (E.sizes = R.sizes), E.onload = () => {
       V.value = R.src, $.value = R.srcset || "", z.value = R.sizes || "", b(!0), h(!1);
-    }, D.onerror = () => {
+    }, E.onerror = () => {
       b(!1), h(!0);
     };
   }
-  function M(D) {
-    D.forEach((E) => {
-      E.isIntersecting && !f.value && !x.value && w();
+  function M(E) {
+    E.forEach((A) => {
+      A.isIntersecting && !f.value && !x.value && D();
     });
   }
   return xe(() => {
     if (a || i && "loading" in HTMLImageElement.prototype) {
-      w();
+      D();
       return;
     }
   }), {
@@ -675,7 +675,7 @@ function nr(e, t, o = {}) {
     imageSrc: V,
     imageSrcset: $,
     imageSizes: z,
-    loadImage: w,
+    loadImage: D,
     stop: u
   };
 }
@@ -763,8 +763,8 @@ function _o(e) {
       return;
     }
     b.value = !0;
-    const w = await s(!0);
-    f(w);
+    const D = await s(!0);
+    f(D);
   }, {
     immediate: !0
   });
@@ -842,7 +842,7 @@ function wo(e) {
   }), V = c(() => !!h.value), $ = c(() => h.value ? !h.value.safeParse(void 0).success : !1), {
     validationStatus: z,
     validationErrors: R,
-    clearValidateErrors: w,
+    clearValidateErrors: D,
     validate: M
   } = To({
     data: () => a.value ? {
@@ -857,7 +857,7 @@ function wo(e) {
     onInvalid: () => {
       e.onInvalid?.();
     }
-  }), D = c(() => ({
+  }), E = c(() => ({
     id: t,
     props: i.value,
     validationStatus: z.value,
@@ -865,32 +865,32 @@ function wo(e) {
     isRequired: $.value,
     registerField: n,
     unregisterField: s,
-    reset: E,
+    reset: A,
     validate: M,
-    clearValidateErrors: w
+    clearValidateErrors: D
   }));
-  function E() {
-    !b.value || !i.value.name || (o.value?.reset(), w());
+  function A() {
+    !b.value || !i.value.name || (o.value?.reset(), D());
   }
-  const A = we(() => M(), 300);
+  const L = we(() => M(), 300);
   return Be(() => {
-    A.cancel(), e.formRootContext?.unregisterFormItem(t);
-  }), W(D, (P) => {
+    L.cancel(), e.formRootContext?.unregisterFormItem(t);
+  }), W(E, (P) => {
     e.formRootContext?.registerFormItem(P);
   }, {
     deep: !0,
     immediate: !0
-  }), W(b, () => A()), W(() => z.value.isSuccess, (P) => {
-    P && w();
+  }), W(b, () => L()), W(() => z.value.isSuccess, (P) => {
+    P && D();
   }), {
     id: t,
     validationErrors: R,
     validationStatus: z,
     isDisabled: x,
     isRequired: $,
-    reset: E,
+    reset: A,
     validate: M,
-    clearValidateErrors: w,
+    clearValidateErrors: D,
     registerField: n,
     unregisterField: s
   };
@@ -983,7 +983,7 @@ const Do = /* @__PURE__ */ m({
       onInvalid: () => {
         s("invalid");
       }
-    }), w = ge("root"), M = c(() => ({
+    }), D = ge("root"), M = c(() => ({
       validationStatus: f.value,
       isRequired: x.value,
       errors: u.value
@@ -1003,9 +1003,9 @@ const Do = /* @__PURE__ */ m({
       reset: $,
       validate: z,
       clearValidateErrors: R
-    }), (D, E) => (r(), p("div", {
+    }), (E, A) => (r(), p("div", {
       ref_key: "root",
-      ref: w,
+      ref: D,
       class: I(["form-item", [
         {
           "form-item--disabled": l(b),
@@ -1017,13 +1017,13 @@ const Do = /* @__PURE__ */ m({
       ]])
     }, [
       i?.header ? (r(), p("div", Eo, [
-        d(D.$slots, "header", X(B(M.value)))
+        d(E.$slots, "header", X(B(M.value)))
       ])) : N("", !0),
       H("div", Ao, [
-        d(D.$slots, "default", X(B(M.value)))
+        d(E.$slots, "default", X(B(M.value)))
       ]),
       i.footer ? (r(), p("div", Lo, [
-        d(D.$slots, "footer", X(B(M.value)))
+        d(E.$slots, "footer", X(B(M.value)))
       ])) : N("", !0)
     ], 2));
   }
@@ -1052,7 +1052,7 @@ const Ko = /* @__PURE__ */ _(jo, [["render", Uo]]), qo = { class: "form-item-err
       }, K(i.message), 1))), 128))
     ]));
   }
-}), ce = {
+}), de = {
   Root: Do,
   Item: ko,
   ItemTitle: Fo,
@@ -1098,8 +1098,8 @@ function Zo(e) {
   function V(M) {
     if (!h.value) {
       if (le(t.value, o.value.multiple)) {
-        const D = /* @__PURE__ */ new Set([...t.value]);
-        D.has(M) ? D.delete(M) : D.add(M), e.onChangeModel?.([...D]);
+        const E = /* @__PURE__ */ new Set([...t.value]);
+        E.has(M) ? E.delete(M) : E.add(M), e.onChangeModel?.([...E]);
       } else
         e.onChangeModel?.(M);
       e.onChange?.(M);
@@ -1118,7 +1118,7 @@ function Zo(e) {
   function R() {
     h.value || b(!1);
   }
-  function w() {
+  function D() {
     f.value ? R() : z();
   }
   return xe(() => {
@@ -1135,7 +1135,7 @@ function Zo(e) {
     isDisabled: h,
     open: z,
     close: R,
-    toggle: w,
+    toggle: D,
     registerOption: s,
     unregisterOption: i,
     setModelValue: V,
@@ -1270,20 +1270,20 @@ const tn = {
       isDisabled: $,
       open: z,
       close: R,
-      toggle: w,
+      toggle: D,
       registerOption: M,
-      unregisterOption: D,
-      setModelValue: E
+      unregisterOption: E,
+      setModelValue: A
     } = Zo({
       formRootContext: i,
       formItemContext: a,
       modelValue: () => s.value,
       props: () => o,
-      onChangeModel: (A) => {
-        s.value = A;
+      onChangeModel: (L) => {
+        s.value = L;
       },
-      onChange: (A) => {
-        n("change", A);
+      onChange: (L) => {
+        n("change", L);
       },
       onClear: () => {
         n("clear");
@@ -1299,11 +1299,11 @@ const tn = {
       isDisabled: () => $.value,
       open: z,
       close: R,
-      toggle: w,
+      toggle: D,
       registerOption: M,
-      unregisterOption: D,
-      setModelValue: E
-    }), (A, P) => q((r(), p("div", {
+      unregisterOption: E,
+      setModelValue: A
+    }), (L, P) => q((r(), p("div", {
       class: I(["select", {
         "select--disabled": l($),
         "select--open": l(V),
@@ -1313,7 +1313,7 @@ const tn = {
       }]),
       "aria-disabled": l($)
     }, [
-      d(A.$slots, "default")
+      d(L.$slots, "default")
     ], 10, sn)), [
       [l(pt), l(R)]
     ]);
@@ -1409,45 +1409,45 @@ function mn(e) {
   function $() {
     f(!1), a(!1);
   }
-  const z = we((E) => {
-    e.onScroll?.(E), t.value?.draggable || (h.value = Ge(e.scrollbar.value, !!t.value?.vertical), V.value = Ue(e.scrollbar.value, !!t.value?.horizontal));
-    const A = e.scrollbar.value, P = e.content.value, oe = A ? A.clientHeight : 0, $e = A ? A.clientWidth : 0, Pe = P ? P.scrollWidth : 0, Ve = P ? P.scrollHeight : 0, Re = h.value + oe, Lt = V.value + $e, kt = !!(t.value?.vertical && Ve - Re <= o.value), Pt = !!(t.value?.horizontal && Pe - Lt <= o.value);
+  const z = we((A) => {
+    e.onScroll?.(A), t.value?.draggable || (h.value = Ge(e.scrollbar.value, !!t.value?.vertical), V.value = Ue(e.scrollbar.value, !!t.value?.horizontal));
+    const L = e.scrollbar.value, P = e.content.value, oe = L ? L.clientHeight : 0, $e = L ? L.clientWidth : 0, Pe = P ? P.scrollWidth : 0, Ve = P ? P.scrollHeight : 0, Re = h.value + oe, Lt = V.value + $e, kt = !!(t.value?.vertical && Ve - Re <= o.value), Pt = !!(t.value?.horizontal && Pe - Lt <= o.value);
     kt && e.onScrollEndY?.(), Pt && e.onScrollEndX?.();
-  }, s.value), R = Te((E) => {
-    if (e.onMousemove?.(E), !t.value?.draggable || !u.value)
+  }, s.value), R = Te((A) => {
+    if (e.onMousemove?.(A), !t.value?.draggable || !u.value)
       return;
-    E.preventDefault(), E.stopPropagation();
-    const A = e.scrollbar.value;
-    if (!A)
+    A.preventDefault(), A.stopPropagation();
+    const L = e.scrollbar.value;
+    if (!L)
       return;
-    const P = !!t.value?.vertical, oe = !!t.value?.horizontal, $e = E.pageY - Ke(A, P), Ve = (E.pageX - qe(A, oe) - b.value) * n.value, Re = ($e - x.value) * n.value;
-    oe && (A.scrollLeft = V.value - Ve), P && (A.scrollTop = h.value - Re);
+    const P = !!t.value?.vertical, oe = !!t.value?.horizontal, $e = A.pageY - Ke(L, P), Ve = (A.pageX - qe(L, oe) - b.value) * n.value, Re = ($e - x.value) * n.value;
+    oe && (L.scrollLeft = V.value - Ve), P && (L.scrollTop = h.value - Re);
   }, s.value);
-  function w(E) {
-    if (e.onMousedown?.(E), !t.value?.draggable)
+  function D(A) {
+    if (e.onMousedown?.(A), !t.value?.draggable)
       return;
     f(!0), a(!0);
-    const A = e.scrollbar.value;
-    if (A) {
+    const L = e.scrollbar.value;
+    if (L) {
       const P = !!t.value?.vertical, oe = !!t.value?.horizontal;
-      x.value = E.pageY - Ke(A, P), b.value = E.pageX - qe(A, oe);
+      x.value = A.pageY - Ke(L, P), b.value = A.pageX - qe(L, oe);
     }
     h.value = Ge(e.scrollbar.value, !!t.value?.vertical), V.value = Ue(e.scrollbar.value, !!t.value?.horizontal);
   }
-  function M(E) {
-    e.onMouseleave?.(E), t.value?.draggable && $();
+  function M(A) {
+    e.onMouseleave?.(A), t.value?.draggable && $();
   }
-  function D(E) {
-    e.onMouseup?.(E), t.value?.draggable && $();
+  function E(A) {
+    e.onMouseup?.(A), t.value?.draggable && $();
   }
   return Xe(() => {
     z.cancel?.(), R.cancel?.();
   }), {
     isGrabbing: i,
     handleScroll: z,
-    handleMousedown: w,
+    handleMousedown: D,
     handleMouseleave: M,
-    handleMouseup: D,
+    handleMouseup: E,
     handleMousemove: R
   };
 }
@@ -1535,7 +1535,7 @@ const fn = /* @__PURE__ */ m({
       _: 3
     }));
   }
-}), de = {
+}), me = {
   Root: ln,
   Option: an,
   Trigger: rn,
@@ -1686,7 +1686,7 @@ const zn = /* @__PURE__ */ m({
     disabled: { type: Boolean },
     readonly: { type: Boolean },
     autocomplete: {},
-    nativeType: { default: ue.TEXT },
+    nativeType: { default: ce.TEXT },
     inputMode: { default: Bo.TEXT },
     rows: {},
     cols: {},
@@ -1706,7 +1706,7 @@ const zn = /* @__PURE__ */ m({
   }),
   emits: /* @__PURE__ */ C(["click", "dblclick", "mousedown", "mouseup", "mouseenter", "mouseleave", "mousemove", "mouseover", "mouseout", "contextmenu", "focusin", "focusout", "change", "blur", "focus", "keyup", "keydown", "keypress", "paste", "copy", "cut"], ["update:modelValue"]),
   setup(e, { expose: t, emit: o }) {
-    const n = e, s = o, i = T(e, "modelValue"), { formRootContext: a, formItemContext: u, isValid: f, isInvalid: b } = Y(), { isDisabled: x, isTextarea: h, hasValue: V, isFocus: $, setFocus: z, setModelValue: R, reset: w } = bn({
+    const n = e, s = o, i = T(e, "modelValue"), { formRootContext: a, formItemContext: u, isValid: f, isInvalid: b } = Y(), { isDisabled: x, isTextarea: h, hasValue: V, isFocus: $, setFocus: z, setModelValue: R, reset: D } = bn({
       formRootContext: a,
       formItemContext: u,
       modelValue: () => i.value,
@@ -1721,11 +1721,11 @@ const zn = /* @__PURE__ */ m({
       modelValue: () => i.value,
       setFocus: z,
       setModelValue: R,
-      reset: w,
+      reset: D,
       emit: s
     }), t({
       setFocus: z
-    }), (M, D) => (r(), p("div", {
+    }), (M, E) => (r(), p("div", {
       class: I(["input", {
         "input--focus": l($),
         "input--textarea": l(h),
@@ -1784,7 +1784,7 @@ const Vn = /* @__PURE__ */ _(yn, [["render", $n]]), Rn = { class: "input-after" 
     }), { props: s } = gn({
       inputRootContext: t
     });
-    return (i, a) => q((r(), p("input", L({
+    return (i, a) => q((r(), p("input", w({
       "onUpdate:modelValue": a[0] || (a[0] = (u) => ze(o) ? o.value = u : null),
       type: l(s).nativeType,
       inputmode: l(s).inputMode,
@@ -1805,7 +1805,7 @@ const Vn = /* @__PURE__ */ _(yn, [["render", $n]]), Rn = { class: "input-after" 
     }), { props: s } = vn({
       inputRootContext: t
     });
-    return (i, a) => q((r(), p("textarea", L({
+    return (i, a) => q((r(), p("textarea", w({
       "onUpdate:modelValue": a[0] || (a[0] = (u) => ze(o) ? o.value = u : null),
       readonly: l(s).readonly,
       disabled: l(s).disabled,
@@ -1916,7 +1916,7 @@ const Un = ["value", "disabled", "checked"], Kn = /* @__PURE__ */ m({
         "checkbox--valid": l(u)
       }])
     }, [
-      q(H("input", L({
+      q(H("input", w({
         ref_key: "inputRef",
         ref: V,
         "onUpdate:modelValue": z[0] || (z[0] = (R) => s.value = R),
@@ -2045,7 +2045,7 @@ const os = ["value", "disabled"], ns = /* @__PURE__ */ m({
         "radio--valid": l(u)
       }])
     }, [
-      q(H("input", L({
+      q(H("input", w({
         "onUpdate:modelValue": V[0] || (V[0] = ($) => s.value = $),
         value: e.value,
         type: "radio",
@@ -2355,7 +2355,7 @@ const Xs = /* @__PURE__ */ m({
       }
     });
     return (i, a) => (r(), p("div", Bs, [
-      q(H("input", L({
+      q(H("input", w({
         "onUpdate:modelValue": a[0] || (a[0] = (u) => ze(n) ? n.value = u : null),
         type: "number",
         class: "input-number-input__native"
@@ -2406,9 +2406,9 @@ const Xs = /* @__PURE__ */ m({
   Button: Ts
 };
 function ws() {
-  const e = k(ue.PASSWORD);
+  const e = k(ce.PASSWORD);
   function t() {
-    e.value === ue.PASSWORD ? e.value = ue.TEXT : e.value = ue.PASSWORD;
+    e.value === ce.PASSWORD ? e.value = ce.TEXT : e.value = ce.PASSWORD;
   }
   return {
     currentType: e,
@@ -2441,7 +2441,7 @@ const Ds = /* @__PURE__ */ m({
   emits: ["update:modelValue"],
   setup(e) {
     const t = e, o = Q(), n = T(e, "modelValue"), { currentType: s, handleToggleType: i } = ws();
-    return (a, u) => (r(), y(l(G).Root, L(t, {
+    return (a, u) => (r(), y(l(G).Root, w(t, {
       modelValue: n.value,
       "onUpdate:modelValue": u[1] || (u[1] = (f) => n.value = f),
       "native-type": l(s)
@@ -2841,7 +2841,7 @@ const ll = /* @__PURE__ */ m({
         onAfterLeave: x[2] || (x[2] = (h) => n("closed", h))
       }, {
         default: g(() => [
-          q(H("div", L({ class: "modal" }, l(i), {
+          q(H("div", w({ class: "modal" }, l(i), {
             class: {
               "modal--open": s.value,
               [`modal--position-${e.position}`]: e.position,
@@ -3192,8 +3192,8 @@ const Nl = /* @__PURE__ */ _(kl, [["render", Ol]]), Ye = {
     direction: {}
   },
   setup(e) {
-    const t = me(e, ["guttersY", "guttersX", "wrap"]);
-    return (o, n) => (r(), y(l(Le).Root, L(t, {
+    const t = ae(e, ["guttersY", "guttersX", "wrap"]);
+    return (o, n) => (r(), y(l(Le).Root, w(t, {
       wrap: e.wrap,
       class: ["row", {
         "row--gutters-x": e.guttersX,
@@ -3273,7 +3273,7 @@ function li(e, t) {
     d(e.$slots, "default")
   ]);
 }
-const ii = /* @__PURE__ */ _(ni, [["render", li]]), re = {
+const ii = /* @__PURE__ */ _(ni, [["render", li]]), ue = {
   Root: ql,
   Header: Zl,
   Title: Jl,
@@ -3561,7 +3561,7 @@ const Li = /* @__PURE__ */ m({
   emits: /* @__PURE__ */ C(["change"], ["update:modelValue"]),
   setup(e, { emit: t }) {
     const o = e, n = t, s = T(e, "modelValue");
-    return (i, a) => (r(), y(l(ne).Root, L(o, {
+    return (i, a) => (r(), y(l(ne).Root, w(o, {
       modelValue: s.value,
       "onUpdate:modelValue": a[0] || (a[0] = (u) => s.value = u)
     }, ee(n)), {
@@ -3579,7 +3579,7 @@ const Li = /* @__PURE__ */ m({
     disabled: { type: Boolean }
   },
   setup(e) {
-    const t = me(e, ["title"]);
+    const t = ae(e, ["title"]);
     return (o, n) => (r(), y(l(ne).Item, X(B(t)), {
       default: g(({ isActive: s }) => [
         S(l(ne).Header, null, {
@@ -3668,8 +3668,8 @@ const Ui = /* @__PURE__ */ m({
   }),
   emits: /* @__PURE__ */ C(["opened", "closed", "open", "close"], ["update:modelValue"]),
   setup(e, { emit: t }) {
-    const o = me(e, ["title", "appendToBody", "position"]), n = t, s = Q(), i = T(e, "modelValue");
-    return (a, u) => (r(), y(l(Z).Root, L({
+    const o = ae(e, ["title", "appendToBody", "position"]), n = t, s = Q(), i = T(e, "modelValue");
+    return (a, u) => (r(), y(l(Z).Root, w({
       modelValue: i.value,
       "onUpdate:modelValue": u[0] || (u[0] = (f) => i.value = f)
     }, o, {
@@ -3879,7 +3879,7 @@ const Ui = /* @__PURE__ */ m({
   emits: ["scrollEndY", "scrollEndX", "scroll", "mousedown", "mouseleave", "mouseup", "mousemove"],
   setup(e, { emit: t }) {
     const o = e, n = t;
-    return (s, i) => (r(), y(l(xt).Root, L(o, ee(n)), {
+    return (s, i) => (r(), y(l(xt).Root, w(o, ee(n)), {
       default: g(() => [
         d(s.$slots, "default")
       ]),
@@ -3907,7 +3907,7 @@ const Ui = /* @__PURE__ */ m({
   emits: ["delete"],
   setup(e, { emit: t }) {
     const o = e, n = t;
-    return (s, i) => (r(), y(l(Et).Root, L(o, {
+    return (s, i) => (r(), y(l(Et).Root, w(o, {
       onDelete: i[0] || (i[0] = (a) => n("delete", a))
     }), {
       default: g(() => [
@@ -3984,7 +3984,7 @@ const Ui = /* @__PURE__ */ m({
   emits: /* @__PURE__ */ C(["submit", "valid", "invalid"], ["update:modelValue"]),
   setup(e, { emit: t }) {
     const o = e, n = t, s = T(e, "modelValue");
-    return (i, a) => (r(), y(l(ce).Root, L({
+    return (i, a) => (r(), y(l(de).Root, w({
       modelValue: s.value,
       "onUpdate:modelValue": a[0] || (a[0] = (u) => s.value = u)
     }, o, ee(n)), {
@@ -4007,14 +4007,14 @@ const Ui = /* @__PURE__ */ m({
   },
   emits: ["valid", "invalid"],
   setup(e, { emit: t }) {
-    const o = me(e, ["title"]), n = t, s = Q();
-    return (i, a) => (r(), y(l(ce).Item, L(o, ee(n)), tt({
+    const o = ae(e, ["title"]), n = t, s = Q();
+    return (i, a) => (r(), y(l(de).Item, w(o, ee(n)), tt({
       default: g((u) => [
         d(i.$slots, "default", X(B(u)))
       ]),
       footer: g((u) => [
         d(i.$slots, "footer", X(B(u)), () => [
-          S(l(ce).ItemErrors)
+          S(l(de).ItemErrors)
         ])
       ]),
       _: 2
@@ -4023,10 +4023,10 @@ const Ui = /* @__PURE__ */ m({
         name: "header",
         fn: g((u) => [
           d(i.$slots, "header", X(B(u)), () => [
-            S(l(ce).ItemTitle, null, {
+            S(l(de).ItemTitle, null, {
               default: g(() => [
                 j(K(e.title) + " ", 1),
-                u.isRequired ? (r(), y(l(ce).ItemRequired, { key: 0 })) : N("", !0)
+                u.isRequired ? (r(), y(l(de).ItemRequired, { key: 0 })) : N("", !0)
               ]),
               _: 2
             }, 1024)
@@ -4062,7 +4062,7 @@ const Ui = /* @__PURE__ */ m({
   emits: ["update:modelValue"],
   setup(e) {
     const t = e, o = T(e, "modelValue");
-    return (n, s) => (r(), y(l(pe).Root, L(t, {
+    return (n, s) => (r(), y(l(pe).Root, w(t, {
       modelValue: o.value,
       "onUpdate:modelValue": s[0] || (s[0] = (i) => o.value = i)
     }), {
@@ -4131,7 +4131,7 @@ const Ui = /* @__PURE__ */ m({
   emits: ["update:modelValue"],
   setup(e) {
     const t = e, o = Q(), n = T(e, "modelValue");
-    return (s, i) => (r(), y(l(G).Root, L(t, {
+    return (s, i) => (r(), y(l(G).Root, w(t, {
       modelValue: n.value,
       "onUpdate:modelValue": i[0] || (i[0] = (a) => n.value = a)
     }), {
@@ -4187,7 +4187,7 @@ const Ui = /* @__PURE__ */ m({
   emits: ["update:modelValue"],
   setup(e) {
     const t = e, o = T(e, "modelValue");
-    return (n, s) => (r(), y(l(He).Root, L(t, {
+    return (n, s) => (r(), y(l(He).Root, w(t, {
       modelValue: o.value,
       "onUpdate:modelValue": s[0] || (s[0] = (i) => o.value = i)
     }), {
@@ -4232,7 +4232,7 @@ const Ui = /* @__PURE__ */ m({
   emits: ["update:modelValue"],
   setup(e) {
     const t = e, o = T(e, "modelValue");
-    return (n, s) => (r(), y(l(fe).Root, L(t, {
+    return (n, s) => (r(), y(l(fe).Root, w(t, {
       modelValue: o.value,
       "onUpdate:modelValue": s[0] || (s[0] = (i) => o.value = i)
     }), {
@@ -4278,7 +4278,7 @@ const Ui = /* @__PURE__ */ m({
   emits: ["update:modelValue"],
   setup(e) {
     const t = e, o = T(e, "modelValue");
-    return (n, s) => (r(), y(l(Es).Root, L({
+    return (n, s) => (r(), y(l(Es).Root, w({
       modelValue: o.value,
       "onUpdate:modelValue": s[0] || (s[0] = (i) => o.value = i)
     }, t), null, 16, ["modelValue"]));
@@ -4309,7 +4309,7 @@ const Ui = /* @__PURE__ */ m({
   emits: ["update:modelValue"],
   setup(e) {
     const t = e, o = T(e, "modelValue");
-    return (n, s) => (r(), y(l(ve).Root, L(t, {
+    return (n, s) => (r(), y(l(ve).Root, w(t, {
       modelValue: o.value,
       "onUpdate:modelValue": s[0] || (s[0] = (i) => o.value = i)
     }), {
@@ -4373,7 +4373,7 @@ const Ui = /* @__PURE__ */ m({
   emits: /* @__PURE__ */ C(["change", "opened", "closed", "open", "close", "clear"], ["update:modelValue"]),
   setup(e, { emit: t }) {
     const o = e, n = t, s = T(e, "modelValue");
-    return (i, a) => (r(), y(l(de).Root, L(o, {
+    return (i, a) => (r(), y(l(me).Root, w(o, {
       modelValue: s.value,
       "onUpdate:modelValue": a[0] || (a[0] = (u) => s.value = u),
       onChange: a[1] || (a[1] = (u) => n("change", u)),
@@ -4381,15 +4381,15 @@ const Ui = /* @__PURE__ */ m({
       onClear: a[3] || (a[3] = (u) => n("clear"))
     }), {
       default: g(() => [
-        S(l(de).Value, null, {
+        S(l(me).Value, null, {
           default: g(() => [
             d(i.$slots, "value")
           ]),
           _: 3
         }),
-        S(l(de).Dropdown, null, {
+        S(l(me).Dropdown, null, {
           default: g(() => [
-            S(l(de).Scrollbar, null, {
+            S(l(me).Scrollbar, null, {
               default: g(() => [
                 d(i.$slots, "default")
               ]),
@@ -4411,7 +4411,7 @@ const Ui = /* @__PURE__ */ m({
   },
   setup(e) {
     const t = e;
-    return (o, n) => (r(), y(l(de).Option, X(B(t)), {
+    return (o, n) => (r(), y(l(me).Option, X(B(t)), {
       default: g((s) => [
         d(o.$slots, "default", X(B(s)))
       ]),
@@ -4441,7 +4441,7 @@ const Ui = /* @__PURE__ */ m({
   emits: ["update:modelValue"],
   setup(e) {
     const t = e, o = T(e, "modelValue");
-    return (n, s) => (r(), y(l(Ie).Root, L(t, {
+    return (n, s) => (r(), y(l(Ie).Root, w(t, {
       modelValue: o.value,
       "onUpdate:modelValue": s[0] || (s[0] = (i) => o.value = i)
     }), {
@@ -4589,15 +4589,13 @@ const Ui = /* @__PURE__ */ m({
     as: { default: "div" }
   },
   setup(e) {
-    return (t, o) => (r(), y(l(At).Item, {
-      as: e.as,
-      "as-child": e.asChild
-    }, {
+    const t = ae(e, ["as"]);
+    return (o, n) => (r(), y(l(At).Item, w(t, { as: e.as }), {
       default: g(() => [
-        d(t.$slots, "default")
+        d(o.$slots, "default")
       ]),
       _: 3
-    }, 8, ["as", "as-child"]));
+    }, 16, ["as"]));
   }
 }), Cr = /* @__PURE__ */ m({
   __name: "VMenu",
@@ -4636,13 +4634,13 @@ const Ui = /* @__PURE__ */ m({
     level: { default: "h1" }
   },
   setup(e) {
-    const t = me(e, ["title", "level"]), o = Q(), n = c(() => !!(e.title || o?.header));
-    return (s, i) => (r(), y(l(re).Root, X(B(t)), {
+    const t = ae(e, ["title", "level"]), o = Q(), n = c(() => !!(e.title || o?.header));
+    return (s, i) => (r(), y(l(ue).Root, X(B(t)), {
       default: g(() => [
-        n.value ? (r(), y(l(re).Header, { key: 0 }, {
+        n.value ? (r(), y(l(ue).Header, { key: 0 }, {
           default: g(() => [
             d(s.$slots, "header", {}, () => [
-              e.title ? (r(), y(l(re).Title, {
+              e.title ? (r(), y(l(ue).Title, {
                 key: 0,
                 level: e.level
               }, {
@@ -4655,13 +4653,13 @@ const Ui = /* @__PURE__ */ m({
           ]),
           _: 3
         })) : N("", !0),
-        S(l(re).Body, null, {
+        S(l(ue).Body, null, {
           default: g(() => [
             d(s.$slots, "default")
           ]),
           _: 3
         }),
-        o?.footer ? (r(), y(l(re).Footer, { key: 1 }, {
+        o?.footer ? (r(), y(l(ue).Footer, { key: 1 }, {
           default: g(() => [
             d(s.$slots, "footer")
           ]),
@@ -4701,7 +4699,7 @@ export {
   Vr as FlexItemPlugin,
   or as FlexJustify,
   ka as FlexPlugin,
-  ce as Form,
+  de as Form,
   ca as FormItemPlugin,
   ra as FormPlugin,
   ke as Grid,
@@ -4717,7 +4715,7 @@ export {
   xa as InputCodePlugin,
   Na as InputGroupPlugin,
   Bo as InputModes,
-  ue as InputNativeTypes,
+  ce as InputNativeTypes,
   fe as InputNumber,
   ya as InputNumberPlugin,
   Es as InputPassword,
@@ -4741,8 +4739,8 @@ export {
   yr as RowPlugin,
   xt as Scrollbar,
   ta as ScrollbarPlugin,
-  re as Section,
-  de as Select,
+  ue as Section,
+  me as Select,
   Ba as SelectPlugin,
   Ja as Sizes,
   Ie as Switch,
@@ -4793,7 +4791,7 @@ export {
   Sr as VauUI,
   ur as VisiblePlugin,
   Ha as booleanToBooleanish,
-  ae as clone,
+  re as clone,
   we as debounce,
   Ya as defineFormRules,
   Ua as delay,
