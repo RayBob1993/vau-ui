@@ -1,0 +1,14 @@
+@use 'sass:math';
+@use '../config' as *;
+
+@mixin generate-spaces ($direction) {
+  $n: math.floor(math.div($space-max, $space-step));
+
+  @for $i from 1 through $n {
+    $px: $i * $space-step;
+
+    &-#{$px} {
+      margin-#{$direction}: #{$px}px !important;
+    }
+  }
+}

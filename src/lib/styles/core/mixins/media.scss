@@ -1,4 +1,4 @@
-@use '../variables/scss/breakpoints' as *;
+@use '../config' as *;
 
 @mixin media-xxl-up {
   @media screen and (min-width: $xxl) {

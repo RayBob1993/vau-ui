@@ -1,0 +1,356 @@
+@use '../mixins/media' as *;
+@use '../mixins/spaces' as *;
+
+.m {
+  &-t {
+    @include generate-spaces('top');
+
+    &-xxl {
+      &-down {
+        @include media-xxl-down {
+          @include generate-spaces('top');
+        }
+      }
+
+      &-up {
+        @include media-xxl-up {
+          @include generate-spaces('top');
+        }
+      }
+    }
+
+    &-xl {
+      &-down {
+        @include media-xl-down {
+          @include generate-spaces('top');
+        }
+      }
+
+      &-up {
+        @include media-xl-up {
+          @include generate-spaces('top');
+        }
+      }
+    }
+
+    &-lg {
+      &-down {
+        @include media-lg-down {
+          @include generate-spaces('top');
+        }
+      }
+
+      &-up {
+        @include media-lg-up {
+          @include generate-spaces('top');
+        }
+      }
+    }
+
+    &-md {
+      &-down {
+        @include media-md-down {
+          @include generate-spaces('top');
+        }
+      }
+
+      &-up {
+        @include media-md-up {
+          @include generate-spaces('top');
+        }
+      }
+    }
+
+    &-sm {
+      &-down {
+        @include media-sm-down {
+          @include generate-spaces('top');
+        }
+      }
+
+      &-up {
+        @include media-sm-up {
+          @include generate-spaces('top');
+        }
+      }
+    }
+
+    &-xs {
+      &-down {
+        @include media-xs-down {
+          @include generate-spaces('top');
+        }
+      }
+
+      &-up {
+        @include media-xs-up {
+          @include generate-spaces('top');
+        }
+      }
+    }
+  }
+
+  &-l {
+    @include generate-spaces('left');
+
+    &-xxl {
+      &-down {
+        @include media-xxl-down {
+          @include generate-spaces('left');
+        }
+      }
+
+      &-up {
+        @include media-xxl-up {
+          @include generate-spaces('left');
+        }
+      }
+    }
+
+    &-xl {
+      &-down {
+        @include media-xl-down {
+          @include generate-spaces('left');
+        }
+      }
+
+      &-up {
+        @include media-xl-up {
+          @include generate-spaces('left');
+        }
+      }
+    }
+
+    &-lg {
+      &-down {
+        @include media-lg-down {
+          @include generate-spaces('left');
+        }
+      }
+
+      &-up {
+        @include media-lg-up {
+          @include generate-spaces('left');
+        }
+      }
+    }
+
+    &-md {
+      &-down {
+        @include media-md-down {
+          @include generate-spaces('left');
+        }
+      }
+
+      &-up {
+        @include media-md-up {
+          @include generate-spaces('left');
+        }
+      }
+    }
+
+    &-sm {
+      &-down {
+        @include media-sm-down {
+          @include generate-spaces('left');
+        }
+      }
+
+      &-up {
+        @include media-sm-up {
+          @include generate-spaces('left');
+        }
+      }
+    }
+
+    &-xs {
+      &-down {
+        @include media-xs-down {
+          @include generate-spaces('left');
+        }
+      }
+
+      &-up {
+        @include media-xs-up {
+          @include generate-spaces('left');
+        }
+      }
+    }
+  }
+
+  &-r {
+    @include generate-spaces('right');
+
+    &-xxl {
+      &-down {
+        @include media-xxl-down {
+          @include generate-spaces('right');
+        }
+      }
+
+      &-up {
+        @include media-xxl-up {
+          @include generate-spaces('right');
+        }
+      }
+    }
+
+    &-xl {
+      &-down {
+        @include media-xl-down {
+          @include generate-spaces('right');
+        }
+      }
+
+      &-up {
+        @include media-xl-up {
+          @include generate-spaces('right');
+        }
+      }
+    }
+
+    &-lg {
+      &-down {
+        @include media-lg-down {
+          @include generate-spaces('right');
+        }
+      }
+
+      &-up {
+        @include media-lg-up {
+          @include generate-spaces('right');
+        }
+      }
+    }
+
+    &-md {
+      &-down {
+        @include media-md-down {
+          @include generate-spaces('right');
+        }
+      }
+
+      &-up {
+        @include media-md-up {
+          @include generate-spaces('right');
+        }
+      }
+    }
+
+    &-sm {
+      &-down {
+        @include media-sm-down {
+          @include generate-spaces('right');
+        }
+      }
+
+      &-up {
+        @include media-sm-up {
+          @include generate-spaces('right');
+        }
+      }
+    }
+
+    &-xs {
+      &-down {
+        @include media-xs-down {
+          @include generate-spaces('right');
+        }
+      }
+
+      &-up {
+        @include media-xs-up {
+          @include generate-spaces('right');
+        }
+      }
+    }
+  }
+
+  &-b {
+    @include generate-spaces('bottom');
+
+    &-xxl {
+      &-down {
+        @include media-xxl-down {
+          @include generate-spaces('bottom');
+        }
+      }
+
+      &-up {
+        @include media-xxl-up {
+          @include generate-spaces('bottom');
+        }
+      }
+    }
+
+    &-xl {
+      &-down {
+        @include media-xl-down {
+          @include generate-spaces('bottom');
+        }
+      }
+
+      &-up {
+        @include media-xl-up {
+          @include generate-spaces('bottom');
+        }
+      }
+    }
+
+    &-lg {
+      &-down {
+        @include media-lg-down {
+          @include generate-spaces('bottom');
+        }
+      }
+
+      &-up {
+        @include media-lg-up {
+          @include generate-spaces('bottom');
+        }
+      }
+    }
+
+    &-md {
+      &-down {
+        @include media-md-down {
+          @include generate-spaces('bottom');
+        }
+      }
+
+      &-up {
+        @include media-md-up {
+          @include generate-spaces('bottom');
+        }
+      }
+    }
+
+    &-sm {
+      &-down {
+        @include media-sm-down {
+          @include generate-spaces('bottom');
+        }
+      }
+
+      &-up {
+        @include media-sm-up {
+          @include generate-spaces('bottom');
+        }
+      }
+    }
+
+    &-xs {
+      &-down {
+        @include media-xs-down {
+          @include generate-spaces('bottom');
+        }
+      }
+
+      &-up {
+        @include media-xs-up {
+          @include generate-spaces('bottom');
+        }
+      }
+    }
+  }
+}

@@ -1,5 +1,6 @@
 @use 'sass:math';
-@use '../variables/scss/grid' as *;
+
+$grid-columns: 12;
 
 @mixin generate-cols {
   @for $i from 0 through $grid-columns {
@@ -31,7 +32,7 @@
 @mixin generate-cols-orders {
   @for $i from 1 through $grid-columns {
     &-#{$i} {
-      order: $i
+      order: $i;
     }
   }
 }

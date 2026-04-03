@@ -9,7 +9,7 @@
 <template>
   <Tag.Root
     v-bind="props"
-    v-on="emit"
+    @delete="emit('delete', $event)"
   >
     <slot/>
   </Tag.Root>

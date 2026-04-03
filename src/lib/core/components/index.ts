@@ -24,3 +24,4 @@ export * from './Divider';
 export * from './Primitive';
 export * from './Menu';
 export * from './Calendar';
+export * from './Badge';
