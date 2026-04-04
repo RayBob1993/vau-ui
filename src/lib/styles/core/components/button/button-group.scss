@@ -1,9 +1,10 @@
 .button-group {
   display: inline-flex;
+  flex-wrap: wrap;
+  gap: var(--button-group-gap-y, 0) var(--button-group-gap-x, 0);
 
   &--direction {
     &-horizontal {
-      gap: 0 var(--button-group-gap-x);
       flex-direction: row;
 
       .button {
@@ -24,7 +25,6 @@
     }
 
     &-vertical {
-      gap: var(--button-group-gap-y) 0;
       flex-direction: column;
 
       .button {
