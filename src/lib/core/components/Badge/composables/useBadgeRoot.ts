@@ -1,6 +1,5 @@
 import type { BadgeProps } from '../types';
-import type { MaybeRefOrGetter } from 'vue';
-import { computed, toValue } from 'vue';
+import { computed, toValue, type MaybeRefOrGetter } from 'vue';
 
 export interface UseBadgeRootOptions {
   props: MaybeRefOrGetter<BadgeProps>;

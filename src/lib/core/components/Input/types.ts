@@ -8,12 +8,12 @@ export type InputType = ValueOf<typeof InputTypes>;
 export type InputNativeType = ValueOf<typeof InputNativeTypes>;
 export type InputMode = ValueOf<typeof InputModes>;
 
-export type InputBaseProps = {
+export interface InputBaseProps {
   placeholder?: string;
   disabled?: boolean;
   readonly?: boolean;
   autocomplete?: AutoFill;
-};
+}
 
 export interface InputNativeProps extends InputBaseProps {
   nativeType?: InputNativeType;

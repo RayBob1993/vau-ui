@@ -6,16 +6,15 @@ export type InputNumberModelValue = number;
 
 export type InputNumberMousewheel = boolean | number;
 
-export type InputNumberBaseProps =  {
+export interface InputNumberBaseProps extends InputBaseProps {
   min?: number;
   max?: number;
   step?: number;
-} & InputBaseProps;
+}
 
 export type InputNumberProps = {
   mousewheel?: InputNumberMousewheel;
 } & InputNumberBaseProps & Partial<DirectionProp> & Partial<ThemeProp> & Partial<SizeProp>;
-
 
 export type InputNumberButtonAction = 'decrement' | 'increment';
 
