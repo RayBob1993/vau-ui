@@ -1,6 +1,6 @@
 {
   "name": "vau-ui",
-  "version": "1.0.75",
+  "version": "1.0.76",
   "license": "MIT",
   "repository": "https://github.com/RayBob1993/vau-ui.git",
   "type": "module",
@@ -22,7 +22,10 @@
     "**/*.css"
   ],
   "exports": {
-    ".": "./src/lib/index.ts",
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
     "./styles": "./src/lib/styles/core/index.scss",
     "./styles/config": "./src/lib/styles/core/config.scss",
     "./styles/mixins": "./src/lib/styles/core/mixins/index.scss"
