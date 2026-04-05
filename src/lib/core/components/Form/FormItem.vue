@@ -2,7 +2,7 @@
   import type { FormItemProps, FormItemSlots, FormItemEmits, FormItemExpose, FormItemScopedSlot } from './types';
   import { FormItemContextKey, useFormRootContext } from './context';
   import { useFormItem } from './composables';
-  import { computed, provide, useTemplateRef } from 'vue';
+  import { computed, provide } from 'vue';
 
   const props = defineProps<FormItemProps>();
   const emit = defineEmits<FormItemEmits>();
@@ -32,8 +32,6 @@
     }
   });
 
-  const root = useTemplateRef<HTMLDivElement>('root');
-
   const scopedSlot = computed<FormItemScopedSlot>(() => ({
     validationStatus: validationStatus.value,
     isRequired: isRequired.value,
@@ -62,7 +60,6 @@
 
 <template>
   <div
-    ref="root"
     class="form-item"
     :class="[
       {

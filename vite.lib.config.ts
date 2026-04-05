@@ -24,6 +24,7 @@ export default defineConfig({
       formats: ['es'],
       fileName: 'index'
     },
+    sourcemap: true,
     outDir: 'dist',
     emptyOutDir: true,
     rollupOptions: {

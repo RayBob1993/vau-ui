@@ -6,11 +6,11 @@ export const Slot = defineComponent({
   inheritAttrs: false,
   setup (_, { attrs, slots }) {
     return () => {
-      if (!slots.default) {
+      if (!slots['default']) {
         return null;
       }
 
-      const children = renderSlotFragments(slots.default());
+      const children = renderSlotFragments(slots['default']());
       const firstNonCommentChildrenIndex = children.findIndex(child => child.type !== Comment);
 
       if (firstNonCommentChildrenIndex === -1) {

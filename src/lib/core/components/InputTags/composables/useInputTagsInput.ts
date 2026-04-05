@@ -6,12 +6,14 @@ export interface UseInputTagsInputOptions {
 }
 
 export function useInputTagsInput (options: UseInputTagsInputOptions) {
-  function handleEnter (event: Event) {
+  console.log(options);
 
+  function handleEnter (event: Event) {
+    console.log(event);
   }
 
   function handleTab (event: Event) {
-
+    console.log(event);
   }
 
   return {

@@ -1587,9 +1587,7 @@ export declare const Form: {
         }, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {
         invalid: () => any;
         valid: () => any;
-        }, PublicProps, {}, false, {}, {}, GlobalComponents, GlobalDirectives, string, {
-        root: HTMLDivElement;
-        }, HTMLDivElement, ComponentProvideOptions, {
+        }, PublicProps, {}, false, {}, {}, GlobalComponents, GlobalDirectives, string, {}, HTMLDivElement, ComponentProvideOptions, {
         P: {};
         B: {};
         D: {};
@@ -2123,12 +2121,12 @@ export declare const INPUT_NUMBER_VALUE_DEFAULT = 0;
 
 export declare const INPUT_NUMBER_WHEEL_DELAY = 100;
 
-export declare type InputBaseProps = {
+export declare interface InputBaseProps {
     placeholder?: string;
     disabled?: boolean;
     readonly?: boolean;
     autocomplete?: AutoFill;
-};
+}
 
 export declare const InputCode: {
     Root: {
@@ -2248,18 +2246,14 @@ export declare const InputNumber: {
         modelValue?: InputNumberModelValue;
         } & {
         mousewheel?: InputNumberMousewheel;
-        } & {
-        min?: number;
-        max?: number;
-        step?: number;
-        } & InputBaseProps & Partial<DirectionProp> & Partial<ThemeProp> & Partial<SizeProp>> & Readonly<{
+        } & InputNumberBaseProps & Partial<DirectionProp> & Partial<ThemeProp> & Partial<SizeProp>> & Readonly<{
         "onUpdate:modelValue"?: ((value: number) => any) | undefined;
         }>, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {
         "update:modelValue": (value: number) => any;
         }, PublicProps, {
-        step: number;
         min: number;
         max: number;
+        step: number;
         }, false, {}, {}, GlobalComponents, GlobalDirectives, string, {}, HTMLDivElement, ComponentProvideOptions, {
         P: {};
         B: {};
@@ -2271,16 +2265,12 @@ export declare const InputNumber: {
         modelValue?: InputNumberModelValue;
         } & {
         mousewheel?: InputNumberMousewheel;
-        } & {
-        min?: number;
-        max?: number;
-        step?: number;
-        } & InputBaseProps & Partial<DirectionProp> & Partial<ThemeProp> & Partial<SizeProp>> & Readonly<{
+        } & InputNumberBaseProps & Partial<DirectionProp> & Partial<ThemeProp> & Partial<SizeProp>> & Readonly<{
         "onUpdate:modelValue"?: ((value: number) => any) | undefined;
         }>, {}, {}, {}, {}, {
-        step: number;
         min: number;
         max: number;
+        step: number;
         }>;
         __isFragment?: never;
         __isTeleport?: never;
@@ -2289,18 +2279,14 @@ export declare const InputNumber: {
     modelValue?: InputNumberModelValue;
     } & {
     mousewheel?: InputNumberMousewheel;
-    } & {
-    min?: number;
-    max?: number;
-    step?: number;
-    } & InputBaseProps & Partial<DirectionProp> & Partial<ThemeProp> & Partial<SizeProp>> & Readonly<{
+    } & InputNumberBaseProps & Partial<DirectionProp> & Partial<ThemeProp> & Partial<SizeProp>> & Readonly<{
     "onUpdate:modelValue"?: ((value: number) => any) | undefined;
     }>, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {
     "update:modelValue": (value: number) => any;
     }, string, {
-    step: number;
     min: number;
     max: number;
+    step: number;
     }, {}, string, {}, GlobalComponents, GlobalDirectives, string, ComponentProvideOptions> & VNodeProps & AllowedComponentProps & ComponentCustomProps & (new () => {
         $slots: {
             default?(_: {}): any;
@@ -2326,11 +2312,11 @@ export declare const InputNumber: {
     });
 };
 
-export declare type InputNumberBaseProps = {
+export declare interface InputNumberBaseProps extends InputBaseProps {
     min?: number;
     max?: number;
     step?: number;
-} & InputBaseProps;
+}
 
 export declare type InputNumberButtonAction = 'decrement' | 'increment';
 

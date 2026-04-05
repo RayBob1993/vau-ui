@@ -6,6 +6,8 @@ export interface UseInputTagsTagsOptions {
 }
 
 export function useInputTagsTags (options: UseInputTagsTagsOptions) {
+  console.log(options);
+
   return {
 
   };

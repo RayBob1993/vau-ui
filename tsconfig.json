@@ -34,11 +34,9 @@
     "jsx": "preserve"
   },
   "include": [
-    "vue-global.d.ts",
-    "src/**/*",
-    "eslint.config.ts",
-    "vitest.config.ts",
-    "vite.config.ts",
-    "vite.lib.config.ts"
-  ]
+    "src/**/*"
+  ],
+  "vueCompilerOptions": {
+    "target": 3.5
+  }
 }

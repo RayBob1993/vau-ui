@@ -1,9 +1,9 @@
+import { CalendarPlugin } from '../plugin';
 import { describe, expect, it } from 'vitest';
-import { ButtonPlugin } from '../plugin';
 
-describe('ButtonPlugin', () => {
+describe('CalendarPlugin', () => {
   it('Плагин имеет функцию install', () => {
-    expect(ButtonPlugin.install).toBeDefined();
-    expect(typeof ButtonPlugin.install).toBe('function');
+    expect(CalendarPlugin.install).toBeDefined();
+    expect(typeof CalendarPlugin.install).toBe('function');
   });
 });

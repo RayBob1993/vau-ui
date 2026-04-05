@@ -8,5 +8,7 @@ export interface UseCalendarRootOptions {
 export function useCalendarRoot (options: UseCalendarRootOptions) {
   const props = computed<CalendarProps>(() => toValue(options.props));
 
+  console.log(props);
+
   return {};
 }

@@ -1,13 +1,12 @@
 {
   "name": "vau-ui",
-  "version": "1.0.73",
+  "version": "1.0.74",
   "license": "MIT",
   "repository": "https://github.com/RayBob1993/vau-ui.git",
   "type": "module",
   "scripts": {
     "core:create-component": "node tools/create-core-component/cli.js",
     "serve": "vite",
-    "build:app": "vue-tsc && vite build",
     "build:lib": "vite build --config vite.lib.config.ts",
     "build": "pnpm run build:lib",
     "preview": "vite preview",

@@ -8,5 +8,7 @@ export interface UseBadgeRootOptions {
 export function useBadgeRoot (options: UseBadgeRootOptions) {
   const props = computed<BadgeProps>(() => toValue(options.props));
 
+  console.log(props);
+
   return {};
 }

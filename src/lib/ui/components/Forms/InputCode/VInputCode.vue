@@ -15,8 +15,8 @@
     v-model="modelValue"
   >
     <InputCode.Pin
-      v-for="(pin, index) in length"
-      :key="`pin-${index}`"
+      v-for="pin in length"
+      :key="`pin-${pin}`"
     />
   </InputCode.Root>
 </template>

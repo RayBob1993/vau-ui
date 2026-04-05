@@ -26,12 +26,12 @@ export const Root = defineComponent({
 
     if (asTag !== 'template') {
       return () => h(props.as, attrs, {
-        default: slots.default
+        default: slots['default']
       });
     }
 
     return () => h(Slot, attrs, {
-      default: slots.default
+      default: slots['default']
     });
   }
 });
