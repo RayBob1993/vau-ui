@@ -19,7 +19,10 @@
     "noPropertyAccessFromIndexSignature": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "types": ["vitest/globals"],
+    "types": [
+      "vitest/globals",
+      "@types/node"
+    ],
 
     // Path mapping
     "baseUrl": ".",
