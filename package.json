@@ -7,7 +7,7 @@
   "scripts": {
     "core:create-component": "node tools/create-core-component/cli.js",
     "serve": "vite",
-    "build:lib": "vite build --config vite.lib.config.ts",
+    "build:lib": "vue-tsc --declaration --emitDeclarationOnly && vite build --config vite.lib.config.ts",
     "build": "pnpm run build:lib",
     "preview": "vite preview",
     "test": "vitest run",
@@ -22,10 +22,7 @@
     "**/*.css"
   ],
   "exports": {
-    ".": {
-      "import": "./dist/index.js",
-      "types": "./dist/index.d.ts"
-    },
+    ".": "./src/lib/index.ts",
     "./styles": "./src/lib/styles/core/index.scss",
     "./styles/config": "./src/lib/styles/core/config.scss",
     "./styles/mixins": "./src/lib/styles/core/mixins/index.scss"

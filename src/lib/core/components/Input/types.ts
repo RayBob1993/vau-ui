@@ -12,7 +12,7 @@ export interface InputBaseProps {
   placeholder?: string;
   disabled?: boolean;
   readonly?: boolean;
-  autocomplete?: AutoFill;
+  autocomplete?: string;
 }
 
 export interface InputNativeProps extends InputBaseProps {

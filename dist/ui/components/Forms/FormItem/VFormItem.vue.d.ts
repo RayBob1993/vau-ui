@@ -1,0 +1,24 @@
+import { IVFormItemProps } from './types';
+import { FormItemSlots } from '../../../../core/index.ts';
+import { DefineComponent, ComponentOptionsMixin, PublicProps, ComponentProvideOptions } from 'vue';
+declare function __VLS_template(): {
+    attrs: Partial<{}>;
+    slots: Readonly<FormItemSlots> & FormItemSlots;
+    refs: {};
+    rootEl: HTMLDivElement;
+};
+type __VLS_TemplateResult = ReturnType<typeof __VLS_template>;
+declare const __VLS_component: DefineComponent<IVFormItemProps, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {
+    invalid: () => any;
+    valid: () => any;
+}, string, PublicProps, Readonly<IVFormItemProps> & Readonly<{
+    onInvalid?: (() => any) | undefined;
+    onValid?: (() => any) | undefined;
+}>, {}, {}, {}, {}, string, ComponentProvideOptions, false, {}, HTMLDivElement>;
+declare const _default: __VLS_WithTemplateSlots<typeof __VLS_component, __VLS_TemplateResult["slots"]>;
+export default _default;
+type __VLS_WithTemplateSlots<T, S> = T & {
+    new (): {
+        $slots: S;
+    };
+};

@@ -13,8 +13,10 @@ export default defineConfig({
   plugins: [
     vue(),
     dts({
+      entryRoot: 'src/lib',
+      staticImport: true,
       tsconfigPath: resolve(__dirname, 'tsconfig.json'),
-      rollupTypes: true
+      exclude: ['**/*.test.*', '**/__tests__/*'],
     })
   ],
   build: {
