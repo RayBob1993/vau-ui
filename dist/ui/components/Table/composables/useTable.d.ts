@@ -1,10 +1,8 @@
-import { IVTableProps, IVTableBaseData, IVTableSortDirection } from '../types';
-import { ComputedRef } from 'vue';
-import { UnwrapRefSimple } from '@vue/reactivity';
+import type { IVTableProps, IVTableBaseData, IVTableSortDirection } from '../types';
 export declare function useTable<T extends IVTableBaseData = IVTableBaseData>(props: IVTableProps<T>): {
-    isHeaderVisible: ComputedRef<boolean>;
+    isHeaderVisible: import("vue").ComputedRef<boolean>;
     clearSelection: () => void;
-    getSelectionRows: () => UnwrapRefSimple<T>[];
+    getSelectionRows: () => import("@vue/reactivity").UnwrapRefSimple<T>[];
     clearSort: () => void;
     sort: (prop: keyof T, order: IVTableSortDirection) => void;
     toggleAllSelection: () => void;

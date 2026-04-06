@@ -1,6 +1,5 @@
-import { DefineComponent, VNode, RendererNode, RendererElement, ComponentOptionsMixin, PublicProps, ComponentProvideOptions } from 'vue';
-export declare const Slot: DefineComponent<{}, () => VNode<RendererNode, RendererElement, {
+export declare const Slot: import("vue").DefineComponent<{}, () => import("vue").VNode<import("vue").RendererNode, import("vue").RendererElement, {
     [key: string]: any;
-}> | VNode<RendererNode, RendererElement, {
+}> | import("vue").VNode<import("vue").RendererNode, import("vue").RendererElement, {
     [key: string]: any;
-}>[] | null, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, PublicProps, Readonly<{}> & Readonly<{}>, {}, {}, {}, {}, string, ComponentProvideOptions, true, {}, any>;
+}>[] | null, {}, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, import("vue").PublicProps, Readonly<{}> & Readonly<{}>, {}, {}, {}, {}, string, import("vue").ComponentProvideOptions, true, {}, any>;

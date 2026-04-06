@@ -1,11 +1,10 @@
-import { MaybeNull } from '../../../types';
-import { AccordionRootContext, AccordionItemContext } from '../types';
-import { ComputedRef } from 'vue';
+import type { MaybeNull } from '../../../types';
+import type { AccordionRootContext, AccordionItemContext } from '../types';
 export interface UseAccordionTriggerOptions {
     accordionRootContext: MaybeNull<AccordionRootContext>;
     accordionItemContext: MaybeNull<AccordionItemContext>;
 }
 export declare function useAccordionTrigger(options: UseAccordionTriggerOptions): {
-    isDisabled: ComputedRef<boolean>;
+    isDisabled: import("vue").ComputedRef<boolean>;
     handleToggle: () => void;
 };

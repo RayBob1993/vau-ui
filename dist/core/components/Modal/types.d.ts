@@ -1,5 +1,5 @@
-import { SizeProp } from '../../types';
-import { MaybeRefOrGetter } from 'vue';
+import type { SizeProp } from '../../types';
+import type { MaybeRefOrGetter } from 'vue';
 export type ModalPosition = 'top' | 'center' | 'bottom';
 export type ModalProps = {
     position?: ModalPosition;

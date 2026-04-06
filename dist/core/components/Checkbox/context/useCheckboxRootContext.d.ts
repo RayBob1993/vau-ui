@@ -1,2 +1,1 @@
-import { CheckboxRootContext } from '..';
-export declare function useCheckboxRootContext(): CheckboxRootContext | null;
+export declare function useCheckboxRootContext(): import("..").CheckboxRootContext | null;

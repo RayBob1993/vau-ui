@@ -1,30 +1,23 @@
-import { IVTableProps, IVTableBaseData, IVTableExpose } from './types';
-import { VNodeProps, AllowedComponentProps, ComponentCustomProps, PublicProps, ShallowUnwrapRef, VNode } from 'vue';
-import { UnscopedSlot } from '../../..';
-declare const _default: <T extends IVTableBaseData = IVTableBaseData>(__VLS_props: NonNullable<Awaited<typeof __VLS_setup>>["props"], __VLS_ctx?: __VLS_PrettifyLocal<Pick<NonNullable<Awaited<typeof __VLS_setup>>, "attrs" | "emit" | "slots">>, __VLS_expose?: NonNullable<Awaited<typeof __VLS_setup>>["expose"], __VLS_setup?: Promise<{
-    props: __VLS_PrettifyLocal<Pick<Partial<{}> & Omit<{
-        readonly onSort?: (() => any) | undefined;
-        readonly onSelect?: ((payload: T) => any) | undefined;
-        readonly "onSelect:all"?: ((payload: T[]) => any) | undefined;
-    } & VNodeProps & AllowedComponentProps & ComponentCustomProps, never>, "onSelect" | "onSort" | "onSelect:all"> & IVTableProps<T> & Partial<{}>> & PublicProps;
-    expose(exposed: ShallowUnwrapRef<IVTableExpose>): void;
+import type { IVTableProps, IVTableBaseData, IVTableExpose, IVTableSlots } from './types';
+declare const __VLS_export: <T extends IVTableBaseData = IVTableBaseData>(__VLS_props: NonNullable<Awaited<typeof __VLS_setup>>["props"], __VLS_ctx?: __VLS_PrettifyLocal<Pick<NonNullable<Awaited<typeof __VLS_setup>>, "attrs" | "emit" | "slots">>, __VLS_exposed?: NonNullable<Awaited<typeof __VLS_setup>>["expose"], __VLS_setup?: Promise<{
+    props: import("vue").PublicProps & __VLS_PrettifyLocal<IVTableProps<T> & {
+        onSelect?: ((payload: T) => any) | undefined;
+        onSort?: (() => any) | undefined;
+        "onSelect:all"?: ((payload: T[]) => any) | undefined;
+    }> & (typeof globalThis extends {
+        __VLS_PROPS_FALLBACK: infer P;
+    } ? P : {});
+    expose: (exposed: import("vue").ShallowUnwrapRef<IVTableExpose>) => void;
     attrs: any;
-    slots: Readonly<{
-        default?: UnscopedSlot;
-        empty?: UnscopedSlot;
-    } & { [K in keyof T]?: ((props: {
-        row: T;
-    }) => Array< VNode>) | undefined; }> & {
-        default?: UnscopedSlot;
-        empty?: UnscopedSlot;
-    } & { [K in keyof T]?: ((props: {
-        row: T;
-    }) => Array< VNode>) | undefined; };
-    emit: ((evt: "sort") => void) & ((evt: "select", payload: T) => void) & ((evt: "select:all", payload: T[]) => void);
-}>) => VNode & {
+    slots: IVTableSlots<T>;
+    emit: ((evt: "select", payload: T) => void) & ((evt: "sort") => void) & ((evt: "select:all", payload: T[]) => void);
+}>) => import("vue").VNode & {
     __ctx?: Awaited<typeof __VLS_setup>;
 };
+declare const _default: typeof __VLS_export;
 export default _default;
-type __VLS_PrettifyLocal<T> = {
+type __VLS_PrettifyLocal<T> = (T extends any ? {
     [K in keyof T]: T[K];
-} & {};
+} : {
+    [K in keyof T as K]: T[K];
+}) & {};

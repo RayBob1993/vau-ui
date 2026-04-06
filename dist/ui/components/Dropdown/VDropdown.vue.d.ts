@@ -1,29 +1,20 @@
-import { IVDropdownProps, IVDropdownSlots } from './types';
-import { DefineComponent, Ref, ComponentOptionsMixin, PublicProps, ComponentProvideOptions } from 'vue';
-declare function __VLS_template(): {
-    attrs: Partial<{}>;
-    slots: Readonly<IVDropdownSlots> & IVDropdownSlots;
-    refs: {};
-    rootEl: HTMLDivElement;
-};
-type __VLS_TemplateResult = ReturnType<typeof __VLS_template>;
-declare const __VLS_component: DefineComponent<IVDropdownProps, {
-    setVisible: (payload: boolean) => void;
-    isVisible: Ref<boolean>;
-}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {
+import type { IVDropdownProps, IVDropdownSlots, IVDropdownExpose } from './types';
+type __VLS_Slots = IVDropdownSlots;
+declare const __VLS_base: import("vue").DefineComponent<IVDropdownProps, IVDropdownExpose, {}, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {
     close: () => any;
     open: () => any;
     opened: (payload: Element) => any;
     closed: (payload: Element) => any;
-}, string, PublicProps, Readonly<IVDropdownProps> & Readonly<{
+}, string, import("vue").PublicProps, Readonly<IVDropdownProps> & Readonly<{
     onClose?: (() => any) | undefined;
     onOpen?: (() => any) | undefined;
     onOpened?: ((payload: Element) => any) | undefined;
     onClosed?: ((payload: Element) => any) | undefined;
-}>, {}, {}, {}, {}, string, ComponentProvideOptions, false, {}, HTMLDivElement>;
-declare const _default: __VLS_WithTemplateSlots<typeof __VLS_component, __VLS_TemplateResult["slots"]>;
+}>, {}, {}, {}, {}, string, import("vue").ComponentProvideOptions, false, {}, any>;
+declare const __VLS_export: __VLS_WithSlots<typeof __VLS_base, __VLS_Slots>;
+declare const _default: typeof __VLS_export;
 export default _default;
-type __VLS_WithTemplateSlots<T, S> = T & {
+type __VLS_WithSlots<T, S> = T & {
     new (): {
         $slots: S;
     };

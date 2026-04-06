@@ -1,4 +1,4 @@
-import { VNode } from 'vue';
+import type { VNode } from 'vue';
 export interface IVInplaceSlots {
     display?: (props: {
         open: VoidFunction;

@@ -1,4 +1,4 @@
-import { SizeProp, ThemeProp } from '../../types';
+import type { SizeProp, ThemeProp } from '../../types';
 export type ScrollbarProps = {
     vertical?: boolean;
     horizontal?: boolean;

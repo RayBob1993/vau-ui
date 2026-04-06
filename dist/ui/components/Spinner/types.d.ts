@@ -1,4 +1,4 @@
-import { SizeProp, ThemeProp } from '../../../core/index.ts';
+import type { SizeProp, ThemeProp } from '../../../core/index.js';
 /**
  * Интерфейс свойств компонента VSpinner
  * @interface IVSpinnerProps

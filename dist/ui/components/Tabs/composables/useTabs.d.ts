@@ -1,28 +1,26 @@
-import { IVTabContext } from '../types';
-import { Ref, VNode } from 'vue';
-import { IVTabValue, IVTabScopedSlot } from '..';
+import type { IVTabContext } from '../types';
 export declare function useTabs(): {
-    tabs: Ref<{
+    tabs: import("vue").Ref<{
         id: string;
         props: {
             title?: string | undefined;
-            value: IVTabValue;
+            value: import("..").IVTabValue;
             disabled?: boolean | undefined;
         };
         slots: {
-            default?: ((props: IVTabScopedSlot) => Array< VNode>) | undefined;
-            title?: ((props: IVTabScopedSlot) => Array< VNode>) | undefined;
+            default?: ((props: import("..").IVTabScopedSlot) => Array<import("vue").VNode>) | undefined;
+            title?: ((props: import("..").IVTabScopedSlot) => Array<import("vue").VNode>) | undefined;
         };
     }[], IVTabContext[] | {
         id: string;
         props: {
             title?: string | undefined;
-            value: IVTabValue;
+            value: import("..").IVTabValue;
             disabled?: boolean | undefined;
         };
         slots: {
-            default?: ((props: IVTabScopedSlot) => Array< VNode>) | undefined;
-            title?: ((props: IVTabScopedSlot) => Array< VNode>) | undefined;
+            default?: ((props: import("..").IVTabScopedSlot) => Array<import("vue").VNode>) | undefined;
+            title?: ((props: import("..").IVTabScopedSlot) => Array<import("vue").VNode>) | undefined;
         };
     }[]>;
     registerTab: (newTab: IVTabContext) => void;

@@ -1,2 +1,1 @@
-import { InputRootContext } from '..';
-export declare function useInputRootContext(): InputRootContext | null;
+export declare function useInputRootContext(): import("..").InputRootContext | null;

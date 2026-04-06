@@ -1,5 +1,5 @@
-import { ConfigProviderProps } from '../types';
-import { MaybeRefOrGetter } from 'vue';
+import type { ConfigProviderProps } from '../types';
+import { type MaybeRefOrGetter } from 'vue';
 export interface UseConfigProviderRootOptions {
     props: MaybeRefOrGetter<ConfigProviderProps>;
 }

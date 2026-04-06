@@ -1,9 +1,7 @@
-import { FormItemValidationStatus, FormModel } from '../types';
-import { ZodObject } from 'zod';
-import { MaybeNull } from '../../../types';
-import { MaybeRefOrGetter, Ref } from 'vue';
-import { $ZodInvalidTypeExpected, $ZodStringFormats, $ZodIssue } from 'zod/v4/core';
-import { Primitive } from 'node_modules/zod/v4/core/util.cjs';
+import type { FormItemValidationStatus, FormModel } from '../types';
+import type { ZodObject } from 'zod';
+import type { MaybeNull } from '../../../types';
+import { type MaybeRefOrGetter } from 'vue';
 export interface UseFormItemValidationOptions {
     data: MaybeRefOrGetter<MaybeNull<FormModel>>;
     schema: MaybeRefOrGetter<MaybeNull<ZodObject>>;
@@ -11,7 +9,7 @@ export interface UseFormItemValidationOptions {
     onInvalid?: VoidFunction;
 }
 export declare function useFormItemValidation(options: UseFormItemValidationOptions): {
-    validationStatus: Ref<{
+    validationStatus: import("vue").Ref<{
         isError: boolean;
         isValidating: boolean;
         isSuccess: boolean;
@@ -20,9 +18,9 @@ export declare function useFormItemValidation(options: UseFormItemValidationOpti
         isValidating: boolean;
         isSuccess: boolean;
     }>;
-    validationErrors: Ref<({
+    validationErrors: import("vue").Ref<({
         readonly code: "invalid_type";
-        readonly expected: $ZodInvalidTypeExpected;
+        readonly expected: import("zod/v4/core").$ZodInvalidTypeExpected;
         readonly input?: unknown;
         readonly path: PropertyKey[];
         readonly message: string;
@@ -46,7 +44,7 @@ export declare function useFormItemValidation(options: UseFormItemValidationOpti
         readonly message: string;
     } | {
         readonly code: "invalid_format";
-        readonly format: $ZodStringFormats | (string & {});
+        readonly format: import("zod/v4/core").$ZodStringFormats | (string & {});
         readonly pattern?: string | undefined;
         readonly input?: string | undefined;
         readonly path: PropertyKey[];
@@ -67,7 +65,7 @@ export declare function useFormItemValidation(options: UseFormItemValidationOpti
         readonly code: "invalid_union";
         readonly errors: ({
             readonly code: "invalid_type";
-            readonly expected: $ZodInvalidTypeExpected;
+            readonly expected: import("zod/v4/core").$ZodInvalidTypeExpected;
             readonly input?: unknown;
             readonly path: PropertyKey[];
             readonly message: string;
@@ -91,7 +89,7 @@ export declare function useFormItemValidation(options: UseFormItemValidationOpti
             readonly message: string;
         } | {
             readonly code: "invalid_format";
-            readonly format: $ZodStringFormats | (string & {});
+            readonly format: import("zod/v4/core").$ZodStringFormats | (string & {});
             readonly pattern?: string | undefined;
             readonly input?: string | undefined;
             readonly path: PropertyKey[];
@@ -121,7 +119,7 @@ export declare function useFormItemValidation(options: UseFormItemValidationOpti
             readonly origin: "map" | "record";
             readonly issues: ({
                 readonly code: "invalid_type";
-                readonly expected: $ZodInvalidTypeExpected;
+                readonly expected: import("zod/v4/core").$ZodInvalidTypeExpected;
                 readonly input?: unknown;
                 readonly path: PropertyKey[];
                 readonly message: string;
@@ -145,7 +143,7 @@ export declare function useFormItemValidation(options: UseFormItemValidationOpti
                 readonly message: string;
             } | {
                 readonly code: "invalid_format";
-                readonly format: $ZodStringFormats | (string & {});
+                readonly format: import("zod/v4/core").$ZodStringFormats | (string & {});
                 readonly pattern?: string | undefined;
                 readonly input?: string | undefined;
                 readonly path: PropertyKey[];
@@ -176,7 +174,7 @@ export declare function useFormItemValidation(options: UseFormItemValidationOpti
                 readonly key: unknown;
                 readonly issues: ({
                     readonly code: "invalid_type";
-                    readonly expected: $ZodInvalidTypeExpected;
+                    readonly expected: import("zod/v4/core").$ZodInvalidTypeExpected;
                     readonly input?: unknown;
                     readonly path: PropertyKey[];
                     readonly message: string;
@@ -200,7 +198,7 @@ export declare function useFormItemValidation(options: UseFormItemValidationOpti
                     readonly message: string;
                 } | {
                     readonly code: "invalid_format";
-                    readonly format: $ZodStringFormats | (string & {});
+                    readonly format: import("zod/v4/core").$ZodStringFormats | (string & {});
                     readonly pattern?: string | undefined;
                     readonly input?: string | undefined;
                     readonly path: PropertyKey[];
@@ -227,7 +225,7 @@ export declare function useFormItemValidation(options: UseFormItemValidationOpti
                     readonly message: string;
                 } | /*elided*/ any | /*elided*/ any | {
                     readonly code: "invalid_value";
-                    readonly values: Primitive[];
+                    readonly values: import("node_modules/zod/v4/core/util.cjs").Primitive[];
                     readonly input?: unknown;
                     readonly path: PropertyKey[];
                     readonly message: string;
@@ -243,7 +241,7 @@ export declare function useFormItemValidation(options: UseFormItemValidationOpti
                 readonly message: string;
             } | {
                 readonly code: "invalid_value";
-                readonly values: Primitive[];
+                readonly values: import("node_modules/zod/v4/core/util.cjs").Primitive[];
                 readonly input?: unknown;
                 readonly path: PropertyKey[];
                 readonly message: string;
@@ -263,7 +261,7 @@ export declare function useFormItemValidation(options: UseFormItemValidationOpti
             readonly key: unknown;
             readonly issues: ({
                 readonly code: "invalid_type";
-                readonly expected: $ZodInvalidTypeExpected;
+                readonly expected: import("zod/v4/core").$ZodInvalidTypeExpected;
                 readonly input?: unknown;
                 readonly path: PropertyKey[];
                 readonly message: string;
@@ -287,7 +285,7 @@ export declare function useFormItemValidation(options: UseFormItemValidationOpti
                 readonly message: string;
             } | {
                 readonly code: "invalid_format";
-                readonly format: $ZodStringFormats | (string & {});
+                readonly format: import("zod/v4/core").$ZodStringFormats | (string & {});
                 readonly pattern?: string | undefined;
                 readonly input?: string | undefined;
                 readonly path: PropertyKey[];
@@ -317,7 +315,7 @@ export declare function useFormItemValidation(options: UseFormItemValidationOpti
                 readonly origin: "map" | "record";
                 readonly issues: ({
                     readonly code: "invalid_type";
-                    readonly expected: $ZodInvalidTypeExpected;
+                    readonly expected: import("zod/v4/core").$ZodInvalidTypeExpected;
                     readonly input?: unknown;
                     readonly path: PropertyKey[];
                     readonly message: string;
@@ -341,7 +339,7 @@ export declare function useFormItemValidation(options: UseFormItemValidationOpti
                     readonly message: string;
                 } | {
                     readonly code: "invalid_format";
-                    readonly format: $ZodStringFormats | (string & {});
+                    readonly format: import("zod/v4/core").$ZodStringFormats | (string & {});
                     readonly pattern?: string | undefined;
                     readonly input?: string | undefined;
                     readonly path: PropertyKey[];
@@ -368,7 +366,7 @@ export declare function useFormItemValidation(options: UseFormItemValidationOpti
                     readonly message: string;
                 } | /*elided*/ any | /*elided*/ any | {
                     readonly code: "invalid_value";
-                    readonly values: Primitive[];
+                    readonly values: import("node_modules/zod/v4/core/util.cjs").Primitive[];
                     readonly input?: unknown;
                     readonly path: PropertyKey[];
                     readonly message: string;
@@ -384,7 +382,7 @@ export declare function useFormItemValidation(options: UseFormItemValidationOpti
                 readonly message: string;
             } | /*elided*/ any | {
                 readonly code: "invalid_value";
-                readonly values: Primitive[];
+                readonly values: import("node_modules/zod/v4/core/util.cjs").Primitive[];
                 readonly input?: unknown;
                 readonly path: PropertyKey[];
                 readonly message: string;
@@ -400,7 +398,7 @@ export declare function useFormItemValidation(options: UseFormItemValidationOpti
             readonly message: string;
         } | {
             readonly code: "invalid_value";
-            readonly values: Primitive[];
+            readonly values: import("node_modules/zod/v4/core/util.cjs").Primitive[];
             readonly input?: unknown;
             readonly path: PropertyKey[];
             readonly message: string;
@@ -429,7 +427,7 @@ export declare function useFormItemValidation(options: UseFormItemValidationOpti
         readonly origin: "map" | "record";
         readonly issues: ({
             readonly code: "invalid_type";
-            readonly expected: $ZodInvalidTypeExpected;
+            readonly expected: import("zod/v4/core").$ZodInvalidTypeExpected;
             readonly input?: unknown;
             readonly path: PropertyKey[];
             readonly message: string;
@@ -453,7 +451,7 @@ export declare function useFormItemValidation(options: UseFormItemValidationOpti
             readonly message: string;
         } | {
             readonly code: "invalid_format";
-            readonly format: $ZodStringFormats | (string & {});
+            readonly format: import("zod/v4/core").$ZodStringFormats | (string & {});
             readonly pattern?: string | undefined;
             readonly input?: string | undefined;
             readonly path: PropertyKey[];
@@ -474,7 +472,7 @@ export declare function useFormItemValidation(options: UseFormItemValidationOpti
             readonly code: "invalid_union";
             readonly errors: ({
                 readonly code: "invalid_type";
-                readonly expected: $ZodInvalidTypeExpected;
+                readonly expected: import("zod/v4/core").$ZodInvalidTypeExpected;
                 readonly input?: unknown;
                 readonly path: PropertyKey[];
                 readonly message: string;
@@ -498,7 +496,7 @@ export declare function useFormItemValidation(options: UseFormItemValidationOpti
                 readonly message: string;
             } | {
                 readonly code: "invalid_format";
-                readonly format: $ZodStringFormats | (string & {});
+                readonly format: import("zod/v4/core").$ZodStringFormats | (string & {});
                 readonly pattern?: string | undefined;
                 readonly input?: string | undefined;
                 readonly path: PropertyKey[];
@@ -529,7 +527,7 @@ export declare function useFormItemValidation(options: UseFormItemValidationOpti
                 readonly key: unknown;
                 readonly issues: ({
                     readonly code: "invalid_type";
-                    readonly expected: $ZodInvalidTypeExpected;
+                    readonly expected: import("zod/v4/core").$ZodInvalidTypeExpected;
                     readonly input?: unknown;
                     readonly path: PropertyKey[];
                     readonly message: string;
@@ -553,7 +551,7 @@ export declare function useFormItemValidation(options: UseFormItemValidationOpti
                     readonly message: string;
                 } | {
                     readonly code: "invalid_format";
-                    readonly format: $ZodStringFormats | (string & {});
+                    readonly format: import("zod/v4/core").$ZodStringFormats | (string & {});
                     readonly pattern?: string | undefined;
                     readonly input?: string | undefined;
                     readonly path: PropertyKey[];
@@ -580,7 +578,7 @@ export declare function useFormItemValidation(options: UseFormItemValidationOpti
                     readonly message: string;
                 } | /*elided*/ any | /*elided*/ any | {
                     readonly code: "invalid_value";
-                    readonly values: Primitive[];
+                    readonly values: import("node_modules/zod/v4/core/util.cjs").Primitive[];
                     readonly input?: unknown;
                     readonly path: PropertyKey[];
                     readonly message: string;
@@ -596,7 +594,7 @@ export declare function useFormItemValidation(options: UseFormItemValidationOpti
                 readonly message: string;
             } | {
                 readonly code: "invalid_value";
-                readonly values: Primitive[];
+                readonly values: import("node_modules/zod/v4/core/util.cjs").Primitive[];
                 readonly input?: unknown;
                 readonly path: PropertyKey[];
                 readonly message: string;
@@ -626,7 +624,7 @@ export declare function useFormItemValidation(options: UseFormItemValidationOpti
             readonly key: unknown;
             readonly issues: ({
                 readonly code: "invalid_type";
-                readonly expected: $ZodInvalidTypeExpected;
+                readonly expected: import("zod/v4/core").$ZodInvalidTypeExpected;
                 readonly input?: unknown;
                 readonly path: PropertyKey[];
                 readonly message: string;
@@ -650,7 +648,7 @@ export declare function useFormItemValidation(options: UseFormItemValidationOpti
                 readonly message: string;
             } | {
                 readonly code: "invalid_format";
-                readonly format: $ZodStringFormats | (string & {});
+                readonly format: import("zod/v4/core").$ZodStringFormats | (string & {});
                 readonly pattern?: string | undefined;
                 readonly input?: string | undefined;
                 readonly path: PropertyKey[];
@@ -671,7 +669,7 @@ export declare function useFormItemValidation(options: UseFormItemValidationOpti
                 readonly code: "invalid_union";
                 readonly errors: ({
                     readonly code: "invalid_type";
-                    readonly expected: $ZodInvalidTypeExpected;
+                    readonly expected: import("zod/v4/core").$ZodInvalidTypeExpected;
                     readonly input?: unknown;
                     readonly path: PropertyKey[];
                     readonly message: string;
@@ -695,7 +693,7 @@ export declare function useFormItemValidation(options: UseFormItemValidationOpti
                     readonly message: string;
                 } | {
                     readonly code: "invalid_format";
-                    readonly format: $ZodStringFormats | (string & {});
+                    readonly format: import("zod/v4/core").$ZodStringFormats | (string & {});
                     readonly pattern?: string | undefined;
                     readonly input?: string | undefined;
                     readonly path: PropertyKey[];
@@ -722,7 +720,7 @@ export declare function useFormItemValidation(options: UseFormItemValidationOpti
                     readonly message: string;
                 } | /*elided*/ any | /*elided*/ any | {
                     readonly code: "invalid_value";
-                    readonly values: Primitive[];
+                    readonly values: import("node_modules/zod/v4/core/util.cjs").Primitive[];
                     readonly input?: unknown;
                     readonly path: PropertyKey[];
                     readonly message: string;
@@ -748,7 +746,7 @@ export declare function useFormItemValidation(options: UseFormItemValidationOpti
                 readonly message: string;
             } | /*elided*/ any | /*elided*/ any | {
                 readonly code: "invalid_value";
-                readonly values: Primitive[];
+                readonly values: import("node_modules/zod/v4/core/util.cjs").Primitive[];
                 readonly input?: unknown;
                 readonly path: PropertyKey[];
                 readonly message: string;
@@ -764,7 +762,7 @@ export declare function useFormItemValidation(options: UseFormItemValidationOpti
             readonly message: string;
         } | {
             readonly code: "invalid_value";
-            readonly values: Primitive[];
+            readonly values: import("node_modules/zod/v4/core/util.cjs").Primitive[];
             readonly input?: unknown;
             readonly path: PropertyKey[];
             readonly message: string;
@@ -784,7 +782,7 @@ export declare function useFormItemValidation(options: UseFormItemValidationOpti
         readonly key: unknown;
         readonly issues: ({
             readonly code: "invalid_type";
-            readonly expected: $ZodInvalidTypeExpected;
+            readonly expected: import("zod/v4/core").$ZodInvalidTypeExpected;
             readonly input?: unknown;
             readonly path: PropertyKey[];
             readonly message: string;
@@ -808,7 +806,7 @@ export declare function useFormItemValidation(options: UseFormItemValidationOpti
             readonly message: string;
         } | {
             readonly code: "invalid_format";
-            readonly format: $ZodStringFormats | (string & {});
+            readonly format: import("zod/v4/core").$ZodStringFormats | (string & {});
             readonly pattern?: string | undefined;
             readonly input?: string | undefined;
             readonly path: PropertyKey[];
@@ -829,7 +827,7 @@ export declare function useFormItemValidation(options: UseFormItemValidationOpti
             readonly code: "invalid_union";
             readonly errors: ({
                 readonly code: "invalid_type";
-                readonly expected: $ZodInvalidTypeExpected;
+                readonly expected: import("zod/v4/core").$ZodInvalidTypeExpected;
                 readonly input?: unknown;
                 readonly path: PropertyKey[];
                 readonly message: string;
@@ -853,7 +851,7 @@ export declare function useFormItemValidation(options: UseFormItemValidationOpti
                 readonly message: string;
             } | {
                 readonly code: "invalid_format";
-                readonly format: $ZodStringFormats | (string & {});
+                readonly format: import("zod/v4/core").$ZodStringFormats | (string & {});
                 readonly pattern?: string | undefined;
                 readonly input?: string | undefined;
                 readonly path: PropertyKey[];
@@ -883,7 +881,7 @@ export declare function useFormItemValidation(options: UseFormItemValidationOpti
                 readonly origin: "map" | "record";
                 readonly issues: ({
                     readonly code: "invalid_type";
-                    readonly expected: $ZodInvalidTypeExpected;
+                    readonly expected: import("zod/v4/core").$ZodInvalidTypeExpected;
                     readonly input?: unknown;
                     readonly path: PropertyKey[];
                     readonly message: string;
@@ -907,7 +905,7 @@ export declare function useFormItemValidation(options: UseFormItemValidationOpti
                     readonly message: string;
                 } | {
                     readonly code: "invalid_format";
-                    readonly format: $ZodStringFormats | (string & {});
+                    readonly format: import("zod/v4/core").$ZodStringFormats | (string & {});
                     readonly pattern?: string | undefined;
                     readonly input?: string | undefined;
                     readonly path: PropertyKey[];
@@ -934,7 +932,7 @@ export declare function useFormItemValidation(options: UseFormItemValidationOpti
                     readonly message: string;
                 } | /*elided*/ any | /*elided*/ any | {
                     readonly code: "invalid_value";
-                    readonly values: Primitive[];
+                    readonly values: import("node_modules/zod/v4/core/util.cjs").Primitive[];
                     readonly input?: unknown;
                     readonly path: PropertyKey[];
                     readonly message: string;
@@ -950,7 +948,7 @@ export declare function useFormItemValidation(options: UseFormItemValidationOpti
                 readonly message: string;
             } | /*elided*/ any | {
                 readonly code: "invalid_value";
-                readonly values: Primitive[];
+                readonly values: import("node_modules/zod/v4/core/util.cjs").Primitive[];
                 readonly input?: unknown;
                 readonly path: PropertyKey[];
                 readonly message: string;
@@ -979,7 +977,7 @@ export declare function useFormItemValidation(options: UseFormItemValidationOpti
             readonly origin: "map" | "record";
             readonly issues: ({
                 readonly code: "invalid_type";
-                readonly expected: $ZodInvalidTypeExpected;
+                readonly expected: import("zod/v4/core").$ZodInvalidTypeExpected;
                 readonly input?: unknown;
                 readonly path: PropertyKey[];
                 readonly message: string;
@@ -1003,7 +1001,7 @@ export declare function useFormItemValidation(options: UseFormItemValidationOpti
                 readonly message: string;
             } | {
                 readonly code: "invalid_format";
-                readonly format: $ZodStringFormats | (string & {});
+                readonly format: import("zod/v4/core").$ZodStringFormats | (string & {});
                 readonly pattern?: string | undefined;
                 readonly input?: string | undefined;
                 readonly path: PropertyKey[];
@@ -1024,7 +1022,7 @@ export declare function useFormItemValidation(options: UseFormItemValidationOpti
                 readonly code: "invalid_union";
                 readonly errors: ({
                     readonly code: "invalid_type";
-                    readonly expected: $ZodInvalidTypeExpected;
+                    readonly expected: import("zod/v4/core").$ZodInvalidTypeExpected;
                     readonly input?: unknown;
                     readonly path: PropertyKey[];
                     readonly message: string;
@@ -1048,7 +1046,7 @@ export declare function useFormItemValidation(options: UseFormItemValidationOpti
                     readonly message: string;
                 } | {
                     readonly code: "invalid_format";
-                    readonly format: $ZodStringFormats | (string & {});
+                    readonly format: import("zod/v4/core").$ZodStringFormats | (string & {});
                     readonly pattern?: string | undefined;
                     readonly input?: string | undefined;
                     readonly path: PropertyKey[];
@@ -1075,7 +1073,7 @@ export declare function useFormItemValidation(options: UseFormItemValidationOpti
                     readonly message: string;
                 } | /*elided*/ any | /*elided*/ any | {
                     readonly code: "invalid_value";
-                    readonly values: Primitive[];
+                    readonly values: import("node_modules/zod/v4/core/util.cjs").Primitive[];
                     readonly input?: unknown;
                     readonly path: PropertyKey[];
                     readonly message: string;
@@ -1101,7 +1099,7 @@ export declare function useFormItemValidation(options: UseFormItemValidationOpti
                 readonly message: string;
             } | /*elided*/ any | /*elided*/ any | {
                 readonly code: "invalid_value";
-                readonly values: Primitive[];
+                readonly values: import("node_modules/zod/v4/core/util.cjs").Primitive[];
                 readonly input?: unknown;
                 readonly path: PropertyKey[];
                 readonly message: string;
@@ -1117,7 +1115,7 @@ export declare function useFormItemValidation(options: UseFormItemValidationOpti
             readonly message: string;
         } | /*elided*/ any | {
             readonly code: "invalid_value";
-            readonly values: Primitive[];
+            readonly values: import("node_modules/zod/v4/core/util.cjs").Primitive[];
             readonly input?: unknown;
             readonly path: PropertyKey[];
             readonly message: string;
@@ -1133,7 +1131,7 @@ export declare function useFormItemValidation(options: UseFormItemValidationOpti
         readonly message: string;
     } | {
         readonly code: "invalid_value";
-        readonly values: Primitive[];
+        readonly values: import("node_modules/zod/v4/core/util.cjs").Primitive[];
         readonly input?: unknown;
         readonly path: PropertyKey[];
         readonly message: string;
@@ -1143,9 +1141,9 @@ export declare function useFormItemValidation(options: UseFormItemValidationOpti
         readonly input?: unknown;
         readonly path: PropertyKey[];
         readonly message: string;
-    })[], $ZodIssue[] | ({
+    })[], import("zod/v4/core").$ZodIssue[] | ({
         readonly code: "invalid_type";
-        readonly expected: $ZodInvalidTypeExpected;
+        readonly expected: import("zod/v4/core").$ZodInvalidTypeExpected;
         readonly input?: unknown;
         readonly path: PropertyKey[];
         readonly message: string;
@@ -1169,7 +1167,7 @@ export declare function useFormItemValidation(options: UseFormItemValidationOpti
         readonly message: string;
     } | {
         readonly code: "invalid_format";
-        readonly format: $ZodStringFormats | (string & {});
+        readonly format: import("zod/v4/core").$ZodStringFormats | (string & {});
         readonly pattern?: string | undefined;
         readonly input?: string | undefined;
         readonly path: PropertyKey[];
@@ -1190,7 +1188,7 @@ export declare function useFormItemValidation(options: UseFormItemValidationOpti
         readonly code: "invalid_union";
         readonly errors: ({
             readonly code: "invalid_type";
-            readonly expected: $ZodInvalidTypeExpected;
+            readonly expected: import("zod/v4/core").$ZodInvalidTypeExpected;
             readonly input?: unknown;
             readonly path: PropertyKey[];
             readonly message: string;
@@ -1214,7 +1212,7 @@ export declare function useFormItemValidation(options: UseFormItemValidationOpti
             readonly message: string;
         } | {
             readonly code: "invalid_format";
-            readonly format: $ZodStringFormats | (string & {});
+            readonly format: import("zod/v4/core").$ZodStringFormats | (string & {});
             readonly pattern?: string | undefined;
             readonly input?: string | undefined;
             readonly path: PropertyKey[];
@@ -1244,7 +1242,7 @@ export declare function useFormItemValidation(options: UseFormItemValidationOpti
             readonly origin: "map" | "record";
             readonly issues: ({
                 readonly code: "invalid_type";
-                readonly expected: $ZodInvalidTypeExpected;
+                readonly expected: import("zod/v4/core").$ZodInvalidTypeExpected;
                 readonly input?: unknown;
                 readonly path: PropertyKey[];
                 readonly message: string;
@@ -1268,7 +1266,7 @@ export declare function useFormItemValidation(options: UseFormItemValidationOpti
                 readonly message: string;
             } | {
                 readonly code: "invalid_format";
-                readonly format: $ZodStringFormats | (string & {});
+                readonly format: import("zod/v4/core").$ZodStringFormats | (string & {});
                 readonly pattern?: string | undefined;
                 readonly input?: string | undefined;
                 readonly path: PropertyKey[];
@@ -1299,7 +1297,7 @@ export declare function useFormItemValidation(options: UseFormItemValidationOpti
                 readonly key: unknown;
                 readonly issues: ({
                     readonly code: "invalid_type";
-                    readonly expected: $ZodInvalidTypeExpected;
+                    readonly expected: import("zod/v4/core").$ZodInvalidTypeExpected;
                     readonly input?: unknown;
                     readonly path: PropertyKey[];
                     readonly message: string;
@@ -1323,7 +1321,7 @@ export declare function useFormItemValidation(options: UseFormItemValidationOpti
                     readonly message: string;
                 } | {
                     readonly code: "invalid_format";
-                    readonly format: $ZodStringFormats | (string & {});
+                    readonly format: import("zod/v4/core").$ZodStringFormats | (string & {});
                     readonly pattern?: string | undefined;
                     readonly input?: string | undefined;
                     readonly path: PropertyKey[];
@@ -1350,7 +1348,7 @@ export declare function useFormItemValidation(options: UseFormItemValidationOpti
                     readonly message: string;
                 } | /*elided*/ any | /*elided*/ any | {
                     readonly code: "invalid_value";
-                    readonly values: Primitive[];
+                    readonly values: import("node_modules/zod/v4/core/util.cjs").Primitive[];
                     readonly input?: unknown;
                     readonly path: PropertyKey[];
                     readonly message: string;
@@ -1366,7 +1364,7 @@ export declare function useFormItemValidation(options: UseFormItemValidationOpti
                 readonly message: string;
             } | {
                 readonly code: "invalid_value";
-                readonly values: Primitive[];
+                readonly values: import("node_modules/zod/v4/core/util.cjs").Primitive[];
                 readonly input?: unknown;
                 readonly path: PropertyKey[];
                 readonly message: string;
@@ -1386,7 +1384,7 @@ export declare function useFormItemValidation(options: UseFormItemValidationOpti
             readonly key: unknown;
             readonly issues: ({
                 readonly code: "invalid_type";
-                readonly expected: $ZodInvalidTypeExpected;
+                readonly expected: import("zod/v4/core").$ZodInvalidTypeExpected;
                 readonly input?: unknown;
                 readonly path: PropertyKey[];
                 readonly message: string;
@@ -1410,7 +1408,7 @@ export declare function useFormItemValidation(options: UseFormItemValidationOpti
                 readonly message: string;
             } | {
                 readonly code: "invalid_format";
-                readonly format: $ZodStringFormats | (string & {});
+                readonly format: import("zod/v4/core").$ZodStringFormats | (string & {});
                 readonly pattern?: string | undefined;
                 readonly input?: string | undefined;
                 readonly path: PropertyKey[];
@@ -1440,7 +1438,7 @@ export declare function useFormItemValidation(options: UseFormItemValidationOpti
                 readonly origin: "map" | "record";
                 readonly issues: ({
                     readonly code: "invalid_type";
-                    readonly expected: $ZodInvalidTypeExpected;
+                    readonly expected: import("zod/v4/core").$ZodInvalidTypeExpected;
                     readonly input?: unknown;
                     readonly path: PropertyKey[];
                     readonly message: string;
@@ -1464,7 +1462,7 @@ export declare function useFormItemValidation(options: UseFormItemValidationOpti
                     readonly message: string;
                 } | {
                     readonly code: "invalid_format";
-                    readonly format: $ZodStringFormats | (string & {});
+                    readonly format: import("zod/v4/core").$ZodStringFormats | (string & {});
                     readonly pattern?: string | undefined;
                     readonly input?: string | undefined;
                     readonly path: PropertyKey[];
@@ -1491,7 +1489,7 @@ export declare function useFormItemValidation(options: UseFormItemValidationOpti
                     readonly message: string;
                 } | /*elided*/ any | /*elided*/ any | {
                     readonly code: "invalid_value";
-                    readonly values: Primitive[];
+                    readonly values: import("node_modules/zod/v4/core/util.cjs").Primitive[];
                     readonly input?: unknown;
                     readonly path: PropertyKey[];
                     readonly message: string;
@@ -1507,7 +1505,7 @@ export declare function useFormItemValidation(options: UseFormItemValidationOpti
                 readonly message: string;
             } | /*elided*/ any | {
                 readonly code: "invalid_value";
-                readonly values: Primitive[];
+                readonly values: import("node_modules/zod/v4/core/util.cjs").Primitive[];
                 readonly input?: unknown;
                 readonly path: PropertyKey[];
                 readonly message: string;
@@ -1523,7 +1521,7 @@ export declare function useFormItemValidation(options: UseFormItemValidationOpti
             readonly message: string;
         } | {
             readonly code: "invalid_value";
-            readonly values: Primitive[];
+            readonly values: import("node_modules/zod/v4/core/util.cjs").Primitive[];
             readonly input?: unknown;
             readonly path: PropertyKey[];
             readonly message: string;
@@ -1552,7 +1550,7 @@ export declare function useFormItemValidation(options: UseFormItemValidationOpti
         readonly origin: "map" | "record";
         readonly issues: ({
             readonly code: "invalid_type";
-            readonly expected: $ZodInvalidTypeExpected;
+            readonly expected: import("zod/v4/core").$ZodInvalidTypeExpected;
             readonly input?: unknown;
             readonly path: PropertyKey[];
             readonly message: string;
@@ -1576,7 +1574,7 @@ export declare function useFormItemValidation(options: UseFormItemValidationOpti
             readonly message: string;
         } | {
             readonly code: "invalid_format";
-            readonly format: $ZodStringFormats | (string & {});
+            readonly format: import("zod/v4/core").$ZodStringFormats | (string & {});
             readonly pattern?: string | undefined;
             readonly input?: string | undefined;
             readonly path: PropertyKey[];
@@ -1597,7 +1595,7 @@ export declare function useFormItemValidation(options: UseFormItemValidationOpti
             readonly code: "invalid_union";
             readonly errors: ({
                 readonly code: "invalid_type";
-                readonly expected: $ZodInvalidTypeExpected;
+                readonly expected: import("zod/v4/core").$ZodInvalidTypeExpected;
                 readonly input?: unknown;
                 readonly path: PropertyKey[];
                 readonly message: string;
@@ -1621,7 +1619,7 @@ export declare function useFormItemValidation(options: UseFormItemValidationOpti
                 readonly message: string;
             } | {
                 readonly code: "invalid_format";
-                readonly format: $ZodStringFormats | (string & {});
+                readonly format: import("zod/v4/core").$ZodStringFormats | (string & {});
                 readonly pattern?: string | undefined;
                 readonly input?: string | undefined;
                 readonly path: PropertyKey[];
@@ -1652,7 +1650,7 @@ export declare function useFormItemValidation(options: UseFormItemValidationOpti
                 readonly key: unknown;
                 readonly issues: ({
                     readonly code: "invalid_type";
-                    readonly expected: $ZodInvalidTypeExpected;
+                    readonly expected: import("zod/v4/core").$ZodInvalidTypeExpected;
                     readonly input?: unknown;
                     readonly path: PropertyKey[];
                     readonly message: string;
@@ -1676,7 +1674,7 @@ export declare function useFormItemValidation(options: UseFormItemValidationOpti
                     readonly message: string;
                 } | {
                     readonly code: "invalid_format";
-                    readonly format: $ZodStringFormats | (string & {});
+                    readonly format: import("zod/v4/core").$ZodStringFormats | (string & {});
                     readonly pattern?: string | undefined;
                     readonly input?: string | undefined;
                     readonly path: PropertyKey[];
@@ -1703,7 +1701,7 @@ export declare function useFormItemValidation(options: UseFormItemValidationOpti
                     readonly message: string;
                 } | /*elided*/ any | /*elided*/ any | {
                     readonly code: "invalid_value";
-                    readonly values: Primitive[];
+                    readonly values: import("node_modules/zod/v4/core/util.cjs").Primitive[];
                     readonly input?: unknown;
                     readonly path: PropertyKey[];
                     readonly message: string;
@@ -1719,7 +1717,7 @@ export declare function useFormItemValidation(options: UseFormItemValidationOpti
                 readonly message: string;
             } | {
                 readonly code: "invalid_value";
-                readonly values: Primitive[];
+                readonly values: import("node_modules/zod/v4/core/util.cjs").Primitive[];
                 readonly input?: unknown;
                 readonly path: PropertyKey[];
                 readonly message: string;
@@ -1749,7 +1747,7 @@ export declare function useFormItemValidation(options: UseFormItemValidationOpti
             readonly key: unknown;
             readonly issues: ({
                 readonly code: "invalid_type";
-                readonly expected: $ZodInvalidTypeExpected;
+                readonly expected: import("zod/v4/core").$ZodInvalidTypeExpected;
                 readonly input?: unknown;
                 readonly path: PropertyKey[];
                 readonly message: string;
@@ -1773,7 +1771,7 @@ export declare function useFormItemValidation(options: UseFormItemValidationOpti
                 readonly message: string;
             } | {
                 readonly code: "invalid_format";
-                readonly format: $ZodStringFormats | (string & {});
+                readonly format: import("zod/v4/core").$ZodStringFormats | (string & {});
                 readonly pattern?: string | undefined;
                 readonly input?: string | undefined;
                 readonly path: PropertyKey[];
@@ -1794,7 +1792,7 @@ export declare function useFormItemValidation(options: UseFormItemValidationOpti
                 readonly code: "invalid_union";
                 readonly errors: ({
                     readonly code: "invalid_type";
-                    readonly expected: $ZodInvalidTypeExpected;
+                    readonly expected: import("zod/v4/core").$ZodInvalidTypeExpected;
                     readonly input?: unknown;
                     readonly path: PropertyKey[];
                     readonly message: string;
@@ -1818,7 +1816,7 @@ export declare function useFormItemValidation(options: UseFormItemValidationOpti
                     readonly message: string;
                 } | {
                     readonly code: "invalid_format";
-                    readonly format: $ZodStringFormats | (string & {});
+                    readonly format: import("zod/v4/core").$ZodStringFormats | (string & {});
                     readonly pattern?: string | undefined;
                     readonly input?: string | undefined;
                     readonly path: PropertyKey[];
@@ -1845,7 +1843,7 @@ export declare function useFormItemValidation(options: UseFormItemValidationOpti
                     readonly message: string;
                 } | /*elided*/ any | /*elided*/ any | {
                     readonly code: "invalid_value";
-                    readonly values: Primitive[];
+                    readonly values: import("node_modules/zod/v4/core/util.cjs").Primitive[];
                     readonly input?: unknown;
                     readonly path: PropertyKey[];
                     readonly message: string;
@@ -1871,7 +1869,7 @@ export declare function useFormItemValidation(options: UseFormItemValidationOpti
                 readonly message: string;
             } | /*elided*/ any | /*elided*/ any | {
                 readonly code: "invalid_value";
-                readonly values: Primitive[];
+                readonly values: import("node_modules/zod/v4/core/util.cjs").Primitive[];
                 readonly input?: unknown;
                 readonly path: PropertyKey[];
                 readonly message: string;
@@ -1887,7 +1885,7 @@ export declare function useFormItemValidation(options: UseFormItemValidationOpti
             readonly message: string;
         } | {
             readonly code: "invalid_value";
-            readonly values: Primitive[];
+            readonly values: import("node_modules/zod/v4/core/util.cjs").Primitive[];
             readonly input?: unknown;
             readonly path: PropertyKey[];
             readonly message: string;
@@ -1907,7 +1905,7 @@ export declare function useFormItemValidation(options: UseFormItemValidationOpti
         readonly key: unknown;
         readonly issues: ({
             readonly code: "invalid_type";
-            readonly expected: $ZodInvalidTypeExpected;
+            readonly expected: import("zod/v4/core").$ZodInvalidTypeExpected;
             readonly input?: unknown;
             readonly path: PropertyKey[];
             readonly message: string;
@@ -1931,7 +1929,7 @@ export declare function useFormItemValidation(options: UseFormItemValidationOpti
             readonly message: string;
         } | {
             readonly code: "invalid_format";
-            readonly format: $ZodStringFormats | (string & {});
+            readonly format: import("zod/v4/core").$ZodStringFormats | (string & {});
             readonly pattern?: string | undefined;
             readonly input?: string | undefined;
             readonly path: PropertyKey[];
@@ -1952,7 +1950,7 @@ export declare function useFormItemValidation(options: UseFormItemValidationOpti
             readonly code: "invalid_union";
             readonly errors: ({
                 readonly code: "invalid_type";
-                readonly expected: $ZodInvalidTypeExpected;
+                readonly expected: import("zod/v4/core").$ZodInvalidTypeExpected;
                 readonly input?: unknown;
                 readonly path: PropertyKey[];
                 readonly message: string;
@@ -1976,7 +1974,7 @@ export declare function useFormItemValidation(options: UseFormItemValidationOpti
                 readonly message: string;
             } | {
                 readonly code: "invalid_format";
-                readonly format: $ZodStringFormats | (string & {});
+                readonly format: import("zod/v4/core").$ZodStringFormats | (string & {});
                 readonly pattern?: string | undefined;
                 readonly input?: string | undefined;
                 readonly path: PropertyKey[];
@@ -2006,7 +2004,7 @@ export declare function useFormItemValidation(options: UseFormItemValidationOpti
                 readonly origin: "map" | "record";
                 readonly issues: ({
                     readonly code: "invalid_type";
-                    readonly expected: $ZodInvalidTypeExpected;
+                    readonly expected: import("zod/v4/core").$ZodInvalidTypeExpected;
                     readonly input?: unknown;
                     readonly path: PropertyKey[];
                     readonly message: string;
@@ -2030,7 +2028,7 @@ export declare function useFormItemValidation(options: UseFormItemValidationOpti
                     readonly message: string;
                 } | {
                     readonly code: "invalid_format";
-                    readonly format: $ZodStringFormats | (string & {});
+                    readonly format: import("zod/v4/core").$ZodStringFormats | (string & {});
                     readonly pattern?: string | undefined;
                     readonly input?: string | undefined;
                     readonly path: PropertyKey[];
@@ -2057,7 +2055,7 @@ export declare function useFormItemValidation(options: UseFormItemValidationOpti
                     readonly message: string;
                 } | /*elided*/ any | /*elided*/ any | {
                     readonly code: "invalid_value";
-                    readonly values: Primitive[];
+                    readonly values: import("node_modules/zod/v4/core/util.cjs").Primitive[];
                     readonly input?: unknown;
                     readonly path: PropertyKey[];
                     readonly message: string;
@@ -2073,7 +2071,7 @@ export declare function useFormItemValidation(options: UseFormItemValidationOpti
                 readonly message: string;
             } | /*elided*/ any | {
                 readonly code: "invalid_value";
-                readonly values: Primitive[];
+                readonly values: import("node_modules/zod/v4/core/util.cjs").Primitive[];
                 readonly input?: unknown;
                 readonly path: PropertyKey[];
                 readonly message: string;
@@ -2102,7 +2100,7 @@ export declare function useFormItemValidation(options: UseFormItemValidationOpti
             readonly origin: "map" | "record";
             readonly issues: ({
                 readonly code: "invalid_type";
-                readonly expected: $ZodInvalidTypeExpected;
+                readonly expected: import("zod/v4/core").$ZodInvalidTypeExpected;
                 readonly input?: unknown;
                 readonly path: PropertyKey[];
                 readonly message: string;
@@ -2126,7 +2124,7 @@ export declare function useFormItemValidation(options: UseFormItemValidationOpti
                 readonly message: string;
             } | {
                 readonly code: "invalid_format";
-                readonly format: $ZodStringFormats | (string & {});
+                readonly format: import("zod/v4/core").$ZodStringFormats | (string & {});
                 readonly pattern?: string | undefined;
                 readonly input?: string | undefined;
                 readonly path: PropertyKey[];
@@ -2147,7 +2145,7 @@ export declare function useFormItemValidation(options: UseFormItemValidationOpti
                 readonly code: "invalid_union";
                 readonly errors: ({
                     readonly code: "invalid_type";
-                    readonly expected: $ZodInvalidTypeExpected;
+                    readonly expected: import("zod/v4/core").$ZodInvalidTypeExpected;
                     readonly input?: unknown;
                     readonly path: PropertyKey[];
                     readonly message: string;
@@ -2171,7 +2169,7 @@ export declare function useFormItemValidation(options: UseFormItemValidationOpti
                     readonly message: string;
                 } | {
                     readonly code: "invalid_format";
-                    readonly format: $ZodStringFormats | (string & {});
+                    readonly format: import("zod/v4/core").$ZodStringFormats | (string & {});
                     readonly pattern?: string | undefined;
                     readonly input?: string | undefined;
                     readonly path: PropertyKey[];
@@ -2198,7 +2196,7 @@ export declare function useFormItemValidation(options: UseFormItemValidationOpti
                     readonly message: string;
                 } | /*elided*/ any | /*elided*/ any | {
                     readonly code: "invalid_value";
-                    readonly values: Primitive[];
+                    readonly values: import("node_modules/zod/v4/core/util.cjs").Primitive[];
                     readonly input?: unknown;
                     readonly path: PropertyKey[];
                     readonly message: string;
@@ -2224,7 +2222,7 @@ export declare function useFormItemValidation(options: UseFormItemValidationOpti
                 readonly message: string;
             } | /*elided*/ any | /*elided*/ any | {
                 readonly code: "invalid_value";
-                readonly values: Primitive[];
+                readonly values: import("node_modules/zod/v4/core/util.cjs").Primitive[];
                 readonly input?: unknown;
                 readonly path: PropertyKey[];
                 readonly message: string;
@@ -2240,7 +2238,7 @@ export declare function useFormItemValidation(options: UseFormItemValidationOpti
             readonly message: string;
         } | /*elided*/ any | {
             readonly code: "invalid_value";
-            readonly values: Primitive[];
+            readonly values: import("node_modules/zod/v4/core/util.cjs").Primitive[];
             readonly input?: unknown;
             readonly path: PropertyKey[];
             readonly message: string;
@@ -2256,7 +2254,7 @@ export declare function useFormItemValidation(options: UseFormItemValidationOpti
         readonly message: string;
     } | {
         readonly code: "invalid_value";
-        readonly values: Primitive[];
+        readonly values: import("node_modules/zod/v4/core/util.cjs").Primitive[];
         readonly input?: unknown;
         readonly path: PropertyKey[];
         readonly message: string;

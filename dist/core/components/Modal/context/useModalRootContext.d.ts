@@ -1,2 +1,1 @@
-import { ModalRootContext } from '..';
-export declare function useModalRootContext(): ModalRootContext | null;
+export declare function useModalRootContext(): import("..").ModalRootContext | null;

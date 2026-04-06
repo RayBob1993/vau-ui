@@ -1,17 +1,14 @@
-import { CreateComponentPublicInstanceWithMixins, ComponentOptionsMixin, PublicProps, GlobalComponents, GlobalDirectives, ComponentProvideOptions, ComponentOptionsBase, VNodeProps, AllowedComponentProps, ComponentCustomProps, DefineComponent } from 'vue';
-import { SwitchModelValue } from './types';
-import { ThemeProp, SizeProp } from '../..';
 export declare const Switch: {
     Root: {
-        new (...args: any[]): CreateComponentPublicInstanceWithMixins<Readonly<{
-            modelValue: SwitchModelValue;
-        } & {
+        new (...args: any[]): import("vue").CreateComponentPublicInstanceWithMixins<Readonly<{
             disabled?: boolean;
-        } & Partial< ThemeProp> & Partial< SizeProp>> & Readonly<{
+        } & Partial<import("../../index.js").ThemeProp> & Partial<import("../../index.js").SizeProp> & {
+            modelValue: import("./types").SwitchModelValue;
+        }> & Readonly<{
             "onUpdate:modelValue"?: ((value: boolean) => any) | undefined;
-        }>, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {
+        }>, {}, {}, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {
             "update:modelValue": (value: boolean) => any;
-        }, PublicProps, {}, false, {}, {}, GlobalComponents, GlobalDirectives, string, {}, HTMLLabelElement, ComponentProvideOptions, {
+        }, import("vue").PublicProps, {}, false, {}, {}, import("vue").GlobalComponents, import("vue").GlobalDirectives, string, {}, any, import("vue").ComponentProvideOptions, {
             P: {};
             B: {};
             D: {};
@@ -19,31 +16,31 @@ export declare const Switch: {
             M: {};
             Defaults: {};
         }, Readonly<{
-            modelValue: SwitchModelValue;
-        } & {
             disabled?: boolean;
-        } & Partial< ThemeProp> & Partial< SizeProp>> & Readonly<{
+        } & Partial<import("../../index.js").ThemeProp> & Partial<import("../../index.js").SizeProp> & {
+            modelValue: import("./types").SwitchModelValue;
+        }> & Readonly<{
             "onUpdate:modelValue"?: ((value: boolean) => any) | undefined;
         }>, {}, {}, {}, {}, {}>;
         __isFragment?: never;
         __isTeleport?: never;
         __isSuspense?: never;
-    } & ComponentOptionsBase<Readonly<{
-        modelValue: SwitchModelValue;
-    } & {
+    } & import("vue").ComponentOptionsBase<Readonly<{
         disabled?: boolean;
-    } & Partial< ThemeProp> & Partial< SizeProp>> & Readonly<{
+    } & Partial<import("../../index.js").ThemeProp> & Partial<import("../../index.js").SizeProp> & {
+        modelValue: import("./types").SwitchModelValue;
+    }> & Readonly<{
         "onUpdate:modelValue"?: ((value: boolean) => any) | undefined;
-    }>, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {
+    }>, {}, {}, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {
         "update:modelValue": (value: boolean) => any;
-    }, string, {}, {}, string, {}, GlobalComponents, GlobalDirectives, string, ComponentProvideOptions> & VNodeProps & AllowedComponentProps & ComponentCustomProps & (new () => {
+    }, string, {}, {}, string, {}, import("vue").GlobalComponents, import("vue").GlobalDirectives, string, import("vue").ComponentProvideOptions> & import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps & (new () => {
         $slots: {
-            default?(_: {}): any;
+            default?: (props: {}) => any;
         };
     });
-    Indicator: DefineComponent<{}, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, PublicProps, Readonly<{}> & Readonly<{}>, {}, {}, {}, {}, string, ComponentProvideOptions, true, {}, HTMLSpanElement>;
+    Indicator: import("vue").DefineComponent<{}, {}, {}, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, import("vue").PublicProps, Readonly<{}> & Readonly<{}>, {}, {}, {}, {}, string, import("vue").ComponentProvideOptions, true, {}, any>;
     Title: {
-        new (...args: any[]): CreateComponentPublicInstanceWithMixins<Readonly<{}> & Readonly<{}>, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, PublicProps, {}, true, {}, {}, GlobalComponents, GlobalDirectives, string, {}, HTMLSpanElement, ComponentProvideOptions, {
+        new (...args: any[]): import("vue").CreateComponentPublicInstanceWithMixins<Readonly<{}> & Readonly<{}>, {}, {}, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, import("vue").PublicProps, {}, true, {}, {}, import("vue").GlobalComponents, import("vue").GlobalDirectives, string, {}, any, import("vue").ComponentProvideOptions, {
             P: {};
             B: {};
             D: {};
@@ -54,9 +51,9 @@ export declare const Switch: {
         __isFragment?: never;
         __isTeleport?: never;
         __isSuspense?: never;
-    } & ComponentOptionsBase<Readonly<{}> & Readonly<{}>, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, {}, {}, string, {}, GlobalComponents, GlobalDirectives, string, ComponentProvideOptions> & VNodeProps & AllowedComponentProps & ComponentCustomProps & (new () => {
+    } & import("vue").ComponentOptionsBase<Readonly<{}> & Readonly<{}>, {}, {}, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, {}, {}, string, {}, import("vue").GlobalComponents, import("vue").GlobalDirectives, string, import("vue").ComponentProvideOptions> & import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps & (new () => {
         $slots: {
-            default?(_: {}): any;
+            default?: (props: {}) => any;
         };
     });
 };

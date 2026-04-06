@@ -1,4 +1,4 @@
-import { SizeProp, ThemeProp, UnscopedSlot } from '../../../core/index.ts';
+import type { SizeProp, ThemeProp, UnscopedSlot } from '../../../core/index.js';
 /**
  * Интерфейс свойств компонента VAlert
  * @interface IVAlertProps

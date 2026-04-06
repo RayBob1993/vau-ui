@@ -1,3 +1,3 @@
-import { InjectionKey } from 'vue';
-import { ConfigProviderRootContext } from '../types';
+import type { InjectionKey } from 'vue';
+import type { ConfigProviderRootContext } from '../types';
 export declare const ConfigProviderRootContextKey: InjectionKey<ConfigProviderRootContext>;

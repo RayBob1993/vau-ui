@@ -30,7 +30,7 @@ export interface CancelOptions {
 }
 
 export interface ThrottledFunction <T extends Array<unknown>> {
-  (...args: T): void
+  (...args: T): void;
   cancel: (options?: CancelOptions) => void;
 }
 

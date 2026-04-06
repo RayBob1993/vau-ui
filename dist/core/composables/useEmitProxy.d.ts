@@ -1,4 +1,4 @@
-import { ComponentTypeEmits, EmitFn } from 'vue';
+import type { ComponentTypeEmits, EmitFn } from 'vue';
 export type EmitReturn<T> = T extends (...args: Array<unknown>) => infer R ? R : never;
 export type Listeners<T> = {
     [K in keyof T]: T[K] extends (...args: infer P) => void ? (...args: P) => EmitReturn<T[K]> : never;

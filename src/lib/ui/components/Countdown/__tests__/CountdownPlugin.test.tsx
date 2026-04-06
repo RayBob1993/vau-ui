@@ -1,5 +1,5 @@
-import { describe, expect, it } from 'vitest';
 import { CountdownPlugin } from '../plugin';
+import { describe, expect, it } from 'vitest';
 
 describe('CountdownPlugin', () => {
   it('Плагин имеет функцию install', () => {

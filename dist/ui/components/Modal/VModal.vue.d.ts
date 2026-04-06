@@ -1,32 +1,27 @@
-import { IVModalProps, IVModalSlots } from './types';
-import { DefineComponent, ComponentOptionsMixin, PublicProps, ComponentProvideOptions } from 'vue';
+import type { IVModalProps, IVModalSlots } from './types';
 type __VLS_Props = IVModalProps;
-type __VLS_PublicProps = {
+type __VLS_Slots = IVModalSlots;
+type __VLS_ModelProps = {
     modelValue: boolean;
-} & __VLS_Props;
-declare function __VLS_template(): {
-    attrs: Partial<{}>;
-    slots: Readonly<IVModalSlots> & IVModalSlots;
-    refs: {};
-    rootEl: any;
 };
-type __VLS_TemplateResult = ReturnType<typeof __VLS_template>;
-declare const __VLS_component: DefineComponent<__VLS_PublicProps, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {
+type __VLS_PublicProps = __VLS_Props & __VLS_ModelProps;
+declare const __VLS_base: import("vue").DefineComponent<__VLS_PublicProps, {}, {}, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {
     "update:modelValue": (value: boolean) => any;
     close: () => any;
     open: () => any;
     opened: (payload: Element) => any;
     closed: (payload: Element) => any;
-}, string, PublicProps, Readonly<__VLS_PublicProps> & Readonly<{
+}, string, import("vue").PublicProps, Readonly<__VLS_PublicProps> & Readonly<{
     "onUpdate:modelValue"?: ((value: boolean) => any) | undefined;
     onClose?: (() => any) | undefined;
     onOpen?: (() => any) | undefined;
     onOpened?: ((payload: Element) => any) | undefined;
     onClosed?: ((payload: Element) => any) | undefined;
-}>, {}, {}, {}, {}, string, ComponentProvideOptions, false, {}, any>;
-declare const _default: __VLS_WithTemplateSlots<typeof __VLS_component, __VLS_TemplateResult["slots"]>;
+}>, {}, {}, {}, {}, string, import("vue").ComponentProvideOptions, false, {}, any>;
+declare const __VLS_export: __VLS_WithSlots<typeof __VLS_base, __VLS_Slots>;
+declare const _default: typeof __VLS_export;
 export default _default;
-type __VLS_WithTemplateSlots<T, S> = T & {
+type __VLS_WithSlots<T, S> = T & {
     new (): {
         $slots: S;
     };

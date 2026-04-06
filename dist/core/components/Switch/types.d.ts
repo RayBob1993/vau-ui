@@ -1,5 +1,5 @@
-import { SizeProp, ThemeProp } from '../../types';
-import { MaybeRefOrGetter } from 'vue';
+import type { SizeProp, ThemeProp } from '../../types';
+import type { MaybeRefOrGetter } from 'vue';
 export type SwitchModelValue = boolean;
 export type SwitchProps = {
     disabled?: boolean;

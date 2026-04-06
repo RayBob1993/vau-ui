@@ -1,3 +1,3 @@
-import { InjectionKey } from 'vue';
-import { CheckboxRootContext } from '../types';
+import type { InjectionKey } from 'vue';
+import type { CheckboxRootContext } from '../types';
 export declare const CheckboxRootContextKey: InjectionKey<CheckboxRootContext>;

@@ -1,5 +1,5 @@
-import { MaybeNull, UnscopedSlot, ValueOf } from '../../../core/index.ts';
-import { VNode } from 'vue';
+import type { MaybeNull, UnscopedSlot, ValueOf } from '../../../core/index.js';
+import type { VNode } from 'vue';
 import { TableLayout, TableSort } from './constants';
 export type IVTableSortDirection = ValueOf<typeof TableSort>;
 /**

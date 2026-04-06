@@ -1,27 +1,25 @@
-import { CreateComponentPublicInstanceWithMixins, ComponentOptionsMixin, PublicProps, Component, GlobalComponents, GlobalDirectives, ComponentProvideOptions, ComponentOptionsBase, VNodeProps, AllowedComponentProps, ComponentCustomProps } from 'vue';
-import { TextProps } from './types';
 export declare const Text: {
     Root: {
-        new (...args: any[]): CreateComponentPublicInstanceWithMixins<Readonly< TextProps> & Readonly<{}>, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, PublicProps, {
-            as: keyof HTMLElementTagNameMap | Component;
-        }, false, {}, {}, GlobalComponents, GlobalDirectives, string, {}, any, ComponentProvideOptions, {
+        new (...args: any[]): import("vue").CreateComponentPublicInstanceWithMixins<Readonly<import("./types").TextProps> & Readonly<{}>, {}, {}, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, import("vue").PublicProps, {
+            as: keyof HTMLElementTagNameMap | import("vue").Component;
+        }, false, {}, {}, import("vue").GlobalComponents, import("vue").GlobalDirectives, string, {}, any, import("vue").ComponentProvideOptions, {
             P: {};
             B: {};
             D: {};
             C: {};
             M: {};
             Defaults: {};
-        }, Readonly< TextProps> & Readonly<{}>, {}, {}, {}, {}, {
-            as: keyof HTMLElementTagNameMap | Component;
+        }, Readonly<import("./types").TextProps> & Readonly<{}>, {}, {}, {}, {}, {
+            as: keyof HTMLElementTagNameMap | import("vue").Component;
         }>;
         __isFragment?: never;
         __isTeleport?: never;
         __isSuspense?: never;
-    } & ComponentOptionsBase<Readonly< TextProps> & Readonly<{}>, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, {
-        as: keyof HTMLElementTagNameMap | Component;
-    }, {}, string, {}, GlobalComponents, GlobalDirectives, string, ComponentProvideOptions> & VNodeProps & AllowedComponentProps & ComponentCustomProps & (new () => {
+    } & import("vue").ComponentOptionsBase<Readonly<import("./types").TextProps> & Readonly<{}>, {}, {}, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, {
+        as: keyof HTMLElementTagNameMap | import("vue").Component;
+    }, {}, string, {}, import("vue").GlobalComponents, import("vue").GlobalDirectives, string, import("vue").ComponentProvideOptions> & import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps & (new () => {
         $slots: {
-            default?(_: {}): any;
+            default?: (props: {}) => any;
         };
     });
 };

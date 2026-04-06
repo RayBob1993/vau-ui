@@ -1,8 +1,11 @@
 import { defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
-import dts from 'vite-plugin-dts';
 import { resolve } from 'node:path';
 
+/**
+ * Декларации для библиотеки генерируются отдельно через `vue-tsc -p tsconfig.build.json`
+ * после сборки JS, чтобы не портить типы SFC (vite-plugin-dts при rollup мог ломать __VLS_*).
+ */
 export default defineConfig({
   resolve: {
     alias: {
@@ -10,15 +13,7 @@ export default defineConfig({
       '@vau/ui': resolve(__dirname, 'src/lib/ui/index.ts')
     }
   },
-  plugins: [
-    vue(),
-    dts({
-      entryRoot: 'src/lib',
-      staticImport: true,
-      tsconfigPath: resolve(__dirname, 'tsconfig.json'),
-      exclude: ['**/*.test.*', '**/__tests__/*'],
-    })
-  ],
+  plugins: [vue()],
   build: {
     lib: {
       entry: resolve(__dirname, 'src/lib/index.ts'),

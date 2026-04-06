@@ -1,4 +1,4 @@
-import { Booleanish } from '../types';
+import type { Booleanish } from '../types';
 /**
  * Преобразует boolean в Booleanish тип
  * @param value - булево значение

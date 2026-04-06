@@ -1,2 +1,1 @@
-import { InputTagsRootContext } from '..';
-export declare function useInputTagsRootContext(): InputTagsRootContext | null;
+export declare function useInputTagsRootContext(): import("..").InputTagsRootContext | null;

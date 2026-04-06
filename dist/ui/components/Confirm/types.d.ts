@@ -1,5 +1,5 @@
-import { SizeProp, ThemeProp } from '../../../core/index.ts';
-import { VNode } from 'vue';
+import type { SizeProp, ThemeProp } from '../../../core/index.js';
+import type { VNode } from 'vue';
 /**
  * Интерфейс свойств компонента VConfirm
  * @interface IVConfirmProps

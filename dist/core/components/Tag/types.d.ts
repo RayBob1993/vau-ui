@@ -1,4 +1,4 @@
-import { ThemeProp, SizeProp, DirectionProp, Maybe } from '../../types';
+import type { ThemeProp, SizeProp, DirectionProp, Maybe } from '../../types';
 export type TagValue = string | number;
 export type TagProps = {
     value?: TagValue;

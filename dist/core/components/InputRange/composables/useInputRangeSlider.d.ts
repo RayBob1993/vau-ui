@@ -1,9 +1,8 @@
-import { InputRangeRootContext } from '../types';
-import { MaybeNull } from '../../../types';
-import { ComputedRef } from 'vue';
+import type { InputRangeRootContext } from '../types';
+import type { MaybeNull } from '../../../types';
 export interface UseInputRangeSliderOptions {
     inputRangeRootContext: MaybeNull<InputRangeRootContext>;
 }
 export declare function useInputRangeSlider(options: UseInputRangeSliderOptions): {
-    isDisabled: ComputedRef<boolean>;
+    isDisabled: import("vue").ComputedRef<boolean>;
 };

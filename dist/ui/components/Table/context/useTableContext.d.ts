@@ -1,2 +1,1 @@
-import { IVTableContext, IVTableBaseData } from '..';
-export declare const useTableContext: () => IVTableContext<IVTableBaseData> | null;
+export declare const useTableContext: () => import("..").IVTableContext<import("..").IVTableBaseData> | null;

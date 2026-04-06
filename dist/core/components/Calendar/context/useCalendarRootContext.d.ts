@@ -1,2 +1,1 @@
-import { CalendarRootContext } from '..';
-export declare function useCalendarRootContext(): CalendarRootContext | null;
+export declare function useCalendarRootContext(): import("..").CalendarRootContext | null;

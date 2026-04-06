@@ -1,12 +1,11 @@
-import { RadioRootContext } from '../types';
-import { MaybeNull } from '../../../types';
-import { ComputedRef } from 'vue';
+import type { RadioRootContext } from '../types';
+import type { MaybeNull } from '../../../types';
 export interface UseRadioIndicatorOptions {
     radioRootContext: MaybeNull<RadioRootContext>;
 }
 export declare function useRadioIndicator(options: UseRadioIndicatorOptions): {
-    isDisabled: ComputedRef<boolean>;
-    isActive: ComputedRef<boolean>;
-    isValid: ComputedRef<boolean>;
-    isInvalid: ComputedRef<boolean>;
+    isDisabled: import("vue").ComputedRef<boolean>;
+    isActive: import("vue").ComputedRef<boolean>;
+    isValid: import("vue").ComputedRef<boolean>;
+    isInvalid: import("vue").ComputedRef<boolean>;
 };

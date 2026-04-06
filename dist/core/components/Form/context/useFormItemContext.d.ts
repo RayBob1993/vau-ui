@@ -1,2 +1,1 @@
-import { FormItemContext } from '..';
-export declare function useFormItemContext(): FormItemContext | null;
+export declare function useFormItemContext(): import("..").FormItemContext | null;

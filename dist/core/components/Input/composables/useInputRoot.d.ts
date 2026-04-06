@@ -1,7 +1,7 @@
-import { MaybeNull } from '../../../types';
-import { FormRootContext, FormItemContext } from '../../Form';
-import { InputModelValue, InputProps } from '../types';
-import { MaybeRefOrGetter, Ref, ComputedRef } from 'vue';
+import type { MaybeNull } from '../../../types';
+import type { FormRootContext, FormItemContext } from '../../Form';
+import type { InputModelValue, InputProps } from '../types';
+import { type MaybeRefOrGetter } from 'vue';
 export interface UseInputRootOptions {
     formRootContext: MaybeNull<FormRootContext>;
     formItemContext: MaybeNull<FormItemContext>;
@@ -10,10 +10,10 @@ export interface UseInputRootOptions {
     onUpdateModelValue?: (value: InputModelValue) => void;
 }
 export declare function useInputRoot(options: UseInputRootOptions): {
-    isFocus: Ref<boolean, boolean>;
-    isDisabled: ComputedRef<boolean>;
-    isTextarea: ComputedRef<boolean>;
-    hasValue: ComputedRef<boolean>;
+    isFocus: import("vue").Ref<boolean, boolean>;
+    isDisabled: import("vue").ComputedRef<boolean>;
+    isTextarea: import("vue").ComputedRef<boolean>;
+    hasValue: import("vue").ComputedRef<boolean>;
     setFocus: (payload: boolean) => void;
     setModelValue: (value: InputModelValue) => void;
     reset: () => void;

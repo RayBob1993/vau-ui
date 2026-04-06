@@ -1,24 +1,19 @@
-import { CreateComponentPublicInstanceWithMixins, ComponentOptionsMixin, PublicProps, GlobalComponents, GlobalDirectives, ComponentProvideOptions, ComponentOptionsBase, VNodeProps, AllowedComponentProps, ComponentCustomProps } from 'vue';
-import { CheckboxModelValue, CheckboxValue, CheckboxIndicatorSlots } from './types';
-import { ThemeProp, SizeProp, DirectionProp } from '../..';
 export declare const Checkbox: {
     Root: {
-        new (...args: any[]): CreateComponentPublicInstanceWithMixins<Readonly<{
-            modelValue?: CheckboxModelValue;
-        } & {
+        new (...args: any[]): import("vue").CreateComponentPublicInstanceWithMixins<Readonly<{
             disabled?: boolean;
             indeterminate?: boolean;
-            value?: CheckboxValue;
+            value?: import("./types").CheckboxValue;
             checked?: boolean;
-        } & Partial< ThemeProp> & Partial< SizeProp>> & Readonly<{
-            onChange?: ((payload: CheckboxValue) => any) | undefined;
-            "onUpdate:modelValue"?: ((value: CheckboxModelValue) => any) | undefined;
-        }>, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {
-            change: (payload: CheckboxValue) => any;
-            "update:modelValue": (value: CheckboxModelValue) => any;
-        }, PublicProps, {}, false, {}, {}, GlobalComponents, GlobalDirectives, string, {
-            inputRef: HTMLInputElement;
-        }, HTMLLabelElement, ComponentProvideOptions, {
+        } & Partial<import("../../index.js").ThemeProp> & Partial<import("../../index.js").SizeProp> & {
+            modelValue?: import("./types").CheckboxModelValue;
+        }> & Readonly<{
+            onChange?: ((payload: import("./types").CheckboxValue) => any) | undefined;
+            "onUpdate:modelValue"?: ((value: import("./types").CheckboxModelValue | undefined) => any) | undefined;
+        }>, {}, {}, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {
+            change: (payload: import("./types").CheckboxValue) => any;
+            "update:modelValue": (value: import("./types").CheckboxModelValue | undefined) => any;
+        }, import("vue").PublicProps, {}, false, {}, {}, import("vue").GlobalComponents, import("vue").GlobalDirectives, string, {}, any, import("vue").ComponentProvideOptions, {
             P: {};
             B: {};
             D: {};
@@ -26,39 +21,39 @@ export declare const Checkbox: {
             M: {};
             Defaults: {};
         }, Readonly<{
-            modelValue?: CheckboxModelValue;
-        } & {
             disabled?: boolean;
             indeterminate?: boolean;
-            value?: CheckboxValue;
+            value?: import("./types").CheckboxValue;
             checked?: boolean;
-        } & Partial< ThemeProp> & Partial< SizeProp>> & Readonly<{
-            onChange?: ((payload: CheckboxValue) => any) | undefined;
-            "onUpdate:modelValue"?: ((value: CheckboxModelValue) => any) | undefined;
+        } & Partial<import("../../index.js").ThemeProp> & Partial<import("../../index.js").SizeProp> & {
+            modelValue?: import("./types").CheckboxModelValue;
+        }> & Readonly<{
+            onChange?: ((payload: import("./types").CheckboxValue) => any) | undefined;
+            "onUpdate:modelValue"?: ((value: import("./types").CheckboxModelValue | undefined) => any) | undefined;
         }>, {}, {}, {}, {}, {}>;
         __isFragment?: never;
         __isTeleport?: never;
         __isSuspense?: never;
-    } & ComponentOptionsBase<Readonly<{
-        modelValue?: CheckboxModelValue;
-    } & {
+    } & import("vue").ComponentOptionsBase<Readonly<{
         disabled?: boolean;
         indeterminate?: boolean;
-        value?: CheckboxValue;
+        value?: import("./types").CheckboxValue;
         checked?: boolean;
-    } & Partial< ThemeProp> & Partial< SizeProp>> & Readonly<{
-        onChange?: ((payload: CheckboxValue) => any) | undefined;
-        "onUpdate:modelValue"?: ((value: CheckboxModelValue) => any) | undefined;
-    }>, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {
-        change: (payload: CheckboxValue) => any;
-        "update:modelValue": (value: CheckboxModelValue) => any;
-    }, string, {}, {}, string, {}, GlobalComponents, GlobalDirectives, string, ComponentProvideOptions> & VNodeProps & AllowedComponentProps & ComponentCustomProps & (new () => {
+    } & Partial<import("../../index.js").ThemeProp> & Partial<import("../../index.js").SizeProp> & {
+        modelValue?: import("./types").CheckboxModelValue;
+    }> & Readonly<{
+        onChange?: ((payload: import("./types").CheckboxValue) => any) | undefined;
+        "onUpdate:modelValue"?: ((value: import("./types").CheckboxModelValue | undefined) => any) | undefined;
+    }>, {}, {}, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {
+        change: (payload: import("./types").CheckboxValue) => any;
+        "update:modelValue": (value: import("./types").CheckboxModelValue | undefined) => any;
+    }, string, {}, {}, string, {}, import("vue").GlobalComponents, import("vue").GlobalDirectives, string, import("vue").ComponentProvideOptions> & import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps & (new () => {
         $slots: {
-            default?(_: {}): any;
+            default?: (props: {}) => any;
         };
     });
     Indicator: {
-        new (...args: any[]): CreateComponentPublicInstanceWithMixins<Readonly<{}> & Readonly<{}>, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, PublicProps, {}, true, {}, {}, GlobalComponents, GlobalDirectives, string, {}, HTMLSpanElement, ComponentProvideOptions, {
+        new (...args: any[]): import("vue").CreateComponentPublicInstanceWithMixins<Readonly<{}> & Readonly<{}>, {}, {}, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, import("vue").PublicProps, {}, true, {}, {}, import("vue").GlobalComponents, import("vue").GlobalDirectives, string, {}, any, import("vue").ComponentProvideOptions, {
             P: {};
             B: {};
             D: {};
@@ -69,11 +64,11 @@ export declare const Checkbox: {
         __isFragment?: never;
         __isTeleport?: never;
         __isSuspense?: never;
-    } & ComponentOptionsBase<Readonly<{}> & Readonly<{}>, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, {}, {}, string, {}, GlobalComponents, GlobalDirectives, string, ComponentProvideOptions> & VNodeProps & AllowedComponentProps & ComponentCustomProps & (new () => {
-        $slots: Readonly< CheckboxIndicatorSlots> & CheckboxIndicatorSlots;
+    } & import("vue").ComponentOptionsBase<Readonly<{}> & Readonly<{}>, {}, {}, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, {}, {}, string, {}, import("vue").GlobalComponents, import("vue").GlobalDirectives, string, import("vue").ComponentProvideOptions> & import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps & (new () => {
+        $slots: import("./types").CheckboxIndicatorSlots;
     });
     Title: {
-        new (...args: any[]): CreateComponentPublicInstanceWithMixins<Readonly<{}> & Readonly<{}>, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, PublicProps, {}, true, {}, {}, GlobalComponents, GlobalDirectives, string, {}, HTMLSpanElement, ComponentProvideOptions, {
+        new (...args: any[]): import("vue").CreateComponentPublicInstanceWithMixins<Readonly<{}> & Readonly<{}>, {}, {}, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, import("vue").PublicProps, {}, true, {}, {}, import("vue").GlobalComponents, import("vue").GlobalDirectives, string, {}, any, import("vue").ComponentProvideOptions, {
             P: {};
             B: {};
             D: {};
@@ -84,26 +79,26 @@ export declare const Checkbox: {
         __isFragment?: never;
         __isTeleport?: never;
         __isSuspense?: never;
-    } & ComponentOptionsBase<Readonly<{}> & Readonly<{}>, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, {}, {}, string, {}, GlobalComponents, GlobalDirectives, string, ComponentProvideOptions> & VNodeProps & AllowedComponentProps & ComponentCustomProps & (new () => {
+    } & import("vue").ComponentOptionsBase<Readonly<{}> & Readonly<{}>, {}, {}, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, {}, {}, string, {}, import("vue").GlobalComponents, import("vue").GlobalDirectives, string, import("vue").ComponentProvideOptions> & import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps & (new () => {
         $slots: {
-            default?(_: {}): any;
+            default?: (props: {}) => any;
         };
     });
     Group: {
-        new (...args: any[]): CreateComponentPublicInstanceWithMixins<Readonly<Partial< DirectionProp>> & Readonly<{}>, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, PublicProps, {}, false, {}, {}, GlobalComponents, GlobalDirectives, string, {}, HTMLDivElement, ComponentProvideOptions, {
+        new (...args: any[]): import("vue").CreateComponentPublicInstanceWithMixins<Readonly<Partial<import("../../index.js").DirectionProp>> & Readonly<{}>, {}, {}, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, import("vue").PublicProps, {}, false, {}, {}, import("vue").GlobalComponents, import("vue").GlobalDirectives, string, {}, any, import("vue").ComponentProvideOptions, {
             P: {};
             B: {};
             D: {};
             C: {};
             M: {};
             Defaults: {};
-        }, Readonly<Partial< DirectionProp>> & Readonly<{}>, {}, {}, {}, {}, {}>;
+        }, Readonly<Partial<import("../../index.js").DirectionProp>> & Readonly<{}>, {}, {}, {}, {}, {}>;
         __isFragment?: never;
         __isTeleport?: never;
         __isSuspense?: never;
-    } & ComponentOptionsBase<Readonly<Partial< DirectionProp>> & Readonly<{}>, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, {}, {}, string, {}, GlobalComponents, GlobalDirectives, string, ComponentProvideOptions> & VNodeProps & AllowedComponentProps & ComponentCustomProps & (new () => {
+    } & import("vue").ComponentOptionsBase<Readonly<Partial<import("../../index.js").DirectionProp>> & Readonly<{}>, {}, {}, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, {}, {}, string, {}, import("vue").GlobalComponents, import("vue").GlobalDirectives, string, import("vue").ComponentProvideOptions> & import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps & (new () => {
         $slots: {
-            default?(_: {}): any;
+            default?: (props: {}) => any;
         };
     });
 };

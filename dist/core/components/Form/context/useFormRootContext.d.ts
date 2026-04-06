@@ -1,2 +1,1 @@
-import { FormRootContext } from '..';
-export declare function useFormRootContext(): FormRootContext | null;
+export declare function useFormRootContext(): import("..").FormRootContext | null;

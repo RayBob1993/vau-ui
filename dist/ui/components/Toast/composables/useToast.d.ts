@@ -1,10 +1,9 @@
-import { IVToastProps } from '../types';
-import { Ref } from 'vue';
+import type { IVToastProps } from '../types';
 export interface IUseToastOptions {
     props: IVToastProps;
 }
 export declare function useToast(options: IUseToastOptions): {
-    isVisible: Ref<boolean, boolean>;
+    isVisible: import("vue").Ref<boolean, boolean>;
     setVisible: (payload: boolean) => void;
     clearTimer: () => void;
     startTimer: () => void;

@@ -1,37 +1,34 @@
-import { CreateComponentPublicInstanceWithMixins, ComponentOptionsMixin, PublicProps, GlobalComponents, GlobalDirectives, ComponentProvideOptions, ComponentOptionsBase, VNodeProps, AllowedComponentProps, ComponentCustomProps } from 'vue';
-import { InputModelValue, InputSlots } from '..';
-import { InputPasswordProps } from './types';
 export declare const InputPassword: {
     Root: {
-        new (...args: any[]): CreateComponentPublicInstanceWithMixins<Readonly<{
-            modelValue: InputModelValue;
-        } & InputPasswordProps> & Readonly<{
-            "onUpdate:modelValue"?: ((value: InputModelValue) => any) | undefined;
-        }>, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {
-            "update:modelValue": (value: InputModelValue) => any;
-        }, PublicProps, {}, false, {}, {}, GlobalComponents, GlobalDirectives, string, {}, HTMLDivElement, ComponentProvideOptions, {
+        new (...args: any[]): import("vue").CreateComponentPublicInstanceWithMixins<Readonly<import("./types").InputPasswordProps & {
+            modelValue: import("../index.js").InputModelValue;
+        }> & Readonly<{
+            "onUpdate:modelValue"?: ((value: import("../index.js").InputModelValue) => any) | undefined;
+        }>, {}, {}, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {
+            "update:modelValue": (value: import("../index.js").InputModelValue) => any;
+        }, import("vue").PublicProps, {}, false, {}, {}, import("vue").GlobalComponents, import("vue").GlobalDirectives, string, {}, any, import("vue").ComponentProvideOptions, {
             P: {};
             B: {};
             D: {};
             C: {};
             M: {};
             Defaults: {};
-        }, Readonly<{
-            modelValue: InputModelValue;
-        } & InputPasswordProps> & Readonly<{
-            "onUpdate:modelValue"?: ((value: InputModelValue) => any) | undefined;
+        }, Readonly<import("./types").InputPasswordProps & {
+            modelValue: import("../index.js").InputModelValue;
+        }> & Readonly<{
+            "onUpdate:modelValue"?: ((value: import("../index.js").InputModelValue) => any) | undefined;
         }>, {}, {}, {}, {}, {}>;
         __isFragment?: never;
         __isTeleport?: never;
         __isSuspense?: never;
-    } & ComponentOptionsBase<Readonly<{
-        modelValue: InputModelValue;
-    } & InputPasswordProps> & Readonly<{
-        "onUpdate:modelValue"?: ((value: InputModelValue) => any) | undefined;
-    }>, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {
-        "update:modelValue": (value: InputModelValue) => any;
-    }, string, {}, {}, string, {}, GlobalComponents, GlobalDirectives, string, ComponentProvideOptions> & VNodeProps & AllowedComponentProps & ComponentCustomProps & (new () => {
-        $slots: Readonly< InputSlots> & InputSlots;
+    } & import("vue").ComponentOptionsBase<Readonly<import("./types").InputPasswordProps & {
+        modelValue: import("../index.js").InputModelValue;
+    }> & Readonly<{
+        "onUpdate:modelValue"?: ((value: import("../index.js").InputModelValue) => any) | undefined;
+    }>, {}, {}, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {
+        "update:modelValue": (value: import("../index.js").InputModelValue) => any;
+    }, string, {}, {}, string, {}, import("vue").GlobalComponents, import("vue").GlobalDirectives, string, import("vue").ComponentProvideOptions> & import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps & (new () => {
+        $slots: import("../index.js").InputSlots;
     });
 };
 export * from './types';

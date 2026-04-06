@@ -1,8 +1,8 @@
-import { describe, expect, it } from 'vitest';
-import { createApp } from 'vue';
 import { AccordionPlugin } from '../plugin';
 import VAccordion from '../VAccordion.vue';
 import VAccordionItem from '../VAccordionItem.vue';
+import { createApp } from 'vue';
+import { describe, expect, it } from 'vitest';
 
 describe('AccordionPlugin', () => {
   it('Корректно регистрирует плагин', () => {

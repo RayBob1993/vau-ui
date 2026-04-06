@@ -1,7 +1,7 @@
-import { SwitchProps, SwitchModelValue } from '../types';
-import { FormRootContext, FormItemContext } from '../../Form';
-import { MaybeNull } from '../../../types';
-import { MaybeRefOrGetter, ComputedRef } from 'vue';
+import type { SwitchProps, SwitchModelValue } from '../types';
+import type { FormRootContext, FormItemContext } from '../../Form';
+import type { MaybeNull } from '../../../types';
+import { type MaybeRefOrGetter } from 'vue';
 export interface UseSwitchRootOptions {
     formRootContext: MaybeNull<FormRootContext>;
     formItemContext: MaybeNull<FormItemContext>;
@@ -9,6 +9,6 @@ export interface UseSwitchRootOptions {
     modelValue: MaybeRefOrGetter<SwitchModelValue>;
 }
 export declare function useSwitchRoot(options: UseSwitchRootOptions): {
-    isActive: ComputedRef<boolean>;
-    isDisabled: ComputedRef<boolean>;
+    isActive: import("vue").ComputedRef<boolean>;
+    isDisabled: import("vue").ComputedRef<boolean>;
 };

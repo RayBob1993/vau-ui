@@ -1,5 +1,5 @@
-import { Ref, VNode } from 'vue';
-import { UnscopedSlot } from '../../../core/index.ts';
+import type { Ref, VNode } from 'vue';
+import type { UnscopedSlot } from '../../../core/index.js';
 /**
  * Интерфейс свойств компонента VDropdown
  * @interface IVDropdownProps

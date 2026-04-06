@@ -1,2 +1,1 @@
-import { IVTabsContext } from '..';
-export declare const useTabsContext: () => IVTabsContext | null;
+export declare const useTabsContext: () => import("..").IVTabsContext | null;

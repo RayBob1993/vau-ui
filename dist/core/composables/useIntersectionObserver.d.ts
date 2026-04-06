@@ -1,4 +1,4 @@
-import { TemplateRef } from 'vue';
+import { type TemplateRef } from 'vue';
 /**
  * @description `useIntersectionObserver` — это пользовательский хук, который предназначен для отслеживания изменений видимости элемента в пределах области видимости (viewport) с помощью IntersectionObserver.
  * @param {TemplateRef<Element>} element - Ссылка на элемент, размеры которого нужно отслеживать.

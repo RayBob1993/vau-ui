@@ -11,7 +11,7 @@ export interface UseLoadImageOptions extends Pick<IntersectionObserverInit, 'roo
 
 export type UseLoadImageSource =
   | string
-  | { src: string; srcset?: string; sizes?: string };
+  | { src: string; srcset?: string; sizes?: string; };
 
 export function useLoadImage (
   element: TemplateRef<Element>,

@@ -1,2 +1,1 @@
-import { SelectRootContext } from '..';
-export declare function useSelectRootContext(): SelectRootContext | null;
+export declare function useSelectRootContext(): import("..").SelectRootContext | null;

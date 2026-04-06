@@ -1,5 +1,5 @@
-import { SizeProp } from '../../types';
-import { FlexProps } from '../Flex';
+import type { SizeProp } from '../../types';
+import type { FlexProps } from '../Flex';
 export type ColSizeValue = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12;
 export type ColSize = ColSizeValue | 'auto' | 'content';
 export type ColOffset = ColSizeValue;

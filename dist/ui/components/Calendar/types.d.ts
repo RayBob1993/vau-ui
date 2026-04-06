@@ -1,4 +1,4 @@
-import { ThemeProp, SizeProp } from '../../../core/index.ts';
+import type { ThemeProp, SizeProp } from '../../../core/index.js';
 /**
  * Интерфейс свойств компонента VCalendar
  * @interface IVCalendarProps

@@ -1,2 +1,2 @@
-import { VNode } from 'vue';
+import { type VNode } from 'vue';
 export declare function renderSlotFragments(children?: Array<VNode>): Array<VNode>;

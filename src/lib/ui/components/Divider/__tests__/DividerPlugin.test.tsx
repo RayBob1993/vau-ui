@@ -1,5 +1,5 @@
-import { describe, expect, it } from 'vitest';
 import { DividerPlugin } from '../plugin';
+import { describe, expect, it } from 'vitest';
 
 describe('DividerPlugin', () => {
   it('Плагин имеет функцию install', () => {

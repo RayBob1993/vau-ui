@@ -1,72 +1,60 @@
-import { FormModel, FormSlots, FormSubmitEvent, FormRules, FormInstance, FormItemProps, FormItemSlots } from './types';
-import { PublicProps, ShallowUnwrapRef, VNode, CreateComponentPublicInstanceWithMixins, ComponentOptionsMixin, GlobalComponents, GlobalDirectives, ComponentProvideOptions, ComponentOptionsBase, VNodeProps, AllowedComponentProps, ComponentCustomProps, DefineComponent } from 'vue';
 export declare const Form: {
-    Root: <MODEL extends FormModel>(__VLS_props: NonNullable<Awaited<typeof __VLS_setup>>["props"], __VLS_ctx?: {
-        slots: Readonly< FormSlots> & FormSlots;
+    Root: <MODEL extends import("./types").FormModel>(__VLS_props: NonNullable<Awaited<typeof __VLS_setup>>["props"], __VLS_ctx?: {
         attrs: any;
-        emit: (((evt: "submit", payload: FormSubmitEvent) => void) & ((evt: "invalid") => void) & ((evt: "valid") => void)) & ((evt: "update:modelValue", value: MODEL) => void);
-    }, __VLS_expose?: NonNullable<Awaited<typeof __VLS_setup>>["expose"], __VLS_setup?: Promise<{
-        props: {
-            readonly "onUpdate:modelValue"?: ((value: MODEL) => any) | undefined;
-            readonly onSubmit?: ((payload: FormSubmitEvent) => any) | undefined;
-            readonly onInvalid?: (() => any) | undefined;
-            readonly onValid?: (() => any) | undefined;
-            modelValue: MODEL;
-            rules?: FormRules<MODEL> | undefined;
+        emit: (((evt: "submit", payload: import("./types").FormSubmitEvent) => void) & ((evt: "invalid") => void) & ((evt: "valid") => void)) & ((event: "update:modelValue", value: MODEL) => void);
+        slots: import("./types").FormSlots;
+    }, __VLS_exposed?: NonNullable<Awaited<typeof __VLS_setup>>["expose"], __VLS_setup?: Promise<{
+        props: import("vue").PublicProps & {
+            rules?: import("./types").FormRules<MODEL> | undefined;
             disabled?: boolean | undefined;
             scrollToError?: (boolean | ScrollIntoViewOptions) | undefined;
-        } & PublicProps;
-        expose(exposed: ShallowUnwrapRef<FormInstance>): void;
+            modelValue: MODEL;
+            "onUpdate:modelValue"?: ((value: MODEL) => any) | undefined;
+            onSubmit?: ((payload: import("./types").FormSubmitEvent) => any) | undefined;
+            onInvalid?: (() => any) | undefined;
+            onValid?: (() => any) | undefined;
+        } & (typeof globalThis extends {
+            __VLS_PROPS_FALLBACK: infer P;
+        } ? P : {});
+        expose: (exposed: import("vue").ShallowUnwrapRef<import("./types").FormInstance>) => void;
         attrs: any;
-        slots: Readonly< FormSlots> & FormSlots;
-        emit: (((evt: "submit", payload: FormSubmitEvent) => void) & ((evt: "invalid") => void) & ((evt: "valid") => void)) & ((evt: "update:modelValue", value: MODEL) => void);
-    }>) => VNode & {
+        slots: import("./types").FormSlots;
+        emit: (((evt: "submit", payload: import("./types").FormSubmitEvent) => void) & ((evt: "invalid") => void) & ((evt: "valid") => void)) & ((event: "update:modelValue", value: MODEL) => void);
+    }>) => import("vue").VNode & {
         __ctx?: Awaited<typeof __VLS_setup>;
     };
     Item: {
-        new (...args: any[]): CreateComponentPublicInstanceWithMixins<Readonly< FormItemProps> & Readonly<{
+        new (...args: any[]): import("vue").CreateComponentPublicInstanceWithMixins<Readonly<import("./types").FormItemProps> & Readonly<{
             onInvalid?: (() => any) | undefined;
             onValid?: (() => any) | undefined;
-        }>, {
-            reset: VoidFunction;
-            validate: (silent?: boolean) => Promise<boolean>;
-            clearValidateErrors: VoidFunction;
-        }, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {
+        }>, import("./types").FormItemExpose, {}, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {
             invalid: () => any;
             valid: () => any;
-        }, PublicProps, {}, false, {}, {}, GlobalComponents, GlobalDirectives, string, {}, HTMLDivElement, ComponentProvideOptions, {
+        }, import("vue").PublicProps, {}, false, {}, {}, import("vue").GlobalComponents, import("vue").GlobalDirectives, string, {}, any, import("vue").ComponentProvideOptions, {
             P: {};
             B: {};
             D: {};
             C: {};
             M: {};
             Defaults: {};
-        }, Readonly< FormItemProps> & Readonly<{
+        }, Readonly<import("./types").FormItemProps> & Readonly<{
             onInvalid?: (() => any) | undefined;
             onValid?: (() => any) | undefined;
-        }>, {
-            reset: VoidFunction;
-            validate: (silent?: boolean) => Promise<boolean>;
-            clearValidateErrors: VoidFunction;
-        }, {}, {}, {}, {}>;
+        }>, import("./types").FormItemExpose, {}, {}, {}, {}>;
         __isFragment?: never;
         __isTeleport?: never;
         __isSuspense?: never;
-    } & ComponentOptionsBase<Readonly< FormItemProps> & Readonly<{
+    } & import("vue").ComponentOptionsBase<Readonly<import("./types").FormItemProps> & Readonly<{
         onInvalid?: (() => any) | undefined;
         onValid?: (() => any) | undefined;
-    }>, {
-        reset: VoidFunction;
-        validate: (silent?: boolean) => Promise<boolean>;
-        clearValidateErrors: VoidFunction;
-    }, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {
+    }>, import("./types").FormItemExpose, {}, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {
         invalid: () => any;
         valid: () => any;
-    }, string, {}, {}, string, {}, GlobalComponents, GlobalDirectives, string, ComponentProvideOptions> & VNodeProps & AllowedComponentProps & ComponentCustomProps & (new () => {
-        $slots: Readonly< FormItemSlots> & FormItemSlots;
+    }, string, {}, {}, string, {}, import("vue").GlobalComponents, import("vue").GlobalDirectives, string, import("vue").ComponentProvideOptions> & import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps & (new () => {
+        $slots: import("./types").FormItemSlots;
     });
     ItemTitle: {
-        new (...args: any[]): CreateComponentPublicInstanceWithMixins<Readonly<{}> & Readonly<{}>, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, PublicProps, {}, true, {}, {}, GlobalComponents, GlobalDirectives, string, {}, HTMLDivElement, ComponentProvideOptions, {
+        new (...args: any[]): import("vue").CreateComponentPublicInstanceWithMixins<Readonly<{}> & Readonly<{}>, {}, {}, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, import("vue").PublicProps, {}, true, {}, {}, import("vue").GlobalComponents, import("vue").GlobalDirectives, string, {}, any, import("vue").ComponentProvideOptions, {
             P: {};
             B: {};
             D: {};
@@ -77,13 +65,13 @@ export declare const Form: {
         __isFragment?: never;
         __isTeleport?: never;
         __isSuspense?: never;
-    } & ComponentOptionsBase<Readonly<{}> & Readonly<{}>, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, {}, {}, string, {}, GlobalComponents, GlobalDirectives, string, ComponentProvideOptions> & VNodeProps & AllowedComponentProps & ComponentCustomProps & (new () => {
+    } & import("vue").ComponentOptionsBase<Readonly<{}> & Readonly<{}>, {}, {}, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, {}, {}, string, {}, import("vue").GlobalComponents, import("vue").GlobalDirectives, string, import("vue").ComponentProvideOptions> & import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps & (new () => {
         $slots: {
-            default?(_: {}): any;
+            default?: (props: {}) => any;
         };
     });
     ItemRequired: {
-        new (...args: any[]): CreateComponentPublicInstanceWithMixins<Readonly<{}> & Readonly<{}>, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, PublicProps, {}, true, {}, {}, GlobalComponents, GlobalDirectives, string, {}, HTMLSpanElement, ComponentProvideOptions, {
+        new (...args: any[]): import("vue").CreateComponentPublicInstanceWithMixins<Readonly<{}> & Readonly<{}>, {}, {}, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, import("vue").PublicProps, {}, true, {}, {}, import("vue").GlobalComponents, import("vue").GlobalDirectives, string, {}, any, import("vue").ComponentProvideOptions, {
             P: {};
             B: {};
             D: {};
@@ -94,12 +82,12 @@ export declare const Form: {
         __isFragment?: never;
         __isTeleport?: never;
         __isSuspense?: never;
-    } & ComponentOptionsBase<Readonly<{}> & Readonly<{}>, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, {}, {}, string, {}, GlobalComponents, GlobalDirectives, string, ComponentProvideOptions> & VNodeProps & AllowedComponentProps & ComponentCustomProps & (new () => {
+    } & import("vue").ComponentOptionsBase<Readonly<{}> & Readonly<{}>, {}, {}, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, {}, {}, string, {}, import("vue").GlobalComponents, import("vue").GlobalDirectives, string, import("vue").ComponentProvideOptions> & import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps & (new () => {
         $slots: {
-            default?(_: {}): any;
+            default?: (props: {}) => any;
         };
     });
-    ItemErrors: DefineComponent<{}, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, PublicProps, Readonly<{}> & Readonly<{}>, {}, {}, {}, {}, string, ComponentProvideOptions, true, {}, HTMLDivElement>;
+    ItemErrors: import("vue").DefineComponent<{}, {}, {}, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, import("vue").PublicProps, Readonly<{}> & Readonly<{}>, {}, {}, {}, {}, string, import("vue").ComponentProvideOptions, true, {}, any>;
 };
 export * from './types';
 export * from './composables';

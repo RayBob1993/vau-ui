@@ -1,2 +1,2 @@
-import { FormRules } from '../../components/Form/types';
+import type { FormRules } from '../../components/Form/types';
 export declare function defineFormRules<MODEL>(rules: FormRules<MODEL>): FormRules<MODEL>;

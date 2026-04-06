@@ -1,7 +1,7 @@
-import { ModalProps } from '../types';
-import { ConfigProviderRootContext } from '../../ConfigProvider';
-import { MaybeNull } from '../../../types';
-import { MaybeRefOrGetter, ComputedRef } from 'vue';
+import type { ModalProps } from '../types';
+import type { ConfigProviderRootContext } from '../../ConfigProvider';
+import type { MaybeNull } from '../../../types';
+import { type MaybeRefOrGetter } from 'vue';
 export interface UseModalRootOptions {
     configProviderRootContext: MaybeNull<ConfigProviderRootContext>;
     props: MaybeRefOrGetter<ModalProps>;
@@ -11,5 +11,5 @@ export interface UseModalRootOptions {
 }
 export declare function useModalRoot(options: UseModalRootOptions): {
     close: () => void;
-    teleportTarget: ComputedRef<string | HTMLElement | undefined>;
+    teleportTarget: import("vue").ComputedRef<string | HTMLElement | undefined>;
 };

@@ -1,9 +1,7 @@
-import { SelectProps, SelectModelValue, OptionValue } from '../types';
-import { MaybeNull } from '../../../types';
-import { FormRootContext, FormItemContext } from '../../Form';
-import { MaybeRefOrGetter, ComputedRef, Ref } from 'vue';
-import { Maybe } from '../../..';
-import { OptionInstance } from '..';
+import type { SelectProps, SelectModelValue, OptionValue } from '../types';
+import type { MaybeNull } from '../../../types';
+import type { FormRootContext, FormItemContext } from '../../Form';
+import { type MaybeRefOrGetter } from 'vue';
 export interface UseSelectRootOptions {
     formRootContext: MaybeNull<FormRootContext>;
     formItemContext: MaybeNull<FormItemContext>;
@@ -14,15 +12,15 @@ export interface UseSelectRootOptions {
     onClear?: VoidFunction;
 }
 export declare function useSelectRoot(options: UseSelectRootOptions): {
-    activeOption: ComputedRef<Maybe<OptionInstance>>;
-    activeOptions: ComputedRef< OptionInstance[]>;
-    hasValue: ComputedRef<boolean>;
-    isOpen: Ref<boolean, boolean>;
-    isDisabled: ComputedRef<boolean>;
+    activeOption: import("vue").ComputedRef<import("../../..").Maybe<import("..").OptionInstance>>;
+    activeOptions: import("vue").ComputedRef<import("..").OptionInstance[]>;
+    hasValue: import("vue").ComputedRef<boolean>;
+    isOpen: import("vue").Ref<boolean, boolean>;
+    isDisabled: import("vue").ComputedRef<boolean>;
     open: () => void;
     close: () => void;
     toggle: () => void;
-    registerOption: (newOption: OptionInstance) => void;
+    registerOption: (newOption: import("..").OptionInstance) => void;
     unregisterOption: (id: string) => void;
     setModelValue: (value: OptionValue) => void;
     reset: () => void;

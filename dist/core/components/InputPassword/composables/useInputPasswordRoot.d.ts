@@ -1,6 +1,5 @@
-import { InputPasswordNativeType } from '../types';
-import { Ref } from 'vue';
+import type { InputPasswordNativeType } from '../types';
 export declare function useInputPasswordRoot(): {
-    currentType: Ref<InputPasswordNativeType, InputPasswordNativeType>;
+    currentType: import("vue").Ref<InputPasswordNativeType, InputPasswordNativeType>;
     handleToggleType: () => void;
 };

@@ -1,5 +1,5 @@
-import { describe, expect, it } from 'vitest';
 import { CheckboxPlugin } from '../plugin';
+import { describe, expect, it } from 'vitest';
 
 describe('CheckboxPlugin', () => {
   it('Плагин имеет функцию install', () => {

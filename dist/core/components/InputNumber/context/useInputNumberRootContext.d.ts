@@ -1,2 +1,1 @@
-import { InputNumberRootContext } from '..';
-export declare function useInputNumberRootContext(): InputNumberRootContext | null;
+export declare function useInputNumberRootContext(): import("..").InputNumberRootContext | null;

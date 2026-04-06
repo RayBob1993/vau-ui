@@ -1,5 +1,5 @@
-import { ThemeProp, SizeProp, DirectionProp } from '../../types';
-import { PrimitiveProps } from '../../components';
+import type { ThemeProp, SizeProp, DirectionProp } from '../../types';
+import type { PrimitiveProps } from '../../components';
 export type ButtonProps = {
     loading?: boolean;
     disabled?: boolean;

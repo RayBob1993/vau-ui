@@ -1,14 +1,13 @@
-import { OptionInstance, SelectRootContext } from '../types';
-import { Maybe, MaybeNull } from '../../../types';
-import { ComputedRef } from 'vue';
+import type { OptionInstance, SelectRootContext } from '../types';
+import type { Maybe, MaybeNull } from '../../../types';
 export interface UseSelectValueOptions {
     selectRootContext: MaybeNull<SelectRootContext>;
 }
 export declare function useSelectValue(options: UseSelectValueOptions): {
-    activeOptionValue: ComputedRef<Maybe<string>>;
-    activeOptions: ComputedRef<OptionInstance[]>;
-    hasValue: ComputedRef<boolean>;
-    isMultiple: ComputedRef<boolean>;
-    placeholder: ComputedRef<Maybe<string>>;
+    activeOptionValue: import("vue").ComputedRef<Maybe<string>>;
+    activeOptions: import("vue").ComputedRef<OptionInstance[]>;
+    hasValue: import("vue").ComputedRef<boolean>;
+    isMultiple: import("vue").ComputedRef<boolean>;
+    placeholder: import("vue").ComputedRef<Maybe<string>>;
     toggle: () => void;
 };

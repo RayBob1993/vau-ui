@@ -1,2 +1,1 @@
-import { ConfigProviderRootContext } from '..';
-export declare function useConfigProviderRootContext(): ConfigProviderRootContext;
+export declare function useConfigProviderRootContext(): import("..").ConfigProviderRootContext;

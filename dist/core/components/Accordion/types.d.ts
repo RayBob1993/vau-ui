@@ -1,5 +1,5 @@
-import { MaybeRefOrGetter, VNode } from 'vue';
-import { Maybe, MaybeArray, MaybeNull, SizeProp, ThemeProp } from '../../types';
+import type { MaybeRefOrGetter, VNode } from 'vue';
+import type { Maybe, MaybeArray, MaybeNull, SizeProp, ThemeProp } from '../../types';
 export type AccordionValue = string | number;
 export type AccordionModelValue = Maybe<MaybeNull<MaybeArray<AccordionValue>>>;
 export type AccordionProps = {

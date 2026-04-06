@@ -15,7 +15,7 @@ export type IVTableBaseData = Record<string, unknown>;
  */
 export interface IVTableSortState <T extends IVTableBaseData = IVTableBaseData> {
   prop: MaybeNull<keyof T>;
-  order: MaybeNull<IVTableSortDirection>
+  order: MaybeNull<IVTableSortDirection>;
 }
 
 /**

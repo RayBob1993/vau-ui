@@ -1,5 +1,5 @@
-import { MaybeRefOrGetter, VNode } from 'vue';
-import { SizeProp, ThemeProp, DirectionProp, Maybe } from '../../types';
+import type { MaybeRefOrGetter, VNode } from 'vue';
+import type { SizeProp, ThemeProp, DirectionProp, Maybe } from '../../types';
 export type RadioValue = number | string;
 export type RadioModelValue = Maybe<RadioValue>;
 export type RadioProps = {

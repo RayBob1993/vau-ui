@@ -1,2 +1,1 @@
-import { AccordionItemContext } from '..';
-export declare function useAccordionItemContext(): AccordionItemContext | null;
+export declare function useAccordionItemContext(): import("..").AccordionItemContext | null;

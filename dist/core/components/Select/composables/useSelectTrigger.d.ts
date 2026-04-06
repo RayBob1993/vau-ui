@@ -1,5 +1,5 @@
-import { SelectRootContext } from '../types';
-import { MaybeNull } from '../../../types';
+import type { SelectRootContext } from '../types';
+import type { MaybeNull } from '../../../types';
 export interface UseSelectTriggerOptions {
     selectRootContext: MaybeNull<SelectRootContext>;
 }

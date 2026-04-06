@@ -1,4 +1,4 @@
-import { UnscopedSlot, SectionProps, SectionTitleProps } from '../../../core/index.ts';
+import type { UnscopedSlot, SectionProps, SectionTitleProps } from '../../../core/index.js';
 export type VSectionProps = {
     title?: string;
 } & SectionProps & SectionTitleProps;

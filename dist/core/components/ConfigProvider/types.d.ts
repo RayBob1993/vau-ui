@@ -1,5 +1,5 @@
-import { MaybeRefOrGetter, VNodeChild } from 'vue';
-import { LocaleTranslation } from '../../types';
+import type { MaybeRefOrGetter, VNodeChild } from 'vue';
+import type { LocaleTranslation } from '../../types';
 export type IconRenderFn = () => VNodeChild;
 export type Icons = 'modalClose';
 export type IconRegistry = Record<Icons, IconRenderFn>;

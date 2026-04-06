@@ -1,5 +1,5 @@
-import { describe, expect, it } from 'vitest';
 import { ButtonGroupPlugin } from '../plugin';
+import { describe, expect, it } from 'vitest';
 
 describe('ButtonGroupPlugin', () => {
   it('Плагин имеет функцию install', () => {

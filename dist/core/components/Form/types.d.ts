@@ -1,5 +1,5 @@
-import { ZodError, ZodType } from 'zod';
-import { ComputedRef, ModelRef, Ref, VNode } from 'vue';
+import type { ZodError, ZodType } from 'zod';
+import type { ComputedRef, ModelRef, Ref, VNode } from 'vue';
 export type FormModelValues = unknown;
 export type FormModel = Record<string, FormModelValues>;
 export type FormRules<MODEL> = {

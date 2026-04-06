@@ -1,5 +1,5 @@
-import { InputTagsRootContext } from '../types';
-import { MaybeNull } from '../../../types';
+import type { InputTagsRootContext } from '../types';
+import type { MaybeNull } from '../../../types';
 export interface UseInputTagsInputOptions {
     inputTagsRootContext: MaybeNull<InputTagsRootContext>;
 }

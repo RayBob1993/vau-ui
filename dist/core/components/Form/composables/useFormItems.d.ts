@@ -1,7 +1,6 @@
-import { FormItemInstance } from '../types';
-import { Ref } from 'vue';
+import type { FormItemInstance } from '../types';
 export declare function useFormItems(): {
-    formItems: Ref<{
+    formItems: import("vue").Ref<{
         id: string;
         isValidatable: boolean;
         isRequired: boolean;

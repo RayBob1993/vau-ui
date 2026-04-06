@@ -1,6 +1,6 @@
-import { InputBaseProps } from '../Input';
-import { DirectionProp, SizeProp, ThemeProp } from '../../types';
-import { MaybeRefOrGetter } from 'vue';
+import type { InputBaseProps } from '../Input';
+import type { DirectionProp, SizeProp, ThemeProp } from '../../types';
+import type { MaybeRefOrGetter } from 'vue';
 export type InputNumberModelValue = number;
 export type InputNumberMousewheel = boolean | number;
 export interface InputNumberBaseProps extends InputBaseProps {

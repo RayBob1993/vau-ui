@@ -1,8 +1,7 @@
-import { MaybeNull } from '../../../types';
-import { FormRootContext, FormItemProps } from '../types';
+import type { MaybeNull } from '../../../types';
+import type { FormRootContext, FormItemProps } from '../types';
 import { z } from 'zod';
-import { MaybeRefOrGetter, Ref, ComputedRef } from 'vue';
-import { FormItemValidationStatus, FormItemField } from '..';
+import { type MaybeRefOrGetter } from 'vue';
 export interface UseFormItemOptions {
     formRootContext: MaybeNull<FormRootContext>;
     props: MaybeRefOrGetter<FormItemProps>;
@@ -11,7 +10,7 @@ export interface UseFormItemOptions {
 }
 export declare function useFormItem(options: UseFormItemOptions): {
     id: string;
-    validationErrors: Ref<({
+    validationErrors: import("vue").Ref<({
         readonly code: "invalid_type";
         readonly expected: z.core.$ZodInvalidTypeExpected;
         readonly input?: unknown;
@@ -2258,20 +2257,20 @@ export declare function useFormItem(options: UseFormItemOptions): {
         readonly path: PropertyKey[];
         readonly message: string;
     })[]>;
-    validationStatus: Ref<{
+    validationStatus: import("vue").Ref<{
         isError: boolean;
         isValidating: boolean;
         isSuccess: boolean;
-    }, FormItemValidationStatus | {
+    }, import("..").FormItemValidationStatus | {
         isError: boolean;
         isValidating: boolean;
         isSuccess: boolean;
     }>;
-    isDisabled: ComputedRef<boolean>;
-    isRequired: ComputedRef<boolean>;
+    isDisabled: import("vue").ComputedRef<boolean>;
+    isRequired: import("vue").ComputedRef<boolean>;
     reset: () => void;
     validate: (silent?: boolean) => Promise<boolean>;
     clearValidateErrors: () => void;
-    registerField: (newField: FormItemField) => void;
+    registerField: (newField: import("..").FormItemField) => void;
     unregisterField: () => void;
 };

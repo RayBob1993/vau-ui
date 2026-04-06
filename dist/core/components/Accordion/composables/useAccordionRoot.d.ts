@@ -1,6 +1,6 @@
-import { AccordionModelValue, AccordionProps, AccordionValue } from '../types';
-import { Maybe } from '../../../types';
-import { MaybeRefOrGetter } from 'vue';
+import type { AccordionModelValue, AccordionProps, AccordionValue } from '../types';
+import type { Maybe } from '../../../types';
+import { type MaybeRefOrGetter } from 'vue';
 export interface UseAccordionRootOptions {
     props: MaybeRefOrGetter<AccordionProps>;
     modelValue: MaybeRefOrGetter<AccordionModelValue>;

@@ -1,7 +1,7 @@
-import { InputNumberModelValue, InputNumberProps } from '../types';
-import { FormRootContext, FormItemContext } from '../../Form';
-import { MaybeNull } from '../../../types';
-import { MaybeRefOrGetter, ComputedRef } from 'vue';
+import type { InputNumberModelValue, InputNumberProps } from '../types';
+import type { FormRootContext, FormItemContext } from '../../Form';
+import type { MaybeNull } from '../../../types';
+import { type MaybeRefOrGetter } from 'vue';
 export interface UseInputNumberRootOptions {
     formRootContext: MaybeNull<FormRootContext>;
     formItemContext: MaybeNull<FormItemContext>;
@@ -12,10 +12,10 @@ export interface UseInputNumberRootOptions {
     onUpdateModelValue?: (value: InputNumberModelValue) => void;
 }
 export declare function useInputNumberRoot(options: UseInputNumberRootOptions): {
-    step: ComputedRef<number>;
-    isDisabled: ComputedRef<boolean>;
-    isDecrementDisabled: ComputedRef<boolean>;
-    isIncrementDisabled: ComputedRef<boolean>;
+    step: import("vue").ComputedRef<number>;
+    isDisabled: import("vue").ComputedRef<boolean>;
+    isDecrementDisabled: import("vue").ComputedRef<boolean>;
+    isIncrementDisabled: import("vue").ComputedRef<boolean>;
     handleDecrement: () => void;
     handleIncrement: () => void;
     setModelValue: (value: InputNumberModelValue) => void;

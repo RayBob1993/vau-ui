@@ -1,2 +1,2 @@
-import { SizeProp, ThemeProp } from '../../types';
+import type { SizeProp, ThemeProp } from '../../types';
 export type BadgeProps = Partial<SizeProp> & Partial<ThemeProp>;

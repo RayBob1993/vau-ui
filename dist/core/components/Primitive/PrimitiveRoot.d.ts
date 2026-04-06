@@ -1,6 +1,6 @@
-import { PrimitiveProps } from './types';
-import { PropType, DefineComponent, ExtractPropTypes, VNode, RendererNode, RendererElement, ComponentOptionsMixin, PublicProps, Component, ComponentProvideOptions } from 'vue';
-export declare const Root: DefineComponent<ExtractPropTypes<{
+import type { PrimitiveProps } from './types';
+import { type PropType } from 'vue';
+export declare const Root: import("vue").DefineComponent<import("vue").ExtractPropTypes<{
     asChild: {
         type: BooleanConstructor;
         default: boolean;
@@ -9,9 +9,9 @@ export declare const Root: DefineComponent<ExtractPropTypes<{
         type: PropType<PrimitiveProps["as"]>;
         default: string;
     };
-}>, () => VNode<RendererNode, RendererElement, {
+}>, () => import("vue").VNode<import("vue").RendererNode, import("vue").RendererElement, {
     [key: string]: any;
-}>, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, PublicProps, Readonly< ExtractPropTypes<{
+}>, {}, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, import("vue").PublicProps, Readonly<import("vue").ExtractPropTypes<{
     asChild: {
         type: BooleanConstructor;
         default: boolean;
@@ -22,5 +22,5 @@ export declare const Root: DefineComponent<ExtractPropTypes<{
     };
 }>> & Readonly<{}>, {
     asChild: boolean;
-    as: keyof HTMLElementTagNameMap | Component;
-}, {}, {}, {}, string, ComponentProvideOptions, true, {}, any>;
+    as: keyof HTMLElementTagNameMap | import("vue").Component;
+}, {}, {}, {}, string, import("vue").ComponentProvideOptions, true, {}, any>;

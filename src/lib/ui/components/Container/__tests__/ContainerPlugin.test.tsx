@@ -1,5 +1,5 @@
-import { describe, expect, it } from 'vitest';
 import { ContainerPlugin } from '../plugin';
+import { describe, expect, it } from 'vitest';
 
 describe('ContainerPlugin', () => {
   it('Плагин имеет функцию install', () => {

@@ -1,7 +1,7 @@
-import { MaybeNull } from '../../../types';
-import { FormRootContext, FormItemContext } from '../../Form';
-import { InputRangeModelValue, InputRangeProps } from '../types';
-import { MaybeRefOrGetter, ComputedRef } from 'vue';
+import type { MaybeNull } from '../../../types';
+import type { FormRootContext, FormItemContext } from '../../Form';
+import type { InputRangeModelValue, InputRangeProps } from '../types';
+import { type MaybeRefOrGetter } from 'vue';
 export interface UseInputRangeRootOptions {
     formRootContext: MaybeNull<FormRootContext>;
     formItemContext: MaybeNull<FormItemContext>;
@@ -9,5 +9,5 @@ export interface UseInputRangeRootOptions {
     props: MaybeRefOrGetter<InputRangeProps>;
 }
 export declare function useInputRangeRoot(options: UseInputRangeRootOptions): {
-    isDisabled: ComputedRef<boolean>;
+    isDisabled: import("vue").ComputedRef<boolean>;
 };

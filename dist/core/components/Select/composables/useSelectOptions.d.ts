@@ -1,18 +1,16 @@
-import { OptionInstance } from '../types';
-import { Ref } from 'vue';
-import { OptionValue } from '..';
+import type { OptionInstance } from '../types';
 export declare function useSelectOptions(): {
-    options: Ref<{
+    options: import("vue").Ref<{
         id: string;
         props: {
-            value: OptionValue;
+            value: import("..").OptionValue;
             title?: string | undefined;
             disabled?: boolean | undefined;
         };
     }[], OptionInstance[] | {
         id: string;
         props: {
-            value: OptionValue;
+            value: import("..").OptionValue;
             title?: string | undefined;
             disabled?: boolean | undefined;
         };

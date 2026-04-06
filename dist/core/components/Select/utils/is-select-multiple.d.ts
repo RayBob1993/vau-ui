@@ -1,2 +1,2 @@
-import { OptionValue, SelectModelValue } from '../types';
+import type { OptionValue, SelectModelValue } from '../types';
 export declare function isSelectMultiple(value: SelectModelValue, multiple?: boolean): value is Array<OptionValue>;

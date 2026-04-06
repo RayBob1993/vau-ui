@@ -1,13 +1,12 @@
-import { CheckboxRootContext } from '../types';
-import { MaybeNull } from '../../../types';
-import { ComputedRef } from 'vue';
+import type { CheckboxRootContext } from '../types';
+import type { MaybeNull } from '../../../types';
 export interface UseCheckboxIndicatorOptions {
     checkboxRootContext: MaybeNull<CheckboxRootContext>;
 }
 export declare function useCheckboxIndicator(options: UseCheckboxIndicatorOptions): {
-    isDisabled: ComputedRef<boolean>;
-    isActive: ComputedRef<boolean>;
-    isIndeterminate: ComputedRef<boolean>;
-    isValid: ComputedRef<boolean>;
-    isInvalid: ComputedRef<boolean>;
+    isDisabled: import("vue").ComputedRef<boolean>;
+    isActive: import("vue").ComputedRef<boolean>;
+    isIndeterminate: import("vue").ComputedRef<boolean>;
+    isValid: import("vue").ComputedRef<boolean>;
+    isInvalid: import("vue").ComputedRef<boolean>;
 };

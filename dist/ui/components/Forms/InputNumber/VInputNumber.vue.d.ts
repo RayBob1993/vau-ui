@@ -1,12 +1,13 @@
-import { InputNumberProps, InputNumberModelValue } from '../../../../core/index.ts';
-import { DefineComponent, ComponentOptionsMixin, PublicProps, ComponentProvideOptions } from 'vue';
+import { type InputNumberProps, type InputNumberModelValue } from '../../../../core/index.js';
 type __VLS_Props = InputNumberProps;
-type __VLS_PublicProps = {
+type __VLS_ModelProps = {
     modelValue?: InputNumberModelValue;
-} & __VLS_Props;
-declare const _default: DefineComponent<__VLS_PublicProps, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {
+};
+type __VLS_PublicProps = __VLS_Props & __VLS_ModelProps;
+declare const __VLS_export: import("vue").DefineComponent<__VLS_PublicProps, {}, {}, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {
     "update:modelValue": (value: number) => any;
-}, string, PublicProps, Readonly<__VLS_PublicProps> & Readonly<{
+}, string, import("vue").PublicProps, Readonly<__VLS_PublicProps> & Readonly<{
     "onUpdate:modelValue"?: ((value: number) => any) | undefined;
-}>, {}, {}, {}, {}, string, ComponentProvideOptions, false, {}, HTMLDivElement>;
+}>, {}, {}, {}, {}, string, import("vue").ComponentProvideOptions, false, {}, any>;
+declare const _default: typeof __VLS_export;
 export default _default;

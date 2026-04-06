@@ -1,8 +1,7 @@
-import { IVBadgeProps } from '../types';
-import { ComputedRef } from 'vue';
+import type { IVBadgeProps } from '../types';
 export interface IUseBadgeOptions {
     props: IVBadgeProps;
 }
 export declare function useBadge(options: IUseBadgeOptions): {
-    content: ComputedRef<string>;
+    content: import("vue").ComputedRef<string>;
 };

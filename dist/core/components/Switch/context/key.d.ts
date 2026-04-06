@@ -1,3 +1,3 @@
-import { InjectionKey } from 'vue';
-import { SwitchRootContext } from '../types';
+import type { InjectionKey } from 'vue';
+import type { SwitchRootContext } from '../types';
 export declare const SwitchRootContextKey: InjectionKey<SwitchRootContext>;

@@ -1,4 +1,4 @@
-import { VNode } from 'vue';
+import type { VNode } from 'vue';
 /**
  * Интерфейс свойств компонента VCountdown
  * @interface IVCountdownProps

@@ -1,2 +1,1 @@
-import { RadioRootContext } from '..';
-export declare function useRadioRootContext(): RadioRootContext | null;
+export declare function useRadioRootContext(): import("..").RadioRootContext | null;

@@ -1,9 +1,8 @@
-import { InputCodeRootContext } from '../types';
-import { MaybeNull } from '../../../types';
-import { ComputedRef } from 'vue';
+import type { InputCodeRootContext } from '../types';
+import type { MaybeNull } from '../../../types';
 export interface UseInputCodePinOptions {
     inputCodeRootContext: MaybeNull<InputCodeRootContext>;
 }
 export declare function useInputCodePin(options: UseInputCodePinOptions): {
-    isDisabled: ComputedRef<boolean>;
+    isDisabled: import("vue").ComputedRef<boolean>;
 };

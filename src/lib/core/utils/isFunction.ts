@@ -12,6 +12,6 @@
  * isFunction(null); // => false
  * isFunction(undefined); // => false
  */
-export function isFunction (value: unknown): value is (...args: unknown[]) => unknown {
+export function isFunction (value: unknown): value is (...args: Array<unknown>) => unknown {
   return Object.prototype.toString.call(value) === '[object Function]';
 }

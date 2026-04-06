@@ -1,2 +1,2 @@
-import { ObjectDirective } from 'vue';
+import type { ObjectDirective } from 'vue';
 export declare const vTooltip: ObjectDirective;

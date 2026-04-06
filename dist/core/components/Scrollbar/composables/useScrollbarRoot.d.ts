@@ -1,6 +1,5 @@
-import { ScrollbarProps } from '../types';
-import { MaybeRefOrGetter, TemplateRef, Ref } from 'vue';
-import { ThrottledFunction } from '../../..';
+import type { ScrollbarProps } from '../types';
+import { type MaybeRefOrGetter, type TemplateRef } from 'vue';
 export interface UseScrollbarRootOptions {
     props: MaybeRefOrGetter<ScrollbarProps>;
     scrollbar: TemplateRef<HTMLDivElement>;
@@ -14,10 +13,10 @@ export interface UseScrollbarRootOptions {
     onScrollEndX?: VoidFunction;
 }
 export declare function useScrollbarRoot(options: UseScrollbarRootOptions): {
-    isGrabbing: Ref<boolean, boolean>;
-    handleScroll: ThrottledFunction<[event: Event]>;
+    isGrabbing: import("vue").Ref<boolean, boolean>;
+    handleScroll: import("../../..").ThrottledFunction<[event: Event]>;
     handleMousedown: (event: MouseEvent) => void;
     handleMouseleave: (event: MouseEvent) => void;
     handleMouseup: (event: MouseEvent) => void;
-    handleMousemove: ThrottledFunction<[event: MouseEvent]>;
+    handleMousemove: import("../../..").ThrottledFunction<[event: MouseEvent]>;
 };

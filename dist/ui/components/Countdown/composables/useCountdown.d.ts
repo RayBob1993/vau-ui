@@ -1,5 +1,4 @@
-import { IVCountdownProps, IVCountdownProgress } from '../types';
-import { ComputedRef } from 'vue';
+import type { IVCountdownProps, IVCountdownProgress } from '../types';
 export interface IUseCountdownOptions {
     props: IVCountdownProps;
     onAbort?: VoidFunction;
@@ -8,13 +7,13 @@ export interface IUseCountdownOptions {
     onStart?: VoidFunction;
 }
 export declare function useCountdown(options: IUseCountdownOptions): {
-    years: ComputedRef<number>;
-    months: ComputedRef<number>;
-    days: ComputedRef<number>;
-    hours: ComputedRef<number>;
-    minutes: ComputedRef<number>;
-    seconds: ComputedRef<number>;
-    milliseconds: ComputedRef<number>;
+    years: import("vue").ComputedRef<number>;
+    months: import("vue").ComputedRef<number>;
+    days: import("vue").ComputedRef<number>;
+    hours: import("vue").ComputedRef<number>;
+    minutes: import("vue").ComputedRef<number>;
+    seconds: import("vue").ComputedRef<number>;
+    milliseconds: import("vue").ComputedRef<number>;
     start: () => void;
     abort: () => void;
     end: () => void;

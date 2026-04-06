@@ -1,4 +1,4 @@
-import { UnscopedSlot, ModalProps } from '../../../core/index.ts';
+import type { UnscopedSlot, ModalProps } from '../../../core/index.js';
 export interface IVModalProps extends ModalProps {
     title?: string;
 }

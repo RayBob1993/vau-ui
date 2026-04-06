@@ -1,5 +1,5 @@
-import { SizeProp } from '../../../core/index.ts';
-import { VNode } from 'vue';
+import type { SizeProp } from '../../../core/index.js';
+import type { VNode } from 'vue';
 /**
  * Интерфейс слотов компонента VDrawer
  * @interface IVDrawerProps

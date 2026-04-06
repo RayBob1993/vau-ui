@@ -1,6 +1,6 @@
-import { InputBaseProps } from '../Input';
-import { MaybeRefOrGetter } from 'vue';
-import { SizeProp, ThemeProp } from '../../types';
+import type { InputBaseProps } from '../Input';
+import type { MaybeRefOrGetter } from 'vue';
+import type { SizeProp, ThemeProp } from '../../types';
 export type InputRangeValue = number;
 export type InputRangeModelValue = InputRangeValue | [InputRangeValue, InputRangeValue];
 export type InputRangeProps = {

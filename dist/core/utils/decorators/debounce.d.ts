@@ -1,4 +1,4 @@
-import { ThrottledFunction } from './throttle';
+import { type ThrottledFunction } from './throttle';
 export interface DebounceOptions {
     /**
      * Если установлено в true, то функция будет вызвана сразу же при первом вызове.

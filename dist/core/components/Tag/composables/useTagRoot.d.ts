@@ -1,6 +1,6 @@
-import { TagProps, TagValue } from '../types';
-import { Maybe } from '../../../types';
-import { MaybeRefOrGetter } from 'vue';
+import type { TagProps, TagValue } from '../types';
+import type { Maybe } from '../../../types';
+import { type MaybeRefOrGetter } from 'vue';
 export interface UseTagRootOptions {
     props: MaybeRefOrGetter<TagProps>;
     onDelete?: (value: Maybe<TagValue>) => void;

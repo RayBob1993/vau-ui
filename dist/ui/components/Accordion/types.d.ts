@@ -1,4 +1,4 @@
-import { AccordionItemProps, AccordionItemSlots, UnscopedSlot } from '../../../core/index.ts';
+import type { AccordionItemProps, AccordionItemSlots, UnscopedSlot } from '../../../core/index.js';
 export interface VAccordionItemProps extends AccordionItemProps {
     title?: string;
 }

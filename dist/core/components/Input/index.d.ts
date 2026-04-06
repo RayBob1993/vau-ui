@@ -1,17 +1,14 @@
-import { CreateComponentPublicInstanceWithMixins, ComponentOptionsMixin, PublicProps, GlobalComponents, GlobalDirectives, ComponentProvideOptions, ComponentOptionsBase, VNodeProps, AllowedComponentProps, ComponentCustomProps, DefineComponent } from 'vue';
-import { InputModelValue, InputType, InputBaseProps, InputNativeProps, InputTextareaProps, InputNativeType, InputMode, InputSlots } from './types';
-import { ThemeProp, SizeProp } from '../..';
 export declare const Input: {
     Root: {
-        new (...args: any[]): CreateComponentPublicInstanceWithMixins<Readonly<{
-            modelValue: InputModelValue;
-        } & {
-            type?: InputType;
+        new (...args: any[]): import("vue").CreateComponentPublicInstanceWithMixins<Readonly<{
+            type?: import("./types").InputType;
             clearable?: boolean;
             loading?: boolean;
-        } & InputBaseProps & Partial< InputNativeProps> & Partial< InputTextareaProps> & Partial< ThemeProp> & Partial< SizeProp>> & Readonly<{
+        } & import("./types").InputBaseProps & Partial<import("./types").InputNativeProps> & Partial<import("./types").InputTextareaProps> & Partial<import("../../index.js").ThemeProp> & Partial<import("../../index.js").SizeProp> & {
+            modelValue: import("./types").InputModelValue;
+        }> & Readonly<{
             onChange?: ((event: Event) => any) | undefined;
-            "onUpdate:modelValue"?: ((value: InputModelValue) => any) | undefined;
+            "onUpdate:modelValue"?: ((value: import("./types").InputModelValue) => any) | undefined;
             onBlur?: ((event: Event) => any) | undefined;
             onClick?: ((event: PointerEvent) => any) | undefined;
             onContextmenu?: ((event: Event) => any) | undefined;
@@ -32,11 +29,9 @@ export declare const Input: {
             onMouseover?: ((event: MouseEvent) => any) | undefined;
             onMouseup?: ((event: MouseEvent) => any) | undefined;
             onPaste?: ((event: ClipboardEvent) => any) | undefined;
-        }>, {
-            setFocus: (payload: boolean) => void;
-        }, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {
+        }>, import("./types").InputExpose, {}, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {
             change: (event: Event) => any;
-            "update:modelValue": (value: InputModelValue) => any;
+            "update:modelValue": (value: import("./types").InputModelValue) => any;
             blur: (event: Event) => any;
             click: (event: PointerEvent) => any;
             contextmenu: (event: Event) => any;
@@ -57,11 +52,11 @@ export declare const Input: {
             mouseover: (event: MouseEvent) => any;
             mouseup: (event: MouseEvent) => any;
             paste: (event: ClipboardEvent) => any;
-        }, PublicProps, {
-            type: InputType;
-            nativeType: InputNativeType;
-            inputMode: InputMode;
-        }, false, {}, {}, GlobalComponents, GlobalDirectives, string, {}, HTMLDivElement, ComponentProvideOptions, {
+        }, import("vue").PublicProps, {
+            type: import("./types").InputType;
+            nativeType: import("./types").InputNativeType;
+            inputMode: import("./types").InputMode;
+        }, false, {}, {}, import("vue").GlobalComponents, import("vue").GlobalDirectives, string, {}, any, import("vue").ComponentProvideOptions, {
             P: {};
             B: {};
             D: {};
@@ -69,14 +64,14 @@ export declare const Input: {
             M: {};
             Defaults: {};
         }, Readonly<{
-            modelValue: InputModelValue;
-        } & {
-            type?: InputType;
+            type?: import("./types").InputType;
             clearable?: boolean;
             loading?: boolean;
-        } & InputBaseProps & Partial< InputNativeProps> & Partial< InputTextareaProps> & Partial< ThemeProp> & Partial< SizeProp>> & Readonly<{
+        } & import("./types").InputBaseProps & Partial<import("./types").InputNativeProps> & Partial<import("./types").InputTextareaProps> & Partial<import("../../index.js").ThemeProp> & Partial<import("../../index.js").SizeProp> & {
+            modelValue: import("./types").InputModelValue;
+        }> & Readonly<{
             onChange?: ((event: Event) => any) | undefined;
-            "onUpdate:modelValue"?: ((value: InputModelValue) => any) | undefined;
+            "onUpdate:modelValue"?: ((value: import("./types").InputModelValue) => any) | undefined;
             onBlur?: ((event: Event) => any) | undefined;
             onClick?: ((event: PointerEvent) => any) | undefined;
             onContextmenu?: ((event: Event) => any) | undefined;
@@ -97,25 +92,23 @@ export declare const Input: {
             onMouseover?: ((event: MouseEvent) => any) | undefined;
             onMouseup?: ((event: MouseEvent) => any) | undefined;
             onPaste?: ((event: ClipboardEvent) => any) | undefined;
-        }>, {
-            setFocus: (payload: boolean) => void;
-        }, {}, {}, {}, {
-            type: InputType;
-            nativeType: InputNativeType;
-            inputMode: InputMode;
+        }>, import("./types").InputExpose, {}, {}, {}, {
+            type: import("./types").InputType;
+            nativeType: import("./types").InputNativeType;
+            inputMode: import("./types").InputMode;
         }>;
         __isFragment?: never;
         __isTeleport?: never;
         __isSuspense?: never;
-    } & ComponentOptionsBase<Readonly<{
-        modelValue: InputModelValue;
-    } & {
-        type?: InputType;
+    } & import("vue").ComponentOptionsBase<Readonly<{
+        type?: import("./types").InputType;
         clearable?: boolean;
         loading?: boolean;
-    } & InputBaseProps & Partial< InputNativeProps> & Partial< InputTextareaProps> & Partial< ThemeProp> & Partial< SizeProp>> & Readonly<{
+    } & import("./types").InputBaseProps & Partial<import("./types").InputNativeProps> & Partial<import("./types").InputTextareaProps> & Partial<import("../../index.js").ThemeProp> & Partial<import("../../index.js").SizeProp> & {
+        modelValue: import("./types").InputModelValue;
+    }> & Readonly<{
         onChange?: ((event: Event) => any) | undefined;
-        "onUpdate:modelValue"?: ((value: InputModelValue) => any) | undefined;
+        "onUpdate:modelValue"?: ((value: import("./types").InputModelValue) => any) | undefined;
         onBlur?: ((event: Event) => any) | undefined;
         onClick?: ((event: PointerEvent) => any) | undefined;
         onContextmenu?: ((event: Event) => any) | undefined;
@@ -136,11 +129,9 @@ export declare const Input: {
         onMouseover?: ((event: MouseEvent) => any) | undefined;
         onMouseup?: ((event: MouseEvent) => any) | undefined;
         onPaste?: ((event: ClipboardEvent) => any) | undefined;
-    }>, {
-        setFocus: (payload: boolean) => void;
-    }, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {
+    }>, import("./types").InputExpose, {}, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {
         change: (event: Event) => any;
-        "update:modelValue": (value: InputModelValue) => any;
+        "update:modelValue": (value: import("./types").InputModelValue) => any;
         blur: (event: Event) => any;
         click: (event: PointerEvent) => any;
         contextmenu: (event: Event) => any;
@@ -162,14 +153,14 @@ export declare const Input: {
         mouseup: (event: MouseEvent) => any;
         paste: (event: ClipboardEvent) => any;
     }, string, {
-        type: InputType;
-        nativeType: InputNativeType;
-        inputMode: InputMode;
-    }, {}, string, {}, GlobalComponents, GlobalDirectives, string, ComponentProvideOptions> & VNodeProps & AllowedComponentProps & ComponentCustomProps & (new () => {
-        $slots: Readonly< InputSlots> & InputSlots;
+        type: import("./types").InputType;
+        nativeType: import("./types").InputNativeType;
+        inputMode: import("./types").InputMode;
+    }, {}, string, {}, import("vue").GlobalComponents, import("vue").GlobalDirectives, string, import("vue").ComponentProvideOptions> & import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps & (new () => {
+        $slots: import("./types").InputSlots;
     });
     Before: {
-        new (...args: any[]): CreateComponentPublicInstanceWithMixins<Readonly<{}> & Readonly<{}>, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, PublicProps, {}, true, {}, {}, GlobalComponents, GlobalDirectives, string, {}, HTMLDivElement, ComponentProvideOptions, {
+        new (...args: any[]): import("vue").CreateComponentPublicInstanceWithMixins<Readonly<{}> & Readonly<{}>, {}, {}, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, import("vue").PublicProps, {}, true, {}, {}, import("vue").GlobalComponents, import("vue").GlobalDirectives, string, {}, any, import("vue").ComponentProvideOptions, {
             P: {};
             B: {};
             D: {};
@@ -180,13 +171,13 @@ export declare const Input: {
         __isFragment?: never;
         __isTeleport?: never;
         __isSuspense?: never;
-    } & ComponentOptionsBase<Readonly<{}> & Readonly<{}>, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, {}, {}, string, {}, GlobalComponents, GlobalDirectives, string, ComponentProvideOptions> & VNodeProps & AllowedComponentProps & ComponentCustomProps & (new () => {
+    } & import("vue").ComponentOptionsBase<Readonly<{}> & Readonly<{}>, {}, {}, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, {}, {}, string, {}, import("vue").GlobalComponents, import("vue").GlobalDirectives, string, import("vue").ComponentProvideOptions> & import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps & (new () => {
         $slots: {
-            default?(_: {}): any;
+            default?: (props: {}) => any;
         };
     });
     After: {
-        new (...args: any[]): CreateComponentPublicInstanceWithMixins<Readonly<{}> & Readonly<{}>, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, PublicProps, {}, true, {}, {}, GlobalComponents, GlobalDirectives, string, {}, HTMLDivElement, ComponentProvideOptions, {
+        new (...args: any[]): import("vue").CreateComponentPublicInstanceWithMixins<Readonly<{}> & Readonly<{}>, {}, {}, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, import("vue").PublicProps, {}, true, {}, {}, import("vue").GlobalComponents, import("vue").GlobalDirectives, string, {}, any, import("vue").ComponentProvideOptions, {
             P: {};
             B: {};
             D: {};
@@ -197,15 +188,15 @@ export declare const Input: {
         __isFragment?: never;
         __isTeleport?: never;
         __isSuspense?: never;
-    } & ComponentOptionsBase<Readonly<{}> & Readonly<{}>, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, {}, {}, string, {}, GlobalComponents, GlobalDirectives, string, ComponentProvideOptions> & VNodeProps & AllowedComponentProps & ComponentCustomProps & (new () => {
+    } & import("vue").ComponentOptionsBase<Readonly<{}> & Readonly<{}>, {}, {}, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, {}, {}, string, {}, import("vue").GlobalComponents, import("vue").GlobalDirectives, string, import("vue").ComponentProvideOptions> & import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps & (new () => {
         $slots: {
-            default?(_: {}): any;
+            default?: (props: {}) => any;
         };
     });
-    Native: DefineComponent<{}, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, PublicProps, Readonly<{}> & Readonly<{}>, {}, {}, {}, {}, string, ComponentProvideOptions, true, {}, HTMLInputElement>;
-    Textarea: DefineComponent<{}, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, PublicProps, Readonly<{}> & Readonly<{}>, {}, {}, {}, {}, string, ComponentProvideOptions, true, {}, HTMLTextAreaElement>;
+    Native: import("vue").DefineComponent<{}, {}, {}, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, import("vue").PublicProps, Readonly<{}> & Readonly<{}>, {}, {}, {}, {}, string, import("vue").ComponentProvideOptions, true, {}, any>;
+    Textarea: import("vue").DefineComponent<{}, {}, {}, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, import("vue").PublicProps, Readonly<{}> & Readonly<{}>, {}, {}, {}, {}, string, import("vue").ComponentProvideOptions, true, {}, any>;
     Control: {
-        new (...args: any[]): CreateComponentPublicInstanceWithMixins<Readonly<{}> & Readonly<{}>, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, PublicProps, {}, true, {}, {}, GlobalComponents, GlobalDirectives, string, {}, HTMLDivElement, ComponentProvideOptions, {
+        new (...args: any[]): import("vue").CreateComponentPublicInstanceWithMixins<Readonly<{}> & Readonly<{}>, {}, {}, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, import("vue").PublicProps, {}, true, {}, {}, import("vue").GlobalComponents, import("vue").GlobalDirectives, string, {}, any, import("vue").ComponentProvideOptions, {
             P: {};
             B: {};
             D: {};
@@ -216,13 +207,13 @@ export declare const Input: {
         __isFragment?: never;
         __isTeleport?: never;
         __isSuspense?: never;
-    } & ComponentOptionsBase<Readonly<{}> & Readonly<{}>, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, {}, {}, string, {}, GlobalComponents, GlobalDirectives, string, ComponentProvideOptions> & VNodeProps & AllowedComponentProps & ComponentCustomProps & (new () => {
+    } & import("vue").ComponentOptionsBase<Readonly<{}> & Readonly<{}>, {}, {}, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, {}, {}, string, {}, import("vue").GlobalComponents, import("vue").GlobalDirectives, string, import("vue").ComponentProvideOptions> & import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps & (new () => {
         $slots: {
-            default?(_: {}): any;
+            default?: (props: {}) => any;
         };
     });
     Group: {
-        new (...args: any[]): CreateComponentPublicInstanceWithMixins<Readonly<{}> & Readonly<{}>, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, PublicProps, {}, true, {}, {}, GlobalComponents, GlobalDirectives, string, {}, HTMLDivElement, ComponentProvideOptions, {
+        new (...args: any[]): import("vue").CreateComponentPublicInstanceWithMixins<Readonly<{}> & Readonly<{}>, {}, {}, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, import("vue").PublicProps, {}, true, {}, {}, import("vue").GlobalComponents, import("vue").GlobalDirectives, string, {}, any, import("vue").ComponentProvideOptions, {
             P: {};
             B: {};
             D: {};
@@ -233,13 +224,13 @@ export declare const Input: {
         __isFragment?: never;
         __isTeleport?: never;
         __isSuspense?: never;
-    } & ComponentOptionsBase<Readonly<{}> & Readonly<{}>, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, {}, {}, string, {}, GlobalComponents, GlobalDirectives, string, ComponentProvideOptions> & VNodeProps & AllowedComponentProps & ComponentCustomProps & (new () => {
+    } & import("vue").ComponentOptionsBase<Readonly<{}> & Readonly<{}>, {}, {}, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, {}, {}, string, {}, import("vue").GlobalComponents, import("vue").GlobalDirectives, string, import("vue").ComponentProvideOptions> & import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps & (new () => {
         $slots: {
-            default?(_: {}): any;
+            default?: (props: {}) => any;
         };
     });
     GroupAddon: {
-        new (...args: any[]): CreateComponentPublicInstanceWithMixins<Readonly<{}> & Readonly<{}>, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, PublicProps, {}, true, {}, {}, GlobalComponents, GlobalDirectives, string, {}, HTMLDivElement, ComponentProvideOptions, {
+        new (...args: any[]): import("vue").CreateComponentPublicInstanceWithMixins<Readonly<{}> & Readonly<{}>, {}, {}, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, import("vue").PublicProps, {}, true, {}, {}, import("vue").GlobalComponents, import("vue").GlobalDirectives, string, {}, any, import("vue").ComponentProvideOptions, {
             P: {};
             B: {};
             D: {};
@@ -250,9 +241,9 @@ export declare const Input: {
         __isFragment?: never;
         __isTeleport?: never;
         __isSuspense?: never;
-    } & ComponentOptionsBase<Readonly<{}> & Readonly<{}>, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, {}, {}, string, {}, GlobalComponents, GlobalDirectives, string, ComponentProvideOptions> & VNodeProps & AllowedComponentProps & ComponentCustomProps & (new () => {
+    } & import("vue").ComponentOptionsBase<Readonly<{}> & Readonly<{}>, {}, {}, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, {}, {}, string, {}, import("vue").GlobalComponents, import("vue").GlobalDirectives, string, import("vue").ComponentProvideOptions> & import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps & (new () => {
         $slots: {
-            default?(_: {}): any;
+            default?: (props: {}) => any;
         };
     });
 };

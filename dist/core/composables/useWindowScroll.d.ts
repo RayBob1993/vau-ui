@@ -1,4 +1,3 @@
-import { Ref } from 'vue';
 /**
  * @description `useAnimatedNumber` — это пользовательский хук, который предназначен для отслеживания текущей позиции прокрутки окна браузера.
  * @description Этот хук возвращает реактивные ссылки на координаты прокрутки по оси X и Y,
@@ -31,11 +30,11 @@ import { Ref } from 'vue';
  * </script>
  */
 export declare function useWindowScroll(): {
-    x: Ref<number, number>;
-    y: Ref<number, number>;
+    x: import("vue").Ref<number, number>;
+    y: import("vue").Ref<number, number>;
     setScroll?: undefined;
 } | {
-    x: Ref<number, number>;
-    y: Ref<number, number>;
+    x: import("vue").Ref<number, number>;
+    y: import("vue").Ref<number, number>;
     setScroll: (options: ScrollToOptions) => void;
 };

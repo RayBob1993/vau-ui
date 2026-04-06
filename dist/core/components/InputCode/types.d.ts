@@ -1,6 +1,6 @@
-import { MaybeRefOrGetter } from 'vue';
-import { InputBaseProps } from '../Input';
-import { SizeProp, ThemeProp } from '../../types';
+import type { MaybeRefOrGetter } from 'vue';
+import type { InputBaseProps } from '../Input';
+import type { SizeProp, ThemeProp } from '../../types';
 export type InputCodeModelValue = string | number;
 export type InputCodeProps = InputBaseProps & Partial<ThemeProp> & Partial<SizeProp>;
 export interface InputCodeRootContext {

@@ -1,8 +1,6 @@
-import { FormRootContext, FormItemContext } from '..';
-import { ComputedRef } from 'vue';
 export declare function useFormContext(): {
-    formRootContext: FormRootContext | null;
-    formItemContext: FormItemContext | null;
-    isValid: ComputedRef<boolean>;
-    isInvalid: ComputedRef<boolean>;
+    formRootContext: import("..").FormRootContext | null;
+    formItemContext: import("..").FormItemContext | null;
+    isValid: import("vue").ComputedRef<boolean>;
+    isInvalid: import("vue").ComputedRef<boolean>;
 };

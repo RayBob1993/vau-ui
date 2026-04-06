@@ -1,11 +1,10 @@
-import { InputRootContext, InputModelValue } from '../types';
-import { MaybeNull } from '../../../types';
-import { WritableComputedRef } from 'vue';
+import type { InputRootContext, InputModelValue } from '../types';
+import type { MaybeNull } from '../../../types';
 export interface UseInputBaseOptions {
     inputRootContext: MaybeNull<InputRootContext>;
 }
 export declare function useInputBase(options: UseInputBaseOptions): {
-    modelValue: WritableComputedRef<InputModelValue, InputModelValue>;
+    modelValue: import("vue").WritableComputedRef<InputModelValue, InputModelValue>;
     listeners: {
         click(event: PointerEvent): void;
         dblclick(event: PointerEvent): void;

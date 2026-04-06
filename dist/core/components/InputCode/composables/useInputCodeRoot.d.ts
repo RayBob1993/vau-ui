@@ -1,7 +1,7 @@
-import { MaybeNull } from '../../../types';
-import { FormRootContext, FormItemContext } from '../../Form';
-import { InputCodeModelValue, InputCodeProps } from '../types';
-import { MaybeRefOrGetter, ComputedRef } from 'vue';
+import type { MaybeNull } from '../../../types';
+import type { FormRootContext, FormItemContext } from '../../Form';
+import type { InputCodeModelValue, InputCodeProps } from '../types';
+import { type MaybeRefOrGetter } from 'vue';
 export interface UseInputCodeRootOptions {
     formRootContext: MaybeNull<FormRootContext>;
     formItemContext: MaybeNull<FormItemContext>;
@@ -9,5 +9,5 @@ export interface UseInputCodeRootOptions {
     props: MaybeRefOrGetter<InputCodeProps>;
 }
 export declare function useInputCodeRoot(options: UseInputCodeRootOptions): {
-    isDisabled: ComputedRef<boolean>;
+    isDisabled: import("vue").ComputedRef<boolean>;
 };

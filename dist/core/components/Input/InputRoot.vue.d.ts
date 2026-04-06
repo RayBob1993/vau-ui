@@ -1,19 +1,11 @@
-import { InputModelValue, InputProps, InputSlots, InputType, InputNativeType, InputMode } from './types';
-import { DefineComponent, ComponentOptionsMixin, PublicProps, ComponentProvideOptions } from 'vue';
+import type { InputModelValue, InputProps, InputSlots, InputExpose } from './types';
 type __VLS_Props = InputProps;
-type __VLS_PublicProps = {
+type __VLS_Slots = InputSlots;
+type __VLS_ModelProps = {
     modelValue: InputModelValue;
-} & __VLS_Props;
-declare function __VLS_template(): {
-    attrs: Partial<{}>;
-    slots: Readonly<InputSlots> & InputSlots;
-    refs: {};
-    rootEl: HTMLDivElement;
 };
-type __VLS_TemplateResult = ReturnType<typeof __VLS_template>;
-declare const __VLS_component: DefineComponent<__VLS_PublicProps, {
-    setFocus: (payload: boolean) => void;
-}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {
+type __VLS_PublicProps = __VLS_Props & __VLS_ModelProps;
+declare const __VLS_base: import("vue").DefineComponent<__VLS_PublicProps, InputExpose, {}, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {
     change: (event: Event) => any;
     "update:modelValue": (value: InputModelValue) => any;
     blur: (event: Event) => any;
@@ -36,7 +28,7 @@ declare const __VLS_component: DefineComponent<__VLS_PublicProps, {
     mouseover: (event: MouseEvent) => any;
     mouseup: (event: MouseEvent) => any;
     paste: (event: ClipboardEvent) => any;
-}, string, PublicProps, Readonly<__VLS_PublicProps> & Readonly<{
+}, string, import("vue").PublicProps, Readonly<__VLS_PublicProps> & Readonly<{
     onChange?: ((event: Event) => any) | undefined;
     "onUpdate:modelValue"?: ((value: InputModelValue) => any) | undefined;
     onBlur?: ((event: Event) => any) | undefined;
@@ -60,13 +52,14 @@ declare const __VLS_component: DefineComponent<__VLS_PublicProps, {
     onMouseup?: ((event: MouseEvent) => any) | undefined;
     onPaste?: ((event: ClipboardEvent) => any) | undefined;
 }>, {
-    type: InputType;
-    nativeType: InputNativeType;
-    inputMode: InputMode;
-}, {}, {}, {}, string, ComponentProvideOptions, false, {}, HTMLDivElement>;
-declare const _default: __VLS_WithTemplateSlots<typeof __VLS_component, __VLS_TemplateResult["slots"]>;
+    type: import("./types").InputType;
+    nativeType: import("./types").InputNativeType;
+    inputMode: import("./types").InputMode;
+}, {}, {}, {}, string, import("vue").ComponentProvideOptions, false, {}, any>;
+declare const __VLS_export: __VLS_WithSlots<typeof __VLS_base, __VLS_Slots>;
+declare const _default: typeof __VLS_export;
 export default _default;
-type __VLS_WithTemplateSlots<T, S> = T & {
+type __VLS_WithSlots<T, S> = T & {
     new (): {
         $slots: S;
     };

@@ -1,5 +1,5 @@
-import { IVAffixProps } from '../types';
-import { TemplateRef } from 'vue';
+import type { IVAffixProps } from '../types';
+import { type TemplateRef } from 'vue';
 export interface IUseAffixOptions {
     props: IVAffixProps;
     root: TemplateRef<HTMLDivElement>;

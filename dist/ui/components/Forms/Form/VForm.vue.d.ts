@@ -1,22 +1,26 @@
-import { FormModel, FormProps, FormSlots, FormSubmitEvent } from '../../../../core/index.ts';
-import { VNodeProps, AllowedComponentProps, ComponentCustomProps, PublicProps, ShallowUnwrapRef, VNode } from 'vue';
-declare const _default: <MODEL extends FormModel>(__VLS_props: NonNullable<Awaited<typeof __VLS_setup>>["props"], __VLS_ctx?: __VLS_PrettifyLocal<Pick<NonNullable<Awaited<typeof __VLS_setup>>, "attrs" | "emit" | "slots">>, __VLS_expose?: NonNullable<Awaited<typeof __VLS_setup>>["expose"], __VLS_setup?: Promise<{
-    props: __VLS_PrettifyLocal<Pick<Partial<{}> & Omit<{
-        readonly "onUpdate:modelValue"?: ((value: MODEL) => any) | undefined;
-        readonly onSubmit?: ((payload: FormSubmitEvent) => any) | undefined;
-        readonly onInvalid?: (() => any) | undefined;
-        readonly onValid?: (() => any) | undefined;
-    } & VNodeProps & AllowedComponentProps & ComponentCustomProps, never>, "onUpdate:modelValue" | "onSubmit" | "onInvalid" | "onValid"> & ({
+import { type FormModel, type FormProps, type FormSlots } from '../../../../core/index.js';
+declare const __VLS_export: <MODEL extends FormModel>(__VLS_props: NonNullable<Awaited<typeof __VLS_setup>>["props"], __VLS_ctx?: __VLS_PrettifyLocal<Pick<NonNullable<Awaited<typeof __VLS_setup>>, "attrs" | "emit" | "slots">>, __VLS_exposed?: NonNullable<Awaited<typeof __VLS_setup>>["expose"], __VLS_setup?: Promise<{
+    props: import("vue").PublicProps & __VLS_PrettifyLocal<(FormProps<MODEL> & {
         modelValue: MODEL;
-    } & FormProps<MODEL>) & Partial<{}>> & PublicProps;
-    expose(exposed: ShallowUnwrapRef<{}>): void;
+    }) & {
+        "onUpdate:modelValue"?: ((value: MODEL) => any) | undefined;
+        onSubmit?: ((payload: import('../../../../core/index.js').FormSubmitEvent) => any) | undefined;
+        onInvalid?: (() => any) | undefined;
+        onValid?: (() => any) | undefined;
+    }> & (typeof globalThis extends {
+        __VLS_PROPS_FALLBACK: infer P;
+    } ? P : {});
+    expose: (exposed: {}) => void;
     attrs: any;
-    slots: Readonly<FormSlots> & FormSlots;
-    emit: (((evt: "submit", payload: FormSubmitEvent) => void) & ((evt: "invalid") => void) & ((evt: "valid") => void)) & ((evt: "update:modelValue", value: MODEL) => void);
-}>) => VNode & {
+    slots: FormSlots;
+    emit: (((evt: "submit", payload: import('../../../../core/index.js').FormSubmitEvent) => void) & ((evt: "invalid") => void) & ((evt: "valid") => void)) & ((event: "update:modelValue", value: MODEL) => void);
+}>) => import("vue").VNode & {
     __ctx?: Awaited<typeof __VLS_setup>;
 };
+declare const _default: typeof __VLS_export;
 export default _default;
-type __VLS_PrettifyLocal<T> = {
+type __VLS_PrettifyLocal<T> = (T extends any ? {
     [K in keyof T]: T[K];
-} & {};
+} : {
+    [K in keyof T as K]: T[K];
+}) & {};

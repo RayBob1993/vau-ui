@@ -1,4 +1,3 @@
-import { Ref } from 'vue';
 /**
  * @description `useAnimatedNumber` — это пользовательский хук, который предназначен для анимации числа от начального до конечного значения.
  * @description Этот хук возвращает реактивное число и функцию для запуска анимации.
@@ -25,6 +24,6 @@ import { Ref } from 'vue';
  * </script>
  */
 export declare function useAnimatedNumber(): {
-    number: Ref<number, number>;
+    number: import("vue").Ref<number, number>;
     animate: (start: number, end: number, duration: number) => void;
 };

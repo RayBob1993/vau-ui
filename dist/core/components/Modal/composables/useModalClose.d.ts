@@ -1,12 +1,11 @@
-import { ConfigProviderRootContext, IconRenderFn } from '../../ConfigProvider/types';
-import { ModalRootContext } from '../types';
-import { Maybe, MaybeNull } from '../../../types';
-import { ComputedRef } from 'vue';
+import type { ConfigProviderRootContext, IconRenderFn } from '../../ConfigProvider/types';
+import type { ModalRootContext } from '../types';
+import type { Maybe, MaybeNull } from '../../../types';
 export interface UseModalCloseOptions {
     modalRootContext?: MaybeNull<ModalRootContext>;
     configProviderRootContext?: MaybeNull<ConfigProviderRootContext>;
 }
 export declare function useModalClose(options: UseModalCloseOptions): {
     close: () => void;
-    icon: ComputedRef<Maybe<IconRenderFn>>;
+    icon: import("vue").ComputedRef<Maybe<IconRenderFn>>;
 };

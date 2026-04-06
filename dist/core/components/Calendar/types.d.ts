@@ -1,4 +1,4 @@
-import { MaybeRefOrGetter } from 'vue';
+import type { MaybeRefOrGetter } from 'vue';
 export type CalendarWeekDayFormat = 'narrow' | 'short' | 'long';
 export interface CalendarProps {
     disabled?: boolean;

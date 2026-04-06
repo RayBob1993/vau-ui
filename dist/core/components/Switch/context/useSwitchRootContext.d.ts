@@ -1,2 +1,1 @@
-import { SwitchRootContext } from '..';
-export declare function useSwitchRootContext(): SwitchRootContext | null;
+export declare function useSwitchRootContext(): import("..").SwitchRootContext | null;

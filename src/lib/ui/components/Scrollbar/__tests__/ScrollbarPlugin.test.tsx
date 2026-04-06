@@ -1,5 +1,5 @@
-import { describe, expect, it } from 'vitest';
 import { ScrollbarPlugin } from '../plugin';
+import { describe, expect, it } from 'vitest';
 
 describe('ScrollbarPlugin', () => {
   it('Плагин имеет функцию install', () => {

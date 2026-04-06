@@ -1,4 +1,4 @@
-import { InputCodeProps } from '../../../../core/index.ts';
+import type { InputCodeProps } from '../../../../core/index.js';
 export interface IVInputCodeProps extends InputCodeProps {
     length?: number;
 }

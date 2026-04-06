@@ -1,5 +1,5 @@
-import { SizeProp, ThemeProp } from '../../types';
-import { PrimitiveProps } from '../Primitive';
+import type { SizeProp, ThemeProp } from '../../types';
+import type { PrimitiveProps } from '../Primitive';
 export type TextProps = {
     tag?: keyof HTMLElementTagNameMap;
     uppercase?: boolean;

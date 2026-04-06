@@ -1,10 +1,9 @@
-import { InputNumberRootContext, InputNumberBaseProps } from '../types';
-import { MaybeNull } from '../../../types';
-import { ComputedRef, WritableComputedRef } from 'vue';
+import type { InputNumberRootContext, InputNumberBaseProps } from '../types';
+import type { MaybeNull } from '../../../types';
 export interface UseInputNumberInputOptions {
     inputNumberRootContext: MaybeNull<InputNumberRootContext>;
 }
 export declare function useInputNumberInput(options: UseInputNumberInputOptions): {
-    props: ComputedRef<InputNumberBaseProps>;
-    modelValue: WritableComputedRef<number, number>;
+    props: import("vue").ComputedRef<InputNumberBaseProps>;
+    modelValue: import("vue").WritableComputedRef<number, number>;
 };

@@ -1,2 +1,1 @@
-import { IVDropdownContext } from '..';
-export declare const useDropdownContext: () => IVDropdownContext | undefined;
+export declare const useDropdownContext: () => import("..").IVDropdownContext | undefined;

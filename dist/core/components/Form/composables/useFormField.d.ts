@@ -1,8 +1,7 @@
-import { FormItemField } from '../types';
-import { Maybe } from '../../../types';
-import { Ref } from 'vue';
+import type { FormItemField } from '../types';
+import type { Maybe } from '../../../types';
 export declare function useFormField(): {
-    field: Ref<Maybe<FormItemField>, Maybe<FormItemField>>;
+    field: import("vue").Ref<Maybe<FormItemField>, Maybe<FormItemField>>;
     registerField: (newField: FormItemField) => void;
     unregisterField: () => void;
 };

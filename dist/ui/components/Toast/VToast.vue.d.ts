@@ -1,12 +1,12 @@
-import { IVToastProps } from './types';
-import { DefineComponent, ComponentOptionsMixin, PublicProps, ComponentProvideOptions } from 'vue';
-declare const _default: DefineComponent<IVToastProps, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {
+import type { IVToastProps } from './types';
+declare const __VLS_export: import("vue").DefineComponent<IVToastProps, {}, {}, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {
     close: () => any;
-}, string, PublicProps, Readonly<IVToastProps> & Readonly<{
+}, string, import("vue").PublicProps, Readonly<IVToastProps> & Readonly<{
     onClose?: (() => any) | undefined;
 }>, {
     duration: number;
     clearable: boolean;
     useHtml: boolean;
-}, {}, {}, {}, string, ComponentProvideOptions, false, {}, any>;
+}, {}, {}, {}, string, import("vue").ComponentProvideOptions, false, {}, any>;
+declare const _default: typeof __VLS_export;
 export default _default;

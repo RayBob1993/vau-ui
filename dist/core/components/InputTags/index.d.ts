@@ -1,52 +1,48 @@
-import { CreateComponentPublicInstanceWithMixins, ComponentOptionsMixin, PublicProps, GlobalComponents, GlobalDirectives, ComponentProvideOptions, ComponentOptionsBase, VNodeProps, AllowedComponentProps, ComponentCustomProps, DefineComponent } from 'vue';
-import { InputTagsModelValue, InputTagsValue } from './types';
-import { InputBaseProps } from '..';
-import { ThemeProp, SizeProp } from '../..';
 export declare const InputTags: {
     Root: {
-        new (...args: any[]): CreateComponentPublicInstanceWithMixins<Readonly<{
-            modelValue: InputTagsModelValue;
-        } & InputBaseProps & Partial< ThemeProp> & Partial< SizeProp>> & Readonly<{
-            "onUpdate:modelValue"?: ((value: InputTagsModelValue) => any) | undefined;
-            onAddTag?: ((payload: InputTagsValue) => any) | undefined;
-            onRemoveTag?: ((payload: InputTagsValue) => any) | undefined;
-        }>, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {
-            "update:modelValue": (value: InputTagsModelValue) => any;
-            addTag: (payload: InputTagsValue) => any;
-            removeTag: (payload: InputTagsValue) => any;
-        }, PublicProps, {}, false, {}, {}, GlobalComponents, GlobalDirectives, string, {}, HTMLDivElement, ComponentProvideOptions, {
+        new (...args: any[]): import("vue").CreateComponentPublicInstanceWithMixins<Readonly<import("../index.js").InputBaseProps & Partial<import("../../index.js").ThemeProp> & Partial<import("../../index.js").SizeProp> & {
+            modelValue: import("./types").InputTagsModelValue;
+        }> & Readonly<{
+            "onUpdate:modelValue"?: ((value: import("./types").InputTagsModelValue) => any) | undefined;
+            onAddTag?: ((payload: import("./types").InputTagsValue) => any) | undefined;
+            onRemoveTag?: ((payload: import("./types").InputTagsValue) => any) | undefined;
+        }>, {}, {}, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {
+            "update:modelValue": (value: import("./types").InputTagsModelValue) => any;
+            addTag: (payload: import("./types").InputTagsValue) => any;
+            removeTag: (payload: import("./types").InputTagsValue) => any;
+        }, import("vue").PublicProps, {}, false, {}, {}, import("vue").GlobalComponents, import("vue").GlobalDirectives, string, {}, any, import("vue").ComponentProvideOptions, {
             P: {};
             B: {};
             D: {};
             C: {};
             M: {};
             Defaults: {};
-        }, Readonly<{
-            modelValue: InputTagsModelValue;
-        } & InputBaseProps & Partial< ThemeProp> & Partial< SizeProp>> & Readonly<{
-            "onUpdate:modelValue"?: ((value: InputTagsModelValue) => any) | undefined;
-            onAddTag?: ((payload: InputTagsValue) => any) | undefined;
-            onRemoveTag?: ((payload: InputTagsValue) => any) | undefined;
+        }, Readonly<import("../index.js").InputBaseProps & Partial<import("../../index.js").ThemeProp> & Partial<import("../../index.js").SizeProp> & {
+            modelValue: import("./types").InputTagsModelValue;
+        }> & Readonly<{
+            "onUpdate:modelValue"?: ((value: import("./types").InputTagsModelValue) => any) | undefined;
+            onAddTag?: ((payload: import("./types").InputTagsValue) => any) | undefined;
+            onRemoveTag?: ((payload: import("./types").InputTagsValue) => any) | undefined;
         }>, {}, {}, {}, {}, {}>;
         __isFragment?: never;
         __isTeleport?: never;
         __isSuspense?: never;
-    } & ComponentOptionsBase<Readonly<{
-        modelValue: InputTagsModelValue;
-    } & InputBaseProps & Partial< ThemeProp> & Partial< SizeProp>> & Readonly<{
-        "onUpdate:modelValue"?: ((value: InputTagsModelValue) => any) | undefined;
-        onAddTag?: ((payload: InputTagsValue) => any) | undefined;
-        onRemoveTag?: ((payload: InputTagsValue) => any) | undefined;
-    }>, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {
-        "update:modelValue": (value: InputTagsModelValue) => any;
-        addTag: (payload: InputTagsValue) => any;
-        removeTag: (payload: InputTagsValue) => any;
-    }, string, {}, {}, string, {}, GlobalComponents, GlobalDirectives, string, ComponentProvideOptions> & VNodeProps & AllowedComponentProps & ComponentCustomProps & (new () => {
+    } & import("vue").ComponentOptionsBase<Readonly<import("../index.js").InputBaseProps & Partial<import("../../index.js").ThemeProp> & Partial<import("../../index.js").SizeProp> & {
+        modelValue: import("./types").InputTagsModelValue;
+    }> & Readonly<{
+        "onUpdate:modelValue"?: ((value: import("./types").InputTagsModelValue) => any) | undefined;
+        onAddTag?: ((payload: import("./types").InputTagsValue) => any) | undefined;
+        onRemoveTag?: ((payload: import("./types").InputTagsValue) => any) | undefined;
+    }>, {}, {}, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {
+        "update:modelValue": (value: import("./types").InputTagsModelValue) => any;
+        addTag: (payload: import("./types").InputTagsValue) => any;
+        removeTag: (payload: import("./types").InputTagsValue) => any;
+    }, string, {}, {}, string, {}, import("vue").GlobalComponents, import("vue").GlobalDirectives, string, import("vue").ComponentProvideOptions> & import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps & (new () => {
         $slots: {
-            default?(_: {}): any;
+            default?: (props: {}) => any;
         };
     });
-    Input: DefineComponent<{}, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, PublicProps, Readonly<{}> & Readonly<{}>, {}, {}, {}, {}, string, ComponentProvideOptions, true, {}, HTMLDivElement>;
-    Tags: DefineComponent<{}, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, PublicProps, Readonly<{}> & Readonly<{}>, {}, {}, {}, {}, string, ComponentProvideOptions, true, {}, HTMLDivElement>;
+    Input: import("vue").DefineComponent<{}, {}, {}, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, import("vue").PublicProps, Readonly<{}> & Readonly<{}>, {}, {}, {}, {}, string, import("vue").ComponentProvideOptions, true, {}, any>;
+    Tags: import("vue").DefineComponent<{}, {}, {}, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, import("vue").PublicProps, Readonly<{}> & Readonly<{}>, {}, {}, {}, {}, string, import("vue").ComponentProvideOptions, true, {}, any>;
 };
 export * from './types';

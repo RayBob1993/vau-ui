@@ -1,10 +1,10 @@
-import { IVPaginationProps } from './types';
-import { DefineComponent, ComponentOptionsMixin, PublicProps, ComponentProvideOptions } from 'vue';
-declare const _default: DefineComponent<IVPaginationProps, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {
+import type { IVPaginationProps } from './types';
+declare const __VLS_export: import("vue").DefineComponent<IVPaginationProps, {}, {}, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {
     change: (payload: number) => any;
     load: (payload: number) => any;
-}, string, PublicProps, Readonly<IVPaginationProps> & Readonly<{
+}, string, import("vue").PublicProps, Readonly<IVPaginationProps> & Readonly<{
     onChange?: ((payload: number) => any) | undefined;
     onLoad?: ((payload: number) => any) | undefined;
-}>, {}, {}, {}, {}, string, ComponentProvideOptions, false, {}, HTMLDivElement>;
+}>, {}, {}, {}, {}, string, import("vue").ComponentProvideOptions, false, {}, any>;
+declare const _default: typeof __VLS_export;
 export default _default;

@@ -1,4 +1,4 @@
-import { Ref } from 'vue';
+import { type Ref } from 'vue';
 export type IUseToggle = [Ref<boolean>, (payload: boolean) => void, VoidFunction];
 /**
  * @description `useToggle` — это пользовательский хук, который предназначен для управления состоянием булевой переменной с возможностью её переключения.

@@ -1,5 +1,5 @@
-import { Maybe } from '../../../core/index.ts';
-import { ModelRef, Ref, VNode } from 'vue';
+import type { Maybe } from '../../../core/index.js';
+import type { ModelRef, Ref, VNode } from 'vue';
 export type IVTabValue = number | string;
 export type IVTabsModelValue = Maybe<IVTabValue>;
 /**

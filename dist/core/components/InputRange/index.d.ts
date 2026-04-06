@@ -1,20 +1,16 @@
-import { CreateComponentPublicInstanceWithMixins, ComponentOptionsMixin, PublicProps, GlobalComponents, GlobalDirectives, ComponentProvideOptions, ComponentOptionsBase, VNodeProps, AllowedComponentProps, ComponentCustomProps, DefineComponent } from 'vue';
-import { InputRangeModelValue } from './types';
-import { InputBaseProps } from '..';
-import { ThemeProp, SizeProp } from '../..';
 export declare const InputRange: {
     Root: {
-        new (...args: any[]): CreateComponentPublicInstanceWithMixins<Readonly<{
-            modelValue: InputRangeModelValue;
-        } & {
+        new (...args: any[]): import("vue").CreateComponentPublicInstanceWithMixins<Readonly<{
             min?: number;
             max?: number;
             step?: number;
-        } & InputBaseProps & Partial< ThemeProp> & Partial< SizeProp>> & Readonly<{
-            "onUpdate:modelValue"?: ((value: InputRangeModelValue) => any) | undefined;
-        }>, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {
-            "update:modelValue": (value: InputRangeModelValue) => any;
-        }, PublicProps, {}, false, {}, {}, GlobalComponents, GlobalDirectives, string, {}, HTMLDivElement, ComponentProvideOptions, {
+        } & import("../index.js").InputBaseProps & Partial<import("../../index.js").ThemeProp> & Partial<import("../../index.js").SizeProp> & {
+            modelValue: import("./types").InputRangeModelValue;
+        }> & Readonly<{
+            "onUpdate:modelValue"?: ((value: import("./types").InputRangeModelValue) => any) | undefined;
+        }>, {}, {}, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {
+            "update:modelValue": (value: import("./types").InputRangeModelValue) => any;
+        }, import("vue").PublicProps, {}, false, {}, {}, import("vue").GlobalComponents, import("vue").GlobalDirectives, string, {}, any, import("vue").ComponentProvideOptions, {
             P: {};
             B: {};
             D: {};
@@ -22,32 +18,32 @@ export declare const InputRange: {
             M: {};
             Defaults: {};
         }, Readonly<{
-            modelValue: InputRangeModelValue;
-        } & {
             min?: number;
             max?: number;
             step?: number;
-        } & InputBaseProps & Partial< ThemeProp> & Partial< SizeProp>> & Readonly<{
-            "onUpdate:modelValue"?: ((value: InputRangeModelValue) => any) | undefined;
+        } & import("../index.js").InputBaseProps & Partial<import("../../index.js").ThemeProp> & Partial<import("../../index.js").SizeProp> & {
+            modelValue: import("./types").InputRangeModelValue;
+        }> & Readonly<{
+            "onUpdate:modelValue"?: ((value: import("./types").InputRangeModelValue) => any) | undefined;
         }>, {}, {}, {}, {}, {}>;
         __isFragment?: never;
         __isTeleport?: never;
         __isSuspense?: never;
-    } & ComponentOptionsBase<Readonly<{
-        modelValue: InputRangeModelValue;
-    } & {
+    } & import("vue").ComponentOptionsBase<Readonly<{
         min?: number;
         max?: number;
         step?: number;
-    } & InputBaseProps & Partial< ThemeProp> & Partial< SizeProp>> & Readonly<{
-        "onUpdate:modelValue"?: ((value: InputRangeModelValue) => any) | undefined;
-    }>, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {
-        "update:modelValue": (value: InputRangeModelValue) => any;
-    }, string, {}, {}, string, {}, GlobalComponents, GlobalDirectives, string, ComponentProvideOptions> & VNodeProps & AllowedComponentProps & ComponentCustomProps & (new () => {
+    } & import("../index.js").InputBaseProps & Partial<import("../../index.js").ThemeProp> & Partial<import("../../index.js").SizeProp> & {
+        modelValue: import("./types").InputRangeModelValue;
+    }> & Readonly<{
+        "onUpdate:modelValue"?: ((value: import("./types").InputRangeModelValue) => any) | undefined;
+    }>, {}, {}, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {
+        "update:modelValue": (value: import("./types").InputRangeModelValue) => any;
+    }, string, {}, {}, string, {}, import("vue").GlobalComponents, import("vue").GlobalDirectives, string, import("vue").ComponentProvideOptions> & import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps & (new () => {
         $slots: {
-            default?(_: {}): any;
+            default?: (props: {}) => any;
         };
     });
-    Slider: DefineComponent<{}, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, PublicProps, Readonly<{}> & Readonly<{}>, {}, {}, {}, {}, string, ComponentProvideOptions, true, {}, HTMLDivElement>;
+    Slider: import("vue").DefineComponent<{}, {}, {}, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, import("vue").PublicProps, Readonly<{}> & Readonly<{}>, {}, {}, {}, {}, string, import("vue").ComponentProvideOptions, true, {}, any>;
 };
 export * from './types';

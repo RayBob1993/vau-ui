@@ -1,9 +1,8 @@
-import { InputRootContext, InputNativeProps } from '../types';
-import { MaybeNull } from '../../../types';
-import { ComputedRef } from 'vue';
+import type { InputRootContext, InputNativeProps } from '../types';
+import type { MaybeNull } from '../../../types';
 export interface UseInputNativeOptions {
     inputRootContext: MaybeNull<InputRootContext>;
 }
 export declare function useInputNative(options: UseInputNativeOptions): {
-    props: ComputedRef<InputNativeProps>;
+    props: import("vue").ComputedRef<InputNativeProps>;
 };

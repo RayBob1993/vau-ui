@@ -1,4 +1,4 @@
-import { UnscopedSlot } from '../../../core/index.ts';
+import type { UnscopedSlot } from '../../../core/index.js';
 export type IVDividerSlots = {
     default?: UnscopedSlot;
 };

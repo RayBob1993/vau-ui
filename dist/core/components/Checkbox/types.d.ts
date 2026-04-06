@@ -1,5 +1,5 @@
-import { MaybeRefOrGetter, VNode } from 'vue';
-import { Maybe, DirectionProp, SizeProp, ThemeProp } from '../../types';
+import type { MaybeRefOrGetter, VNode } from 'vue';
+import type { Maybe, DirectionProp, SizeProp, ThemeProp } from '../../types';
 export type CheckboxValue = number | string;
 export type CheckboxModelValue = boolean | Array<CheckboxValue>;
 export type CheckboxProps = {
