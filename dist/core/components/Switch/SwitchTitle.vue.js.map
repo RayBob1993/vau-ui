@@ -1,0 +1,1 @@
+{"version":3,"file":"SwitchTitle.vue.js","names":[],"sources":["../../../../src/lib/core/components/Switch/SwitchTitle.vue"],"sourcesContent":["<template>\n  <span class=\"switch-title\">\n    <slot/>\n  </span>\n</template>\n"],"mappings":";;;kBACQ,OAAM,gBAAc;;aAA1B,EAEO,QAFP,GAEO,CADL,EAAO,EAAA,QAAA,UAAA,CAAA,CAAA"}

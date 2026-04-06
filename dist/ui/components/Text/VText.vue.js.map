@@ -1,0 +1,1 @@
+{"version":3,"file":"VText.vue.js","names":[],"sources":["../../../../src/lib/ui/components/Text/VText.vue"],"sourcesContent":["<script setup lang=\"ts\">\n  import { Text, type TextProps } from '@vau/core';\n\n  const props = defineProps<TextProps>();\n</script>\n\n<template>\n  <Text.Root v-bind=\"props\">\n    <slot/>\n  </Text.Root>\n</template>\n"],"mappings":""}

@@ -1,0 +1,1 @@
+{"version":3,"file":"VInputGroupAddon.vue.js","names":[],"sources":["../../../../src/lib/ui/components/InputGroup/VInputGroupAddon.vue"],"sourcesContent":["<script setup lang=\"ts\">\n  import { Input } from '@vau/core';\n</script>\n\n<template>\n  <Input.GroupAddon>\n    <slot/>\n  </Input.GroupAddon>\n</template>\n"],"mappings":""}

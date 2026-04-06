@@ -1,0 +1,1 @@
+{"version":3,"file":"index.js","names":[],"sources":["../../../../src/lib/core/components/Tag/index.ts"],"sourcesContent":["import { default as Root } from './TagRoot.vue';\nimport { default as Group } from './TagGroup.vue';\n\nexport const Tag = {\n  Root,\n  Group\n};\n\nexport * from './types';\n"],"mappings":";;;AAGA,IAAa,IAAM;CACjB,MAAA;CACA,OAAA;CACD"}

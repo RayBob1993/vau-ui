@@ -1,0 +1,1 @@
+{"version":3,"file":"key.js","names":[],"sources":["../../../../../src/lib/core/components/Select/context/key.ts"],"sourcesContent":["import type { InjectionKey } from 'vue';\nimport type { SelectRootContext } from '../types';\n\nexport const SelectRootContextKey: InjectionKey<SelectRootContext> = Symbol('SelectRootContextKey');\n"],"mappings":";AAGA,IAAa,IAAwD,OAAO,uBAAuB"}

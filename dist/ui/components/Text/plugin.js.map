@@ -1,0 +1,1 @@
+{"version":3,"file":"plugin.js","names":[],"sources":["../../../../src/lib/ui/components/Text/plugin.ts"],"sourcesContent":["import type { Plugin } from 'vue';\nimport VText from './VText.vue';\n\nexport const TextPlugin: Plugin = {\n  install (app) {\n    app.component('VText', VText);\n  }\n};\n"],"mappings":";;AAGA,IAAa,IAAqB,EAChC,QAAS,GAAK;AACZ,GAAI,UAAU,SAAS,EAAM;GAEhC"}

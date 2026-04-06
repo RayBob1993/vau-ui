@@ -1,0 +1,1 @@
+{"version":3,"file":"plugin.js","names":[],"sources":["../../../../src/lib/ui/components/Row/plugin.ts"],"sourcesContent":["import type { Plugin } from 'vue';\nimport VRow from './VRow.vue';\n\nexport const RowPlugin: Plugin = {\n  install (app) {\n    app.component('VRow', VRow);\n  }\n};\n"],"mappings":";;AAGA,IAAa,IAAoB,EAC/B,QAAS,GAAK;AACZ,GAAI,UAAU,QAAQ,EAAK;GAE9B"}

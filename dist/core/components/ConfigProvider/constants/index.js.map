@@ -1,0 +1,1 @@
+{"version":3,"file":"index.js","names":[],"sources":["../../../../../src/lib/core/components/ConfigProvider/constants/index.ts"],"sourcesContent":["export const CONFIG_PROVIDER_TELEPORT_TARGET_DEFAULT: string | HTMLElement = 'body';\n"],"mappings":";AAAA,IAAa,IAAgE"}

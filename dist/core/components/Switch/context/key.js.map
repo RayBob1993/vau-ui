@@ -1,0 +1,1 @@
+{"version":3,"file":"key.js","names":[],"sources":["../../../../../src/lib/core/components/Switch/context/key.ts"],"sourcesContent":["import type { InjectionKey } from 'vue';\nimport type { SwitchRootContext } from '../types';\n\nexport const SwitchRootContextKey: InjectionKey<SwitchRootContext> = Symbol('SwitchRootContextKey');\n"],"mappings":";AAGA,IAAa,IAAwD,OAAO,uBAAuB"}

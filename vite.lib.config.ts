@@ -14,8 +14,7 @@ export default defineConfig({
     lib: {
       entry: resolve(__dirname, 'src/lib/index.ts'),
       name: 'VauUi',
-      formats: ['es'],
-      fileName: 'index'
+      formats: ['es']
     },
     sourcemap: true,
     outDir: 'dist',
@@ -23,7 +22,9 @@ export default defineConfig({
     rolldownOptions: {
       external: ['vue', 'zod'],
       output: {
-        codeSplitting: true,
+        entryFileNames: ({ name }) => `${name}.js`,
+        preserveModules: true,
+        preserveModulesRoot: resolve(__dirname, 'src/lib'),
         globals: {
           vue: 'Vue',
           zod: 'zod'

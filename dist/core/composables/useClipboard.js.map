@@ -1,0 +1,1 @@
+{"version":3,"file":"useClipboard.js","names":[],"sources":["../../../src/lib/core/composables/useClipboard.ts"],"sourcesContent":["export function useClipboard () {\n  return {\n\n  };\n}\n"],"mappings":";AAAA,SAAgB,IAAgB;AAC9B,QAAO,EAEN"}

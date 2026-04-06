@@ -1,0 +1,1 @@
+{"version":3,"file":"plugin.js","names":[],"sources":["../../../../src/lib/ui/components/Col/plugin.ts"],"sourcesContent":["import type { Plugin } from 'vue';\nimport VCol from './VCol.vue';\n\nexport const ColPlugin: Plugin = {\n  install (app) {\n    app.component('VCol', VCol);\n  }\n};\n"],"mappings":";;AAGA,IAAa,IAAoB,EAC/B,QAAS,GAAK;AACZ,GAAI,UAAU,QAAQ,EAAK;GAE9B"}

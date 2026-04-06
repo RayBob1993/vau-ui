@@ -1,0 +1,1 @@
+{"version":3,"file":"SelectScrollbar.vue.js","names":[],"sources":["../../../../src/lib/core/components/Select/SelectScrollbar.vue"],"sourcesContent":["<script setup lang=\"ts\">\n  import { Scrollbar } from '../Scrollbar';\n</script>\n\n<template>\n  <Scrollbar.Root class=\"select-scrollbar\">\n    <slot/>\n  </Scrollbar.Root>\n</template>\n"],"mappings":""}

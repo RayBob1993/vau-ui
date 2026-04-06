@@ -1,0 +1,1 @@
+{"version":3,"file":"AccordionTitle.vue.js","names":[],"sources":["../../../../src/lib/core/components/Accordion/AccordionTitle.vue"],"sourcesContent":["<template>\n  <div class=\"accordion-title\">\n    <slot/>\n  </div>\n</template>\n"],"mappings":";;;kBACO,OAAM,mBAAiB;;aAA5B,EAEM,OAFN,GAEM,CADJ,EAAO,EAAA,QAAA,UAAA,CAAA,CAAA"}

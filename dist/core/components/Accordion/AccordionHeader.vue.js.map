@@ -1,0 +1,1 @@
+{"version":3,"file":"AccordionHeader.vue.js","names":[],"sources":["../../../../src/lib/core/components/Accordion/AccordionHeader.vue"],"sourcesContent":["<template>\n  <div class=\"accordion-header\">\n    <slot/>\n  </div>\n</template>\n"],"mappings":";;;kBACO,OAAM,oBAAkB;;aAA7B,EAEM,OAFN,GAEM,CADJ,EAAO,EAAA,QAAA,UAAA,CAAA,CAAA"}

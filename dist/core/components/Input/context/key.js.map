@@ -1,0 +1,1 @@
+{"version":3,"file":"key.js","names":[],"sources":["../../../../../src/lib/core/components/Input/context/key.ts"],"sourcesContent":["import type { InjectionKey } from 'vue';\nimport type { InputRootContext } from '../types';\n\nexport const InputRootContextKey: InjectionKey<InputRootContext> = Symbol('InputRootContextKey');\n"],"mappings":";AAGA,IAAa,IAAsD,OAAO,sBAAsB"}

@@ -1,0 +1,1 @@
+{"version":3,"file":"index.js","names":[],"sources":["../../../../src/lib/core/components/Menu/index.ts"],"sourcesContent":["import { default as Root } from './MenuRoot.vue';\nimport { default as Item } from './MenuItem.vue';\n\nexport const Menu = {\n  Root,\n  Item\n};\n\nexport * from './types';\n"],"mappings":";;;AAGA,IAAa,IAAO;CAClB,MAAA;CACA,MAAA;CACD"}

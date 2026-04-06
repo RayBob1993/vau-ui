@@ -1,0 +1,1 @@
+{"version":3,"file":"direction.js","names":[],"sources":["../../../src/lib/core/constants/direction.ts"],"sourcesContent":["export const Direction = Object.freeze({\n  HORIZONTAL: 'horizontal',\n  VERTICAL: 'vertical'\n} as const);\n"],"mappings":";AAAA,IAAa,IAAY,OAAO,OAAO;CACrC,YAAY;CACZ,UAAU;CACX,CAAU"}

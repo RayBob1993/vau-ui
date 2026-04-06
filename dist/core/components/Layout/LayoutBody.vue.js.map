@@ -1,0 +1,1 @@
+{"version":3,"file":"LayoutBody.vue.js","names":[],"sources":["../../../../src/lib/core/components/Layout/LayoutBody.vue"],"sourcesContent":["<template>\n  <main class=\"layout-body\">\n    <slot/>\n  </main>\n</template>\n"],"mappings":";;;kBACQ,OAAM,eAAa;;aAAzB,EAEO,QAFP,GAEO,CADL,EAAO,EAAA,QAAA,UAAA,CAAA,CAAA"}

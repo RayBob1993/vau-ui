@@ -1,0 +1,1 @@
+{"version":3,"file":"position.js","names":[],"sources":["../../../src/lib/core/constants/position.ts"],"sourcesContent":["export const Position = Object.freeze({\n  top: 'top',\n  left: 'left',\n  right: 'right',\n  center: 'center',\n  bottom: 'bottom',\n} as const);\n"],"mappings":";AAAA,IAAa,IAAW,OAAO,OAAO;CACpC,KAAK;CACL,MAAM;CACN,OAAO;CACP,QAAQ;CACR,QAAQ;CACT,CAAU"}

@@ -1,0 +1,1 @@
+{"version":3,"file":"SectionHeader.vue.js","names":[],"sources":["../../../../src/lib/core/components/Section/SectionHeader.vue"],"sourcesContent":["<template>\n  <header class=\"section-header\">\n    <slot/>\n  </header>\n</template>\n"],"mappings":";;;kBACU,OAAM,kBAAgB;;aAA9B,EAES,UAFT,GAES,CADP,EAAO,EAAA,QAAA,UAAA,CAAA,CAAA"}

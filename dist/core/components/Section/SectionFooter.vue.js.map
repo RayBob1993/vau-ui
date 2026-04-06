@@ -1,0 +1,1 @@
+{"version":3,"file":"SectionFooter.vue.js","names":[],"sources":["../../../../src/lib/core/components/Section/SectionFooter.vue"],"sourcesContent":["<template>\n  <footer class=\"section-footer\">\n    <slot/>\n  </footer>\n</template>\n"],"mappings":";;;kBACU,OAAM,kBAAgB;;aAA9B,EAES,UAFT,GAES,CADP,EAAO,EAAA,QAAA,UAAA,CAAA,CAAA"}

@@ -1,0 +1,1 @@
+{"version":3,"file":"index.js","names":[],"sources":["../../../../src/lib/core/components/Primitive/index.ts"],"sourcesContent":["import { Root } from './PrimitiveRoot';\n\nexport const Primitive = {\n  Root,\n};\n\nexport * from './types';\n"],"mappings":";;AAEA,IAAa,IAAY,EACvB,SACD"}

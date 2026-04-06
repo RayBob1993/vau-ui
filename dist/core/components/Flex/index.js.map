@@ -1,0 +1,1 @@
+{"version":3,"file":"index.js","names":[],"sources":["../../../../src/lib/core/components/Flex/index.ts"],"sourcesContent":["import { default as Root } from './FlexRoot.vue';\nimport { default as Item } from './FlexItem.vue';\n\nexport const Flex = {\n  Root,\n  Item\n};\n\nexport * from './types';\n"],"mappings":";;;AAGA,IAAa,IAAO;CAClB,MAAA;CACA,MAAA;CACD"}

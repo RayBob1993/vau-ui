@@ -1,0 +1,1 @@
+{"version":3,"file":"key.js","names":[],"sources":["../../../../../src/lib/core/components/Modal/context/key.ts"],"sourcesContent":["import type { InjectionKey } from 'vue';\nimport type { ModalRootContext } from '../types';\n\nexport const ModalRootContextKey: InjectionKey<ModalRootContext> = Symbol('ModalRootContextKey');\n"],"mappings":";AAGA,IAAa,IAAsD,OAAO,sBAAsB"}

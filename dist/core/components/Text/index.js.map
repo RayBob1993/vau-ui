@@ -1,0 +1,1 @@
+{"version":3,"file":"index.js","names":[],"sources":["../../../../src/lib/core/components/Text/index.ts"],"sourcesContent":["import { default as Root }  from './TextRoot.vue';\n\nexport const Text = {\n  Root\n};\n\nexport * from './types';\n"],"mappings":";;AAEA,IAAa,IAAO,EAClB,MAAA,GACD"}

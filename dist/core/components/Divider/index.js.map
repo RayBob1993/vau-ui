@@ -1,0 +1,1 @@
+{"version":3,"file":"index.js","names":[],"sources":["../../../../src/lib/core/components/Divider/index.ts"],"sourcesContent":["import { default as Root } from './DividerRoot.vue';\nimport { default as Content } from './DividerContent.vue';\n\nexport const Divider = {\n  Root,\n  Content\n};\n\nexport * from './types';\n"],"mappings":";;;AAGA,IAAa,IAAU;CACrB,MAAA;CACA,SAAA;CACD"}

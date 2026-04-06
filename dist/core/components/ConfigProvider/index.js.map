@@ -1,0 +1,1 @@
+{"version":3,"file":"index.js","names":[],"sources":["../../../../src/lib/core/components/ConfigProvider/index.ts"],"sourcesContent":["import { default as Root } from './ConfigProviderRoot.vue';\n\nexport const ConfigProvider = {\n  Root\n};\n\nexport * from './types';\nexport * from './context';\n"],"mappings":";;;;AAEA,IAAa,IAAiB,EAC5B,MAAA,GACD"}

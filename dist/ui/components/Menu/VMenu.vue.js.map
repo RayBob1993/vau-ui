@@ -1,0 +1,1 @@
+{"version":3,"file":"VMenu.vue.js","names":[],"sources":["../../../../src/lib/ui/components/Menu/VMenu.vue"],"sourcesContent":["<script setup lang=\"ts\">\n  import { Menu, type MenuProps } from '@vau/core';\n\n  const props = defineProps<MenuProps>();\n</script>\n\n<template>\n  <Menu.Root v-bind=\"props\">\n    <slot/>\n  </Menu.Root>\n</template>\n"],"mappings":""}

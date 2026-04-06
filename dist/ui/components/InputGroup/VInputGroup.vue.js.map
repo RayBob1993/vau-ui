@@ -1,0 +1,1 @@
+{"version":3,"file":"VInputGroup.vue.js","names":[],"sources":["../../../../src/lib/ui/components/InputGroup/VInputGroup.vue"],"sourcesContent":["<script setup lang=\"ts\">\n  import { Input } from '@vau/core';\n</script>\n\n<template>\n  <Input.Group>\n    <slot/>\n  </Input.Group>\n</template>\n"],"mappings":""}

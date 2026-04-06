@@ -1,0 +1,1 @@
+{"version":3,"file":"index.js","names":[],"sources":["../../../../src/lib/core/components/Layout/index.ts"],"sourcesContent":["import { default as Root } from './LayoutRoot.vue';\nimport { default as Body } from './LayoutBody.vue';\n\nexport const Layout = {\n  Root,\n  Body\n};\n\nexport * from './types';\n"],"mappings":";;;AAGA,IAAa,IAAS;CACpB,MAAA;CACA,MAAA;CACD"}
