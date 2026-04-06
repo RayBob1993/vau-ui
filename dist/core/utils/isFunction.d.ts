@@ -12,4 +12,4 @@
  * isFunction(null); // => false
  * isFunction(undefined); // => false
  */
-export declare function isFunction(value: unknown): value is (...args: unknown[]) => unknown;
+export declare function isFunction(value: unknown): value is (...args: Array<unknown>) => unknown;

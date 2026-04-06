@@ -14,4 +14,4 @@
  * // => { prop1: 'value1', prop4: 'value4' }
  *
  */
-export declare function pick<O extends Record<string, unknown>, K extends keyof O>(object: O, keys: K[]): Pick<O, K>;
+export declare function pick<O extends Record<string, unknown>, K extends keyof O>(object: O, keys: Array<K>): Pick<O, K>;
