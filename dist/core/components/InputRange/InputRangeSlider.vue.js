@@ -1,4 +1,4 @@
-import e from "./InputRangeSlider.vue_vue_type_script_setup_true_lang.js";
+import e from "./InputRangeSlider.js";
 //#region src/lib/core/components/InputRange/InputRangeSlider.vue
 var t = e;
 //#endregion

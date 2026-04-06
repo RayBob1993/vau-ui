@@ -1,4 +1,4 @@
-import e from "./FormItemErrors.vue_vue_type_script_setup_true_lang.js";
+import e from "./FormItemErrors.js";
 //#region src/lib/core/components/Form/FormItemErrors.vue
 var t = e;
 //#endregion

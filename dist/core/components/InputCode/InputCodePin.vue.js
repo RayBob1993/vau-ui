@@ -1,4 +1,4 @@
-import e from "./InputCodePin.vue_vue_type_script_setup_true_lang.js";
+import e from "./InputCodePin.js";
 //#region src/lib/core/components/InputCode/InputCodePin.vue
 var t = e;
 //#endregion

@@ -1,4 +1,4 @@
-import e from "./VFormItem.vue_vue_type_script_setup_true_lang.js";
+import e from "./VFormItem.js";
 //#region src/lib/ui/components/Forms/FormItem/VFormItem.vue
 var t = e;
 //#endregion

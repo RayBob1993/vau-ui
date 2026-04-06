@@ -1,4 +1,4 @@
-import e from "./LayoutRoot.vue_vue_type_script_setup_true_lang.js";
+import e from "./LayoutRoot.js";
 //#region src/lib/core/components/Layout/LayoutRoot.vue
 var t = e;
 //#endregion

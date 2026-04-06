@@ -1,4 +1,4 @@
-import e from "./VRow.vue_vue_type_script_setup_true_lang.js";
+import e from "./VRow.js";
 //#region src/lib/ui/components/Row/VRow.vue
 var t = e;
 //#endregion

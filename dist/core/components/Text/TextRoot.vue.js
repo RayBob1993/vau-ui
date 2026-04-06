@@ -1,4 +1,4 @@
-import e from "./TextRoot.vue_vue_type_script_setup_true_lang.js";
+import e from "./TextRoot.js";
 //#region src/lib/core/components/Text/TextRoot.vue
 var t = e;
 //#endregion

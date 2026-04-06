@@ -1,4 +1,4 @@
-import e from "./SectionTitle.vue_vue_type_script_setup_true_lang.js";
+import e from "./SectionTitle.js";
 //#region src/lib/core/components/Section/SectionTitle.vue
 var t = e;
 //#endregion

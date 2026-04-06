@@ -1,4 +1,4 @@
-import e from "./VInplace.vue_vue_type_script_setup_true_lang.js";
+import e from "./VInplace.js";
 //#region src/lib/ui/components/Inplace/VInplace.vue
 var t = e;
 //#endregion

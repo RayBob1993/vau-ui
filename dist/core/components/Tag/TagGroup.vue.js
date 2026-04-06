@@ -1,4 +1,4 @@
-import e from "./TagGroup.vue_vue_type_script_setup_true_lang.js";
+import e from "./TagGroup.js";
 //#region src/lib/core/components/Tag/TagGroup.vue
 var t = e;
 //#endregion

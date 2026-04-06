@@ -1,4 +1,4 @@
-import e from "./FormRoot.vue_vue_type_script_setup_true_lang.js";
+import e from "./FormRoot.js";
 //#region src/lib/core/components/Form/FormRoot.vue
 var t = e;
 //#endregion

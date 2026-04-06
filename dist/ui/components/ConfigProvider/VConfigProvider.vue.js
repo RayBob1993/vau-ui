@@ -1,4 +1,4 @@
-import e from "./VConfigProvider.vue_vue_type_script_setup_true_lang.js";
+import e from "./VConfigProvider.js";
 //#region src/lib/ui/components/ConfigProvider/VConfigProvider.vue
 var t = e;
 //#endregion

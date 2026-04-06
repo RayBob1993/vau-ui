@@ -1,4 +1,4 @@
-import e from "./RadioRoot.vue_vue_type_script_setup_true_lang.js";
+import e from "./RadioRoot.js";
 //#region src/lib/core/components/Radio/RadioRoot.vue
 var t = e;
 //#endregion

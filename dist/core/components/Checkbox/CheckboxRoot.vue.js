@@ -1,4 +1,4 @@
-import e from "./CheckboxRoot.vue_vue_type_script_setup_true_lang.js";
+import e from "./CheckboxRoot.js";
 //#region src/lib/core/components/Checkbox/CheckboxRoot.vue
 var t = e;
 //#endregion

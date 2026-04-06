@@ -1,4 +1,4 @@
-import e from "./VInputPassword.vue_vue_type_script_setup_true_lang.js";
+import e from "./VInputPassword.js";
 //#region src/lib/ui/components/Forms/InputPassword/VInputPassword.vue
 var t = e;
 //#endregion

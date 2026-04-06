@@ -1,4 +1,4 @@
-import e from "./BadgeRoot.vue_vue_type_script_setup_true_lang.js";
+import e from "./BadgeRoot.js";
 //#region src/lib/core/components/Badge/BadgeRoot.vue
 var t = e;
 //#endregion

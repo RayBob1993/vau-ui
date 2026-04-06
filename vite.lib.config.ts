@@ -22,7 +22,16 @@ export default defineConfig({
     rolldownOptions: {
       external: ['vue', 'zod'],
       output: {
-        entryFileNames: ({ name }) => `${name}.js`,
+        entryFileNames: ({ name }) => {
+          if (name?.endsWith('.vue_vue_type_style_index_0_lang')) {
+            return `${name.slice(0, -32)}.js`;
+          } else if (name?.endsWith('.vue_vue_type_script_setup_true_lang')) {
+            return `${name.slice(0, -36)}.js`;
+          } else {
+            return `${name}.js`;
+          }
+        },
+        sanitizeFileName: true,
         preserveModules: true,
         preserveModulesRoot: resolve(__dirname, 'src/lib'),
         globals: {

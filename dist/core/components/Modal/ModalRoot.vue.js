@@ -1,4 +1,4 @@
-import e from "./ModalRoot.vue_vue_type_script_setup_true_lang.js";
+import e from "./ModalRoot.js";
 //#region src/lib/core/components/Modal/ModalRoot.vue
 var t = e;
 //#endregion

@@ -1,4 +1,4 @@
-import e from "./VTag.vue_vue_type_script_setup_true_lang.js";
+import e from "./VTag.js";
 //#region src/lib/ui/components/Tag/VTag.vue
 var t = e;
 //#endregion

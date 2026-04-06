@@ -1,4 +1,4 @@
-import e from "./SelectRoot.vue_vue_type_script_setup_true_lang.js";
+import e from "./SelectRoot.js";
 //#region src/lib/core/components/Select/SelectRoot.vue
 var t = e;
 //#endregion

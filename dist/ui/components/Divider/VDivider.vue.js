@@ -1,4 +1,4 @@
-import e from "./VDivider.vue_vue_type_script_setup_true_lang.js";
+import e from "./VDivider.js";
 //#region src/lib/ui/components/Divider/VDivider.vue
 var t = e;
 //#endregion

@@ -1,4 +1,4 @@
-import e from "./VLayout.vue_vue_type_script_setup_true_lang.js";
+import e from "./VLayout.js";
 //#region src/lib/ui/components/Layout/VLayout.vue
 var t = e;
 //#endregion

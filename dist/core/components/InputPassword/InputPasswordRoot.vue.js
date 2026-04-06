@@ -1,4 +1,4 @@
-import e from "./InputPasswordRoot.vue_vue_type_script_setup_true_lang.js";
+import e from "./InputPasswordRoot.js";
 //#region src/lib/core/components/InputPassword/InputPasswordRoot.vue
 var t = e;
 //#endregion

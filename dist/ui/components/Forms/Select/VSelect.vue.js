@@ -1,4 +1,4 @@
-import e from "./VSelect.vue_vue_type_script_setup_true_lang.js";
+import e from "./VSelect.js";
 //#region src/lib/ui/components/Forms/Select/VSelect.vue
 var t = e;
 //#endregion

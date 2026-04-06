@@ -1,4 +1,4 @@
-import e from "./InputTagsRoot.vue_vue_type_script_setup_true_lang.js";
+import e from "./InputTagsRoot.js";
 //#region src/lib/core/components/InputTags/InputTagsRoot.vue
 var t = e;
 //#endregion

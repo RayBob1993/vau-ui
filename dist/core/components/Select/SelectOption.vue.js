@@ -1,4 +1,4 @@
-import e from "./SelectOption.vue_vue_type_script_setup_true_lang.js";
+import e from "./SelectOption.js";
 //#region src/lib/core/components/Select/SelectOption.vue
 var t = e;
 //#endregion

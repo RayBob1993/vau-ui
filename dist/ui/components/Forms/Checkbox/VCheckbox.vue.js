@@ -1,4 +1,4 @@
-import e from "./VCheckbox.vue_vue_type_script_setup_true_lang.js";
+import e from "./VCheckbox.js";
 //#region src/lib/ui/components/Forms/Checkbox/VCheckbox.vue
 var t = e;
 //#endregion

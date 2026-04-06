@@ -1,4 +1,4 @@
-import e from "./VModal.vue_vue_type_script_setup_true_lang.js";
+import e from "./VModal.js";
 //#region src/lib/ui/components/Modal/VModal.vue
 var t = e;
 //#endregion

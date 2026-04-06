@@ -1,4 +1,4 @@
-import e from "./MenuRoot.vue_vue_type_script_setup_true_lang.js";
+import e from "./MenuRoot.js";
 //#region src/lib/core/components/Menu/MenuRoot.vue
 var t = e;
 //#endregion

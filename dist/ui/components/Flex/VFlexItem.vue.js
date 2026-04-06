@@ -1,4 +1,4 @@
-import e from "./VFlexItem.vue_vue_type_script_setup_true_lang.js";
+import e from "./VFlexItem.js";
 //#region src/lib/ui/components/Flex/VFlexItem.vue
 var t = e;
 //#endregion

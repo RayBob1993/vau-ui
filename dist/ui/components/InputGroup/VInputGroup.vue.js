@@ -1,4 +1,4 @@
-import e from "./VInputGroup.vue_vue_type_script_setup_true_lang.js";
+import e from "./VInputGroup.js";
 //#region src/lib/ui/components/InputGroup/VInputGroup.vue
 var t = e;
 //#endregion

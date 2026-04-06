@@ -1,4 +1,4 @@
-import e from "./DividerRoot.vue_vue_type_script_setup_true_lang.js";
+import e from "./DividerRoot.js";
 //#region src/lib/core/components/Divider/DividerRoot.vue
 var t = e;
 //#endregion

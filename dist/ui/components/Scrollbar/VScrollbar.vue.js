@@ -1,4 +1,4 @@
-import e from "./VScrollbar.vue_vue_type_script_setup_true_lang.js";
+import e from "./VScrollbar.js";
 //#region src/lib/ui/components/Scrollbar/VScrollbar.vue
 var t = e;
 //#endregion

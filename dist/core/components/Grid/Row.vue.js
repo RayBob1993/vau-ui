@@ -1,4 +1,4 @@
-import e from "./Row.vue_vue_type_script_setup_true_lang.js";
+import e from "./Row.js";
 //#region src/lib/core/components/Grid/Row.vue
 var t = e;
 //#endregion

@@ -1,4 +1,4 @@
-import e from "./InputRoot.vue_vue_type_script_setup_true_lang.js";
+import e from "./InputRoot.js";
 //#region src/lib/core/components/Input/InputRoot.vue
 var t = e;
 //#endregion

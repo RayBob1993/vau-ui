@@ -1,4 +1,4 @@
-import e from "./VButtonGroup.vue_vue_type_script_setup_true_lang.js";
+import e from "./VButtonGroup.js";
 //#region src/lib/ui/components/Button/VButtonGroup.vue
 var t = e;
 //#endregion

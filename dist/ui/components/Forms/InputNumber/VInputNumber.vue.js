@@ -1,4 +1,4 @@
-import e from "./VInputNumber.vue_vue_type_script_setup_true_lang.js";
+import e from "./VInputNumber.js";
 //#region src/lib/ui/components/Forms/InputNumber/VInputNumber.vue
 var t = e;
 //#endregion

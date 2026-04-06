@@ -1,4 +1,4 @@
-import e from "./VText.vue_vue_type_script_setup_true_lang.js";
+import e from "./VText.js";
 //#region src/lib/ui/components/Text/VText.vue
 var t = e;
 //#endregion

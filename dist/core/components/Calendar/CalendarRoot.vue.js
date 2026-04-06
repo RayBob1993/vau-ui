@@ -1,4 +1,4 @@
-import e from "./CalendarRoot.vue_vue_type_script_setup_true_lang.js";
+import e from "./CalendarRoot.js";
 //#region src/lib/core/components/Calendar/CalendarRoot.vue
 var t = e;
 //#endregion

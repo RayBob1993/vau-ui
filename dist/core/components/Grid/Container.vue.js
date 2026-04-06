@@ -1,4 +1,4 @@
-import e from "./Container.vue_vue_type_script_setup_true_lang.js";
+import e from "./Container.js";
 //#region src/lib/core/components/Grid/Container.vue
 var t = e;
 //#endregion

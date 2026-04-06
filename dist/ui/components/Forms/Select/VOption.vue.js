@@ -1,4 +1,4 @@
-import e from "./VOption.vue_vue_type_script_setup_true_lang.js";
+import e from "./VOption.js";
 //#region src/lib/ui/components/Forms/Select/VOption.vue
 var t = e;
 //#endregion

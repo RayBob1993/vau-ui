@@ -1,4 +1,4 @@
-import e from "./SectionRoot.vue_vue_type_script_setup_true_lang.js";
+import e from "./SectionRoot.js";
 //#region src/lib/core/components/Section/SectionRoot.vue
 var t = e;
 //#endregion

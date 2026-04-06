@@ -1,4 +1,4 @@
-import e from "./VCol.vue_vue_type_script_setup_true_lang.js";
+import e from "./VCol.js";
 //#region src/lib/ui/components/Col/VCol.vue
 var t = e;
 //#endregion

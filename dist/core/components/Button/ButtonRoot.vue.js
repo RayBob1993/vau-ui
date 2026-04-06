@@ -1,4 +1,4 @@
-import e from "./ButtonRoot.vue_vue_type_script_setup_true_lang.js";
+import e from "./ButtonRoot.js";
 //#region src/lib/core/components/Button/ButtonRoot.vue
 var t = e;
 //#endregion

@@ -1,4 +1,4 @@
-import e from "./AccordionBody.vue_vue_type_script_setup_true_lang.js";
+import e from "./AccordionBody.js";
 //#region src/lib/core/components/Accordion/AccordionBody.vue
 var t = e;
 //#endregion

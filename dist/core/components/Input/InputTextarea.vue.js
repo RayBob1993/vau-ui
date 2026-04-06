@@ -1,4 +1,4 @@
-import e from "./InputTextarea.vue_vue_type_script_setup_true_lang.js";
+import e from "./InputTextarea.js";
 //#region src/lib/core/components/Input/InputTextarea.vue
 var t = e;
 //#endregion
