@@ -1,7 +1,6 @@
 .button-group {
   display: inline-flex;
   flex-wrap: wrap;
-  gap: var(--button-group-gap-y, 0) var(--button-group-gap-x, 0);
 
   &--direction {
     &-horizontal {
