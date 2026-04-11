@@ -7,6 +7,7 @@ export * from './Container';
 export * from './Row';
 export * from './Col';
 export * from './Scrollbar';
+export * from './Spinner';
 export * from './Tag';
 export * from './Text';
 export * from './Forms';

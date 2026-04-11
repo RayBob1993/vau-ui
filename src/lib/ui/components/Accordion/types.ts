@@ -1,4 +1,5 @@
-import type { AccordionItemProps, AccordionItemSlots, UnscopedSlot } from '@vau/core';
+import type { AccordionItemProps, AccordionItemSlots, AccordionItemScopedSlot, UnscopedSlot } from '@vau/core';
+import type { VNode } from 'vue';
 
 export interface VAccordionItemProps extends AccordionItemProps {
   title?: string;
@@ -6,4 +7,5 @@ export interface VAccordionItemProps extends AccordionItemProps {
 
 export interface VAccordionItemSlots extends AccordionItemSlots {
   title?: UnscopedSlot;
+  indicator?: (scope: AccordionItemScopedSlot) => Array<VNode>;
 }

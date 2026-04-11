@@ -3,6 +3,7 @@
   import { useButtonRoot } from './composables';
   import { useFormContext } from '../Form/context';
   import { Primitive } from '../Primitive';
+  import { Spinner } from '../Spinner';
 
   const props = withDefaults(defineProps<ButtonProps>(), {
     as: 'button',
@@ -23,6 +24,7 @@
     :as="as"
     :as-child="asChild"
     class="button"
+    tabindex="0"
     :class="[
       {
         'button--disabled': isDisabled,
@@ -42,6 +44,8 @@
     :disabled="isDisabled"
     :type="type"
   >
+    <Spinner.Root v-if="loading"/>
+
     <slot/>
   </Primitive.Root>
 </template>

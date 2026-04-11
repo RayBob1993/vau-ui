@@ -4,7 +4,7 @@
 
   const { accordionRootContext, accordionItemContext } = useAccordionContext();
 
-  const { isDisabled, handleToggle } = useAccordionTrigger({
+  const { isDisabled, isActive, handleToggle } = useAccordionTrigger({
     accordionRootContext,
     accordionItemContext
   });
@@ -14,7 +14,9 @@
   <button
     type="button"
     :disabled="isDisabled"
-    class="v-accordion-trigger"
+    class="accordion-trigger"
+    tabindex="0"
+    :aria-expanded="isActive"
     @click="handleToggle"
   >
     <slot/>

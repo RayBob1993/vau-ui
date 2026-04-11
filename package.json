@@ -1,6 +1,6 @@
 {
   "name": "vau-ui",
-  "version": "1.0.81",
+  "version": "0.0.81",
   "license": "MIT",
   "repository": "https://github.com/RayBob1993/vau-ui.git",
   "type": "module",
@@ -64,8 +64,8 @@
     "husky": "9.1.7",
     "lint-staged": "16.4.0",
     "typescript": "6.0.2",
-    "vite": "8.0.4",
-    "vitest": "4.1.2",
+    "vite": "8.0.8",
+    "vitest": "4.1.4",
     "vue-eslint-parser": "10.4.0",
     "vue-tsc": "3.2.6",
     "sass-embedded": "1.99.0"

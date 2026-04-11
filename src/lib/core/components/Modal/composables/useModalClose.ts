@@ -1,4 +1,4 @@
-import type { ConfigProviderRootContext, IconRenderFn } from '../../ConfigProvider/types';
+import type { ConfigProviderRootContext, IconRenderFn } from '../../ConfigProvider';
 import type { ModalRootContext } from '../types';
 import type { Maybe, MaybeNull } from '../../../types';
 import { computed, toValue } from 'vue';

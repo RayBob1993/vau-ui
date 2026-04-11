@@ -1,5 +1,6 @@
 import type { AccordionItemProps, AccordionModelValue, AccordionRootContext } from '../types';
 import type { MaybeNull } from '../../../types';
+import { isAccordionMultiple } from '../utils';
 import { computed, toValue, type MaybeRefOrGetter } from 'vue';
 
 export interface UseAccordionItemOptions {
@@ -14,12 +15,27 @@ export function useAccordionItem (options: UseAccordionItemOptions) {
   const isMultiple = computed<boolean>(() => Boolean(toValue(options.accordionRootContext?.props)?.multiple));
 
   const isActive = computed<boolean>(() => {
-    return isMultiple.value && Array.isArray(modelValue.value)
+    return isAccordionMultiple(modelValue.value, isMultiple.value)
       ? modelValue.value.includes(props.value.value)
       : modelValue.value === props.value.value;
   });
 
+  function handleToggle () {
+    if (isAccordionMultiple(modelValue.value, isMultiple.value)) {
+      options.accordionRootContext?.setModelValue(props.value?.value);
+
+      return;
+    }
+
+    if (isActive.value) {
+      options.accordionRootContext?.setModelValue(undefined);
+    } else {
+      options.accordionRootContext?.setModelValue(props.value?.value);
+    }
+  }
+
   return {
     isActive,
+    handleToggle,
   };
 }

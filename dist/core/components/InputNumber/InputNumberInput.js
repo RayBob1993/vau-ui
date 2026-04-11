@@ -17,6 +17,7 @@ var p = { class: "input-number-input" }, m = /* @__PURE__ */ a({
 		});
 		return (e, t) => (c(), r("div", p, [f(i("input", s({
 			"onUpdate:modelValue": t[0] ||= (e) => o(g) ? g.value = e : null,
+			tabindex: "0",
 			type: "number",
 			class: "input-number-input__native"
 		}, u(h), { onWheel: t[1] ||= (...e) => u(_) && u(_)(...e) }), null, 16), [[

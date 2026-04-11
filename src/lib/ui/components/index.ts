@@ -18,7 +18,7 @@ export * from './Col';
 //export * from './Pagination';
 //export * from './Placeholder';
 export * from './Scrollbar';
-//export * from './Spinner';
+export * from './Spinner';
 //export * from './Tabs';
 export * from './Tag';
 export * from './Text';

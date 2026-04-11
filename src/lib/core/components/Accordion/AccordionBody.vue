@@ -11,10 +11,11 @@
   <div
     v-show="isActive"
     class="accordion-body"
-    role="region"
+    role="group"
+    :aria-hidden="!isActive"
   >
     <div class="accordion-body__content">
-      <slot/>
+      <slot :is-active="isActive"/>
     </div>
   </div>
 </template>

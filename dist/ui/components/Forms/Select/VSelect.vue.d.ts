@@ -9,17 +9,17 @@ type __VLS_ModelProps = {
 };
 type __VLS_PublicProps = __VLS_Props & __VLS_ModelProps;
 declare const __VLS_base: import("vue").DefineComponent<__VLS_PublicProps, {}, {}, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {
+    clear: () => any;
     change: (payload: string) => any;
     "update:modelValue": (value: SelectModelValue) => any;
-    clear: () => any;
     close: () => any;
     open: () => any;
     opened: (payload: Element) => any;
     closed: (payload: Element) => any;
 }, string, import("vue").PublicProps, Readonly<__VLS_PublicProps> & Readonly<{
+    onClear?: (() => any) | undefined;
     onChange?: ((payload: string) => any) | undefined;
     "onUpdate:modelValue"?: ((value: SelectModelValue) => any) | undefined;
-    onClear?: (() => any) | undefined;
     onClose?: (() => any) | undefined;
     onOpen?: (() => any) | undefined;
     onOpened?: ((payload: Element) => any) | undefined;

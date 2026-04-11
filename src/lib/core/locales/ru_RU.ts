@@ -5,5 +5,8 @@ export const ruRU: LocaleTranslation = {
     modal: {
       close: 'Закрыть модальное окно'
     }
+  },
+  global: {
+    loading: 'Загрузка'
   }
 };

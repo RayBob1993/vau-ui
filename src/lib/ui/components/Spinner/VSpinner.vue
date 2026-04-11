@@ -1,15 +1,9 @@
 <script setup lang="ts">
-  import type { IVSpinnerProps } from './types';
+  import { type SpinnerProps, Spinner } from '@vau/core';
 
-  defineProps<IVSpinnerProps>();
+  const props = defineProps<SpinnerProps>();
 </script>
 
 <template>
-  <div
-    class="v-spinner"
-    :class="{
-      [`v-spinner--size-${size}`]: size,
-      [`v-spinner--theme-${theme}`]: theme
-    }"
-  />
+  <Spinner.Root v-bind="props"/>
 </template>

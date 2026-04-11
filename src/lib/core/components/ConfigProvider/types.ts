@@ -3,7 +3,9 @@ import type { LocaleTranslation } from '../../types';
 
 export type IconRenderFn = () => VNodeChild;
 
-export type Icons = 'modalClose';
+export type Icons = 'modalClose'
+  | 'accordionActive'
+  | 'accordionInactive';
 
 export type IconRegistry = Record<Icons, IconRenderFn>;
 
@@ -12,7 +14,7 @@ export interface ConfigProviderProps {
   teleportTarget?: string | HTMLElement;
   direction?: 'ltr' | 'rtl';
   icons?: Partial<IconRegistry>;
-};
+}
 
 export interface ConfigProviderRootContext {
   props: MaybeRefOrGetter<ConfigProviderProps>;

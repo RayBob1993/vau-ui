@@ -19,6 +19,13 @@
             {{ title }}
           </slot>
         </Accordion.Title>
+
+        <Accordion.Indicator>
+          <slot
+            name="indicator"
+            :is-active="isActive"
+          />
+        </Accordion.Indicator>
       </Accordion.Trigger>
     </Accordion.Header>
 

@@ -1,5 +1,6 @@
 import type { AccordionModelValue, AccordionProps, AccordionValue } from '../types';
 import type { Maybe } from '../../../types';
+import { isAccordionMultiple } from '../utils';
 import { computed, type MaybeRefOrGetter, toValue } from 'vue';
 
 export interface UseAccordionRootOptions {
@@ -15,7 +16,7 @@ export function useAccordionRoot (options: UseAccordionRootOptions) {
   function setModelValue (value: Maybe<AccordionValue>) {
     const modelValue = toValue(options.modelValue);
 
-    if (props.value.multiple && Array.isArray(modelValue)) {
+    if (isAccordionMultiple(modelValue, Boolean(props.value.multiple))) {
       if (!value) {
         return;
       }

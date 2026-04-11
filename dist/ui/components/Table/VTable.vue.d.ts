@@ -1,8 +1,8 @@
 import type { IVTableProps, IVTableBaseData, IVTableExpose, IVTableSlots } from './types';
 declare const __VLS_export: <T extends IVTableBaseData = IVTableBaseData>(__VLS_props: NonNullable<Awaited<typeof __VLS_setup>>["props"], __VLS_ctx?: __VLS_PrettifyLocal<Pick<NonNullable<Awaited<typeof __VLS_setup>>, "attrs" | "emit" | "slots">>, __VLS_exposed?: NonNullable<Awaited<typeof __VLS_setup>>["expose"], __VLS_setup?: Promise<{
     props: import("vue").PublicProps & __VLS_PrettifyLocal<IVTableProps<T> & {
-        onSelect?: ((payload: T) => any) | undefined;
         onSort?: (() => any) | undefined;
+        onSelect?: ((payload: T) => any) | undefined;
         "onSelect:all"?: ((payload: T[]) => any) | undefined;
     }> & (typeof globalThis extends {
         __VLS_PROPS_FALLBACK: infer P;
@@ -10,7 +10,7 @@ declare const __VLS_export: <T extends IVTableBaseData = IVTableBaseData>(__VLS_
     expose: (exposed: import("vue").ShallowUnwrapRef<IVTableExpose>) => void;
     attrs: any;
     slots: IVTableSlots<T>;
-    emit: ((evt: "select", payload: T) => void) & ((evt: "sort") => void) & ((evt: "select:all", payload: T[]) => void);
+    emit: ((evt: "sort") => void) & ((evt: "select", payload: T) => void) & ((evt: "select:all", payload: T[]) => void);
 }>) => import("vue").VNode & {
     __ctx?: Awaited<typeof __VLS_setup>;
 };

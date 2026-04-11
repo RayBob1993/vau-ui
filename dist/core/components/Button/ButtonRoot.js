@@ -1,9 +1,10 @@
 import { useButtonRoot as e } from "./composables/useButtonRoot.js";
 import { useFormContext as t } from "../Form/context/useFormContext.js";
 import { Primitive as n } from "../Primitive/index.js";
-import { createBlock as r, defineComponent as i, normalizeClass as a, openBlock as o, renderSlot as s, unref as c, withCtx as l } from "vue";
+import { Spinner as r } from "../Spinner/index.js";
+import { createBlock as i, createCommentVNode as a, defineComponent as o, normalizeClass as s, openBlock as c, renderSlot as l, unref as u, withCtx as d } from "vue";
 //#region src/lib/core/components/Button/ButtonRoot.vue?vue&type=script&setup=true&lang.ts
-var u = /* @__PURE__ */ i({
+var f = /* @__PURE__ */ o({
 	__name: "ButtonRoot",
 	props: {
 		loading: { type: Boolean },
@@ -22,33 +23,34 @@ var u = /* @__PURE__ */ i({
 		asChild: { type: Boolean },
 		as: { default: "button" }
 	},
-	setup(i) {
-		let u = i, { formRootContext: d, formItemContext: f } = t(), { isDisabled: p } = e({
-			formRootContext: d,
-			formItemContext: f,
-			props: () => u
+	setup(o) {
+		let f = o, { formRootContext: p, formItemContext: m } = t(), { isDisabled: h } = e({
+			formRootContext: p,
+			formItemContext: m,
+			props: () => f
 		});
-		return (e, t) => (o(), r(c(n).Root, {
-			as: i.as,
-			"as-child": i.asChild,
-			class: a(["button", [{
-				"button--disabled": c(p),
-				"button--loading": i.loading,
-				"button--plain": i.plain,
-				"button--wide": i.wide,
-				[`button--theme-${i.theme}`]: i.theme,
-				[`button--size-${i.size}`]: i.size,
-				[`button--size-xs-${i.sizeXs}`]: i.sizeXs,
-				[`button--size-sm-${i.sizeSm}`]: i.sizeSm,
-				[`button--size-md-${i.sizeMd}`]: i.sizeMd,
-				[`button--size-lg-${i.sizeLg}`]: i.sizeLg,
-				[`button--size-xl-${i.sizeXl}`]: i.sizeXl,
-				[`button--size-xxl-${i.sizeXxl}`]: i.sizeXxl
+		return (e, t) => (c(), i(u(n).Root, {
+			as: o.as,
+			"as-child": o.asChild,
+			class: s(["button", [{
+				"button--disabled": u(h),
+				"button--loading": o.loading,
+				"button--plain": o.plain,
+				"button--wide": o.wide,
+				[`button--theme-${o.theme}`]: o.theme,
+				[`button--size-${o.size}`]: o.size,
+				[`button--size-xs-${o.sizeXs}`]: o.sizeXs,
+				[`button--size-sm-${o.sizeSm}`]: o.sizeSm,
+				[`button--size-md-${o.sizeMd}`]: o.sizeMd,
+				[`button--size-lg-${o.sizeLg}`]: o.sizeLg,
+				[`button--size-xl-${o.sizeXl}`]: o.sizeXl,
+				[`button--size-xxl-${o.sizeXxl}`]: o.sizeXxl
 			}]]),
-			disabled: c(p),
-			type: i.type
+			tabindex: "0",
+			disabled: u(h),
+			type: o.type
 		}, {
-			default: l(() => [s(e.$slots, "default")]),
+			default: d(() => [o.loading ? (c(), i(u(r).Root, { key: 0 })) : a("", !0), l(e.$slots, "default")]),
 			_: 3
 		}, 8, [
 			"as",
@@ -60,6 +62,6 @@ var u = /* @__PURE__ */ i({
 	}
 });
 //#endregion
-export { u as default };
+export { f as default };
 
 //# sourceMappingURL=ButtonRoot.js.map

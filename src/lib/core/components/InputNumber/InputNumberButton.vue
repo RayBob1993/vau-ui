@@ -20,6 +20,7 @@
       [`input-number-button--${action}`]: action
     }"
     :disabled="isDisabled"
+    tabindex="-1"
     type="button"
     @click="handleAction"
   >

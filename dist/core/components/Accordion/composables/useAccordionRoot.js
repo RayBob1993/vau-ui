@@ -1,19 +1,20 @@
-import { computed as e, toValue as t } from "vue";
+import { isAccordionMultiple as e } from "../utils/is-accordion-multiple.js";
+import { computed as t, toValue as n } from "vue";
 //#region src/lib/core/components/Accordion/composables/useAccordionRoot.ts
-function n(n) {
-	let r = e(() => t(n.props));
-	function i(e) {
-		let i = t(n.modelValue);
-		if (r.value.multiple && Array.isArray(i)) {
-			if (!e) return;
-			let t = new Set(i);
-			t.has(e) ? t.delete(e) : t.add(e), n?.onChangeModel?.([...t]);
-		} else n?.onChangeModel?.(e);
-		n?.onChange?.(e);
+function r(r) {
+	let i = t(() => n(r.props));
+	function a(t) {
+		let a = n(r.modelValue);
+		if (e(a, !!i.value.multiple)) {
+			if (!t) return;
+			let e = new Set(a);
+			e.has(t) ? e.delete(t) : e.add(t), r?.onChangeModel?.([...e]);
+		} else r?.onChangeModel?.(t);
+		r?.onChange?.(t);
 	}
-	return { setModelValue: i };
+	return { setModelValue: a };
 }
 //#endregion
-export { n as useAccordionRoot };
+export { r as useAccordionRoot };
 
 //# sourceMappingURL=useAccordionRoot.js.map

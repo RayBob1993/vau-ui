@@ -1,6 +1,6 @@
-import { ModalRootContextKey as e } from "./context/key.js";
-import { useModalRoot as t } from "./composables/useModalRoot.js";
-import { useConfigProviderRootContext as n } from "../ConfigProvider/context/useConfigProviderRootContext.js";
+import { useConfigProviderRootContext as e } from "../ConfigProvider/context/useConfigProviderRootContext.js";
+import { ModalRootContextKey as t } from "./context/key.js";
+import { useModalRoot as n } from "./composables/useModalRoot.js";
 import { Teleport as r, Transition as i, createBlock as a, createElementVNode as o, createVNode as s, defineComponent as c, mergeModels as l, mergeProps as u, openBlock as d, provide as f, renderSlot as p, unref as m, useAttrs as h, useModel as g, vShow as _, withCtx as v, withDirectives as y } from "vue";
 //#region src/lib/core/components/Modal/ModalRoot.vue?vue&type=script&setup=true&lang.ts
 var b = /* @__PURE__ */ c({
@@ -33,8 +33,8 @@ var b = /* @__PURE__ */ c({
 		"close"
 	], ["update:modelValue"]),
 	setup(c, { emit: l }) {
-		let b = c, x = l, S = g(c, "modelValue"), C = h(), { close: w, teleportTarget: T } = t({
-			configProviderRootContext: n(),
+		let b = c, x = l, S = g(c, "modelValue"), C = h(), { close: w, teleportTarget: T } = n({
+			configProviderRootContext: e(),
 			modelValue: S,
 			props: b,
 			onClose: () => {
@@ -44,7 +44,7 @@ var b = /* @__PURE__ */ c({
 				x("open");
 			}
 		});
-		return f(e, {
+		return f(t, {
 			props: b,
 			close: w
 		}), (e, t) => (d(), a(r, {

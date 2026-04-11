@@ -1,0 +1,16 @@
+@use '../../mixins/appearance' as *;
+
+.accordion-trigger {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  gap: var(--accordion-trigger-gap, 0);
+  padding: var(--accordion-trigger-padding-y, 0) var(--accordion-trigger-padding-x, 0);
+  border: 0;
+  background-color: transparent;
+
+  transition: var(--transition-base);
+
+  @include utils-appearance(none);
+}

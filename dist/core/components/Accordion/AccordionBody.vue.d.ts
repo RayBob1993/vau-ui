@@ -1,4 +1,6 @@
-declare var __VLS_1: {};
+declare var __VLS_1: {
+    isActive: boolean;
+};
 type __VLS_Slots = {} & {
     default?: (props: typeof __VLS_1) => any;
 };

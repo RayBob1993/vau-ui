@@ -10,14 +10,15 @@
 
   const accordionRootContext = useAccordionRootContext();
 
-  const { isActive } = useAccordionItem({
+  const { isActive, handleToggle } = useAccordionItem({
     accordionRootContext,
     props: () => props
   });
 
   provide(AccordionItemContextKey, {
     props: () => props,
-    isActive: () => isActive.value
+    isActive: () => isActive.value,
+    handleToggle
   });
 </script>
 

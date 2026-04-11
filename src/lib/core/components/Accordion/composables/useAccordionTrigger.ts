@@ -11,13 +11,15 @@ export function useAccordionTrigger (options: UseAccordionTriggerOptions) {
   const accordionItemProps = computed<Maybe<AccordionItemProps>>(() => toValue(options.accordionItemContext?.props));
 
   const isDisabled = computed<boolean>(() => Boolean(accordionItemProps.value?.disabled));
+  const isActive = computed<boolean>(() => Boolean(toValue(options.accordionItemContext?.isActive)));
 
   function handleToggle () {
-    options.accordionRootContext?.setModelValue(accordionItemProps.value?.value);
+    options.accordionItemContext?.handleToggle();
   }
 
   return {
     isDisabled,
+    isActive,
     handleToggle
   };
 }

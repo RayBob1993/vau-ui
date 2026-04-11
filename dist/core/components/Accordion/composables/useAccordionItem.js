@@ -1,10 +1,21 @@
-import { computed as e, toValue as t } from "vue";
+import { isAccordionMultiple as e } from "../utils/is-accordion-multiple.js";
+import { computed as t, toValue as n } from "vue";
 //#region src/lib/core/components/Accordion/composables/useAccordionItem.ts
-function n(n) {
-	let r = e(() => t(n.props)), i = e(() => t(n.accordionRootContext?.modelValue)), a = e(() => !!t(n.accordionRootContext?.props)?.multiple);
-	return { isActive: e(() => a.value && Array.isArray(i.value) ? i.value.includes(r.value.value) : i.value === r.value.value) };
+function r(r) {
+	let i = t(() => n(r.props)), a = t(() => n(r.accordionRootContext?.modelValue)), o = t(() => !!n(r.accordionRootContext?.props)?.multiple), s = t(() => e(a.value, o.value) ? a.value.includes(i.value.value) : a.value === i.value.value);
+	function c() {
+		if (e(a.value, o.value)) {
+			r.accordionRootContext?.setModelValue(i.value?.value);
+			return;
+		}
+		s.value ? r.accordionRootContext?.setModelValue(void 0) : r.accordionRootContext?.setModelValue(i.value?.value);
+	}
+	return {
+		isActive: s,
+		handleToggle: c
+	};
 }
 //#endregion
-export { n as useAccordionItem };
+export { r as useAccordionItem };
 
 //# sourceMappingURL=useAccordionItem.js.map

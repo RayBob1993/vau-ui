@@ -24,6 +24,7 @@
   <div class="input-number-input">
     <input
       v-model.number="modelValue"
+      tabindex="0"
       type="number"
       class="input-number-input__native"
       v-bind="props"

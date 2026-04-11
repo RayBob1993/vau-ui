@@ -16,11 +16,14 @@ var p = /* @__PURE__ */ a({
 					default: f(() => [i(d(e).Title, null, {
 						default: f(() => [l(n.$slots, "title", {}, () => [r(u(a.title), 1)])]),
 						_: 3
-					})]),
-					_: 3
-				})]),
-				_: 3
-			}), i(d(e).Body, null, {
+					}), i(d(e).Indicator, null, {
+						default: f(() => [l(n.$slots, "indicator", { isActive: t })]),
+						_: 2
+					}, 1024)]),
+					_: 2
+				}, 1024)]),
+				_: 2
+			}, 1024), i(d(e).Body, null, {
 				default: f(() => [l(n.$slots, "default", { isActive: t })]),
 				_: 2
 			}, 1024)]),

@@ -10,13 +10,14 @@ var u = /* @__PURE__ */ i({
 		disabled: { type: Boolean }
 	},
 	setup(i) {
-		let u = i, { isActive: d } = e({
+		let u = i, { isActive: d, handleToggle: f } = e({
 			accordionRootContext: n(),
 			props: () => u
 		});
 		return s(t, {
 			props: () => u,
-			isActive: () => d.value
+			isActive: () => d.value,
+			handleToggle: f
 		}), (e, t) => (o(), r("div", { class: a(["accordion-item", {
 			"accordion-item--open": l(d),
 			"accordion-item--disabled": i.disabled

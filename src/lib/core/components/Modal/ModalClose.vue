@@ -17,6 +17,8 @@
   <button
     type="button"
     class="modal-close"
+    aria-label="Close"
+    tabindex="0"
     @click="close"
   >
     <slot>

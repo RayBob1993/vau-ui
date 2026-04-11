@@ -1,0 +1,9 @@
+@use '../../mixins/appearance' as *;
+
+.input-number-button {
+  padding: var(--input-number-button-padding-y, 0) var(--input-number-button-padding-x, 0);
+
+  transition: var(--transition-base);
+
+  @include utils-appearance(none);
+}

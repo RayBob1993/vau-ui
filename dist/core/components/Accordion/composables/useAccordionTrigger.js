@@ -1,13 +1,14 @@
 import { computed as e, toValue as t } from "vue";
 //#region src/lib/core/components/Accordion/composables/useAccordionTrigger.ts
 function n(n) {
-	let r = e(() => t(n.accordionItemContext?.props)), i = e(() => !!r.value?.disabled);
-	function a() {
-		n.accordionRootContext?.setModelValue(r.value?.value);
+	let r = e(() => t(n.accordionItemContext?.props)), i = e(() => !!r.value?.disabled), a = e(() => !!t(n.accordionItemContext?.isActive));
+	function o() {
+		n.accordionItemContext?.handleToggle();
 	}
 	return {
 		isDisabled: i,
-		handleToggle: a
+		isActive: a,
+		handleToggle: o
 	};
 }
 //#endregion

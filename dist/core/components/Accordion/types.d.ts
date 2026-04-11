@@ -12,10 +12,11 @@ export interface AccordionItemProps {
     value: AccordionValue;
     disabled?: boolean;
 }
+export interface AccordionItemScopedSlot {
+    isActive: boolean;
+}
 export interface AccordionItemSlots {
-    default?: (scope: {
-        isActive: boolean;
-    }) => Array<VNode>;
+    default?: (scope: AccordionItemScopedSlot) => Array<VNode>;
 }
 export interface AccordionRootContext {
     props: MaybeRefOrGetter<AccordionProps>;
@@ -25,4 +26,5 @@ export interface AccordionRootContext {
 export interface AccordionItemContext {
     props: MaybeRefOrGetter<AccordionItemProps>;
     isActive: MaybeRefOrGetter<boolean>;
+    handleToggle: VoidFunction;
 }

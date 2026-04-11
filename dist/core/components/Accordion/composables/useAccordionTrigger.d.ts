@@ -6,5 +6,6 @@ export interface UseAccordionTriggerOptions {
 }
 export declare function useAccordionTrigger(options: UseAccordionTriggerOptions): {
     isDisabled: import("vue").ComputedRef<boolean>;
+    isActive: import("vue").ComputedRef<boolean>;
     handleToggle: () => void;
 };

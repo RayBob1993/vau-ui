@@ -1,9 +1,18 @@
 @use '../../mixins/appearance' as *;
 
 .input-number-input {
+  padding: var(--input-number-input-padding-x, 0) var(--input-number-padding-y, 0);
+
   &__native {
     display: block;
     width: 100%;
+    border: 0;
+    padding: var(--input-number-input-native-padding-x, 0) var(--input-number-input-padding-y, 0);
+
+    font-size: var(--input-number-input-native-font-size);
+    line-height: var(--input-number-input-native-line-height);
+    font-weight: var(--input-number-input-native-font-weight);
+    color: var(--input-number-input-native-color);
 
     @include utils-appearance(none);
 

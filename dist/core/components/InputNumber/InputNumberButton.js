@@ -13,6 +13,7 @@ var d = ["disabled"], f = /* @__PURE__ */ o({
 		return (e, t) => (c(), i("button", {
 			class: s(["input-number-button", { [`input-number-button--${o.action}`]: o.action }]),
 			disabled: u(m),
+			tabindex: "-1",
 			type: "button",
 			onClick: t[0] ||= (...e) => u(p) && u(p)(...e)
 		}, [l(e.$slots, "default", {}, () => [u(h) ? (c(), i(n, { key: 0 }, [a(" - ")], 64)) : u(g) ? (c(), i(n, { key: 1 }, [a(" + ")], 64)) : r("", !0)])], 10, d));

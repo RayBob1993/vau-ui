@@ -7,4 +7,5 @@ export interface UseAccordionItemOptions {
 }
 export declare function useAccordionItem(options: UseAccordionItemOptions): {
     isActive: import("vue").ComputedRef<boolean>;
+    handleToggle: () => void;
 };

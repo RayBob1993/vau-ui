@@ -1,7 +1,7 @@
 import type { ButtonProps } from './types';
-declare var __VLS_8: {};
+declare var __VLS_13: {};
 type __VLS_Slots = {} & {
-    default?: (props: typeof __VLS_8) => any;
+    default?: (props: typeof __VLS_13) => any;
 };
 declare const __VLS_base: import("vue").DefineComponent<ButtonProps, {}, {}, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, import("vue").PublicProps, Readonly<ButtonProps> & Readonly<{}>, {
     type: HTMLButtonElement["type"];
