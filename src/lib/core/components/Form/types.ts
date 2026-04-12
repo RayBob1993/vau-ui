@@ -74,7 +74,7 @@ export interface FormItemContext {
   unregisterField: VoidFunction;
   isRequired: ComputedRef<boolean>;
   isDisabled: ComputedRef<boolean>;
-  validate: (silent?: boolean) => Promise<boolean>;
+  validate: (silent?: boolean) => FormValidationResult;
   clearValidateErrors: VoidFunction;
   reset: VoidFunction;
 }
@@ -90,7 +90,7 @@ export interface FormItemInstance {
   isValidatable: boolean;
   isRequired: boolean;
   props: FormItemProps;
-  validate: (silent?: boolean) => Promise<boolean>;
+  validate: (silent?: boolean) => FormValidationResult;
   validationStatus: FormItemValidationStatus;
   clearValidateErrors: VoidFunction;
   reset: VoidFunction;

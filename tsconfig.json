@@ -14,7 +14,6 @@
 
     // Best practices
     "strict": true,
-    "ignoreDeprecations": "6.0",
     "skipLibCheck": true,
     "noFallthroughCasesInSwitch": true,
     "noPropertyAccessFromIndexSignature": true,
@@ -25,8 +24,7 @@
       "@types/node"
     ],
 
-    // Path mapping
-    "baseUrl": ".",
+    // Path mapping (без baseUrl — см. миграцию TypeScript 6.0)
     "paths": {
       "@vau/core": ["./src/lib/core/index.ts"],
       "@vau/ui": ["./src/lib/ui/index.ts"]

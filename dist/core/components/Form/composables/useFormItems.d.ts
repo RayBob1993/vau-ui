@@ -8,7 +8,7 @@ export declare function useFormItems(): {
             disabled?: boolean | undefined;
             name?: string | undefined;
         };
-        validate: (silent?: boolean) => Promise<boolean>;
+        validate: (silent?: boolean) => import("..").FormValidationResult;
         validationStatus: {
             isError: boolean;
             isValidating: boolean;
@@ -24,7 +24,7 @@ export declare function useFormItems(): {
             disabled?: boolean | undefined;
             name?: string | undefined;
         };
-        validate: (silent?: boolean) => Promise<boolean>;
+        validate: (silent?: boolean) => import("..").FormValidationResult;
         validationStatus: {
             isError: boolean;
             isValidating: boolean;

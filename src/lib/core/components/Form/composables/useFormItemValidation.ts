@@ -1,7 +1,7 @@
-import type { FormItemError, FormItemValidationStatus, FormModel } from '../types';
+import type { FormItemError, FormItemValidationStatus, FormValidationResult, FormModel } from '../types';
 import type { ZodObject } from 'zod';
 import type { MaybeNull } from '../../../types';
-import { computed, type MaybeRefOrGetter, ref, toValue } from 'vue';
+import { type MaybeRefOrGetter, type Ref, computed, ref, toValue } from 'vue';
 
 export interface UseFormItemValidationOptions {
   data: MaybeRefOrGetter<MaybeNull<FormModel>>;
@@ -10,7 +10,14 @@ export interface UseFormItemValidationOptions {
   onInvalid?: VoidFunction;
 }
 
-export function useFormItemValidation (options: UseFormItemValidationOptions) {
+export interface UseFormItemValidationReturn {
+  validationStatus: Ref<FormItemValidationStatus>;
+  validationErrors: Ref<Array<FormItemError>>;
+  clearValidateErrors: VoidFunction;
+  validate: (silent?: boolean) => FormValidationResult;
+}
+
+export function useFormItemValidation (options: UseFormItemValidationOptions): UseFormItemValidationReturn {
   const data = computed<MaybeNull<FormModel>>(() => toValue(options.data));
   const schema = computed<MaybeNull<ZodObject>>(() => toValue(options.schema));
 

@@ -12,7 +12,10 @@
     "preview": "vite preview",
     "test": "vitest run",
     "lint:js": "eslint --fix",
-    "lint": "pnpm lint:js"
+    "lint": "pnpm lint:js",
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs"
   },
   "main": "./dist/index.js",
   "module": "./dist/index.js",
@@ -45,29 +48,31 @@
     "zod": ">=4.3.6"
   },
   "devDependencies": {
-    "ejs": "3.1.10",
     "@commitlint/cli": "20.5.0",
     "@commitlint/config-conventional": "20.5.0",
     "@stylistic/eslint-plugin": "5.9.0",
     "@types/node": "25.5.2",
     "@vitejs/plugin-vue": "6.0.4",
     "@vitejs/plugin-vue-jsx": "5.1.4",
-    "@vue/test-utils": "2.4.6",
     "@vue/eslint-config-prettier": "10.2.0",
     "@vue/eslint-config-typescript": "14.7.0",
+    "@vue/test-utils": "2.4.6",
     "@vue/tsconfig": "0.8.1",
+    "ejs": "3.1.10",
     "eslint": "9.39.2",
+    "eslint-plugin-import": "2.32.0",
     "eslint-plugin-unused-imports": "4.4.1",
     "eslint-plugin-vue": "10.8.0",
-    "eslint-plugin-import": "2.32.0",
     "happy-dom": "20.8.3",
     "husky": "9.1.7",
     "lint-staged": "16.4.0",
+    "sass-embedded": "1.99.0",
     "typescript": "6.0.2",
     "vite": "8.0.8",
+    "vitepress": "1.6.4",
     "vitest": "4.1.4",
+    "vue": "3.5.32",
     "vue-eslint-parser": "10.4.0",
-    "vue-tsc": "3.2.6",
-    "sass-embedded": "1.99.0"
+    "vue-tsc": "3.2.6"
   }
 }

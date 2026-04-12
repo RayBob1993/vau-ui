@@ -1,0 +1,14 @@
+{
+  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    "baseUrl": "..",
+    "types": ["vitepress/client", "node"],
+    "noEmit": true,
+    "paths": {
+      "@vau/core": ["./src/lib/core/index.ts"],
+      "@vau/ui": ["./src/lib/ui/index.ts"],
+      "@vau/styles": ["./src/lib/styles/core/index.scss"]
+    }
+  },
+  "include": [".vitepress/**/*", ".vitepress/**/*.vue"]
+}
