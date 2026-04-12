@@ -2,7 +2,7 @@
   import { useAccordionItemContext } from './context';
   import { useAccordionIndicator } from './composables';
   import { IconRender } from '../ConfigProvider/icon-render';
-  import { useConfigProviderRootContext } from '../ConfigProvider/context';
+  import { useConfigProviderRootContext } from '../ConfigProvider';
 
   const accordionItemContext = useAccordionItemContext();
   const configProviderRootContext = useConfigProviderRootContext();

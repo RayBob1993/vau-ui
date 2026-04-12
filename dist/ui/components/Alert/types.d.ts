@@ -1,13 +1,9 @@
-import type { SizeProp, ThemeProp, UnscopedSlot } from '../../../core/index.js';
-/**
- * Интерфейс свойств компонента VAlert
- * @interface IVAlertProps
- */
-export type IVAlertProps = {
+import type { AlertProps, UnscopedSlot } from '../../../core/index.js';
+export interface IVAlertProps extends AlertProps {
     title?: string;
     description?: string;
-    showIcon?: boolean;
-} & Partial<ThemeProp> & Partial<SizeProp>;
+    closable?: boolean;
+}
 /**
  * Интерфейс слотов компонента VAlert
  * @interface IVAlertSlots
@@ -16,4 +12,5 @@ export interface IVAlertSlots {
     default?: UnscopedSlot;
     title?: UnscopedSlot;
     description?: UnscopedSlot;
+    icon?: UnscopedSlot;
 }

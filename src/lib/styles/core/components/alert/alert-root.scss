@@ -1,0 +1,7 @@
+.alert {
+  padding: var(--alert-padding-y, 0) var(--alert-padding-x, 0);
+  border: var(--alert-border-size, 0) var(--alert-border-type, solid) var(--alert-border-color, transparent);
+
+  background-color: var(--alert-background-color);
+  border-radius: var(--alert-border-radius);
+}

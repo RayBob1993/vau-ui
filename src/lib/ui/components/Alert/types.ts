@@ -1,14 +1,10 @@
-import type { SizeProp, ThemeProp, UnscopedSlot } from '@vau/core';
+import type { AlertProps, UnscopedSlot } from '@vau/core';
 
-/**
- * Интерфейс свойств компонента VAlert
- * @interface IVAlertProps
- */
-export type IVAlertProps = {
+export interface IVAlertProps extends AlertProps {
   title?: string;
   description?: string;
-  showIcon?: boolean;
-} & Partial<ThemeProp> & Partial<SizeProp>;
+  closable?: boolean;
+}
 
 /**
  * Интерфейс слотов компонента VAlert
@@ -18,4 +14,5 @@ export interface IVAlertSlots {
   default?: UnscopedSlot;
   title?: UnscopedSlot;
   description?: UnscopedSlot;
+  icon?: UnscopedSlot;
 }

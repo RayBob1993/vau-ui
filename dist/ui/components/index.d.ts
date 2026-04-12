@@ -1,5 +1,6 @@
 export * from './Button';
 export * from './Accordion';
+export * from './Alert';
 export * from './Inplace';
 export * from './Modal';
 export * from './Layout';

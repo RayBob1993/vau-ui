@@ -1,0 +1,8 @@
+.alert-description {
+  font-family: var(--alert-description-font-family, inherit);
+  font-size: var(--alert-description-font-size);
+  font-weight: var(--alert-description-font-weight);
+  line-height: var(--alert-description-line-height);
+  color: var(--alert-description-color);
+  text-transform: var(--alert-description-transform, none);
+}

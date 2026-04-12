@@ -1,0 +1,1 @@
+{"version":3,"file":"VSpinner.vue.js","names":[],"sources":["../../../../src/lib/ui/components/Spinner/VSpinner.vue"],"sourcesContent":["<script setup lang=\"ts\">\n  import { type SpinnerProps, Spinner } from '@vau/core';\n\n  const props = defineProps<SpinnerProps>();\n</script>\n\n<template>\n  <Spinner.Root v-bind=\"props\"/>\n</template>\n"],"mappings":""}

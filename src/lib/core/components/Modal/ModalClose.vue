@@ -2,7 +2,7 @@
   import { useModalClose } from './composables';
   import { useModalRootContext } from './context';
   import { IconRender } from '../ConfigProvider/icon-render';
-  import { useConfigProviderRootContext } from '../ConfigProvider/context';
+  import { useConfigProviderRootContext } from '../ConfigProvider';
 
   const modalRootContext = useModalRootContext();
   const configProviderRootContext = useConfigProviderRootContext();

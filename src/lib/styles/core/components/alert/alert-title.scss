@@ -1,0 +1,8 @@
+.alert-title {
+  font-family: var(--alert-title-font-family, inherit);
+  font-size: var(--alert-title-font-size);
+  font-weight: var(--alert-title-font-weight);
+  line-height: var(--alert-title-line-height);
+  color: var(--alert-title-color);
+  text-transform: var(--alert-title-transform, none);
+}

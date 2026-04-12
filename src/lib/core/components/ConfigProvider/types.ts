@@ -4,6 +4,7 @@ import type { LocaleTranslation } from '../../types';
 export type IconRenderFn = () => VNodeChild;
 
 export type Icons = 'modalClose'
+  | 'alertClose'
   | 'accordionActive'
   | 'accordionInactive';
 

@@ -1,6 +1,9 @@
 //#region src/lib/core/locales/ru_RU.ts
 var e = {
-	components: { modal: { close: "Закрыть модальное окно" } },
+	components: {
+		modal: { close: "Закрыть модальное окно" },
+		alert: { close: "Закрыть уведомление" }
+	},
 	global: { loading: "Загрузка" }
 };
 //#endregion

@@ -1,44 +1,40 @@
 <script setup lang="ts">
   import type { IVAlertProps, IVAlertSlots } from './types';
+  import { Alert } from '@vau/core';
   import { computed } from 'vue';
 
-  const props = defineProps<IVAlertProps>();
+  const { title, description, closable, ...alertProps } = defineProps<IVAlertProps>();
   const slots = defineSlots<IVAlertSlots>();
 
-  const isTitleVisible = computed<boolean>(() => Boolean(props.title) || Boolean(slots?.title));
-  const isDescriptionVisible = computed<boolean>(() => Boolean(props.description) || Boolean(slots?.description));
+  const isTitleVisible = computed<boolean>(() => Boolean(title || slots?.title));
+  const isIconVisible = computed<boolean>(() => Boolean(slots?.icon));
+  const isDescriptionVisible = computed<boolean>(() => Boolean(description || slots?.description));
 </script>
 
 <template>
-  <div
-    class="v-alert"
-    :class="{
-      [`v-alert--size-${size}`]: size,
-      [`v-alert--theme-${theme}`]: theme
-    }"
-  >
-    <div class="v-alert__content">
-      <slot v-if="slots?.default"/>
+  <Alert.Root v-bind="alertProps">
+    <Alert.Header>
+      <Alert.Indicator v-if="isIconVisible">
+        <slot name="icon"/>
+      </Alert.Indicator>
 
-      <template v-else>
-        <div
-          v-if="isTitleVisible"
-          class="v-alert__title"
-        >
-          <slot name="title">
-            {{ title }}
-          </slot>
-        </div>
+      <Alert.Title v-if="isTitleVisible">
+        <slot name="title">
+          {{ title }}
+        </slot>
+      </Alert.Title>
 
-        <div
-          v-if="isDescriptionVisible"
-          class="v-alert__description"
-        >
-          <slot name="description">
-            {{ description }}
-          </slot>
-        </div>
-      </template>
-    </div>
-  </div>
+      <Alert.Close v-if="closable"/>
+    </Alert.Header>
+
+    <Alert.Body>
+      <Alert.Description v-if="isDescriptionVisible">
+        <slot name="description">
+          {{ description }}
+        </slot>
+      </Alert.Description>
+
+      <slot v-else/>
+    </Alert.Body>
+  </Alert.Root>
 </template>

@@ -1,0 +1,1 @@
+{"version":3,"file":"AlertDescription.vue.js","names":[],"sources":["../../../../src/lib/core/components/Alert/AlertDescription.vue"],"sourcesContent":["<script setup lang=\"ts\">\n\n</script>\n\n<template>\n  <div class=\"alert-description\">\n    <slot/>\n  </div>\n</template>\n"],"mappings":";;;kBAKO,OAAM,qBAAmB;;aAA9B,EAEM,OAFN,GAEM,CADJ,EAAO,EAAA,QAAA,UAAA,CAAA,CAAA"}

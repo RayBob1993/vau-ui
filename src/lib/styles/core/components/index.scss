@@ -1,3 +1,5 @@
+@use './alert';
+@use './accordion';
 @use './button';
 @use './grid';
 @use './layout';
@@ -15,6 +17,5 @@
 @use './select';
 @use './tag';
 @use './section';
-@use './accordion';
 @use './spinner';
 

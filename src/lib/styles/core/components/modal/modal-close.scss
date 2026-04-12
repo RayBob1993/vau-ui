@@ -7,7 +7,6 @@
   justify-content: center;
   margin: var(--modal-close-margin-y, 0) var(--modal-close-margin-x, 0);
   padding: var(--modal-close-padding-y, 0) var(--modal-close-padding-x, 0);
-  gap: var(--modal-close-gap);
   border: var(--modal-close-border-size) var(--modal-close-border-type) var(--modal-close-border-color);
   min-height: var(--modal-close-min-height, 0);
   max-height: var(--modal-close-max-height, none);
