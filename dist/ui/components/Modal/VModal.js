@@ -10,6 +10,10 @@ var g = /* @__PURE__ */ o({
 			type: Boolean,
 			default: !0
 		},
+		closeOnEscape: {
+			type: Boolean,
+			default: !0
+		},
 		size: {},
 		sizeXs: {},
 		sizeSm: {},
@@ -34,13 +38,15 @@ var g = /* @__PURE__ */ o({
 		let g = r(o, [
 			"title",
 			"appendToBody",
-			"position"
+			"position",
+			"closeOnEscape"
 		]), _ = s, v = m(), y = p(o, "modelValue");
 		return (r, s) => (l(), t(f(e).Root, c({
 			modelValue: y.value,
 			"onUpdate:modelValue": s[0] ||= (e) => y.value = e
 		}, g, {
 			"append-to-body": o.appendToBody,
+			"close-on-escape": o.closeOnEscape,
 			position: o.position,
 			onClose: s[1] ||= (e) => _("close"),
 			onOpen: s[2] ||= (e) => _("open"),
@@ -74,6 +80,7 @@ var g = /* @__PURE__ */ o({
 		}, 16, [
 			"modelValue",
 			"append-to-body",
+			"close-on-escape",
 			"position"
 		]));
 	}

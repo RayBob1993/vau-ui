@@ -1,14 +1,19 @@
 import { useConfigProviderRootContext as e } from "../ConfigProvider/context/useConfigProviderRootContext.js";
-import { ModalRootContextKey as t } from "./context/key.js";
-import { useModalRoot as n } from "./composables/useModalRoot.js";
-import { Teleport as r, Transition as i, createBlock as a, createElementVNode as o, createVNode as s, defineComponent as c, mergeModels as l, mergeProps as u, openBlock as d, provide as f, renderSlot as p, unref as m, useAttrs as h, useModel as g, vShow as _, withCtx as v, withDirectives as y } from "vue";
+import { useEscapeKey as t } from "../../composables/useEscapeKey.js";
+import { ModalRootContextKey as n } from "./context/key.js";
+import { useModalRoot as r } from "./composables/useModalRoot.js";
+import { Teleport as i, Transition as a, createBlock as o, createElementVNode as s, createVNode as c, defineComponent as l, mergeModels as u, mergeProps as d, openBlock as f, provide as p, renderSlot as m, unref as h, useAttrs as g, useModel as _, vShow as v, withCtx as y, withDirectives as b } from "vue";
 //#region src/lib/core/components/Modal/ModalRoot.vue?vue&type=script&setup=true&lang.ts
-var b = /* @__PURE__ */ c({
+var x = /* @__PURE__ */ l({
 	inheritAttrs: !1,
 	__name: "ModalRoot",
-	props: /* @__PURE__ */ l({
+	props: /* @__PURE__ */ u({
 		position: { default: "center" },
 		appendToBody: {
+			type: Boolean,
+			default: !0
+		},
+		closeOnEscape: {
 			type: Boolean,
 			default: !0
 		},
@@ -26,48 +31,54 @@ var b = /* @__PURE__ */ c({
 		},
 		modelModifiers: {}
 	}),
-	emits: /* @__PURE__ */ l([
+	emits: /* @__PURE__ */ u([
 		"opened",
 		"closed",
 		"open",
 		"close"
 	], ["update:modelValue"]),
-	setup(c, { emit: l }) {
-		let b = c, x = l, S = g(c, "modelValue"), C = h(), { close: w, teleportTarget: T } = n({
+	setup(l, { emit: u }) {
+		let x = l, S = u, C = _(l, "modelValue"), w = g(), { close: T, teleportTarget: E } = r({
 			configProviderRootContext: e(),
-			modelValue: S,
-			props: b,
+			modelValue: C,
+			props: x,
 			onClose: () => {
-				S.value = !1, x("close");
+				C.value = !1, S("close");
 			},
 			onOpen: () => {
-				x("open");
+				S("open");
 			}
 		});
-		return f(t, {
-			props: b,
-			close: w
-		}), (e, t) => (d(), a(r, {
-			to: m(T),
-			disabled: !c.appendToBody
-		}, [s(i, {
+		return t({
+			when: () => C.value,
+			enabled: () => x.closeOnEscape,
+			onEscape: () => {
+				T();
+			}
+		}), p(n, {
+			props: x,
+			close: T
+		}), (e, t) => (f(), o(i, {
+			to: h(E),
+			disabled: !l.appendToBody
+		}, [c(a, {
 			name: "fade-in-down",
-			onAfterEnter: t[1] ||= (e) => x("opened", e),
-			onAfterLeave: t[2] ||= (e) => x("closed", e)
+			onAfterEnter: t[1] ||= (e) => S("opened", e),
+			onAfterLeave: t[2] ||= (e) => S("closed", e)
 		}, {
-			default: v(() => [y(o("div", u({ class: "modal" }, m(C), {
+			default: y(() => [b(s("div", d({ class: "modal" }, h(w), {
 				class: {
-					"modal--open": S.value,
-					[`modal--position-${c.position}`]: c.position,
-					[`modal--size-${c.size}`]: c.size
+					"modal--open": C.value,
+					[`modal--position-${l.position}`]: l.position,
+					[`modal--size-${l.size}`]: l.size
 				},
-				onClick: t[0] ||= (...e) => m(w) && m(w)(...e)
-			}), [p(e.$slots, "default")], 16), [[_, S.value]])]),
+				onClick: t[0] ||= (...e) => h(T) && h(T)(...e)
+			}), [m(e.$slots, "default")], 16), [[v, C.value]])]),
 			_: 3
 		})], 8, ["to", "disabled"]));
 	}
 });
 //#endregion
-export { b as default };
+export { x as default };
 
 //# sourceMappingURL=ModalRoot.js.map

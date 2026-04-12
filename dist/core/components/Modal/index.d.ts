@@ -3,6 +3,7 @@ export declare const Modal: {
         new (...args: any[]): import("vue").CreateComponentPublicInstanceWithMixins<Readonly<{
             position?: import("./types").ModalPosition;
             appendToBody?: boolean;
+            closeOnEscape?: boolean;
         } & Partial<import("../../index.js").SizeProp> & {
             modelValue: boolean;
         }> & Readonly<{
@@ -20,6 +21,7 @@ export declare const Modal: {
         }, import("vue").PublicProps, {
             position: import("./types").ModalPosition;
             appendToBody: boolean;
+            closeOnEscape: boolean;
         }, false, {}, {}, import("vue").GlobalComponents, import("vue").GlobalDirectives, string, {}, any, import("vue").ComponentProvideOptions, {
             P: {};
             B: {};
@@ -30,6 +32,7 @@ export declare const Modal: {
         }, Readonly<{
             position?: import("./types").ModalPosition;
             appendToBody?: boolean;
+            closeOnEscape?: boolean;
         } & Partial<import("../../index.js").SizeProp> & {
             modelValue: boolean;
         }> & Readonly<{
@@ -41,6 +44,7 @@ export declare const Modal: {
         }>, {}, {}, {}, {}, {
             position: import("./types").ModalPosition;
             appendToBody: boolean;
+            closeOnEscape: boolean;
         }>;
         __isFragment?: never;
         __isTeleport?: never;
@@ -48,6 +52,7 @@ export declare const Modal: {
     } & import("vue").ComponentOptionsBase<Readonly<{
         position?: import("./types").ModalPosition;
         appendToBody?: boolean;
+        closeOnEscape?: boolean;
     } & Partial<import("../../index.js").SizeProp> & {
         modelValue: boolean;
     }> & Readonly<{
@@ -65,6 +70,7 @@ export declare const Modal: {
     }, string, {
         position: import("./types").ModalPosition;
         appendToBody: boolean;
+        closeOnEscape: boolean;
     }, {}, string, {}, import("vue").GlobalComponents, import("vue").GlobalDirectives, string, import("vue").ComponentProvideOptions> & import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps & (new () => {
         $slots: {
             default?: (props: {}) => any;

@@ -2,12 +2,14 @@
   import type { ModalEmits, ModalProps } from './types';
   import { ModalRootContextKey } from './context';
   import { useModalRoot } from './composables';
+  import { useEscapeKey } from '../../composables';
   import { useConfigProviderRootContext } from '../ConfigProvider';
   import { provide, useAttrs } from 'vue';
 
   const props = withDefaults(defineProps<ModalProps>(), {
     position: 'center',
-    appendToBody: true
+    appendToBody: true,
+    closeOnEscape: true
   });
 
   const emit = defineEmits<ModalEmits>();
@@ -35,6 +37,14 @@
     },
     onOpen: () => {
       emit('open');
+    }
+  });
+
+  useEscapeKey({
+    when: () => modelValue.value,
+    enabled: () => props.closeOnEscape,
+    onEscape: () => {
+      close();
     }
   });
 

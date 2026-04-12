@@ -6,6 +6,7 @@
     title,
     appendToBody = true,
     position = 'center',
+    closeOnEscape = true,
     ...modalRootProps
   } = defineProps<IVModalProps>();
   const emit = defineEmits<ModalEmits>();
@@ -21,6 +22,7 @@
     v-model="modelValue"
     v-bind="modalRootProps"
     :append-to-body="appendToBody"
+    :close-on-escape="closeOnEscape"
     :position="position"
     @close="emit('close')"
     @open="emit('open')"

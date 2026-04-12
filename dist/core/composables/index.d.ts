@@ -7,3 +7,4 @@ export * from './useAnimatedNumber';
 export * from './useWindowScroll';
 export * from './useScrollTo';
 export * from './useEmitProxy';
+export * from './useEscapeKey';
