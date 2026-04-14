@@ -1,0 +1,9 @@
+:root {
+  --vp-layout-max-width: 100%;
+}
+
+.VPDoc .container,
+.VPDoc .content-container,
+.VPDoc .content {
+  max-width: 100% !important;
+}
