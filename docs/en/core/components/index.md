@@ -4,4 +4,8 @@
 
 Source: [`src/lib/core/components/`](https://github.com/RayBob1993/vau-ui/tree/main/src/lib/core/components).
 
-Per-primitive pages will be added here over time.
+## Available components
+
+- [Button](button.md)
+
+Per-primitive pages for the remaining primitives will be added over time.

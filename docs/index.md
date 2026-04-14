@@ -11,13 +11,13 @@ hero:
       link: https://github.com/RayBob1993/vau-ui
     - theme: alt
       text: Начало работы
-      link: /ru/getting-started
+      link: /getting-started
     - theme: alt
       text: Core
-      link: /ru/core
+      link: /core
     - theme: alt
       text: UI
-      link: /ru/ui
+      link: /ui
 ---
 
 ## Обзор

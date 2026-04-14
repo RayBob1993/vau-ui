@@ -4,4 +4,8 @@
 
 Исходники: [`src/lib/core/components/`](https://github.com/RayBob1993/vau-ui/tree/main/src/lib/core/components).
 
-Дальше здесь появятся страницы по отдельным примитивам.
+## Доступные компоненты
+
+- [Button](button.md)
+
+Дальше здесь появятся страницы по остальным примитивам.

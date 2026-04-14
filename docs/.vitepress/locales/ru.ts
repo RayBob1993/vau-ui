@@ -3,43 +3,70 @@ import type { DefaultTheme } from 'vitepress';
 import type { DocLocaleConfig } from './types';
 
 /**
- * Русская документация: контент в `docs/ru/`, префикс URL `/ru`.
+ * Базовая (root) русская документация: контент в `docs/`.
  */
 const ruThemeConfig: DefaultTheme.Config = {
   nav: [
     {
       text: 'Начало работы',
-      link: '/ru/getting-started',
-      activeMatch: '^/ru/getting-started'
+      link: '/getting-started',
+      activeMatch: '^/getting-started'
     },
-    { text: 'Core', link: '/ru/core', activeMatch: '^/ru/core' },
-    { text: 'UI', link: '/ru/ui', activeMatch: '^/ru/ui' }
+    { text: 'Core', link: '/core', activeMatch: '^/core' },
+    { text: 'UI', link: '/ui', activeMatch: '^/ui' }
   ],
   sidebar: {
-    '/ru/getting-started': [
+    '/getting-started': [
       {
         text: 'Введение',
-        items: [{ text: 'Начало работы', link: '/ru/getting-started' }]
+        items: [{ text: 'Начало работы', link: '/getting-started' }]
       }
     ],
-    '/ru/core': [
+    '/core': [
       {
         text: 'Core',
         items: [
-          { text: 'Обзор', link: '/ru/core' },
-          { text: 'Компоненты', link: '/ru/core/components' },
-          { text: 'Composables', link: '/ru/core/composables' },
-          { text: 'Утилиты', link: '/ru/core/utils' },
-          { text: 'Директивы', link: '/ru/core/directives' },
-          { text: 'Константы', link: '/ru/core/constants' },
-          { text: 'Типы', link: '/ru/core/types' }
+          { text: 'Обзор', link: '/core' },
+          {
+            text: 'Компоненты',
+            collapsed: false,
+            items: [
+              { text: 'Обзор', link: '/core/components' },
+              { text: 'Button', link: '/core/components/button' }
+            ]
+          },
+          {
+            text: 'Composables',
+            collapsed: true,
+            items: [{ text: 'Обзор', link: '/core/composables' }]
+          },
+          {
+            text: 'Утилиты',
+            collapsed: true,
+            items: [{ text: 'Обзор', link: '/core/utils' }]
+          },
+          {
+            text: 'Директивы',
+            collapsed: true,
+            items: [{ text: 'Обзор', link: '/core/directives' }]
+          },
+          {
+            text: 'Константы',
+            collapsed: true,
+            items: [{ text: 'Обзор', link: '/core/constants' }]
+          },
+          {
+            text: 'Типы',
+            collapsed: true,
+            items: [{ text: 'Обзор', link: '/core/types' }]
+          }
         ]
       }
     ],
-    '/ru/ui': [
+    '/ui': [
       {
         text: 'UI',
-        items: [{ text: 'Обзор', link: '/ru/ui' }]
+        items: [{ text: 'Обзор', link: '/ui' }]
       }
     ]
   },
@@ -60,7 +87,7 @@ const ruThemeConfig: DefaultTheme.Config = {
     provider: 'local',
     options: {
       locales: {
-        ru: {
+        root: {
           translations: {
             button: {
               buttonText: 'Поиск',
@@ -89,12 +116,11 @@ const ruThemeConfig: DefaultTheme.Config = {
 };
 
 /**
- * Локаль русской документации (`docs/ru/`).
+ * Root-локаль русской документации (`docs/`).
  */
 export const ruLocale: DocLocaleConfig = {
   label: 'Русский',
   lang: 'ru-RU',
-  link: '/ru',
   title: 'VauUI',
   description: 'Компонентная UI-библиотека для Vue 3',
   themeConfig: ruThemeConfig

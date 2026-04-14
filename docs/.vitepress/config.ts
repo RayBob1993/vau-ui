@@ -11,12 +11,12 @@ const projectRoot = process.cwd();
 
 /**
  * Конфигурация сайта документации VitePress.
- * Локали: `ru` — `docs/ru/`; `en` — `docs/en/`. Редирект `/` → `/ru` в `.vitepress/theme/index.ts`.
+ * Локали: `root` (русский) — `docs/`; `en` — `docs/en/` (встроенный i18n VitePress).
  */
 export default defineConfig({
   cleanUrls: true,
   locales: {
-    ru: ruLocale,
+    root: ruLocale,
     en: enLocale
   },
   vite: {

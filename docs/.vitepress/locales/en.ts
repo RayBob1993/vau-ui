@@ -27,12 +27,39 @@ const enThemeConfig: DefaultTheme.Config = {
         text: 'Core',
         items: [
           { text: 'Overview', link: '/en/core' },
-          { text: 'Components', link: '/en/core/components' },
-          { text: 'Composables', link: '/en/core/composables' },
-          { text: 'Utils', link: '/en/core/utils' },
-          { text: 'Directives', link: '/en/core/directives' },
-          { text: 'Constants', link: '/en/core/constants' },
-          { text: 'Types', link: '/en/core/types' }
+          {
+            text: 'Components',
+            collapsed: false,
+            items: [
+              { text: 'Overview', link: '/en/core/components' },
+              { text: 'Button', link: '/en/core/components/button' }
+            ]
+          },
+          {
+            text: 'Composables',
+            collapsed: true,
+            items: [{ text: 'Overview', link: '/en/core/composables' }]
+          },
+          {
+            text: 'Utils',
+            collapsed: true,
+            items: [{ text: 'Overview', link: '/en/core/utils' }]
+          },
+          {
+            text: 'Directives',
+            collapsed: true,
+            items: [{ text: 'Overview', link: '/en/core/directives' }]
+          },
+          {
+            text: 'Constants',
+            collapsed: true,
+            items: [{ text: 'Overview', link: '/en/core/constants' }]
+          },
+          {
+            text: 'Types',
+            collapsed: true,
+            items: [{ text: 'Overview', link: '/en/core/types' }]
+          }
         ]
       }
     ],

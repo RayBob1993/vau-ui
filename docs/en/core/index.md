@@ -16,12 +16,12 @@ import { Button, Form, Accordion } from 'vau-ui';
 
 ## Sections
 
-- [Components](components.md)
-- [Composables](composables.md)
-- [Utils](utils.md)
-- [Directives](directives.md)
-- [Constants](constants.md)
-- [Types](types.md)
+- [Components](components/)
+- [Composables](composables/)
+- [Utils](utils/)
+- [Directives](directives/)
+- [Constants](constants/)
+- [Types](types/)
 
 ## Source
 
