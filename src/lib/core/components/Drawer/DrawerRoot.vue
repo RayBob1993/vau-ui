@@ -2,7 +2,7 @@
   import type { DrawerEmits, DrawerProps } from './types';
   import { DrawerRootContextKey } from './context';
   import { useDrawerRoot } from './composables';
-  import { useEscapeKey } from '../../composables';
+  import { useBodyScrollbar, useEscapeKey } from '../../composables';
   import { useConfigProviderRootContext } from '../ConfigProvider';
   import { provide, useAttrs } from 'vue';
 
@@ -26,6 +26,8 @@
 
   const configProviderRootContext = useConfigProviderRootContext();
 
+  const { show, hide } = useBodyScrollbar();
+
   const { close, teleportTarget } = useDrawerRoot({
     configProviderRootContext,
     modelValue,
@@ -33,9 +35,13 @@
     onClose: () => {
       modelValue.value = false;
 
+      show();
+
       emit('close');
     },
     onOpen: () => {
+      hide();
+
       emit('open');
     }
   });

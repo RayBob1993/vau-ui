@@ -2,7 +2,7 @@
   import type { ModalEmits, ModalProps } from './types';
   import { ModalRootContextKey } from './context';
   import { useModalRoot } from './composables';
-  import { useEscapeKey } from '../../composables';
+  import { useBodyScrollbar, useEscapeKey } from '../../composables';
   import { useConfigProviderRootContext } from '../ConfigProvider';
   import { provide, useAttrs } from 'vue';
 
@@ -26,6 +26,8 @@
 
   const configProviderRootContext = useConfigProviderRootContext();
 
+  const { show, hide } = useBodyScrollbar();
+
   const { close, teleportTarget } = useModalRoot({
     configProviderRootContext,
     modelValue,
@@ -33,9 +35,13 @@
     onClose: () => {
       modelValue.value = false;
 
+      show();
+
       emit('close');
     },
     onOpen: () => {
+      hide();
+
       emit('open');
     }
   });

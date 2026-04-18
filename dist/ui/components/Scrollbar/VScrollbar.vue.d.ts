@@ -4,19 +4,19 @@ type __VLS_Slots = {} & {
     default?: (props: typeof __VLS_8) => any;
 };
 declare const __VLS_base: import("vue").DefineComponent<ScrollbarProps, {}, {}, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {
+    scroll: (payload: Event) => any;
     mousedown: (payload: MouseEvent) => any;
     mouseleave: (payload: MouseEvent) => any;
     mousemove: (payload: MouseEvent) => any;
     mouseup: (payload: MouseEvent) => any;
-    scroll: (payload: Event) => any;
     scrollEndY: () => any;
     scrollEndX: () => any;
 }, string, import("vue").PublicProps, Readonly<ScrollbarProps> & Readonly<{
+    onScroll?: ((payload: Event) => any) | undefined;
     onMousedown?: ((payload: MouseEvent) => any) | undefined;
     onMouseleave?: ((payload: MouseEvent) => any) | undefined;
     onMousemove?: ((payload: MouseEvent) => any) | undefined;
     onMouseup?: ((payload: MouseEvent) => any) | undefined;
-    onScroll?: ((payload: Event) => any) | undefined;
     onScrollEndY?: (() => any) | undefined;
     onScrollEndX?: (() => any) | undefined;
 }>, {}, {}, {}, {}, string, import("vue").ComponentProvideOptions, false, {}, any>;

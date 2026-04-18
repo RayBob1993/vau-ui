@@ -1,19 +1,19 @@
 export declare const Scrollbar: {
     Root: {
         new (...args: any[]): import("vue").CreateComponentPublicInstanceWithMixins<Readonly<import("./types").ScrollbarProps> & Readonly<{
+            onScroll?: ((payload: Event) => any) | undefined;
             onMousedown?: ((payload: MouseEvent) => any) | undefined;
             onMouseleave?: ((payload: MouseEvent) => any) | undefined;
             onMousemove?: ((payload: MouseEvent) => any) | undefined;
             onMouseup?: ((payload: MouseEvent) => any) | undefined;
-            onScroll?: ((payload: Event) => any) | undefined;
             onScrollEndY?: (() => any) | undefined;
             onScrollEndX?: (() => any) | undefined;
         }>, {}, {}, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {
+            scroll: (payload: Event) => any;
             mousedown: (payload: MouseEvent) => any;
             mouseleave: (payload: MouseEvent) => any;
             mousemove: (payload: MouseEvent) => any;
             mouseup: (payload: MouseEvent) => any;
-            scroll: (payload: Event) => any;
             scrollEndY: () => any;
             scrollEndX: () => any;
         }, import("vue").PublicProps, {
@@ -29,11 +29,11 @@ export declare const Scrollbar: {
             M: {};
             Defaults: {};
         }, Readonly<import("./types").ScrollbarProps> & Readonly<{
+            onScroll?: ((payload: Event) => any) | undefined;
             onMousedown?: ((payload: MouseEvent) => any) | undefined;
             onMouseleave?: ((payload: MouseEvent) => any) | undefined;
             onMousemove?: ((payload: MouseEvent) => any) | undefined;
             onMouseup?: ((payload: MouseEvent) => any) | undefined;
-            onScroll?: ((payload: Event) => any) | undefined;
             onScrollEndY?: (() => any) | undefined;
             onScrollEndX?: (() => any) | undefined;
         }>, {}, {}, {}, {}, {
@@ -46,19 +46,19 @@ export declare const Scrollbar: {
         __isTeleport?: never;
         __isSuspense?: never;
     } & import("vue").ComponentOptionsBase<Readonly<import("./types").ScrollbarProps> & Readonly<{
+        onScroll?: ((payload: Event) => any) | undefined;
         onMousedown?: ((payload: MouseEvent) => any) | undefined;
         onMouseleave?: ((payload: MouseEvent) => any) | undefined;
         onMousemove?: ((payload: MouseEvent) => any) | undefined;
         onMouseup?: ((payload: MouseEvent) => any) | undefined;
-        onScroll?: ((payload: Event) => any) | undefined;
         onScrollEndY?: (() => any) | undefined;
         onScrollEndX?: (() => any) | undefined;
     }>, {}, {}, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {
+        scroll: (payload: Event) => any;
         mousedown: (payload: MouseEvent) => any;
         mouseleave: (payload: MouseEvent) => any;
         mousemove: (payload: MouseEvent) => any;
         mouseup: (payload: MouseEvent) => any;
-        scroll: (payload: Event) => any;
         scrollEndY: () => any;
         scrollEndX: () => any;
     }, string, {
