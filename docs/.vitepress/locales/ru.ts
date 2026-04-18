@@ -71,7 +71,7 @@ const ruThemeConfig: DefaultTheme.Config = {
     ]
   },
   socialLinks: [
-    { icon: 'github', link: 'https://github.com/RayBob1993/vau-ui' }
+    { icon: 'github', link: 'https://github.com/RayBob1993/vau' }
   ],
   footer: {
     message: 'Выпущено под лицензией MIT'

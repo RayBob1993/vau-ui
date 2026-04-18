@@ -8,13 +8,13 @@
 ## Установка
 
 ```bash
-pnpm add vau-ui
+pnpm add vau
 ```
 ```bash
-npm install vau-ui
+npm install vau
 ```
 ```bash
-yarn add vau-ui
+yarn add vau
 ```
 
 ## Локальная разработка

@@ -1,13 +1,13 @@
 # Getting started
 
-A minimal guide for the **`vau-ui`** npm package. This section will expand as the API stabilizes and the package is published.
+A minimal guide for the **`vau`** npm package. This section will expand as the API stabilizes and the package is published.
 
 ## Installation
 
 When the package is published to npm:
 
 ```bash
-pnpm add vau-ui
+pnpm add vau
 ```
 
 Before publication you can depend on Git (branch or tag) — see [pnpm’s docs on git dependencies](https://pnpm.io/cli/add).
@@ -21,7 +21,7 @@ The library declares **peer dependencies** (your app must provide them), includi
 Primitives and widgets are imported from a single package:
 
 ```ts
-import { Button, VButton } from 'vau-ui';
+import { Button, VButton } from 'vau';
 ```
 
 More on the **Core** and **UI** layers: [Core](core/index.md), [UI](ui/index.md).
@@ -31,7 +31,7 @@ More on the **Core** and **UI** layers: [Core](core/index.md), [UI](ui/index.md)
 Import core styles in your app entry, for example:
 
 ```ts
-import 'vau-ui/styles';
+import 'vau/styles';
 ```
 
-Additional entries (`config`, `mixins`) are listed under `exports` in the `vau-ui` `package.json`.
+Additional entries (`config`, `mixins`) are listed under `exports` in the `vau` `package.json`.

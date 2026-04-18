@@ -8,7 +8,7 @@ hero:
   actions:
     - theme: brand
       text: Repository
-      link: https://github.com/RayBob1993/vau-ui
+      link: https://github.com/RayBob1993/vau
     - theme: alt
       text: Getting started
       link: /en/getting-started
@@ -22,8 +22,8 @@ hero:
 
 ## Overview
 
-**VauUI** is a set of primitives and widgets for building Vue 3 interfaces. The published npm package is **`vau-ui`** (Core and UI layers share one entry point). Source code lives in this repository; documentation will grow over time.
+**VauUI** is a set of primitives and widgets for building Vue 3 interfaces. The published npm package is **`vau`** (Core and UI layers share one entry point). Source code lives in this repository; documentation will grow over time.
 
 ### Local library development
 
-See the root [README](https://github.com/RayBob1993/vau-ui#readme): install dependencies, `pnpm serve`, build.
+See the root [README](https://github.com/RayBob1993/vau#readme): install dependencies, `pnpm serve`, build.

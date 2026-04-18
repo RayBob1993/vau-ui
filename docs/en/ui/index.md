@@ -1,6 +1,6 @@
 # UI
 
-The **ui** layer of the **`vau-ui`** npm package — ready-made **`V*`** widgets and Vue **plugins**. It builds on the **core** layer from the same package and does not expose the lower layer directly as the public consumer API.
+The **ui** layer of the **`vau`** npm package — ready-made **`V*`** widgets and Vue **plugins**. It builds on the **core** layer from the same package and does not expose the lower layer directly as the public consumer API.
 
 ## Purpose
 
@@ -11,13 +11,13 @@ The **ui** layer of the **`vau-ui`** npm package — ready-made **`V*`** widgets
 ## Import
 
 ```ts
-import { VButton, VForm } from 'vau-ui';
+import { VButton, VForm } from 'vau';
 ```
 
-See [`src/lib/ui/`](https://github.com/RayBob1993/vau-ui/tree/main/src/lib/ui) for exports; use plugins from the `plugins` subfolders when needed.
+See [`src/lib/ui/`](https://github.com/RayBob1993/vau/tree/main/src/lib/ui) for exports; use plugins from the `plugins` subfolders when needed.
 
 ## Source
 
-Repository path: [`src/lib/ui/`](https://github.com/RayBob1993/vau-ui/tree/main/src/lib/ui).
+Repository path: [`src/lib/ui/`](https://github.com/RayBob1993/vau/tree/main/src/lib/ui).
 
 This section will grow with widget pages and plugin setup guides.

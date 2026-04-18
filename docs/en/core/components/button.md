@@ -21,14 +21,14 @@ Template structure example:
 ## Import
 
 ```ts
-import { Button } from 'vau-ui';
+import { Button } from 'vau';
 ```
 
 ## Basic usage
 
 ```vue
 <script setup lang="ts">
-  import { Button } from 'vau-ui';
+  import { Button } from 'vau';
 </script>
 
 <template>
@@ -60,7 +60,7 @@ Available `theme` values: `base`, `primary`, `secondary`, `tertiary`, `danger`, 
 
 ```vue
 <script setup lang="ts">
-  import { Button } from 'vau-ui';
+  import { Button } from 'vau';
 </script>
 
 <template>
@@ -80,7 +80,7 @@ Available `size` values: `mini`, `small`, `medium`, `large`, `big`, `huge`, `mas
 
 ```vue
 <script setup lang="ts">
-  import { Button } from 'vau-ui';
+  import { Button } from 'vau';
 </script>
 
 <template>
@@ -102,7 +102,7 @@ For responsive sizing, use `sizeXs`, `sizeSm`, `sizeMd`, `sizeLg`, `sizeXl`, and
 
 ```vue
 <script setup lang="ts">
-  import { Button } from 'vau-ui';
+  import { Button } from 'vau';
 </script>
 
 <template>
@@ -118,7 +118,7 @@ For responsive sizing, use `sizeXs`, `sizeSm`, `sizeMd`, `sizeLg`, `sizeXl`, and
 
 ```vue
 <script setup lang="ts">
-  import { Button } from 'vau-ui';
+  import { Button } from 'vau';
 </script>
 
 <template>
@@ -134,12 +134,12 @@ For responsive sizing, use `sizeXs`, `sizeSm`, `sizeMd`, `sizeLg`, `sizeXl`, and
 
 ```vue
 <script setup lang="ts">
-  import { Button } from 'vau-ui';
+  import { Button } from 'vau';
 </script>
 
 <template>
   <Button.Root as-child>
-    <a href="https://github.com/RayBob1993/vau-ui" target="_blank" rel="noreferrer">
+    <a href="https://github.com/RayBob1993/vau" target="_blank" rel="noreferrer">
       Open repository
     </a>
   </Button.Root>
@@ -150,7 +150,7 @@ Rendered DOM markup:
 
 ```html
 <a
-  href="https://github.com/RayBob1993/vau-ui"
+  href="https://github.com/RayBob1993/vau"
   target="_blank"
   rel="noreferrer"
   class="button"
@@ -204,6 +204,6 @@ Rendered DOM markup:
 
 ## Source
 
-- [`src/lib/core/components/Button/index.ts`](https://github.com/RayBob1993/vau-ui/tree/main/src/lib/core/components/Button/index.ts)
-- [`src/lib/core/components/Button/ButtonRoot.vue`](https://github.com/RayBob1993/vau-ui/tree/main/src/lib/core/components/Button/ButtonRoot.vue)
-- [`src/lib/core/components/Button/ButtonGroup.vue`](https://github.com/RayBob1993/vau-ui/tree/main/src/lib/core/components/Button/ButtonGroup.vue)
+- [`src/lib/core/components/Button/index.ts`](https://github.com/RayBob1993/vau/tree/main/src/lib/core/components/Button/index.ts)
+- [`src/lib/core/components/Button/ButtonRoot.vue`](https://github.com/RayBob1993/vau/tree/main/src/lib/core/components/Button/ButtonRoot.vue)
+- [`src/lib/core/components/Button/ButtonGroup.vue`](https://github.com/RayBob1993/vau/tree/main/src/lib/core/components/Button/ButtonGroup.vue)

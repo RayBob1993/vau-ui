@@ -1,13 +1,13 @@
 # Начало работы
 
-Краткий старт с npm-пакетом **`vau-ui`**. Раздел будет расширяться по мере публикации и стабилизации API.
+Краткий старт с npm-пакетом **`vau`**. Раздел будет расширяться по мере публикации и стабилизации API.
 
 ## Установка
 
 Когда пакет будет опубликован в npm:
 
 ```bash
-pnpm add vau-ui
+pnpm add vau
 ```
 
 До публикации можно подключать зависимость из Git (ветка или тег) — см. [документацию pnpm по `git`-зависимостям](https://pnpm.io/cli/add).
@@ -21,7 +21,7 @@ pnpm add vau-ui
 API примитивов и виджетов импортируется из одного пакета:
 
 ```ts
-import { Button, VButton } from 'vau-ui';
+import { Button, VButton } from 'vau';
 ```
 
 Слои **Core** и **UI** подробнее: [Core](core/index.md), [UI](ui/index.md).
@@ -31,7 +31,7 @@ import { Button, VButton } from 'vau-ui';
 Подключите стили ядра, например в точке входа приложения:
 
 ```ts
-import 'vau-ui/styles';
+import 'vau/styles';
 ```
 
-Дополнительные entry (`config`, `mixins`) перечислены в `exports` пакета `vau-ui` в `package.json`.
+Дополнительные entry (`config`, `mixins`) перечислены в `exports` пакета `vau` в `package.json`.

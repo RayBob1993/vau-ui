@@ -9,7 +9,7 @@
 
 ```vue
 <script setup lang="ts">
-  import { Button } from 'vau-ui';
+  import { Button } from 'vau';
 </script>
 
 <template>
@@ -23,7 +23,7 @@
 
 ```vue
 <script setup lang="ts">
-  import { Button } from 'vau-ui';
+  import { Button } from 'vau';
 </script>
 
 <template>
@@ -45,7 +45,7 @@
 
 ```vue
 <script setup lang="ts">
-  import { Button } from 'vau-ui';
+  import { Button } from 'vau';
 </script>
 
 <template>
@@ -59,7 +59,7 @@
 
 ```vue
 <script setup lang="ts">
-  import { Button } from 'vau-ui';
+  import { Button } from 'vau';
 </script>
 
 <template>
@@ -75,7 +75,7 @@
 
 ```vue
 <script setup lang="ts">
-  import { Button } from 'vau-ui';
+  import { Button } from 'vau';
 </script>
 
 <template>
@@ -95,7 +95,7 @@
 
 ```vue
 <script setup lang="ts">
-  import { Button } from 'vau-ui';
+  import { Button } from 'vau';
 </script>
 
 <template>
@@ -117,7 +117,7 @@
 
 ```vue
 <script setup lang="ts">
-  import { Button } from 'vau-ui';
+  import { Button } from 'vau';
 </script>
 
 <template>
@@ -133,7 +133,7 @@
 
 ```vue
 <script setup lang="ts">
-  import { Button } from 'vau-ui';
+  import { Button } from 'vau';
 </script>
 
 <template>
@@ -149,12 +149,12 @@
 
 ```vue
 <script setup lang="ts">
-  import { Button } from 'vau-ui';
+  import { Button } from 'vau';
 </script>
 
 <template>
   <Button.Root theme="base" size="md" as-child>
-    <a href="https://github.com/RayBob1993/vau-ui" target="_blank" rel="noreferrer">
+    <a href="https://github.com/RayBob1993/vau" target="_blank" rel="noreferrer">
       Открыть репозиторий
     </a>
   </Button.Root>
@@ -165,7 +165,7 @@
 
 ```html
 <a
-  href="https://github.com/RayBob1993/vau-ui"
+  href="https://github.com/RayBob1993/vau"
   target="_blank"
   rel="noreferrer"
   class="button button--theme-base button--size-md"
