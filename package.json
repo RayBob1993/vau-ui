@@ -2,8 +2,8 @@
   "name": "vau",
   "version": "0.0.88",
   "license": "MIT",
-  "repository": "https://github.com/RayBob1993/vau.git",
   "type": "module",
+  "description": "",
   "scripts": {
     "core:create-component": "node tools/create-core-component/cli.js",
     "serve": "vite",
@@ -17,6 +17,14 @@
     "docs:build": "vitepress build docs",
     "docs:preview": "vitepress preview docs"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/RayBob1993/vau.git",
+    "directory": "src/lib"
+  },
+  "bugs": {
+    "url": "https://github.com/RayBob1993/vau/issues"
+  },
   "main": "./dist/index.js",
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -29,15 +37,49 @@
       "import": "./dist/index.js",
       "types": "./dist/index.d.ts"
     },
+    "./package.json": "./package.json",
     "./styles": "./src/lib/styles/core/index.scss",
     "./styles/config": "./src/lib/styles/core/config.scss",
     "./styles/mixins": "./src/lib/styles/core/mixins/index.scss"
   },
+  "keywords": [
+    "vue ui",
+    "vau ui",
+    "components",
+    "vue components",
+    "accordion",
+    "avatar",
+    "toast",
+    "dialog",
+    "modal",
+    "form",
+    "input",
+    "switch",
+    "button",
+    "confirm",
+    "alert",
+    "checkbox",
+    "radio",
+    "grid",
+    "primitive",
+    "scrollbar",
+    "spinner",
+    "tag",
+    "text",
+    "input",
+    "divider",
+    "calendar",
+    "badge",
+    "input code",
+    "input number",
+    "input password",
+    "input range",
+    "input tags"
+  ],
   "files": [
     "dist",
     "src/lib/styles/core",
-    "package.json",
-    "README.md"
+    "package.json"
   ],
   "packageManager": "pnpm@10.30.3",
   "engines": {
