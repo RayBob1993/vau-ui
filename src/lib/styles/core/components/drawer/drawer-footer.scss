@@ -1,0 +1,6 @@
+.modal-footer {
+  padding: var(--modal-footer-padding-y, 0) var(--modal-footer-padding-x, 0);
+
+  border-bottom-right-radius: var(--modal-border-radius);
+  border-bottom-left-radius: var(--modal-border-radius);
+}

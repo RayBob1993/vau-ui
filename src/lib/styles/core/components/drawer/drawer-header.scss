@@ -1,0 +1,6 @@
+.modal-header {
+  padding: var(--modal-header-padding-y, 0) var(--modal-header-padding-x, 0);
+
+  border-top-left-radius: var(--modal-border-radius);
+  border-top-right-radius: var(--modal-border-radius);
+}

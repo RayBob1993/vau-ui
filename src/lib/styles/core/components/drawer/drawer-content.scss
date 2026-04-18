@@ -1,0 +1,10 @@
+.drawer-content {
+  position: relative;
+
+  display: flex;
+  flex-flow: column nowrap;
+  width: 100%;
+
+  background-color: var(--drawer-content-background-color);
+  border-radius: var(--drawer-border-radius);
+}

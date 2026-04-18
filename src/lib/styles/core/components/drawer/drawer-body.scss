@@ -1,0 +1,9 @@
+.drawer-body {
+  flex: 1;
+  padding: var(--drawer-body-padding-y, 0) var(--drawer-body-padding-x, 0);
+  overflow: hidden;
+
+  &__scrollbar {
+    height: 100%;
+  }
+}

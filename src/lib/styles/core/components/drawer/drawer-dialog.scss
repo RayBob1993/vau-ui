@@ -1,0 +1,33 @@
+.drawer-dialog {
+  display: flex;
+  max-width: calc(var(--drawer-dialog-width, 100%) + calc(var(--drawer-dialog-padding-y, 0px) * 2));
+  width: 100%;
+  margin: 0 auto;
+  padding: var(--drawer-dialog-padding-y, 0) var(--drawer-dialog-padding-x, 0);
+}
+
+.dialog {
+  &--direction {
+    &-left {
+      justify-content: flex-start;
+    }
+
+    &-right {
+      justify-content: flex-end;
+    }
+
+    &-up {
+      --drawer-max-width: none;
+
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+
+    &-down {
+      --drawer-max-width: none;
+
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+  }
+}
