@@ -1,6 +1,6 @@
 <template>
   <div
-    class="dialog-content"
+    class="drawer-content"
     @click.stop
   >
     <slot/>

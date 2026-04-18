@@ -4,7 +4,7 @@ import { createElementBlock as t, openBlock as n, renderSlot as r, withModifiers
 var a = {};
 function o(e, a) {
 	return n(), t("div", {
-		class: "dialog-content",
+		class: "drawer-content",
 		onClick: a[0] ||= i(() => {}, ["stop"])
 	}, [r(e.$slots, "default")]);
 }

@@ -66,11 +66,11 @@ var x = /* @__PURE__ */ l({
 			onAfterEnter: t[1] ||= (e) => S("opened", e),
 			onAfterLeave: t[2] ||= (e) => S("closed", e)
 		}, {
-			default: y(() => [b(s("div", d({ class: "dialog" }, h(w), {
+			default: y(() => [b(s("div", d({ class: "drawer" }, h(w), {
 				class: {
-					"dialog--open": C.value,
-					[`dialog--position-${l.position}`]: l.position,
-					[`dialog--size-${l.size}`]: l.size
+					"drawer--open": C.value,
+					[`drawer--position-${l.position}`]: l.position,
+					[`drawer--size-${l.size}`]: l.size
 				},
 				onClick: t[0] ||= (...e) => h(T) && h(T)(...e)
 			}), [m(e.$slots, "default")], 16), [[v, C.value]])]),

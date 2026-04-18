@@ -1,12 +1,13 @@
 .drawer-dialog {
-  display: flex;
-  max-width: calc(var(--drawer-dialog-width, 100%) + calc(var(--drawer-dialog-padding-y, 0px) * 2));
+  position: relative;
+
   width: 100%;
-  margin: 0 auto;
+  max-width: var(--drawer-dialog-width);
+  max-height: 100%;
   padding: var(--drawer-dialog-padding-y, 0) var(--drawer-dialog-padding-x, 0);
 }
 
-.dialog {
+.drawer-dialog {
   &--direction {
     &-left {
       justify-content: flex-start;
@@ -17,14 +18,14 @@
     }
 
     &-up {
-      --drawer-max-width: none;
+      --drawer-dialog-width: none;
 
       flex-direction: column;
       justify-content: flex-start;
     }
 
     &-down {
-      --drawer-max-width: none;
+      --drawer-dialog-width: none;
 
       flex-direction: column;
       justify-content: flex-end;

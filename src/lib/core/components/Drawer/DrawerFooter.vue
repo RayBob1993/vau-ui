@@ -1,5 +1,5 @@
 <template>
-  <div class="dialog-footer">
+  <div class="drawer-footer">
     <slot/>
   </div>
 </template>

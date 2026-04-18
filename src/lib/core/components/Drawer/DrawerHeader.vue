@@ -1,5 +1,5 @@
 <template>
-  <div class="dialog-header">
+  <div class="drawer-header">
     <slot/>
   </div>
 </template>

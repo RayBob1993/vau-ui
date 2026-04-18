@@ -66,12 +66,12 @@
     >
       <div
         v-show="modelValue"
-        class="dialog"
+        class="drawer"
         v-bind="attrs"
         :class="{
-          'dialog--open': modelValue,
-          [`dialog--position-${position}`]: position,
-          [`dialog--size-${size}`]: size
+          'drawer--open': modelValue,
+          [`drawer--position-${position}`]: position,
+          [`drawer--size-${size}`]: size
         }"
         @click="close"
       >
