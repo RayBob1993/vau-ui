@@ -1,0 +1,1 @@
+{"version":3,"file":"DrawerHeader.vue.js","names":[],"sources":["../../../../src/lib/core/components/Drawer/DrawerHeader.vue"],"sourcesContent":["<template>\n  <div class=\"dialog-header\">\n    <slot/>\n  </div>\n</template>\n"],"mappings":";;;kBACO,OAAM,iBAAe;;aAA1B,EAEM,OAFN,GAEM,CADJ,EAAO,EAAA,QAAA,UAAA,CAAA,CAAA"}

@@ -1,92 +1,54 @@
 <script lang="ts" setup>
-  import type { IVDrawerProps, IVDrawerEmits, IVDrawerSlots } from './types';
-  import { computed, watch } from 'vue';
+  import type { IVDrawerProps, IVDrawerSlots } from './types';
+  import { Drawer, type DrawerEmits } from '@vau/core';
 
-  const props = defineProps<IVDrawerProps>();
-  const emit = defineEmits<IVDrawerEmits>();
+  const {
+    title,
+    appendToBody = true,
+    position = 'left',
+    closeOnEscape = true,
+    ...modalRootProps
+  } = defineProps<IVDrawerProps>();
+  const emit = defineEmits<DrawerEmits>();
   const slots = defineSlots<IVDrawerSlots>();
 
   const modelValue = defineModel<boolean>({
-    required: true
-  });
-
-  const isHeaderVisible = computed<boolean>(() => Boolean(props.title) || Boolean(slots?.header));
-  const isFooterVisible = computed<boolean>(() => Boolean(slots?.footer));
-
-  function handleClose () {
-    modelValue.value = false;
-  }
-
-  function afterEnter (payload: Element) {
-    emit('opened', payload);
-  }
-
-  function afterLeave (payload: Element) {
-    emit('closed', payload);
-  }
-
-  watch(modelValue, value => {
-    if (value) {
-      emit('open');
-    } else {
-      emit('close');
-    }
+    required: true,
   });
 </script>
 
 <template>
-  <teleport
-    to="body"
-    :disabled="!appendToBody"
+  <Drawer.Root
+    v-model="modelValue"
+    v-bind="modalRootProps"
+    :append-to-body="appendToBody"
+    :close-on-escape="closeOnEscape"
+    :position="position"
+    @close="emit('close')"
+    @open="emit('open')"
+    @opened="emit('opened', $event)"
+    @closed="emit('closed', $event)"
   >
-    <transition
-      @after-enter="afterEnter"
-      @after-leave="afterLeave"
-    >
-      <div
-        v-show="modelValue"
-        class="v-drawer"
-        role="dialog"
-        :class="{
-          'v-drawer--open': modelValue
-        }"
-      >
-        <div class="v-drawer__dialog">
-          <div
-            v-if="isHeaderVisible"
-            class="v-drawer__header"
-          >
-            <slot
-              name="header"
-              :close="handleClose"
-            >
+    <Drawer.Dialog>
+      <Drawer.Content>
+        <Drawer.Header>
+          <slot name="header">
+            <Drawer.Title v-if="title">
               {{ title }}
-            </slot>
+            </Drawer.Title>
 
-            <button
-              class="v-drawer__close-button"
-              type="button"
-              @click="handleClose"
-            >
-              x
-            </button>
-          </div>
+            <Drawer.Close/>
+          </slot>
+        </Drawer.Header>
 
-          <div class="v-drawer__body">
-            <slot :close="handleClose"/>
-          </div>
+        <Drawer.Body>
+          <slot/>
+        </Drawer.Body>
 
-          <div
-            v-if="isFooterVisible"
-            class="v-drawer__footer"
-          >
-            <slot
-              name="footer"
-              :close="handleClose"
-            />
-          </div>
-        </div>
-      </div>
-    </transition>
-  </teleport>
+        <Drawer.Footer v-if="slots?.footer">
+          <slot name="footer"/>
+        </Drawer.Footer>
+      </Drawer.Content>
+    </Drawer.Dialog>
+  </Drawer.Root>
 </template>

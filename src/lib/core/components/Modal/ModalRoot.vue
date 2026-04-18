@@ -60,7 +60,7 @@
     :disabled="!appendToBody"
   >
     <transition
-      name="fade-in-down"
+      name="modal"
       @after-enter="emit('opened', $event)"
       @after-leave="emit('closed', $event)"
     >

@@ -27,3 +27,4 @@ export * from './Menu';
 export * from './Calendar';
 export * from './Badge';
 export * from './Spinner';
+export * from './Drawer';

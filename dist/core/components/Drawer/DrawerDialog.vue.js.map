@@ -1,0 +1,1 @@
+{"version":3,"file":"DrawerDialog.vue.js","names":[],"sources":["../../../../src/lib/core/components/Drawer/DrawerDialog.vue"],"sourcesContent":["<template>\n  <div\n    class=\"drawer-dialog\"\n    role=\"dialog\"\n  >\n    <slot/>\n  </div>\n</template>\n"],"mappings":";;;;CAEI,OAAM;CACN,MAAK;;;aAFP,EAKM,OALN,GAKM,CADJ,EAAO,EAAA,QAAA,UAAA,CAAA,CAAA"}

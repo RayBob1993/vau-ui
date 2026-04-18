@@ -8,7 +8,7 @@ export * from './Alert';
 //export * from './Collapse';
 export * from './Inplace';
 export * from './Modal';
-//export * from './Drawer';
+export * from './Drawer';
 //export * from './Dropdown';
 //export * from './Image';
 export * from './Layout';

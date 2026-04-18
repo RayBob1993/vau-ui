@@ -3,6 +3,7 @@ export * from './Accordion';
 export * from './Alert';
 export * from './Inplace';
 export * from './Modal';
+export * from './Drawer';
 export * from './Layout';
 export * from './Container';
 export * from './Row';

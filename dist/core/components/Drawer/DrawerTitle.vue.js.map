@@ -1,0 +1,1 @@
+{"version":3,"file":"DrawerTitle.vue.js","names":[],"sources":["../../../../src/lib/core/components/Drawer/DrawerTitle.vue"],"sourcesContent":["<template>\n  <div class=\"drawer-title\">\n    <slot/>\n  </div>\n</template>\n"],"mappings":";;;kBACO,OAAM,gBAAc;;aAAzB,EAEM,OAFN,GAEM,CADJ,EAAO,EAAA,QAAA,UAAA,CAAA,CAAA"}

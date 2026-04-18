@@ -6,7 +6,6 @@ export type ModalPosition = 'top' | 'center' | 'bottom';
 export type ModalProps = {
   position?: ModalPosition;
   appendToBody?: boolean;
-  /** Если `false`, модалка не закрывается по клавише Escape. */
   closeOnEscape?: boolean;
 } & Partial<SizeProp>;
 

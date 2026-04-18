@@ -62,7 +62,7 @@ var x = /* @__PURE__ */ l({
 			to: h(E),
 			disabled: !l.appendToBody
 		}, [c(a, {
-			name: "fade-in-down",
+			name: "modal",
 			onAfterEnter: t[1] ||= (e) => S("opened", e),
 			onAfterLeave: t[2] ||= (e) => S("closed", e)
 		}, {
