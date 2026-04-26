@@ -1,7 +1,9 @@
 import type { MaybeRefOrGetter, VNode } from 'vue';
-import type { Maybe, MaybeArray, MaybeNull, SizeProp, ThemeProp } from '../../types';
+import type { Maybe, MaybeArray, SizeProp, ThemeProp } from '../../types';
 export type AccordionValue = string | number;
-export type AccordionModelValue = Maybe<MaybeNull<MaybeArray<AccordionValue>>>;
+export type AccordionSingleModelValue = Maybe<AccordionValue>;
+export type AccordionMultipleModelValue = MaybeArray<AccordionValue>;
+export type AccordionModelValue = AccordionSingleModelValue | AccordionMultipleModelValue;
 export type AccordionProps = {
     multiple?: boolean;
 } & Partial<SizeProp> & Partial<ThemeProp>;
