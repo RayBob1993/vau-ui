@@ -1,8 +1,8 @@
 import type { MaybeRefOrGetter } from 'vue';
 import type { InputBaseProps } from '../Input';
-import type { SizeProp, ThemeProp } from '../../types';
+import type { Maybe, SizeProp, ThemeProp } from '../../types';
 
-export type InputCodeModelValue = string | number;
+export type InputCodeModelValue = Maybe<string | number>;
 
 export type InputCodeProps = InputBaseProps & Partial<ThemeProp> & Partial<SizeProp>;
 

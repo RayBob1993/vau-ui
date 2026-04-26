@@ -297,6 +297,8 @@ export default defineConfigWithVueTs([
       '**/dist/*',
       '**/node_modules/*',
       'vite.config.ts',
+      '**/docs/.vitepress/cache/*',
+      '**/docs/.vitepress/dist/*'
     ],
   },
 ]);

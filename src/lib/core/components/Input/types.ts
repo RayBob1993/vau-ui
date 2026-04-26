@@ -1,8 +1,8 @@
-import type { SizeProp, ThemeProp, Maybe, MaybeNull, ValueOf } from '../../types';
+import type { SizeProp, ThemeProp, Maybe, ValueOf } from '../../types';
 import type { EmitFn, MaybeRefOrGetter, VNode } from 'vue';
 import { InputModes, InputNativeTypes, InputTypes } from '../../constants';
 
-export type InputModelValue = MaybeNull<Maybe<string>>;
+export type InputModelValue = Maybe<string>;
 
 export type InputType = ValueOf<typeof InputTypes>;
 export type InputNativeType = ValueOf<typeof InputNativeTypes>;
