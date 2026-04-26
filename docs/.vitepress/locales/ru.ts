@@ -83,6 +83,13 @@ const ruThemeConfig: DefaultTheme.Config = {
     prev: 'Предыдущая страница',
     next: 'Следующая страница'
   },
+  lastUpdated: {
+    text: 'Обновлено'
+  },
+  editLink: {
+    pattern: 'https://github.com/RayBob1993/vau-ui/edit/main/docs/:path',
+    text: 'Редактировать страницу на GitHub'
+  },
   search: {
     provider: 'local',
     options: {

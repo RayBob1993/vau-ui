@@ -4,13 +4,21 @@
 
 ## Установка
 
-Когда пакет будет опубликован в npm:
+::: code-group
 
-```bash
-pnpm add vau
+```shell [pnpm]
+$ pnpm install vau
 ```
 
-До публикации можно подключать зависимость из Git (ветка или тег) — см. [документацию pnpm по `git`-зависимостям](https://pnpm.io/cli/add).
+```shell [npm]
+$ npm install vau --save
+```
+
+```shell [yarn]
+$ yarn add vau
+```
+
+:::
 
 ## Требования
 

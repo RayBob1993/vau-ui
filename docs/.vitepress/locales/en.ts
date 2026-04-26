@@ -83,6 +83,13 @@ const enThemeConfig: DefaultTheme.Config = {
     prev: 'Previous page',
     next: 'Next page'
   },
+  lastUpdated: {
+    text: 'Last updated'
+  },
+  editLink: {
+    pattern: 'https://github.com/RayBob1993/vau-ui/edit/main/docs/:path',
+    text: 'Edit this page on GitHub'
+  },
   search: {
     provider: 'local',
     options: {

@@ -15,6 +15,7 @@ const projectRoot = process.cwd();
  */
 export default defineConfig({
   cleanUrls: true,
+  lastUpdated: true,
   locales: {
     root: ruLocale,
     en: enLocale
