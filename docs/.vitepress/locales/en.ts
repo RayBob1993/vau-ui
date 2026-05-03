@@ -79,6 +79,11 @@ const enThemeConfig: DefaultTheme.Config = {
   outline: {
     label: 'On this page'
   },
+  docPreview: {
+    copy: 'Copy',
+    exampleNotFound: 'Example not found: {path}',
+    loadSourceFailed: 'Could not load source: {path}'
+  },
   docFooter: {
     prev: 'Previous page',
     next: 'Next page'

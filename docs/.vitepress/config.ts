@@ -34,6 +34,8 @@ export default defineConfig({
     },
     resolve: {
       alias: {
+        /** Публичная точка входа — как у потребителей `import … from 'vau'` (без предварительной сборки `dist`). */
+        vau: resolve(projectRoot, 'src/lib/index.ts'),
         '@vau/core': resolve(projectRoot, 'src/lib/core/index.ts'),
         '@vau/ui': resolve(projectRoot, 'src/lib/ui/index.ts'),
         '@vau/styles': resolve(projectRoot, 'src/lib/styles/core/index.scss')

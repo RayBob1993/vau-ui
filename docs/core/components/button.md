@@ -1,7 +1,3 @@
-<script setup>
-import ButtonBase from '../../examples/core/button/ButtonBase.vue';
-</script> 
-
 # Button
 
 `Button` — примитив кнопки из слоя **core** с поддержкой состояний `loading`/`disabled`, темизации и размеров.
@@ -25,17 +21,8 @@ import ButtonBase from '../../examples/core/button/ButtonBase.vue';
 
 ## Базовое использование
 
-```vue
-<script setup lang="ts">
-  import { Button } from 'vau';
-</script>
+<v-preview path="examples/core/button/ButtonBase.vue" />
 
-<template>
-  <Button.Root theme="primary" size="medium">
-    Кнопка
-  </Button.Root>
-</template>
-```
 
 ## Состояние блокировки
 

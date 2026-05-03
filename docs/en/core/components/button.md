@@ -26,6 +26,8 @@ import { Button } from 'vau';
 
 ## Basic usage
 
+<preview path="examples/core/button/ButtonBase.vue" />
+
 ```vue
 <script setup lang="ts">
   import { Button } from 'vau';

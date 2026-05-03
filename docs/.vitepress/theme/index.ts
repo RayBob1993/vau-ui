@@ -1,13 +1,17 @@
 import type { Theme } from 'vitepress';
+import VPreview from './components/VPreview.vue';
 import DefaultTheme from 'vitepress/theme';
 import '@vau/styles';
 import './custom.css';
 
 /**
- * Тема по умолчанию VitePress + глобальные стили библиотеки для будущих живых примеров.
+ * Тема по умолчанию VitePress + глобальные стили библиотеки для живых примеров.
  */
 const theme = {
-  extends: DefaultTheme
+  extends: DefaultTheme,
+  enhanceApp ({ app }) {
+    app.component('VPreview', VPreview);
+  },
 } satisfies Theme;
 
 export default theme;

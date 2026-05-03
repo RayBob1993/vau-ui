@@ -79,6 +79,11 @@ const ruThemeConfig: DefaultTheme.Config = {
   outline: {
     label: 'На этой странице'
   },
+  docPreview: {
+    copy: 'Копировать',
+    exampleNotFound: 'Пример не найден: {path}',
+    loadSourceFailed: 'Не удалось загрузить исходник: {path}'
+  },
   docFooter: {
     prev: 'Предыдущая страница',
     next: 'Следующая страница'
