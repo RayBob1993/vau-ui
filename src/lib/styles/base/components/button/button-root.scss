@@ -1,0 +1,251 @@
+@use '../../../core/mixins/hover' as *;
+@use '../../../core/mixins/breakpoints' as *;
+
+.button {
+  --button-border-size: 1px;
+  --button-border-radius: 6px;
+
+  &--theme {
+    &-base {
+      --button-background-color: var(--base-background-color);
+      --button-color: var(--base-color);
+      --button-border-color: var(--base-border-color);
+
+      @include hover {
+        &:not(:disabled) {
+          --button-background-color: var(--base-background-color-hover);
+          --button-color: var(--base-color-hover);
+          --button-border-color: var(--base-border-color-hover);
+        }
+      }
+
+      &.button--plain {
+        @include not-hover {
+          --button-color: var(--base-color-plain);
+        }
+
+        &:disabled {
+          --button-color: var(--base-color-plain);
+        }
+      }
+    }
+
+    &-primary {
+      --button-background-color: var(--primary-background-color);
+      --button-color: var(--primary-color);
+      --button-border-color: var(--primary-border-color);
+
+      @include hover {
+        &:not(:disabled) {
+          --button-background-color: var(--primary-background-color-hover);
+          --button-color: var(--primary-color-hover);
+          --button-border-color: var(--primary-border-color-hover);
+        }
+      }
+
+      &.button--plain {
+        @include not-hover {
+          --button-color: var(--primary-color-plain);
+        }
+
+        &:disabled {
+          --button-color: var(--primary-color-plain);
+        }
+      }
+    }
+
+    &-secondary {
+      --button-background-color: var(--secondary-background-color);
+      --button-color: var(--secondary-color);
+      --button-border-color: var(--secondary-border-color);
+
+      @include hover {
+        &:not(:disabled) {
+          --button-background-color: var(--secondary-background-color-hover);
+          --button-color: var(--secondary-color-hover);
+          --button-border-color: var(--secondary-border-color-hover);
+        }
+      }
+
+      &.button--plain {
+        @include not-hover {
+          --button-color: var(--secondary-color-plain);
+        }
+
+        &:disabled {
+          --button-color: var(--secondary-color-plain);
+        }
+      }
+    }
+
+    &-tertiary {
+      --button-background-color: var(--tertiary-background-color);
+      --button-color: var(--tertiary-color);
+      --button-border-color: var(--tertiary-border-color);
+
+      @include hover {
+        &:not(:disabled) {
+          --button-background-color: var(--tertiary-background-color-hover);
+          --button-color: var(--tertiary-color-hover);
+          --button-border-color: var(--tertiary-border-color-hover);
+        }
+      }
+
+      &.button--plain {
+        @include not-hover {
+          --button-color: var(--tertiary-color-plain);
+        }
+
+        &:disabled {
+          --button-color: var(--tertiary-color-plain);
+        }
+      }
+    }
+
+    &-danger {
+      --button-background-color: var(--danger-background-color);
+      --button-color: var(--danger-color);
+      --button-border-color: var(--danger-border-color);
+
+      @include hover {
+        &:not(:disabled) {
+          --button-background-color: var(--danger-background-color-hover);
+          --button-color: var(--danger-color-hover);
+          --button-border-color: var(--danger-border-color-hover);
+        }
+      }
+
+      &.button--plain {
+        @include not-hover {
+          --button-color: var(--danger-color-plain);
+        }
+
+        &:disabled {
+          --button-color: var(--danger-color-plain);
+        }
+      }
+    }
+
+    &-warning {
+      --button-background-color: var(--warning-background-color);
+      --button-color: var(--warning-color);
+      --button-border-color: var(--warning-border-color);
+
+      @include hover {
+        &:not(:disabled) {
+          --button-background-color: var(--warning-background-color-hover);
+          --button-color: var(--warning-color-hover);
+          --button-border-color: var(--warning-border-color-hover);
+        }
+      }
+
+      &.button--plain {
+        @include not-hover {
+          --button-color: var(--warning-color-plain);
+        }
+
+        &:disabled {
+          --button-color: var(--warning-color-plain);
+        }
+      }
+    }
+
+    &-success {
+      --button-background-color: var(--success-background-color);
+      --button-color: var(--success-color);
+      --button-border-color: var(--success-border-color);
+
+      @include hover {
+        &:not(:disabled) {
+          --button-background-color: var(--success-background-color-hover);
+          --button-color: var(--success-color-hover);
+          --button-border-color: var(--success-border-color-hover);
+        }
+      }
+
+      &.button--plain {
+        @include not-hover {
+          --button-color: var(--success-color-plain);
+        }
+
+        &:disabled {
+          --button-color: var(--success-color-plain);
+        }
+      }
+    }
+  }
+
+  @include breakpoints (size) {
+    &-mini {
+      --button-gap: 4px;
+      --button-padding-y: 6px;
+      --button-padding-x: 10px;
+      --button-font-size: 10px;
+      --button-line-height: 12px;
+    }
+
+    &-small {
+      --button-gap: 6px;
+      --button-padding-y: 8px;
+      --button-padding-x: 12px;
+      --button-font-size: 12px;
+      --button-line-height: 14px;
+    }
+
+    &-medium {
+      --button-gap: 8px;
+      --button-padding-y: 10px;
+      --button-padding-x: 14px;
+      --button-font-size: 14px;
+      --button-line-height: 16px;
+    }
+
+    &-large {
+      --button-gap: 8px;
+      --button-padding-y: 12px;
+      --button-padding-x: 16px;
+      --button-font-size: 16px;
+      --button-line-height: 18px;
+    }
+
+    &-big {
+      --button-gap: 8px;
+      --button-padding-y: 14px;
+      --button-padding-x: 18px;
+      --button-font-size: 18px;
+      --button-line-height: 20px;
+    }
+
+    &-huge {
+      --button-gap: 8px;
+      --button-padding-y: 16px;
+      --button-padding-x: 20px;
+      --button-font-size: 20px;
+      --button-line-height: 22px;
+    }
+
+    &-massive {
+      --button-gap: 8px;
+      --button-padding-y: 18px;
+      --button-padding-x: 22px;
+      --button-font-size: 22px;
+      --button-line-height: 24px;
+    }
+  }
+
+  &--plain {
+    @include not-hover {
+      &:not(:disabled) {
+        --button-background-color: transparent;
+      }
+    }
+
+    &:disabled {
+      --button-background-color: transparent;
+    }
+  }
+
+  &:disabled {
+    opacity: var(--disabled-opacity);
+  }
+}

@@ -1,0 +1,61 @@
+:root,
+:host {
+  --black: #000000;
+  --white: #ffffff;
+
+  --base-background-color: var(--white);
+  --base-background-color-hover: color-mix(in oklab, var(--base-background-color), transparent 20%);
+  --base-border-color: color-mix(in oklab, var(--base-background-color), var(--black) 10%);
+  --base-border-color-hover: color-mix(in oklab, var(--base-background-color), var(--black) 25%);
+  --base-color: #374151;
+  --base-color-hover: #374151;
+  --base-color-plain: #374151;
+
+  --primary-background-color: #066fd1;
+  --primary-background-color-hover: color-mix(in oklab, var(--primary-background-color), transparent 20%);
+  --primary-border-color: color-mix(in oklab, var(--primary-background-color), var(--black) 10%);
+  --primary-border-color-hover: color-mix(in oklab, var(--primary-background-color), var(--black) 5%);
+  --primary-color: #f9fafb;
+  --primary-color-hover: #f9fafb;
+  --primary-color-plain: #066fd1;
+
+  --secondary-background-color: #6b7280;
+  --secondary-background-color-hover: color-mix(in oklab, var(--secondary-background-color), transparent 20%);
+  --secondary-border-color: color-mix(in oklab, var(--secondary-background-color), var(--black) 10%);
+  --secondary-border-color-hover: color-mix(in oklab, var(--secondary-background-color), var(--black) 5%);
+  --secondary-color: #f9fafb;
+  --secondary-color-hover: #f9fafb;
+  --secondary-color-plain: #6b7280;
+
+  --tertiary-background-color: #4299e1;
+  --tertiary-background-color-hover: color-mix(in oklab, var(--tertiary-background-color), transparent 20%);
+  --tertiary-border-color: color-mix(in oklab, var(--tertiary-background-color), var(--black) 10%);
+  --tertiary-border-color-hover: color-mix(in oklab, var(--tertiary-background-color), var(--black) 5%);
+  --tertiary-color: #f9fafb;
+  --tertiary-color-hover: #f9fafb;
+  --tertiary-color-plain: #4299e1;
+
+  --danger-background-color: #d63939;
+  --danger-background-color-hover: color-mix(in oklab, var(--danger-background-color), transparent 20%);
+  --danger-border-color: color-mix(in oklab, var(--danger-background-color), var(--black) 10%);
+  --danger-border-color-hover: color-mix(in oklab, var(--danger-background-color), var(--black) 5%);
+  --danger-color: #f9fafb;
+  --danger-color-hover: #f9fafb;
+  --danger-color-plain: #d63939;
+
+  --warning-background-color: #f59f00;
+  --warning-background-color-hover: color-mix(in oklab, var(--warning-background-color), transparent 20%);
+  --warning-border-color: color-mix(in oklab, var(--warning-background-color), var(--black) 10%);
+  --warning-border-color-hover: color-mix(in oklab, var(--warning-background-color), var(--black) 5%);
+  --warning-color: #f9fafb;
+  --warning-color-hover: #f9fafb;
+  --warning-color-plain: #f59f00;
+
+  --success-background-color: #2fb344;
+  --success-background-color-hover: color-mix(in oklab, var(--success-background-color), transparent 20%);
+  --success-border-color: color-mix(in oklab, var(--success-background-color), var(--black) 10%);
+  --success-border-color-hover: color-mix(in oklab, var(--success-background-color), var(--black) 5%);
+  --success-color: #f9fafb;
+  --success-color-hover: #f9fafb;
+  --success-color-plain: #2fb344;
+}

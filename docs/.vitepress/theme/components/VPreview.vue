@@ -268,6 +268,7 @@
 
   &__canvas {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     padding: 1.25rem;
@@ -276,7 +277,7 @@
 
     /* Тетрадная клетка + красное поле (как у школьной тетради в клетку). */
     --doc-preview-cell: 14px;
-    --doc-preview-line: color-mix(in srgb, var(--vp-c-text-2) 14%, transparent);
+    --doc-preview-line: color-mix(in srgb, var(--vp-c-text-2) 7%, transparent);
     --doc-preview-margin: color-mix(in srgb, #e57373 28%, transparent);
 
     background-color: var(--vp-c-bg);

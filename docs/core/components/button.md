@@ -24,157 +24,53 @@
 <v-preview path="examples/core/button/ButtonBase.vue" />
 
 
-## Состояние блокировки
+## Disabled
 
-```vue
-<script setup lang="ts">
-  import { Button } from 'vau';
-</script>
+<v-preview path="examples/core/button/ButtonDisabled.vue" />
 
-<template>
-  <Button.Root theme="base" size="medium" disabled>
-    Кнопка
-  </Button.Root>
-</template>
-```
+## Loading
 
-## Состояние загрузки
+<v-preview path="examples/core/button/ButtonLoading.vue" />
 
-```vue
-<script setup lang="ts">
-  import { Button } from 'vau';
-</script>
-
-<template>
-  <Button.Root theme="base" size="medium" loading>
-    Отправка
-  </Button.Root>
-</template>
-```
-
-## Темы
+## Theme
 
 Доступные значения `theme`: `base`, `primary`, `secondary`, `tertiary`, `danger`, `success`, `warning`.
 
-```vue
-<script setup lang="ts">
-  import { Button } from 'vau';
-</script>
+<v-preview path="examples/core/button/ButtonTheme.vue" />
 
-<template>
-  <Button.Root theme="base" size="medium">Base</Button.Root>
-  <Button.Root theme="primary" size="medium">Primary</Button.Root>
-  <Button.Root theme="secondary" size="medium">Secondary</Button.Root>
-  <Button.Root theme="tertiary" size="medium">Tertiary</Button.Root>
-  <Button.Root theme="danger" size="medium">Danger</Button.Root>
-  <Button.Root theme="success" size="medium">Success</Button.Root>
-  <Button.Root theme="warning" size="medium">Warning</Button.Root>
-</template>
-```
-
-## Размеры
+## Size
 
 Доступные значения `size`: `mini`, `small`, `medium`, `large`, `big`, `huge`, `massive`.
 
-```vue
-<script setup lang="ts">
-  import { Button } from 'vau';
-</script>
-
-<template>
-  <Button.Root theme="base" size="mini">Mini</Button.Root>
-  <Button.Root theme="base" size="small">Small</Button.Root>
-  <Button.Root theme="base" size="medium">Medium</Button.Root>
-  <Button.Root theme="base" size="large">Large</Button.Root>
-  <Button.Root theme="base" size="big">Big</Button.Root>
-  <Button.Root theme="base" size="huge">Huge</Button.Root>
-  <Button.Root theme="base" size="massive">Massive</Button.Root>
-</template>
-```
+<v-preview path="examples/core/button/ButtonSize.vue" />
 
 Для адаптивных размеров можно использовать `sizeXs`, `sizeSm`, `sizeMd`, `sizeLg`, `sizeXl`, `sizeXxl`.
 
-```vue
-<script setup lang="ts">
-  import { Button } from 'vau';
-</script>
-
-<template>
-  <Button.Root theme="base" size="mini" size-xs="large">Mini</Button.Root>
-  <Button.Root theme="base" size="small" size-md="medium">Small</Button.Root>
-  <Button.Root theme="base" size="medium" size-lg="large">Medium</Button.Root>
-  <Button.Root theme="base" size="large" size-md="small">Large</Button.Root>
-  <Button.Root theme="base" size="big" size-xxl="mini">Big</Button.Root>
-  <Button.Root theme="base" size="huge" size-sm="small">Huge</Button.Root>
-  <Button.Root theme="base" size="massive" size-md="medium">Massive</Button.Root>
-</template>
-```
+<v-preview path="examples/core/button/ButtonSizeResponse.vue" />
 
 ## Plain
 
 `plain` включает «плоский» вариант отображения кнопки.
 
-```vue
-<script setup lang="ts">
-  import { Button } from 'vau';
-</script>
-
-<template>
-  <Button.Root theme="base" size="medium" plain>
-    Плоская кнопка
-  </Button.Root>
-</template>
-```
+<v-preview path="examples/core/button/ButtonPlain.vue" />
 
 ## Rounded
 
 `rounded` включает «закруглённые углы» для отображения кнопки.
 
-```vue
-<script setup lang="ts">
-  import { Button } from 'vau';
-</script>
-
-<template>
-  <Button.Root theme="base" size="medium" rounded>
-    Закруглённая кнопка
-  </Button.Root>
-</template>
-```
+<v-preview path="examples/core/button/ButtonRounded.vue" />
 
 ## Wide
 
 `wide` растягивает кнопку по ширине контейнера.
 
-```vue
-<script setup lang="ts">
-  import { Button } from 'vau';
-</script>
-
-<template>
-  <Button.Root theme="base" size="medium" wide>
-    Кнопка на всю ширину
-  </Button.Root>
-</template>
-```
+<v-preview path="examples/core/button/ButtonWide.vue" />
 
 ## asChild
 
 `asChild` позволяет рендерить кнопку через дочерний элемент. Например, можно использовать тег `a`.
 
-```vue
-<script setup lang="ts">
-  import { Button } from 'vau';
-</script>
-
-<template>
-  <Button.Root theme="base" size="medium" as-child>
-    <a href="https://github.com/RayBob1993/vau" target="_blank" rel="noreferrer">
-      Открыть репозиторий
-    </a>
-  </Button.Root>
-</template>
-```
+<v-preview path="examples/core/button/ButtonAsChild.vue" />
 
 Итоговая разметка в DOM:
 
@@ -192,56 +88,13 @@
 
 ## Вместе с иконками
 
-```vue
-<script setup lang="ts">
-  import { Button } from 'vau';
-  import { UserRound } from '@lucide/vue';
-</script>
-
-<template>
-  <Button.Root theme="base" size="medium" wide>
-    <UserRound /> 
-    
-    Кнопка с иконкой
-  </Button.Root>
-</template>
-```
+<v-preview path="examples/core/button/ButtonWithIcon.vue" />
 
 ## Button.Group
 
 `Button.Group` объединяет несколько компонентов `Button.Root`, применяя согласованные стили, отступы и автоматическую обработку радиуса границы по краям группы.
 
-```vue
-<script setup lang="ts">
-  import { Button } from 'vau';
-</script>
-
-<template>
-  <Button.Group direction="horizontal">
-    <Button.Root theme="base" size="medium">
-      Слева
-    </Button.Root>
-    <Button.Root theme="base" size="medium">
-      По центру
-    </Button.Root>
-    <Button.Root theme="base" size="medium">
-      Справа
-    </Button.Root>
-  </Button.Group>
-
-  <Button.Group direction="vertical">
-    <Button.Root theme="base" size="medium">
-      Сверху
-    </Button.Root>
-    <Button.Root theme="base" size="medium">
-      По центру
-    </Button.Root>
-    <Button.Root theme="base" size="medium">
-      Снизу
-    </Button.Root>
-  </Button.Group>
-</template>
-```
+<v-preview path="examples/core/button/ButtonGroup.vue" />
 
 ## Button API
 

@@ -7,11 +7,11 @@ hero:
   tagline: Документация в разработке
   actions:
     - theme: brand
-      text: Репозиторий
-      link: https://github.com/RayBob1993/vau
-    - theme: alt
       text: Начало работы
       link: /getting-started
+    - theme: alt
+      text: Github
+      link: https://github.com/RayBob1993/vau
     - theme: alt
       text: Core
       link: /core

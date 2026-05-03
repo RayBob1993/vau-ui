@@ -6,7 +6,8 @@
   <Button.Root
     theme="base"
     size="medium"
+    disabled
   >
-    Кнопка
+    Кнопка заблокирована
   </Button.Root>
 </template>

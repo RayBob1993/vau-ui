@@ -6,7 +6,8 @@
   <Button.Root
     theme="base"
     size="medium"
+    loading
   >
-    Кнопка
+    Отправка
   </Button.Root>
 </template>

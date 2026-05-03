@@ -32,6 +32,7 @@
         'button--plain': plain,
         'button--wide': wide,
         'button--rounded': rounded,
+        'button--square': square,
         [`button--theme-${theme}`]: theme,
         [`button--size-${size}`]: size,
         [`button--size-xs-${sizeXs}`]: sizeXs,

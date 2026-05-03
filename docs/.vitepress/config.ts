@@ -38,7 +38,8 @@ export default defineConfig({
         vau: resolve(projectRoot, 'src/lib/index.ts'),
         '@vau/core': resolve(projectRoot, 'src/lib/core/index.ts'),
         '@vau/ui': resolve(projectRoot, 'src/lib/ui/index.ts'),
-        '@vau/styles': resolve(projectRoot, 'src/lib/styles/core/index.scss')
+        '@vau/styles/core': resolve(projectRoot, 'src/lib/styles/core/index.scss'),
+        '@vau/styles/base': resolve(projectRoot, 'src/lib/styles/base/index.scss')
       }
     }
   }

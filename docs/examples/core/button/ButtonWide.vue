@@ -6,7 +6,8 @@
   <Button.Root
     theme="base"
     size="medium"
+    wide
   >
-    Кнопка
+    Кнопка на всю ширину
   </Button.Root>
 </template>
