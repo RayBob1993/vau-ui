@@ -1,12 +1,26 @@
+@use '../../../core/mixins/hover' as *;
+
 .button-group {
   display: inline-flex;
   flex-wrap: wrap;
+
+  .button {
+    position: relative;
+
+    @include hover {
+      z-index: 1;
+    }
+  }
 
   &--direction {
     &-horizontal {
       flex-direction: row;
 
       .button {
+        &:not(:first-child) {
+          margin-left: calc(-1 * var(--button-border-size));
+        }
+
         &:first-of-type:not(:only-of-type) {
           border-top-right-radius: 0;
           border-bottom-right-radius: 0;
@@ -27,6 +41,10 @@
       flex-direction: column;
 
       .button {
+        &:not(:first-child) {
+          margin-top: calc(-1 * var(--button-border-size));
+        }
+
         &:first-of-type:not(:only-of-type) {
           border-bottom-left-radius: 0;
           border-bottom-right-radius: 0;
