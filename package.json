@@ -38,9 +38,10 @@
       "types": "./dist/index.d.ts"
     },
     "./package.json": "./package.json",
-    "./styles": "./src/lib/styles/core/index.scss",
-    "./styles/config": "./src/lib/styles/core/config.scss",
-    "./styles/mixins": "./src/lib/styles/core/mixins/index.scss"
+    "./styles/core": "./src/lib/styles/core/index.scss",
+    "./styles/core/config": "./src/lib/styles/core/config.scss",
+    "./styles/core/mixins": "./src/lib/styles/core/mixins/index.scss",
+    "./styles/base": "./src/lib/styles/base/index.scss"
   },
   "keywords": [
     "vue ui",

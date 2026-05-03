@@ -8,6 +8,7 @@ var l = /* @__PURE__ */ n({
 		disabled: { type: Boolean },
 		plain: { type: Boolean },
 		wide: { type: Boolean },
+		rounded: { type: Boolean },
 		type: { default: "button" },
 		theme: {},
 		size: {},

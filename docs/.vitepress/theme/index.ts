@@ -1,7 +1,7 @@
 import type { Theme } from 'vitepress';
 import VPreview from './components/VPreview.vue';
 import DefaultTheme from 'vitepress/theme';
-import '@vau/styles';
+import '@vau/styles/base';
 import './custom.css';
 
 /**
