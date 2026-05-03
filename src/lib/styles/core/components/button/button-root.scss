@@ -47,6 +47,10 @@
     width: 100%;
   }
 
+  &--rounded {
+    --button-border-radius: 50%;
+  }
+
   &--loading {
     &:disabled {
       cursor: wait;

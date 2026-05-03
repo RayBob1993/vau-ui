@@ -1,3 +1,7 @@
+<script setup>
+import ButtonBase from '../../examples/core/button/ButtonBase.vue';
+</script> 
+
 # Button
 
 `Button` — примитив кнопки из слоя **core** с поддержкой состояний `loading`/`disabled`, темизации и размеров.
@@ -130,7 +134,23 @@
 
 <template>
   <Button.Root theme="base" size="medium" plain>
-    Кнопка
+    Плоская кнопка
+  </Button.Root>
+</template>
+```
+
+## Rounded
+
+`rounded` включает «закруглённые углы» для отображения кнопки.
+
+```vue
+<script setup lang="ts">
+  import { Button } from 'vau';
+</script>
+
+<template>
+  <Button.Root theme="base" size="medium" rounded>
+    Закруглённая кнопка
   </Button.Root>
 </template>
 ```
@@ -146,7 +166,7 @@
 
 <template>
   <Button.Root theme="base" size="medium" wide>
-    Кнопка
+    Кнопка на всю ширину
   </Button.Root>
 </template>
 ```
@@ -181,6 +201,59 @@
 >
   Открыть репозиторий
 </a>
+```
+
+## Вместе с иконками
+
+```vue
+<script setup lang="ts">
+  import { Button } from 'vau';
+  import { UserRound } from '@lucide/vue';
+</script>
+
+<template>
+  <Button.Root theme="base" size="medium" wide>
+    <UserRound /> 
+    
+    Кнопка с иконкой
+  </Button.Root>
+</template>
+```
+
+## Button.Group
+
+`Button.Group` объединяет несколько компонентов `Button.Root`, применяя согласованные стили, отступы и автоматическую обработку радиуса границы по краям группы.
+
+```vue
+<script setup lang="ts">
+  import { Button } from 'vau';
+</script>
+
+<template>
+  <Button.Group direction="horizontal">
+    <Button.Root theme="base" size="medium">
+      Слева
+    </Button.Root>
+    <Button.Root theme="base" size="medium">
+      По центру
+    </Button.Root>
+    <Button.Root theme="base" size="medium">
+      Справа
+    </Button.Root>
+  </Button.Group>
+
+  <Button.Group direction="vertical">
+    <Button.Root theme="base" size="medium">
+      Сверху
+    </Button.Root>
+    <Button.Root theme="base" size="medium">
+      По центру
+    </Button.Root>
+    <Button.Root theme="base" size="medium">
+      Снизу
+    </Button.Root>
+  </Button.Group>
+</template>
 ```
 
 ## Button API
