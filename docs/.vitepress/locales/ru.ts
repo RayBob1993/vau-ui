@@ -31,7 +31,8 @@ const ruThemeConfig: DefaultTheme.Config = {
             collapsed: false,
             items: [
               { text: 'Обзор', link: '/core/components' },
-              { text: 'Button', link: '/core/components/button' }
+              { text: 'Button', link: '/core/components/button' },
+              { text: 'Drawer', link: '/core/components/drawer' }
             ]
           },
           {

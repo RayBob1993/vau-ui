@@ -6,6 +6,7 @@ export type ButtonProps = {
     plain?: boolean;
     wide?: boolean;
     rounded?: boolean;
+    square?: boolean;
     type?: HTMLButtonElement['type'];
 } & Partial<ThemeProp> & Partial<SizeProp> & Partial<PrimitiveProps>;
 export type ButtonGroupProps = Partial<DirectionProp>;

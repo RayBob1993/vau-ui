@@ -8,7 +8,7 @@
 }
 
 .drawer-dialog {
-  &--direction {
+  &--position {
     &-left {
       justify-content: flex-start;
     }
@@ -17,14 +17,14 @@
       justify-content: flex-end;
     }
 
-    &-up {
+    &-top {
       --drawer-dialog-width: none;
 
       flex-direction: column;
       justify-content: flex-start;
     }
 
-    &-down {
+    &-bottom {
       --drawer-dialog-width: none;
 
       flex-direction: column;

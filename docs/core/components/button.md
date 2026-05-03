@@ -60,6 +60,12 @@
 
 <v-preview path="examples/core/button/ButtonRounded.vue" />
 
+## Square
+
+`square` отключает закругление у кнопки.
+
+<v-preview path="examples/core/button/ButtonSquare.vue" />
+
 ## Wide
 
 `wide` растягивает кнопку по ширине контейнера.
@@ -100,23 +106,23 @@
 
 ### Button.Root Props
 
-| Имя        | Описание                                                                      | Тип                                                                                      | Дефолтное значение |
-|------------|-------------------------------------------------------------------------------|------------------------------------------------------------------------------------------|--------------------|
-| `loading`  | Показывает спиннер (`Spinner.Root`) и переводит кнопку в неактивное состояние | `boolean`                                                                                | `false`            |
-| `disabled` | Явно отключает кнопку                                                         | `boolean`                                                                                | `false`            |
-| `plain`    | Включает «плоский» визуальный вариант                                         | `boolean`                                                                                | `false`            |
-| `wide`     | Растягивает кнопку по ширине                                                  | `boolean`                                                                                | `false`            |
-| `type`     | HTML-тип кнопки                                                               | `'button' \| 'submit' \| 'reset'`                                                        | `'button'`         |
-| `as`       | Тег или компонент для рендера корневого узла `Primitive.Root`                 | `keyof HTMLElementTagNameMap \| Component`                                               | `'button'`         |
-| `asChild`  | Рендер без собственного тега (через slot-контейнер `Primitive`)               | `boolean`                                                                                | `false`            |
-| `theme`    | Тема оформления                                                               | `'base' \| 'primary' \| 'secondary' \| 'tertiary' \| 'danger' \| 'success' \| 'warning'` | `—`                |
-| `size`     | Базовый размер                                                                | `'mini' \| 'small' \| 'medium' \| 'large' \| 'big' \| 'huge' \| 'massive'`               | `—`                |
-| `sizeXs`   | Размер для брейкпоинта `xs`                                                   | `'mini' \| 'small' \| 'medium' \| 'large' \| 'big' \| 'huge' \| 'massive'`               | `—`                |
-| `sizeSm`   | Размер для брейкпоинта `sm`                                                   | `'mini' \| 'small' \| 'medium' \| 'large' \| 'big' \| 'huge' \| 'massive'`               | `—`                |
-| `sizeMd`   | Размер для брейкпоинта `md`                                                   | `'mini' \| 'small' \| 'medium' \| 'large' \| 'big' \| 'huge' \| 'massive'`               | `—`                |
-| `sizeLg`   | Размер для брейкпоинта `lg`                                                   | `'mini' \| 'small' \| 'medium' \| 'large' \| 'big' \| 'huge' \| 'massive'`               | `—`                |
-| `sizeXl`   | Размер для брейкпоинта `xl`                                                   | `'mini' \| 'small' \| 'medium' \| 'large' \| 'big' \| 'huge' \| 'massive'`               | `—`                |
-| `sizeXxl`  | Размер для брейкпоинта `xxl`                                                  | `'mini' \| 'small' \| 'medium' \| 'large' \| 'big' \| 'huge' \| 'massive'`               | `—`                |
+| Имя        | Описание                                                                                                              | Тип                                                                                      | Дефолтное значение |
+|------------|-----------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------|--------------------|
+| `loading`  | Показывает спиннер (`Spinner.Root`) и переводит кнопку в неактивное состояние                                         | `boolean`                                                                                | `false`            |
+| `disabled` | Явно отключает кнопку                                                                                                 | `boolean`                                                                                | `false`            |
+| `plain`    | Включает «плоский» визуальный вариант                                                                                 | `boolean`                                                                                | `false`            |
+| `wide`     | Растягивает кнопку по ширине                                                                                          | `boolean`                                                                                | `false`            |
+| `type`     | HTML-тип кнопки. Подробнее на [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/button#type) | `'button' \| 'submit' \| 'reset'`                                                        | `'button'`         |
+| `as`       | Тег или компонент для рендера корневого узла `Primitive.Root`                                                         | `keyof HTMLElementTagNameMap \| Component`                                               | `'button'`         |
+| `asChild`  | Рендер без собственного тега (через slot-контейнер `Primitive`)                                                       | `boolean`                                                                                | `false`            |
+| `theme`    | Тема оформления                                                                                                       | `'base' \| 'primary' \| 'secondary' \| 'tertiary' \| 'danger' \| 'success' \| 'warning'` | `—`                |
+| `size`     | Базовый размер                                                                                                        | `'mini' \| 'small' \| 'medium' \| 'large' \| 'big' \| 'huge' \| 'massive'`               | `—`                |
+| `sizeXs`   | Размер для брейкпоинта `xs`                                                                                           | `'mini' \| 'small' \| 'medium' \| 'large' \| 'big' \| 'huge' \| 'massive'`               | `—`                |
+| `sizeSm`   | Размер для брейкпоинта `sm`                                                                                           | `'mini' \| 'small' \| 'medium' \| 'large' \| 'big' \| 'huge' \| 'massive'`               | `—`                |
+| `sizeMd`   | Размер для брейкпоинта `md`                                                                                           | `'mini' \| 'small' \| 'medium' \| 'large' \| 'big' \| 'huge' \| 'massive'`               | `—`                |
+| `sizeLg`   | Размер для брейкпоинта `lg`                                                                                           | `'mini' \| 'small' \| 'medium' \| 'large' \| 'big' \| 'huge' \| 'massive'`               | `—`                |
+| `sizeXl`   | Размер для брейкпоинта `xl`                                                                                           | `'mini' \| 'small' \| 'medium' \| 'large' \| 'big' \| 'huge' \| 'massive'`               | `—`                |
+| `sizeXxl`  | Размер для брейкпоинта `xxl`                                                                                          | `'mini' \| 'small' \| 'medium' \| 'large' \| 'big' \| 'huge' \| 'massive'`               | `—`                |
 
 **Примечание:** фактическое `isDisabled` вычисляется из `Form`/`FormItem` контекста, `disabled` и `loading`.
 
