@@ -1,5 +1,4 @@
 import type { DefaultTheme } from 'vitepress';
-
 import type { DocLocaleConfig } from './types';
 
 /**
@@ -133,7 +132,7 @@ const ruThemeConfig: DefaultTheme.Config = {
 export const ruLocale: DocLocaleConfig = {
   label: 'Русский',
   lang: 'ru-RU',
-  title: 'VauUI',
+  title: 'Vau',
   description: 'Компонентная UI-библиотека для Vue 3',
   themeConfig: ruThemeConfig
 };

@@ -1,5 +1,4 @@
 import type { DefaultTheme } from 'vitepress';
-
 import type { DocLocaleConfig } from './types';
 
 /**
@@ -134,7 +133,7 @@ export const enLocale: DocLocaleConfig = {
   label: 'English',
   lang: 'en-US',
   link: '/en',
-  title: 'VauUI',
+  title: 'Vau',
   description: 'Vue 3 component UI library',
   themeConfig: enThemeConfig
 };

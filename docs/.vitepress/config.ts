@@ -1,6 +1,5 @@
 import { enLocale } from './locales/en';
 import { ruLocale } from './locales/ru';
-
 import { defineConfig } from 'vitepress';
 import { resolve } from 'node:path';
 
