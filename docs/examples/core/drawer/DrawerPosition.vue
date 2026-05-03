@@ -45,17 +45,17 @@
     <Button.Root
       theme="base"
       size="medium"
-      @click="handleDrawerUpOpen"
+      @click="handleDrawerTopOpen"
     >
-      Открыть Drawer Up
+      Открыть Drawer Top
     </Button.Root>
 
     <Button.Root
       theme="base"
       size="medium"
-      @click="handleDrawerDownOpen"
+      @click="handleDrawerBottomOpen"
     >
-      Открыть Drawer Down
+      Открыть Drawer Bottom
     </Button.Root>
   </Button.Group>
 
@@ -109,7 +109,7 @@
       <Drawer.Content>
         <Drawer.Header>
           <Drawer.Title>
-            Drawer Up
+            Drawer Top
           </Drawer.Title>
 
           <Drawer.Close/>
@@ -130,7 +130,7 @@
       <Drawer.Content>
         <Drawer.Header>
           <Drawer.Title>
-            Drawer Down
+            Drawer Bottom
           </Drawer.Title>
 
           <Drawer.Close/>

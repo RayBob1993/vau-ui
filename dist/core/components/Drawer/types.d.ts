@@ -1,6 +1,6 @@
 import type { SizeProp } from '../../types';
 import type { MaybeRefOrGetter } from 'vue';
-export type DrawerPosition = 'left' | 'right' | 'up' | 'down';
+export type DrawerPosition = 'left' | 'right' | 'top' | 'bottom';
 export type DrawerProps = {
     position?: DrawerPosition;
     appendToBody?: boolean;
