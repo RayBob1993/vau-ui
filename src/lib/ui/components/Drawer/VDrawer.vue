@@ -19,6 +19,7 @@
 
 <template>
   <Drawer.Root
+    v-slot="{ close }"
     v-model="modelValue"
     v-bind="modalRootProps"
     :append-to-body="appendToBody"
@@ -32,7 +33,10 @@
     <Drawer.Dialog>
       <Drawer.Content>
         <Drawer.Header>
-          <slot name="header">
+          <slot
+            name="header"
+            :close="close"
+          >
             <Drawer.Title v-if="title">
               {{ title }}
             </Drawer.Title>
@@ -42,11 +46,14 @@
         </Drawer.Header>
 
         <Drawer.Body>
-          <slot/>
+          <slot :close="close"/>
         </Drawer.Body>
 
         <Drawer.Footer v-if="slots?.footer">
-          <slot name="footer"/>
+          <slot
+            name="footer"
+            :close="close"
+          />
         </Drawer.Footer>
       </Drawer.Content>
     </Drawer.Dialog>

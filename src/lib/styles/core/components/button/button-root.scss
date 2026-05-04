@@ -9,7 +9,7 @@
   margin: var(--button-margin-y, 0) var(--button-margin-x, 0);
   padding: var(--button-padding-y, 0) var(--button-padding-x, 0);
   gap: var(--button-gap, 0);
-  border: var(--button-border-size, 0) var(--button-border-type, solid) var(--button-border-color, transparent);
+  border: var(--button-border-width, 0) var(--button-border-type, solid) var(--button-border-color, transparent);
   min-height: var(--button-min-height, 0);
   max-height: var(--button-max-height, none);
   min-width: var(--button-min-width, 0);

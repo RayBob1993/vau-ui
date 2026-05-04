@@ -1,0 +1,33 @@
+.drawer {
+  --drawer-background-color: color-mix(in oklab, var(--black), transparent 50%);
+
+  &--size {
+    &-medium {
+      --drawer-dialog-width: 300px;
+    }
+
+    &-medium {
+      --drawer-dialog-width: 350px;
+    }
+
+    &-medium {
+      --drawer-dialog-width: 400px;
+    }
+
+    &-large {
+      --drawer-dialog-width: 450px;
+    }
+
+    &-big {
+      --drawer-dialog-width: 500px;
+    }
+
+    &-huge {
+      --drawer-dialog-width: 600px;
+    }
+
+    &-massive {
+      --drawer-dialog-width: 700px;
+    }
+  }
+}

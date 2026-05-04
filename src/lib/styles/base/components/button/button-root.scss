@@ -2,7 +2,7 @@
 @use '../../../core/mixins/breakpoints' as *;
 
 .button {
-  --button-border-size: 1px;
+  --button-border-width: 1px;
   --button-border-radius: 6px;
 
   &--theme {

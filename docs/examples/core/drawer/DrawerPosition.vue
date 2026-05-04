@@ -60,8 +60,10 @@
   </Button.Group>
 
   <Drawer.Root
+    v-slot="{ close }"
     v-model="isVisibleDrawerLeft"
     position="left"
+    size="medium"
   >
     <Drawer.Dialog>
       <Drawer.Content>
@@ -75,14 +77,24 @@
 
         <Drawer.Body/>
 
-        <Drawer.Footer/>
+        <Drawer.Footer>
+          <Button.Root
+            theme="primary"
+            size="medium"
+            @click="close"
+          >
+            Закрыть
+          </Button.Root>
+        </Drawer.Footer>
       </Drawer.Content>
     </Drawer.Dialog>
   </Drawer.Root>
 
   <Drawer.Root
+    v-slot="{ close }"
     v-model="isVisibleDrawerRight"
     position="right"
+    size="medium"
   >
     <Drawer.Dialog>
       <Drawer.Content>
@@ -96,14 +108,24 @@
 
         <Drawer.Body/>
 
-        <Drawer.Footer/>
+        <Drawer.Footer>
+          <Button.Root
+            theme="primary"
+            size="medium"
+            @click="close"
+          >
+            Закрыть
+          </Button.Root>
+        </Drawer.Footer>
       </Drawer.Content>
     </Drawer.Dialog>
   </Drawer.Root>
 
   <Drawer.Root
+    v-slot="{ close }"
     v-model="isVisibleDrawerTop"
     position="top"
+    size="medium"
   >
     <Drawer.Dialog>
       <Drawer.Content>
@@ -117,14 +139,24 @@
 
         <Drawer.Body/>
 
-        <Drawer.Footer/>
+        <Drawer.Footer>
+          <Button.Root
+            theme="primary"
+            size="medium"
+            @click="close"
+          >
+            Закрыть
+          </Button.Root>
+        </Drawer.Footer>
       </Drawer.Content>
     </Drawer.Dialog>
   </Drawer.Root>
 
   <Drawer.Root
+    v-slot="{ close }"
     v-model="isVisibleDrawerBottom"
     position="bottom"
+    size="medium"
   >
     <Drawer.Dialog>
       <Drawer.Content>
@@ -138,7 +170,15 @@
 
         <Drawer.Body/>
 
-        <Drawer.Footer/>
+        <Drawer.Footer>
+          <Button.Root
+            theme="primary"
+            size="medium"
+            @click="close"
+          >
+            Закрыть
+          </Button.Root>
+        </Drawer.Footer>
       </Drawer.Content>
     </Drawer.Dialog>
   </Drawer.Root>

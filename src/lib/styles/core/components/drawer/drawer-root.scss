@@ -10,4 +10,29 @@
   overflow: hidden;
 
   background-color: var(--drawer-background-color);
+
+
+  &--position {
+    &-left {
+      justify-content: flex-start;
+    }
+
+    &-right {
+      justify-content: flex-end;
+    }
+
+    &-top {
+      --drawer-dialog-width: none;
+
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+
+    &-bottom {
+      --drawer-dialog-width: none;
+
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+  }
 }

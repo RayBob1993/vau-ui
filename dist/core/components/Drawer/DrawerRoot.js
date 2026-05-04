@@ -74,7 +74,7 @@ var S = /* @__PURE__ */ u({
 					[`drawer--size-${u.size}`]: u.size
 				},
 				onClick: t[0] ||= (...e) => g(k) && g(k)(...e)
-			}), [h(e.$slots, "default")], 16), [[y, w.value]])]),
+			}), [h(e.$slots, "default", { close: g(k) })], 16), [[y, w.value]])]),
 			_: 3
 		}, 8, ["name"])], 8, ["to", "disabled"]));
 	}

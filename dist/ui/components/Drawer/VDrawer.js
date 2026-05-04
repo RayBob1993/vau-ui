@@ -53,29 +53,29 @@ var g = /* @__PURE__ */ o({
 			onOpened: s[3] ||= (e) => _("opened", e),
 			onClosed: s[4] ||= (e) => _("closed", e)
 		}), {
-			default: h(() => [a(f(e).Dialog, null, {
+			default: h(({ close: s }) => [a(f(e).Dialog, null, {
 				default: h(() => [a(f(e).Content, null, {
 					default: h(() => [
 						a(f(e).Header, null, {
-							default: h(() => [u(r.$slots, "header", {}, () => [o.title ? (l(), t(f(e).Title, { key: 0 }, {
+							default: h(() => [u(r.$slots, "header", { close: s }, () => [o.title ? (l(), t(f(e).Title, { key: 0 }, {
 								default: h(() => [i(d(o.title), 1)]),
 								_: 1
 							})) : n("", !0), a(f(e).Close)])]),
-							_: 3
-						}),
+							_: 2
+						}, 1024),
 						a(f(e).Body, null, {
-							default: h(() => [u(r.$slots, "default")]),
-							_: 3
-						}),
+							default: h(() => [u(r.$slots, "default", { close: s })]),
+							_: 2
+						}, 1024),
 						v?.footer ? (l(), t(f(e).Footer, { key: 0 }, {
-							default: h(() => [u(r.$slots, "footer")]),
-							_: 3
-						})) : n("", !0)
+							default: h(() => [u(r.$slots, "footer", { close: s })]),
+							_: 2
+						}, 1024)) : n("", !0)
 					]),
-					_: 3
-				})]),
-				_: 3
-			})]),
+					_: 2
+				}, 1024)]),
+				_: 2
+			}, 1024)]),
 			_: 3
 		}, 16, [
 			"modelValue",

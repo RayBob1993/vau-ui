@@ -1,0 +1,8 @@
+.drawer-footer {
+  --drawer-footer-padding-y: 16px;
+  --drawer-footer-padding-x: 16px;
+  --drawer-footer-border-width: 1px;
+  --drawer-footer-border-color: var(--border-color);
+
+  border-top: var(--drawer-footer-border-width, 0) var(--drawer-footer-border-type, solid) var(--drawer-footer-border-color, transparent);
+}

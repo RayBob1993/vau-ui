@@ -1,0 +1,10 @@
+.drawer-header {
+  --drawer-header-padding-y: 16px;
+  --drawer-header-padding-x: 16px;
+  --drawer-header-border-width: 1px;
+  --drawer-header-border-color: var(--border-color);
+
+  display: flex;
+  align-items: center;
+  border-bottom: var(--drawer-header-border-width, 0) var(--drawer-header-border-type, solid) var(--drawer-header-border-color, transparent);
+}

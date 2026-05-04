@@ -1,11 +1,12 @@
-import type { UnscopedSlot, DrawerProps } from '@vau/core';
+import type { DrawerScopedSlot, DrawerProps } from '@vau/core';
+import type { VNode } from 'vue';
 
 export interface IVDrawerProps extends DrawerProps {
   title?: string;
 }
 
 export interface IVDrawerSlots {
-  default?: UnscopedSlot;
-  header?: UnscopedSlot;
-  footer?: UnscopedSlot;
+  default?: (props: DrawerScopedSlot) => Array<VNode>;
+  header?: (props: DrawerScopedSlot) => Array<VNode>;
+  footer?: (props: DrawerScopedSlot) => Array<VNode>;
 }

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-  import type { DrawerEmits, DrawerProps } from './types';
+  import type { DrawerEmits, DrawerProps, DrawerSlots } from './types';
   import { DrawerRootContextKey } from './context';
   import { useDrawerRoot } from './composables';
   import { useBodyScrollbar, useEscapeKey } from '../../composables';
@@ -13,6 +13,8 @@
   });
 
   const emit = defineEmits<DrawerEmits>();
+
+  defineSlots<DrawerSlots>();
 
   const modelValue = defineModel<boolean>({
     required: true
@@ -81,7 +83,7 @@
         }"
         @click="close"
       >
-        <slot/>
+        <slot :close="close"/>
       </div>
     </transition>
   </teleport>
